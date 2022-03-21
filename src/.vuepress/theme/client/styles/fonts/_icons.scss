@@ -1,0 +1,50 @@
+$fontFamily: 'icons';
+
+$icons: (
+  api-reference: '\e900',
+  chevron-right: '\e901',
+  documentation: '\e902',
+  integrations: '\e903',
+);
+
+@font-face {
+  font-family: $fontFamily;
+  src: url('/icons/#{$fontFamily}.ttf?rux0ea') format('truetype'),
+  url('/icons/#{$fontFamily}.woff?rux0ea') format('woff'),
+  url('/icons/#{$fontFamily}.svg?rux0ea##{$fontFamily}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@layer base {
+  i {
+    @apply not-italic font-normal normal-case leading-none antialiased;
+    font-family: '#{$fontFamily}' !important;
+    speak: never;
+
+    &.icon-api-reference:before {content: '\e900'}
+    &.icon-documentation:before {content: '\e902'}
+    &.icon-integrations:before {content: '\e903'}
+
+    &.icon-chevron-up:before,
+    &.icon-chevron-right:before,
+    &.icon-chevron-down:before,
+    &.icon-chevron-left:before {
+      content: '\e901';
+    }
+
+    &.icon-chevron-up {
+      @apply transform rotate-90;
+    }
+
+    &.icon-chevron-down {
+      @apply transform -rotate-90;
+    }
+
+    &.icon-chevron-left {
+      @apply transform rotate-180;
+    }
+  }
+}
+

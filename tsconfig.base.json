@@ -1,0 +1,41 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitReturns": true,
+    "target": "esnext",
+    "paths": {
+      // Vuepress default theme
+      "@theme/*": [
+        "node_modules/@vuepress/theme-default/lib/client/components/*"
+      ],
+      // Our custom theme
+      "@mptheme/*": [
+        "src/.vuepress/theme/*"
+      ],
+      "@Public/*": [
+        "src/.vuepress/public/*"
+      ]
+    }
+  },
+  "include": [
+    "./*.js",
+    "./*.ts",
+    "./node_modules/@vuepress/**/*.d.ts",
+    "./src/.vuepress/**/*",
+    "./types/**/*.d.ts"
+  ],
+  "exclude": [
+    "**/node_modules"
+  ]
+}

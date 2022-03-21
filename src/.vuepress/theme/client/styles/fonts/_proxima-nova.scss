@@ -1,0 +1,19 @@
+$assetsUrl: 'https://assets.myparcel.nl';
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url($assetsUrl + '/skin/fonts/proxima-nova/proxima-nova.woff2') format('woff2'),
+  url($assetsUrl + '/skin/fonts/proxima-nova/proxima-nova.woff') format('woff'),
+  url($assetsUrl + '/skin/fonts/proxima-nova/proxima-nova.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url($assetsUrl + '/skin/fonts/proxima-nova/proxima-nova-bold.woff2') format('woff2'),
+  url($assetsUrl + '/skin/fonts/proxima-nova/proxima-nova-bold.woff') format('woff'),
+  url($assetsUrl + '/skin/fonts/proxima-nova/proxima-nova-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal
+}

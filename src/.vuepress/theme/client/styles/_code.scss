@@ -1,0 +1,218 @@
+// @see https://v2.vuepress.vuejs.org/guide/markdown.html#code-blocks
+
+$extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, less, makefile, md, php, py, rb, rs, sass, scss, sh, styl, ts, toml, vue, yml;
+
+@layer base {
+  div[class*="language-"] {
+    @apply text-left leading-6 rounded-lg font-mono overflow-auto relative z-0 mb-3 mt-1;
+
+    // Render language name in top right of code block.
+    &:before {
+      @apply absolute z-10 right-0 top-0 text-right text-sm rounded-bl py-1 px-3 dark:bg-zinc-700 bg-zinc-200;
+    }
+
+    @each $extension in $extensions {
+      &.ext-#{$extension}:before {
+        content: '#{$extension}';
+      }
+    }
+  }
+
+  div[class*="language-"],
+  .highlight-lines {
+    @apply whitespace-pre py-4;
+  }
+
+  .highlight-lines {
+    @apply absolute inset-0 pointer-events-none;
+
+    .highlight-line {
+      @apply bg-goldfish-500 bg-opacity-20 border-l-4 border-goldfish-500;
+    }
+  }
+
+  div[class*="language-"], code {
+    @apply bg-zinc-100 dark:bg-zinc-800 font-mono;
+  }
+
+  code {
+    @apply rounded-sm py-1 px-2 text-[.95em];
+  }
+
+  pre {
+    @apply px-6;
+
+    code {
+      @apply dark:bg-transparent dark:text-inherit bg-transparent text-inherit border-0 p-0;
+    }
+
+    // Code highlighting
+    .token {
+      &.comment,
+      &.title,
+      &.punctuation,
+      &.operator {
+        @apply text-zinc-400 dark:text-zinc-500;
+      }
+
+      &.bold {
+        @apply font-bold;
+      }
+
+      &.link {
+        @apply underline;
+      }
+
+      &.italic,
+      &.comment,
+      &.quote {
+        // Can't use @apply italic because that will create a circular dependency...
+        font-style: italic;
+      }
+
+
+      &.doctag,
+      &.formula,
+      &.keyword,
+      &.regex-delimiter {
+        color: #A626A4
+      }
+
+      &.deletion,
+      &.name,
+      &.section,
+      &.selector-tag,
+      &.tag,
+      &.subst {
+        color: #E45649
+      }
+
+      &.literal {
+        color: #0184BB
+      }
+
+      &.addition,
+      &.attribute,
+      &.attr-name,
+      &.meta &.string,
+      &.string {
+        color: #50A14F
+      }
+
+      &.attr,
+      &.attr-value,
+      &.number,
+      &.selector-attr,
+      &.selector-class,
+      &.selector-pseudo,
+      &.template-variable,
+      &.type,
+      &.variable {
+        color: #986801
+      }
+
+      &.bullet,
+      &.link,
+      &.meta,
+      &.selector-id,
+      &.symbol,
+      &.function {
+        color: #4078F2
+      }
+
+      &.builtin,
+      &.title,
+      &.class,
+      &.regex-source,
+      &.property {
+        color: #C18401
+      }
+
+      @at-root .dark & {
+        &.keyword,
+        &.operator,
+        &.pattern-match,
+        &.regex-delimiter {
+          color: #F92672
+        }
+
+        &.function,
+        &.pattern-match &.constructor {
+          color: #61AEEE
+        }
+
+        &.function &.params {
+          color: #A6E22E
+        }
+
+        &.function &.params &.typing {
+          color: #FD971F
+        }
+
+        &.module-access &.module {
+          color: #7E57C2
+        }
+
+        &.constructor {
+          color: #E2B93D
+        }
+
+        &.constructor &.string {
+          color: #9CCC65
+        }
+
+        &.doctag,
+        &.formula {
+          color: #C678DD
+        }
+
+        &.deletion,
+        &.name,
+        &.section,
+        &.selector-tag,
+        &.subst {
+          color: #E06C75
+        }
+
+        &.literal {
+          color: #56B6C2
+        }
+
+        &.addition,
+        &.attribute,
+        &.meta &.string,
+        &.regexp,
+        &.string {
+          color: #98C379
+        }
+
+        &.built_in,
+        &.class &.title,
+        &.title.class_ {
+          color: #E6C07B
+        }
+
+        &.attr,
+        &.number,
+        &.selector-attr,
+        &.selector-class,
+        &.selector-pseudo,
+        &.template-variable,
+        &.type,
+        &.variable {
+          color: #D19A66
+        }
+
+        &.bullet,
+        &.link,
+        &.meta,
+        &.selector-id,
+        &.symbol,
+        &.title {
+          color: #61AEEE
+        }
+      }
+    }
+  }
+}
+

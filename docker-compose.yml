@@ -1,0 +1,27 @@
+services:
+  web:
+    build:
+      context: docker
+      dockerfile: images/web/Dockerfile
+    restart: always
+    volumes:
+      - ./:/app
+      - node-modules:/app/node_modules
+    networks:
+      - traefik
+    env_file:
+      - .env.local
+    labels:
+      traefik.enable: "true"
+      traefik.docker.network: traefik_default
+      traefik.port: "8955"
+      traefik.frontend.rule: "Host:developer.dev.myparcel.nl"
+      traefik.frontend.redirect.entryPoint: 'https'
+      traefik.frontend.redirect.permanent: 'true'
+
+volumes:
+  node-modules:
+
+networks:
+  traefik:
+    name: traefik_default

@@ -1,0 +1,80 @@
+@use 'mixins';
+
+// Typography can't be in tailwind because vuepress renders markdown into plain html tags.
+@layer base {
+  //noinspection CssInvalidPropertyValue
+  html {
+    @apply leading-7 text-zinc-700;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    font-size: 16px;
+
+    &.dark {
+      @apply text-zinc-400;
+    }
+  }
+
+  // All links
+  a {
+    @apply transition-colors hover:text-goldfish-500 duration-100 focus:outline-goldfish-500;
+  }
+
+  // Inside content pages
+  .page {
+    a {
+      @apply dark:text-goldfish-500 hover:text-monstera-400 text-monstera-500;
+    }
+
+    ul, ol, dd {
+      @apply pl-6 pt-2 pb-3;
+    }
+
+    ol {
+      @apply list-decimal;
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    blockquote {
+      @apply py-1 px-4 mt-2 mb-3 dark:bg-zinc-700 bg-zinc-100 rounded-lg border;
+    }
+
+    hr {
+      @apply text-zinc-500;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold font-display pb-3 scroll-mt-16 relative;
+
+    a {
+      @apply opacity-0 transition-opacity absolute -left-4;
+    }
+
+    &:hover a {
+      @apply opacity-100;
+    }
+  }
+
+  h1 {
+    @apply text-4xl pt-6;
+  }
+
+  h2 {
+    @apply text-2xl pt-5;
+  }
+
+  h3 {
+    @apply text-xl pt-4;
+  }
+
+  h4 {
+    @apply text-lg pt-3;
+  }
+
+  p {
+    @apply py-2;
+  }
+}

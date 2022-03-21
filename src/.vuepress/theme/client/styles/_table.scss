@@ -1,0 +1,14 @@
+@layer base {
+  table {
+    @apply rounded-lg overflow-x-scroll w-full mt-2 mb-3;
+  }
+
+  table, td, th {
+    @apply border;
+  }
+
+  td,
+  th {
+    @apply py-1 px-2;
+  }
+}

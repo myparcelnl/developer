@@ -1,0 +1,19 @@
+@layer base {
+  :root,
+  html.dark {
+    --c-bg: inherit;
+  }
+
+  //noinspection CssInvalidPropertyValue
+  html {
+    @apply bg-white;
+
+    &.dark {
+      @apply bg-zinc-900;
+    }
+  }
+
+  * {
+    @apply border-zinc-200 dark:border-zinc-800;
+  }
+}
