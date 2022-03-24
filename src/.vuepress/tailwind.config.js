@@ -1,4 +1,4 @@
-const {path} = require('@vuepress/utils');
+const { path } = require('@vuepress/utils');
 
 module.exports = {
   content: [

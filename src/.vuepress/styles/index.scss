@@ -1,0 +1,11 @@
+@use 'docsearch';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+html.dark {
+  --c-brand: #0F5C47;
+}
+

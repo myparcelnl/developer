@@ -1,16 +1,14 @@
 <template>
   <ClientOnly>
-    <img class="h-16" :src="srcWithBase" :alt="navbarBrandTitle" />
+    <img
+class="h-16" :src="srcWithBase" :alt="navbarBrandTitle" />
   </ClientOnly>
 </template>
 
 <script lang="ts">
-import {ClientOnly, useSiteLocaleData, withBase} from '@vuepress/client';
-import {computed, defineComponent} from 'vue';
-import {
-  useDarkMode,
-  useThemeLocaleData,
-} from '@vuepress/theme-default/lib/client/composables';
+import { ClientOnly, useSiteLocaleData, withBase } from '@vuepress/client';
+import { computed, defineComponent } from 'vue';
+import { useDarkMode, useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
 
 export default defineComponent({
   name: 'NavbarBrand',
@@ -30,7 +28,9 @@ export default defineComponent({
     });
 
     const srcWithBase = computed(() => {
-      if (!logoSrc.value) return null;
+      if (!logoSrc.value) {
+        return null;
+      }
 
       return withBase(logoSrc.value);
     });

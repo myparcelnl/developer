@@ -1,0 +1,35 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    //    "alwaysStrict": true,
+    //    "composite": true,
+    //    "declaration": true,
+    //    "declarationMap": false,
+    "esModuleInterop": true,
+    //    "jsx": "preserve",
+    //    "lib": [
+    //      "DOM",
+    //      "ES2020"
+    //    ],
+    //    "module": "esnext",
+    "moduleResolution": "node",
+    //    "newLine": "lf",
+    "noEmit": true,
+    //    "noEmitOnError": true,
+    //    "noImplicitAny": true,
+    //    "noImplicitReturns": true,
+    //    "resolveJsonModule": true,
+    //    "skipLibCheck": true,
+    //    "sourceMap": true,
+    //    "strict": true,
+    //    "strictNullChecks": true,
+    "target": "ESNext"
+  },
+  "include": [
+    "./*.js",
+    "./*.ts",
+    "./src/.vuepress/**/*",
+    "./node_modules/@vuepress/**/*.d.ts"
+  ]
+}
