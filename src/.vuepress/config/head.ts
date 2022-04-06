@@ -1,4 +1,4 @@
-import {HeadConfig} from '@vuepress/shared/lib/types/head';
+import { HeadConfig } from '@vuepress/shared/lib/types/head';
 
 const faviconUrl = 'https://assets.myparcel.nl/skin/images/favicon';
 

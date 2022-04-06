@@ -1,0 +1,10 @@
+@use 'fonts';
+@use 'layout';
+@use 'typography';
+@use 'code';
+
+@use 'transitions';
+
+table {
+  @apply overflow-x-scroll;
+}

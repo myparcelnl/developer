@@ -1,0 +1,31 @@
+$fontFamily: 'icons';
+
+$icons: (
+  api-reference: '\e900',
+  integrations: '\e901',
+  documentation: '\e902',
+  chevron-right: '\e903',
+);
+
+@font-face {
+  font-family: $fontFamily;
+  src: url('/icons/#{$fontFamily}.ttf?rux0ea') format('truetype'),
+  url('/icons/#{$fontFamily}.woff?rux0ea') format('woff'),
+  url('/icons/#{$fontFamily}.svg?rux0ea##{$fontFamily}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  @apply not-italic font-normal normal-case leading-none antialiased;
+  font-family: '#{$fontFamily}' !important;
+  speak: never;
+
+  @each $name, $glyph in $icons {
+    &.icon-#{$name}:before {
+      content: $glyph;
+    }
+  }
+}
+

@@ -1,0 +1,3 @@
+describe('homeFooter', () => {
+  it.todo('');
+});

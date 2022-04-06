@@ -1,5 +1,10 @@
-describe('{{ pascalCase name }}', () => {
-  test('', () => {
+import {{ pascalCase name }} from './{{ pascalCase name }}.vue';
+import { shallowMount } from '@vue/test-utils';
 
+describe('{{ pascalCase name }}', () => {
+  it('renders properly', () => {
+    const wrapper = shallowMount({{ pascalCase name }});
+
+    expect(wrapper.element).toMatchInlineSnapshot();
   });
-})
+});

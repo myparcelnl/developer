@@ -1,5 +1,0 @@
-describe('Search', () => {
-  test('', () => {
-
-  });
-})

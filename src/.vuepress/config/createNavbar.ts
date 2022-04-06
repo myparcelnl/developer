@@ -1,15 +1,12 @@
-import {NavbarConfig} from '@vuepress/theme-default';
+import { ABOUT, API_REFERENCE, CHANGELOG, CONTACT, DOCUMENTATION, INTEGRATIONS, STATUS } from './routes';
+import { NavbarConfigArray } from '@mptheme/config.types';
 
-/**
- *
- */
-export function createNavbar(): NavbarConfig {
-  return [
-    'API Reference',
-    'Documentation',
-    {
-      text: 'Integrations',
-      children: [],
-    },
-  ];
-}
+export const createNavbar = (): NavbarConfigArray => [
+  API_REFERENCE,
+  DOCUMENTATION,
+  INTEGRATIONS,
+  { ...STATUS, sub: true },
+  { ...CHANGELOG, sub: true },
+  { ...ABOUT, sub: true },
+  { ...CONTACT, sub: true },
+];

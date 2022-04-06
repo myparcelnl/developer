@@ -21,6 +21,5 @@ volumes:
   node-modules:
 
 networks:
-  backend:
   traefik:
     name: traefik_default

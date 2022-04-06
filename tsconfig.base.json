@@ -2,34 +2,43 @@
   "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
     "allowJs": true,
-    //    "alwaysStrict": true,
-    //    "composite": true,
-    //    "declaration": true,
-    //    "declarationMap": false,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    //    "jsx": "preserve",
-    //    "lib": [
-    //      "DOM",
-    //      "ES2020"
-    //    ],
-    //    "module": "esnext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "module": "esnext",
     "moduleResolution": "node",
-    //    "newLine": "lf",
     "noEmit": true,
-    //    "noEmitOnError": true,
-    //    "noImplicitAny": true,
-    //    "noImplicitReturns": true,
-    //    "resolveJsonModule": true,
-    //    "skipLibCheck": true,
-    //    "sourceMap": true,
-    //    "strict": true,
-    //    "strictNullChecks": true,
-    "target": "ESNext"
+    "noImplicitReturns": true,
+    "target": "esnext",
+    "paths": {
+      // Vuepress default theme
+      "@theme/*": [
+        "node_modules/@vuepress/theme-default/lib/client/components/*"
+      ],
+      // Our custom theme
+      "@mptheme/*": [
+        "src/.vuepress/theme/*"
+      ],
+      // Set in theme/node/theme.ts
+      "@Components/*": [
+        "src/.vuepress/theme/client/components/*"
+      ],
+      "@Public/*": [
+        "src/.vuepress/public/*"
+      ]
+    }
   },
   "include": [
     "./*.js",
     "./*.ts",
+    "./node_modules/@vuepress/**/*.d.ts",
     "./src/.vuepress/**/*",
-    "./node_modules/@vuepress/**/*.d.ts"
+    "./types/**/*.d.ts"
+  ],
+  "exclude": [
+    "**/node_modules"
   ]
 }
