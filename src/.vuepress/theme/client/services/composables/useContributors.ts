@@ -1,4 +1,4 @@
-import { computed, ComputedRef } from 'vue';
+import { ComputedRef, computed } from 'vue';
 import { DefaultThemeNormalPageFrontmatter, DefaultThemePageData } from '@vuepress/theme-default/lib/shared';
 import { usePageData, usePageFrontmatter } from '@vuepress/client';
 import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
@@ -9,8 +9,7 @@ export const useContributors = (): ComputedRef<null | Required<DefaultThemePageD
   const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>();
 
   return computed(() => {
-    const showContributors
-      = frontmatter.value.contributors ?? themeLocale.value.contributors ?? true;
+    const showContributors = frontmatter.value.contributors ?? themeLocale.value.contributors ?? true;
 
     if (!showContributors) {
       return null;

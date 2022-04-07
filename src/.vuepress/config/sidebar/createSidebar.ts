@@ -16,8 +16,5 @@ export const HIDDEN: string[] = [
 export function createSidebar(baseDir?: string): SidebarConfig {
   baseDir ??= SRC_DIR;
 
-  const sidebar = createObjectSidebar(baseDir);
-
-  console.log(sidebar);
-  return sidebar;
+  return createObjectSidebar(baseDir);
 }

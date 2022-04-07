@@ -15,16 +15,10 @@ const common: Config.InitialOptions = {
 
 const jestConfig = async(): Promise<Config.InitialOptions> => {
   return {
-    // reporters: [
-    //   'default',
-    //   'vite-jest',
-    // ],
     projects: [
       {
         displayName: 'vue',
         testMatch: ['<rootDir>/src/**/*.vue.spec.ts'],
-        // @ts-ignore
-        // ...await import('vite-jest/jest-preset'),
         ...common,
         testEnvironment: 'jest-environment-jsdom',
 

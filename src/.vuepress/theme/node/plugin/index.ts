@@ -13,8 +13,6 @@ const plugin: PluginFunction = () => {
 
     extendsMarkdown: (md, app) => {
       // fs.writeFileSync('md.json', JSON.stringify(md, null, 2));
-      //
-      md.use(require('markdown-it-table-of-contents'), {});
 
       // md.linkify.add('@', {
       //   validate: (text, pos, self) => {

@@ -2,12 +2,14 @@
 title: PHP SDK
 index: true
 actions:
-  - text: Installation
-    link: /01.installation
-    type: primary
-  - text: Examples
-    link: /02.examples/01.create-consignment
-    type: secondary
+
+- text: Installation
+  link: /01.installation
+  type: primary
+- text: Examples
+  link: /02.examples/01.create-consignment
+  type: secondary
+
 ---
 
 # SDK

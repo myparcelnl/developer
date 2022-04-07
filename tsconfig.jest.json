@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@vuepress/theme-default/lib/client"
+    ]
+  },
+  "files": [ ]
+}

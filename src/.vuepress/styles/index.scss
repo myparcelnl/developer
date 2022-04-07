@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  a {
+    @apply text-moss-500 font-medium;
+  }
+}
+
 @layer utilities {
   .translate-3d-0 {
     transform: translate3d(0, 0, 0);
