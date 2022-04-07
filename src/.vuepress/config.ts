@@ -8,8 +8,6 @@ import { head } from './config/head';
 import { path } from '@vuepress/utils';
 import { viteConfig } from './viteConfig';
 
-const { sidebar } = createSidebar();
-
 export default defineUserConfig<ThemeConfig>({
   theme: path.resolve(__dirname, 'theme'),
 
@@ -33,7 +31,7 @@ export default defineUserConfig<ThemeConfig>({
     footer: createFooter(),
     footer2: createBottomFooter(),
     themePlugins: [],
-    sidebar,
+    sidebar: createSidebar(),
   },
 
   port: 8955,

@@ -13,10 +13,11 @@ export const HIDDEN: string[] = [
  *
  * @param baseDir
  */
-export function createSidebar(baseDir?: string): { sidebar: SidebarConfig; } {
+export function createSidebar(baseDir?: string): SidebarConfig {
   baseDir ??= SRC_DIR;
 
-  return {
-    sidebar: createObjectSidebar(baseDir),
-  };
+  const sidebar = createObjectSidebar(baseDir);
+
+  console.log(sidebar);
+  return sidebar;
 }

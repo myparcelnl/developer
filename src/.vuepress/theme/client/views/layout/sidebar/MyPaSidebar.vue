@@ -3,11 +3,11 @@
     v-if="exists"
     :variant="['border-right', 'dark']"
     tag="aside"
-    class="-translate-x-full fixed h-full lg:translate-x-0 py-5 transition-all w-72 z-10"
+    class="-translate-x-full fixed h-full lg:translate-x-0 transition-all w-72 z-10"
     :class="{
       'translate-x-0': isOpen,
     }">
-    <div class="h-full inset-0 sticky w-full">
+    <div class="h-full inset-0 px-3 py-5 sticky w-full">
       <slot name="top" />
       <SidebarItems />
       <slot name="bottom" />

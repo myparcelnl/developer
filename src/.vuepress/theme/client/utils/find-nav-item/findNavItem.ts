@@ -21,7 +21,7 @@ export const findNavItem = (
       });
   } else {
     found = array[0];
-    console.log(array, searchKeys);
+    // console.log(array, searchKeys);
   }
 
   if (found) {

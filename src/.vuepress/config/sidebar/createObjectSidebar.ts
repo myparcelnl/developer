@@ -19,7 +19,7 @@ export function createObjectSidebar(baseDir: string) {
 
       return {
         ...acc,
-        [`/${dir}/`]: createArraySidebar(nextBaseDir),
+        [`/${dir}`]: createArraySidebar(nextBaseDir),
       };
     }, {});
 }

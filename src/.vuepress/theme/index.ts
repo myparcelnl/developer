@@ -14,6 +14,7 @@ const theme: Theme<ThemeConfig> = {
 
   /* eslint-disable @typescript-eslint/naming-convention */
   alias: {
+    '@theme/SidebarItem.vue': `${components}/sidebar-item/SidebarItem.vue`,
     '@theme/AutoLink.vue': `${components}/auto-link/AutoLink.vue`,
     '@theme/Home.vue': `${views}/home/home/MyPaHome.vue`,
     '@theme/HomeContent.vue': `${views}/home/home-content/HomeContent.vue`,

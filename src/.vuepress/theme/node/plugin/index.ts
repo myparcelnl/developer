@@ -26,7 +26,7 @@ const plugin: PluginFunction = () => {
       // });
     },
     extendsPage: (extendable, app) => {
-      console.log(extendable);
+      // console.log(extendable);
     },
   };
 };

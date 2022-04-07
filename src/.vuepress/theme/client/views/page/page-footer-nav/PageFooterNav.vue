@@ -121,7 +121,6 @@ export default defineComponent({
     };
     const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>();
     const sidebarItems = useSidebarItems();
-    console.log(sidebarItems);
     const route = useRoute();
 
     const prevNavLink = computed(() => {
