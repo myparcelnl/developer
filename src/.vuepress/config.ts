@@ -12,7 +12,7 @@ export default defineUserConfig<ThemeConfig>({
   theme: path.resolve(__dirname, 'theme'),
 
   title: 'MyParcel Developer Portal',
-  description: 'aa',
+  description: 'Connect with our API and get started with shipments, returns and more.',
 
   head,
 
