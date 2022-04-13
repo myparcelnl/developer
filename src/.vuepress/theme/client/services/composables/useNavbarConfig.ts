@@ -1,5 +1,5 @@
-import { computed, ComputedRef } from 'vue';
-import { NavbarGroup, NavbarItem, ResolvedNavbarItem } from '@vuepress/theme-default/lib/shared';
+import { ComputedRef, computed } from 'vue';
+import { NavbarGroup, NavbarItem, ResolvedNavbarItem } from '@mptheme/config.types';
 import { useNavLink, useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
 import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
 import { isString } from '@vuepress/shared';
