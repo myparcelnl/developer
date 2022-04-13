@@ -1,8 +1,8 @@
 <template>
-  <component
-    :is="tag"
+  <div
     role="button"
     :tabindex="0"
+    v-test="'button'"
     class="border-0 duration-200 font-display inline-flex no-underline rounded-full select-none transition-colors whitespace-nowrap"
     :class="[
       ...variantClass,
@@ -15,43 +15,18 @@
     ]"
     :aria-disabled="disabled"
     @click="disabled ? null : $emit('click', $event)">
-    <div
-      v-if="iconLeft"
-      class="h-5 inline-flex mt-1 my-auto relative">
-      <Transition
-        appear
-        name="fade-absolute">
-        <i
-          class="flex mr-2.5"
-          :class="`i-${iconLeft}`" />
-      </Transition>
-    </div>
-
     <component
       :is="link ? 'AutoLink' : 'span'"
+      v-test="'button__link'"
       :item="link ?? null"
       class="flex m-auto">
       <slot />
     </component>
-
-    <div
-      v-if=" iconRight"
-      class="h-5 inline-flex mt-1 my-auto relative">
-      <Transition
-        v-if="iconRight"
-        appear
-        name="fade-absolute">
-        <i
-          v-show="iconRight"
-          class="flex ml-2.5"
-          :class="`i-${iconRight}`" />
-      </Transition>
-    </div>
-  </component>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { PropType, defineComponent } from 'vue';
 import { NavLink } from '@mptheme/config.types';
 import { buttonVariant } from '@mptheme/client/services/tailwind/variants/buttonVariant';
 import { useTailwindVariant } from '@mptheme/client/services/composables/useTailwindVariant';
@@ -64,24 +39,9 @@ export default defineComponent({
   props: {
     variant: createVariantProp(),
 
-    iconLeft: {
-      type: String,
-      default: null,
-    },
-
-    iconRight: {
-      type: String,
-      default: null,
-    },
-
     link: {
       type: Object as PropType<NavLink>,
       default: null,
-    },
-
-    tag: {
-      type: String,
-      default: 'div',
     },
 
     /**

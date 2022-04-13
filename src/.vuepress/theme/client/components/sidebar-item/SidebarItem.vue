@@ -42,7 +42,7 @@ import { PropType, computed, defineComponent, ref, toRefs } from 'vue';
 import { ResolvedSidebarItem, isActiveSidebarItem } from '@vuepress/theme-default/lib/client';
 import { useRoute, useRouter } from 'vue-router';
 import DropdownTransition from '@theme/DropdownTransition.vue';
-import ToggleChevron from '@Components/common/ToggleChevron.vue';
+import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
 
 export default defineComponent({
   name: 'SidebarItem',

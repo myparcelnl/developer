@@ -3,6 +3,7 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
     "esModuleInterop": true,
     "lib": [
       "esnext",
@@ -21,10 +22,6 @@
       // Our custom theme
       "@mptheme/*": [
         "src/.vuepress/theme/*"
-      ],
-      // Set in theme/node/theme.ts
-      "@Components/*": [
-        "src/.vuepress/theme/client/components/*"
       ],
       "@Public/*": [
         "src/.vuepress/public/*"

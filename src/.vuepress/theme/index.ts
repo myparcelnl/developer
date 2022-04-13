@@ -32,7 +32,6 @@ const theme: Theme<ThemeConfig> = {
     // Replace docsearch css entirely
     '@docsearch/css': path.resolve(DIR_CLIENT, 'styles', 'docsearch.scss'),
 
-    ...createAliasMap(components, '@Components'),
     ...createAliasMap(DIR_THEME, '@mptheme'),
   },
   /* eslint-enable @typescript-eslint/naming-convention */

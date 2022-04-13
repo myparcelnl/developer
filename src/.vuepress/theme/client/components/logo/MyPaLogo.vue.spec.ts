@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import MyPaLogo from './MyPaLogo.vue';
 import { shallowMount } from '@vue/test-utils';
 

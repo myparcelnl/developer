@@ -28,9 +28,9 @@
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
-import AutoLink from '@Components/auto-link/AutoLink.vue';
-import MyPaIcon from '@Components/common/icon/Icon.vue';
-import MyPaImage from '@Components/common/Image.vue';
+import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
+import MyPaIcon from '@mptheme/client/components/common/icon/Icon.vue';
+import MyPaImage from '@mptheme/client/components/common/Image.vue';
 import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
 
 export default defineComponent({

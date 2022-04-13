@@ -1,14 +1,19 @@
+import { describe, expect, it, beforeAll } from 'vitest';
 import Icon from './Icon.vue';
-import { shallowMount } from '@vue/test-utils';
+import { shallowMount, VueWrapper } from '@vue/test-utils';
+
+let wrapper: VueWrapper;
 
 describe('icon', () => {
-  it('renders properly', () => {
-    const wrapper = shallowMount(Icon);
+  beforeAll(() => {
+    wrapper = shallowMount(Icon, { props: { icon: 'chevron-right' } });
+  });
 
-    expect(wrapper.element).toMatchInlineSnapshot(`
-<span
-  class="icon"
-/>
-`);
+  it('renders as an <i> tag', () => {
+    expect(wrapper.element.tagName).toBe('I');
+  });
+
+  it('has the correct classes applied', () => {
+    expect(wrapper.element.className).toBe('icon-chevron-right inline-flex');
   });
 });

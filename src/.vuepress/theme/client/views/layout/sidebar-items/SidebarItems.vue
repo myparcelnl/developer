@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import SidebarItem from '@Components/sidebar-item/SidebarItem.vue';
+import SidebarItem from '@mptheme/client/components/sidebar-item/SidebarItem.vue';
 import { defineComponent } from 'vue';
 import { useSidebarItems } from '@vuepress/theme-default/lib/client';
 

@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType, reactive } from 'vue';
+import { PropType, computed, defineComponent, reactive } from 'vue';
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
 import { Breakpoint } from '@mptheme/index.types';
 

@@ -1,26 +1,23 @@
+import { describe, expect, it } from 'vitest';
 import MyPaButton from './MyPaButton.vue';
 import { shallowMount } from '@vue/test-utils';
 
 describe('button', () => {
-  it('renders properly', () => {
+
+  it('renders content via default slot', () => {
     const wrapper = shallowMount(MyPaButton, { slots: { default: 'click me' } });
 
-    expect(wrapper.element).toMatchInlineSnapshot(`
-<div
-  aria-disabled="false"
-  class="border-0 duration-200 font-display inline-flex no-underline rounded-full transition-colors whitespace-nowrap hover:bg-goldfish-600 bg-goldfish-500 text-white py-3 px-5 cursor-pointer"
-  role="button"
-  tabindex="0"
->
-  <!--v-if-->
-  <span
-    class="my-auto"
-  >
-    
-    
-  </span>
-  <!--v-if-->
-</div>
-`);
+    expect(wrapper.element.textContent).toBe('click me');
   });
+
+  it('gets correct classes applied', () => {
+    const wrapper = shallowMount(MyPaButton);
+    expect(wrapper.findByTestId('button__link').element.tagName).toBe('span');
+  });
+
+  // it('renders content via default slot', () => {
+  //   const wrapper = shallowMount(MyPaButton, { slots: { default: 'click me' } });
+  //
+  //   expect(wrapper.element.textContent).toBe('click me');
+  // });
 });

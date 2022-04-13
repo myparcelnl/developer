@@ -299,10 +299,6 @@
   @apply flex items-center;
 }
 
-.DocSearch-Commands li:not, :last-of-type {
-  @apply mr-3;
-}
-
 .DocSearch-Commands-Key {
   @apply rounded flex items-center justify-center h-4 mr-2 pb-px shadow-none w-5 border rounded bg-white dark:bg-zinc-800;
 }

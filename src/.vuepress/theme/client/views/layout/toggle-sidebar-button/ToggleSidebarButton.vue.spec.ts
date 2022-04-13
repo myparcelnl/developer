@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import ToggleSidebarButton from './ToggleSidebarButton.vue';
 import { shallowMount } from '@vue/test-utils';
 

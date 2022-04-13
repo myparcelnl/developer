@@ -39,10 +39,10 @@ import { DefaultThemeNormalPageFrontmatter, NavLink, ResolvedSidebarItem } from 
 import { computed, defineComponent } from 'vue';
 import { isPlainObject, isString } from '@vuepress/shared';
 import { useNavLink, useSidebarItems } from '@vuepress/theme-default/lib/client/composables';
-import AutoLink from '@Components/auto-link/AutoLink.vue';
+import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import FooterSection from '@mptheme/client/views/layout/footer-section/FooterSection.vue';
-import MyPaIcon from '@Components/common/icon/Icon.vue';
+import MyPaIcon from '@mptheme/client/components/common/icon/Icon.vue';
 import { usePageFrontmatter } from '@vuepress/client';
 import { useRoute } from 'vue-router';
 

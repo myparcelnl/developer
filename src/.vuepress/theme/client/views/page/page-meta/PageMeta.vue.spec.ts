@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import PageMeta from './PageMeta.vue';
 import { shallowMount } from '@vue/test-utils';
 

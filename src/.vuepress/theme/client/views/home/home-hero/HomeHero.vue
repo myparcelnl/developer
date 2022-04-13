@@ -41,11 +41,11 @@
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
-import CButtonGroup from '@Components/common/CButtonGroup.vue';
+import CButtonGroup from '@mptheme/client/components/common/CButtonGroup.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import FloepjeBgLeft from '@Public/images/floepje_bg_left.svg';
 import FloepjeBgRight from '@Public/images/floepje_bg_right.svg';
-import MyPaButton from '@Components/common/button/MyPaButton.vue';
+import MyPaButton from '@mptheme/client/components/common/button/MyPaButton.vue';
 import { MyPaHomepageFrontmatter } from '@mptheme/config.types';
 import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
 import { usePageFrontmatter } from '@vuepress/client';

@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import AutoLink from '@Components/auto-link/AutoLink.vue';
+import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
 import { NavbarItem } from '@vuepress/theme-default/lib/shared';
 import { defineComponent } from '@vue/runtime-core';
 

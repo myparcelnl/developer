@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { DefaultThemeNormalPageFrontmatter, DefaultThemePageData } from '@vuepress/theme-default/lib/shared';
 import PageContributors from '@mptheme/client/views/page/page-contributors/PageContributors.vue';
 import { shallowMount } from '@vue/test-utils';

@@ -24,10 +24,10 @@
 </template>
 
 <script lang="ts">
-import AutoLink from '@Components/auto-link/AutoLink.vue';
+import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import FooterSection from '@mptheme/client/views/layout/footer-section/FooterSection.vue';
-import LinkTree from '@Components/common/LinkTree.vue';
+import LinkTree from '@mptheme/client/components/common/LinkTree.vue';
 import NavbarBrand from '@mptheme/client/views/layout/navbar-brand/NavbarBrand.vue';
 import { defineComponent } from 'vue';
 import { useThemeData } from '@mptheme/client/services/composables/useThemeData';

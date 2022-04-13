@@ -11,10 +11,10 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType } from 'vue';
+import { PropType, computed, defineComponent } from 'vue';
 import { useRouteLocale, useSiteLocaleData } from '@vuepress/client';
 import { Breakpoint } from '@mptheme/index.types';
-import MyPaLogo from '@Components/logo/MyPaLogo.vue';
+import MyPaLogo from '@mptheme/client/components/logo/MyPaLogo.vue';
 import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
 
 export default defineComponent({

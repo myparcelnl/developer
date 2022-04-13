@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import MyPaIcon from '@Components/common/icon/Icon.vue';
+import MyPaIcon from '@mptheme/client/components/common/icon/Icon.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
