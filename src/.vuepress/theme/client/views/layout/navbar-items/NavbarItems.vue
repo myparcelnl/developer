@@ -6,7 +6,7 @@
       v-for="item in navbarLinks"
       :key="item.text">
       <AutoLink
-        class="block h-full"
+        class="block h-full text-inherit"
         :class="{
           'opacity-60': item.sub,
         }"

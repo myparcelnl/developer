@@ -4,8 +4,8 @@
     :item="linkItem">
     <div class="absolute bg-black group-hover:opacity-30 inset-0 opacity-0 transition-opacity" />
 
-    <div class="-inset-36 absolute flex left-0 overflow-hidden top-0 translate-3d-0 mix-blend-soft-light">
-      <FloepjeLeft class="fill-white  opacity-30" />
+    <div class="-inset-36 absolute flex left-0 mix-blend-soft-light overflow-hidden top-0 translate-3d-0">
+      <FloepjeLeft class="fill-white opacity-30" />
     </div>
 
     <MyPaIcon

@@ -10,7 +10,7 @@
           <AutoLink
             v-if="prevNavLink"
             :item="prevNavLink"
-            class="flex items-center">
+            class="flex items-center text-inherit">
             <MyPaIcon
               icon="chevron-left"
               class="text-xl" />
@@ -22,7 +22,7 @@
           <AutoLink
             v-if="nextNavLink"
             :item="nextNavLink"
-            class="flex items-center ml-auto">
+            class="flex items-center ml-auto text-inherit">
             <span v-text="nextNavLink.text" />
             <MyPaIcon
               icon="chevron-right"

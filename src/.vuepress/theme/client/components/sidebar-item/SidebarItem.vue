@@ -90,7 +90,7 @@ export default defineComponent({
       isActive,
       onClick,
       classes: computed(() => [
-        'px-4 py-1 inline-block leading-normal hover:text-goldfish-500 transition-colors duration-100 border-l-4',
+        'px-4 py-1 inline-block leading-normal hover:text-goldfish-500 transition-colors duration-100 border-l-4 text-inherit',
         {
           'font-bold': depth.value === 0 || (item.value.children ?? []).length > 0,
           'text-xl font-bold': depth.value === 0,

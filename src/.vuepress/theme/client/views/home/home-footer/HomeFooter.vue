@@ -4,7 +4,9 @@
       <div
         v-for="item in themeData.footer"
         :key="item.link">
-        <LinkTree :items="[item]" />
+        <LinkTree
+          :items="[item]"
+          class="text-inherit" />
       </div>
     </ContentContainer>
   </FooterSection>
@@ -13,10 +15,11 @@
     <ContentContainer class="flex py-3">
       <NavbarBrand logo-full-from="sm" />
 
-      <div class="gap-2 grid grid-flow-col ml-auto my-auto">
+      <div class="gap-3 grid grid-flow-col ml-auto my-auto">
         <AutoLink
           v-for="item in themeData.footer2"
           :key="item.link"
+          class="text-inherit"
           :item="item" />
       </div>
     </ContentContainer>
