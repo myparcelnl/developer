@@ -16,6 +16,8 @@ services:
       traefik.docker.network: traefik_default
       traefik.port: "8955"
       traefik.frontend.rule: "Host:developer.dev.myparcel.nl"
+      traefik.frontend.redirect.entryPoint: 'https'
+      traefik.frontend.redirect.permanent: 'true'
 
 volumes:
   node-modules:
