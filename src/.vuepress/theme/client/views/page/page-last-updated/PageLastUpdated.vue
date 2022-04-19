@@ -1,11 +1,9 @@
 <template>
-  <div
-    v-if="lastUpdated"
-    class="last-updated meta-item">
-    <span class="meta-item-label">{{ themeLocale.lastUpdatedText }}:</span>
+  <div v-if="lastUpdated">
+    <span>{{ themeLocale.lastUpdatedText }}:</span>
 
     <ClientOnly>
-      <span class="meta-item-info">{{ lastUpdated }}</span>
+      <span v-text="lastUpdated" />
     </ClientOnly>
   </div>
 </template>

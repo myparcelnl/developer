@@ -1,17 +1,15 @@
 <template>
   <div
-    v-if="contributors && contributors.length"
-    class="contributors meta-item">
-    <span class="meta-item-label">{{ themeLocale.contributorsText }}: </span>
-    <span class="meta-item-info">
+    v-if="contributors && contributors.length">
+    <span>{{ themeLocale.contributorsText }}: </span>
+
+    <span>
       <template
         v-for="(contributor, index) in contributors"
         :key="index">
         <span
-          class="contributor"
-          :title="`email: ${contributor.email}`">
-          {{ contributor.name }}
-        </span>
+          :title="`email: ${contributor.email}`"
+          v-text="contributor.name" />
         <template v-if="index !== contributors.length - 1">, </template>
       </template>
     </span>
@@ -26,8 +24,10 @@ import { useThemeLocaleData } from '@mptheme/client/services/composables/useThem
 export default defineComponent({
   name: 'PageContributors',
   setup: () => {
+    const contributors = useContributors();
+
     return {
-      contributors: useContributors(),
+      contributors,
       themeLocale: useThemeLocaleData(),
     };
   },
