@@ -7,7 +7,7 @@
     :class="{
       'translate-x-0': isOpen,
     }">
-    <div class="h-full inset-0 px-3 py-5 sticky w-full">
+    <div class="h-full inset-0 overflow-y-scroll px-3 py-5 w-full">
       <slot name="top" />
       <SidebarItems />
       <slot name="bottom" />

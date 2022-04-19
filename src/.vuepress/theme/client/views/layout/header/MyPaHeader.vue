@@ -1,28 +1,29 @@
 <template>
-  <ContentBlock
-    tag="header"
-    variant="border-bottom"
-    class="bg-white dark:bg-zinc-800 flex h-16 left-0 right-0 top-0 z-50">
-    <ContentContainer
-      type="fluid"
-      class="flex flex-grow items-center px-2 relative z-20">
-      <ToggleSidebarButton @toggle="onSidebarToggle" />
+  <header class="h-16">
+    <ContentBlock
+      variant="border-bottom"
+      class="bg-white dark:bg-zinc-800 fixed flex h-16 left-0 right-0 top-0 z-50">
+      <ContentContainer
+        type="fluid"
+        class="fixed flex flex-grow items-center px-2 relative z-20">
+        <ToggleSidebarButton @toggle="onSidebarToggle" />
 
-      <NavbarBrand logo-full-from="sm" />
+        <NavbarBrand logo-full-from="sm" />
 
-      <div
-        class="gap-2 grid grid-flow-col items-center ml-auto whitespace-nowrap"
-        :style="linksWrapperStyle">
-        <NavbarItems class="hidden lg:flex" />
+        <div
+          class="gap-2 grid grid-flow-col items-center ml-auto whitespace-nowrap"
+          :style="linksWrapperStyle">
+          <NavbarItems class="hidden lg:flex" />
 
-        <ToggleDarkModeButton
-          v-if="enableDarkMode"
-          class="ml-0 p-3" />
+          <ToggleDarkModeButton
+            v-if="enableDarkMode"
+            class="ml-0 p-3" />
 
-        <NavbarSearch />
-      </div>
-    </ContentContainer>
-  </ContentBlock>
+          <NavbarSearch />
+        </div>
+      </ContentContainer>
+    </ContentBlock>
+  </header>
 </template>
 
 <script lang="ts">
