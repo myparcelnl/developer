@@ -2,9 +2,9 @@ $fontFamily: 'icons';
 
 $icons: (
   api-reference: '\e900',
-  integrations: '\e901',
+  chevron-right: '\e901',
   documentation: '\e902',
-  chevron-right: '\e903',
+  integrations: '\e903',
 );
 
 @font-face {
@@ -17,14 +17,16 @@ $icons: (
   font-display: block;
 }
 
-i {
-  @apply not-italic font-normal normal-case leading-none antialiased;
-  font-family: '#{$fontFamily}' !important;
-  speak: never;
+@layer base {
+  i {
+    @apply not-italic font-normal normal-case leading-none antialiased;
+    font-family: '#{$fontFamily}' !important;
+    speak: never;
 
-  @each $name, $glyph in $icons {
-    &.icon-#{$name}:before {
-      content: $glyph;
+    @each $name, $glyph in $icons {
+      &.icon-#{$name}:before {
+        content: $glyph;
+      }
     }
   }
 }
