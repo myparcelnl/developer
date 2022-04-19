@@ -1,6 +1,6 @@
-import { Directive } from '@vue/runtime-core';
+import { Directive } from 'vue';
 
-export const vTest: Directive = (el, binding) => {
+export const vTest: Directive<HTMLElement> = (el, binding) => {
   if (process.env.NODE_ENV !== 'test' && !localStorage.getItem('showTestLabels')) {
     return;
   }
