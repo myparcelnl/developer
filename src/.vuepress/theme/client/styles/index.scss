@@ -1,10 +1,15 @@
+@use 'tailwind';
+
 @use 'fonts';
+
 @use 'layout';
+@use 'colors';
 @use 'typography';
+
 @use 'code';
+@use 'table';
 
 @use 'transitions';
 
-table {
-  @apply overflow-x-scroll;
-}
+@use 'utilities';
+

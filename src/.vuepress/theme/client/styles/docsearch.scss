@@ -1,5 +1,5 @@
 %border {
-  @apply border border-zinc-500;
+  @apply border border-zinc-400;
 }
 
 %space-base {
@@ -29,6 +29,7 @@
 
 .DocSearch-Button-Container {
   @extend %space;
+  @apply z-50;
 }
 
 .DocSearch-Button-Key {

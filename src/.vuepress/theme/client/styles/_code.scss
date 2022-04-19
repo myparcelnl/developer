@@ -1,3 +1,168 @@
-pre code {
-  @apply bg-transparent text-gray-300;
+@layer base {
+  pre, code {
+    @apply bg-zinc-100 dark:bg-zinc-900 font-mono transition-colors;
+  }
+
+  code {
+    @apply rounded py-0.5 px-1 border dark:border-zinc-700 dark:text-goldfish-300 text-goldfish-600;
+
+    @at-root .dark {
+      @apply bg-moss-900 text-moss-600;
+    }
+  }
+
+  pre {
+    @apply whitespace-pre py-4 px-6 text-left leading-6 rounded-lg font-mono mb-3 mt-2 overflow-x-scroll relative;
+
+    code {
+      @apply bg-transparent text-inherit p-0 border-0;
+    }
+
+    &:before {
+      @apply absolute z-10 right-0 top-0 text-right text-sm rounded-bl py-1 px-3 dark:bg-zinc-700 bg-zinc-200;
+    }
+
+    // Code block styles:
+    .token {
+      &.comment,
+      &.title {
+        color: #8E908C;
+      }
+
+      &.variable,
+      &.attribute,
+      &.tag,
+      &.regexp,
+      &.ruby .constant,
+      &.xml .tag .title,
+      &.xml .pi,
+      &.xml .doctype,
+      &.html .doctype,
+      &.css .id,
+      &.css .class,
+      &.css .pseudo {
+        color: #C82829;
+      }
+
+      &.number,
+      &.preprocessor,
+      &.built_in,
+      &.literal,
+      &.params,
+      &.constant {
+        color: #F5871F;
+      }
+
+      &.class,
+      &.ruby .class .title,
+      &.css .rules .attribute {
+        color: #EAB700;
+      }
+
+      &.string,
+      &.value,
+      &.inheritance,
+      &.header,
+      &.ruby .symbol,
+      &.xml .cdata {
+        color: #718C00;
+      }
+
+      &.css .hexcolor {
+        color: #3E999F;
+      }
+
+      &.function,
+      &.python .decorator,
+      &.python .title,
+      &.ruby .function .title,
+      &.ruby .title .keyword,
+      &.perl .sub,
+      &.javascript .title,
+      &.coffeescript .title {
+        color: #4271AE;
+      }
+
+      &.keyword,
+      &.javascript .function {
+        color: #8959A8;
+      }
+
+    }
+
+    @at-root .dark {
+      .token.comment,
+      .token.title {
+        @apply text-gray-400;
+      }
+
+      .token.attribute,
+      .token.css .class,
+      .token.css .id,
+      .token.css .pseudo,
+      .token.html .doctype,
+      .token.regexp,
+      .token.ruby .constant,
+      .token.tag,
+      .token.variable,
+      .token.xml .doctype,
+      .token.xml .pi,
+      .token.xml .tag .title {
+        color: #F2777A;
+      }
+
+      .token.built_in,
+      .token.constant,
+      .token.literal,
+      .token.number,
+      .token.params,
+      .token.preprocessor {
+        color: #F99157;
+      }
+
+      .token.class,
+      .token.css .rules .attribute,
+      .token.ruby .class .title {
+        color: #FC6;
+      }
+
+      .token.header,
+      .token.inheritance,
+      .token.ruby .symbol,
+      .token.string,
+      .token.value,
+      .token.xml .cdata {
+        color: #9C9;
+      }
+
+      .token.css .hexcolor {
+        color: #6CC;
+      }
+
+      .token.function,
+      .token.python .decorator,
+      .token.python .title,
+      .token.ruby .function .title,
+      .token.ruby .title .keyword,
+      .token.perl .sub,
+      .token.javascript .title,
+      .token.coffeescript .title {
+        color: #69C;
+      }
+
+      .token.keyword,
+      .token.javascript .function {
+        color: #C9C;
+      }
+    }
+  }
+}
+
+$languages: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, less, makefile, md, php, py, rb, rs, sass, scss, sh, styl, ts, toml, vue, yml;
+
+// Render language name in top right of code block.
+@each $language in $languages {
+  pre.language-#{$language}::before {
+    content: '#{$language}';
+  }
 }

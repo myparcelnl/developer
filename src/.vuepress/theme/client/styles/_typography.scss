@@ -1,24 +1,34 @@
-// Typography can't be in tailwind because vuepress renders markdown into plain html tags.
-h1, h2, h3, h4, h5, h6 {
-  @apply font-bold font-display pb-2 pt-3 border-b-0;
-}
+@layer base {
+  html {
+    @apply leading-7;
+  }
 
-h1 {
-  @apply text-4xl;
-}
+  a {
+    @apply text-moss-500 font-medium dark:text-goldfish-500 hover:underline;
+  }
 
-h2 {
-  @apply text-2xl;
-}
+  // Typography can't be in tailwind because vuepress renders markdown into plain html tags.
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold font-display pb-2 pt-3 border-b-0;
+  }
 
-h3 {
-  @apply text-xl;
-}
+  h1 {
+    @apply text-4xl;
+  }
 
-h4 {
-  @apply text-lg;
-}
+  h2 {
+    @apply text-2xl;
+  }
 
-p {
-  @apply pt-3 pb-2;
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  p {
+    @apply pt-3 pb-2;
+  }
 }
