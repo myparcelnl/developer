@@ -1,9 +1,10 @@
 <template>
   <MyPaIcon
     icon="chevron-right"
-    class="rotate-0 transform transition-transform"
+    class="font-bold text-lg transition-transform"
     :class="{
-      'rotate-240': toggle,
+      'rotate-90': toggle,
+      'rotate-0': !toggle,
     }" />
 </template>
 
