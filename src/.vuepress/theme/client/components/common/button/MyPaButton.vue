@@ -1,10 +1,18 @@
 <template>
   <div
+    v-test="'button'"
     role="button"
     :tabindex="0"
-    v-test="'button'"
-    class="border-0 duration-200 font-display inline-flex no-underline rounded-full select-none transition-colors whitespace-nowrap"
     :class="[
+      'border-0',
+      'duration-200',
+      'font-display',
+      'inline-flex',
+      'no-underline',
+      'rounded-full',
+      'select-none',
+      'transition-colors',
+      'whitespace-nowrap',
       ...variantClass,
       {
         ['py-2 px-4']: !variant.includes('icon'),
@@ -19,7 +27,7 @@
       :is="link ? 'AutoLink' : 'span'"
       v-test="'button__link'"
       :item="link ?? null"
-      class="flex m-auto">
+      class="flex m-auto text-inherit">
       <slot />
     </component>
   </div>
