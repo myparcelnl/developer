@@ -12,8 +12,6 @@ actions:
 
 ---
 
-<Badge package="@vuepress/plugin-container" />
-
 ::: foop
 
 Do you want to be kept informed of new functionalities or do you just need

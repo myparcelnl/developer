@@ -1,7 +1,5 @@
 <template>
-  <Layout>
-    MyPaIntegrations
-  </Layout>
+  MyPaIntegrations
 </template>
 
 <script lang="ts">
