@@ -1,18 +1,22 @@
 <template>
   <component
     :is="tag"
-    :class="classes">
+    :class="[
+      classes,
+      {
+        'bg-white dark:bg-slate-900': !variant.includes('dark'),
+      },
+    ]">
     <slot />
   </component>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { PropType, defineComponent } from 'vue';
 import { blockVariant } from '@mptheme/client/services/tailwind/variants/blockVariant';
 import { useTailwindVariant } from '@mptheme/client/services/composables/useTailwindVariant';
 
 const variant = useTailwindVariant(blockVariant);
-const prop = variant.createVariantProp();
 
 export default defineComponent({
   name: 'ContentBlock',
@@ -29,7 +33,7 @@ export default defineComponent({
 
   setup: (props) => {
     return {
-      classes: variant.getVariantClasses(props.variant),
+      classes: ['transition-colors', ...variant.getVariantClasses(props.variant)],
     };
   },
 });

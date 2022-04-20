@@ -8,23 +8,23 @@
       <FloepjeLeft class="fill-white opacity-30" />
     </div>
 
-    <MyPaIcon
-      v-if="icon"
-      class="text-5xl"
-      :icon="icon" />
-
-    <h2
-      v-if="title"
-      v-text="title" />
-    <p
-      v-if="subtitle"
-      v-text="subtitle" />
-
-    <MyPaButton
-      class="flex justify-self-end self-end"
-      :variant="['icon', 'outlineLight']">
-      <MyPaIcon icon="chevron-right" />
-    </MyPaButton>
+    <div class="flex flex-col">
+      <MyPaIcon
+        v-if="icon"
+        class="text-5xl"
+        :icon="icon" />
+      <h2
+        v-if="title"
+        v-text="title" />
+      <p
+        v-if="subtitle"
+        v-text="subtitle" />
+      <MyPaButton
+        class="flex group-hover:translate-x-2 justify-self-end self-end transform transition-transform"
+        :variant="['icon', 'outlineLight']">
+        <MyPaIcon icon="chevron-right" />
+      </MyPaButton>
+    </div>
   </AutoLink>
 </template>
 

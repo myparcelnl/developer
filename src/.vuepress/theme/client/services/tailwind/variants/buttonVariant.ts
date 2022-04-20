@@ -9,7 +9,7 @@ const outlineLight = [
 ];
 
 const light = [
-  'hover:bg-zinc-100',
+  'hover:bg-slate-100',
   'bg-white',
   'text-black',
 ];

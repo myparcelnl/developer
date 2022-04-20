@@ -1,1 +1,4 @@
-Empty page
+---
+title: Integrations
+content: MyPaIntegrations
+---

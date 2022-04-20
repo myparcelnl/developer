@@ -1,20 +1,4 @@
 @layer base {
-  html {
-    @apply dark:bg-zinc-800 bg-white;
-
-    &.dark {
-      @apply bg-zinc-800;
-    }
-  }
-
-  //noinspection CssInvalidPropertyValue
-  body {
-    @apply font-normal text-zinc-800 dark:text-zinc-300 bg-transparent;
-    -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto;
-    font-size: 16px;
-  }
-
   html,
   body {
     @apply p-0 m-0 transition-colors;

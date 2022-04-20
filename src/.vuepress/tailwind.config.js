@@ -38,6 +38,12 @@ module.exports = {
     path.resolve(__dirname, '**/*.{ts,vue}'),
     path.resolve(__dirname, '..', '**/*.md'),
   ],
+  safelist: [
+    // prevent code styles in base layer from getting purged.
+    'token',
+    'highlight-lines',
+    'highlight-line',
+  ],
   darkMode: 'class',
   theme: {
     borderRadius: {

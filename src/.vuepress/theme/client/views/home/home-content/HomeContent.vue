@@ -2,6 +2,7 @@
   <ContentContainer
     v-for="item in frontmatter.tree"
     :key="item.title"
+    tag="main"
     class="py-16">
     <h1
       v-if="item.title"
@@ -9,13 +10,13 @@
       v-text="item.title" />
     <p
       v-if="item.subtitle"
-      class="font-display text-center text-lg text-zinc-600"
+      class="font-display text-center text-lg text-slate-600"
       v-text="item.subtitle" />
 
     <div
       v-if="item.render"
       v-bind="item.render.attributes"
-      class="auto-cols-fr gap-4 grid lg:gap-7 pt-5"
+      class="grid auto-cols-fr gap-4 pt-5 lg:gap-7"
       :class="{
         'grid-flow-col': !item.render.attributes,
       }">

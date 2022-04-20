@@ -1,12 +1,12 @@
 <template>
   <FooterSection>
-    <ContentContainer class="grid grid-cols-1 grid-gap-3 lg:grid-cols-none lg:grid-flow-col py-12 sm:grid-cols-2">
+    <ContentContainer
+      class="grid grid-cols-1 grid-gap-3 lg:grid-cols-none lg:grid-flow-col py-12 sm:grid-cols-2"
+      :type="container">
       <div
         v-for="item in themeData.footer"
         :key="item.link">
-        <LinkTree
-          :items="[item]"
-          class="text-inherit" />
+        <LinkTree :items="[item]" />
       </div>
     </ContentContainer>
   </FooterSection>
@@ -19,7 +19,6 @@
         <AutoLink
           v-for="item in themeData.footer2"
           :key="item.link"
-          class="text-inherit"
           :item="item" />
       </div>
     </ContentContainer>
@@ -37,12 +36,20 @@ import { useThemeData } from '@mptheme/client/services/composables/useThemeData'
 
 export default defineComponent({
   name: 'HomeFooter',
+
   components: {
     AutoLink,
     ContentContainer,
     FooterSection,
     LinkTree,
     NavbarBrand,
+  },
+
+  props: {
+    container: {
+      type: String,
+      default: 'md',
+    },
   },
 
   setup: () => {

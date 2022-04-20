@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType } from 'vue';
+import { PropType, computed, defineComponent } from 'vue';
 import { isLinkHttp, isLinkMailto, isLinkTel } from '@vuepress/shared';
 import { NavLink } from '@vuepress/theme-default/lib/shared';
 import { useRouter } from 'vue-router';

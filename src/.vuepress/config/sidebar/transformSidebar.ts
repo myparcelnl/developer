@@ -24,10 +24,10 @@ export function transformSidebar(
       if ('children' in child && child.children) {
         newChild.children = transformSidebar(child.children, baseDir, depth + 1).filter(Boolean);
 
-        if (!newChild.link && typeof child.children[0] === 'string') {
-          newChild.link = child.children[0];
-          newChild.children = newChild.children.slice(1);
-        }
+        // if (!newChild.link && typeof child.children[0] === 'string') {
+        //   newChild.link = child.children[0];
+        //   newChild.children = newChild.children.slice(1);
+        // }
       }
 
       if (child.hasOwnProperty('title')) {

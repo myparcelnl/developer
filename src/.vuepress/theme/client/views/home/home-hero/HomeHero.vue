@@ -22,7 +22,7 @@
         v-html="title" />
 
       <p
-        class="font-display text-xl text-zinc-300"
+        class="font-display text-xl text-slate-300"
         v-text="frontmatter.subtitle" />
 
       <CButtonGroup>

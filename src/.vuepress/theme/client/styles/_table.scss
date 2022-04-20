@@ -1,5 +1,18 @@
 @layer base {
   table {
-    @apply overflow-x-scroll;
+    @apply rounded-lg overflow-hidden;
+  }
+
+  table, td, th {
+    @apply border;
+  }
+
+  table {
+    @apply overflow-x-scroll w-full rounded;
+  }
+
+  td,
+  th {
+    @apply py-1 px-2;
   }
 }

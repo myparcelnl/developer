@@ -2,7 +2,6 @@
   <li>
     <AutoLink
       v-if="item.link"
-      class="duration-100 hover:text-goldfish-500 text-inherit transition-colors"
       :class="classes"
       :item="item">
       {{ item.text }}

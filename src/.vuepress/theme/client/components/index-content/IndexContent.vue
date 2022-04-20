@@ -1,28 +1,29 @@
 <template>
-  <div>
+  <ClientOnly>
     <div
-      v-for="child in sidebarItems[0].children"
+      v-for="child in sidebarItems?.[0].children ?? []"
       :key="child.text">
       <h1 v-text="child.text" />
 
-      {{ child }}
-      <!--                        <LinkTree :items="child.children" /> -->
+      <LinkTree
+        :items="child.children"
+        class="dark:text-inherit pl-2 text-inherit" />
     </div>
 
     <Content />
-  </div>
+  </ClientOnly>
 </template>
 
 <script lang="ts">
+import { ClientOnly, usePageData } from '@vuepress/client';
+import LinkTree from '@mptheme/client/components/common/LinkTree.vue';
 import { defineComponent } from 'vue';
-import { usePageData } from '@vuepress/client';
 import { useSidebarItems } from '@vuepress/theme-default/lib/client';
 
 export default defineComponent({
   name: 'IndexContent',
-  // components: { LinkTree },
-
-  setup: (props, ctx) => {
+  components: { LinkTree, ClientOnly },
+  setup: () => {
     const sidebarItems = useSidebarItems();
     const page = usePageData();
 

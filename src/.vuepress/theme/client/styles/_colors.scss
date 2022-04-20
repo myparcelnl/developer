@@ -1,5 +1,14 @@
 @layer base {
+  //noinspection CssInvalidPropertyValue
   html {
-    @apply text-gray-800 dark:text-gray-100;
+    @apply bg-white;
+
+    &.dark {
+      @apply bg-slate-900;
+    }
+  }
+
+  * {
+    @apply border-slate-200 dark:border-slate-800;
   }
 }

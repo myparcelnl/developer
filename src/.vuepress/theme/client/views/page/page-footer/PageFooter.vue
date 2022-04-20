@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageFooterParts />
-    <HomeFooter />
+    <HomeFooter container="sm" />
   </div>
 </template>
 

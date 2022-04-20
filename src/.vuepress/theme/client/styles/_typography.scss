@@ -1,15 +1,53 @@
+@use 'mixins';
+
+// Typography can't be in tailwind because vuepress renders markdown into plain html tags.
 @layer base {
+  //noinspection CssInvalidPropertyValue
   html {
-    @apply leading-7;
+    @apply leading-7 text-slate-700;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    font-size: 16px;
+
+    &.dark {
+      @apply text-slate-400;
+    }
   }
 
+  // All links
   a {
-    @apply text-moss-500 font-medium dark:text-goldfish-500 hover:underline;
+    @apply font-semibold transition-colors hover:text-goldfish-500 duration-100;
   }
 
-  // Typography can't be in tailwind because vuepress renders markdown into plain html tags.
+  // Inside content pages
+  .page {
+    a {
+      @apply hover:underline decoration-goldfish-500 decoration-2 dark:text-goldfish-500 hover:text-moss-400 text-moss-500;
+    }
+
+    ul, ol, dd {
+      @apply pl-6;
+    }
+
+    ol {
+      @apply list-disc;
+    }
+
+    ul {
+      @apply list-decimal;
+    }
+
+    blockquote {
+      @apply py-1 px-4 mt-2 mb-3 dark:bg-slate-700 bg-slate-100 rounded-lg border;
+    }
+
+    hr {
+      @apply text-slate-500;
+    }
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold font-display pb-2 pt-3 border-b-0;
+    @apply font-bold font-display pb-2 pt-3;
   }
 
   h1 {

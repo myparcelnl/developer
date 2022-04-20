@@ -26,12 +26,20 @@ export default defineUserConfig<ThemeConfig>({
     editLink: true,
     logo: 'images/logo.svg',
     logoDark: 'images/logo_dark.svg',
-    repo: 'https://github.com/myparcelnl/developer-portal',
+    repo: 'https://github.com/myparcelnl/developer',
     navbar: createNavbar(),
     footer: createFooter(),
     footer2: createBottomFooter(),
-    themePlugins: [],
+    themePlugins: {
+      container: false,
+    },
     sidebar: createSidebar(),
+  },
+
+  markdown: {
+    code: {
+      lineNumbers: false,
+    },
   },
 
   port: 8955,

@@ -1,6 +1,4 @@
-%border {
-  @apply border border-zinc-400;
-}
+@use "mixins";
 
 %space-base {
   @apply grid grid-flow-col items-center auto-cols-max;
@@ -17,9 +15,8 @@
 }
 
 .DocSearch-Button {
-  @extend %border;
   @extend %space;
-  @apply flex items-center py-2 px-3 select-none rounded-full;
+  @apply flex items-center py-2 px-3 select-none rounded-full border;
 }
 
 .DocSearch-Button-Keys {
@@ -33,7 +30,7 @@
 }
 
 .DocSearch-Button-Key {
-  @apply rounded w-6 text-zinc-400 text-sm border border-zinc-300 dark:text-zinc-500 dark:border-zinc-600;
+  @apply rounded w-6 text-slate-400 text-sm dark:text-slate-500 border;
 }
 
 .DocSearch--active {
@@ -58,7 +55,7 @@
 }
 
 .DocSearch-Modal {
-  @apply cursor-auto rounded-none m-0 max-w-4xl shadow-none w-full mx-auto shadow bg-white dark:bg-zinc-900 mt-10 rounded-lg;
+  @apply cursor-auto rounded-none m-0 max-w-4xl shadow-none w-full mx-auto shadow bg-white dark:bg-slate-900 mt-10 rounded-lg;
 
   ul {
     @apply m-0 p-0 list-none;
@@ -70,7 +67,7 @@
 }
 
 .DocSearch-Form {
-  @apply rounded-full flex items-center h-16 m-0 py-0 px-4 relative shadow-none w-full border dark:border-zinc-700;
+  @apply rounded-full flex items-center h-16 m-0 py-0 px-4 relative shadow-none w-full border;
 }
 
 .DocSearch-Input {
@@ -132,10 +129,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    @apply border-solid border-2;
-    background-color: rgba(150, 159, 175, 1);
-    border-color: rgba(245, 246, 247, 1);
-    border-radius: 20px;
+    @apply border-solid border-2 rounded-lg bg-slate-400;
   }
 }
 
@@ -145,7 +139,7 @@
 
 .DocSearch-Help,
 .DocSearch-Label {
-  color: rgba(150, 159, 175, 1);
+  //color: rgba(150, 159, 175, 1);
 }
 
 .DocSearch-Help {
@@ -167,8 +161,8 @@
 }
 
 .DocSearch-HitsFooter {
-  @apply flex justify-center text-sm mb-4 p-4 text-zinc-500;
-  color: rgba(150, 159, 175, 1);
+  @apply flex justify-center text-sm mb-4 p-4 text-slate-500;
+  //color: rgba(150, 159, 175, 1);
 
   a {
     @apply border-solid border-b;
@@ -181,7 +175,7 @@
   &:hover a,
   &:focus a,
   &[aria-selected=true] a {
-    @apply bg-zinc-200 outline-zinc-300 dark:bg-zinc-800 outline-zinc-700;
+    @apply bg-slate-200 outline-slate-300 dark:bg-slate-800 outline-slate-700;
   }
 
   mark {
@@ -197,7 +191,7 @@
   }
 
   a {
-    @apply bg-zinc-50 dark:bg-zinc-700 rounded block pl-4 shadow-none w-full;
+    @apply bg-slate-50 dark:bg-slate-700 rounded block pl-4 shadow-none w-full;
   }
 }
 
@@ -206,7 +200,7 @@
 }
 
 .DocSearch-Hit-Tree {
-  @apply h-16 opacity-50 w-6 text-zinc-500;
+  @apply h-16 opacity-50 w-6 text-slate-500;
 }
 
 .DocSearch-Hit-Container {
@@ -220,7 +214,7 @@
 .DocSearch-Hit-icon,
 .DocSearch-Screen-Icon,
 .DocSearch-Search-Icon {
-  @apply text-zinc-500 antialiased stroke-[1.5];
+  @apply text-slate-500 antialiased stroke-[1.5];
 }
 
 // Buttons to the right of results.
@@ -233,7 +227,7 @@
 }
 
 .DocSearch-Hit-action-button {
-  @apply rounded-full bg-zinc-50 dark:bg-zinc-600 p-0.5;
+  @apply rounded-full bg-slate-50 dark:bg-slate-600 p-0.5;
 
   svg {
     @apply w-full h-full;
@@ -241,7 +235,7 @@
 
   &,
   path {
-    @apply transition-colors duration-100 dark:stroke-zinc-400;
+    @apply transition-colors duration-100 dark:stroke-slate-400;
   }
 
   &:focus,
@@ -259,7 +253,7 @@
 }
 
 .DocSearch-Hit-path {
-  @apply text-sm ml-2 my-auto text-zinc-500;
+  @apply text-sm ml-2 my-auto text-slate-500;
 }
 
 .DocSearch-ErrorScreen,
@@ -269,7 +263,7 @@
 }
 
 .DocSearch-Screen-Icon {
-  @apply pb-3 text-zinc-400 mx-auto;
+  @apply pb-3 text-slate-400 mx-auto;
 }
 
 .DocSearch-NoResults-Prefill-List {
@@ -293,7 +287,7 @@
 }
 
 .DocSearch-Commands {
-  @apply flex m-0 p-0 text-zinc-700;
+  @apply flex m-0 p-0 text-slate-700;
 }
 
 .DocSearch-Commands li {
@@ -301,7 +295,20 @@
 }
 
 .DocSearch-Commands-Key {
-  @apply rounded flex items-center justify-center h-4 mr-2 pb-px shadow-none w-5 border rounded bg-white dark:bg-zinc-800;
+  @apply
+  bg-white
+  dark:bg-slate-800
+  border
+  flex
+  h-4
+  items-center
+  justify-center
+  mr-2
+  pb-px
+  rounded
+  rounded
+  shadow-none
+  w-5
 }
 
 @keyframes fade {

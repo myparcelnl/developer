@@ -1,9 +1,10 @@
 <template>
-  <div
+  <component
+    :is="tag"
     class="md:px-8 mx-auto px-5 w-full"
     :class="classes">
     <slot />
-  </div>
+  </component>
 </template>
 
 <script lang="ts">
@@ -17,6 +18,10 @@ export default defineComponent({
   name: 'ContentContainer',
   props: {
     type: variant.createVariantProp(),
+    tag: {
+      type: String,
+      default: 'div',
+    },
   },
 
   setup: (props) => {

@@ -7,13 +7,13 @@
       class="flex h-16 place-items-center">
       <nav class="flex-1 grid grid-cols-2">
         <div class="flex">
+          <MyPaIcon
+            icon="chevron-left"
+            class="text-xl" />
           <AutoLink
             v-if="prevNavLink"
             :item="prevNavLink"
-            class="flex items-center text-inherit">
-            <MyPaIcon
-              icon="chevron-left"
-              class="text-xl" />
+            class="flex items-center">
             <span v-text="prevNavLink.text" />
           </AutoLink>
         </div>
@@ -22,12 +22,12 @@
           <AutoLink
             v-if="nextNavLink"
             :item="nextNavLink"
-            class="flex items-center ml-auto text-inherit">
+            class="flex items-center ml-auto">
             <span v-text="nextNavLink.text" />
-            <MyPaIcon
-              icon="chevron-right"
-              class="text-xl" />
           </AutoLink>
+          <MyPaIcon
+            icon="chevron-right"
+            class="text-xl" />
         </div>
       </nav>
     </ContentContainer>

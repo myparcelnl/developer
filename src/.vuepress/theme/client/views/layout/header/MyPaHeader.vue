@@ -2,7 +2,7 @@
   <header class="h-16">
     <ContentBlock
       variant="border-bottom"
-      class="bg-white dark:bg-zinc-800 fixed flex h-16 left-0 right-0 top-0 z-50">
+      class="fixed flex h-16 left-0 right-0 top-0 z-40">
       <ContentContainer
         type="fluid"
         class="fixed flex flex-grow items-center px-2 relative z-20">
@@ -17,7 +17,7 @@
 
           <ToggleDarkModeButton
             v-if="enableDarkMode"
-            class="ml-0 p-3" />
+            class="ml-0 p-3 w-12" />
 
           <NavbarSearch />
         </div>

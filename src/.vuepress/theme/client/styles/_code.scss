@@ -1,168 +1,224 @@
+// @see https://v2.vuepress.vuejs.org/guide/markdown.html#code-blocks
+
+$extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, less, makefile, md, php, py, rb, rs, sass, scss, sh, styl, ts, toml, vue, yml;
+
 @layer base {
+  div[class*="language-"] {
+    @apply text-left leading-6 rounded-lg font-mono overflow-auto relative z-0;
+
+    // Render language name in top right of code block.
+    &:before {
+      @apply absolute z-10 right-0 top-0 text-right text-sm rounded-bl py-1 px-3 dark:bg-slate-700 bg-slate-200;
+    }
+
+    @each $extension in $extensions {
+      &.ext-#{$extension}:before {
+        content: '#{$extension}';
+      }
+    }
+  }
+
+  pre,
+  .highlight-lines {
+    @apply whitespace-pre py-4 mb-3 mt-2;
+  }
+
+  .highlight-lines {
+    @apply absolute inset-0 pointer-events-none;
+
+    .highlight-line {
+      @apply bg-goldfish-500 bg-opacity-20 border-l-4 border-goldfish-500;
+    }
+  }
+
   pre, code {
-    @apply bg-zinc-100 dark:bg-zinc-900 font-mono transition-colors;
+    @apply bg-slate-100 dark:bg-slate-800 font-mono;
   }
 
   code {
-    @apply rounded py-0.5 px-1 border dark:border-zinc-700 dark:text-goldfish-300 text-goldfish-600;
-
-    @at-root .dark {
-      @apply bg-moss-900 text-moss-600;
-    }
+    @apply rounded py-1 px-2 text-[.95em];
   }
 
   pre {
-    @apply whitespace-pre py-4 px-6 text-left leading-6 rounded-lg font-mono mb-3 mt-2 overflow-x-scroll relative;
+    @apply px-6;
 
     code {
-      @apply bg-transparent text-inherit p-0 border-0;
-    }
-
-    &:before {
-      @apply absolute z-10 right-0 top-0 text-right text-sm rounded-bl py-1 px-3 dark:bg-zinc-700 bg-zinc-200;
+      @apply dark:bg-transparent dark:text-inherit bg-transparent text-inherit border-0 p-0;
     }
 
     // Code block styles:
     .token {
       &.comment,
       &.title {
-        color: #8E908C;
+        @apply text-slate-400 dark:text-slate-600;
       }
 
-      &.variable,
-      &.attribute,
+      &.emphasis {
+        font-style: italic
+      }
+
+      &.strong {
+        font-weight: 700
+      }
+
+      &.link {
+        text-decoration: underline
+      }
+
+      &.comment,
+      &.quote {
+        font-style: italic
+      }
+
+      &.punctuation,
+      &.operator {
+        @apply text-slate-500
+      }
+
+      &.doctag,
+      &.formula,
+      &.keyword {
+        color: #A626A4
+      }
+
+      &.deletion,
+      &.name,
+      &.section,
+      &.selector-tag,
       &.tag,
+      &.subst {
+        color: #E45649
+      }
+
+      &.literal {
+        color: #0184BB
+      }
+
+      &.addition,
+      &.attribute,
+      &.attr-name,
+      &.meta &.string,
       &.regexp,
-      &.ruby .constant,
-      &.xml .tag .title,
-      &.xml .pi,
-      &.xml .doctype,
-      &.html .doctype,
-      &.css .id,
-      &.css .class,
-      &.css .pseudo {
-        color: #C82829;
+      &.string {
+        color: #50A14F
       }
 
+      &.attr,
+      &.attr-value,
       &.number,
-      &.preprocessor,
-      &.built_in,
-      &.literal,
-      &.params,
-      &.constant {
-        color: #F5871F;
+      &.selector-attr,
+      &.selector-class,
+      &.selector-pseudo,
+      &.template-variable,
+      &.type,
+      &.variable {
+        color: #986801
       }
 
-      &.class,
-      &.ruby .class .title,
-      &.css .rules .attribute {
-        color: #EAB700;
+      &.bullet,
+      &.link,
+      &.meta,
+      &.selector-id,
+      &.symbol,
+      &.function {
+        color: #4078F2
       }
 
-      &.string,
-      &.value,
-      &.inheritance,
-      &.header,
-      &.ruby .symbol,
-      &.xml .cdata {
-        color: #718C00;
+      &.builtin,
+      &.title,
+      &.class {
+        color: #C18401
       }
 
-      &.css .hexcolor {
-        color: #3E999F;
-      }
+      @at-root .dark & {
+        &.keyword,
+        &.operator,
+        &.pattern-match {
+          color: #F92672
+        }
 
-      &.function,
-      &.python .decorator,
-      &.python .title,
-      &.ruby .function .title,
-      &.ruby .title .keyword,
-      &.perl .sub,
-      &.javascript .title,
-      &.coffeescript .title {
-        color: #4271AE;
-      }
+        &.function,
+        &.pattern-match &.constructor {
+          color: #61AEEE
+        }
 
-      &.keyword,
-      &.javascript .function {
-        color: #8959A8;
-      }
+        &.function &.params {
+          color: #A6E22E
+        }
 
-    }
+        &.function &.params &.typing {
+          color: #FD971F
+        }
 
-    @at-root .dark {
-      .token.comment,
-      .token.title {
-        @apply text-gray-400;
-      }
+        &.module-access &.module {
+          color: #7E57C2
+        }
 
-      .token.attribute,
-      .token.css .class,
-      .token.css .id,
-      .token.css .pseudo,
-      .token.html .doctype,
-      .token.regexp,
-      .token.ruby .constant,
-      .token.tag,
-      .token.variable,
-      .token.xml .doctype,
-      .token.xml .pi,
-      .token.xml .tag .title {
-        color: #F2777A;
-      }
+        &.constructor {
+          color: #E2B93D
+        }
 
-      .token.built_in,
-      .token.constant,
-      .token.literal,
-      .token.number,
-      .token.params,
-      .token.preprocessor {
-        color: #F99157;
-      }
+        &.constructor &.string {
+          color: #9CCC65
+        }
 
-      .token.class,
-      .token.css .rules .attribute,
-      .token.ruby .class .title {
-        color: #FC6;
-      }
+        &.comment,
+        &.quote {
+          font-style: italic
+        }
 
-      .token.header,
-      .token.inheritance,
-      .token.ruby .symbol,
-      .token.string,
-      .token.value,
-      .token.xml .cdata {
-        color: #9C9;
-      }
+        &.doctag,
+        &.formula {
+          color: #C678DD
+        }
 
-      .token.css .hexcolor {
-        color: #6CC;
-      }
+        &.deletion,
+        &.name,
+        &.section,
+        &.selector-tag,
+        &.subst {
+          color: #E06C75
+        }
 
-      .token.function,
-      .token.python .decorator,
-      .token.python .title,
-      .token.ruby .function .title,
-      .token.ruby .title .keyword,
-      .token.perl .sub,
-      .token.javascript .title,
-      .token.coffeescript .title {
-        color: #69C;
-      }
+        &.literal {
+          color: #56B6C2
+        }
 
-      .token.keyword,
-      .token.javascript .function {
-        color: #C9C;
+        &.addition,
+        &.attribute,
+        &.meta &.string,
+        &.regexp,
+        &.string {
+          color: #98C379
+        }
+
+        &.built_in,
+        &.class &.title,
+        &.title.class_ {
+          color: #E6C07B
+        }
+
+        &.attr,
+        &.number,
+        &.selector-attr,
+        &.selector-class,
+        &.selector-pseudo,
+        &.template-variable,
+        &.type,
+        &.variable {
+          color: #D19A66
+        }
+
+        &.bullet,
+        &.link,
+        &.meta,
+        &.selector-id,
+        &.symbol,
+        &.title {
+          color: #61AEEE
+        }
       }
     }
   }
 }
 
-$languages: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, less, makefile, md, php, py, rb, rs, sass, scss, sh, styl, ts, toml, vue, yml;
-
-// Render language name in top right of code block.
-@each $language in $languages {
-  pre.language-#{$language}::before {
-    content: '#{$language}';
-  }
-}

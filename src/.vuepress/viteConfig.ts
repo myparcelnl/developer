@@ -20,7 +20,7 @@ export const viteConfig: UserConfig = {
     ? {
       server: {
         hmr: {
-          port: 443,
+          clientPort: 443,
         },
       },
     }

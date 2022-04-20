@@ -12,7 +12,9 @@ actions:
 
 ---
 
-::: tip
+<Badge package="@vuepress/plugin-container" />
+
+::: foop
 
 Do you want to be kept informed of new functionalities or do you just need
 help? [Join us on Slack!](https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LTM0Y2IzNmZlY2NkOWFlNTIyODY5YjFmNGQyYzZjYmQzMzliNDBjYzBkOGMwYzA0ZDYzNmM1NzAzNDY1ZjEzOTM)
