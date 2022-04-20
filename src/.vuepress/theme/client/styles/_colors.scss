@@ -1,4 +1,9 @@
 @layer base {
+  :root,
+  html.dark {
+    --c-bg: inherit;
+  }
+
   //noinspection CssInvalidPropertyValue
   html {
     @apply bg-white;
