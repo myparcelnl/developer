@@ -30,7 +30,7 @@
 }
 
 .DocSearch-Button-Key {
-  @apply rounded w-6 text-slate-400 text-sm dark:text-slate-500 border;
+  @apply rounded-sm w-6 text-slate-400 text-sm dark:text-slate-500 border;
 }
 
 .DocSearch--active {
@@ -58,7 +58,7 @@
   @apply cursor-auto rounded-none m-0 max-w-4xl shadow-none w-full mx-auto shadow bg-white dark:bg-slate-900 mt-10 rounded-lg;
 
   ul {
-    @apply m-0 p-0 list-none;
+    @apply m-0 p-0;
   }
 }
 
@@ -179,7 +179,7 @@
   }
 
   mark {
-    @apply underline bg-amber-400 py-1 rounded;
+    @apply underline bg-amber-400 py-1 rounded-sm;
   }
 
   &--deleting {
@@ -191,7 +191,7 @@
   }
 
   a {
-    @apply bg-slate-50 dark:bg-slate-700 rounded block pl-4 shadow-none w-full;
+    @apply bg-slate-50 dark:bg-slate-700 rounded-sm block pl-4 shadow-none w-full;
   }
 }
 
@@ -305,8 +305,7 @@
   justify-center
   mr-2
   pb-px
-  rounded
-  rounded
+  rounded-sm
   shadow-none
   w-5
 }

@@ -29,7 +29,7 @@
       <ul
         v-show="isOpen"
         :class="{
-          'pl-3': depth > 0,
+          'pl-2 ml-2 border-l': depth > 0,
           'text-sm': depth > 1,
         }">
         <SidebarItem
@@ -95,11 +95,11 @@ export default defineComponent({
       isActive,
       onClick,
       classes: computed(() => [
-        'px-3 py-1 inline-block leading-normal border-l-4 flex',
+        'py-1 inline-block8 border-l-4 flex transition-all duration-100',
         {
           'font-bold': depth.value === 0 || (item.value.children ?? []).length > 0,
-          'text-xl font-bold': depth.value === 0,
-          'border-goldfish-500 text-goldfish-500': depth.value > 0 && isActive.value,
+          'text-xl font-bold leading-8': depth.value === 0,
+          'border-goldfish-500 text-goldfish-500 pl-2': depth.value > 0 && isActive.value,
           'border-transparent': depth.value === 0 || !isActive.value,
         },
       ]),

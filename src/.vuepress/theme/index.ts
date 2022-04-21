@@ -1,11 +1,12 @@
 /* eslint-disable max-lines-per-function */
 import { DIR_CLIENT, DIR_THEME } from './shared/directories';
-import { ContainerPluginOptions } from '@vuepress/plugin-container';
 import { Theme } from 'vuepress';
 import { ThemeConfig } from '@mptheme/config.types';
 import { createAliasMap } from './node/config/createAliasMap';
+import { createContainerPlugins } from './node/config/createContainerPlugin';
 import { defaultTheme } from '@vuepress/theme-default';
 import { path } from '@vuepress/utils';
+import plugin from './node/plugin';
 
 const components = path.resolve(DIR_CLIENT, 'components');
 const views = path.resolve(DIR_CLIENT, 'views');
@@ -13,7 +14,6 @@ const views = path.resolve(DIR_CLIENT, 'views');
 const theme: Theme<ThemeConfig> = (config, app) => {
   const defaultThemeData = typeof defaultTheme === 'function' ? defaultTheme(config, app) : null;
 
-  // console.log(defaultThemeData?.plugins);
   return {
     ...defaultThemeData,
 
@@ -51,15 +51,9 @@ const theme: Theme<ThemeConfig> = (config, app) => {
      */
     plugins: [
       ...defaultThemeData?.plugins ?? [],
-      [
-        '@vuepress/container',
-        (): ContainerPluginOptions => ({
-          marker: '',
-          type: 'tip',
-          before: (i) => '<div class="bg-amber-200">' + i,
-          after: () => '</div>',
-        }),
-      ],
+
+      plugin,
+      ...createContainerPlugins(),
 
       [
         '@vuepress/docsearch',

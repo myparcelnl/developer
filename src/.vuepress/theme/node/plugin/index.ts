@@ -4,6 +4,10 @@ const plugin: PluginFunction = () => {
   return {
     name: '@myparcel/vuepress-plugin-markdown',
 
+    extendsPage: (plugin) => {
+
+    },
+
     extendsMarkdownOptions: (md) => {
 
     },

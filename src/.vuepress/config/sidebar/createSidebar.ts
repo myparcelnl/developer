@@ -6,15 +6,16 @@ export const SRC_DIR = path.resolve(__dirname, '..', '..', '..');
 
 export const HIDDEN: string[] = [
   'brands',
+  'contact',
+  'contributing',
+  'integrations',
 ];
 
 /**
  * Gets the sidebar and nav config from vuepress-bar and converts it to support VuePress 2.
- *
- * @param baseDir
  */
-export function createSidebar(baseDir?: string): SidebarConfig {
+export const createSidebar = (baseDir?: string): SidebarConfig => {
   baseDir ??= SRC_DIR;
 
   return createObjectSidebar(baseDir);
-}
+};

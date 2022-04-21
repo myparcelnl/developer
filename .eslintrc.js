@@ -25,9 +25,6 @@ module.exports = {
   parserOptions: {
     requireConfigFile: false,
   },
-  extends: [
-    // '@myparcel/eslint-config/preset-es6',
-  ],
   rules: {
     'class-methods-use-this': 'off',
     'space-before-blocks': ['error', 'always'],
@@ -36,7 +33,7 @@ module.exports = {
     // Vue and related files
     {
       extends: [
-        '@myparcel/eslint-config/preset-vue3',
+        '@myparcel/eslint-config/preset-vue3-typescript',
         'plugin:vue/vue3-essential',
         '@vue/eslint-config-typescript',
       ],
@@ -50,6 +47,7 @@ module.exports = {
         'vue/no-unregistered-components': noUndefComponents,
         'vue/no-undef-components': noUndefComponents,
         '@typescript-eslint/restrict-plus-operands': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
 
         // Rules are extremely slow
         '@typescript-eslint/no-misused-promises': 'off',

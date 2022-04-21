@@ -1,14 +1,10 @@
 @layer base {
   table {
-    @apply rounded-lg overflow-hidden;
+    @apply rounded-lg overflow-x-scroll w-full mb-3;
   }
 
   table, td, th {
     @apply border;
-  }
-
-  table {
-    @apply overflow-x-scroll w-full rounded;
   }
 
   td,

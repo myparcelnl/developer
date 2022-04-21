@@ -26,15 +26,15 @@
     }
 
     ul, ol, dd {
-      @apply pl-6;
+      @apply pl-6 pt-1 pb-2;
     }
 
     ol {
-      @apply list-disc;
+      @apply list-decimal;
     }
 
     ul {
-      @apply list-decimal;
+      @apply list-disc;
     }
 
     blockquote {
@@ -47,26 +47,34 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold font-display pb-2 pt-3;
+    @apply font-bold font-display pb-2 scroll-mt-16 relative;
+
+    a {
+      @apply opacity-0 transition-opacity absolute -left-4;
+    }
+
+    &:hover a {
+      @apply opacity-100;
+    }
   }
 
   h1 {
-    @apply text-4xl;
+    @apply text-4xl pt-5;
   }
 
   h2 {
-    @apply text-2xl;
+    @apply text-2xl pt-4;
   }
 
   h3 {
-    @apply text-xl;
+    @apply text-xl pt-3;
   }
 
   h4 {
-    @apply text-lg;
+    @apply text-lg pt-2;
   }
 
   p {
-    @apply pt-3 pb-2;
+    @apply py-2;
   }
 }

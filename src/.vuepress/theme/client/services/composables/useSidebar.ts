@@ -1,6 +1,5 @@
-import { computed, ComputedRef, ref } from 'vue';
+import { ComputedRef, Ref, computed, ref } from 'vue';
 import { ResolvedSidebarItem, useSidebarItems } from '@vuepress/theme-default/lib/client';
-import { Ref } from '@vue/runtime-core';
 import { useBreakpoints } from '@mptheme/client/services/composables/useBreakpoints';
 
 let isOpen: ComputedRef<boolean>;
@@ -8,11 +7,12 @@ let isOpen: ComputedRef<boolean>;
 let toggled: Ref<boolean>;
 
 type UseSidebar = () => {
-  isOpen: Ref<boolean>,
-  exists: ComputedRef<boolean>,
-  toggle: () => void
-  items: ComputedRef<ResolvedSidebarItem[]>
-}
+  isOpen: Ref<boolean>;
+  exists: ComputedRef<boolean>;
+  toggled: Ref<boolean>;
+  toggle: () => void;
+  items: ComputedRef<ResolvedSidebarItem[]>;
+};
 
 export const useSidebar: UseSidebar = () => {
   const sidebarItems = useSidebarItems();
@@ -26,7 +26,8 @@ export const useSidebar: UseSidebar = () => {
     items: sidebarItems,
     isOpen,
     exists,
-    toggle() {
+    toggled,
+    toggle(): void {
       toggled.value = !toggled.value;
     },
   };

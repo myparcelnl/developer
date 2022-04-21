@@ -4,7 +4,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
 
 @layer base {
   div[class*="language-"] {
-    @apply text-left leading-6 rounded-lg font-mono overflow-auto relative z-0;
+    @apply text-left leading-6 rounded-lg font-mono overflow-auto relative z-0 mb-3 mt-1;
 
     // Render language name in top right of code block.
     &:before {
@@ -18,9 +18,9 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
     }
   }
 
-  pre,
+  div[class*="language-"],
   .highlight-lines {
-    @apply whitespace-pre py-4 mb-3 mt-2;
+    @apply whitespace-pre py-4;
   }
 
   .highlight-lines {
@@ -31,12 +31,12 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
     }
   }
 
-  pre, code {
+  div[class*="language-"], code {
     @apply bg-slate-100 dark:bg-slate-800 font-mono;
   }
 
   code {
-    @apply rounded py-1 px-2 text-[.95em];
+    @apply rounded-sm py-1 px-2 text-[.95em];
   }
 
   pre {
@@ -46,38 +46,35 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
       @apply dark:bg-transparent dark:text-inherit bg-transparent text-inherit border-0 p-0;
     }
 
-    // Code block styles:
+    // Code highlighting
     .token {
       &.comment,
-      &.title {
-        @apply text-slate-400 dark:text-slate-600;
+      &.title,
+      &.punctuation,
+      &.operator {
+        @apply text-slate-400 dark:text-slate-500;
       }
 
-      &.emphasis {
-        font-style: italic
-      }
-
-      &.strong {
-        font-weight: 700
+      &.bold {
+        @apply font-bold;
       }
 
       &.link {
-        text-decoration: underline
+        @apply underline;
       }
 
+      &.italic,
       &.comment,
       &.quote {
-        font-style: italic
+        // Can't use @apply italic because that will create a circular dependency...
+        font-style: italic;
       }
 
-      &.punctuation,
-      &.operator {
-        @apply text-slate-500
-      }
 
       &.doctag,
       &.formula,
-      &.keyword {
+      &.keyword,
+      &.regex-delimiter {
         color: #A626A4
       }
 
@@ -98,7 +95,6 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
       &.attribute,
       &.attr-name,
       &.meta &.string,
-      &.regexp,
       &.string {
         color: #50A14F
       }
@@ -126,14 +122,17 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
 
       &.builtin,
       &.title,
-      &.class {
+      &.class,
+      &.regex-source,
+      &.property {
         color: #C18401
       }
 
       @at-root .dark & {
         &.keyword,
         &.operator,
-        &.pattern-match {
+        &.pattern-match,
+        &.regex-delimiter {
           color: #F92672
         }
 
@@ -160,11 +159,6 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
 
         &.constructor &.string {
           color: #9CCC65
-        }
-
-        &.comment,
-        &.quote {
-          font-style: italic
         }
 
         &.doctag,

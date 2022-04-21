@@ -2,7 +2,7 @@
   <div
     class="min-h-full"
     :class="{
-      'lg:pl-72': isOpen,
+      'lg:pl-80': isOpen,
     }">
     <slot />
   </div>

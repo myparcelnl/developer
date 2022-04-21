@@ -27,7 +27,7 @@
       :is="link ? 'AutoLink' : 'span'"
       v-test="'button__link'"
       :item="link ?? null"
-      class="flex m-auto">
+      class="dark:text-inherit flex m-auto text-inherit">
       <slot />
     </component>
   </div>

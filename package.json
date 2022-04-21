@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "license": "ISC",
   "authors": {
     "name": "Edie Lemoine",
     "email": "edie@myparcel.nl"
@@ -18,7 +19,6 @@
     "test:vue": "vitest",
     "test": "yarn test:node && yarn test:vue"
   },
-  "license": "MIT",
   "dependencies": {
     "@octokit/core": "^3.6.0",
     "@vue/runtime-core": "^3.2.33",
@@ -37,6 +37,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
     "@myparcel/eslint-config": "^3.4.4",
+    "@myparcel/sdk": "^1.1.0",
     "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^27.4.1",
     "@types/lodash-es": "^4.17.6",

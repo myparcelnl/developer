@@ -6,7 +6,7 @@ title: Go Beyond Delivery with MyParcel.
 subtitle: Connect with our API and get started with shipments, returns and more.
 
 actions: 
-- title: Get Started
+- title: Get started
   link: /get-started
 - title: Contact us
   variant: outlineLight

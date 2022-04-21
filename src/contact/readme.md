@@ -1,4 +1,5 @@
 ---
 title: Contact
-layout: ContactPage
+content: MyPaContact
+sidebar: false
 ---

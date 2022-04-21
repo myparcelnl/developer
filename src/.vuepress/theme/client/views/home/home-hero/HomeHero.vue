@@ -18,11 +18,11 @@
 
     <ContentContainer class="relative">
       <h1
-        class="text-6xl text-white"
+        class="text-6xl text-slate-200"
         v-html="title" />
 
       <p
-        class="font-display text-xl text-slate-300"
+        class="font-display text-slate-300 text-xl"
         v-text="frontmatter.subtitle" />
 
       <CButtonGroup>

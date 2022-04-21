@@ -28,7 +28,7 @@ const colors = {
 };
 
 /**
- * @type {import('tailwindcss/tailwind-config').TailwindConfig}
+ * @name {import('tailwindcss/tailwind-config').TailwindConfig}
  */
 module.exports = {
   content: [
@@ -48,8 +48,8 @@ module.exports = {
   theme: {
     borderRadius: {
       none: '0',
-      DEFAULT: '0.175rem',
-      md: '0.5rem',
+      sm: '0.175rem',
+      DEFAULT: '0.5rem',
       lg: '1rem',
       xl: '1.875rem',
       full: '9999px',

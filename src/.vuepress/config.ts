@@ -6,6 +6,7 @@ import { createSidebar } from './config/sidebar/createSidebar';
 import { defineUserConfig } from 'vuepress';
 import { head } from './config/head';
 import { path } from '@vuepress/utils';
+import { slugify } from '@vuepress/markdown';
 import { viteConfig } from './viteConfig';
 
 export default defineUserConfig<ThemeConfig>({
@@ -31,12 +32,31 @@ export default defineUserConfig<ThemeConfig>({
     footer: createFooter(),
     footer2: createBottomFooter(),
     themePlugins: {
-      container: false,
+      activeHeaderLinks: false,
+      container: {
+        tip: false,
+        danger: false,
+        details: true,
+        warning: false,
+      },
     },
     sidebar: createSidebar(),
   },
 
   markdown: {
+    anchor: {
+      /**
+       * Modifies how anchor tags are created. If there's an #.X(.X)* marker in the title, use that as anchor without
+       * the rest of the heading text, for easier linking.
+       *
+       * @param {string} str
+       * @returns {string}
+       */
+      slugify(str: string): string {
+        const hasHeading = (/^\d+(?:\.[\w\d]+)+/).exec(str);
+        return slugify(hasHeading ? hasHeading[0] : str);
+      },
+    },
     code: {
       lineNumbers: false,
     },
