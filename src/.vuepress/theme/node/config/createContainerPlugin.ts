@@ -20,9 +20,10 @@ const defaultClasses: string[] = [
   'before:top-0',
   'before:w-1',
   'border',
+  'dark:text-slate-200',
   'overflow-hidden',
   'px-3',
-  'py-2',
+  'py-3',
   'relative',
   'rounded',
 ];

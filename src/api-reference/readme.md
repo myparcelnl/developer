@@ -2,12 +2,13 @@
 title: API Reference
 ---
 
-This is the documentation for the MyParcel.nl Core API. Our API is build in such
+This is the documentation for the MyParcel.nl Core API. Our API is built in such
 a way to easily handle bulk operations. We try to follow the REST architecture
 as much as possible but deviate from it when we need to achieve high
 performance.
 
-This documentation is applicable to <DataType type="platform" id="1" />, <DataType type="platform" id="2" /> and <DataType type="platform" id="3" />.
+This documentation is applicable to <DataType type="platform" id="1" />
+, <DataType type="platform" id="2" /> and <DataType type="platform" id="3" />.
 Keep in mind that some examples will only be applicable to one of those
 platforms, since there are differences in carriers, shipping options and package
 types between the different platforms.
@@ -26,9 +27,9 @@ the API directly. Create an issue on GitHub to contact the programmer.
 ## Test environment
 
 We do not currently have a test environment. You can create an account and print
-labels. These will only be invoiced if you actually send them.
-Note: <DataType type="package_type" id="4" /> will be charged immediately.
+labels freely. These will only be invoiced when you actually ship them.
 
-We do not currently have a test environment. You can create an account and print
-labels. These will only be invoiced if you actually send them.
-Note: <DataType type="package_type" id="4" /> will be charged immediately.
+::: note
+This does not apply to <DataType type="package_type" id="4" />, these shipments
+will always be invoiced immediately.
+:::
