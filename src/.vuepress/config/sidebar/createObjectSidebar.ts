@@ -1,13 +1,10 @@
-import { AnySidebarItem } from '@mptheme/config.types';
+import { AnySidebarItem, SidebarConfig } from '@mptheme/config.types';
 import { HIDDEN } from './createSidebar';
 import { createArraySidebar } from './createArraySidebar';
 import fs from 'fs';
 import path from 'path';
 
-/**
- * @param baseDir
- */
-export function createObjectSidebar(baseDir: string) {
+export const createObjectSidebar = (baseDir: string): SidebarConfig => {
   const dirs = fs
     .readdirSync(baseDir)
     .filter((file) => !file.startsWith('.') && fs.lstatSync(path.resolve(baseDir, file)).isDirectory());
@@ -22,4 +19,4 @@ export function createObjectSidebar(baseDir: string) {
         [`/${dir}`]: createArraySidebar(nextBaseDir),
       };
     }, {});
-}
+};

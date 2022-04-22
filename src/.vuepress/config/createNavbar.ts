@@ -1,4 +1,4 @@
-import { ABOUT, API_REFERENCE, CHANGELOG, CONTACT, DOCUMENTATION, INTEGRATIONS, STATUS } from './routes';
+import { ABOUT, API_REFERENCE, CONTACT, DOCUMENTATION, INTEGRATIONS, STATUS } from './routes';
 import { NavbarConfigArray } from '@mptheme/config.types';
 
 export const createNavbar = (): NavbarConfigArray => [
@@ -6,7 +6,6 @@ export const createNavbar = (): NavbarConfigArray => [
   DOCUMENTATION,
   INTEGRATIONS,
   { ...STATUS, sub: true },
-  { ...CHANGELOG, sub: true },
   { ...ABOUT, sub: true },
   { ...CONTACT, sub: true },
 ];

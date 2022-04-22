@@ -5,12 +5,7 @@ import { getVuePressBarConfig } from './getVuePressBarConfig';
 import path from 'path';
 import { transformSidebar } from './transformSidebar';
 
-/**
- * @param baseDir
- * @param dir
- * @param depth
- */
-export function createArraySidebar(baseDir: string, depth: number = 0) {
+export const createArraySidebar = (baseDir: string): SidebarConfigArray => {
   const { sidebar } = getVuePressBarConfig(baseDir);
   const sidebarV2: SidebarConfigArray = transformSidebar(sidebar, path.relative(SRC_DIR, baseDir));
   const basename = path.basename(baseDir);
@@ -22,4 +17,4 @@ export function createArraySidebar(baseDir: string, depth: number = 0) {
       children: sidebarV2,
     },
   ];
-}
+};
