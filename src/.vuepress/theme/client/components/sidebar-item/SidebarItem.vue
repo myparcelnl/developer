@@ -3,7 +3,8 @@
     <AutoLink
       v-if="item.link"
       :class="classes"
-      :item="item">
+      :item="item"
+      @click="toggleSidebar">
       {{ item.text }}
 
       <ToggleChevron
@@ -29,7 +30,7 @@
       <ul
         v-show="isOpen"
         :class="{
-          'pl-2 ml-2 border-l': depth > 0,
+          'pl-3 ml-0.5 border-l': depth > 0,
           'text-sm': depth > 1,
         }">
         <SidebarItem
@@ -48,6 +49,7 @@ import { ResolvedSidebarItem, isActiveSidebarItem } from '@vuepress/theme-defaul
 import { useRoute, useRouter } from 'vue-router';
 import DropdownTransition from '@theme/DropdownTransition.vue';
 import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
+import { useSidebar } from '@mptheme/client/services/composables/useSidebar';
 
 export default defineComponent({
   name: 'SidebarItem',
@@ -77,6 +79,7 @@ export default defineComponent({
     const isActive = computed(() => isActiveSidebarItem(item.value, route));
     const isOpen = ref(true);
     const onClick = ref<() => void>();
+    const { toggle: toggleSidebar } = useSidebar();
 
     if (item.value.collapsible) {
       isOpen.value = isActive.value;
@@ -94,12 +97,13 @@ export default defineComponent({
       isOpen,
       isActive,
       onClick,
+      toggleSidebar,
       classes: computed(() => [
-        'py-1 inline-block8 border-l-4 flex transition-all duration-100',
+        'py-1 flex transition-all duration-100',
         {
           'font-bold': depth.value === 0 || (item.value.children ?? []).length > 0,
           'text-xl font-bold leading-8': depth.value === 0,
-          'border-goldfish-500 text-goldfish-500 pl-2': depth.value > 0 && isActive.value,
+          'text-goldfish-500': depth.value > 0 && isActive.value,
           'border-transparent': depth.value === 0 || !isActive.value,
         },
       ]),

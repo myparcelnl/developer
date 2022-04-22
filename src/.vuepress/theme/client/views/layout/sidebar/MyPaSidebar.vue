@@ -3,7 +3,7 @@
     v-if="exists"
     :variant="['border-right', 'dark']"
     tag="aside"
-    class="fixed h-full transition-all w-80 z-10"
+    class="fixed h-full transition-all w-80 z-30"
     :class="{
       '-translate-x-full lg:translate-x-0': !isOpen,
       'translate-x-0': isOpen,
@@ -21,7 +21,7 @@
     <div
       v-if="exists"
       v-show="toggled"
-      class="absolute bg-black bg-opacity-50 inset-0"
+      class="bg-black bg-opacity-50 fixed inset-0 z-20"
       @click="toggle" />
   </Transition>
 </template>
