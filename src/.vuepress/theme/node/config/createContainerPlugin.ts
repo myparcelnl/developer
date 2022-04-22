@@ -4,11 +4,11 @@ import { PluginOptions } from 'vuepress';
 const classMap: { type: string; classes: string[] }[] = [
   {
     type: 'tip',
-    classes: ['before:bg-sky-500', 'bg-sky-200', 'dark:bg-sky-900'],
+    classes: ['before:bg-sky-500', 'bg-sky-50', 'dark:bg-sky-900'],
   },
   {
     type: 'note',
-    classes: ['before:bg-amber-500', 'bg-amber-200', 'dark:bg-amber-900'],
+    classes: ['before:bg-amber-500', 'bg-amber-50', 'dark:bg-amber-900'],
   },
 ];
 

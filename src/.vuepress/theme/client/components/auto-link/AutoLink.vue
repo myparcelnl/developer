@@ -1,7 +1,10 @@
 <template>
   <RouterLink
     v-if="isRouterLink"
-    :class="{ 'router-link-active': isActive }"
+    :class="{
+      'router-link-active': isActive,
+      'dark:text-inherit text-inherit': inheritColor,
+    }"
     :to="item.link"
     :aria-label="linkAriaLabel">
     <slot>
@@ -37,6 +40,10 @@ export default defineComponent({
       type: Object as PropType<NavLink>,
       required: true,
     },
+
+    inheritColor: {
+      type: Boolean,
+    },
   },
 
   setup: (props) => {
@@ -68,7 +75,7 @@ export default defineComponent({
     });
     const isBlankTarget = computed(() => linkTarget.value === '_blank');
     const isRouterLink = computed(() => !hasHttpProtocol.value && !hasNonHttpProtocol.value && !isBlankTarget.value);
-    const linkAriaLabel = computed(() => props.item.ariaLabel || props.item.text);
+    const linkAriaLabel = computed(() => props.item.ariaLabel ?? props.item.text);
 
     const linkRel = computed(() => {
       if (hasNonHttpProtocol.value) {

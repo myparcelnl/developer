@@ -46,10 +46,12 @@ module.exports = {
       rules: {
         'vue/no-unregistered-components': noUndefComponents,
         'vue/no-undef-components': noUndefComponents,
+        "vue/no-bare-strings-in-template":"off",
+
         '@typescript-eslint/restrict-plus-operands': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
 
-        // Rules are extremely slow
+        // These rules are extremely slow
         '@typescript-eslint/no-misused-promises': 'off',
         '@typescript-eslint/promise-function-async': 'off',
 

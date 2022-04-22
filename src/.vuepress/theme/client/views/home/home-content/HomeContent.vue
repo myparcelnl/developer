@@ -10,13 +10,13 @@
       v-text="item.title" />
     <p
       v-if="item.subtitle"
-      class="font-display text-center text-lg text-slate-600"
+      class="font-display text-center text-lg"
       v-text="item.subtitle" />
 
     <div
       v-if="item.render"
       v-bind="item.render.attributes"
-      class="grid auto-cols-fr gap-4 pt-5 lg:gap-7"
+      class="auto-cols-fr gap-4 grid lg:gap-7 pt-5"
       :class="{
         'grid-flow-col': !item.render.attributes,
       }">

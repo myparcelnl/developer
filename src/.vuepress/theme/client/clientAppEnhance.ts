@@ -5,12 +5,15 @@ import DataTypeDefinition from '@mptheme/client/components/global/DataTypeDefini
 import HomeLink from '@mptheme/client/views/home/home-link/HomeLink.vue';
 import HomePartnerBrand from '@mptheme/client/views/home/home-partner-brand/HomePartnerBrand.vue';
 import Http from '@mptheme/client/components/global/Http.vue';
+import Integration from '@mptheme/client/components/global/Integration.vue';
 import MyPaContact from '@mptheme/client/views/contact/MyPaContact.vue';
 import MyPaIntegrations from '@mptheme/client/views/integrations/MyPaIntegrations.vue';
 import { defineClientAppEnhance } from '@vuepress/client';
 import { h } from 'vue';
 import { useScrollPromise } from '@vuepress/theme-default/lib/client';
 import { vTest } from '@mptheme/client/services/directives/vTest';
+import Stack from '@mptheme/client/components/global/Stack.vue';
+import NpmBadge from '@mptheme/client/components/global/NpmBadge.vue';
 
 export default defineClientAppEnhance(({ app, router }) => {
   // Directives
@@ -26,9 +29,12 @@ export default defineClientAppEnhance(({ app, router }) => {
   app.component('HomePartnerBrand', HomePartnerBrand);
 
   // eslint-disable-next-line vue/multi-word-component-names
-  app.component('Http', Http);
   app.component('DataType', DataType);
   app.component('DataTypeDefinition', DataTypeDefinition);
+  app.component('Http', Http);
+  app.component('Integration', Integration);
+  app.component('NpmBadge', NpmBadge);
+  app.component('Stack', Stack);
 
   // Default theme stuff
   app.component('NavbarSearch', () => {

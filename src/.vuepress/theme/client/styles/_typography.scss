@@ -16,7 +16,7 @@
 
   // All links
   a {
-    @apply font-semibold transition-colors hover:text-goldfish-500 duration-100;
+    @apply font-semibold transition-colors hover:text-goldfish-500 duration-100 focus:outline-goldfish-500;
   }
 
   // Inside content pages

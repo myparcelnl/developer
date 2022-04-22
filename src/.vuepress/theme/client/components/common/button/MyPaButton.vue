@@ -4,14 +4,13 @@
     role="button"
     :tabindex="0"
     :class="[
-      'border-0',
-      'duration-200',
+      'duration-100',
       'font-display',
       'inline-flex',
       'no-underline',
       'rounded-full',
       'select-none',
-      'transition-colors',
+      'transition-all',
       'whitespace-nowrap',
       ...variantClass,
       {
@@ -26,8 +25,9 @@
     <component
       :is="link ? 'AutoLink' : 'span'"
       v-test="'button__link'"
+      tabindex="-1"
       :item="link ?? null"
-      class="dark:text-inherit flex m-auto text-inherit">
+      class="dark:text-inherit flex m-auto text-inherit font-medium">
       <slot />
     </component>
   </div>

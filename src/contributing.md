@@ -1,5 +1,5 @@
 ---
-title: Contributing to the docs
+title: Contributing to the developer portal
 sidebar: auto
 ---
 

@@ -7,7 +7,7 @@ subtitle: Connect with our API and get started with shipments, returns and more.
 
 actions: 
 - title: Get started
-  link: /get-started
+  link: /getting-started
 - title: Contact us
   variant: outlineLight
   link: /contact

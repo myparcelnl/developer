@@ -1,10 +1,10 @@
 <template>
   <AutoLink
-    class="flex flex-col group overflow-hidden p-6 relative rounded-xl text-white"
+    class="flex flex-col group hover:text-white overflow-hidden p-6 relative rounded-xl text-white"
     :item="linkItem">
     <div class="absolute bg-black group-hover:opacity-30 inset-0 opacity-0 transition-opacity" />
 
-    <div class="-inset-36 absolute flex left-0 mix-blend-soft-light overflow-hidden top-0 translate-3d-0">
+    <div class="-inset-36 absolute flex left-0 mix-blend-soft-light overflow-hidden top-0">
       <FloepjeLeft class="fill-white opacity-30" />
     </div>
 
@@ -19,8 +19,10 @@
       <p
         v-if="subtitle"
         v-text="subtitle" />
+
       <MyPaButton
-        class="flex group-hover:translate-x-2 justify-self-end self-end transform transition-transform"
+        tabindex="-1"
+        class="flex group-hover:translate-x-2 justify-self-end self-end transform"
         :variant="['icon', 'outlineLight']">
         <MyPaIcon icon="chevron-right" />
       </MyPaButton>

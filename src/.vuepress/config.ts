@@ -28,9 +28,12 @@ export default defineUserConfig<ThemeConfig>({
     logo: 'images/logo.svg',
     logoDark: 'images/logo_dark.svg',
     repo: 'https://github.com/myparcelnl/developer',
+
     navbar: createNavbar(),
+    sidebar: createSidebar(),
     footer: createFooter(),
     footer2: createBottomFooter(),
+
     themePlugins: {
       activeHeaderLinks: false,
       container: {
@@ -40,7 +43,6 @@ export default defineUserConfig<ThemeConfig>({
         warning: false,
       },
     },
-    sidebar: createSidebar(),
   },
 
   markdown: {
