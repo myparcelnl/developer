@@ -9,7 +9,7 @@ describe('footerSection', () => {
 
     expect(wrapper.element).toMatchInlineSnapshot(`
       <content-block-stub
-        class="dark:text-slate-400 text-sm text-slate-600"
+        class="dark:text-zinc-400 text-sm text-zinc-600"
         tag="div"
         variant=",border-top"
       />

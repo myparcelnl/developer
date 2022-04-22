@@ -9,11 +9,11 @@
     @apply bg-white;
 
     &.dark {
-      @apply bg-slate-900;
+      @apply bg-zinc-900;
     }
   }
 
   * {
-    @apply border-slate-200 dark:border-slate-800;
+    @apply border-zinc-200 dark:border-zinc-800;
   }
 }

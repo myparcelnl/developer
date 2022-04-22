@@ -9,15 +9,15 @@ sidebar: false
 ### By MyParcel
 
 <Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
-    <Integration name="PHP" type="sdk" repo="myparcelnl/sdk" url="/documentation/10.php-sdk" />
-    <Integration name="JavaScript/Node.js" type="sdk" repo="myparcelnl/js-sdk" url="/documentation/11.js-sdk" />
+    <Integration name="PHP" type="sdk" repo="myparcelnl/sdk" url="/documentation/10.php-sdk" image="php.svg" classes="bg-[#787CB5]" />
+    <Integration name="JavaScript/Node.js" type="sdk" repo="myparcelnl/js-sdk" url="/documentation/11.js-sdk" image="js.svg" classes="bg-[#F7DF1E]" />
 </Stack>
 
 ### By the community
 
 <Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
-    <Integration name="C#/.net" type="sdk" repo="janssenr/MyParcelApi.Net" />
-    <Integration name="Ruby" type="sdk" repo="paypronl/myparcel" />
+    <Integration name="C#/.net" type="sdk" repo="janssenr/MyParcelApi.Net" image="c-sharp.svg" />
+    <Integration name="Ruby" type="sdk" repo="paypronl/myparcel" image="ruby.svg" classes="bg-[#F44336]" />
 </Stack>
 
 ## Plug-ins
@@ -25,7 +25,7 @@ sidebar: false
 <Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
     <Integration name="WooCommerce (WordPress)" type="plugin" repo="myparcelnl/woocommerce" url="https://myparcelnl.github.io/woocommerce" image="woocommerce.svg" />
     <Integration name="Prestashop" type="plugin" repo="myparcelnl/prestashop" url="https://myparcelnl.github.io/prestashop" image="prestashop.svg" />
-    <Integration name="Magento 1" type="plugin" repo="myparcelnl/magento1" url="https://myparcelnl.github.io/magento1" image="magento.svg" classes="bg-slate-300" />
+    <Integration name="Magento 1" type="plugin" repo="myparcelnl/magento1" url="https://myparcelnl.github.io/magento1" image="magento.svg" classes="bg-zinc-300" />
     <Integration name="Magento 2" type="plugin" repo="myparcelnl/magento2" url="https://myparcelnl.github.io/magento2" image="magento.svg" />
     <Integration name="Shopify" type="plugin" url="https://myparcelnl.github.io/shopify" image="shopify.svg" />
     <Integration name="Shopware" type="plugin" url="https://myparcelnl.github.io/shopware" image="shopware.svg" />
@@ -41,8 +41,11 @@ sidebar: false
     <Integration name="Opencart 2.2.x – 2.3.x" url="https://myparcelnl.github.io/opencart2_3" image="opencart.svg" classes="bg-sky-200" />
     <Integration name="Opencart 3" url="https://myparcelnl.github.io/opencart3" image="opencart.svg" classes="bg-sky-100" />
     <Integration name="Shoppagina" url="https://myparcelnl.github.io/shoppagina" image="shoppagina.svg" />
-    <Integration name="Virtuemart 2 (Joomla)" url="https://myparcelnl.github.io/virtuemart" image="virtuemart.svg" classes="bg-slate-300" />
+    <Integration name="Virtuemart 2 (Joomla)" url="https://myparcelnl.github.io/virtuemart" image="virtuemart.svg" classes="bg-zinc-300" />
     <Integration name="Virtuemart 3 (Joomla)" url="https://myparcelnl.github.io/virtuemart3" image="virtuemart.svg" />
     <Integration name="Google Chrome Extension" url="https://www.myparcel.nl/en/integrations/google-chrome-extensie/" image="chrome.svg" />
 </Stack>
 
+::: tip
+Missing your favorite language or platform? Build your own integration and share it with us!
+:::

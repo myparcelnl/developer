@@ -3,7 +3,7 @@ const { path } = require('@vuepress/utils');
 const defaultColors = require('tailwindcss/colors');
 
 const colors = {
-  moss: {
+  monstera: {
     100: '#CFDEDA',
     200: '#9FBEB5',
     300: '#6F9D91',

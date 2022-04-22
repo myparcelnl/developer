@@ -1,7 +1,7 @@
 <template>
   <ContentContainer
     type="fluid"
-    class="bg-moss-500 dark:bg-moss-700 overflow-hidden py-24 relative text-center">
+    class="bg-monstera-500 dark:bg-monstera-700 overflow-hidden py-24 relative text-center">
     <FloepjeBgLeft
       role="none"
       aria-hidden="true"
@@ -22,7 +22,7 @@
         v-html="title" />
 
       <p
-        class="font-display pb-4 text-slate-300 text-xl"
+        class="font-display pb-4 text-xl text-zinc-300"
         v-text="frontmatter.subtitle" />
 
       <CButtonGroup>

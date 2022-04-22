@@ -8,7 +8,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
 
     // Render language name in top right of code block.
     &:before {
-      @apply absolute z-10 right-0 top-0 text-right text-sm rounded-bl py-1 px-3 dark:bg-slate-700 bg-slate-200;
+      @apply absolute z-10 right-0 top-0 text-right text-sm rounded-bl py-1 px-3 dark:bg-zinc-700 bg-zinc-200;
     }
 
     @each $extension in $extensions {
@@ -32,7 +32,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
   }
 
   div[class*="language-"], code {
-    @apply bg-slate-100 dark:bg-slate-800 font-mono;
+    @apply bg-zinc-100 dark:bg-zinc-800 font-mono;
   }
 
   code {
@@ -52,7 +52,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
       &.title,
       &.punctuation,
       &.operator {
-        @apply text-slate-400 dark:text-slate-500;
+        @apply text-zinc-400 dark:text-zinc-500;
       }
 
       &.bold {

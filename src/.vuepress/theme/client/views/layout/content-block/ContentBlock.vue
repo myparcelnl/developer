@@ -4,7 +4,7 @@
     :class="[
       classes,
       {
-        'bg-white dark:bg-slate-900': !variant.includes('dark'),
+        'bg-white dark:bg-zinc-900': !variant.includes('dark'),
       },
     ]">
     <slot />

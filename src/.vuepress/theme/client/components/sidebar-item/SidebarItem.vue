@@ -4,7 +4,7 @@
       v-if="item.link"
       :class="classes"
       :item="item"
-      @click="toggleSidebar">
+      @click="sidebarToggled ? toggleSidebar : null">
       {{ item.text }}
 
       <ToggleChevron
@@ -79,7 +79,11 @@ export default defineComponent({
     const isActive = computed(() => isActiveSidebarItem(item.value, route));
     const isOpen = ref(true);
     const onClick = ref<() => void>();
-    const { toggle: toggleSidebar } = useSidebar();
+
+    const {
+      toggle: toggleSidebar,
+      toggled: sidebarToggled,
+    } = useSidebar();
 
     if (item.value.collapsible) {
       isOpen.value = isActive.value;
@@ -98,6 +102,7 @@ export default defineComponent({
       isActive,
       onClick,
       toggleSidebar,
+      sidebarToggled,
       classes: computed(() => [
         'py-1 flex transition-all duration-100',
         {

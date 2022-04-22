@@ -5,5 +5,5 @@ export const blockVariant = defineVariant('block', {
   'border-bottom': 'border-b',
   'border-left': 'border-l',
   'border-top': 'border-t',
-  dark: ['bg-slate-50', 'dark:bg-slate-900'],
+  dark: ['bg-zinc-50', 'dark:bg-zinc-900'],
 });

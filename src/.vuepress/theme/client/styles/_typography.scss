@@ -4,29 +4,29 @@
 @layer base {
   //noinspection CssInvalidPropertyValue
   html {
-    @apply leading-7 text-slate-700;
+    @apply leading-7 text-zinc-700;
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
     font-size: 16px;
 
     &.dark {
-      @apply text-slate-400;
+      @apply text-zinc-400;
     }
   }
 
   // All links
   a {
-    @apply font-semibold transition-colors hover:text-goldfish-500 duration-100 focus:outline-goldfish-500;
+    @apply transition-colors hover:text-goldfish-500 duration-100 focus:outline-goldfish-500;
   }
 
   // Inside content pages
   .page {
     a {
-      @apply hover:underline decoration-goldfish-500 decoration-2 dark:text-goldfish-500 hover:text-moss-400 text-moss-500;
+      @apply dark:text-goldfish-500 hover:text-monstera-400 text-monstera-500;
     }
 
     ul, ol, dd {
-      @apply pl-6 pt-1 pb-2;
+      @apply pl-6 pt-2 pb-3;
     }
 
     ol {
@@ -38,16 +38,16 @@
     }
 
     blockquote {
-      @apply py-1 px-4 mt-2 mb-3 dark:bg-slate-700 bg-slate-100 rounded-lg border;
+      @apply py-1 px-4 mt-2 mb-3 dark:bg-zinc-700 bg-zinc-100 rounded-lg border;
     }
 
     hr {
-      @apply text-slate-500;
+      @apply text-zinc-500;
     }
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold font-display pb-2 scroll-mt-16 relative;
+    @apply font-bold font-display pb-3 scroll-mt-16 relative;
 
     a {
       @apply opacity-0 transition-opacity absolute -left-4;
@@ -59,19 +59,19 @@
   }
 
   h1 {
-    @apply text-4xl pt-5;
+    @apply text-4xl pt-6;
   }
 
   h2 {
-    @apply text-2xl pt-4;
+    @apply text-2xl pt-5;
   }
 
   h3 {
-    @apply text-xl pt-3;
+    @apply text-xl pt-4;
   }
 
   h4 {
-    @apply text-lg pt-2;
+    @apply text-lg pt-3;
   }
 
   p {

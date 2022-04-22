@@ -1,7 +1,7 @@
 @layer base {
   html,
   body {
-    @apply p-0 m-0 transition-colors;
+    @apply p-0 m-0 transition-colors duration-100;
   }
 
   html,

@@ -16,9 +16,9 @@
           :alt="`${name} image`" />
       </div>
 
-      <div class="bg-white dark:bg-slate-800 p-3 shadow">
+      <div class="bg-white dark:bg-zinc-800 p-3 shadow">
         <span
-          class="font-bold text-lg"
+          class="font-bold"
           v-text="name" />
         <br>
         <span

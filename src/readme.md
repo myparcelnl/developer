@@ -20,14 +20,14 @@ tree:
     children:
       - component: HomeLink
         attributes: 
-          class: 'bg-moss-800' 
+          class: 'bg-monstera-800' 
           title: API reference.
           icon: api-reference
           subtitle: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
           link: /api-reference
       - component: HomeLink
         attributes: 
-          class: 'bg-moss-500' 
+          class: 'bg-monstera-500' 
           title: Documentation.
           icon: documentation
           subtitle: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
