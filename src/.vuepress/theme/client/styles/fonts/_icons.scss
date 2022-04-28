@@ -9,9 +9,9 @@ $icons: (
 
 @font-face {
   font-family: $fontFamily;
-  src: url('/icons/#{$fontFamily}.ttf?rux0ea') format('truetype'),
-  url('/icons/#{$fontFamily}.woff?rux0ea') format('woff'),
-  url('/icons/#{$fontFamily}.svg?rux0ea##{$fontFamily}') format('svg');
+  src: url('/fonts/icons/#{$fontFamily}.ttf?rux0ea') format('truetype'),
+  url('/fonts/icons/#{$fontFamily}.woff?rux0ea') format('woff'),
+  url('/fonts/icons/#{$fontFamily}.svg?rux0ea##{$fontFamily}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

@@ -37,7 +37,7 @@ import ToggleSidebarButton from '@mptheme/client/views/layout/toggle-sidebar-but
 import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
 
 export default defineComponent({
-  name: 'MyPaHeader',
+  name: 'MPHeader',
 
   components: {
     ContentBlock,

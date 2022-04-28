@@ -42,7 +42,7 @@ const VIEW_BOX_ICON_LOGO = '0 0 135.7 203.6';
 const VIEW_BOX_FULL_LOGO = '0 0 931.2 203.6';
 
 export default defineComponent({
-  name: 'MyPaLogo',
+  name: 'MPLogo',
   components: { ClientOnly },
   props: {
     showFrom: {

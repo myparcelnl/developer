@@ -9,7 +9,7 @@
     </div>
 
     <div class="flex flex-col">
-      <MyPaIcon
+      <MPIcon
         v-if="icon"
         class="text-5xl"
         :icon="icon" />
@@ -20,12 +20,12 @@
         v-if="subtitle"
         v-text="subtitle" />
 
-      <MyPaButton
+      <MPButton
         tabindex="-1"
         class="flex group-hover:translate-x-2 justify-self-end self-end transform"
         :variant="['icon', 'outlineLight']">
-        <MyPaIcon icon="chevron-right" />
-      </MyPaButton>
+        <MPIcon icon="chevron-right" />
+      </MPButton>
     </div>
   </AutoLink>
 </template>
@@ -33,8 +33,8 @@
 <script lang="ts">
 import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
 import FloepjeLeft from '@Public/images/floepje_left.svg';
-import MyPaButton from '@mptheme/client/components/common/button/MyPaButton.vue';
-import MyPaIcon from '@mptheme/client/components/common/icon/Icon.vue';
+import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
+import MPIcon from '@mptheme/client/components/common/icon/Icon.vue';
 import { defineComponent } from 'vue';
 import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
 
@@ -43,8 +43,8 @@ export default defineComponent({
   components: {
     AutoLink,
     FloepjeLeft,
-    MyPaButton,
-    MyPaIcon,
+    MPButton,
+    MPIcon,
   },
 
   props: {

@@ -14,7 +14,7 @@ import PageContainer from '@mptheme/client/views/page/page-container/PageContain
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'MyPaHome',
+  name: 'Home',
   components: {
     HomeContent,
     HomeFooter,

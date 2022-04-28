@@ -25,8 +25,8 @@
         class="font-display pb-4 text-xl text-zinc-300"
         v-text="frontmatter.subtitle" />
 
-      <CButtonGroup>
-        <MyPaButton
+      <MPButtonGroup>
+        <MPButton
           v-for="item in frontmatter.actions"
           :key="item.link"
           :variant="item.variant"
@@ -34,18 +34,18 @@
             ...useNavLink(item.link),
             text: item.title,
           }" />
-      </CButtonGroup>
+      </MPButtonGroup>
     </ContentContainer>
   </ContentContainer>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
-import CButtonGroup from '@mptheme/client/components/common/CButtonGroup.vue';
+import MPButtonGroup from '@mptheme/client/components/common/MPButtonGroup.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import FloepjeBgLeft from '@Public/images/floepje_bg_left.svg';
 import FloepjeBgRight from '@Public/images/floepje_bg_right.svg';
-import MyPaButton from '@mptheme/client/components/common/button/MyPaButton.vue';
+import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import { MyPaHomepageFrontmatter } from '@mptheme/config.types';
 import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
 import { usePageFrontmatter } from '@vuepress/client';
@@ -53,8 +53,8 @@ import { usePageFrontmatter } from '@vuepress/client';
 export default defineComponent({
   name: 'HomeHero',
   components: {
-    CButtonGroup,
-    MyPaButton,
+    MPButtonGroup,
+    MPButton,
     ContentContainer,
     FloepjeBgLeft,
     FloepjeBgRight,

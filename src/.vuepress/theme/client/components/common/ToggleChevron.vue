@@ -1,5 +1,5 @@
 <template>
-  <MyPaIcon
+  <MPIcon
     icon="chevron-right"
     class="font-bold text-lg transition-transform"
     :class="{
@@ -9,12 +9,12 @@
 </template>
 
 <script lang="ts">
-import MyPaIcon from '@mptheme/client/components/common/icon/Icon.vue';
+import MPIcon from '@mptheme/client/components/common/icon/Icon.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'ToggleChevron',
-  components: { MyPaIcon },
+  components: { MPIcon },
   props: {
     toggle: {
       type: Boolean,

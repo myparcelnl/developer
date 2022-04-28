@@ -8,7 +8,7 @@
       <nav class="flex-1 grid grid-cols-2">
         <div class="flex">
           <template v-if="prevNavLink">
-            <MyPaIcon
+            <MPIcon
               icon="chevron-left"
               class="text-xl" />
             <AutoLink
@@ -26,7 +26,7 @@
               class="flex items-center ml-auto">
               <span v-text="nextNavLink.text" />
             </AutoLink>
-            <MyPaIcon
+            <MPIcon
               icon="chevron-right"
               class="text-xl" />
           </template>
@@ -44,7 +44,7 @@ import { useNavLink, useSidebarItems } from '@vuepress/theme-default/lib/client/
 import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import FooterSection from '@mptheme/client/views/layout/footer-section/FooterSection.vue';
-import MyPaIcon from '@mptheme/client/components/common/icon/Icon.vue';
+import MPIcon from '@mptheme/client/components/common/icon/Icon.vue';
 import { usePageFrontmatter } from '@vuepress/client';
 import { useRoute } from 'vue-router';
 
@@ -54,7 +54,7 @@ export default defineComponent({
     AutoLink,
     ContentContainer,
     FooterSection,
-    MyPaIcon,
+    MPIcon,
   },
 
   setup: () => {

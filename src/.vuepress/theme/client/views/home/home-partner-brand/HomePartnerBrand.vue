@@ -6,7 +6,7 @@
     <div class="absolute bg-black group-hover:opacity-30 inset-0 opacity-0 transition-opacity" />
 
     <div class="absolute flex inset-5">
-      <MyPaImage
+      <MPImg
         class="m-auto"
         :src="brandLogo"
         :alt="`${name} logo`" />
@@ -19,7 +19,7 @@
         class="font-normal my-auto"
         v-text="'Read'" />
 
-      <MyPaIcon
+      <MPIcon
         icon="chevron-right"
         class="my-auto pt-1 text-2xl top-1" />
     </div>
@@ -29,15 +29,15 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
 import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
-import MyPaIcon from '@mptheme/client/components/common/icon/Icon.vue';
-import MyPaImage from '@mptheme/client/components/common/Image.vue';
+import MPIcon from '@mptheme/client/components/common/icon/Icon.vue';
+import MPImg from '@mptheme/client/components/common/MPImg.vue';
 import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
 
 export default defineComponent({
   name: 'HomePartnerBrand',
   components: {
-    MyPaImage,
-    MyPaIcon,
+    MPImg,
+    MPIcon,
     AutoLink,
   },
 

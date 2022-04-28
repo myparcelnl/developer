@@ -3,7 +3,7 @@
     <RouterLink
       :to="navbarBrandLink"
       class="flex flex-grow">
-      <MyPaLogo
+      <MPLogo
         :show-from="logoShowFrom"
         :full-from="logoFullFrom" />
     </RouterLink>
@@ -14,13 +14,13 @@
 import { PropType, computed, defineComponent } from 'vue';
 import { useRouteLocale, useSiteLocaleData } from '@vuepress/client';
 import { Breakpoint } from '@mptheme/index.types';
-import MyPaLogo from '@mptheme/client/components/logo/MyPaLogo.vue';
+import MPLogo from '@mptheme/client/components/logo/MPLogo.vue';
 import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
 
 export default defineComponent({
   name: 'NavbarBrand',
   components: {
-    MyPaLogo,
+    MPLogo,
   },
 
   props: {
