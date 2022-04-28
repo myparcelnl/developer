@@ -5,11 +5,18 @@ sidebar: auto
 
 ## Writing pages
 
-This documentation is built with VuePress 2. We recommend you first read the
-following guides in the VuePress docs if you're not familiar with the framework:
+This documentation is built with VuePress 2, running on Vue 3. We recommend you first read the
+following guides if you're not familiar with the VuePress or Vue:
 
-- [https://v2.vuepress.vuejs.org/guide/page.html](https://v2.vuepress.vuejs.org/guide/page.html)
-- [https://v2.vuepress.vuejs.org/guide/markdown.html](https://v2.vuepress.vuejs.org/guide/markdown.html)
+**VuePress**
+- [Page](https://v2.vuepress.vuejs.org/guide/page.html)
+- [Markdown](https://v2.vuepress.vuejs.org/guide/markdown.html)
+
+**Vue**
+- [Fallthrough Attributes](https://vuejs.org/guide/components/attrs.html)
+
+**Tailwind CSS**
+- [Tailwind CSS]
 
 ## Markdown
 
@@ -55,7 +62,7 @@ usages are explained below.
 
 #### Usage
 
-```vue
+```vue 
 <Http code="204" />
 ```
 
@@ -85,7 +92,6 @@ a link to its source and more information. It supports the following types:
 #### Usage
 
 ```vue
-
 <DataType
   type="shipment_status"
   id="3" />
@@ -101,16 +107,13 @@ a link to its source and more information. It supports the following types:
 
 #### Result
 
-<DataType
-type="shipment_status"
+<DataType type="shipment_status"
 id="3" />
 
-<DataType
-type="carrier"
+<DataType type="carrier"
 name="dpd" />
 
-<DataType
-type="package_type"
+<DataType type="package_type"
 id="4" />
 
 ### DataTypeDefinition
@@ -120,10 +123,95 @@ id="4" />
 #### Usage
 
 ```vue
-
-<DataTypeDefinition />
+<DataTypeDefinition
+  pattern="/\d{2}:\d{2}:\d{2}/"
+  example="08:00:00" />
 ```
 
 #### Result
 
-<DataTypeDefinition />
+<DataTypeDefinition pattern="/\d{2}:\d{2}:\d{2}/" example="08:00:00" />
+
+### MPImg
+
+#### Props
+
+| name | type     | required |
+|------|----------|----------|
+| src  | `String` | ✔️       |
+| alt  | `String` | ✔️       |
+
+#### Usage
+
+```vue
+<MPImg
+  src="/integrations/chrome.svg"
+  class="max-w-xs" />
+```
+
+#### Result
+
+<MPImg src="/integrations/chrome.svg" class="max-w-xs" />
+
+## Attributes
+
+You can use all classes from [Tailwind CSS 3](https://tailwindcss.com/) on any
+inline component or html tag.
+
+See [Fallthrough Attributes](https://vuejs.org/guide/components/attrs.html) for
+more information on how this works on Vue components.
+
+### Example
+
+```vue
+<!-- Padding: 5, width: 12, background-color: monstera 500 -->
+<MPImg
+  src="/integrations/shopware.svg"
+  class="p-3 w-12 bg-monstera-500" />
+
+<!-- Padding: 1, width: 18, margin-left: 3, background-color: goldfish 500 -->
+<MPImg
+  src="/integrations/c-sharp.svg"
+  class="p-1 w-18 ml-3 bg-goldfish-500" />
+```
+
+<MPImg
+  src="/integrations/shopware.svg"
+  class="p-3 w-12 bg-monstera-500" />
+
+<MPImg
+  src="/integrations/c-sharp.svg"
+  class="p-1 w-16 ml-3 bg-goldfish-500" />
+
+## Theme
+
+We use [Tailwind CSS 3] with a few theme modifications.
+
+### Custom colors
+
+<Stack class="cols-2 grid-flow-col">
+    <Stack>
+        <div class="p-5 bg-monstera-100 text-white">monstera-100</div>
+        <div class="p-5 bg-monstera-200 text-white">monstera-200</div>
+        <div class="p-5 bg-monstera-300 text-white">monstera-300</div>
+        <div class="p-5 bg-monstera-400 text-white">monstera-400</div>
+        <div class="p-5 bg-monstera-500 text-white">monstera-500</div>
+        <div class="p-5 bg-monstera-600 text-white">monstera-600</div>
+        <div class="p-5 bg-monstera-700 text-white">monstera-700</div>
+        <div class="p-5 bg-monstera-800 text-white">monstera-800</div>
+        <div class="p-5 bg-monstera-900 text-white">monstera-900</div>
+    </Stack>
+    <Stack>
+        <div class="p-5 bg-goldfish-100 text-white">goldfish-100</div>
+        <div class="p-5 bg-goldfish-200 text-white">goldfish-200</div>
+        <div class="p-5 bg-goldfish-300 text-white">goldfish-300</div>
+        <div class="p-5 bg-goldfish-400 text-white">goldfish-400</div>
+        <div class="p-5 bg-goldfish-500 text-white">goldfish-500</div>
+        <div class="p-5 bg-goldfish-600 text-white">goldfish-600</div>
+        <div class="p-5 bg-goldfish-700 text-white">goldfish-700</div>
+        <div class="p-5 bg-goldfish-800 text-white">goldfish-800</div>
+        <div class="p-5 bg-goldfish-900 text-white">goldfish-900</div>
+    </Stack>
+</Stack>
+
+[Tailwind CSS 3]: https://tailwindcss.com/
