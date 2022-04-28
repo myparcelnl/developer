@@ -14,7 +14,7 @@ Our ambition is simple: Deliver a world class shipment platform to our customers
 
 
 ## Tech Stack
-<Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
+<Stack class="lg:grid-cols-5 md:grid-cols-4 grid-cols-3">
   <MPImg src="/techstack/php.svg" alt="php logo" />
   <MPImg src="/techstack/AWS.svg" alt="AWS logo" />
   <MPImg src="/techstack/TS.svg" alt="typescript logo" />
