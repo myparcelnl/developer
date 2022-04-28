@@ -44,9 +44,10 @@ module.exports = {
         '!./src/.vuepress/*.js',
       ],
       rules: {
+        'vue/multi-word-component-names': 'off',
         'vue/no-unregistered-components': noUndefComponents,
         'vue/no-undef-components': noUndefComponents,
-        "vue/no-bare-strings-in-template":"off",
+        'vue/no-bare-strings-in-template': 'off',
 
         '@typescript-eslint/restrict-plus-operands': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
