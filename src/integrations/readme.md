@@ -1,6 +1,6 @@
 ---
 title: SDKs and Plug-ins
-content: MyPaIntegrations
+content: MPIntegrations
 sidebar: false
 ---
 
