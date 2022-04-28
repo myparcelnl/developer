@@ -13,7 +13,7 @@ const createAlias = (from: string, to: string) => ({
  */
 export default defineConfig({
   plugins: [
-    vue(),
+    vue,
   ],
 
   resolve: {
