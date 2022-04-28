@@ -14,7 +14,7 @@ Our ambition is simple: Deliver a world class shipment platform to our customers
 
 
 <Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
-      <Integration name="AWS" url="" image="AWS.svg" />
+      <Integration name="AWS" url="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/" image="AWS.svg" />
   <Integration name="PHP" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/php.svg" />
   <Integration name="Javascript" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/js.svg" />
   <Integration name="Typescript" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/ts.svg" />
