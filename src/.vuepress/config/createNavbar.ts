@@ -6,6 +6,6 @@ export const createNavbar = (): NavbarConfigArray => [
   DOCUMENTATION,
   INTEGRATIONS,
   { ...STATUS, sub: true },
-  { ...ABOUT, sub: true },
+  ABOUT,
   { ...CONTACT, sub: true },
 ];
