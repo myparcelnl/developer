@@ -49,7 +49,7 @@ on if you want to know more about our working method, tech stack and people!
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <TeamMember name="Edie" normal="/2019/10/myparcel-development-team-edie-2.jpg" funny="/2019/10/myparcel-development-team-edie-1.jpg" />
     <TeamMember name="Joeri" normal="/joeri-van-veen-normal.jpg" funny="/joeri-van-veen-fun.jpg" />
-    <TeamMember name="Mark" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" funny="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
+    <TeamMember name="Mark" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" funny="https://i.ytimg.com/vi/KGWgVZr0utQ/maxresdefault.jpg" />
     <TeamMember name="Thijmen" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" funny="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
     <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
 </Stack>
