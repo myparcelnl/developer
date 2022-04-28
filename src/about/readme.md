@@ -10,16 +10,17 @@ sidebar: false
 
 Our ambition is simple: Deliver a world class shipment platform to our customers. We believe technology can make shipping for e-commerce more easy and fun. This is basicly what our development team is doing every single day. Read on if you want to know more about our working method, tech stack and people!
 
-[![Here we are](https://static.invenglobal.com/upload/image/2021/07/22/o1626923554470395.jpeg)](https://www.youtube.com/watch?v=Mayz5q9yyNI)
+[![Here we are](https://i.insider.com/53ad81c8eab8eadb134f8cb8?width=400)](https://www.youtube.com/watch?v=Mayz5q9yyNI)
 
-## Tech Stack
 
-![AWS]https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/AWS.svg ![php]https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/php.svg
-![php]https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/js.svg
-![php]https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/ts.svg
-![php]https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/vue.svg
-![php]https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/docker.svg
+<Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
+      <Integration name="AWS" url="" image="AWS.svg" />
+  <Integration name="PHP" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/php.svg" />
+  <Integration name="Javascript" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/js.svg" />
+  <Integration name="Typescript" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/ts.svg" />
+  <Integration name="Vue" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/vue.svg" />
 
+</Stack>
 
 ## Team
 
