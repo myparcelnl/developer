@@ -5,7 +5,7 @@ export const createNavbar = (): NavbarConfigArray => [
   API_REFERENCE,
   DOCUMENTATION,
   INTEGRATIONS,
-  { ...STATUS, sub: true },
   ABOUT,
   { ...CONTACT, sub: true },
+  { ...STATUS, sub: true },
 ];
