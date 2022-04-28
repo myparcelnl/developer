@@ -14,7 +14,7 @@ on if you want to know more about our working method, tech stack and people!
 
 ## Tech Stack
 
-<Stack class="lg:grid-cols-5 md:grid-cols-4 grid-cols-3 items-center gap-8">
+<Stack class="lg:grid-cols-5 md:grid-cols-4 grid-cols-3 items-center gap-12">
     <MPImg src="/techstack/php.svg" alt="php logo" />
     <MPImg src="/techstack/AWS.svg" alt="AWS logo" />
     <MPImg src="/techstack/TS.svg" alt="typescript logo" />
