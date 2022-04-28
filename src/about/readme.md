@@ -1,6 +1,5 @@
 ---
 title: About Us
-content: About Us Page
 sidebar: false
 ---
 
