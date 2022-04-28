@@ -13,14 +13,17 @@ Our ambition is simple: Deliver a world class shipment platform to our customers
 [![Here we are](https://i.insider.com/53ad81c8eab8eadb134f8cb8?width=400)](https://www.youtube.com/watch?v=Mayz5q9yyNI)
 
 
+## Tech Stack
 <Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
-      <Integration name="AWS" url="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/" image="AWS.svg" />
-  <Integration name="PHP" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/php.svg" />
-  <Integration name="Javascript" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/js.svg" />
-  <Integration name="Typescript" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/ts.svg" />
-  <Integration name="Vue" url="" image="https://github.com/myparcelnl/developer/blob/main/src/.vuepress/public/techstack/vue.svg" />
-
+  <MPImg src="/techstack/php.svg" alt="php logo" />
+  <MPImg src="/techstack/AWS.svg" alt="AWS logo" />
+  <MPImg src="/techstack/TS.svg" alt="typescript logo" />
+  <MPImg src="/techstack/JS.svg" alt="javascript logo" />
+   <MPImg src="/techstack/vue.svg" alt="Vue logo" />
 </Stack>
+
+
+
 
 ## Team
 
