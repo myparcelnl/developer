@@ -33,7 +33,7 @@ import { defineComponent } from 'vue';
 import { useSidebar } from '@mptheme/client/services/composables/useSidebar';
 
 export default defineComponent({
-  name: 'MyPaSidebar',
+  name: 'MPSidebar',
   components: {
     ContentBlock,
     SidebarItems,

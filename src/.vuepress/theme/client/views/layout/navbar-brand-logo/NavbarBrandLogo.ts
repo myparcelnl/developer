@@ -1,5 +1,5 @@
 import { ClientOnly, useSiteLocaleData, withBase } from '@vuepress/client';
-import { computed, FunctionalComponent, h } from 'vue';
+import { FunctionalComponent, computed, h } from 'vue';
 import { useDarkMode } from '@vuepress/theme-default/lib/client/composables';
 import { useThemeLocaleData } from '@vuepress/theme-default/lib/client';
 

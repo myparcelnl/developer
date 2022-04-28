@@ -32,7 +32,7 @@ import { defineComponent } from 'vue';
 import { usePageFrontmatter } from '@vuepress/client';
 
 export default defineComponent({
-  name: 'MyPaPage',
+  name: 'Page',
   components: {
     IndexContent,
     ContentContainer,

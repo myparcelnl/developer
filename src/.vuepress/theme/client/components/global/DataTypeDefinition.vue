@@ -24,11 +24,7 @@
       <tr v-if="pattern">
         <th>Pattern</th>
         <td class="w-4/5">
-          <Markdown :content="`\`\`\`js\n${pattern}\n\`\`\``" />
-
-          <div class="language-javascript">
-            <pre><code v-text="pattern" /></pre>
-          </div>
+          <code v-text="pattern" />
         </td>
       </tr>
 

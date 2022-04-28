@@ -22,18 +22,18 @@ const theme: Theme<ThemeConfig> = (config, app) => {
     alias: {
       ...defaultThemeData?.alias,
 
-      '@theme/SidebarItem.vue': `${components}/sidebar-item/SidebarItem.vue`,
       '@theme/AutoLink.vue': `${components}/auto-link/AutoLink.vue`,
-      '@theme/Home.vue': `${views}/home/home/MyPaHome.vue`,
+      '@theme/Home.vue': `${views}/home/Home.vue`,
       '@theme/HomeContent.vue': `${views}/home/home-content/HomeContent.vue`,
       '@theme/HomeFooter.vue': `${views}/home/home-footer/HomeFooter.vue`,
       '@theme/HomeHero.vue': `${views}/home/home-hero/HomeHero.vue`,
-      '@theme/Navbar.vue': `${views}/layout/header/MyPaHeader.vue`,
+      '@theme/Navbar.vue': `${views}/layout/header/MPHeader.vue`,
       '@theme/NavbarBrand.vue': `${views}/layout/navbar-brand/NavbarBrand.vue`,
-      '@theme/Page.vue': `${views}/page/page/MyPaPage.vue`,
+      '@theme/Page.vue': `${views}/page/Page.vue`,
       '@theme/PageMeta.vue': `${views}/page/page-meta/PageMeta.vue`,
       '@theme/PageNav.vue': `${views}/page/page-nav/PageNav.vue`,
-      '@theme/Sidebar.vue': `${views}/layout/sidebar/MyPaSidebar.vue`,
+      '@theme/Sidebar.vue': `${views}/layout/sidebar/MPSidebar.vue`,
+      '@theme/SidebarItem.vue': `${components}/sidebar-item/SidebarItem.vue`,
       '@theme/SidebarItems.vue': `${views}/layout/sidebar-items/SidebarItems.vue`,
       '@theme/ToggleSidebarButton.vue': `${views}/layout/toggle-sidebar-button/ToggleSidebarButton.vue`,
 

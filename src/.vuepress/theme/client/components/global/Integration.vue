@@ -10,7 +10,7 @@
             'bg-white': !classes,
           },
         ]">
-        <MyPaImage
+        <MPImg
           :src="`/integrations/${image}`"
           role="none"
           :alt="`${name} image`" />
@@ -26,14 +26,14 @@
           v-text="type" />
 
         <div v-if="repo">
-          <MyPaIcon icon="integrations" />
+          <MPIcon icon="integrations" />
           <AutoLink :item="{ link: `https://github.com/${repo}` }">
             View on GitHub
           </AutoLink>
         </div>
 
         <div v-if="url">
-          <MyPaIcon icon="integrations" />
+          <MPIcon icon="integrations" />
           <AutoLink :item="{ link: url }">
             Documentation
           </AutoLink>
@@ -45,16 +45,16 @@
 
 <script lang="ts">
 import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
-import MyPaIcon from '@mptheme/client/components/common/icon/Icon.vue';
-import MyPaImage from '@mptheme/client/components/common/Image.vue';
+import MPIcon from '@mptheme/client/components/common/icon/Icon.vue';
+import MPImg from '@mptheme/client/components/common/MPImg.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Integration',
   components: {
-    MyPaImage,
+    MPImg,
     AutoLink,
-    MyPaIcon,
+    MPIcon,
   },
 
   props: {

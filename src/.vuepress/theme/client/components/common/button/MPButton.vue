@@ -27,7 +27,7 @@
       v-test="'button__link'"
       tabindex="-1"
       :item="link ?? null"
-      class="dark:text-inherit flex m-auto text-inherit font-medium">
+      class="dark:text-inherit flex font-medium m-auto text-inherit">
       <slot />
     </component>
   </div>
@@ -42,7 +42,7 @@ import { useTailwindVariant } from '@mptheme/client/services/composables/useTail
 const { createVariantProp, getVariantClasses } = useTailwindVariant(buttonVariant);
 
 export default defineComponent({
-  name: 'MyPaButton',
+  name: 'MPButton',
 
   props: {
     variant: createVariantProp(),
