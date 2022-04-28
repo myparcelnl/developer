@@ -11,6 +11,7 @@ import MPImg from '@mptheme/client/components/common/MPImg.vue';
 import MPIntegrations from '@mptheme/client/views/integrations/MPIntegrations.vue';
 import NpmBadge from '@mptheme/client/components/global/NpmBadge.vue';
 import Stack from '@mptheme/client/components/global/Stack.vue';
+import TeamMember from '@mptheme/client/components/global/TeamMember.vue';
 
 /**
  * Register components for use in markdown files.
@@ -31,6 +32,7 @@ export function registerComponents(app: App): void {
   app.component('MPImg', MPImg);
   app.component('NpmBadge', NpmBadge);
   app.component('Stack', Stack);
+  app.component('TeamMember', TeamMember);
 
   app.component('NavbarSearch', () => {
     const searchComponent = app.component('Docsearch') ?? app.component('SearchBox');
