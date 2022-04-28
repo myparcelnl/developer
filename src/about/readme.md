@@ -13,14 +13,16 @@ on if you want to know more about our working method, tech stack and people!
 [![Here we are](https://i.insider.com/53ad81c8eab8eadb134f8cb8?width=400)](https://www.youtube.com/watch?v=Mayz5q9yyNI)
 
 ## Tech Stack
-
-<Stack class="lg:grid-cols-5 md:grid-cols-4 grid-cols-3 items-center gap-12">
+In order to provide the best possible Saas Platform, we need state of the art technologies. Our tech stack enables us to continously build, test and release new features. 
+<Stack class="lg:grid-cols-5 md:grid-cols-4 grid-cols-3 items-center gap-16">
     <MPImg src="/techstack/php.svg" alt="php logo" />
     <MPImg src="/techstack/AWS.svg" alt="AWS logo" />
     <MPImg src="/techstack/TS.svg" alt="typescript logo" />
     <MPImg src="/techstack/JS.svg" alt="javascript logo" />
     <MPImg src="/techstack/vue.svg" alt="Vue logo" />
 </Stack>
+
+We like to experiment with promising new technologies and working methods. Agile methodologies are in our DNA and there's a lot to tell about our way of working. We've gone the extra mile with programming out our AWS stack using the Cloud Development Kit. We're currently running an experiment with Trunk Based Development (with 100% testcoverage :sparkles:). Our integration team is always busy crafting the best delivery checkout experience. And we'll continue finding out ways to improve...
 
 ## Team
 
