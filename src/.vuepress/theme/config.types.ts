@@ -27,26 +27,26 @@ export type ResolvedNavbarItem = NavbarItem | NavGroup<ResolvedNavbarItem>;
 
 export type SidebarItem = Partial<NavLink>;
 export type SidebarGroup = SidebarItem & NavGroup<SidebarItem | SidebarGroup | string>;
-export type SidebarGroupCollapsible = SidebarGroup & { collapsible?: boolean; };
-export type AnySidebarItem = SidebarItem | SidebarGroup | SidebarGroupCollapsible | string
+export type SidebarGroupCollapsible = SidebarGroup & { collapsible?: boolean };
+export type AnySidebarItem = SidebarItem | SidebarGroup | SidebarGroupCollapsible | string;
 
 export type SidebarConfigArray = AnySidebarItem[];
 export type SidebarConfigObject = Record<string, SidebarConfigArray>;
 export type SidebarConfig = SidebarConfigArray | SidebarConfigObject;
-export type ResolvedSidebarItem = SidebarItem & Partial<NavGroup<ResolvedSidebarItem>> & { collapsible?: boolean; };
+export type ResolvedSidebarItem = SidebarItem & Partial<NavGroup<ResolvedSidebarItem>> & { collapsible?: boolean };
 
 export type TailwindConfig = Overwrite<OriginalTailwindConfig, {
   theme: {
-    screens: Record<Breakpoint, string>
-  }
-}>
+    screens: Record<Breakpoint, string>;
+  };
+}>;
 
-export interface ThemeConfig extends Omit<DefaultThemeOptions, 'navbar'> {
+export type ThemeConfig = Extend<DefaultThemeOptions, {
   navbar: NavbarConfigArray;
   footer: NavbarConfigArray;
   footer2: NavLink[];
   tailwindConfig: TailwindConfig;
-}
+}>;
 
 export interface MyPaHomepageFrontmatter {
   title?: string;
@@ -55,7 +55,7 @@ export interface MyPaHomepageFrontmatter {
     title: string;
     link: string;
     variant: string;
-  }[],
+  }[];
   tree: {
     title?: string;
     subtitle?: string;
@@ -64,7 +64,7 @@ export interface MyPaHomepageFrontmatter {
       children: {
         component: string;
         attributes?: Record<string, never>;
-      }[]
-    }
+      }[];
+    };
   }[];
 }

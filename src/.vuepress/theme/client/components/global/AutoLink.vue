@@ -5,7 +5,7 @@
       'router-link-active': isActive,
       'dark:text-inherit text-inherit': inheritColor,
     }"
-    :to="item.link"
+    :to="linkItem.link"
     :aria-label="linkAriaLabel">
     <slot>
       <span v-text="item.text" />
@@ -14,30 +14,30 @@
 
   <a
     v-else
-    :href="item.link"
+    :href="linkItem.link"
     :rel="linkRel"
     :target="linkTarget"
     :aria-label="linkAriaLabel">
     <slot>
       <span v-text="item.text" />
-      <ExternalLinkIcon v-if="isBlankTarget" />
     </slot>
+    <ExternalLinkIcon v-if="isBlankTarget" />
   </a>
 </template>
 
 <script lang="ts">
 import { PropType, computed, defineComponent } from 'vue';
 import { NavLink } from '@vuepress/theme-default/lib/shared';
+import { useLink } from '@mptheme/client/composables/useLink';
 import { useRouter } from 'vue-router';
 import { useSiteData } from '@vuepress/client';
-import { useLink } from '@mptheme/client/composables/useLink';
 
 export default defineComponent({
   name: 'AutoLink',
 
   props: {
     item: {
-      type: Object as PropType<NavLink>,
+      type: [String, Object] as PropType<string | NavLink>,
       required: true,
     },
 
@@ -47,7 +47,14 @@ export default defineComponent({
   },
 
   setup: (props) => {
-    const { linkTarget, isRouterLink, linkAriaLabel, linkRel, isBlankTarget } = useLink(props.item);
+    const {
+      linkItem,
+      linkTarget,
+      isRouterLink,
+      linkAriaLabel,
+      linkRel,
+      isBlankTarget,
+    } = useLink(props.item);
     const route = useRouter().currentRoute.value;
     const site = useSiteData();
 
@@ -55,10 +62,10 @@ export default defineComponent({
       const localeKeys = Object.keys(site.value.locales);
 
       if (localeKeys.length) {
-        return !localeKeys.some((key) => key === props.item.link);
+        return !localeKeys.some((key) => key === linkItem.link);
       }
 
-      return props.item.link !== '/';
+      return linkItem.link !== '/';
     });
 
     const isActiveInSubpath = computed(() => {
@@ -66,7 +73,7 @@ export default defineComponent({
         return false;
       }
 
-      return route.path.startsWith(props.item.link);
+      return route.path.startsWith(linkItem.link);
     });
 
     // if this link is active
@@ -75,8 +82,8 @@ export default defineComponent({
         return false;
       }
 
-      if (props.item.activeMatch) {
-        return new RegExp(props.item.activeMatch).test(route.path);
+      if (linkItem.activeMatch) {
+        return new RegExp(linkItem.activeMatch).test(route.path);
       }
 
       return isActiveInSubpath.value;
@@ -89,6 +96,7 @@ export default defineComponent({
       linkAriaLabel,
       linkRel,
       linkTarget,
+      linkItem,
     };
   },
 });

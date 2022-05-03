@@ -29,7 +29,7 @@
 
 <script lang="ts">
 import { PropType, defineComponent } from 'vue';
-import AutoLink from '../auto-link/AutoLink.vue';
+import AutoLink from '../global/AutoLink.vue';
 import { NavbarConfigArray } from '@mptheme/config.types';
 
 export default defineComponent({

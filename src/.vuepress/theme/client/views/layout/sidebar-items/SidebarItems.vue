@@ -1,7 +1,7 @@
 <template>
-  <ul v-if="sidebarItems.length">
+  <ul v-if="items.length">
     <SidebarItem
-      v-for="item in sidebarItems"
+      v-for="item in items"
       :key="item.link || item.text"
       :item="item" />
   </ul>
@@ -10,7 +10,7 @@
 <script lang="ts">
 import SidebarItem from '@mptheme/client/components/sidebar-item/SidebarItem.vue';
 import { defineComponent } from 'vue';
-import { useSidebarItems } from '@vuepress/theme-default/lib/client';
+import { useSidebar } from '@mptheme/client/services/composables/useSidebar';
 
 export default defineComponent({
   name: 'SidebarItems',
@@ -19,9 +19,9 @@ export default defineComponent({
   },
 
   setup: () => {
-    const sidebarItems = useSidebarItems();
+    const { items } = useSidebar();
 
-    return { sidebarItems };
+    return { items };
   },
 });
 </script>

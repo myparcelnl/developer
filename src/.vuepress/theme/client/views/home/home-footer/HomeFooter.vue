@@ -26,7 +26,7 @@
 </template>
 
 <script lang="ts">
-import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import FooterSection from '@mptheme/client/views/layout/footer-section/FooterSection.vue';
 import LinkTree from '@mptheme/client/components/common/LinkTree.vue';

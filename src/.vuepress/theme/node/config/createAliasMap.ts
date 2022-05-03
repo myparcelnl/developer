@@ -9,8 +9,13 @@ import { path } from '@vuepress/utils';
  */
 export const createAliasMap = (from: fs.PathLike, to: string): Record<string, fs.PathLike> => Object.fromEntries(
   fs.readdirSync(from)
-    .map((file) => [
-      `${to}/${file}`,
-      path.resolve(from, file),
-    ]),
+    .map((file) => {
+      // Chop .ts extension off aliases.
+      const fileName = file.replace('.ts', '');
+
+      return [
+        `${to}/${fileName}`,
+        path.resolve(from, file),
+      ];
+    }),
 );

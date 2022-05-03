@@ -8,7 +8,7 @@
       <nav class="flex-1 grid grid-cols-2">
         <div class="flex">
           <template v-if="prevNavLink">
-            <MPIcon
+            <Icon
               icon="chevron-left"
               class="text-xl" />
             <AutoLink
@@ -26,7 +26,7 @@
               class="flex items-center ml-auto">
               <span v-text="nextNavLink.text" />
             </AutoLink>
-            <MPIcon
+            <Icon
               icon="chevron-right"
               class="text-xl" />
           </template>
@@ -41,10 +41,10 @@ import { DefaultThemeNormalPageFrontmatter, NavLink, ResolvedSidebarItem } from 
 import { computed, defineComponent } from 'vue';
 import { isPlainObject, isString } from '@vuepress/shared';
 import { useNavLink, useSidebarItems } from '@vuepress/theme-default/lib/client/composables';
-import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import FooterSection from '@mptheme/client/views/layout/footer-section/FooterSection.vue';
-import MPIcon from '@mptheme/client/components/common/icon/Icon.vue';
+import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import { usePageFrontmatter } from '@vuepress/client';
 import { useRoute } from 'vue-router';
 
@@ -54,7 +54,7 @@ export default defineComponent({
     AutoLink,
     ContentContainer,
     FooterSection,
-    MPIcon,
+    Icon,
   },
 
   setup: () => {

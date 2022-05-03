@@ -1,15 +1,29 @@
 /* eslint-disable max-lines-per-function */
 import { DIR_CLIENT, DIR_THEME } from './shared/directories';
 import { Theme } from 'vuepress';
-import { ThemeConfig } from '@mptheme/config.types';
+import { ThemeConfig } from './config.types';
+import { autoLinkPlugin } from './node/plugins/autoLinkPlugin';
 import { createAliasMap } from './node/config/createAliasMap';
 import { createContainerPlugins } from './node/config/createContainerPlugin';
 import { defaultTheme } from '@vuepress/theme-default';
 import { path } from '@vuepress/utils';
-import plugin from './node/plugin';
+import { registerComponentsPlugin } from './node/plugins/registerComponentsPlugin';
 
 const components = path.resolve(DIR_CLIENT, 'components');
 const views = path.resolve(DIR_CLIENT, 'views');
+
+// interface MyParcelThemeOptions {
+//   footer2: NavbarConfig;
+//   footer: NavbarConfig;
+//   navbar: NavbarConfig;
+//   sidebar: SidebarConfig;
+//   defaultTheme: DefaultThemeOptions;
+// }
+//
+// // export const myParcelTheme = (options: MyParcelThemeOptions): Theme => {
+// const theme = () => {
+//   const defaultThemeData = defaultTheme(options.defaultTheme);
+//
 
 const theme: Theme<ThemeConfig> = (config, app) => {
   const defaultThemeData = typeof defaultTheme === 'function' ? defaultTheme(config, app) : null;
@@ -29,6 +43,7 @@ const theme: Theme<ThemeConfig> = (config, app) => {
       '@theme/HomeHero.vue': `${views}/home/home-hero/HomeHero.vue`,
       '@theme/Navbar.vue': `${views}/layout/header/MPHeader.vue`,
       '@theme/NavbarBrand.vue': `${views}/layout/navbar-brand/NavbarBrand.vue`,
+      '@theme/NavbarDropdown.vue': `${components}/navbar-dropdown/NavbarDropdown.vue`,
       '@theme/Page.vue': `${views}/page/Page.vue`,
       '@theme/PageMeta.vue': `${views}/page/page-meta/PageMeta.vue`,
       '@theme/PageNav.vue': `${views}/page/page-nav/PageNav.vue`,
@@ -52,7 +67,7 @@ const theme: Theme<ThemeConfig> = (config, app) => {
     plugins: [
       ...defaultThemeData?.plugins ?? [],
 
-      plugin,
+      autoLinkPlugin(),
       ...createContainerPlugins(),
 
       [
@@ -68,15 +83,18 @@ const theme: Theme<ThemeConfig> = (config, app) => {
         },
       ],
 
-      // Register components for use in .md files.
-      [
-        '@vuepress/register-components',
-        {
-          components: {
-            ApiLink: path.resolve(DIR_CLIENT, 'components/global/ApiLink.vue'),
-          },
-        },
-      ],
+      registerComponentsPlugin(),
+
+      // docsearchPlugin({
+      //   apiKey: 'a54eaf74e6cdcbc9f373bb3c60786b2b',
+      //   appId: '',
+      //   indexName: 'myparcelnl',
+      // }),
+      //
+      // // Register components for use in .md files.
+      // registerComponentsPlugin({
+      //   components: getComponents(),
+      // }),
     ],
   };
 };

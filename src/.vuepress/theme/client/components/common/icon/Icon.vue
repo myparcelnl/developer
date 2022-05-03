@@ -12,7 +12,7 @@ import { useTailwindVariant } from '@mptheme/client/services/composables/useTail
 const variant = useTailwindVariant(iconVariant);
 
 export default defineComponent({
-  name: 'MPIcon',
+  name: 'Icon',
   props: {
     icon: variant.createVariantProp(),
   },

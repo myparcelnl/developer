@@ -1,21 +1,22 @@
-import { ThemeConfig } from '@mptheme/config.types';
+import { defineUserConfig } from 'vuepress';
 import { createBottomFooter } from './config/createBottomFooter';
 import { createFooter } from './config/createFooter';
 import { createNavbar } from './config/createNavbar';
 import { createSidebar } from './config/sidebar/createSidebar';
-import { defineUserConfig } from 'vuepress';
+import { getLocales } from './getLocales';
 import { head } from './config/head';
-import { path } from '@vuepress/utils';
+import path from 'path';
 import { slugify } from '@vuepress/markdown';
 import { viteConfig } from './viteConfig';
 
-export default defineUserConfig<ThemeConfig>({
-  theme: path.resolve(__dirname, 'theme'),
+const DEV_SERVER_PORT = 8955;
 
-  title: 'MyParcel Developer Portal',
-  description: 'Connect with our API and get started with shipments, returns and more.',
-
+export default defineUserConfig({
   head,
+
+  locales: getLocales(),
+
+  theme: path.resolve(__dirname, 'theme'),
 
   /**
    * @see https://v2.vuepress.vuejs.org/reference/default-theme/config.html
@@ -45,6 +46,33 @@ export default defineUserConfig<ThemeConfig>({
     },
   },
 
+  // theme: myParcelTheme({
+  //   navbar: createNavbar(),
+  //   sidebar: createSidebar(),
+  //   footer: createFooter(),
+  //   footer2: createBottomFooter(),
+  //
+  //   defaultTheme: {
+  //     contributors: true,
+  //     docsBranch: 'main',
+  //     docsDir: '/src/',
+  //     editLink: true,
+  //     logo: 'images/logo.svg',
+  //     logoDark: 'images/logo_dark.svg',
+  //     repo: 'https://github.com/myparcelnl/developer',
+  //
+  //     themePlugins: {
+  //       activeHeaderLinks: true,
+  //       container: {
+  //         tip: false,
+  //         danger: false,
+  //         details: true,
+  //         warning: false,
+  //       },
+  //     },
+  //   },
+  // }),
+
   markdown: {
     anchor: {
       /**
@@ -64,9 +92,12 @@ export default defineUserConfig<ThemeConfig>({
     },
   },
 
-  port: 8955,
+  port: DEV_SERVER_PORT,
 
   bundlerConfig: {
     viteOptions: viteConfig,
   },
+  // bundler: viteBundler({
+  //   viteOptions: viteConfig,
+  // }),
 });

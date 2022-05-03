@@ -10,7 +10,7 @@ services:
     networks:
       - traefik
     env_file:
-      - .env.local
+      - .env
     labels:
       traefik.enable: "true"
       traefik.docker.network: traefik_default

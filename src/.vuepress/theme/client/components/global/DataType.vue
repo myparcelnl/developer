@@ -10,10 +10,9 @@
 
 <script lang="ts">
 import { DataType, useDataTypes } from '@mptheme/client/composables/useDataTypes';
-import { computed, ref } from 'vue';
-import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
+import { computed, defineComponent, ref } from 'vue';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import { NavbarItem } from '@vuepress/theme-default/lib/shared';
-import { defineComponent } from '@vue/runtime-core';
 
 export default defineComponent({
   name: 'DataType',

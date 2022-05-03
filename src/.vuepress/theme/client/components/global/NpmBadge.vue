@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({

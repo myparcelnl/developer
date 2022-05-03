@@ -5,7 +5,12 @@
     <div
       v-for="item in navbarLinks"
       :key="item.text">
+      <NavbarDropdown
+        v-if="item.children"
+        :item="item" />
+
       <AutoLink
+        v-else
         class="block h-full"
         :class="{
           'opacity-60': item.sub,
@@ -17,6 +22,7 @@
 
 <script lang="ts">
 import AutoLink from '@vuepress/theme-default/lib/client/components/AutoLink.vue';
+import NavbarDropdown from '@mptheme/client/components/navbar-dropdown/NavbarDropdown.vue';
 import { defineComponent } from 'vue';
 import { useNavbarConfig } from '@mptheme/client/services/composables/useNavbarConfig';
 
@@ -25,6 +31,7 @@ export default defineComponent({
 
   components: {
     AutoLink,
+    NavbarDropdown,
   },
 
   setup: () => {

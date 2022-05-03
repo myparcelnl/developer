@@ -8,3 +8,9 @@ type OneOrMore<T> = T | T[]
 type StringKeys<T = Record<string, unknown>> = Extract<keyof T, string>
 
 type Extends<T, U extends T> = U;
+
+/**
+ * Extend A with B but disregarding original typing of properties with the same
+ * name in B.
+ */
+type Extend<A, B> = Omit<A, keyof B> & B;
