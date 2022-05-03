@@ -5,8 +5,7 @@
 </template>
 
 <script lang="ts">
-import { computed, ref } from 'vue';
-import { defineComponent } from '@vue/runtime-core';
+import { computed, defineComponent, ref } from 'vue';
 import { useHttpCodes } from '@mptheme/client/composables/useHttpCodes';
 
 export default defineComponent({

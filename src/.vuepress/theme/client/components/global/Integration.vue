@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex flex-col overflow-hidden rounded-lg border">
+    <div class="border flex flex-col overflow-hidden rounded-lg">
       <div
         v-if="image"
         class="flex h-32 px-3 py-5"
@@ -26,15 +26,15 @@
           v-text="type" />
 
         <div v-if="repo">
-          <MPIcon icon="integrations" />
-          <AutoLink :item="{ link: `https://github.com/${repo}` }">
+          <Icon icon="integrations" />
+          <AutoLink :item="`https://github.com/${repo}`">
             View on GitHub
           </AutoLink>
         </div>
 
         <div v-if="url">
-          <MPIcon icon="integrations" />
-          <AutoLink :item="{ link: url }">
+          <Icon icon="integrations" />
+          <AutoLink :item="url">
             Documentation
           </AutoLink>
         </div>
@@ -44,17 +44,17 @@
 </template>
 
 <script lang="ts">
-import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
-import MPIcon from '@mptheme/client/components/common/icon/Icon.vue';
-import MPImg from '@mptheme/client/components/common/MPImg.vue';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
+import Icon from '@mptheme/client/components/common/icon/Icon.vue';
+import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Integration',
   components: {
-    MPImg,
     AutoLink,
-    MPIcon,
+    Icon,
+    MPImg,
   },
 
   props: {

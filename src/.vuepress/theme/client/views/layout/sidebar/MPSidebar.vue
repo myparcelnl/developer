@@ -5,7 +5,8 @@
     tag="aside"
     class="fixed h-full transition-all w-80 z-30"
     :class="{
-      '-translate-x-full lg:translate-x-0': !isOpen,
+      '-translate-x-full': !isOpen,
+      'lg:translate-x-0': !isOpen && !isNavbar,
       'translate-x-0': isOpen,
     }">
     <div class="h-full inset-0 overflow-y-scroll pb-24 pt-5 px-3 w-full">
@@ -39,15 +40,6 @@ export default defineComponent({
     SidebarItems,
   },
 
-  setup: () => {
-    const { exists, isOpen, toggle, toggled } = useSidebar();
-
-    return {
-      toggle,
-      toggled,
-      exists,
-      isOpen,
-    };
-  },
+  setup: () => useSidebar(),
 });
 </script>

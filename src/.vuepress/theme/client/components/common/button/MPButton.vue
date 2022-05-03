@@ -1,8 +1,7 @@
 <template>
-  <div
+  <button
     v-test="'button'"
-    role="button"
-    :tabindex="0"
+    type="button"
     :class="[
       'duration-100',
       'font-display',
@@ -27,10 +26,10 @@
       v-test="'button__link'"
       tabindex="-1"
       :item="link ?? null"
-      class="dark:text-inherit flex font-medium m-auto text-inherit">
+      class="dark:text-inherit flex font-medium hover:text-inherit m-auto text-inherit">
       <slot />
     </component>
-  </div>
+  </button>
 </template>
 
 <script lang="ts">

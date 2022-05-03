@@ -13,10 +13,9 @@
 </template>
 
 <script lang="ts">
-import { ComputedRef, computed } from 'vue';
-import AutoLink from '@mptheme/client/components/auto-link/AutoLink.vue';
+import { ComputedRef, computed, defineComponent } from 'vue';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import { NavbarItem } from '@vuepress/theme-default/lib/shared';
-import { defineComponent } from '@vue/runtime-core';
 import { useRouter } from 'vue-router';
 
 export default defineComponent({

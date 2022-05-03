@@ -1,6 +1,8 @@
 node_modules/
 .DS_Store
 
+.env
+
 src/.vuepress/.cache/
 src/.vuepress/.temp/
 src/.vuepress/dist/

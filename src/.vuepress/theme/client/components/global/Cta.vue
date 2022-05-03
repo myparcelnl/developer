@@ -1,11 +1,23 @@
 <template>
-  <div
-    class="flex flex-col group hover:text-white overflow-hidden p-6 relative rounded-xl text-white">
-    <div class="flex flex-col">
-      <MPIcon
+  <component
+    :is="linkFull && link
+      ? 'AutoLink'
+      : 'div'"
+    class="border flex flex-col group overflow-hidden p-6 relative rounded-xl"
+    :item="linkFull ? link : null">
+    <slot name="before" />
+
+    <slot v-if="$slots.default" />
+    <template v-else>
+      <Icon
         v-if="icon"
         class="text-5xl"
         :icon="icon" />
+
+      <MPImg
+        v-if="img"
+        alt=""
+        :src="img" />
 
       <h2
         v-if="title"
@@ -16,32 +28,39 @@
         v-text="subtitle" />
 
       <MPButton
+        v-if="link && !linkFull"
         class="flex"
-        variant="outlinePrimary"
+        :variant="buttonVariant"
         :link="linkItem">
-        <MPIcon icon="chevron-right" />
+        <Icon icon="chevron-right" />
       </MPButton>
-    </div>
-  </div>
+    </template>
 
-  <div class="">
-    <slot />
-    <MPButton
-      v-if="link"
-      :link="linkItem" />
-  </div>
+    <slot name="after" />
+  </component>
 </template>
 
-<script>
-import MPButton from '../common/button/MPButton';
+<script lang="ts">
+import Icon from '@mptheme/client/components/common/icon/Icon.vue';
+import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
+import MPImg from '@mptheme/client/components/global/MPImg.vue';
+import { buttonVariant } from '@mptheme/client/services/tailwind/variants/buttonVariant';
+import { defineComponent } from 'vue';
 import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
-import MPIcon from '../common/icon/Icon';
+import { useTailwindVariant } from '@mptheme/client/services/composables/useTailwindVariant';
 
-export default {
+const buttonTailwindVariant = useTailwindVariant(buttonVariant);
+
+export default defineComponent({
   name: 'Cta',
-  components: { MPIcon, MPButton },
+  components: { MPImg, Icon, MPButton },
 
   props: {
+    img: {
+      type: String,
+      default: null,
+    },
+
     title: {
       type: String,
       default: null,
@@ -61,12 +80,18 @@ export default {
       type: String,
       default: null,
     },
+
+    buttonVariant: buttonTailwindVariant.createVariantProp(),
+
+    linkFull: {
+      type: Boolean,
+    },
   },
 
   setup: (props) => {
-    const linkItem = useNavLink(props.link);
+    const linkItem = props.link ? useNavLink(props.link) : null;
 
     return { linkItem };
   },
-};
+});
 </script>

@@ -12,6 +12,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
+    "resolveJsonModule": true,
     "noImplicitReturns": true,
     "target": "esnext",
     "paths": {

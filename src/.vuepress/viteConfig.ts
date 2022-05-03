@@ -1,8 +1,8 @@
-import { UserConfig } from 'vite';
+import { ViteBundlerOptions } from 'vuepress';
 import { path } from '@vuepress/utils';
 import svgLoader from 'vite-svg-loader';
 
-export const viteConfig: UserConfig = {
+export const viteConfig: ViteBundlerOptions['viteOptions'] = {
   plugins: [
     svgLoader(),
   ],

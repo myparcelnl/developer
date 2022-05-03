@@ -1,4 +1,4 @@
-import { computed, ComputedRef } from 'vue';
+import { ComputedRef, computed } from 'vue';
 import { useRouteLocale, useSiteLocaleData } from '@vuepress/client';
 import { ResolvedNavbarItem } from '@vuepress/theme-default/lib/shared';
 import { useRouter } from 'vue-router';
@@ -28,7 +28,7 @@ export const useNavbarSelectLanguage = (): ComputedRef<ResolvedNavbarItem[]> => 
       text: themeLocale.value.selectLanguageText ?? 'unknown language',
       ariaLabel: themeLocale.value.selectLanguageAriaLabel ?? 'unkown language',
       children: localePaths.map((targetLocalePath) => {
-        // target locale config of this langauge link
+        // target locale config of this language link
         const targetSiteLocale
           = siteLocale.value.locales?.[targetLocalePath] ?? {};
 

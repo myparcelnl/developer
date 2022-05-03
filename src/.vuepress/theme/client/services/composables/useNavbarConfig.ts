@@ -24,5 +24,14 @@ const resolveNavbarItem = (
 export const useNavbarConfig = (): ComputedRef<ResolvedNavbarItem[]> => {
   const themeLocale = useThemeLocaleData();
 
-  return computed(() => (themeLocale.value.navbar || []).map(resolveNavbarItem));
+  return computed(() => {
+    const navbarItems = (themeLocale.value.navbar || []).map(resolveNavbarItem);
+    // TODO: Multilanguage
+    // const languageItems = useNavbarSelectLanguage();
+
+    return [
+      ...navbarItems,
+      // ...languageItems.value,
+    ];
+  });
 };

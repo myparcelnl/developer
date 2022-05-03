@@ -44,5 +44,6 @@ export const createContainerPlugins = (): PluginOptions[] => {
       '@vuepress/container',
       options,
     ];
+    // return containerPlugin(options);
   });
 };

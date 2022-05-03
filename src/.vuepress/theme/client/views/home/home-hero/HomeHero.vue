@@ -6,14 +6,12 @@
       role="none"
       aria-hidden="true"
       class="absolute bottom-0 left-0 select-none w-1/3"
-      src="/images/floepje_bg_left.svg"
       @dragstart.prevent="null" />
 
     <FloepjeBgRight
       role="none"
       aria-hidden="true"
       class="absolute right-0 select-none top-0 w-1/3"
-      src="/images/floepje_bg_right.svg"
       @dragstart.prevent="null" />
 
     <ContentContainer class="relative">
@@ -41,11 +39,11 @@
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
-import MPButtonGroup from '@mptheme/client/components/common/MPButtonGroup.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import FloepjeBgLeft from '@Public/images/floepje_bg_left.svg';
 import FloepjeBgRight from '@Public/images/floepje_bg_right.svg';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
+import MPButtonGroup from '@mptheme/client/components/common/MPButtonGroup.vue';
 import { MyPaHomepageFrontmatter } from '@mptheme/config.types';
 import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
 import { usePageFrontmatter } from '@vuepress/client';
@@ -70,16 +68,8 @@ export default defineComponent({
         return null;
       }
 
-      const shouldReplace = plainTitle.includes('[') && plainTitle.includes(']');
-
-      if (!shouldReplace) {
-        return plainTitle;
-      }
-
-      let titleHtml = plainTitle.replace('[', '<span class="bg-clip-text bg-gradient-to-tr from-goldfish-100 text-transparent to-goldfish-600 via-goldfish-500">');
-      titleHtml = titleHtml.replace(']', '</span>');
-
-      return titleHtml;
+      return plainTitle;
+      // return plainTitle.replace(/beyond delivery/i, '<span class="bg-clip-text bg-gradient-to-tr from-goldfish-100 text-transparent to-goldfish-600 via-goldfish-500">$1</span>');
     });
 
     return {

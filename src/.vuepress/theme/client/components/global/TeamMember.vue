@@ -5,12 +5,16 @@
         v-if="normal"
         alt="normal image"
         :src="normalSrc"
-        class="block group-hover:hidden" />
+        :class="{
+          'block group-hover:hidden': normal && funny,
+        }" />
       <MPImg
         v-if="funny"
         alt="funny image"
         :src="funnySrc"
-        class="group-hover:block hidden" />
+        :class="{
+          'group-hover:block hidden': normal && funny,
+        }" />
     </div>
 
     <div class="absolute bg-goldfish-500 bg-opacity-50 duration-150 flex group-hover:opacity-100 inset-0 opacity-0 transition-all">
@@ -23,7 +27,7 @@
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
-import MPImg from '@mptheme/client/components/common/MPImg.vue';
+import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import { isLinkHttp } from '@vuepress/shared';
 
 const BASE_URL = 'https://www.myparcel.nl/app/uploads';
@@ -44,16 +48,19 @@ export default defineComponent({
 
     funny: {
       type: String,
-      required: true,
+      required: false,
+      default: null,
     },
   },
 
   setup: (props) => {
-    const getImageUrl = (input: string) => {
-      let url = input;
+    const getImageUrl = (url: string | null) => {
+      if (!url) {
+        return null;
+      }
 
-      if (!isLinkHttp(props.normal)) {
-        url = BASE_URL + url;
+      if (!isLinkHttp(url)) {
+        return BASE_URL + url;
       }
 
       return url;
@@ -61,7 +68,6 @@ export default defineComponent({
 
     return {
       normalSrc: computed(() => getImageUrl(props.normal)),
-
       funnySrc: computed(() => getImageUrl(props.funny)),
     };
   },
