@@ -1,5 +1,5 @@
-services:
-  web:
+x-common:
+  - &common
     build:
       context: docker
       dockerfile: images/web/Dockerfile
@@ -7,10 +7,15 @@ services:
     volumes:
       - ./:/app
       - node-modules:/app/node_modules
+
+services:
+  # Usable on https://developer.dev.myparcel.nl/
+  web:
+    <<: *common
     networks:
       - traefik
-    env_file:
-      - .env
+    environment:
+      TRAEFIK: 1
     labels:
       traefik.enable: "true"
       traefik.docker.network: traefik_default
@@ -18,6 +23,12 @@ services:
       traefik.frontend.rule: "Host:developer.dev.myparcel.nl"
       traefik.frontend.redirect.entryPoint: 'https'
       traefik.frontend.redirect.permanent: 'true'
+
+  # Usable on http://localhost:8955
+  localhost:
+    <<: *common
+    ports:
+      - '8955:8955'
 
 volumes:
   node-modules:
