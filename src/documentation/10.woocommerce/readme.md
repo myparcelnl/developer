@@ -2,6 +2,12 @@
 title: Introduction
 ---
 
+<Stack class="grid-flow-col auto-cols-max gap-1">
+    <GitHubBadge repo="myparcelnl/woocommerce" />
+    <GitHubBadge repo="myparcelnl/woocommerce" link="issues" />
+    <GitHubBadge repo="myparcelnl/woocommerce" link="pulls" />
+</Stack>
+
 ## Features
 
 * [Delivery options] integrated in your checkout.
