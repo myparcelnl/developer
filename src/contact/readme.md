@@ -7,9 +7,29 @@ contributors: false
 ---
 
 <Stack class="grid-cols-2 sm:grid-cols-3">
-    <Cta img-class="sm:px-16 lg:px-24" img="/contact/slack.svg" title="Join our Slack workspace" subtitle="Get answers to your questions quickly." />
-    <Cta img-class="sm:px-16 lg:px-24" img="/contact/faq.svg" title="FAQ" subtitle="A comprehensive overview of questions and answers." />
-    <Cta img-class="sm:px-16 lg:px-24" img="/contact/github.svg" title="Feature requests or bugs" subtitle="Missing a feature in one of our plugins or found a bug?" />
+    <Cta
+        title="FAQ" 
+        subtitle="A comprehensive overview of questions and answers." 
+        img="/contact/faq.svg" 
+        link="https://myparcel.nl/en/support" 
+        class="items-center text-center"
+        img-class="max-h-12" />
+    <Cta 
+        title="Feature requests or bugs" 
+        subtitle="Missing a feature in one of our plugins or found a bug?" 
+        img="/contact/github.svg" 
+        link="https://github.com/myparcelnl" 
+        class="items-center text-center" 
+        img-class="max-h-12" />
+    <Cta 
+        title="Join our Slack workspace" 
+        subtitle="Get answers to your questions quickly." 
+        img="/contact/slack.svg" 
+        link="https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI"
+        class="items-center text-center" 
+        img-class="max-h-12" /> 
 </Stack>
+
+## Send us a message
 
 <ContactForm />
