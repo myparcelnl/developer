@@ -16,7 +16,7 @@ tree:
 - title: Explore.
   render:
     attributes:
-      class: 'xl:grid-cols-3 md:grid-cols-2 grid-cols-1'
+      class: 'lg:grid-cols-3 sm:grid-cols-2 grid-cols-1'
     children:
       - component: HomeLink
         attributes: 
@@ -44,7 +44,7 @@ tree:
   subtitle: Discover how our custom shipments implementation makes the difference for these clients.
   render:
     attributes:
-      class: 'xl:grid-cols-4 sm:grid-cols-3 grid-cols-2'
+      class: 'lg:grid-cols-4 sm:grid-cols-3 grid-cols-2'
     children:
       - component: HomePartnerBrand
         attributes:
