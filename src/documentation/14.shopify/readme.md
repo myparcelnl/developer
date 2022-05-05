@@ -1,5 +1,4 @@
 ---
-title: Documentation shopify
+title: Shopify
+index: true
 ---
-
-This is a new page
