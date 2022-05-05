@@ -19,4 +19,3 @@ title: Introduction
 * Add Track & Trace URL to the order confirmation email.
 
 [Delivery options]: https://github.com/myparcelnl/delivery-options
-
