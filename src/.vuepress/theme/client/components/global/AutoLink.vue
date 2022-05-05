@@ -20,15 +20,15 @@
     :aria-label="linkAriaLabel">
     <slot>
       <span v-text="item.text" />
+      <ExternalLinkIcon v-if="isBlankTarget" />
     </slot>
-    <ExternalLinkIcon v-if="isBlankTarget" />
   </a>
 </template>
 
 <script lang="ts">
 import { PropType, computed, defineComponent } from 'vue';
 import { NavLink } from '@vuepress/theme-default/lib/shared';
-import { useLink } from '@mptheme/client/composables/useLink';
+import { useLink } from '@mptheme/client/services/composables/useLink';
 import { useRouter } from 'vue-router';
 import { useSiteData } from '@vuepress/client';
 

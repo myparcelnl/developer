@@ -1,15 +1,13 @@
 <template>
   <PageFooterNav />
 
-  <FooterSection>
+  <FooterSection v-if="editNavLink || lastUpdated || contributors">
     <ContentContainer
       type="sm"
       class="flex h-16 justify-between place-items-center">
-      <PageEditLink />
-
-      <PageLastUpdated />
-
-      <PageContributors />
+      <PageEditLink v-if="editNavLink" />
+      <PageLastUpdated v-if="lastUpdated" />
+      <PageContributors v-if="contributors" />
     </ContentContainer>
   </FooterSection>
 </template>
@@ -22,6 +20,9 @@ import PageEditLink from '@mptheme/client/views/page/page-edit-link/PageEditLink
 import PageFooterNav from '@mptheme/client/views/page/page-footer-nav/PageFooterNav.vue';
 import PageLastUpdated from '@mptheme/client/views/page/page-last-updated/PageLastUpdated.vue';
 import { defineComponent } from 'vue';
+import { useContributors } from '@mptheme/client/services/composables/useContributors';
+import { useEditNavLink } from '@mptheme/client/services/composables/useEditNavLink';
+import { useLastUpdated } from '@mptheme/client/services/composables/useLastUpdated';
 
 export default defineComponent({
   name: 'PageFooterParts',
@@ -33,5 +34,11 @@ export default defineComponent({
     PageEditLink,
     PageLastUpdated,
   },
+
+  setup: () => ({
+    contributors: useContributors(),
+    editNavLink: useEditNavLink(),
+    lastUpdated: useLastUpdated(),
+  }),
 });
 </script>

@@ -17,10 +17,12 @@
       <MPImg
         v-if="img"
         alt=""
+        :class="imgClass"
         :src="img" />
 
       <h2
         v-if="title"
+        class="pb-0"
         v-text="title" />
 
       <p
@@ -29,9 +31,9 @@
 
       <MPButton
         v-if="link && !linkFull"
-        class="flex"
+        class="mt-auto"
         :variant="buttonVariant"
-        :link="linkItem">
+        :link="link">
         <Icon icon="chevron-right" />
       </MPButton>
     </template>
@@ -46,7 +48,7 @@ import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import { buttonVariant } from '@mptheme/client/services/tailwind/variants/buttonVariant';
 import { defineComponent } from 'vue';
-import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
+import { merge } from 'lodash-es';
 import { useTailwindVariant } from '@mptheme/client/services/composables/useTailwindVariant';
 
 const buttonTailwindVariant = useTailwindVariant(buttonVariant);
@@ -81,17 +83,22 @@ export default defineComponent({
       default: null,
     },
 
-    buttonVariant: buttonTailwindVariant.createVariantProp(),
+    buttonVariant: merge(
+      {},
+      buttonTailwindVariant.createVariantProp(),
+      {
+        default: ['outlineLight', 'icon'],
+      },
+    ),
 
     linkFull: {
       type: Boolean,
     },
-  },
 
-  setup: (props) => {
-    const linkItem = props.link ? useNavLink(props.link) : null;
-
-    return { linkItem };
+    imgClass: {
+      type: String,
+      default: null,
+    },
   },
 });
 </script>

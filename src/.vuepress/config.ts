@@ -1,8 +1,8 @@
-import { defineUserConfig } from 'vuepress';
 import { createBottomFooter } from './config/createBottomFooter';
 import { createFooter } from './config/createFooter';
 import { createNavbar } from './config/createNavbar';
 import { createSidebar } from './config/sidebar/createSidebar';
+import { defineUserConfig } from 'vuepress';
 import { getLocales } from './getLocales';
 import { head } from './config/head';
 import path from 'path';

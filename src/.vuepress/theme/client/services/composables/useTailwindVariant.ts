@@ -7,19 +7,19 @@ const createValidator = <T = any, D = T>(
   options: Record<string, OneOrMore<string>>,
   name: string,
 ) => (value: unknown): boolean => {
-    const values = toArray(value).filter(Boolean);
+  const values = toArray(value).filter(Boolean);
 
-    return values.every((item) => {
-      const isValid = typeof item === 'string' && item in options;
+  return values.every((item) => {
+    const isValid = typeof item === 'string' && item in options;
 
-      if (!isValid) {
-        // eslint-disable-next-line no-console,max-len,vue/max-len
-        console.warn(`Key "${value}" is missing in Tailwind prop validator "${name}". Add this key to avoid related css getting purged in production mode.`);
-      }
+    if (!isValid) {
+      // eslint-disable-next-line no-console,max-len,vue/max-len
+      console.warn(`Key "${value}" is missing in Tailwind prop validator "${name}". Add this key to avoid related css getting purged in production mode.`);
+    }
 
-      return isValid;
-    });
-  };
+    return isValid;
+  });
+};
 
 export interface VariantDefinition<K extends OneOrMore<StringKeys<T['options']>>, T extends TailwindVariant> {
   getVariantClasses(variant?: K): string[];
@@ -28,7 +28,7 @@ export interface VariantDefinition<K extends OneOrMore<StringKeys<T['options']>>
 
 export const useTailwindVariant = <
   T extends TailwindVariant,
-  K extends OneOrMore<StringKeys<T['options']>>
+  K extends OneOrMore<StringKeys<T['options']>>,
 >(variant: T): VariantDefinition<K, T> => {
   const { name, propOptions, options } = variant;
 

@@ -27,7 +27,6 @@ export default defineComponent({
     const sidebarItems = useSidebarItems();
     const page = usePageData();
 
-    // console.log(sidebarItems, page);
     return { sidebarItems, page };
   },
 });

@@ -16,10 +16,14 @@ export function registerComponentsPlugin(): PluginOptions {
 
   const globalComponents = fs
     .readdirSync(DIR_COMPONENTS)
-    .reduce((acc, item) => ({
-      ...acc,
-      [path.basename(item, '.vue')]: DIR_COMPONENTS + '/' + item,
-    }), {});
+    .reduce((acc, item) => {
+      const componentName = item.replace(/\.(?:vue|ts)/, '');
+
+      return {
+        ...acc,
+        [componentName]: DIR_COMPONENTS + '/' + item,
+      };
+    }, {});
 
   return [
     '@vuepress/register-components',

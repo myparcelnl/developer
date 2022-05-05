@@ -1,0 +1,67 @@
+<template>
+  <FormField
+    :id="id"
+    :label="label">
+    <select
+      :id="id"
+      v-model="model"
+      :required="optional ? null : 'required'"
+      :class="classes"
+      class="rounded-full">
+      <option
+        v-if="emptyOption"
+        selected
+        disabled
+        value="">
+        {{ localeData.select_empty_option }}
+      </option>
+
+      <option
+        v-for="option in options"
+        :key="`${id}_option_${option.name}`"
+        :value="option.name">
+        {{ option.label }}
+      </option>
+    </select>
+  </FormField>
+</template>
+
+<script lang="ts">
+import { PropType, defineComponent } from 'vue';
+import FormField from '@mptheme/client/components/global/FormField.vue';
+import { defaultFormProps } from '@mptheme/client/defaultFormProps';
+import { defaultInputClasses } from '@mptheme/client/defaultInputClasses';
+import { useSiteLocaleData } from '@mptheme/client/services/composables/useSiteLocaleData';
+import { useVModel } from '@vueuse/core';
+
+interface SelectOption {
+  name: string;
+  label: string;
+}
+
+export default defineComponent({
+  name: 'FormSelect',
+  components: { FormField },
+
+  props: {
+    ...defaultFormProps,
+
+    options: {
+      type: Array as PropType<SelectOption[]>,
+      default: () => [],
+    },
+
+    emptyOption: {
+      type: Boolean,
+    },
+  },
+
+  emits: ['update:modelValue'],
+
+  setup: (props, ctx) => ({
+    localeData: useSiteLocaleData(),
+    model: useVModel(props, 'modelValue', ctx.emit),
+    classes: defaultInputClasses,
+  }),
+});
+</script>

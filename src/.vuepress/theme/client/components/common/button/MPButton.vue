@@ -11,6 +11,8 @@
       'select-none',
       'transition-all',
       'whitespace-nowrap',
+      'active:outline-2',
+      'focus:outline-2',
       ...variantClass,
       {
         ['py-2 px-4']: !variant.includes('icon'),
@@ -22,7 +24,7 @@
     :aria-disabled="disabled"
     @click="disabled ? null : $emit('click', $event)">
     <component
-      :is="link ? 'AutoLink' : 'span'"
+      :is="link ? 'AutoLink' : 'button'"
       v-test="'button__link'"
       tabindex="-1"
       :item="link ?? null"
@@ -47,7 +49,7 @@ export default defineComponent({
     variant: createVariantProp(),
 
     link: {
-      type: Object as PropType<NavLink>,
+      type: [String, Object] as PropType<string | NavLink>,
       default: null,
     },
 

@@ -1,11 +1,16 @@
 {
-  "generic.ok": "OK",
-  "generic.next": "Volgende",
-  "generic.back": "Vorige",
-  "title": "MyParcel Developer Portal",
+  "api_reference": "API Reference",
+  "back": "Vorige",
   "description": "Verbind met onze API en begin met zendingen, retouren en meer.",
-  "docsearch.placeholder": "Zoeken",
-  "docsearch.search": "Zoeken",
-  "view_on_github": "Toon op GitHub",
-  "lang": "nl-NL"
+  "docsearch_placeholder": "Zoeken",
+  "docsearch_search": "Zoeken",
+  "documentation": "Documentatie",
+  "error_captcha_invalid": "Validatie error",
+  "lang": "nl-NL",
+  "message_submitted": "Je bericht is verzonden!",
+  "next": "Volgende",
+  "select_empty_option": "Kies een optie",
+  "submit": "verstuur",
+  "title": "MyParcel Developer Portal",
+  "view_on_github": "Toon op GitHub"
 }
