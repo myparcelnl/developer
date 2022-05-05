@@ -1,6 +1,9 @@
 ---
 title: About Us
 sidebar: false
+editLink: false
+lastUpdated: false
+contributors: false
 ---
 
 ## Meet our development team! :tada:
