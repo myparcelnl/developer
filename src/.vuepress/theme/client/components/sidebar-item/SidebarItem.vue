@@ -77,13 +77,13 @@ export default defineComponent({
     const route = useRoute();
     const router = useRouter();
     const isActive = computed(() => isActiveSidebarItem(item.value, route));
-    const isOpen = ref(true);
     const onClick = ref<() => void>();
 
     const {
       toggle: toggleSidebar,
       toggled: sidebarToggled,
     } = useSidebar();
+    const isOpen = ref(true);
 
     if (item.value.collapsible) {
       isOpen.value = isActive.value;
@@ -106,7 +106,6 @@ export default defineComponent({
       classes: computed(() => [
         'py-1 flex transition-all duration-100',
         {
-          'font-bold': depth.value === 0 || (item.value.children ?? []).length > 0,
           'text-xl font-bold leading-8': depth.value === 0,
           'text-goldfish-500': depth.value > 0 && isActive.value,
           'border-transparent': depth.value === 0 || !isActive.value,

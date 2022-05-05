@@ -7,7 +7,7 @@ export const head: HeadConfig[] = [
     'meta',
     {
       name: 'theme-color',
-      content: '#FFF',
+      content: '#0F5C47',
     },
   ],
   [
@@ -136,7 +136,7 @@ export const head: HeadConfig[] = [
     'meta',
     {
       name: 'msapplication-TileColor',
-      content: '#FFF',
+      content: '#0F5C47',
     },
   ],
   [

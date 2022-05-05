@@ -1,5 +1,5 @@
 <template>
-  <div v-if="lastUpdated">
+  <div>
     <span>{{ themeLocale.lastUpdatedText }}:</span>
 
     <ClientOnly>

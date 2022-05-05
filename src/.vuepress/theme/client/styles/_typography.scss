@@ -21,8 +21,8 @@
 
   // Inside content pages
   .page {
-    a {
-      @apply dark:text-goldfish-500 hover:text-monstera-400 text-monstera-500;
+    a:not(.button) {
+      @apply hover:text-goldfish-400 text-goldfish-500 underline underline-offset-1 decoration-2 decoration-goldfish-100 dark:decoration-goldfish-800 dark:hover:decoration-goldfish-500 hover:decoration-goldfish-200;
     }
 
     ul, ol, dd {
@@ -77,4 +77,8 @@
   p {
     @apply py-2;
   }
+}
+
+.button {
+  @apply active:outline-2 decoration-0 decoration-transparent duration-100 focus:outline-2 font-display inline-flex no-underline rounded-full select-none transition-all whitespace-nowrap;
 }

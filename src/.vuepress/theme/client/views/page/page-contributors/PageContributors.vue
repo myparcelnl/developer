@@ -1,6 +1,5 @@
 <template>
-  <div
-    v-if="contributors && contributors.length">
+  <div v-if="contributors && contributors.length">
     <span>{{ themeLocale.contributorsText }}: </span>
 
     <span>
@@ -23,13 +22,9 @@ import { useThemeLocaleData } from '@mptheme/client/services/composables/useThem
 
 export default defineComponent({
   name: 'PageContributors',
-  setup: () => {
-    const contributors = useContributors();
-
-    return {
-      contributors,
-      themeLocale: useThemeLocaleData(),
-    };
-  },
+  setup: () => ({
+    contributors: useContributors(),
+    themeLocale: useThemeLocaleData(),
+  }),
 });
 </script>

@@ -1,10 +1,5 @@
 <template>
-  <component
-    :is="linkFull && link
-      ? 'AutoLink'
-      : 'div'"
-    class="border flex flex-col group overflow-hidden p-6 relative rounded-xl"
-    :item="linkFull ? link : null">
+  <div class="border flex flex-col group overflow-hidden p-6 relative rounded-xl">
     <slot name="before" />
 
     <slot v-if="$slots.default" />
@@ -17,10 +12,12 @@
       <MPImg
         v-if="img"
         alt=""
+        :class="imgClass"
         :src="img" />
 
       <h2
         v-if="title"
+        class="pb-0"
         v-text="title" />
 
       <p
@@ -28,16 +25,17 @@
         v-text="subtitle" />
 
       <MPButton
-        v-if="link && !linkFull"
-        class="flex"
+        v-if="link"
+        :link="link"
+        class="mt-auto"
         :variant="buttonVariant"
-        :link="linkItem">
+        :class="buttonClass">
         <Icon icon="chevron-right" />
       </MPButton>
     </template>
 
     <slot name="after" />
-  </component>
+  </div>
 </template>
 
 <script lang="ts">
@@ -46,7 +44,7 @@ import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import { buttonVariant } from '@mptheme/client/services/tailwind/variants/buttonVariant';
 import { defineComponent } from 'vue';
-import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
+import { merge } from 'lodash-es';
 import { useTailwindVariant } from '@mptheme/client/services/composables/useTailwindVariant';
 
 const buttonTailwindVariant = useTailwindVariant(buttonVariant);
@@ -81,17 +79,27 @@ export default defineComponent({
       default: null,
     },
 
-    buttonVariant: buttonTailwindVariant.createVariantProp(),
+    buttonVariant: merge(
+      {},
+      buttonTailwindVariant.createVariantProp(),
+      {
+        default: ['outlineLight', 'icon'],
+      },
+    ),
 
     linkFull: {
       type: Boolean,
     },
-  },
 
-  setup: (props) => {
-    const linkItem = props.link ? useNavLink(props.link) : null;
+    imgClass: {
+      type: String,
+      default: null,
+    },
 
-    return { linkItem };
+    buttonClass: {
+      type: String,
+      default: null,
+    },
   },
 });
 </script>

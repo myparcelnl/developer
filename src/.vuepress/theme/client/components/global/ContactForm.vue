@@ -1,58 +1,142 @@
 <template>
-  <form @submit.prevent="onSubmit">
-    <input
-      v-model="name"
-      type="text">
-    <input
-      v-model="email"
-      type="text">
-    <select v-model="subject">
-      <option
-        v-for="option in options"
-        :key="option.value"
-        :value="option.value"
-        v-text="option.label" />
-    </select>
+  <form
+    class="gap-3 grid"
+    @submit.prevent="onSubmit">
+    <Message
+      v-for="message in messages"
+      :key="message"
+      :type="message.type">
+      {{ message.message }}
+    </Message>
 
-    <textarea v-model="message" />
+    <FormInput
+      id="name"
+      v-model.trim="refs.name"
+      autocomplete="name"
+      label="Name" />
 
-    <MPButton
-      type="submit"
-      class="g-recaptcha"
-      data-sitekey="reCAPTCHA_site_key"
-      data-callback="onSubmit"
-      data-action="submit" />
+    <FormInput
+      id="email"
+      v-model.trim="refs.email"
+      type="email"
+      label="Email" />
+
+    <FormSelect
+      id="subject"
+      v-model.trim="refs.subject"
+      :options="subjects"
+      empty-option
+      label="Subject" />
+
+    <FormTextArea
+      id="message"
+      v-model.trim="refs.message"
+      label="Message" />
+
+    <FormField>
+      <ReCaptcha
+        class="pb-3"
+        @verify="verify" />
+
+      <MPButton
+        :disabled="loading"
+        type="submit">
+        {{ localeData.submit }}
+      </MPButton>
+    </FormField>
   </form>
 </template>
 
 <script lang="ts">
-import { defineComponent, toRefs } from 'vue';
+import { defineComponent, ref } from 'vue';
+import FormField from '@mptheme/client/components/global/FormField.vue';
+import FormInput from '@mptheme/client/components/global/FormInput.vue';
+import FormSelect from '@mptheme/client/components/global/FormSelect.vue';
+import FormTextArea from '@mptheme/client/components/global/FormTextArea.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
-
-const RECAPTCHA_SITE_KEY = '6Ld0vq8fAAAAAIv7g9GyP_genyIs0olxPD37FofI';
+import Message from '@mptheme/client/components/global/Message.vue';
+import ReCaptcha from '@mptheme/client/components/common/ReCaptcha.vue';
+import { useSiteLocaleData } from '@mptheme/client/services/composables/useSiteLocaleData';
 
 export default defineComponent({
   name: 'ContactForm',
-  components: { MPButton },
+  components: { Message, ReCaptcha, FormField, FormTextArea, FormSelect, FormInput, MPButton },
   setup: () => {
-    const refs = toRefs({
-      name: undefined,
-      email: undefined,
-      subject: undefined,
-      message: undefined,
+    const recaptchaToken = ref<string>();
+    const loading = ref(false);
+    const localeData = useSiteLocaleData();
+    const messages = ref<{ type: string; message: string }[]>([]);
+
+    const refs = ref({
+      name: null,
+      email: null,
+      subject: null,
+      message: null,
     });
 
-    return {
-      ...refs,
-      options: [
-        {
+    const onSubmit = async() => {
+      if (loading.value) {
+        return;
+      }
 
+      messages.value = [];
+
+      if (!recaptchaToken.value) {
+        messages.value.push({ type: 'error', message: localeData.value.error_captcha_invalid });
+        return;
+      }
+
+      loading.value = true;
+
+      const res = await fetch('https://vqthadq4nvo5i2cgvxpu3xw3zm0qxquc.lambda-url.eu-central-1.on.aws', {
+        method: 'POST',
+        body: JSON.stringify({
+          ...refs,
+          recaptchaToken: recaptchaToken.value,
+        }),
+      });
+
+      if (!res.ok) {
+        const json = await res.json();
+        messages.value.push({ type: 'error', message: json });
+        loading.value = false;
+        return;
+      }
+
+      messages.value.push({
+        type: 'success',
+        message: localeData.value.message_submitted,
+      });
+
+      refs.value.name = null;
+      refs.value.email = null;
+      refs.value.subject = null;
+      refs.value.message = null;
+
+      loading.value = false;
+    };
+
+    return {
+      refs,
+      loading,
+      localeData,
+      messages,
+      onSubmit,
+      verify: (token: string) => {
+        messages.value = [];
+        recaptchaToken.value = token;
+      },
+
+      subjects: [
+        {
+          name: 'bug',
+          label: 'Bug',
+        },
+        {
+          name: 'security',
+          label: 'Security issue',
         },
       ],
-
-      onSubmit(event: SubmitEvent) {
-        console.log(event);
-      },
     };
   },
 });

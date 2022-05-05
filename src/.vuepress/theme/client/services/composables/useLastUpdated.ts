@@ -1,4 +1,4 @@
-import { computed, ComputedRef } from 'vue';
+import { ComputedRef, computed } from 'vue';
 import { DefaultThemeNormalPageFrontmatter, DefaultThemePageData } from '@vuepress/theme-default/lib/shared';
 import { usePageData, usePageFrontmatter } from '@vuepress/client';
 import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
