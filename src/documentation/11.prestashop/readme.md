@@ -2,6 +2,12 @@
 title: Introduction
 ---
 
+<Stack class="grid-flow-col auto-cols-max gap-1">
+    <GitHubBadge repo="myparcelnl/prestashop" />
+    <GitHubBadge repo="myparcelnl/prestashop" link="issues" />
+    <GitHubBadge repo="myparcelnl/prestashop" link="pulls" />
+</Stack>
+
 ## Main features
 
 * [Delivery options] integrated in your checkout
