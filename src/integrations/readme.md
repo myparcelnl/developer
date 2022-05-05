@@ -1,6 +1,5 @@
 ---
 title: SDKs and Plug-ins
-content: MPIntegrations
 sidebar: false
 ---
 

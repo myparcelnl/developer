@@ -1,6 +1,8 @@
 ---
-title: Main features
+title: Introduction
 ---
+
+## Main features
 
 * [Delivery options] integrated in your checkout
 * Export your PrestaShop orders to MyParcel with a simple click, single orders or in batch
