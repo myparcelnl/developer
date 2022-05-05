@@ -12,17 +12,17 @@ index: true
 <Stack class="lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
     <Cta
         title="WooCommerce (WordPress)" 
-        link="/documentation/20.woocommerce" 
+        link="/documentation/10.woocommerce/" 
         link-full
         img="/integrations/woocommerce2.svg" />
     <Cta
         title="Prestashop"
-        link="/documentation/21.prestashop"
+        link="/documentation/11.prestashop/"
         link-full
         img="/integrations/prestashop.svg" />
     <Cta
         title="Magento 2"
-        link="/documentation/23.magento2"
+        link="/documentation/13.magento2/"
         link-full
         img="/integrations/magento.svg" />
 </Stack>
@@ -32,12 +32,12 @@ index: true
 <Stack class="lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
     <Cta
         title="PHP" 
-        link="/documentation/10.php-sdk" 
+        link="/documentation/50.php-sdk/" 
         link-full
         img="/integrations/php.svg" />
     <Cta
         title="JS/Node"
-        link="/documentation/11.js-sdk"
+        link="/documentation/51.js-sdk/"
         link-full
         img="/integrations/js.svg" />
 </Stack>
