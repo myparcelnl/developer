@@ -16,7 +16,7 @@ export const viteConfig: ViteBundlerOptions['viteOptions'] = {
     ],
   },
 
-  ...process.env.DOCKER
+  ...process.env.TRAEFIK
     ? {
       server: {
         hmr: {
