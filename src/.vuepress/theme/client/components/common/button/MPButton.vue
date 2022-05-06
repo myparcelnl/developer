@@ -1,37 +1,26 @@
 <template>
-  <button
+  <component
+    :is="link ? 'AutoLink' : 'button'"
     v-test="'button'"
     type="button"
+    role="button"
+    class="button"
     :class="[
-      'duration-100',
-      'font-display',
-      'inline-flex',
-      'no-underline',
-      'rounded-full',
-      'select-none',
-      'transition-all',
-      'whitespace-nowrap',
-      'active:outline-2',
-      'focus:outline-2',
       ...variantClass,
       {
         ['py-2 px-4']: !variant.includes('icon'),
         ['cursor-pointer']: !disabled,
         ['animate-pulse opacity-60']: disabled,
         ['cursor-not-allowed']: disabled,
+        ['dark:text-inherit hover:text-inherit text-inherit']: link,
       },
     ]"
     :aria-disabled="disabled"
     @click="disabled ? null : $emit('click', $event)">
-    <component
-      :is="link ? 'AutoLink' : 'button'"
-      v-test="'button__link'"
-      tabindex="-1"
-      :item="link ?? null"
-      class="dark:text-inherit flex font-medium hover:text-inherit m-auto text-inherit">
+    <div class="flex font-medium m-auto">
       <slot />
-    </component>
-  </button>
+    </div>
+  </component>
 </template>
 
 <script lang="ts">

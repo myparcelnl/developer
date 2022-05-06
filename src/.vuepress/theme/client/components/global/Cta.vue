@@ -1,10 +1,5 @@
 <template>
-  <component
-    :is="linkFull && link
-      ? 'AutoLink'
-      : 'div'"
-    class="border flex flex-col group overflow-hidden p-6 relative rounded-xl"
-    :item="linkFull ? link : null">
+  <div class="border flex flex-col group overflow-hidden p-6 relative rounded-xl">
     <slot name="before" />
 
     <slot v-if="$slots.default" />
@@ -30,16 +25,17 @@
         v-text="subtitle" />
 
       <MPButton
-        v-if="link && !linkFull"
+        v-if="link"
+        :link="link"
         class="mt-auto"
         :variant="buttonVariant"
-        :link="link">
+        :class="buttonClass">
         <Icon icon="chevron-right" />
       </MPButton>
     </template>
 
     <slot name="after" />
-  </component>
+  </div>
 </template>
 
 <script lang="ts">
@@ -96,6 +92,11 @@ export default defineComponent({
     },
 
     imgClass: {
+      type: String,
+      default: null,
+    },
+
+    buttonClass: {
       type: String,
       default: null,
     },
