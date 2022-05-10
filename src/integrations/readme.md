@@ -23,11 +23,11 @@ sidebar: auto
     <Integration name="Mijnwebwinkel" url="https://www.mijnwebwinkel.nl/support-resources/vraag-antwoord/hoe-gebruik-ik-myparcel-mijnwebwinkel" image="mijnwebwinkel.svg" />
     <Integration name="osCommerce" url="https://www.myparcel.nl/en/integrations/google-chrome-extensie/" image="oscommerce.png" classes="bg-[#263559]" />
     <Integration name="bigcommerce" url="https://www.myparcel.nl/en/integrations/google-chrome-extensie/" image="bigcommerce.svg" />
-    <Integration name="Gratis Webshop Beginnen" url="https://www.gratiswebshopbeginnen.nl/help/webshop-apps/hoe-werkt-de-myparcel-koppeling/" image="gratis-webshop-beginnen.svg" />
+    <Integration name="Gratis Webshop Beginnen" url="https://www.gratiswebshopbeginnen.nl/help/webshop-apps/hoe-werkt-de-myparcel-koppeling/" image="gratis-webshop-beginnen.png" />
     <Integration name="LogiVert" url="https://www.logivert.com/nl/" image="logivert.svg" />
     <Integration name="myShop" url="https://myparcelnl.github.io/myshop/" image="myshop.svg" />
     <Integration name="Sherpaan" url="https://sherpaan.nl/project/myparcel/" image="sherpaan.svg" />
-    <Integration name="Shoptrader" url="https://support.shoptrader.com/support/home" image="Shoptrader.svg" />
+    <Integration name="Shoptrader" url="https://support.shoptrader.com/support/home" image="shoptrader.png" />
 </Stack>
 
 ## SDKs
