@@ -21,7 +21,7 @@ sidebar: auto
     <Integration name="Virtuemart 3" url="https://myparcelnl.github.io/virtuemart3" image="virtuemart.svg" />
     <Integration name="CCV" url="https://myparcelnl.github.io/ccv-shop" image="ccv.svg" />
     <Integration name="Mijnwebwinkel" url="https://www.mijnwebwinkel.nl/support-resources/vraag-antwoord/hoe-gebruik-ik-myparcel-mijnwebwinkel" image="mijnwebwinkel.svg" />
-    <Integration name="osCommerce" url="https://www.myparcel.nl/en/integrations/google-chrome-extensie/" image="oscommerce.svg" />
+    <Integration name="osCommerce" url="https://www.myparcel.nl/en/integrations/google-chrome-extensie/" image="oscommerce.png" classes="bg-[#263559]" />
     <Integration name="bigcommerce" url="https://www.myparcel.nl/en/integrations/google-chrome-extensie/" image="bigcommerce.svg" />
     <Integration name="Gratis Webshop Beginnen" url="https://www.gratiswebshopbeginnen.nl/help/webshop-apps/hoe-werkt-de-myparcel-koppeling/" image="gratis-webshop-beginnen.svg" />
     <Integration name="LogiVert" url="https://www.logivert.com/nl/" image="logivert.svg" />
