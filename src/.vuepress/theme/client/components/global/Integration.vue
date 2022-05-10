@@ -13,6 +13,7 @@
         <MPImg
           :src="`/integrations/${image}`"
           role="none"
+          class="m-auto max-h-full"
           :alt="`${name} image`" />
       </div>
 
