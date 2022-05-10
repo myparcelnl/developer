@@ -55,7 +55,6 @@ export default defineComponent({
       linkRel,
       isBlankTarget,
     } = useLink(props.item);
-    console.log(props.item);
     const route = useRouter().currentRoute.value;
     const site = useSiteData();
 
@@ -63,10 +62,10 @@ export default defineComponent({
       const localeKeys = Object.keys(site.value.locales);
 
       if (localeKeys.length) {
-        return !localeKeys.some((key) => key === linkItem.link);
+        return !localeKeys.some((key) => key === linkItem.value.link);
       }
 
-      return linkItem.link !== '/';
+      return linkItem.value.link !== '/';
     });
 
     const isActiveInSubpath = computed(() => {
@@ -74,7 +73,7 @@ export default defineComponent({
         return false;
       }
 
-      return route.path.startsWith(linkItem.link);
+      return route.path.startsWith(linkItem.value.link);
     });
 
     // if this link is active
@@ -83,8 +82,8 @@ export default defineComponent({
         return false;
       }
 
-      if (linkItem.activeMatch) {
-        return new RegExp(linkItem.activeMatch).test(route.path);
+      if (linkItem.value.activeMatch) {
+        return new RegExp(linkItem.value.activeMatch).test(route.path);
       }
 
       return isActiveInSubpath.value;
