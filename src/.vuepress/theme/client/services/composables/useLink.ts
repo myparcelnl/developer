@@ -6,7 +6,7 @@ import { memoize } from 'lodash-es';
 import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
 
 interface UseLink {
-  linkItem: NavLink;
+  linkItem: ComputedRef<NavLink>;
   hasHttpProtocol: ComputedRef<boolean>;
   hasNonHttpProtocol: ComputedRef<boolean>;
   isBlankTarget: ComputedRef<boolean>;
@@ -17,32 +17,31 @@ interface UseLink {
 }
 
 const useMemoized = memoize((link: string | NavLink): UseLink => {
-  let linkItem: NavLink;
+  const linkItem = computed(() => {
+    if (typeof link === 'string') {
+      return useNavLink(link);
+    } else if (isOfType<NavLink>(link, 'link')) {
+      return link;
+    }
 
-  if (typeof link === 'string') {
-    linkItem = useNavLink(link);
-  } else if (isOfType<NavLink>(link, 'link')) {
-    linkItem = link;
-  } else {
-    linkItem = {
+    return {
       link: '',
       text: '',
     };
-    console.error(link);
-  }
+  });
 
   const hasNonHttpProtocol = computed(
-    () => isLinkMailto(linkItem.link) || isLinkTel(linkItem.link),
+    () => isLinkMailto(linkItem.value.link) || isLinkTel(linkItem.value.link),
   );
-  const hasHttpProtocol = computed(() => isLinkHttp(linkItem.link));
+  const hasHttpProtocol = computed(() => isLinkHttp(linkItem.value.link));
 
   const linkTarget = computed(() => {
     if (hasNonHttpProtocol.value) {
       return undefined;
     }
 
-    if (linkItem.target) {
-      return linkItem.target;
+    if (linkItem.value.target) {
+      return linkItem.value.target;
     }
 
     if (hasHttpProtocol.value) {
@@ -53,15 +52,15 @@ const useMemoized = memoize((link: string | NavLink): UseLink => {
   });
   const isBlankTarget = computed(() => linkTarget.value === '_blank');
   const isRouterLink = computed(() => !hasHttpProtocol.value && !hasNonHttpProtocol.value && !isBlankTarget.value);
-  const linkAriaLabel = computed(() => linkItem.ariaLabel ?? linkItem.text);
+  const linkAriaLabel = computed(() => linkItem.value.ariaLabel ?? linkItem.value.text);
 
   const linkRel = computed(() => {
     if (hasNonHttpProtocol.value) {
       return undefined;
     }
 
-    if (linkItem.rel) {
-      return linkItem.rel;
+    if (linkItem.value.rel) {
+      return linkItem.value.rel;
     }
 
     if (isBlankTarget.value) {

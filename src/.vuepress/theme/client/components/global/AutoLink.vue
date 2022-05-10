@@ -55,6 +55,7 @@ export default defineComponent({
       linkRel,
       isBlankTarget,
     } = useLink(props.item);
+    console.log(props.item);
     const route = useRouter().currentRoute.value;
     const site = useSiteData();
 
