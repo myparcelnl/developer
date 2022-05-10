@@ -11,13 +11,14 @@
   },
   "repository": "/developer-portal",
   "scripts": {
-    "build": "vuepress build src",
+    "build": "yarn optimize:svg -q && vuepress build src",
     "watch": "nodemon --ext .ts,.vue,.md --watch src/**/* --watch src/.vuepress/**/* --exec 'yarn build'",
     "preview": "npx http-server src/.vuepress/dist",
     "dev": "vuepress dev src",
     "test:node": "jest",
     "test:vue": "vitest",
-    "test": "yarn test:node && yarn test:vue"
+    "test": "yarn test:node && yarn test:vue",
+    "optimize:svg": "svgo --multipass --final-newline src/.vuepress/public/**/*.svg"
   },
   "dependencies": {
     "@vue/runtime-core": "^3.2.33",
@@ -67,6 +68,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,ts,vue}": "eslint --fix",
-    "test/**/*.{js,ts,vue}": "eslint --fix"
+    "test/**/*.{js,ts,vue}": "eslint --fix",
+    "src/**/*.svg": "svgo --multipass --final-newline"
   }
 }
