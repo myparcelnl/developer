@@ -5,6 +5,7 @@
     type="button"
     role="button"
     class="button"
+    :item="link"
     :class="[
       ...variantClass,
       {
@@ -12,13 +13,16 @@
         ['cursor-pointer']: !disabled,
         ['animate-pulse opacity-60']: disabled,
         ['cursor-not-allowed']: disabled,
-        ['dark:text-inherit hover:text-inherit text-inherit']: link,
       },
     ]"
     :aria-disabled="disabled"
     @click="disabled ? null : $emit('click', $event)">
     <div class="flex font-medium m-auto">
-      <slot />
+      <slot>
+        <template v-if="link">
+          {{ link.text }}
+        </template>
+      </slot>
     </div>
   </component>
 </template>

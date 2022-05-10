@@ -37,6 +37,7 @@ const outlinePrimary = [
 
 const primary = [
   'hover:bg-goldfish-600',
+  'hover:text-white',
   'focus:bg-goldfish-600',
   'focus:outline-goldfish-800',
   'active:bg-goldfish-600',
@@ -46,34 +47,42 @@ const primary = [
 
 const danger = [
   'hover:bg-danger-600',
+  'hover:text-white',
   'focus:bg-danger-600',
   'focus:outline-danger-800',
   'active:bg-danger-600',
   'bg-danger-500',
+  'text-white',
 ];
 
 const success = [
   'hover:bg-success-600',
+  'hover:text-white',
   'focus:bg-success-600',
   'focus:outline-success-800',
   'active:bg-success-600',
   'bg-success-500',
+  'text-white',
 ];
 
 const warning = [
   'hover:bg-warning-600',
+  'hover:text-white',
   'focus:bg-warning-600',
   'focus:outline-warning-800',
   'active:bg-warning-600',
   'bg-warning-500',
+  'text-white',
 ];
 
 const info = [
   'hover:bg-info-600',
+  'hover:text-white',
   'focus:bg-info-600',
   'focus:outline-info-800',
   'active:bg-info-600',
   'bg-info-500',
+  'text-white',
 ];
 
 const icon = [

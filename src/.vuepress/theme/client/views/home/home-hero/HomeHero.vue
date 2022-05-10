@@ -28,10 +28,9 @@
           v-for="item in frontmatter.actions"
           :key="item.link"
           :variant="item.variant"
-          :link="{
-            ...useNavLink(item.link),
-            text: item.title,
-          }" />
+          :link="useNavLink(item.link)">
+          {{ item.title }}
+        </MPButton>
       </MPButtonGroup>
     </ContentContainer>
   </ContentContainer>
