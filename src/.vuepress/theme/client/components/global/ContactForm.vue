@@ -91,7 +91,7 @@ export default defineComponent({
       const res = await fetch('https://vqthadq4nvo5i2cgvxpu3xw3zm0qxquc.lambda-url.eu-central-1.on.aws', {
         method: 'POST',
         body: JSON.stringify({
-          ...refs,
+          ...refs.value,
           recaptchaToken: recaptchaToken.value,
         }),
       });
