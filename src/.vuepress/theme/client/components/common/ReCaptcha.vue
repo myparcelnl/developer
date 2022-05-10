@@ -7,17 +7,15 @@
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import { VueRecaptcha } from 'vue-recaptcha';
-import { useDark } from '@vueuse/core';
+import { useDarkMode } from '@vuepress/theme-default/lib/client/composables';
 
 export default defineComponent({
   name: 'ReCaptcha',
   components: { VueRecaptcha },
   emits: ['verify'],
   setup: () => {
-    const dark = useDark();
+    const dark = useDarkMode();
 
     return {
       RECAPTCHA_SITE_KEY: '6Ldfn8cfAAAAAJ-131JCFn9skW7N3k-7B0UKuHBi',
