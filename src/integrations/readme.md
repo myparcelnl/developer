@@ -13,6 +13,21 @@ sidebar: auto
     <Integration name="Shopify" url="https://myparcelnl.github.io/shopify" image="shopify.svg" />
     <Integration name="Shopware" url="https://myparcelnl.github.io/shopware" image="shopware.svg" />
     <Integration name="Lightspeed" url="https://myparcelnl.github.io/lightspeed" image="lightspeed.svg" />
+    <Integration name="CS-Cart" url="https://myparcelnl.github.io/cs-cart" image="cart.svg" />
+    <Integration name="Opencart 2.2.x – 2.3.x" url="https://myparcelnl.github.io/opencart2_3" image="opencart.svg" classes="bg-sky-200" />
+    <Integration name="Opencart 3" url="https://myparcelnl.github.io/opencart3" image="opencart.svg" classes="bg-sky-100" />
+    <Integration name="Shoppagina" url="https://myparcelnl.github.io/shoppagina" image="shoppagina.svg" />
+    <Integration name="Virtuemart 2" url="https://myparcelnl.github.io/virtuemart" image="virtuemart.svg" classes="bg-zinc-300" />
+    <Integration name="Virtuemart 3" url="https://myparcelnl.github.io/virtuemart3" image="virtuemart.svg" />
+    <Integration name="CCV" url="https://myparcelnl.github.io/ccv-shop" image="ccv.svg" />
+    <Integration name="Mijnwebwinkel" url="https://www.mijnwebwinkel.nl/support-resources/vraag-antwoord/hoe-gebruik-ik-myparcel-mijnwebwinkel" image="mijnwebwinkel.svg" />
+    <Integration name="osCommerce" url="https://www.myparcel.nl/en/integrations/google-chrome-extensie/" image="oscommerce.svg" />
+    <Integration name="bigcommerce" url="https://www.myparcel.nl/en/integrations/google-chrome-extensie/" image="bigcommerce.svg" />
+    <Integration name="Gratis Webshop Beginnen" url="https://www.gratiswebshopbeginnen.nl/help/webshop-apps/hoe-werkt-de-myparcel-koppeling/" image="gratis-webshop-beginnen.svg" />
+    <Integration name="LogiVert" url="https://www.logivert.com/nl/" image="logivert.svg" />
+    <Integration name="myShop" url="https://myparcelnl.github.io/myshop/" image="myshop.svg" />
+    <Integration name="Sherpaan" url="https://sherpaan.nl/project/myparcel/" image="sherpaan.svg" />
+    <Integration name="Shoptrader" url="https://support.shoptrader.com/support/home" image="Shoptrader.svg" />
 </Stack>
 
 ## SDKs
@@ -36,13 +51,12 @@ sidebar: auto
 <Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
     <Integration name="Amazon" url="https://myparcelnl.github.io/amazon" image="amazon.svg" />
     <Integration name="Exact Online" url="https://myparcelnl.github.io/exact-online" image="exact-online.svg" />
-    <Integration name="CS-Cart" url="https://myparcelnl.github.io/cs-cart" image="cart.svg" />
-    <Integration name="Opencart 2.2.x – 2.3.x" url="https://myparcelnl.github.io/opencart2_3" image="opencart.svg" classes="bg-sky-200" />
-    <Integration name="Opencart 3" url="https://myparcelnl.github.io/opencart3" image="opencart.svg" classes="bg-sky-100" />
-    <Integration name="Shoppagina" url="https://myparcelnl.github.io/shoppagina" image="shoppagina.svg" />
-    <Integration name="Virtuemart 2" url="https://myparcelnl.github.io/virtuemart" image="virtuemart.svg" classes="bg-zinc-300" />
-    <Integration name="Virtuemart 3" url="https://myparcelnl.github.io/virtuemart3" image="virtuemart.svg" />
     <Integration name="Google Chrome Extension" url="https://www.myparcel.nl/en/integrations/google-chrome-extensie/" image="chrome.svg" />
+    <Integration name="bol.com" url="https://myparcelnl.github.io/bol.com" image="bol-com.svg" />
+    <Integration name="Picqer" url="https://picqer.com/nl/help/artikelen/myparcel-koppelen" image="picqer.svg" />
+    <Integration name="ChannelDock" url="https://intercom.help/channeldock/nl/articles/6043422-myparcel-koppelen-aan-channeldock" image="channel-dock.svg" />
+    <Integration name="Goedgepickt" url="https://help.goedgepickt.nl/article/srujx2j0ln-my-parcel" image="goedgepickt.svg" />
+    <Integration name="Fulfilment software" url="https://fulfilment-software.com/" image="fulfilment.svg" />
 </Stack>
 
 ::: tip
