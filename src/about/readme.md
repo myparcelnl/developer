@@ -13,19 +13,28 @@ customers. We believe technology can make shipping for e-commerce more easy and
 fun. This is basically what our development team is doing every single day. Read
 on if you want to know more about our working method, tech stack and people!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Mayz5q9yyNI" title="Wij zijn MyParcel" allowfullscreen></iframe>
+<Stack class="flex">
+    <iframe 
+        class="mx-auto"
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/Mayz5q9yyNI" 
+        title="Wij zijn MyParcel" allowfullscreen />
+</Stack>
 
 ## Tech Stack
 
 In order to provide the best possible SaaS Platform, we need state-of-the-art
 technologies. Our tech stack enables us to continuously build, test and release
 new features.
-<Stack class="lg:grid-cols-5 md:grid-cols-4 grid-cols-3 items-center gap-16">
-<MPImg src="/techstack/php.svg" alt="php logo" />
-<MPImg src="/techstack/AWS.svg" alt="AWS logo" />
-<MPImg src="/techstack/TS.svg" alt="typescript logo" />
-<MPImg src="/techstack/JS.svg" alt="javascript logo" />
-<MPImg src="/techstack/vue.svg" alt="Vue logo" />
+
+<Stack class="py-12 lg:grid-cols-6 md:grid-cols-5 sm:grid-cols-4 grid-cols-3 items-center lg:gap-16 md:gap-12 gap-8">
+    <MPImg src="/techstack/php.svg" alt="php logo" />
+    <MPImg src="/techstack/laravel.svg" alt="laravel logo" />
+    <MPImg src="/techstack/amazon-web-services.svg" alt="Amazon Web Services logo" />
+    <MPImg src="/techstack/typescript.svg" alt="typescript logo" />
+    <MPImg src="/techstack/javascript.svg" alt="javascript logo" />
+    <MPImg src="/techstack/vue.svg" alt="Vue.js logo" />
 </Stack>
 
 We like to experiment with promising new technologies and working methods. Agile
