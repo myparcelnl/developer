@@ -12,6 +12,7 @@
       <MPImg
         v-if="img"
         alt=""
+        class="h-32 w-full"
         :class="imgClass"
         :src="img" />
 
@@ -24,7 +25,7 @@
         v-if="subtitle"
         v-text="subtitle" />
 
-      <div class="ml-auto mt-auto">
+      <div class="mt-auto">
         <MPButton
           v-if="link"
           :link="link"
