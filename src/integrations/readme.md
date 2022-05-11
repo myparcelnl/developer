@@ -148,17 +148,21 @@ Plug-ins integrate with your webshop directly.
         docs="https://myparcelnl.github.io/amazon"
         img="amazon.svg" />
     <Integration
-        title="Exact Online"
-        docs="https://myparcelnl.github.io/exact-online"
-        img="exact-online.svg" />
+        title="Wix"
+        docs="https://myparcelnl.github.io/wix"
+        img="wix.svg" />
+    <Integration
+        title="bol.com"
+        docs="https://myparcelnl.github.io/bol.com"
+        img="bol-com.svg" />
     <Integration
         title="Google Chrome Extension"
         docs="https://www.myparcel.nl/en/integrations/google-chrome-extensie/"
         img="chrome.svg" />
     <Integration
-        title="bol.com"
-        docs="https://myparcelnl.github.io/bol.com"
-        img="bol-com.svg" />
+        title="Exact Online"
+        docs="https://myparcelnl.github.io/exact-online"
+        img="exact-online.svg" />
     <Integration
         title="Picqer"
         docs="https://picqer.com/nl/help/artikelen/myparcel-koppelen"
