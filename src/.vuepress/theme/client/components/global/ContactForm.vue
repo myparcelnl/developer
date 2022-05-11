@@ -138,12 +138,28 @@ export default defineComponent({
 
       subjects: [
         {
+          name: 'feature_request',
+          label: 'Feature request',
+        },
+        {
+          name: 'integration_request',
+          label: 'Integration request',
+        },
+        {
           name: 'bug',
-          label: 'Bug',
+          label: 'Bug report',
+        },
+        {
+          name: 'partnership',
+          label: 'Partnership',
         },
         {
           name: 'security',
           label: 'Security issue',
+        },
+        {
+          name: 'other',
+          label: 'Other',
         },
       ],
     };
