@@ -43,7 +43,7 @@ export const useTailwindVariant = <
         return [];
       }
 
-      return toArray(variant)
+      return toArray(variant, ' ')
         .map((variant) => {
           return options.hasOwnProperty(variant)
             ? toArray(options[variant])

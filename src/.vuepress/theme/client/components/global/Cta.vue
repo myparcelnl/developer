@@ -24,14 +24,21 @@
         v-if="subtitle"
         v-text="subtitle" />
 
-      <MPButton
-        v-if="link"
-        :link="link"
-        class="mt-auto"
-        :variant="buttonVariant"
-        :class="buttonClass">
-        <Icon icon="chevron-right" />
-      </MPButton>
+      <div class="ml-auto mt-auto">
+        <MPButton
+          v-if="link"
+          :link="link"
+          class="inline-flex"
+          :variant="buttonVariant"
+          :class="buttonClass">
+          <template v-if="linkText">
+            {{ linkText }}
+          </template>
+          <Icon
+            v-else
+            icon="chevron-right" />
+        </MPButton>
+      </div>
     </template>
 
     <slot name="after" />
@@ -83,12 +90,13 @@ export default defineComponent({
       {},
       buttonTailwindVariant.createVariantProp(),
       {
-        default: ['outlineLight', 'icon'],
+        default: 'outline',
       },
     ),
 
-    linkFull: {
-      type: Boolean,
+    linkText: {
+      type: String,
+      default: null,
     },
 
     imgClass: {

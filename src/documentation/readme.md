@@ -14,18 +14,21 @@ title: Documentation
         link="/documentation/10.woocommerce/" 
         link-full
         img-class="max-h-24"
-        img="/integrations/woocommerce2.svg" />
+        img="/integrations/woocommerce2.svg"
+        button-variant="outline icon" />
     <Cta
         title="Prestashop"
         link="/documentation/11.prestashop/"
         link-full
         img-class="max-h-24"
+        button-variant="outline icon"
         img="/integrations/prestashop.svg" />
     <Cta
         title="Magento 2"
         link="/documentation/13.magento2/"
         link-full
         img-class="max-h-24"
+        button-variant="outline icon"
         img="/integrations/magento.svg" />
 </Stack>
 
@@ -37,11 +40,13 @@ title: Documentation
         link="/documentation/50.php-sdk/" 
         link-full
         img-class="max-h-24"
+        button-variant="outline icon"
         img="/integrations/php.svg" />
     <Cta
         title="JS/Node"
         link="/documentation/51.js-sdk/"
         link-full
         img-class="max-h-24"
+        button-variant="outline icon"
         img="/integrations/js.svg" />
 </Stack>

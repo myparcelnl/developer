@@ -56,23 +56,24 @@ import FormTextArea from '@mptheme/client/components/global/FormTextArea.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import Message from '@mptheme/client/components/global/Message.vue';
 import ReCaptcha from '@mptheme/client/components/common/ReCaptcha.vue';
+import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
 import { useSiteLocaleData } from '@mptheme/client/services/composables/useSiteLocaleData';
 
 export default defineComponent({
   name: 'ContactForm',
   components: { Message, ReCaptcha, FormField, FormTextArea, FormSelect, FormInput, MPButton },
   setup: () => {
+    const initialValue = {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    };
+    const refs = ref(initialValue);
     const recaptchaToken = ref<string>();
     const loading = ref(false);
     const localeData = useSiteLocaleData();
     const messages = ref<{ type: string; message: string }[]>([]);
-
-    const refs = ref({
-      name: null,
-      email: null,
-      subject: null,
-      message: null,
-    });
 
     const onSubmit = async() => {
       if (loading.value) {
@@ -88,30 +89,38 @@ export default defineComponent({
 
       loading.value = true;
 
-      const res = await fetch('https://vqthadq4nvo5i2cgvxpu3xw3zm0qxquc.lambda-url.eu-central-1.on.aws', {
-        method: 'POST',
-        body: JSON.stringify({
-          ...refs.value,
-          recaptchaToken: recaptchaToken.value,
-        }),
-      });
+      let response;
 
-      if (!res.ok) {
-        const json = await res.json();
-        messages.value.push({ type: 'error', message: json });
-        loading.value = false;
-        return;
+      try {
+        response = await fetch('https://vqthadq4nvo5i2cgvxpu3xw3zm0qxquc.lambda-url.eu-central-1.on.aws', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...refs.value,
+            recaptchaToken: recaptchaToken.value,
+          }),
+        });
+
+        if (!response.ok) {
+          const json = await response.json();
+          messages.value.push({ type: 'error', message: json });
+          return;
+        }
+
+        messages.value.push({
+          type: 'success',
+          message: localeData.value.message_submitted,
+        });
+
+        refs.value = initialValue;
+      } catch (e) {
+        if (isOfType<Error>(e, 'message')) {
+          messages.value.push({ type: 'error', message: e.message });
+        }
       }
-
-      messages.value.push({
-        type: 'success',
-        message: localeData.value.message_submitted,
-      });
-
-      refs.value.name = null;
-      refs.value.email = null;
-      refs.value.subject = null;
-      refs.value.message = null;
 
       loading.value = false;
     };

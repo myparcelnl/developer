@@ -6,11 +6,24 @@ const outlineLight = [
   'text-white',
   'hover:bg-white',
   'focus:bg-white',
-  'focus:outline-black',
   'active:bg-white',
+  'focus:outline-black',
   'hover:text-black',
   'focus:text-black',
   'active:text-black',
+];
+
+const outline = [
+  'border',
+  'border-goldfish-500',
+  'text-goldfish-500',
+  'hover:bg-goldfish-500',
+  'focus:bg-goldfish-500',
+  'active:bg-goldfish-500',
+  'focus:outline-black',
+  'hover:text-white',
+  'focus:text-white',
+  'active:text-white',
 ];
 
 const light = [
@@ -98,6 +111,7 @@ export const buttonVariant = defineVariant(
     icon,
     info,
     light,
+    outline,
     outlineLight,
     outlinePrimary,
     primary,
