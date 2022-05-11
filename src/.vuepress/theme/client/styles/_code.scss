@@ -36,7 +36,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
   }
 
   code {
-    @apply rounded-sm py-1 px-2 text-[.95em];
+    @apply rounded-sm py-1 px-2 text-[.95em] text-rose-600;
   }
 
   pre {
