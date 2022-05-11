@@ -19,7 +19,7 @@ interface UseLink {
 const useMemoized = memoize((link: string | NavLink): UseLink => {
   const linkItem = computed(() => {
     if (typeof link === 'string') {
-      return useNavLink(link);
+      return useNavLink(link.replace(/\/$/, ''));
     } else if (isOfType<NavLink>(link, 'link')) {
       return link;
     }
