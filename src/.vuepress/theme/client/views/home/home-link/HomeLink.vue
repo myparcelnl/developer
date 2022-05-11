@@ -1,6 +1,7 @@
 <template>
   <Cta
     class="hover:text-white text-white"
+    :button-variant="['outlineLight', 'icon']"
     :title="title"
     :subtitle="subtitle"
     :icon="icon"
