@@ -12,5 +12,6 @@
   "select_empty_option": "Kies een optie",
   "submit": "verstuur",
   "title": "MyParcel Developer Portal",
-  "view_on_github": "Toon op GitHub"
+  "view_on_github": "Toon op GitHub",
+  "recaptcha_failed": "Verificatie mislukt."
 }

@@ -12,5 +12,6 @@
   "select_empty_option": "Choose an option",
   "submit": "Submit",
   "title": "MyParcel Developer Portal",
-  "view_on_github": "View on GitHub"
+  "view_on_github": "View on GitHub",
+  "recaptcha_failed": "Verification failed."
 }

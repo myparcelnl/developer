@@ -5,9 +5,8 @@
     <Message
       v-for="message in messages"
       :key="message"
-      :type="message.type">
-      {{ message.message }}
-    </Message>
+      :type="message.type"
+      v-text="message.message" />
 
     <FormInput
       id="name"
@@ -58,6 +57,7 @@ import Message from '@mptheme/client/components/global/Message.vue';
 import ReCaptcha from '@mptheme/client/components/common/ReCaptcha.vue';
 import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
 import { useSiteLocaleData } from '@mptheme/client/services/composables/useSiteLocaleData';
+import { useTranslate } from '@mptheme/client/services/composables/useTranslate';
 
 export default defineComponent({
   name: 'ContactForm',
@@ -74,6 +74,7 @@ export default defineComponent({
     const loading = ref(false);
     const localeData = useSiteLocaleData();
     const messages = ref<{ type: string; message: string }[]>([]);
+    const translate = useTranslate();
 
     const onSubmit = async() => {
       if (loading.value) {
@@ -106,7 +107,9 @@ export default defineComponent({
 
         if (!response.ok) {
           const json = await response.json();
-          messages.value.push({ type: 'error', message: json });
+          json.data.errors.messages.forEach((message: string) => {
+            messages.value.push({ type: 'error', message: translate(message) });
+          });
           return;
         }
 
@@ -118,7 +121,7 @@ export default defineComponent({
         refs.value = initialValue;
       } catch (e) {
         if (isOfType<Error>(e, 'message')) {
-          messages.value.push({ type: 'error', message: e.message });
+          messages.value.push({ type: 'error', message: translate(e.message) });
         }
       }
 
