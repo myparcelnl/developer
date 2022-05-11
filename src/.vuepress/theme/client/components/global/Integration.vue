@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <component
+    :is="link ? 'AutoLink' : 'div'"
+    :item="link">
     <div class="border flex flex-col overflow-hidden rounded-lg">
       <div
-        v-if="image"
-        class="flex h-32 px-3 py-5"
+        v-if="img"
+        class="flex grow px-3 py-5"
         :class="[
           classes,
           {
@@ -11,16 +13,16 @@
           },
         ]">
         <MPImg
-          :src="`/integrations/${image}`"
+          class="grow h-24"
+          :src="`/integrations/${img}`"
           role="none"
-          class="m-auto max-h-full"
-          :alt="`${name} image`" />
+          :alt="`${title} image`" />
       </div>
 
-      <div class="bg-white dark:bg-zinc-800 p-3 shadow">
+      <div class="border-t dark:bg-zinc-800 p-3 shadow">
         <span
           class="font-bold"
-          v-text="name" />
+          v-text="title" />
         <br>
         <span
           v-if="type"
@@ -33,15 +35,15 @@
           </AutoLink>
         </div>
 
-        <div v-if="url">
+        <div v-if="docs">
           <Icon icon="integrations" />
-          <AutoLink :item="url">
+          <AutoLink :item="docs">
             Documentation
           </AutoLink>
         </div>
       </div>
     </div>
-  </div>
+  </component>
 </template>
 
 <script lang="ts">
@@ -59,7 +61,7 @@ export default defineComponent({
   },
 
   props: {
-    name: {
+    title: {
       type: String,
       required: true,
     },
@@ -74,12 +76,17 @@ export default defineComponent({
       default: null,
     },
 
-    url: {
+    docs: {
       type: String,
       default: null,
     },
 
-    image: {
+    link: {
+      type: String,
+      default: null,
+    },
+
+    img: {
       type: String,
       default: null,
     },

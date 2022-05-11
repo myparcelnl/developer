@@ -14,7 +14,7 @@ contributors: false
         img="/contact/faq.svg" 
         link="https://myparcel.nl/en/support" 
         class="items-center text-center"
-        img-class="max-h-12" />
+        img-class="h-12" />
     <Cta 
         title="Feature requests or bugs" 
         subtitle="Missing a feature in one of our plugins or found a bug?"
@@ -22,7 +22,7 @@ contributors: false
         img="/contact/github.svg" 
         link="https://github.com/myparcelnl" 
         class="items-center text-center" 
-        img-class="max-h-12" />
+        img-class="h-12" />
     <Cta 
         title="Join our Slack workspace" 
         subtitle="Get answers to your questions quickly."
@@ -30,7 +30,7 @@ contributors: false
         img="/contact/slack.svg" 
         link="https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI"
         class="items-center text-center" 
-        img-class="max-h-12" /> 
+        img-class="h-12" /> 
 </Stack>
 
 ## Send us a message
