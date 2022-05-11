@@ -5,18 +5,21 @@ sidebar: auto
 
 ## Writing pages
 
-This documentation is built with VuePress 2, running on Vue 3. We recommend you first read the
-following guides if you're not familiar with the VuePress or Vue:
+This documentation is built with VuePress 2, running on Vue 3. We recommend you
+first read the following guides if you're not familiar with VuePress or Vue:
 
 **VuePress**
+
 - [Page](https://v2.vuepress.vuejs.org/guide/page.html)
 - [Markdown](https://v2.vuepress.vuejs.org/guide/markdown.html)
 
 **Vue**
+
 - [Fallthrough Attributes](https://vuejs.org/guide/components/attrs.html)
 
 **Tailwind CSS**
-- [Tailwind CSS]
+
+- [Tailwind CSS 3]
 
 ## Markdown
 
@@ -155,7 +158,7 @@ id="4" />
 
 ## Attributes
 
-You can use all classes from [Tailwind CSS 3](https://tailwindcss.com/) on any
+You can use all classes from [Tailwind CSS 3] on any
 inline component or html tag.
 
 See [Fallthrough Attributes](https://vuejs.org/guide/components/attrs.html) for
@@ -176,42 +179,67 @@ more information on how this works on Vue components.
 ```
 
 <MPImg
-  src="/integrations/shopware.svg"
-  class="p-3 w-12 bg-monstera-500" />
+    src="/integrations/shopware.svg"
+    class="p-3 w-12 bg-monstera-500" />
 
 <MPImg
-  src="/integrations/c-sharp.svg"
-  class="p-1 w-16 ml-3 bg-goldfish-500" />
+    src="/integrations/c-sharp.svg"
+    class="p-1 w-16 ml-3 bg-goldfish-500" />
 
 ## Theme
 
 We use [Tailwind CSS 3] with a few theme modifications.
 
+### Border radius
+
+<Stack class="grid-flow-col">
+    <div class="p-5 bg-zinc-200 dark:bg-zinc-700 rounded-none">rounded-none</div>
+    <div class="p-5 bg-zinc-200 dark:bg-zinc-700 rounded-sm">rounded-sm</div>
+    <div class="p-5 bg-zinc-200 dark:bg-zinc-700 rounded">rounded</div>
+    <div class="p-5 bg-zinc-200 dark:bg-zinc-700 rounded-lg">rounded-lg</div>
+    <div class="p-5 bg-zinc-200 dark:bg-zinc-700 rounded-xl">rounded-xl</div>
+    <div class="p-5 bg-zinc-200 dark:bg-zinc-700 rounded-full">rounded-full</div>
+</Stack>
+
 ### Custom colors
+
+These are available for all color utilities, like `bg-*`,`text-*`, `border-*`,
+etc.
 
 <Stack class="cols-2 grid-flow-col">
     <Stack>
-        <div class="p-5 bg-monstera-100 text-white">monstera-100</div>
-        <div class="p-5 bg-monstera-200 text-white">monstera-200</div>
-        <div class="p-5 bg-monstera-300 text-white">monstera-300</div>
-        <div class="p-5 bg-monstera-400 text-white">monstera-400</div>
-        <div class="p-5 bg-monstera-500 text-white">monstera-500</div>
-        <div class="p-5 bg-monstera-600 text-white">monstera-600</div>
-        <div class="p-5 bg-monstera-700 text-white">monstera-700</div>
-        <div class="p-5 bg-monstera-800 text-white">monstera-800</div>
-        <div class="p-5 bg-monstera-900 text-white">monstera-900</div>
+        <div class="p-5 rounded bg-monstera-100 text-white">monstera-100</div>
+        <div class="p-5 rounded bg-monstera-200 text-white">monstera-200</div>
+        <div class="p-5 rounded bg-monstera-300 text-white">monstera-300</div>
+        <div class="p-5 rounded bg-monstera-400 text-white">monstera-400</div>
+        <div class="p-5 rounded bg-monstera-500 text-white">monstera-500</div>
+        <div class="p-5 rounded bg-monstera-600 text-white">monstera-600</div>
+        <div class="p-5 rounded bg-monstera-700 text-white">monstera-700</div>
+        <div class="p-5 rounded bg-monstera-800 text-white">monstera-800</div>
+        <div class="p-5 rounded bg-monstera-900 text-white">monstera-900</div>
     </Stack>
     <Stack>
-        <div class="p-5 bg-goldfish-100 text-white">goldfish-100</div>
-        <div class="p-5 bg-goldfish-200 text-white">goldfish-200</div>
-        <div class="p-5 bg-goldfish-300 text-white">goldfish-300</div>
-        <div class="p-5 bg-goldfish-400 text-white">goldfish-400</div>
-        <div class="p-5 bg-goldfish-500 text-white">goldfish-500</div>
-        <div class="p-5 bg-goldfish-600 text-white">goldfish-600</div>
-        <div class="p-5 bg-goldfish-700 text-white">goldfish-700</div>
-        <div class="p-5 bg-goldfish-800 text-white">goldfish-800</div>
-        <div class="p-5 bg-goldfish-900 text-white">goldfish-900</div>
+        <div class="p-5 rounded bg-goldfish-100 text-white">goldfish-100</div>
+        <div class="p-5 rounded bg-goldfish-200 text-white">goldfish-200</div>
+        <div class="p-5 rounded bg-goldfish-300 text-white">goldfish-300</div>
+        <div class="p-5 rounded bg-goldfish-400 text-white">goldfish-400</div>
+        <div class="p-5 rounded bg-goldfish-500 text-white">goldfish-500</div>
+        <div class="p-5 rounded bg-goldfish-600 text-white">goldfish-600</div>
+        <div class="p-5 rounded bg-goldfish-700 text-white">goldfish-700</div>
+        <div class="p-5 rounded bg-goldfish-800 text-white">goldfish-800</div>
+        <div class="p-5 rounded bg-goldfish-900 text-white">goldfish-900</div>
     </Stack>
 </Stack>
 
+### Min and max width/height
+
+The [`maxHeight`], [`maxWidth`], [`minHeight`] and [`minWidth`] utilities have
+been extended to include all spacing values from [`width`] and [`height`].
+
 [Tailwind CSS 3]: https://tailwindcss.com/
+[`maxHeight`]: https://tailwindcss.com/docs/max-height
+[`maxWidth`]: https://tailwindcss.com/docs/max-width
+[`minHeight`]: https://tailwindcss.com/docs/min-height
+[`minWidth`]: https://tailwindcss.com/docs/min-width
+[`width`]: https://tailwindcss.com/docs/width
+[`height`]: https://tailwindcss.com/docs/height
