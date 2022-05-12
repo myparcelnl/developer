@@ -2,7 +2,6 @@
   <RouterLink
     v-if="isRouterLink"
     :class="{
-      'router-link-active': isActive,
       'dark:text-inherit text-inherit': inheritColor,
     }"
     :to="linkItem.link"
