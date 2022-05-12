@@ -1,7 +1,6 @@
 <template>
   <Cta
     :link="link"
-    link-full
     :style="`background-color: ${color}`"
     class="before:content before:pb-[100%]">
     <div class="absolute bg-black group-hover:opacity-30 inset-0 opacity-0 transition-opacity" />
@@ -13,17 +12,15 @@
         :alt="`${name} logo`" />
     </div>
 
-    <div class="absolute bottom-5 flex group-hover:opacity-100 group-hover:translate-x-2 opacity-60 right-5 text-white transform transition-[transform,opacity]">
-      <div
-        role="heading"
-        aria-level="2"
-        class="font-normal my-auto"
-        v-text="'Read'" />
+    <MPButton
+      variant="none"
+      class="absolute bottom-2 group-hover:opacity-100 group-hover:translate-x-2 opacity-60 right-0 text-white transform transition-[transform,opacity]">
+      Read
 
       <Icon
         icon="chevron-right"
-        class="my-auto pt-1 text-2xl top-1" />
-    </div>
+        class="my-auto text-2xl" />
+    </MPButton>
   </Cta>
 </template>
 
@@ -31,12 +28,14 @@
 import { computed, defineComponent } from 'vue';
 import Cta from '@mptheme/client/components/global/Cta.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
+import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
 
 export default defineComponent({
   name: 'HomePartnerBrand',
   components: {
+    MPButton,
     Cta,
     MPImg,
     Icon,

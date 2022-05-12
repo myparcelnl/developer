@@ -7,7 +7,7 @@
     :icon="icon"
     :link="link"
     link-full
-    button-class="flex group-hover:translate-x-2 justify-self-end self-end transform">
+    button-class="flex group-hover:translate-x-2 ml-auto transform">
     <template #before>
       <div class="absolute bg-black group-hover:opacity-30 inset-0 opacity-0 transition-opacity" />
 
