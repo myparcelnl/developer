@@ -1,20 +1,20 @@
 <template>
-  <ContentBlock
+  <aside
     v-if="exists"
-    :variant="['border-right', 'dark']"
-    tag="aside"
     class="fixed h-full transition-all w-80 z-30"
     :class="{
       '-translate-x-full': !isOpen,
       'lg:translate-x-0': !isOpen && !isNavbar,
       'translate-x-0': isOpen,
     }">
-    <div class="h-full inset-0 overflow-y-scroll pb-24 pt-5 px-3 w-full">
+    <ContentBlock
+      :variant="['border-right', 'dark']"
+      class="h-full inset-0 overflow-y-scroll pb-24 pt-5 px-3 w-full">
       <slot name="top" />
       <SidebarItems />
       <slot name="bottom" />
-    </div>
-  </ContentBlock>
+    </ContentBlock>
+  </aside>
 
   <Transition
     name="fade"
