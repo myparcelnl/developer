@@ -95,6 +95,7 @@ a link to its source and more information. It supports the following types:
 #### Usage
 
 ```vue
+
 <DataType
   type="shipment_status"
   id="3" />
@@ -126,6 +127,7 @@ id="4" />
 #### Usage
 
 ```vue
+
 <DataTypeDefinition
   pattern="/\d{2}:\d{2}:\d{2}/"
   example="08:00:00" />
@@ -147,6 +149,7 @@ id="4" />
 #### Usage
 
 ```vue
+
 <MPImg
   src="/integrations/chrome.svg"
   class="max-w-xs" />
@@ -155,6 +158,95 @@ id="4" />
 #### Result
 
 <MPImg src="/integrations/chrome.svg" class="max-w-xs" />
+
+## Containers
+
+Containers are rendered in markdown and are written like this:
+
+```markdown
+::: <name> <attributes>
+<content>
+:::
+```
+
+Any markdown can go between the fences (`:::`).
+
+### Alerts
+
+There are a currently two different alerts: `note` and `tip`.
+
+#### Example
+
+```markdown
+::: note
+Note content!
+:::
+
+::: tip
+Tip content!
+:::
+
+::: note With a header
+Wow!
+:::
+```
+
+#### Result
+
+::: note
+Note content!
+:::
+
+::: tip
+Tip content!
+:::
+
+::: note With a header
+Woooow!
+:::
+
+### Expand
+
+The "expand" container can be used to hide content until the user clicks on its
+header to expand it.
+
+#### Example
+
+```markdown
+::: expand
+This is collapsed content.
+:::
+
+::: expand With a header
+Collapsed content with a custom header.
+
+| One | Two | Three  |
+| --- | --- | ---    |
+| And | a   | table! |
+:::
+
+::: expand h6: With a custom tag header
+Collapsed content with a header with a custom html tag.
+:::
+```
+
+#### Result
+
+::: expand
+This is collapsed content.
+:::
+
+::: expand With a header
+Collapsed content with a custom header.
+
+| One | Two | Three  |
+| --- | --- | ---    |
+| And | a   | table! |
+:::
+
+::: expand h6: With a custom tag header
+Collapsed content with a header with a custom html tag.
+:::
 
 ## Attributes
 
@@ -179,12 +271,12 @@ more information on how this works on Vue components.
 ```
 
 <MPImg
-    src="/integrations/shopware.svg"
-    class="p-3 w-12 bg-monstera-500" />
+src="/integrations/shopware.svg"
+class="p-3 w-12 bg-monstera-500" />
 
 <MPImg
-    src="/integrations/c-sharp.svg"
-    class="p-1 w-16 ml-3 bg-goldfish-500" />
+src="/integrations/c-sharp.svg"
+class="p-1 w-16 ml-3 bg-goldfish-500" />
 
 ## Theme
 
@@ -237,9 +329,15 @@ The [`maxHeight`], [`maxWidth`], [`minHeight`] and [`minWidth`] utilities have
 been extended to include all spacing values from [`width`] and [`height`].
 
 [Tailwind CSS 3]: https://tailwindcss.com/
+
 [`maxHeight`]: https://tailwindcss.com/docs/max-height
+
 [`maxWidth`]: https://tailwindcss.com/docs/max-width
+
 [`minHeight`]: https://tailwindcss.com/docs/min-height
+
 [`minWidth`]: https://tailwindcss.com/docs/min-width
+
 [`width`]: https://tailwindcss.com/docs/width
+
 [`height`]: https://tailwindcss.com/docs/height

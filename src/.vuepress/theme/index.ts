@@ -4,7 +4,7 @@ import { Theme } from 'vuepress';
 import { ThemeConfig } from './config.types';
 import { autoLinkPlugin } from './node/plugins/autoLinkPlugin';
 import { createAliasMap } from './node/config/createAliasMap';
-import { createMessageContainerPlugins } from './node/config/createContainerPlugin';
+import { createContainerPluginss } from './node/config/createContainerPlugin';
 import { defaultTheme } from '@vuepress/theme-default';
 import { path } from '@vuepress/utils';
 import { registerComponentsPlugin } from './node/plugins/registerComponentsPlugin';
@@ -77,7 +77,7 @@ const theme: Theme<ThemeConfig> = (config, app) => {
       ...defaultThemeData?.plugins ?? [],
 
       autoLinkPlugin(),
-      ...createMessageContainerPlugins(),
+      ...createContainerPluginss(),
 
       [
         '@vuepress/docsearch',

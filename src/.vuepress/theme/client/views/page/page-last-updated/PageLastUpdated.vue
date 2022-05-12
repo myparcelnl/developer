@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>{{ themeLocale.lastUpdatedText }}:</span>
+    <span>{{ themeLocale.lastUpdatedText }}:&nbsp;</span>
 
     <ClientOnly>
       <span v-text="lastUpdated" />

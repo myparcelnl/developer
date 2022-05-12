@@ -1,5 +1,7 @@
 <template>
-  <AutoLink :item="editNavLink" />
+  <AutoLink
+    :item="editNavLink"
+    class="bg-goldfish-500 p-1 px-3 rounded-full" />
 </template>
 
 <script lang="ts">

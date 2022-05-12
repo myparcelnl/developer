@@ -3,6 +3,10 @@
     role="note"
     class="before:absolute before:bottom-0 before:h-full before:left-0 before:top-0 before:w-1 border dark:text-zinc-200 mb-2 mt-3 overflow-hidden px-3 py-3 relative rounded"
     :class="classes">
+    <b
+      v-if="title"
+      v-text="title" />
+
     <slot />
   </div>
 </template>
@@ -24,6 +28,11 @@ export default defineComponent({
   name: 'Message',
 
   props: {
+    title: {
+      type: String,
+      default: null,
+    },
+
     type: variant.createVariantProp(),
   },
 

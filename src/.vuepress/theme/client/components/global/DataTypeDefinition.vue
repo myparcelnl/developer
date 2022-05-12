@@ -30,8 +30,8 @@
 
       <template v-if="example">
         <tr
-          v-for="(example, index) in examplesArray"
-          :key="example">
+          v-for="(item, index) in examplesArray"
+          :key="item">
           <th
             v-if="index === 0"
             :rowspan="examplesArray.length">
@@ -39,7 +39,7 @@
           </th>
           <td
             class="w-4/5">
-            <code v-text="example" />
+            <code v-text="item" />
           </td>
         </tr>
       </template>
@@ -49,7 +49,6 @@
 
 <script lang="ts">
 import { PropType, computed, defineComponent } from 'vue';
-import Markdown from '@mptheme/client/components/global/Markdown.vue';
 
 const createComputedArray = (value: string | string[]) => computed<string[]>(() => {
   if (typeof value === 'string') {
@@ -61,7 +60,6 @@ const createComputedArray = (value: string | string[]) => computed<string[]>(() 
 
 export default defineComponent({
   name: 'DataTypeDefinition',
-  components: { Markdown },
   props: {
     description: {
       type: String,

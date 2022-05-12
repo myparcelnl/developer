@@ -4,7 +4,7 @@
 @layer base {
   //noinspection CssInvalidPropertyValue
   html {
-    @apply leading-7 text-zinc-700;
+    @apply leading-7 text-zinc-700 overflow-x-hidden;
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
     font-size: 16px;
