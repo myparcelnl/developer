@@ -3,7 +3,7 @@ import { PluginOptions } from 'vuepress';
 
 const types: string[] = ['tip', 'note'];
 
-export const createContainerPlugins = (): PluginOptions[] => {
+export const createMessageContainerPlugins = (): PluginOptions[] => {
   return types.map((type) => {
     const options: ContainerPluginOptions = {
       type: type,
