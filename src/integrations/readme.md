@@ -26,7 +26,7 @@ Plug-ins integrate with your webshop directly.
         classes="bg-zinc-100" />
     <Integration
         title="Magento 2"
-        repo="myparcelnl/magento2"
+        repo="myparcelnl/magento"
         docs="https://myparcelnl.github.io/magento2" 
         img="magento.svg" />
     <Integration
@@ -181,7 +181,6 @@ Plug-ins integrate with your webshop directly.
         img="fulfilment.svg" />
 </Stack>
 
-::: tip
-Missing your favorite language or platform? Build your own integration and share
-it with us!
+::: tip Missing your favorite language or platform?
+Build your own integration and share it with us!
 :::
