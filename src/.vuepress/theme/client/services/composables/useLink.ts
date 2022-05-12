@@ -21,7 +21,7 @@ const useMemoized = memoize((link: string | NavLink): UseLink => {
     if (typeof link === 'string') {
       const item = useNavLink(link.replace(/\/$/, ''));
 
-      if (!item.link.endsWith('.html')) {
+      if (!item.link.endsWith('.html') && !item.link.includes('#')) {
         item.link += '/';
       }
 
