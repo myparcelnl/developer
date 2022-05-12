@@ -1,8 +1,13 @@
 <template>
   <div
     role="note"
-    class="before:absolute before:bottom-0 before:h-full before:left-0 before:top-0 before:w-1 border dark:text-zinc-200 mb-2 mt-3 overflow-hidden px-3 py-3 relative rounded"
-    :class="classes">
+    class="before:absolute before:bottom-0 before:h-full before:left-0 before:top-0 before:w-1 border dark:text-zinc-200 mb-2 mt-3 overflow-hidden px-5 py-3 relative rounded"
+    :class="wrapperClasses">
+    <b
+      v-if="title"
+      :class="textClasses"
+      v-text="title" />
+
     <slot />
   </div>
 </template>
@@ -18,17 +23,31 @@ const messageVariant = defineVariant('message', {
   error: ['before:bg-rose-500', 'bg-rose-50', 'dark:bg-rose-900'],
   success: ['before:bg-green-500', 'bg-green-50', 'dark:bg-green-900'],
 });
-const variant = useTailwindVariant(messageVariant);
+
+const textVariant2 = defineVariant('messageText', {
+  tip: 'text-sky-500',
+  note: 'text-amber-500',
+  error: 'text-rose-500',
+  success: 'text-green-500',
+});
+const background = useTailwindVariant(messageVariant);
+const text = useTailwindVariant(textVariant2);
 
 export default defineComponent({
   name: 'Message',
 
   props: {
-    type: variant.createVariantProp(),
+    title: {
+      type: String,
+      default: null,
+    },
+
+    type: background.createVariantProp(),
   },
 
   setup: (props) => ({
-    classes: variant.getVariantClasses(props.type),
+    wrapperClasses: background.getVariantClasses(props.type),
+    textClasses: text.getVariantClasses(props.type),
   }),
 });
 </script>

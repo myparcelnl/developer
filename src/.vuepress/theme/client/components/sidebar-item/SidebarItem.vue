@@ -12,6 +12,7 @@
         class="ml-auto"
         :toggle="isOpen" />
     </AutoLink>
+
     <p
       v-else
       :class="classes"

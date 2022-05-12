@@ -37,6 +37,7 @@ export const useSidebar: UseSidebar = () => {
   toggled ??= ref(false);
   isOpen ??= computed(() => {
     const renderByView = lg.value && !isNavbar.value;
+
     return exists.value && (renderByView || toggled.value);
   });
 

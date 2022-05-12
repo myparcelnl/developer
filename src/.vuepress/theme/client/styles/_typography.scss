@@ -4,7 +4,7 @@
 @layer base {
   //noinspection CssInvalidPropertyValue
   html {
-    @apply leading-7 text-zinc-700;
+    @apply leading-7 text-zinc-700 overflow-x-hidden;
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
     font-size: 16px;
@@ -15,13 +15,13 @@
   }
 
   // All links
-  a {
+  a:not(.no-link-styles) {
     @apply transition-colors hover:text-goldfish-500 duration-100 focus:outline-goldfish-500;
   }
 
   // Inside content pages
   .page {
-    a:not(.button) {
+    a:not(.no-link-styles) {
       @apply hover:text-goldfish-400 text-goldfish-500 underline underline-offset-1 decoration-2 decoration-goldfish-100 dark:decoration-goldfish-800 dark:hover:decoration-goldfish-500 hover:decoration-goldfish-200;
     }
 

@@ -29,7 +29,7 @@
           v-text="type" />
 
         <div v-if="repo">
-          <Icon icon="integrations" />
+          <Icon icon="github" />
           <AutoLink :item="`https://github.com/${repo}`">
             View on GitHub
           </AutoLink>
