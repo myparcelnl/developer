@@ -8,7 +8,7 @@ title: Documentation
 
 ### Plug-ins
 
-<Stack class="lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+<Stack class="md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <Integration
         title="WooCommerce (WordPress)" 
         link="/documentation/10.woocommerce/" 
@@ -25,7 +25,7 @@ title: Documentation
 
 ### SDKs
 
-<Stack class="lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+<Stack class="md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <Integration link="/documentation/50.php-sdk/" title="PHP" img="php.svg" classes="bg-[#787CB5]" />
     <Integration link="/documentation/51.js-sdk/" title="JavaScript/Node.js" img="js.svg" classes="bg-[#F7DF1E]" />
 </Stack>
