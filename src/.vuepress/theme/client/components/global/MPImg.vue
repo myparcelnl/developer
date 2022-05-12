@@ -6,6 +6,7 @@
 
     <img
       v-show="!loading"
+      loading="lazy"
       :src="src"
       class="m-auto max-h-full"
       :alt="alt"
@@ -21,7 +22,6 @@ import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'MPImg',
-
   props: {
     src: {
       type: String,
@@ -35,7 +35,7 @@ export default defineComponent({
   },
 
   setup: () => {
-    const loading = ref(true);
+    const loading = ref(false);
 
     return {
       loading,
