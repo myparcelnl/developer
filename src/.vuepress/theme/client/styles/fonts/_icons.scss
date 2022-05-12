@@ -19,7 +19,7 @@ $icons: (
 
 @layer base {
   i {
-    @apply not-italic font-normal normal-case leading-none antialiased;
+    @apply not-italic font-normal normal-case leading-none antialiased relative;
     font-family: '#{$fontFamily}' !important;
     speak: never;
 

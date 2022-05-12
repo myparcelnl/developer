@@ -1,5 +1,8 @@
 <template>
-  <div class="border flex flex-col group overflow-hidden p-6 relative rounded-xl">
+  <component
+    :is="link ? 'AutoLink' : 'div'"
+    :item="link"
+    class="border flex flex-col group overflow-hidden p-6 relative rounded-xl">
     <slot name="before" />
 
     <slot v-if="$slots.default" />
@@ -25,10 +28,10 @@
         v-if="subtitle"
         v-text="subtitle" />
 
-      <div class="mt-auto">
+      <div class="flex mt-auto">
         <MPButton
           v-if="link"
-          :link="link"
+          ref="button"
           class="inline-flex"
           :variant="buttonVariant"
           :class="buttonClass">
@@ -43,7 +46,7 @@
     </template>
 
     <slot name="after" />
-  </div>
+  </component>
 </template>
 
 <script lang="ts">

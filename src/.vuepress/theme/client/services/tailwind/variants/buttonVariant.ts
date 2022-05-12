@@ -107,6 +107,7 @@ const icon = [
 export const buttonVariant = defineVariant(
   'buttonVariant',
   {
+    none: [],
     danger,
     icon,
     info,
