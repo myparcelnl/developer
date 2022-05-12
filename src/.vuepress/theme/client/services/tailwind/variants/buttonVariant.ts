@@ -27,12 +27,17 @@ const outline = [
 ];
 
 const light = [
-  'hover:bg-zinc-100',
-  'focus:bg-zinc-100',
-  'focus:outline-zinc-300',
-  'active:bg-zinc-100',
-  'bg-white',
+  'hover:bg-zinc-200',
+  'focus:bg-zinc-200',
+  'active:bg-zinc-200',
+  'focus:outline-zinc-400',
+  'bg-zinc-100',
   'text-black',
+  'dark:bg-zinc-800',
+  'dark:hover:bg-zinc-700',
+  'dark:focus:bg-zinc-700',
+  'dark:active:bg-zinc-700',
+  'dark:text-white',
 ];
 
 const outlinePrimary = [
@@ -58,46 +63,6 @@ const primary = [
   'text-white',
 ];
 
-const danger = [
-  'hover:bg-danger-600',
-  'hover:text-white',
-  'focus:bg-danger-600',
-  'focus:outline-danger-800',
-  'active:bg-danger-600',
-  'bg-danger-500',
-  'text-white',
-];
-
-const success = [
-  'hover:bg-success-600',
-  'hover:text-white',
-  'focus:bg-success-600',
-  'focus:outline-success-800',
-  'active:bg-success-600',
-  'bg-success-500',
-  'text-white',
-];
-
-const warning = [
-  'hover:bg-warning-600',
-  'hover:text-white',
-  'focus:bg-warning-600',
-  'focus:outline-warning-800',
-  'active:bg-warning-600',
-  'bg-warning-500',
-  'text-white',
-];
-
-const info = [
-  'hover:bg-info-600',
-  'hover:text-white',
-  'focus:bg-info-600',
-  'focus:outline-info-800',
-  'active:bg-info-600',
-  'bg-info-500',
-  'text-white',
-];
-
 const icon = [
   'w-12',
   'h-12',
@@ -108,16 +73,13 @@ export const buttonVariant = defineVariant(
   'buttonVariant',
   {
     none: [],
-    danger,
+    sm: ['py-1', 'px-2'],
     icon,
-    info,
     light,
     outline,
     outlineLight,
     outlinePrimary,
     primary,
-    success,
-    warning,
   },
   {
     default: 'primary',

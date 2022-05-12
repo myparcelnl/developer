@@ -9,6 +9,8 @@ export const iconVariant = defineVariant('icon',
     'chevron-right': 'icon-chevron-right',
     documentation: 'icon-documentation',
     integrations: 'icon-integrations',
+    git: 'icon-git',
+    github: 'icon-github',
   },
   {
     required: true,

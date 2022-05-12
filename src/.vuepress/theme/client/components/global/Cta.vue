@@ -2,7 +2,7 @@
   <component
     :is="link ? 'AutoLink' : 'div'"
     :item="link"
-    class="border flex flex-col group overflow-hidden p-6 relative rounded-xl">
+    class="border flex flex-col group no-link-styles overflow-hidden p-6 relative rounded-xl">
     <slot name="before" />
 
     <slot v-if="$slots.default" />

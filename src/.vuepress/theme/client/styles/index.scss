@@ -5,6 +5,7 @@
 @use 'layout';
 @use 'colors';
 @use 'typography';
+@use 'images';
 
 @use 'code';
 @use 'table';
@@ -12,7 +13,3 @@
 @use 'transitions';
 
 @use 'utilities';
-
-a{
-  c: #27272A
-}

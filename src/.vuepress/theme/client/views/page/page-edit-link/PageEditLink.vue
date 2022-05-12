@@ -1,16 +1,18 @@
 <template>
-  <AutoLink
-    :item="editNavLink"
-    class="bg-goldfish-500 p-1 px-3 rounded-full" />
+  <MPButton
+    :link="editNavLink"
+    :variant="['light', 'sm']"
+    icon="github" />
 </template>
 
 <script lang="ts">
+import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import { defineComponent } from 'vue';
 import { useEditNavLink } from '@mptheme/client/services/composables/useEditNavLink';
 
 export default defineComponent({
   name: 'PageEditLink',
-
+  components: { MPButton },
   setup: () => ({
     editNavLink: useEditNavLink(),
   }),
