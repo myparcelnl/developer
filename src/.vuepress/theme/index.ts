@@ -4,7 +4,7 @@ import { Theme } from 'vuepress';
 import { ThemeConfig } from './config.types';
 import { autoLinkPlugin } from './node/plugins/autoLinkPlugin';
 import { createAliasMap } from './node/config/createAliasMap';
-import { createContainerPlugins } from './node/config/createContainerPlugin';
+import { createMessageContainerPlugins } from './node/config/createContainerPlugin';
 import { defaultTheme } from '@vuepress/theme-default';
 import { path } from '@vuepress/utils';
 import { registerComponentsPlugin } from './node/plugins/registerComponentsPlugin';
@@ -61,6 +61,15 @@ const theme: Theme<ThemeConfig> = (config, app) => {
     clientAppEnhanceFiles: path.resolve(DIR_CLIENT, 'clientAppEnhance.ts'),
     clientAppSetupFiles: path.resolve(DIR_CLIENT, 'clientAppSetup.ts'),
 
+    extendsMarkdown: (md) => {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      md.use(require('markdown-it-multimd-table'), {
+        multiline: true,
+        rowspan: true,
+        headerless: true,
+      });
+    },
+
     /**
      * @see https://v2.vuepress.vuejs.org/guide/plugin.html#community-plugin
      */
@@ -68,7 +77,7 @@ const theme: Theme<ThemeConfig> = (config, app) => {
       ...defaultThemeData?.plugins ?? [],
 
       autoLinkPlugin(),
-      ...createContainerPlugins(),
+      ...createMessageContainerPlugins(),
 
       [
         '@vuepress/docsearch',
