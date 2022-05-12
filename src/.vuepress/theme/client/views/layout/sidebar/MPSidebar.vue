@@ -4,7 +4,7 @@
     class="fixed h-full transition-all w-80 z-30"
     :class="{
       '-translate-x-full': !isOpen,
-      'lg:translate-x-0': !isOpen && !isNavbar,
+      'xl:translate-x-0': !isOpen && !isNavbar,
       'translate-x-0': isOpen,
     }">
     <ContentBlock
