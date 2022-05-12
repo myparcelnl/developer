@@ -1415,10 +1415,10 @@
     eslint-plugin-you-dont-need-momentjs "^1.6.0"
     typescript "^4.6.3"
 
-"@myparcel/sdk@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@myparcel/sdk/-/sdk-1.1.0.tgz#9f0782750d572b6ba5185a928aa0ed08116376ea"
-  integrity sha512-+9RfDnZSfAqsDdxY+eEm/x0MT8Uh9hzRfT59MTksneN7bQpj515t/Su8euh2WdQT+wQ1fCy9H1xhdwFm8Ifutg==
+"@myparcel/sdk@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@myparcel/sdk/-/sdk-2.0.0.tgz#44236914bd7696a9a2a486ec2ee901bf3bdd2785"
+  integrity sha512-qRNxbJh1O4r7Em+8bhNvOYOGUwPQkFRMHGe33C0tLxOp882xeIQ/OnZEXZ7Nlvygihygm/oVHNo5lfMytifEKg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

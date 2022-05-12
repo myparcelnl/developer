@@ -12,7 +12,7 @@
   "repository": "/developer-portal",
   "scripts": {
     "build": "yarn optimize:svg -q && vuepress build src",
-    "watch": "nodemon --ext .ts,.vue,.md --watch src/**/* --watch src/.vuepress/**/* --exec 'yarn build'",
+    "watch": "nodemon --ext ts,vue,md --watch src --exec 'vuepress build src'",
     "preview": "npx http-server src/.vuepress/dist",
     "dev": "vuepress dev src",
     "test:node": "jest",
@@ -38,7 +38,7 @@
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-typescript": "^7.16.7",
     "@myparcel/eslint-config": "^3.4.4",
-    "@myparcel/sdk": "^1.1.0",
+    "@myparcel/sdk": "^2.0.0",
     "@tsconfig/recommended": "^1.0.1",
     "@types/jest": "^27.5.0",
     "@types/lodash-es": "^4.17.6",
