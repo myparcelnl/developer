@@ -45,7 +45,7 @@ Plug-ins integrate with your webshop directly.
     <Integration
         title="CS-Cart"
         docs="https://myparcelnl.github.io/cs-cart"
-        img="cart.svg" />
+        img="cart.png" />
     <Integration
         title="Opencart 2.2.x – 2.3.x"
         docs="https://myparcelnl.github.io/opencart2_3"
@@ -150,7 +150,7 @@ Plug-ins integrate with your webshop directly.
     <Integration
         title="Wix"
         docs="https://myparcelnl.github.io/wix"
-        img="wix.svg" />
+        img="wix.png" />
     <Integration
         title="bol.com"
         docs="https://myparcelnl.github.io/bol.com"
