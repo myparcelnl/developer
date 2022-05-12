@@ -27,4 +27,4 @@ parcels and digital stamps).
 
 With MyParcel, you can quickly and easily create shipping labels. All parcels,
 letterbox parcels, post and pallets can be prepared for shipment in no time. Set
-up your webshop’s shipping and returns process today. It’s quick and easy.
+up your webshop's shipping and returns process today. It's quick and easy.
