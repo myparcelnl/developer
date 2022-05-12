@@ -8,11 +8,29 @@
     tabindex="0"
     @click="toggle">
     <div
-      class="flex flex-col h-5 items-center justify-around w-5"
+      class="flex flex-col h-6 items-center justify-around w-6"
       aria-hidden="true">
-      <span class="bg-black dark:bg-white h-0.5 inline-block rounded-lg w-full" />
-      <span class="bg-black dark:bg-white h-0.5 inline-block rounded-lg w-full" />
-      <span class="bg-black dark:bg-white h-0.5 inline-block rounded-lg w-full" />
+      <span
+        :class="[
+          burgerClasses,
+          {
+            '-rotate-45 translate-y-2': toggled,
+          },
+        ]" />
+      <span
+        :class="[
+          burgerClasses,
+          {
+            'scale-x-0': toggled,
+          },
+        ]" />
+      <span
+        :class="[
+          burgerClasses,
+          {
+            'rotate-45 -translate-y-2': toggled,
+          },
+        ]" />
     </div>
   </div>
 </template>
@@ -37,6 +55,17 @@ export default defineComponent({
         sidebar.toggle();
         ctx.emit('toggle');
       },
+
+      burgerClasses: [
+        'bg-black',
+        'dark:bg-white',
+        'duration-150',
+        'h-0.5',
+        'inline-block',
+        'rounded-lg',
+        'transition-transform',
+        'w-full',
+      ],
     };
   },
 });
