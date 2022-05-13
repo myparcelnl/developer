@@ -51,23 +51,23 @@ tree:
           name: Zuivelhoeve
           logo: zuivelhoeve.png
           color: '#071F60'
-          link: /partners/zuivelhoeve
+          link: https://www.grandvision.com/
       - component: HomePartnerBrand
         attributes:
           name: GrandVision
           logo: grand-vision.svg
           color: '#0057B8'
-          link: /partners/grand-vision
+          link: https://www.grandvision.com/
       - component: HomePartnerBrand
         attributes:
           name: Vanilia
           logo: vanilia.png
           color: '#000000'
-          link: /partners/vanilia
+          link: https://vanilia.com/
       - component: HomePartnerBrand
         attributes:
           name: Wolplein
           logo: wolplein.svg
           color: '#E32F82'
-          link: /partners/wolplein
+          link: https://www.wolplein.nl/
 ---
