@@ -15,7 +15,7 @@
     <MPButton
       variant="none"
       class="absolute bottom-2 group-hover:opacity-100 group-hover:translate-x-2 opacity-60 right-0 text-white transform transition-[transform,opacity]">
-      Read
+      Visit
 
       <Icon
         icon="chevron-right"
@@ -30,7 +30,6 @@ import Cta from '@mptheme/client/components/global/Cta.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
-import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
 
 export default defineComponent({
   name: 'HomePartnerBrand',
@@ -65,10 +64,8 @@ export default defineComponent({
 
   setup: (props) => {
     const brandLogo = computed(() => `/brands/${props.logo}`);
-    const linkItem = useNavLink(props.link);
 
     return {
-      linkItem,
       brandLogo,
     };
   },

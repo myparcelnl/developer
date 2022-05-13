@@ -23,25 +23,25 @@ tree:
           class: 'bg-monstera-800' 
           title: API reference.
           icon: api-reference
-          subtitle: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          subtitle: Here you will find everything you need to successfully communicate with our API.
           link: /api-reference
       - component: HomeLink
         attributes: 
           class: 'bg-monstera-500' 
           title: Documentation.
           icon: documentation
-          subtitle: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          subtitle: In-depth guides on all our plugins, SDKs and more.
           link: /documentation
       - component: HomeLink
         attributes: 
           class: 'bg-goldfish-500' 
           title: Integrations.
           icon: integrations
-          subtitle: Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          subtitle: This is where you can find our integrations with various external services and platforms.
           link: /integrations
 
 - title: Get the most out of our service.
-  subtitle: Discover how our custom shipments implementation makes the difference for these clients.
+  subtitle: These customers are using a custom implementation for managing their MyParcel shipments.
   render:
     attributes:
       class: 'lg:grid-cols-4 sm:grid-cols-3 grid-cols-2'
