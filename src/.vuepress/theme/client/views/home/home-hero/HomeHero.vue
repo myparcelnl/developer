@@ -1,23 +1,23 @@
 <template>
   <ContentContainer
     type="fluid"
-    class="bg-monstera-500 dark:bg-monstera-700 overflow-hidden py-24 relative text-center">
+    class="bg-monstera-500 dark:bg-monstera-700 overflow-hidden py-32 relative text-center">
     <FloepjeBgLeft
       role="none"
       aria-hidden="true"
       class="absolute bottom-0 left-0 select-none w-1/3"
       @dragstart.prevent="null" />
 
-    <FloepjeBgRight
+    <FloepjeBgLeft
       role="none"
       aria-hidden="true"
-      class="absolute right-0 select-none top-0 w-1/3"
+      class="absolute right-0 rotate-180 select-none top-0 w-1/3"
       @dragstart.prevent="null" />
 
     <ContentContainer class="relative">
       <h1
         class="text-6xl text-white"
-        v-html="title" />
+        v-text="frontmatter.title" />
 
       <p
         class="font-display pb-4 text-xl text-zinc-300"
@@ -37,13 +37,12 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import FloepjeBgLeft from '@Public/images/floepje_bg_left.svg';
-import FloepjeBgRight from '@Public/images/floepje_bg_right.svg';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import MPButtonGroup from '@mptheme/client/components/common/MPButtonGroup.vue';
 import { MyPaHomepageFrontmatter } from '@mptheme/config.types';
+import { defineComponent } from 'vue';
 import { useNavLink } from '@vuepress/theme-default/lib/client/composables';
 import { usePageFrontmatter } from '@vuepress/client';
 
@@ -54,27 +53,14 @@ export default defineComponent({
     MPButton,
     ContentContainer,
     FloepjeBgLeft,
-    FloepjeBgRight,
   },
 
   setup: () => {
     const frontmatter = usePageFrontmatter<MyPaHomepageFrontmatter>();
 
-    const title = computed(() => {
-      const plainTitle = frontmatter.value?.title;
-
-      if (!plainTitle) {
-        return null;
-      }
-
-      return plainTitle;
-      // return plainTitle.replace(/beyond delivery/i, '<span class="bg-clip-text bg-gradient-to-tr from-goldfish-100 text-transparent to-goldfish-600 via-goldfish-500">$1</span>');
-    });
-
     return {
       useNavLink,
       frontmatter,
-      title,
     };
   },
 
