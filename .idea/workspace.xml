@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.39354068" />
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bde6b4fb-e019-48e4-af82-5b01c050dd5c" name="Changes" comment="add github actions deploy script">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="vuepress" pattern="file[developer-portal]:src//.vuepress//*" />
+    <scope name="tests" pattern="file[developer-portal]:test//*" />
+    <scope name="code" pattern="(!file[developer-portal]:src//*||file[developer-portal]:src/.vuepress//*)&amp;&amp;!file[developer-portal]:.husky//*&amp;&amp;!file[developer-portal]:.idea//*&amp;&amp;!file[developer-portal]:docker//*&amp;&amp;!file[developer-portal]:*//node_modules//*" />
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="25bkAlHEOKMeA8UnwPtYpL7he6j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.14.2&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.26&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/edie/Sites/developer-portal/src/.vuepress/public/fonts/icons&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/edie/Sites/developer-portal/node_modules/jest&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/edie/Sites/developer-portal/node_modules/typescript/lib&quot;,
+    &quot;ts.rename.search.for.js.occurrences&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;,
+      &quot;JavaScript&quot;,
+      &quot;Vue&quot;,
+      &quot;CSS&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/.vuepress/public/fonts/icons" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/public/techstack" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/public/integrations" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/theme/client/components/global" />
+      <recent name="$PROJECT_DIR$/src/documentation/14.shopify/03.configuratie" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/src/.vuepress/theme/client/defaultInputClasses.ts" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/theme/client/defaultFormProps.ts" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/theme/client/services/composables/useInputSetup.ts" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/theme/client/getRecaptchaToken.ts" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/theme/client/components/global/Shield.ts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/.vuepress/public" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/theme/client/components/global" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/theme/client/services/composables" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/theme/node/plugins" />
+      <recent name="$PROJECT_DIR$/src/.vuepress/public/fonts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.build">
+    <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <jest-options value="--watch --verbose" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest">
+      <node-interpreter value="project" />
+      <node-options value="--trace-warnings" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="deSvg.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/private/deSvg.js" working-dir="$PROJECT_DIR$/private">
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:vue" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:vue" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Jest.All Tests" />
+      <item itemvalue="Node.js.deSvg.js" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.test:vue" />
+      <item itemvalue="npm.watch" />
+      <item itemvalue="npm.dev" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.test:vue" />
+        <item itemvalue="Node.js.deSvg.js" />
+        <item itemvalue="npm.watch" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bde6b4fb-e019-48e4-af82-5b01c050dd5c" name="Changes" comment="" />
+      <created>1645803031128</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645803031128</updated>
+    </task>
+    <task id="LOCAL-00054" summary="fix: integration doc links">
+      <created>1652196991271</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1652196991271</updated>
+    </task>
+    <task id="LOCAL-00055" summary="perf: optimize some images">
+      <created>1652197000592</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1652197000592</updated>
+    </task>
+    <task id="LOCAL-00056" summary="fix: fix wrong reference">
+      <created>1652201559734</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1652201559734</updated>
+    </task>
+    <task id="LOCAL-00057" summary="fix: fix dark mode being turned on wrongly when visiting contact form and data not being passed correctly">
+      <created>1652204305446</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1652204305446</updated>
+    </task>
+    <task id="LOCAL-00058" summary="fix: improve buttons appearance">
+      <created>1652255395882</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1652255395882</updated>
+    </task>
+    <task id="LOCAL-00059" summary="fix: fix links with trailing slash not resolving">
+      <created>1652259400842</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1652259400842</updated>
+    </task>
+    <task id="LOCAL-00060" summary="add more subjects to contact form">
+      <created>1652259423495</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1652259423495</updated>
+    </task>
+    <task id="LOCAL-00061" summary="optimize images">
+      <created>1652259442178</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1652259442179</updated>
+    </task>
+    <task id="LOCAL-00062" summary="update">
+      <created>1652260872215</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1652260872215</updated>
+    </task>
+    <task id="LOCAL-00063" summary="fix: fix the contact form">
+      <created>1652264843790</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1652264843791</updated>
+    </task>
+    <task id="LOCAL-00064" summary="chore: update deps">
+      <created>1652273155017</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1652273155017</updated>
+    </task>
+    <task id="LOCAL-00065" summary="update">
+      <created>1652274258275</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1652274258275</updated>
+    </task>
+    <task id="LOCAL-00066" summary="feat: animate the hamburger menu">
+      <created>1652356481436</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1652356481436</updated>
+    </task>
+    <task id="LOCAL-00067" summary="fix: fix transitions on sidebar open/close">
+      <created>1652356512653</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1652356512653</updated>
+    </task>
+    <task id="LOCAL-00068" summary="fix: improve cta looks">
+      <created>1652356550156</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1652356550157</updated>
+    </task>
+    <task id="LOCAL-00069" summary="fix: fix some images not showing in ssr">
+      <created>1652356565501</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1652356565501</updated>
+    </task>
+    <task id="LOCAL-00070" summary="improve columns on documentation intro page">
+      <created>1652356891221</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1652356891221</updated>
+    </task>
+    <task id="LOCAL-00071" summary="fix sidebar showing too soon">
+      <created>1652356902824</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1652356902824</updated>
+    </task>
+    <task id="LOCAL-00072" summary="chore: update deps">
+      <created>1652356912727</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1652356912727</updated>
+    </task>
+    <task id="LOCAL-00073" summary="docs: change partner links">
+      <created>1652356923040</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1652356923040</updated>
+    </task>
+    <task id="LOCAL-00074" summary="feat: add multimd table support">
+      <created>1652360642836</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1652360642837</updated>
+    </task>
+    <task id="LOCAL-00075" summary="docs: update api reference">
+      <created>1652360668077</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1652360668077</updated>
+    </task>
+    <task id="LOCAL-00076" summary="docs: format">
+      <created>1652360704807</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1652360704807</updated>
+    </task>
+    <task id="LOCAL-00077" summary="update">
+      <created>1652360735117</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1652360735117</updated>
+    </task>
+    <task id="LOCAL-00078" summary="update">
+      <created>1652365360450</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1652365360450</updated>
+    </task>
+    <task id="LOCAL-00079" summary="replace all svgs with embedded pngs with plain pngs">
+      <created>1652369821892</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1652369821892</updated>
+    </task>
+    <task id="LOCAL-00080" summary="update">
+      <created>1652373313983</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1652373313983</updated>
+    </task>
+    <task id="LOCAL-00081" summary="replace all documentation pngs with optimized jpgs">
+      <created>1652373336836</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1652373336837</updated>
+    </task>
+    <task id="LOCAL-00082" summary="replace all documentation pngs with optimized jpgs">
+      <created>1652373501593</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1652373501593</updated>
+    </task>
+    <task id="LOCAL-00083" summary="fix: add active state to header links">
+      <created>1652374133276</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1652374133276</updated>
+    </task>
+    <task id="LOCAL-00084" summary="fix: fix anchor links not working">
+      <created>1652374767653</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1652374767653</updated>
+    </task>
+    <task id="LOCAL-00085" summary="update">
+      <created>1652427173696</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1652427173697</updated>
+    </task>
+    <task id="LOCAL-00086" summary="update">
+      <created>1652427182407</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1652427182408</updated>
+    </task>
+    <task id="LOCAL-00087" summary="update home">
+      <created>1652427969882</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1652427969882</updated>
+    </task>
+    <task id="LOCAL-00088" summary="patch up home hero">
+      <created>1652428182139</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1652428182139</updated>
+    </task>
+    <task id="LOCAL-00089" summary="patch up home links">
+      <created>1652428237332</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1652428237332</updated>
+    </task>
+    <task id="LOCAL-00090" summary="remove &quot;sub&quot; nav items">
+      <created>1652428662161</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1652428662162</updated>
+    </task>
+    <task id="LOCAL-00091" summary="fix transitions on button">
+      <created>1652428763989</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1652428763989</updated>
+    </task>
+    <task id="LOCAL-00092" summary="give external link icon a little bit more space">
+      <created>1652428779763</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1652428779763</updated>
+    </task>
+    <task id="LOCAL-00093" summary="fix buttons in safari">
+      <created>1652429204384</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1652429204384</updated>
+    </task>
+    <task id="LOCAL-00094" summary="lighten text a bit in dark mode">
+      <created>1652429212634</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1652429212634</updated>
+    </task>
+    <task id="LOCAL-00095" summary="update">
+      <created>1652435604724</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1652435604724</updated>
+    </task>
+    <task id="LOCAL-00096" summary="update">
+      <created>1652437869274</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1652437869274</updated>
+    </task>
+    <task id="LOCAL-00097" summary="fix: styles in json being purged">
+      <created>1652442721372</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1652442721372</updated>
+    </task>
+    <task id="LOCAL-00098" summary="refactor: refactor integration json">
+      <created>1652442733802</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1652442733802</updated>
+    </task>
+    <task id="LOCAL-00099" summary="docs: update api docs">
+      <created>1652453455412</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1652453455412</updated>
+    </task>
+    <task id="LOCAL-00100" summary="docs: fix missing video">
+      <created>1652453460274</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1652453460274</updated>
+    </task>
+    <task id="LOCAL-00101" summary="change autolink behavior">
+      <created>1652453472595</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1652453472595</updated>
+    </task>
+    <task id="LOCAL-00102" summary="add github actions deploy script">
+      <created>1652453479164</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1652453479164</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="fix sidebar showing too soon" />
+    <MESSAGE value="chore: update deps" />
+    <MESSAGE value="docs: change partner links" />
+    <MESSAGE value="feat: add multimd table support" />
+    <MESSAGE value="docs: update api reference" />
+    <MESSAGE value="docs: format" />
+    <MESSAGE value="replace all svgs with embedded pngs with plain pngs" />
+    <MESSAGE value="replace all documentation pngs with optimized jpgs" />
+    <MESSAGE value="fix: add active state to header links" />
+    <MESSAGE value="fix: fix anchor links not working" />
+    <MESSAGE value="update home" />
+    <MESSAGE value="patch up home hero" />
+    <MESSAGE value="patch up home links" />
+    <MESSAGE value="remove &quot;sub&quot; nav items" />
+    <MESSAGE value="fix transitions on button" />
+    <MESSAGE value="give external link icon a little bit more space" />
+    <MESSAGE value="fix buttons in safari" />
+    <MESSAGE value="lighten text a bit in dark mode" />
+    <MESSAGE value="update" />
+    <MESSAGE value="fix: styles in json being purged" />
+    <MESSAGE value="refactor: refactor integration json" />
+    <MESSAGE value="docs: update api docs" />
+    <MESSAGE value="docs: fix missing video" />
+    <MESSAGE value="change autolink behavior" />
+    <MESSAGE value="add github actions deploy script" />
+    <option name="LAST_COMMIT_MESSAGE" value="add github actions deploy script" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/jest-config/build/normalize.js</url>
+          <line>291</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/.vuepress/theme/client/views/home/home-link/HomeLink.vue</url>
+          <line>10</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

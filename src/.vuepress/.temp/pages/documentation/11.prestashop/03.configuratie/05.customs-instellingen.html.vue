@@ -1,0 +1,31 @@
+<template><h1 id="customs-instellingen" tabindex="-1"><a class="header-anchor" href="#customs-instellingen" aria-hidden="true">#</a> Customs instellingen</h1>
+<p>Ga naar <code>Catalogus &gt; Producten &gt; -product-</code> om de gegevens die nodig zijn voor
+de customs declaration in te stellen. Om een zending te kunnen zult een gewicht
+en een HS code moeten instellen. Ook is een land van herkomst nodig.</p>
+<MPImg src="/documentation/prestashop/prestashop-customs-settings.jpg" alt="PrestaShop custom settings" />
+<p>Kies voor 'Verzending' om een gewicht in te stellen. Klik daarna op 'Modules' en
+kies voor <code>MyParcel &gt; Customs</code> om in te stellen welke HS code voor dit product
+moet worden gebruikt en geef aan wat het land van herkomst is. Wanneer hier
+niets is ingevuld, kun je bij de instellingen van de
+module <code>Modules &gt; Module Manager &gt; MyParcelNL/MyParcelBE &gt; Configureren &gt; Customs Options</code>
+standaard waarden instellen.</p>
+<h2 id="default-customs-form" tabindex="-1"><a class="header-anchor" href="#default-customs-form" aria-hidden="true">#</a> Default customs form</h2>
+<p>Je kunt bij het product zelf kiezen om dit product op het customs formulier te
+tonen of juist over te slaan. Ga
+naar <code>Catalogus &gt; Producten &gt; -product- &gt; Modules &gt; MyParcel &gt; Customs</code> om dit
+in te stellen per product.</p>
+<h2 id="default-customs-code" tabindex="-1"><a class="header-anchor" href="#default-customs-code" aria-hidden="true">#</a> Default customs code</h2>
+<p>Hier vul je een HS-code in die wordt gebruikt wanneer er geen HS-code is
+ingevuld bij het product. Ga
+naar <code>Catalogus &gt; Producten &gt; -product- &gt; Modules &gt; MyParcel &gt; Customs</code> om dit
+in te stellen per product.</p>
+<h2 id="default-customs-origin" tabindex="-1"><a class="header-anchor" href="#default-customs-origin" aria-hidden="true">#</a> Default customs origin</h2>
+<p>Geef hier aan welk land van herkomst er moet worden gebruikt als er geen land is
+ingevuld bij het product. Ga
+naar <code>Catalogus &gt; Producten &gt; -product- &gt; Modules &gt; MyParcel &gt; Customs</code> om dit
+in te stellen per product.</p>
+<h2 id="default-customs-age-check" tabindex="-1"><a class="header-anchor" href="#default-customs-age-check" aria-hidden="true">#</a> Default customs age check</h2>
+<p>Wanneer er standaard op leeftijd moet worden gecontroleerd, kies je hier voor '
+Ja'. Ga naar <code>Catalogus &gt; Producten &gt; -product- &gt; Modules &gt; MyParcel &gt; Customs</code>
+om dit in te stellen per product.</p>
+</template>

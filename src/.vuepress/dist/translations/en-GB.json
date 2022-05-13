@@ -1,0 +1,17 @@
+{
+  "api_reference": "API Reference",
+  "back": "Previous",
+  "description": "Connect with our API and get started with shipments, returns and more.",
+  "docsearch_placeholder": "Search",
+  "docsearch_search": "Search",
+  "documentation": "Documentation",
+  "error_captcha_invalid": "Validation failed",
+  "lang": "en-GB",
+  "message_submitted": "Your message has been submitted!",
+  "next": "Next",
+  "select_empty_option": "Choose an option",
+  "submit": "Submit",
+  "title": "MyParcel Developer Portal",
+  "view_on_github": "View on GitHub",
+  "recaptcha_failed": "Verification failed."
+}

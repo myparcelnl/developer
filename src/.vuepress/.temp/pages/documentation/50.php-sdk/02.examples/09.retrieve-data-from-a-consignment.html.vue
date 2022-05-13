@@ -1,0 +1,25 @@
+<template><h1 id="retrieve-data-from-a-consignment" tabindex="-1"><a class="header-anchor" href="#retrieve-data-from-a-consignment" aria-hidden="true">#</a> Retrieve data from a consignment</h1>
+<p>Most attributes that have a <code>set&lt;Attribute&gt;()</code> method also have
+a <code>get&lt;Attribute&gt;()</code> method to retrieve the data.
+View <RouterLink to="/documentation/50.php-sdk/03.reference/01.models.html#postnlconsignment">all methods</RouterLink> for
+consignments here.</p>
+<div class="language-php ext-php"><pre v-pre class="language-php"><code><span class="token variable">$consignment</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PostNLConsignment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">echo</span> <span class="token variable">$consignment</span><span class="token operator">-></span><span class="token function">getFullStreet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$consignment</span><span class="token operator">-></span><span class="token function">getPerson</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$consignment</span><span class="token operator">-></span><span class="token function">getPhone</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$consignment</span><span class="token operator">-></span><span class="token function">getStreet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// etc...</span>
+</code></pre></div><h4 id="get-status" tabindex="-1"><a class="header-anchor" href="#get-status" aria-hidden="true">#</a> Get status</h4>
+<p>After <code>setPdfOfLabels()</code>, <code>setLinkOfLabels()</code> and <code>createConcepts()</code> you can get
+the status.</p>
+<div class="language-php ext-php"><pre v-pre class="language-php"><code><span class="token variable">$status</span> <span class="token operator">=</span> <span class="token variable">$consignment</span><span class="token operator">-></span><span class="token function">getStatus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="get-barcode" tabindex="-1"><a class="header-anchor" href="#get-barcode" aria-hidden="true">#</a> Get barcode</h4>
+<p>The barcode is available after <code>setPdfOfLabels()</code> and <code>setLinkOfLabels()</code></p>
+<div class="language-php ext-php"><pre v-pre class="language-php"><code><span class="token variable">$barcode</span> <span class="token operator">=</span> <span class="token variable">$consignment</span><span class="token operator">-></span><span class="token function">getBarcode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h4 id="get-track-trace-url" tabindex="-1"><a class="header-anchor" href="#get-track-trace-url" aria-hidden="true">#</a> Get Track &amp; Trace url</h4>
+<p>The Track &amp; Trace url is available after <code>downloadPdfOfLabels()</code>
+and <code>getLinkOfLabels()</code></p>
+<div class="language-php ext-php"><pre v-pre class="language-php"><code><span class="token variable">$consignment</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified"><span class="token punctuation">\</span>MyParcelNL<span class="token punctuation">\</span>Sdk<span class="token punctuation">\</span>src<span class="token punctuation">\</span>Model<span class="token punctuation">\</span>Consignment<span class="token punctuation">\</span>PostNLConsignment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token variable">$consignment</span><span class="token operator">-></span><span class="token function">getBarcodeUrl</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'3SMYPA123456789'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'2231JE'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'NL'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Barcode , Postal code, Country</span>
+</code></pre></div></template>
