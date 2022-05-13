@@ -35,7 +35,7 @@ module.exports = {
     `!${path.resolve(__dirname, '.cache')}`,
     `!${path.resolve(__dirname, '.temp')}`,
     `!${path.resolve(__dirname, 'dist')}`,
-    path.resolve(__dirname, '**/*.{ts,vue}'),
+    path.resolve(__dirname, '**/*.{ts,vue,json}'),
     path.resolve(__dirname, '..', '**/*.md'),
   ],
   safelist: [
