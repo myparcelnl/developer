@@ -2,7 +2,7 @@
   <component
     :is="link ? 'AutoLink' : 'button'"
     v-test="'button'"
-    type="button"
+    :type="link ? '' : 'button'"
     role="button"
     class="no-link-styles rounded-full"
     :item="link"
