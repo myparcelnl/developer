@@ -26,14 +26,16 @@ const DEFAULTS: Partial<Integration> = {
 
 let integrations: Ref<Integration[]>;
 
-export const useIntegrations: UseIntegrations = () => {
-  const integrationData = (data as unknown as Integration[])
+const getIntegrationData = () => {
+  return (data as unknown as Integration[])
     .map((item) => ({
       ...DEFAULTS,
       ...item,
     }));
+};
 
-  integrations ??= ref(integrationData);
+export const useIntegrations: UseIntegrations = () => {
+  integrations ??= ref(getIntegrationData());
 
   return integrations;
 };
