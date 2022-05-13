@@ -11,6 +11,7 @@ export const iconVariant = defineVariant('icon',
     integrations: 'icon-integrations',
     git: 'icon-git',
     github: 'icon-github',
+    myparcel: ['icon-myparcel', 'text-monstera-500'],
   },
   {
     required: true,

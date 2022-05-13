@@ -7,7 +7,7 @@
     :to="linkItem.link"
     :aria-label="linkAriaLabel">
     <slot>
-      <span v-text="item.text" />
+      <span v-text="item.text ?? text" />
     </slot>
   </RouterLink>
 
@@ -18,7 +18,7 @@
     :target="linkTarget"
     :aria-label="linkAriaLabel">
     <slot>
-      <span v-text="item.text" />
+      <span v-text="item.text ?? text" />
       <ExternalLinkIcon
         v-if="isBlankTarget"
         class="ml-0.5" />
@@ -44,6 +44,14 @@ export default defineComponent({
 
     inheritColor: {
       type: Boolean,
+    },
+
+    /**
+     * Override the text content. Only works if default slot is not used.
+     */
+    text: {
+      type: String,
+      default: null,
     },
   },
 

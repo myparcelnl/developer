@@ -29,7 +29,7 @@ export const autoLinkPlugin = (): Plugin => {
         if (href && !tokens[idx].attrGet('class')?.includes('header-anchor')) {
           renderedLink = true;
 
-          return `<AutoLink item="${href}">`;
+          return `<AutoLink item="${href}" text="`;
         }
 
         return result ?? '';
@@ -47,7 +47,7 @@ export const autoLinkPlugin = (): Plugin => {
 
         if (renderedLink) {
           renderedLink = false;
-          return '</AutoLink>';
+          return '" />';
         }
 
         return result ?? '';

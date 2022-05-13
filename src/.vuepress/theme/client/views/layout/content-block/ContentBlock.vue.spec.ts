@@ -8,7 +8,7 @@ describe('contentBlock', () => {
 
     expect(wrapper.element).toMatchInlineSnapshot(`
       <div
-        class=""
+        class="transition-colors bg-white dark:bg-zinc-900"
       >
         
         

@@ -1,10 +1,8 @@
 <template>
-  <component
-    :is="link ? 'AutoLink' : 'div'"
-    :item="link">
+  <div>
     <div class="border flex flex-col overflow-hidden rounded-lg">
       <div
-        v-if="img"
+        v-if="image"
         class="flex grow px-3 py-5"
         :class="[
           classes,
@@ -14,7 +12,7 @@
         ]">
         <MPImg
           class="grow h-24"
-          :src="`/integrations/${img}`"
+          :src="`/integrations/${image}`"
           role="none"
           :alt="`${title} image`" />
       </div>
@@ -23,78 +21,65 @@
         <span
           class="font-bold"
           v-text="title" />
+
+        <Icon
+          v-if="internal"
+          title="Maintained by MyParcel"
+          icon="myparcel"
+          class="ml-1 text-xs" />
         <br>
-        <span
-          v-if="type"
+        <Badge
+          v-if="!hideType && type"
           v-text="type" />
 
-        <div v-if="repo">
+        <div v-if="repository">
           <Icon icon="github" />
-          <AutoLink :item="`https://github.com/${repo}`">
+          <AutoLink :item="`https://github.com/${repository}`">
             View on GitHub
           </AutoLink>
         </div>
 
-        <div v-if="docs">
+        <div v-if="documentation">
           <Icon icon="integrations" />
-          <AutoLink :item="docs">
+          <AutoLink :item="documentation">
             Documentation
           </AutoLink>
         </div>
       </div>
     </div>
-  </component>
+  </div>
 </template>
 
 <script lang="ts">
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
+import Badge from '@mptheme/client/components/global/Badge.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import { defineComponent } from 'vue';
+import { useIntegrations } from '@mptheme/client/services/composables/useIntegrations';
 
 export default defineComponent({
   name: 'Integration',
   components: {
+    Badge,
     AutoLink,
     Icon,
     MPImg,
   },
 
   props: {
-    title: {
+    name: {
       type: String,
       required: true,
     },
 
-    type: {
-      type: String,
-      default: null,
-    },
+    hideType: Boolean,
+  },
 
-    repo: {
-      type: String,
-      default: null,
-    },
+  setup: (props) => {
+    const integrations = useIntegrations();
 
-    docs: {
-      type: String,
-      default: null,
-    },
-
-    link: {
-      type: String,
-      default: null,
-    },
-
-    img: {
-      type: String,
-      default: null,
-    },
-
-    classes: {
-      type: String,
-      default: null,
-    },
+    return integrations.value.find(({ name }) => name === props.name);
   },
 });
 </script>
