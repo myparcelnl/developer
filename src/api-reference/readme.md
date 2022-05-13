@@ -15,21 +15,29 @@ types between the different platforms.
 
 ## Integrations
 
-Do you want to connect with MyParcel using PHP, Node.js, JavaScript, C# or Ruby?
-Then you can use the following GitHub projects instead of sending requests to
-the API directly. Create an issue on GitHub to contact the programmer.
+If you're using PHP, Node.js, JavaScript, C# or Ruby, we have an SDK available
+to help you build your integration.
 
-* [PHP](https://github.com/myparcelnl/sdk)
-* [Node.js/JavaScript](https://github.com/myparcelnl/js-sdk)
-* [C#/.net](https://github.com/janssenr/MyParcelApi.Net)
-* [Ruby](https://github.com/paypronl/myparcel)
+<Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2 mt-3">
+    <Integration name="php-sdk" hide-type />
+    <Integration name="js-sdk" hide-type />
+    <Integration name="c-sharp-sdk" hide-type />
+    <Integration name="ruby-sdk" hide-type />
+</Stack>
+
+::: tip No SDK in your favorite language available?
+If you end up making one and are willing to make it open source, please [contact] us!
+:::
+
 
 ## Test environment
 
-We do not currently have a test environment. You can create an account and print
-labels freely. These will only be invoiced when you actually ship them.
+We currently do **not** have a test environment. However, you can create an
+account and print labels freely. They will only be invoiced when you actually ship them.
 
 ::: note
 This does not apply to <DataType type="package_type" id="4" />, these shipments
 will always be invoiced immediately.
 :::
+
+[contact]: /contact
