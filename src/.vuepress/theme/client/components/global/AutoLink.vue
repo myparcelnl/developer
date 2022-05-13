@@ -55,7 +55,7 @@ export default defineComponent({
     },
   },
 
-  setup: (props) => {
+  setup: (props, ctx) => {
     const {
       linkItem,
       linkTarget,
@@ -97,6 +97,10 @@ export default defineComponent({
 
       return isActiveInSubpath.value;
     });
+
+    // onMounted(() => {
+    //   console.log(ctx.slots?.default?.()?.[0]?.el?.tagName);
+    // });
 
     return {
       isActive,
