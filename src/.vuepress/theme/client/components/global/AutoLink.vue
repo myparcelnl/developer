@@ -19,7 +19,9 @@
     :aria-label="linkAriaLabel">
     <slot>
       <span v-text="item.text" />
-      <ExternalLinkIcon v-if="isBlankTarget" />
+      <ExternalLinkIcon
+        v-if="isBlankTarget"
+        class="ml-0.5" />
     </slot>
   </a>
 </template>
