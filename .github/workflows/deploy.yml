@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: myparcelnl/yarn-install@v1
+      - uses: myparcelnl/actions/yarn-install@v1
 
       - name: Create build
         run: yarn run build
