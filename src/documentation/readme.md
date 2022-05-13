@@ -2,30 +2,21 @@
 title: Documentation
 ---
 
-- [Getting started](01.getting-started.md)
-
 ## Jump in
+
+Here you can find our documentation for various plugins and our own SDKs.
 
 ### Plug-ins
 
 <Stack class="md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-    <Integration
-        title="WooCommerce (WordPress)" 
-        link="/documentation/10.woocommerce/" 
-        img="woocommerce.svg" />
-    <Integration
-        title="Prestashop"
-        link="/documentation/11.prestashop/"
-        img="prestashop.svg" />
-    <Integration
-        title="Magento 2"
-        link="/documentation/13.magento2/"
-        img="magento.svg" />
+    <Integration name="woocommerce" />
+    <Integration name="prestashop" />
+    <Integration name="magento-2" />
 </Stack>
 
 ### SDKs
 
 <Stack class="md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-    <Integration link="/documentation/50.php-sdk/" title="PHP" img="php.svg" classes="bg-[#787CB5]" />
-    <Integration link="/documentation/51.js-sdk/" title="JavaScript/Node.js" img="js.svg" classes="bg-[#F7DF1E]" />
+    <Integration name="php-sdk" />
+    <Integration name="js-sdk" />
 </Stack>
