@@ -51,7 +51,7 @@ tree:
           name: Zuivelhoeve
           logo: zuivelhoeve.png
           color: '#071F60'
-          link: https://www.grandvision.com/
+          link: https://www.zuivelhoeve.nl/
       - component: HomePartnerBrand
         attributes:
           name: GrandVision
