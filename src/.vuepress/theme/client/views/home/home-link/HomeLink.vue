@@ -12,7 +12,7 @@
       <div class="absolute bg-black group-hover:opacity-30 inset-0 opacity-0 transition-opacity" />
 
       <div class="-inset-36 absolute flex left-0 mix-blend-soft-light overflow-hidden top-0">
-        <FloepjeLeft class="fill-white opacity-30" />
+        <FloepjeLeft class="fill-white opacity-30 pt-4" />
       </div>
     </template>
   </Cta>
