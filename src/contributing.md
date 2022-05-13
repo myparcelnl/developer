@@ -21,6 +21,41 @@ first read the following guides if you're not familiar with VuePress or Vue:
 
 - [Tailwind CSS 3]
 
+### Frontmatter
+
+At the start of each `.md` file, you can add frontmatter. Below is described what you can write there and how it affects the page.
+
+Example:
+```markdown
+---
+title: My Page 
+---
+
+## My page content
+
+Hello!
+```
+
+Here is an overview of the most relevant values:
+
+| Key            | Type              | Description                                                                                                 | Default |
+|----------------|-------------------|-------------------------------------------------------------------------------------------------------------|---------|
+| `title`        | `string`          | Defines the page name and renders a h1 on the page. Use either this or a manual `# <title>` in the content. | –       |
+| `sidebar`      | `boolean/string`  | Modify the sidebar for a single page. `none` to turn it off.                                                | `auto`  |
+| `editLink`     | `boolean`         | Controls whether the "Edit this page" button on the bottom is shown.                                        | `true`  |
+| `lastUpdated`  | `boolean`         | Controls whether the "Last updated" text on the bottom is shown.                                            | `true`  |
+| `contributors` | `boolean`         | Controls whether the "Contributors" section on the bottom is shown.                                         | `true`  |
+
+See [Frontmatter](https://v2.vuepress.vuejs.org/reference/frontmatter.html#frontmatter) for all options.
+
+::: tip
+When `editLink`, `lastUpdated` and `contributors` are all false, the bar on top of the footer will not be shown at all.
+:::
+
+
+::: note
+When using the frontmatter title, don't forget this renders a `h1` on your page. You should only have `h2` and smaller headings on the rest of the page.
+:::
 ## Markdown
 
 ### Code
@@ -242,6 +277,7 @@ Collapsed content with a custom header.
 | One | Two | Three  |
 | --- | --- | ---    |
 | And | a   | table! |
+
 :::
 
 ::: expand h6: With a custom tag header
@@ -328,16 +364,31 @@ etc.
 The [`maxHeight`], [`maxWidth`], [`minHeight`] and [`minWidth`] utilities have
 been extended to include all spacing values from [`width`] and [`height`].
 
+
+## Editing non-markdown content
+
+### Integrations
+
+Integrations data is located in [integrations.json](https://github.com/myparcelnl/developer/blob/main/src/.vuepress/integrations.json). Edit it there to see the changes reflected on all places where the `Integration` component is used. Just reference the `name`, and all other data will be retrieved from that `.json` file.
+
+```vue
+<Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
+    <Integration name="php-sdk" />
+    <Integration name="woocommerce" />
+    <Integration name="google-chrome-extension" />
+</Stack>
+```
+
+<Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
+    <Integration name="php-sdk" />
+    <Integration name="woocommerce" />
+    <Integration name="google-chrome-extension" />
+</Stack>
+
 [Tailwind CSS 3]: https://tailwindcss.com/
-
 [`maxHeight`]: https://tailwindcss.com/docs/max-height
-
 [`maxWidth`]: https://tailwindcss.com/docs/max-width
-
 [`minHeight`]: https://tailwindcss.com/docs/min-height
-
 [`minWidth`]: https://tailwindcss.com/docs/min-width
-
 [`width`]: https://tailwindcss.com/docs/width
-
 [`height`]: https://tailwindcss.com/docs/height

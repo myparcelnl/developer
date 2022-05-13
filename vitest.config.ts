@@ -13,11 +13,14 @@ const createAlias = (from: string, to: string) => ({
  */
 export default defineConfig({
   plugins: [
-    vue,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    vue(),
   ],
 
   resolve: {
     alias: [
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       ...viteConfig.resolve?.alias ?? [],
       createAlias('@theme', 'node_modules/@vuepress/theme-default/src/client/components'),
@@ -34,8 +37,10 @@ export default defineConfig({
     dir: 'src/.vuepress',
     include: ['**/*.vue.spec.ts'],
     environment: 'happy-dom',
-    // setupFiles: [
-    //   'test/vitest-setup.ts',
-    // ],
+    deps: {
+      inline: [
+        'lodash-es',
+      ],
+    },
   },
 });

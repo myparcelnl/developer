@@ -69,12 +69,19 @@ const icon = [
   'text-4xl',
 ];
 
+const iconSm = [
+  'w-4',
+  'h-4',
+  'text-sm',
+];
+
 export const buttonVariant = defineVariant(
   'buttonVariant',
   {
     none: [],
     sm: ['py-1', 'px-2'],
     icon,
+    iconSm,
     light,
     outline,
     outlineLight,

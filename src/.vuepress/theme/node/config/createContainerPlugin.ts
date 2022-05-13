@@ -5,6 +5,18 @@ const MESSAGE_TYPES: string[] = ['tip', 'note'];
 
 export const createContainerPluginss = (): PluginOptions[] => {
   const containers: ContainerPluginOptions[] = [
+
+    // {
+    //   type: 'example',
+    //   before: (args) => {
+    //     const split = (/^(?:(h\d): )?(.+)/).exec(args);
+    //     const tag = split?.[1] ?? null;
+    //     const title = split?.[2] ?? null;
+    //
+    //     return `<DetailsExpand tag="${tag}" ${title ? `title="${title}"` : ''}>`;
+    //   },
+    //   after: () => '</DetailsExpand>',
+    // },
     {
       type: 'expand',
       before: (args) => {

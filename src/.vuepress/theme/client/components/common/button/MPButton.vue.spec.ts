@@ -13,10 +13,4 @@ describe('button', () => {
     const wrapper = shallowMount(MPButton);
     expect(wrapper.findByTestId('button__link').element.tagName).toBe('span');
   });
-
-  // it('renders content via default slot', () => {
-  //   const wrapper = shallowMount(MPButton, { slots: { default: 'click me' } });
-  //
-  //   expect(wrapper.element.textContent).toBe('click me');
-  // });
 });
