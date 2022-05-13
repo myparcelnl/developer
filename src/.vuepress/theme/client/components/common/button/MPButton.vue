@@ -4,12 +4,13 @@
     v-test="'button'"
     type="button"
     role="button"
-    class="no-link-styles rounded-full transition-colors"
+    class="no-link-styles rounded-full"
     :item="link"
     :class="[
       ...variantClass,
       {
         ['py-2 px-4']: !variant.includes('icon') && !variant.includes('sm'),
+        ['transition-colors']: !$attrs?.class?.includes('transition-'),
         ['cursor-pointer']: !disabled,
         ['animate-pulse opacity-60']: disabled,
         ['cursor-not-allowed']: disabled,
