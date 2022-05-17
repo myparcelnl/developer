@@ -76,11 +76,12 @@ out ways to improve...
         funny="/2019/10/myparcel-development-team-edie.jpg" />
     <TeamMember 
         name="Joeri" 
-        normal="/joeri-van-veen-normal.jpg" funny="/joeri-van-veen-fun.jpg" />
+        normal="/joeri-van-veen-normal.jpg" 
+        funny="/joeri-van-veen-fun.jpg" />
     <TeamMember
         name="Mark"
         normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png"
-        funny="https://i.ytimg.com/vi/KGWgVZr0utQ/maxresdefault.jpg" />
+        funny="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
     <TeamMember 
         name="Thijmen" 
         normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
