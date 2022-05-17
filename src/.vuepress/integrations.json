@@ -33,21 +33,21 @@
     "type": "plugin",
     "internal": true,
     "repository": "myparcelnl/magento",
-    "documentation": "https://myparcelnl.github.io/magento2",
+    "documentation": "/documentation/13.magento2/",
     "image": "magento.svg"
   },
   {
     "name": "shopify",
     "title": "Shopify",
     "type": "plugin",
-    "documentation": "https://myparcelnl.github.io/shopify",
+    "documentation": "/documentation/14.shopify/",
     "image": "shopify.svg"
   },
   {
     "name": "shopware",
     "title": "Shopware",
     "type": "plugin",
-    "documentation": "https://myparcelnl.github.io/shopware",
+    "documentation": "/documentation/15.shopware/",
     "image": "shopware-light.svg",
     "classes": "bg-[#189EFF]"
   },
@@ -214,7 +214,7 @@
     "name": "wix",
     "title": "Wix",
     "type": "other",
-    "documentation": "https://myparcelnl.github.io/wix",
+    "documentation": "/documentation/20.wix/",
     "image": "wix.png"
   },
   {
