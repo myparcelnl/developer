@@ -6,18 +6,22 @@ on:
       - main
 
 jobs:
-  publish-docs:
+  build:
+    name: 'Build site'
+    uses: myparcelnl/developer-portal/.github/workflows/build.yml@main
+
+  publish:
+    name: 'Publish to GitHub pages'
     runs-on: ubuntu-20.04
+    needs: build
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: myparcelnl/actions/yarn-install@v1
-
-      - name: Create build
-        run: yarn run build
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
           folder: src/.vuepress/dist
+          token: ${{ secrets.GH_REPO_TOKEN }}

@@ -1,0 +1,35 @@
+name: 'Build site'
+
+on:
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: false
+        default: ''
+
+jobs:
+  build:
+    name: 'Create build'
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ inputs.ref }}
+
+      - uses: myparcelnl/actions/yarn-install@v1
+
+      - name: 'Handle build cache'
+        id: cache-build
+        uses: actions/cache@v3
+        with:
+          path: prime-numbers
+          key: ${{ runner.os }}-build-${{ hashFiles('**/*.lock') }}-${{ hashFiles('src/**/*'}}
+
+      - run: yarn build
+        if: steps.cache-build.outputs.cache-hit != 'true'
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: src/.vuepress/dist
