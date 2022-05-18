@@ -1,10 +1,10 @@
-name: 'Pull request'
+name: 'Check pull request'
 
 on: pull_request
 
 jobs:
   build:
     name: 'Test site build'
-    uses: myparcelnl/developer-portal/.github/workflows/build.yml@main
+    uses: myparcelnl/developer/.github/workflows/build.yml@main
     with:
       ref: ${{ github.event.client_payload.pull_request.head.ref }}
