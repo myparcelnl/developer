@@ -1,1 +1,0 @@
-import{d as a,o,f as n,b as r}from"./app.d77be46b.js";import{_ as t}from"./plugin-vue_export-helper.21dcd24c.js";const s=a({name:"Badge"});function d(e,f,p,c,l,_){return o(),n("span",null,[r(e.$slots,"default")])}var u=t(s,[["render",d],["__file","Badge.vue"]]);export{u as default};
