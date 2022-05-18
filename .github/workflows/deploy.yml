@@ -1,4 +1,4 @@
-name: 'Deploy'
+name: 'Deploy site'
 
 on:
   push:
@@ -8,10 +8,10 @@ on:
 jobs:
   build:
     name: 'Build site'
-    uses: myparcelnl/developer-portal/.github/workflows/build.yml@main
+    uses: myparcelnl/developer/.github/workflows/build.yml@main
 
-  publish:
-    name: 'Publish to GitHub pages'
+  deploy:
+    name: 'Deploy to GitHub pages'
     runs-on: ubuntu-20.04
     needs: build
     steps:
