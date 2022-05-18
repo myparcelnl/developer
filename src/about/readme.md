@@ -15,7 +15,7 @@ on if you want to know more about our working method, tech stack and people!
 
 <Stack class="flex">
     <iframe 
-        class="mx-auto"
+        class="mx-auto rounded-xl"
         width="560" 
         height="315" 
         src="https://www.youtube.com/embed/Mayz5q9yyNI" 
@@ -72,16 +72,16 @@ out ways to improve...
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <TeamMember 
         name="Edie" 
-        normal="/2019/10/myparcel-development-team-edie.jpg" 
-        funny="/2019/10/myparcel-development-team-edie.jpg" />
+        normal="https://www.myparcel.nl/app/uploads/edie-lemoine-normal.png" 
+        funny="https://www.myparcel.nl/app/uploads/edie-lemoine-fun.png" />
     <TeamMember 
         name="Joeri" 
         normal="/joeri-van-veen-normal.jpg" 
         funny="/joeri-van-veen-fun.jpg" />
     <TeamMember
         name="Mark"
-        normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png"
-        funny="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
+        normal="https://www.myparcel.nl/app/uploads/mark-ernst-normal.png"
+        funny="https://www.myparcel.nl/app/uploads/mark-ernst-fun.png" />
     <TeamMember 
         name="Thijmen" 
         normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
