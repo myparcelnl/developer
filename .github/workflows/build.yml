@@ -24,7 +24,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: prime-numbers
-          key: ${{ runner.os }}-build-${{ hashFiles('**/*.lock') }}-${{ hashFiles('src/**/*'}}
+          key: ${{ runner.os }}-build-${{ hashFiles('**/*.lock') }}-${{ hashFiles('src/**/*') }}
 
       - run: yarn build
         if: steps.cache-build.outputs.cache-hit != 'true'
