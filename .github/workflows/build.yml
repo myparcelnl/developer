@@ -23,7 +23,7 @@ jobs:
         id: cache-build
         uses: actions/cache@v3
         with:
-          path: prime-numbers
+          path: src/.vuepress/dist
           key: ${{ runner.os }}-build-${{ hashFiles('**/*.lock') }}-${{ hashFiles('src/**/*') }}
 
       - run: yarn build
