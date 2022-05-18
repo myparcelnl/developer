@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+    paths:
+      - src/**/*
+      - types/**/*
+      - tsconfig.base.json
+      - tsconfig.eslint.json
+      - tsconfig.json
+      - yarn.lock
 
 jobs:
   build:
