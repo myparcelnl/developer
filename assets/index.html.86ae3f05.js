@@ -1,1 +1,0 @@
-const t={key:"v-56f52154",path:"/documentation/13.magento2/",title:"Introduction",lang:"en-GB",frontmatter:{title:"Introduction"},excerpt:"",headers:[],git:{updatedTime:165286466e4,contributors:[{name:"Richard Perdaan",email:"richard@myparcel.nl",commits:1}]},filePathRelative:"documentation/13.magento2/readme.md"};export{t as data};

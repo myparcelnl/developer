@@ -1,0 +1,1 @@
+const t={key:"v-76d9ad82",path:"/documentation/11.prestashop/02.installatie.html",title:"Installatie",lang:"en-GB",frontmatter:{title:"Installatie"},excerpt:"",headers:[],git:{updatedTime:1652878973e3,contributors:[{name:"Edie Lemoine",email:"edie@myparcel.nl",commits:1}]},filePathRelative:"documentation/11.prestashop/02.installatie.md"};export{t as data};
