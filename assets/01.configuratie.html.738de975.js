@@ -1,0 +1,1 @@
+const e={key:"v-6092ecaa",path:"/documentation/13.magento2/03.configuratie/01.configuratie.html",title:"Configuratie",lang:"en-GB",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1652947734e3,contributors:[{name:"Edie Lemoine",email:"edie@myparcel.nl",commits:1}]},filePathRelative:"documentation/13.magento2/03.configuratie/01.configuratie.md"};export{e as data};
