@@ -17,7 +17,7 @@ jobs:
         with:
           ref: ${{ inputs.ref }}
 
-      - uses: myparcelnl/actions/yarn-install@v1
+      - uses: myparcelnl/actions/yarn-install@v2
 
       - name: 'Handle build cache'
         id: cache-build
