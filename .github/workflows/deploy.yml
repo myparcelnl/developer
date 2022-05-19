@@ -6,13 +6,18 @@ on:
   push:
     branches:
       - main
-    paths:
-      - src/**/*
+    paths-ignore:
+      - plop-templates/**/*
+      - private/**/*
+      - test/**/*
       - types/**/*
-      - tsconfig.base.json
-      - tsconfig.eslint.json
-      - tsconfig.json
-      - yarn.lock
+      - .eslint*
+      - .gitignore
+      - README.md
+      - docker-compose.yml
+      - jest.config.ts
+      - plopfile.js
+      - vitest.config.ts
 
 jobs:
   build:
