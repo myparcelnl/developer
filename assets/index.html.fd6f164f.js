@@ -1,1 +1,0 @@
-const e={key:"v-9db00934",path:"/documentation/14.shopify/",title:"Introductie",lang:"en-GB",frontmatter:{title:"Introductie"},excerpt:"",headers:[],git:{updatedTime:1653298653e3,contributors:[{name:"DevFrenk",email:"40214007+DevFrenk@users.noreply.github.com",commits:1}]},filePathRelative:"documentation/14.shopify/readme.md"};export{e as data};
