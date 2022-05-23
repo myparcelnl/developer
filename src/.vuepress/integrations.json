@@ -265,5 +265,12 @@
     "type": "other",
     "documentation": "https://fulfilment-software.com/",
     "image": "fulfilment.svg"
+  },
+  {
+    "name": "iPacky",
+    "title": "iPacky",
+    "type": "other",
+    "documentation": "https://ipacky.com/shipping-connectors-overview/",
+    "image": "iPacky.png"
   }
 ]
