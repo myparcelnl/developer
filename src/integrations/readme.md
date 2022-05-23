@@ -63,6 +63,7 @@ Plug-ins integrate with your webshop directly.
     <Integration name="channel-dock" />
     <Integration name="goedgepickt" />
     <Integration name="fulfilment-software" />
+    <Integration name="iPacky" />
 </Stack>
 
 ::: tip Missing your favorite language or platform?
