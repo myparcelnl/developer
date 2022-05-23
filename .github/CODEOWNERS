@@ -1,0 +1,16 @@
+# --- Global: Only integration developers ---
+*  @myparcelnl/integration
+
+# --- Frontend and VuePress: Both integration and frontend developers ---
+*.js           @myparcelnl/integration @myparcelnl/frontend
+*.json         @myparcelnl/integration @myparcelnl/frontend
+*.ts           @myparcelnl/integration @myparcelnl/frontend
+*.vue          @myparcelnl/integration @myparcelnl/frontend
+src/.vuepress  @myparcelnl/integration @myparcelnl/frontend
+
+# --- All markdown: Integration and IT support ---
+*.md   @myparcelnl/integration @myparcelnl/it-support
+*.mdx  @myparcelnl/integration @myparcelnl/it-support
+
+# --- API Reference: Integration, API and IT support ---
+src/api-reference  @myparcelnl/integration @myparcelnl/api @myparcelnl/it-support
