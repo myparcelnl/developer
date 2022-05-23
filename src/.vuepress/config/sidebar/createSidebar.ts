@@ -14,8 +14,6 @@ export const HIDDEN: string[] = [
 /**
  * Gets the sidebar and nav config from vuepress-bar and converts it to support VuePress 2.
  */
-export const createSidebar = (baseDir?: string): MyPaSidebarConfig => {
-  baseDir ??= SRC_DIR;
-
-  return createObjectSidebar(baseDir);
+export const createSidebar = (): MyPaSidebarConfig => {
+  return createObjectSidebar(SRC_DIR);
 };

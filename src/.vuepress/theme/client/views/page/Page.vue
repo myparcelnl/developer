@@ -11,11 +11,9 @@
           v-if="frontmatter.title"
           v-text="frontmatter.title" />
 
-        <component
-          :is="frontmatter.content"
-          v-if="frontmatter.content" />
+        <RedirectContent v-if="!pageData.hasContent && (frontmatter.languages || frontmatter.redirect)" />
 
-        <Content v-else />
+        <Content />
       </slot>
     </ContentContainer>
 
@@ -26,24 +24,26 @@
 </template>
 
 <script lang="ts">
+import { MyPaPageData, MyPaPageFrontmatter } from '@mptheme/config.types';
+import { usePageData, usePageFrontmatter } from '@vuepress/client';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
-import IndexContent from '@mptheme/client/components/index-content/IndexContent.vue';
 import PageContainer from '@mptheme/client/views/page/page-container/PageContainer.vue';
 import PageFooter from '@mptheme/client/views/page/page-footer/PageFooter.vue';
+import RedirectContent from '@mptheme/client/components/redirect-content/RedirectContent.vue';
 import { defineComponent } from 'vue';
-import { usePageFrontmatter } from '@vuepress/client';
 
 export default defineComponent({
   name: 'Page',
   components: {
-    IndexContent,
+    RedirectContent,
     ContentContainer,
     PageContainer,
     PageFooter,
   },
 
   setup: () => ({
-    frontmatter: usePageFrontmatter(),
+    pageData: usePageData<MyPaPageData>(),
+    frontmatter: usePageFrontmatter<MyPaPageFrontmatter>(),
   }),
 });
 </script>

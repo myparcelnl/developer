@@ -1,5 +1,5 @@
 import { MyPaNavbarGroup, MyPaNavbarItem, MyPaResolvedNavbarItem } from '@mptheme/config.types';
-import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
+import { isOfType } from '@mptheme/shared/utils';
 import { isString } from '@vuepress/shared';
 import { useNavLink } from '@mptheme/client/composables/useNavLink';
 

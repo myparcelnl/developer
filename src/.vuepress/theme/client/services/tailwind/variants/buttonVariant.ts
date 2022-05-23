@@ -1,20 +1,32 @@
 import { defineVariant } from '../defineVariant';
 
-const outlineLight = [
+const outlineBase = [
   'border',
+  'border-2',
+];
+
+const outlineLight = [
+  ...outlineBase,
   'border-white',
   'text-white',
   'hover:bg-white',
   'focus:bg-white',
   'active:bg-white',
-  'focus:outline-black',
+  'focus:outline-white',
   'hover:text-black',
   'focus:text-black',
   'active:text-black',
 ];
 
+const outlineGray = [
+  ...outlineBase,
+  'hover:bg-goldfish-500',
+  'hover:border-goldfish-500',
+  'hover:text-white',
+];
+
 const outline = [
-  'border',
+  ...outlineBase,
   'border-goldfish-500',
   'text-goldfish-500',
   'hover:bg-goldfish-500',
@@ -41,12 +53,11 @@ const light = [
 ];
 
 const outlinePrimary = [
-  'border',
+  ...outlineBase,
   'border-goldfish-500',
   'text-goldfish-500',
   'hover:bg-goldfish-500',
   'focus:bg-goldfish-500',
-  'focus:outline-goldfish-700',
   'active:bg-goldfish-500',
   'hover:text-white',
   'focus:text-white',
@@ -57,7 +68,6 @@ const primary = [
   'hover:bg-goldfish-600',
   'hover:text-white',
   'focus:bg-goldfish-600',
-  'focus:outline-goldfish-800',
   'active:bg-goldfish-600',
   'bg-goldfish-500',
   'text-white',
@@ -70,9 +80,8 @@ const icon = [
 ];
 
 const iconSm = [
-  'w-4',
-  'h-4',
-  'text-sm',
+  'w-10',
+  'h-10',
 ];
 
 export const buttonVariant = defineVariant(
@@ -84,6 +93,7 @@ export const buttonVariant = defineVariant(
     iconSm,
     light,
     outline,
+    outlineGray,
     outlineLight,
     outlinePrimary,
     primary,

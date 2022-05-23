@@ -1,19 +1,31 @@
 import { ComputedRef, computed } from 'vue';
-import { MyPaResolvedNavbarItem } from '@mptheme/config.types';
-import { resolveNavbarItem } from '@mptheme/client/composables/navbar/resolveNavbarItem';
-import { useThemeLocaleData } from '@mptheme/client/composables/useThemeLocaleData';
+import { MyPaNavbarGroup, MyPaNavbarItem, MyPaResolvedNavbarItem } from '@mptheme/config.types';
+import { isOfType } from '@mptheme/shared/utils';
+import { isString } from '@vuepress/shared';
+import { useNavLink } from '@mptheme/client/composables/useNavLink';
+import { useSiteLocaleData } from '@mptheme/client/composables';
+
+const resolveNavbarItem = (
+  item: MyPaNavbarItem | MyPaNavbarGroup | string,
+): MyPaResolvedNavbarItem => {
+  if (isString(item)) {
+    return useNavLink(item);
+  }
+
+  if (isOfType<MyPaNavbarGroup>(item, 'children')) {
+    return {
+      ...item,
+      children: item.children.map(resolveNavbarItem),
+    };
+  }
+
+  return item;
+};
 
 export const useNavbarConfig = (): ComputedRef<MyPaResolvedNavbarItem[]> => {
-  const themeLocale = useThemeLocaleData();
+  const siteLocale = useSiteLocaleData();
 
   return computed(() => {
-    const navbarItems = (themeLocale.value.navbar || []).map(resolveNavbarItem);
-    // TODO: Multilanguage
-    // const languageItems = useNavbarSelectLanguage();
-
-    return [
-      ...navbarItems,
-      // ...languageItems.value,
-    ];
+    return (siteLocale.value.navbar ?? []).map(resolveNavbarItem);
   });
 };

@@ -9,7 +9,7 @@
     :class="[
       ...variantClass,
       {
-        ['py-2 px-4']: !variant.includes('icon') && !variant.includes('sm'),
+        ['py-2 px-4']: !['icon', 'iconSm', 'sm'].some((item) => variant.includes(item)),
         ['transition-colors']: !$attrs?.class?.includes('transition-'),
         ['cursor-pointer']: !disabled,
         ['animate-pulse opacity-60']: disabled,
@@ -23,7 +23,11 @@
         <template v-if="icon">
           <Icon
             :icon="icon"
-            class="mr-1 my-auto" />
+            class="my-auto"
+            :class="{
+              'mr-1 my-auto': link,
+              'm-auto px-0.5': !link,
+            }" />
         </template>
 
         <template v-if="link">

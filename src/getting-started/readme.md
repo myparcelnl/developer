@@ -1,12 +1,13 @@
 ---
 title: Get started with MyParcel
 sidebar: none
+languages:
+- nl: aan-de-slag
 ---
 
 You've come to the right place to create a connection with MyParcel. No matter
 what connection you need, we're here to help you make it easier. Here are all
-the
-ways you can make a connection with MyParcel and your webshop.
+the ways you can make a connection with MyParcel and your webshop.
 
 ## Create a MyParcel account
 

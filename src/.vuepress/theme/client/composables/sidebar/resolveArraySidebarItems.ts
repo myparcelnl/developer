@@ -1,5 +1,5 @@
 import { MyPaResolvedSidebarItem, MyPaSidebarConfigArray, MyPaSidebarItem } from '@mptheme/config.types';
-import { headersToSidebarItemChildren } from '@mptheme/client/composables';
+import { headersToSidebarItemChildren } from './headersToSidebarItemChildren';
 import { isString } from '@vuepress/shared';
 import { useNavLink } from '@mptheme/client/composables/useNavLink';
 import { usePageData } from '@vuepress/client';

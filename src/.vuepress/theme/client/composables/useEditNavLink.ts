@@ -1,14 +1,14 @@
 import { ComputedRef, computed } from 'vue';
 import { DefaultThemeNormalPageFrontmatter, DefaultThemePageData } from '@vuepress/theme-default/lib/shared';
 import { usePageData, usePageFrontmatter } from '@vuepress/client';
+import { useThemeLocaleData, useTranslate } from '@mptheme/client/composables';
 import { MyPaNavLink } from '@mptheme/config.types';
 import { resolveEditLink } from '@vuepress/theme-default/lib/client/utils';
-import { useThemeLocaleData } from '@mptheme/client/composables';
 
 export const useEditNavLink = (): ComputedRef<MyPaNavLink | null> => {
-  const themeLocale = useThemeLocaleData();
-  const page = usePageData<DefaultThemePageData>();
   const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>();
+  const page = usePageData<DefaultThemePageData>();
+  const themeLocale = useThemeLocaleData();
 
   return computed(() => {
     const showEditLink = frontmatter.value.editLink ?? themeLocale.value.editLink ?? true;
@@ -17,24 +17,18 @@ export const useEditNavLink = (): ComputedRef<MyPaNavLink | null> => {
       return null;
     }
 
-    const {
-      repo,
-      docsRepo = repo,
-      docsBranch = 'main',
-      docsDir = '',
-      editLinkText,
-    } = themeLocale.value;
+    const { repo, docsRepo = repo, docsBranch = 'main', docsDir = '' } = themeLocale.value;
 
     if (!docsRepo) {
       return null;
     }
 
+    const translate = useTranslate();
     const editLink = resolveEditLink({
       docsRepo,
       docsBranch,
       docsDir,
       filePathRelative: page.value.filePathRelative,
-      editLinkPattern: frontmatter.value.editLinkPattern ?? themeLocale.value.editLinkPattern,
     });
 
     if (!editLink) {
@@ -42,7 +36,7 @@ export const useEditNavLink = (): ComputedRef<MyPaNavLink | null> => {
     }
 
     return {
-      text: editLinkText ?? 'Edit this page',
+      text: translate('editLinkText') ?? 'Edit this page',
       link: editLink,
     };
   });

@@ -1,4 +1,6 @@
 import { MyPaSidebarConfigArray, MyPaSidebarGroupCollapsible } from '@mptheme/config.types';
+// noinspection ES6PreferShortImport
+import { isOfType } from '../../theme/shared/utils';
 
 /**
  * Loop through a v1 sidebar to transform it into a v2 compatible one.
@@ -36,6 +38,19 @@ export function transformSidebar(
       }
 
       if (depth === 0) {
+        if (newChild?.children?.[0] && typeof newChild.children[0] === 'string') {
+          const regExpExecArray = (/^\/[a-z]{2}\//).exec(newChild.children[0]);
+
+          if (regExpExecArray) {
+            newChild.children.forEach((child) => {
+              if (isOfType<MyPaSidebarGroupCollapsible>(child, 'text')) {
+                child.collapsible = true;
+              }
+            });
+            return newChild;
+          }
+        }
+
         newChild.collapsible = true;
       }
 

@@ -42,22 +42,27 @@
           class="font-bold"
           v-text="data.title" />
         <br>
+
         <div v-if="data.repository">
           <Icon
             icon="github"
             class="mr-2" />
-          <AutoLink :item="`https://github.com/${data.repository}`">
-            View on GitHub
-          </AutoLink>
+          <AutoLink
+            :item="{
+              text: translate('viewOnGithub'),
+              link: `https://github.com/${data.repository}`,
+            }" />
         </div>
 
         <div v-if="data.documentation">
           <Icon
-            icon="documentation"
+            icon="support"
             class="mr-2" />
-          <AutoLink :item="data.documentation">
-            Documentation
-          </AutoLink>
+          <AutoLink
+            :item="{
+              text: translate('documentation'),
+              link: data.documentation,
+            }" />
         </div>
       </div>
     </div>
@@ -65,11 +70,12 @@
 </template>
 
 <script lang="ts">
+import { ComputedRef, PropType, computed, defineComponent } from 'vue';
 import { Integration, useIntegrations } from '@mptheme/client/composables/useIntegrations';
-import { ComputedRef, PropType, Ref, computed, defineComponent } from 'vue';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
+import { useTranslate } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'Integration',
@@ -96,15 +102,14 @@ export default defineComponent({
       throw new Error('Either a name or integration prop must be provided to use <Integration />.');
     }
 
+    const translate = useTranslate();
     const integrations = useIntegrations();
 
     const data: ComputedRef<Integration> = computed(() => {
       return props.integration ?? integrations.value.find(({ name }) => name === props.name);
     });
 
-    return {
-      data,
-    };
+    return { translate, data };
   },
 });
 </script>

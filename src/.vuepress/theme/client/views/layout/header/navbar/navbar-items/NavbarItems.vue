@@ -31,8 +31,8 @@ import { ComputedRef, computed, defineComponent } from 'vue';
 import { MyPaNavbarItem, MyPaResolvedNavbarItem } from '@mptheme/config.types';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import NavbarDropdown from '@mptheme/client/components/navbar-dropdown/NavbarDropdown.vue';
-import { useNavbarConfig } from '@mptheme/client/composables/navbar/useNavbarConfig';
 import { useRoute } from 'vue-router';
+import { useNavbarConfig } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'NavbarItems',

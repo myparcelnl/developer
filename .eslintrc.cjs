@@ -1,6 +1,11 @@
+const path = require('path');
+
 module.exports = {
   root: true,
   extends: '@myparcel/eslint-config/preset-typescript',
+  parserOptions:{
+    project: path.resolve(__dirname, 'tsconfig.json'),
+  },
   rules: {
     '@typescript-eslint/require-await': 'off',
     'class-methods-use-this': 'off',

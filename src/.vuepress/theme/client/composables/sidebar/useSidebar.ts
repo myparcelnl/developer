@@ -1,9 +1,9 @@
 import { ComputedRef, Ref, computed, ref, watch } from 'vue';
+import { useBreakpoints, useNavbarConfig } from '@mptheme/client/composables';
 import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
-import { useBreakpoints } from '@mptheme/client/composables/useBreakpoints';
-import { useNavbarConfig } from '@mptheme/client/composables/navbar/useNavbarConfig';
 import { useRoute } from 'vue-router';
 import { useSidebarItems } from './useSidebarItems';
+import { useRouteLocale } from '@vuepress/client';
 
 let isOpen: ComputedRef<boolean>;
 
@@ -34,13 +34,15 @@ export const useSidebar: UseSidebar = () => {
   });
 
   const sidebarItems = computed(() => {
-    return items.value.length
-      ? items.value
-      : navbar.value;
+    if (!items.value.length) {
+      return navbar.value;
+    }
+
+    return items.value;
   });
 
   const exists = computed(() => {
-    return sidebarItems.value.length > 0;
+    return (sidebarItems.value?.length ?? 0) > 0;
   });
 
   const toggle = (bool?: boolean): void => {

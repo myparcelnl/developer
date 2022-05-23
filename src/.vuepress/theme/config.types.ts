@@ -1,7 +1,7 @@
 import { Breakpoint, Overwrite } from '@mptheme/index.types';
+import { DefaultThemeOptions, PageData, PageFrontmatter, SiteData } from 'vuepress';
 import { Config } from 'tailwindcss';
-import { DefaultThemeOptions } from 'vuepress';
-import { LocaleConfig } from '@vuepress/shared';
+import { Language } from '../plugins/parseTranslations/shared';
 import { NavbarConfig } from '@vuepress/theme-default/lib/shared/nav';
 
 export interface MyPaNavItem {
@@ -15,6 +15,8 @@ export interface MyPaNavLink extends MyPaNavItem {
   rel?: string;
   target?: string;
   activeMatch?: string;
+  multilanguage?: boolean;
+  image?: string;
 }
 
 export interface MyPaNavGroup<T> extends MyPaNavItem {
@@ -67,10 +69,41 @@ export interface MyPaHomepageFrontmatter {
   }[];
 }
 
-export interface MyParcelThemeOptions extends Omit<DefaultThemeOptions, 'sidebar' | 'navbar' | 'locales'> {
+export interface MyPaPageFrontmatter extends PageFrontmatter {
+
+  /**
+   * Set to true if you want the page to automatically show redirect links to languages the same page is available in.
+   */
+  redirect?: boolean;
+
+  /**
+   * Manually define languages to show redirect links for on this page. Put as object to have different urls per
+   * language. You must omit the language path prefix.
+   *
+   * @example // in manual.md
+   *   title: Manual
+   *   languages:
+   *     nl: handleiding.md
+   *
+   * Renders something along the lines of:
+   *   This page is only available in the following languages:
+   *   - [Nederlands](/handleiding.md)
+   */
+  languages?: Record<string, null | string> | OneOrMore<string> | Record<string, string>[];
+}
+
+export interface MyPaThemeData extends Omit<DefaultThemeOptions, 'sidebar' | 'navbar' | 'locales'> {
+  locales?: Record<string, Omit<MyPaThemeData, 'locales'>>;
+}
+
+export interface MyPaSiteData extends SiteData {
   footer2: NavbarConfig;
   footer: NavbarConfig;
   navbar: NavbarConfig;
   sidebar: MyPaSidebarConfig;
-  locales: LocaleConfig<MyParcelThemeOptions>;
+  availableLanguages: ArrayOneOrMore<Language>;
+}
+
+export interface MyPaPageData extends PageData {
+  hasContent: boolean;
 }

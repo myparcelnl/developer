@@ -1,7 +1,7 @@
 <template>
   <component
     :is="tag"
-    class="md:px-8 mx-auto px-5 w-full"
+    class="md:px-6 mx-auto px-4 w-full"
     :class="classes">
     <slot />
   </component>

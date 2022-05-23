@@ -1,7 +1,9 @@
-import { ComputedRef, computed } from 'vue';
+import { ComputedRef, Ref, computed, ref } from 'vue';
 import { isLinkHttp, isLinkMailto, isLinkTel } from '@vuepress/shared';
+import { LOCALE_DEFAULT } from '../../../locales/localeData';
+import { MaybeRef } from '@vueuse/core';
 import { MyPaNavLink } from '@mptheme/config.types';
-import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
+import { isOfType } from '@mptheme/shared/utils';
 import { memoize } from 'lodash-unified';
 import { useNavLink } from '@mptheme/client/composables/useNavLink';
 
@@ -17,18 +19,18 @@ interface UseLink {
 }
 
 // eslint-disable-next-line max-lines-per-function
-const useMemoized = memoize((link: string | MyPaNavLink): UseLink => {
+const useMemoized = memoize((link: Ref<string | MyPaNavLink>): UseLink => {
   const linkItem = computed(() => {
-    if (typeof link === 'string') {
-      const item = useNavLink(link.replace(/\/$/, ''));
+    if (typeof link.value === 'string') {
+      const item = useNavLink(link.value.replace(/\/$/, ''));
 
       if (!item.link.endsWith('.html') && !['#', '?', '&'].some((i) => item.link.includes(i))) {
         item.link += '/';
       }
 
       return item;
-    } else if (isOfType<MyPaNavLink>(link, 'link')) {
-      return link;
+    } else if (isOfType<MyPaNavLink>(link.value, 'link')) {
+      return link.value;
     }
 
     return {
@@ -89,9 +91,4 @@ const useMemoized = memoize((link: string | MyPaNavLink): UseLink => {
   };
 });
 
-/**
- *
- */
-export function useLink(link: MyPaNavLink | string): UseLink {
-  return useMemoized(link);
-}
+export const useLink = (link: MaybeRef<MyPaNavLink | string>): UseLink => useMemoized(ref(link));

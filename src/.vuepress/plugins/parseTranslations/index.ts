@@ -1,0 +1,1 @@
+export { parseTranslationsPlugin } from './node';

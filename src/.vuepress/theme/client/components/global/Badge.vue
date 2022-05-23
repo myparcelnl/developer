@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <span class="bg-goldfish-200 dark:bg-goldfish-800 px-2 py-0.5 rounded-full text-xs">
     <slot />
   </span>
 </template>

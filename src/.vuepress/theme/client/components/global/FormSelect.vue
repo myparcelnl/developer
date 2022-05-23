@@ -13,7 +13,7 @@
         selected
         disabled
         value="">
-        {{ themeLocaleData.select_empty_option }}
+        {{ translate('selectEmptyOption') }}
       </option>
 
       <option
@@ -31,8 +31,8 @@ import { PropType, defineComponent } from 'vue';
 import FormField from '@mptheme/client/components/global/FormField.vue';
 import { defaultFormProps } from '@mptheme/client/defaultFormProps';
 import { defaultInputClasses } from '@mptheme/client/defaultInputClasses';
-import { useSiteLocaleData } from '@mptheme/client/composables/useSiteLocaleData';
 import { useVModel } from '@vueuse/core';
+import { useTranslate } from '@mptheme/client/composables';
 
 interface SelectOption {
   name: string;
@@ -58,10 +58,12 @@ export default defineComponent({
 
   emits: ['update:modelValue'],
 
-  setup: (props, ctx) => ({
-    themeLocaleData: useSiteLocaleData(),
-    model: useVModel(props, 'modelValue', ctx.emit),
-    classes: defaultInputClasses,
-  }),
+  setup: (props, ctx) => {
+    return {
+      translate: useTranslate(),
+      model: useVModel(props, 'modelValue', ctx.emit),
+      classes: defaultInputClasses,
+    };
+  },
 });
 </script>

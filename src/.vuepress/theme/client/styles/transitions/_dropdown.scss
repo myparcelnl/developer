@@ -3,3 +3,9 @@
 .dropdown-leave-to {
   height: 0 !important;
 }
+
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: height .1s ease-out;
+  overflow: hidden;
+}

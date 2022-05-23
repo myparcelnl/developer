@@ -36,8 +36,7 @@
           v-if="link"
           class="inline-flex"
           :aria-label="ariaLabel"
-          :variant="buttonVariant"
-          :class="buttonClass">
+          v-bind="buttonAttributes">
           <template v-if="linkText">
             {{ linkText }}
           </template>
@@ -56,12 +55,7 @@
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
-import { buttonVariant } from '@mptheme/client/services/tailwind/variants/buttonVariant';
 import { defineComponent } from 'vue';
-import { merge } from 'lodash-unified';
-import { useTailwindVariant } from '@mptheme/client/composables/useTailwindVariant';
-
-const buttonTailwindVariant = useTailwindVariant(buttonVariant);
 
 export default defineComponent({
   name: 'Cta',
@@ -98,14 +92,6 @@ export default defineComponent({
       required: true,
     },
 
-    buttonVariant: merge(
-      {},
-      buttonTailwindVariant.createVariantProp(),
-      {
-        default: 'outline',
-      },
-    ),
-
     linkText: {
       type: String,
       default: null,
@@ -116,14 +102,14 @@ export default defineComponent({
       default: null,
     },
 
-    buttonClass: {
-      type: String,
-      default: null,
-    },
-
     heading: {
       type: String,
       default: 'h3',
+    },
+
+    buttonAttributes: {
+      type: Object,
+      default: null,
     },
   },
 });

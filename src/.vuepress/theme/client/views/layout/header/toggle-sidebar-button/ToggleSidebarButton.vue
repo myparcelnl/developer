@@ -2,7 +2,8 @@
   <div
     v-if="hasSidebar"
     class="cursor-pointer flex lg:hidden p-3"
-    :title="themeLocale.toggleSidebar"
+    :title="translate('toggleSidebar')"
+    :aria-label="translate('toggleSidebar')"
     aria-expanded="false"
     role="button"
     tabindex="0"
@@ -37,21 +38,21 @@
 </template>
 
 <script lang="ts">
+import { useSidebar, useSiteLocaleData, useTranslate } from '@mptheme/client/composables';
 import { defineComponent } from 'vue';
-import { useSidebar } from '@mptheme/client/composables';
-import { useThemeLocaleData } from '@mptheme/client/composables/useThemeLocaleData';
 
 export default defineComponent({
   name: 'ToggleSidebarButton',
   emits: ['toggle'],
   setup: (props, ctx) => {
     const sidebar = useSidebar();
-    const themeLocale = useThemeLocaleData();
+    const translate = useTranslate();
 
     return {
-      themeLocale,
+      translate,
       toggled: sidebar.isOpen,
       hasSidebar: sidebar.exists,
+
       toggle() {
         sidebar.toggle();
         ctx.emit('toggle');

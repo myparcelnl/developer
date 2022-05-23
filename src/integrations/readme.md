@@ -4,6 +4,10 @@ sidebar: auto
 editLink: false
 lastUpdated: false
 contributors: false
+languages:
+
+- nl: integraties
+
 ---
 
 ## Plug-ins
@@ -16,7 +20,8 @@ to install and configure.
 
 ## SDKs (Software Development Kits)
 
-An SDK can be used to quickly integrate with our API and skip a lot of the work that comes with manually developing an API integration. 
+An SDK can be used to quickly integrate with our API and skip a lot of the work
+that comes with manually developing an API integration.
 
 <Integrations type="sdk" />
 
@@ -30,7 +35,10 @@ add the ability to import shipments from your platform(s) into ours.
 ## Utilities
 
 The following items are utilities you can use together with other
-integrations. The Chrome Extension provides a way to quickly create shipments from any website and can be useful regardless of whether you use any other integrations. Our Delivery Options module is already integrated in many of our plug-ins. 
+integrations. The Chrome Extension provides a way to quickly create shipments
+from any website and can be useful regardless of whether you use any other
+integrations. Our Delivery Options module is already integrated in many of our
+plug-ins.
 
 <Integrations type="utility" />
 
