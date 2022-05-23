@@ -5987,6 +5987,14 @@ onetime@^5.1.0, onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
+only-allow@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/only-allow/-/only-allow-1.1.0.tgz#73c4ea88f4b6d415a181791cc2c49ba0b4029138"
+  integrity sha512-HYiuMpRuy0d0DjoQZwhwO1Ueal0NXJ2I4mNxLv3aGw/1naRcAAzVC953WNpcbjlo+ak3WsoKDjHvoMd2cSZLpw==
+  dependencies:
+    boxen "^4.2.0"
+    which-pm-runs "^1.1.0"
+
 open@^8.4.0:
   version "8.4.0"
   resolved "https://registry.yarnpkg.com/open/-/open-8.4.0.tgz#345321ae18f8138f82565a910fdc6b39e8c244f8"

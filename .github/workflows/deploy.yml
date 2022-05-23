@@ -1,27 +1,47 @@
-name: 'Deploy'
+name: 'Deploy site'
 
 on:
+  workflow_dispatch:
+
   push:
     branches:
       - main
+    paths-ignore:
+      - plop-templates/**/*
+      - private/**/*
+      - test/**/*
+      - types/**/*
+      - .eslint*
+      - .gitignore
+      - README.md
+      - docker-compose.yml
+      - jest.config.ts
+      - plopfile.js
+      - vitest.config.ts
 
 jobs:
   build:
     name: 'Build site'
-    uses: myparcelnl/developer-portal/.github/workflows/build.yml@main
+    uses: myparcelnl/developer/.github/workflows/build.yml@main
 
-  publish:
-    name: 'Publish to GitHub pages'
+  deploy:
+    name: 'Deploy to GitHub pages'
     runs-on: ubuntu-20.04
     needs: build
     steps:
+      - uses: actions/checkout@v3
+
       - uses: actions/download-artifact@v3
         with:
           name: build
+          path: developer
+
+      - name: 'show tree'
+        run: npx -q tree-cli -l 5
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
-          folder: src/.vuepress/dist
+          folder: developer
           token: ${{ secrets.GH_REPO_TOKEN }}
