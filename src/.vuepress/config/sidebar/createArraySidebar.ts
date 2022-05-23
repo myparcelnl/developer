@@ -9,11 +9,12 @@ export const createArraySidebar = (baseDir: string): MyPaSidebarConfigArray => {
   const { sidebar } = getVuePressBarConfig(baseDir);
   const sidebarV2: MyPaSidebarConfigArray = transformSidebar(sidebar, path.relative(SRC_DIR, baseDir));
   const basename = path.basename(baseDir);
-  const title = ROUTES.find((route) => route.link.slice(1) === basename);
+  const route = ROUTES.find((route) => route.link.slice(1) === basename);
 
   return [
     {
-      text: title?.text ?? basename,
+      text: route?.text ?? basename,
+      link: route?.link,
       children: sidebarV2,
     },
   ];

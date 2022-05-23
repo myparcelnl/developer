@@ -56,7 +56,16 @@ export default defineComponent({
   },
 
   setup: (props) => {
-    const { linkItem, linkTarget, isRouterLink, linkAriaLabel, linkRel, isBlankTarget } = useLink(props.item);
+    const propRefs = toRefs(props);
+
+    const {
+      linkItem,
+      linkTarget,
+      isRouterLink,
+      linkAriaLabel,
+      linkRel,
+      isBlankTarget,
+    } = useLink(propRefs.item);
     const route = useRouter().currentRoute.value;
     const site = useSiteData();
 

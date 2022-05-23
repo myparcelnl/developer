@@ -1,5 +1,7 @@
 ---
 title: Documentation
+sidebarDepth: 2
+sidebarExpanded: true
 ---
 
 ## Jump in

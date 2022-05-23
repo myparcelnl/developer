@@ -23,6 +23,7 @@
   "scripts": {
     "build": "yarn optimize:svg -q && vuepress build src",
     "dev": "vuepress dev src",
+    "translations:import": "npx -q @edielemoine/google-docs-importer -o src/.vuepress/public/translations && node private/importTranslations.mjs",
     "preinstall": "npx -q only-allow yarn",
     "optimize:svg": "svgo -r --multipass --final-newline --folder src/.vuepress/public",
     "prepare": "husky install",
@@ -54,6 +55,7 @@
     "vuepress-bar": "^0.4.4"
   },
   "devDependencies": {
+    "@edielemoine/google-docs-importer": "/Users/edie/Sites/docs-translations-importer/edielemoine-google-docs-importer-1.0.2.tgz",
     "@myparcel/eslint-config": "^3.6.1",
     "@myparcel/sdk": "^2.3.1",
     "@tsconfig/node16": "^1.0.3",

@@ -1,8 +1,7 @@
-import { MyParcelThemeOptions } from '@mptheme/config.types';
-import enGb from '../public/translations/en-GB.json';
-import nlNl from '../public/translations/nl-NL.json';
+import { getLocales } from './getLocales';
 
-export const getThemeLocales = (): MyParcelThemeOptions['locales'] => ({
-  '/': enGb,
-  '/nl/': nlNl,
-});
+export const getThemeLocales = async() => {
+  const locales = await getLocales();
+
+  return locales.theme;
+};

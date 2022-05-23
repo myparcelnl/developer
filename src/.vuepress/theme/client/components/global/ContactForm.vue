@@ -56,7 +56,7 @@ import FormTextArea from '@mptheme/client/components/global/FormTextArea.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import Message from '@mptheme/client/components/global/Message.vue';
 import ReCaptcha from '@mptheme/client/components/common/ReCaptcha.vue';
-import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
+import { isOfType } from '@mptheme/shared/utils/type-guard/isOfType';
 import { useTranslate } from '@mptheme/client/composables/useTranslate';
 
 export default defineComponent({

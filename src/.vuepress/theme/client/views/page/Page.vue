@@ -15,6 +15,10 @@
           :is="frontmatter.content"
           v-if="frontmatter.content" />
 
+        <RedirectContent
+          v-if="frontmatter.redirect"
+          :to="frontmatter.redirect" />
+
         <Content v-else />
       </slot>
     </ContentContainer>
