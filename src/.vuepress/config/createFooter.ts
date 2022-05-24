@@ -23,6 +23,7 @@ export const createFooter = (): NavbarConfigArray => {
       ...CONTACT,
       children: [
         { text: 'Join our Slack workspace', link: 'https://slack.com' },
+        { text: 'Learn more about partnerships', link: 'https://www.myparcel.nl/partner-worden/' },
       ],
     },
     {
@@ -30,7 +31,6 @@ export const createFooter = (): NavbarConfigArray => {
       children: [
         STATUS,
         ABOUT,
-        CONTACT,
         { text: 'Jobs', link: 'https://www.myparcel.nl/vacature/development/' },
         { text: 'GitHub', link: 'https://github.com/myparcelnl' },
         { text: 'MyParcel', link: 'https://www.myparcel.nl/' },
