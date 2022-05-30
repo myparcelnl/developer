@@ -1,5 +1,5 @@
 ---
-title: integrations
+title: Integrations
 sidebar: auto
 editLink: false
 lastUpdated: false
