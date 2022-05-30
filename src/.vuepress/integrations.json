@@ -272,5 +272,12 @@
     "type": "other",
     "documentation": "https://ipacky.com/shipping-connectors-overview/",
     "image": "iPacky.png"
+  },
+  {
+    "name": "e-tailize",
+    "title": "e-tailize",
+    "type": "other",
+    "documentation": "https://help.e-tailize.com/en/articles/186674-connecting-myparcel",
+    "image": "e-tailize.png"
   }
 ]
