@@ -6,7 +6,7 @@ export const createFooter = (): NavbarConfigArray => {
     {
       ...DOCUMENTATION,
       children: [
-        { text: 'Getting started', link: '/documentation/getting-started' },
+        { text: 'Getting started', link: '/getting-started' },
       ],
     },
     {
