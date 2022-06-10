@@ -1,1 +1,0 @@
-const e={key:"v-7cd9cf3b",path:"/brands/zuivelhoeve/",title:"Brands zuivelhoeve",lang:"en-GB",frontmatter:{title:"Brands zuivelhoeve"},excerpt:"",headers:[],git:{updatedTime:1653999784e3,contributors:[{name:"Richard Perdaan",email:"richard@myparcel.nl",commits:1}]},filePathRelative:"brands/zuivelhoeve/readme.md"};export{e as data};
