@@ -1,1 +1,0 @@
-const t={key:"v-16c6f207",path:"/documentation/51.js-sdk/01.installation.html",title:"Installation",lang:"en-GB",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1654843818e3,contributors:[{name:"Thijmen Wijers",email:"106662400+wthijmen@users.noreply.github.com",commits:1}]},filePathRelative:"documentation/51.js-sdk/01.installation.md"};export{t as data};

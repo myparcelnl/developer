@@ -1,0 +1,1 @@
+const e={key:"v-27d4d67c",path:"/documentation/60.delivery-options/09.options.html",title:"Options",lang:"en-GB",frontmatter:{title:"Options"},excerpt:"",headers:[],git:{updatedTime:1655191992e3,contributors:[{name:"Edie Lemoine",email:"edie.lemoine@gmail.com",commits:1}]},filePathRelative:"documentation/60.delivery-options/09.options.md"};export{e as data};

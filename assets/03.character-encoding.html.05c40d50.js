@@ -1,1 +1,0 @@
-const e={key:"v-c1b39032",path:"/api-reference/03.character-encoding.html",title:"3. Character encoding",lang:"en-GB",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1654843818e3,contributors:[{name:"Thijmen Wijers",email:"106662400+wthijmen@users.noreply.github.com",commits:1}]},filePathRelative:"api-reference/03.character-encoding.md"};export{e as data};
