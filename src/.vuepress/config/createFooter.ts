@@ -22,7 +22,7 @@ export const createFooter = (): NavbarConfigArray => {
     {
       ...CONTACT,
       children: [
-        { text: 'Join our Slack workspace', link: 'https://slack.com' },
+        { text: 'Join our Slack workspace', link: 'https://myparcel-dev.slack.com/ssb/redirect' },
         { text: 'Learn more about partnerships', link: 'https://www.myparcel.nl/partner-worden/' },
       ],
     },
