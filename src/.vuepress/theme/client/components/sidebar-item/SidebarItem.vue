@@ -107,7 +107,7 @@ export default defineComponent({
       classes: computed(() => [
         'py-1 flex transition-all duration-100',
         {
-          'text-xl font-bold leading-8': depth.value === 0,
+          'text-xl font-bold leading-8 page-parent': depth.value === 0,
           'text-goldfish-500': depth.value > 0 && isActive.value,
           'border-transparent': depth.value === 0 || !isActive.value,
         },
