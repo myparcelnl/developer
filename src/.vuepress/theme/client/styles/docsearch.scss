@@ -38,24 +38,16 @@
 }
 
 .DocSearch-Container {
-  @apply h-full absolute fixed z-40 inset-0 h-full w-full bg-black bg-opacity-70;
-
-  &, * {
-    @apply box-border;
-  }
-
-  a {
-    @apply no-underline;
-  }
+  @apply h-full fixed z-40 inset-0 h-full w-full bg-black bg-opacity-70 py-6;
 }
 
 .DocSearch-Link {
-  @apply appearance-none border-0  m-0 p-0;
+  @apply appearance-none border-0;
   background-image: none;
 }
 
 .DocSearch-Modal {
-  @apply cursor-auto rounded-none m-0 max-w-4xl shadow-none w-full mx-auto shadow bg-white dark:bg-zinc-900 mt-10 rounded-lg;
+  @apply cursor-auto max-w-4xl w-full mx-auto shadow bg-white dark:bg-zinc-900 max-h-fit rounded-lg flex flex-col max-h-full;
 
   ul {
     @apply m-0 p-0;
@@ -67,11 +59,11 @@
 }
 
 .DocSearch-Form {
-  @apply rounded-full flex items-center h-16 m-0 py-0 px-4 relative shadow-none w-full border;
+  @apply rounded-full flex items-center p-4 relative shadow-none w-full border;
 }
 
 .DocSearch-Input {
-  @apply appearance-none bg-transparent border-0 flex-grow h-full text-xl py-0 pr-0 pl-2 outline-none w-9/12;
+  @apply appearance-none bg-transparent border-0 flex-grow h-full py-0 pr-0 pl-2 outline-none w-9/12;
 }
 
 .DocSearch-Input::-webkit-search-cancel-button,
@@ -118,7 +110,7 @@
 }
 
 .DocSearch-Dropdown {
-  @apply h-full px-5 pb-5;
+  @apply overflow-y-scroll flex-shrink;
 
   &::-webkit-scrollbar {
     @apply w-3;
@@ -161,42 +153,41 @@
 }
 
 .DocSearch-HitsFooter {
-  @apply flex justify-center text-sm mb-4 p-4 text-zinc-500;
+  //@apply flex justify-center text-sm mb-4 p-4 text-zinc-500;
   //color: rgba(150, 159, 175, 1);
 
-  a {
-    @apply border-solid border-b;
-  }
+  //a {
+    //@apply border-solid border-b;
+  //}
 }
 
 .DocSearch-Hit {
-  @apply rounded-lg flex pb-1 relative transition transition-colors duration-100;
-
-  &:hover a,
-  &:focus a,
-  &[aria-selected=true] a {
-    @apply bg-zinc-200 outline-zinc-300 dark:bg-zinc-800 outline-zinc-700;
-  }
+  @apply flex relative transition transition-colors duration-100;
 
   mark {
     @apply underline bg-amber-400 py-1 rounded-sm;
   }
 
+  &--deleting,
+  &--favoriting {
+    @apply transition-all duration-100;
+  }
+
   &--deleting {
-    @apply opacity-0 transition-all duration-200;
+    @apply opacity-0;
   }
 
   &--favoriting {
-    @apply scale-0 transform origin-top delay-200 transition-all duration-200;
+    @apply scale-0 transform origin-top;
   }
 
   a {
-    @apply bg-zinc-50 dark:bg-zinc-700 rounded-sm block pl-4 shadow-none w-full;
+    @apply px-4 w-full;
   }
 }
 
 .DocSearch-Hit-source {
-  @apply font-semibold text-sm leading-8 my-0 -mx-1 px-1 pb-0 pt-2 sticky top-0 z-10;
+  @apply font-semibold leading-8 px-4 py-2 border-b;
 }
 
 .DocSearch-Hit-Tree {
@@ -214,7 +205,7 @@
 .DocSearch-Hit-icon,
 .DocSearch-Screen-Icon,
 .DocSearch-Search-Icon {
-  @apply text-zinc-500 antialiased stroke-[1.5];
+  @apply antialiased stroke-[1.5];
 }
 
 // Buttons to the right of results.
@@ -224,6 +215,15 @@
   & + & {
     @apply -ml-1;
   }
+}
+
+.Docsearch-Hit {
+  &:hover a,
+  &:focus a,
+  &[aria-selected=true] a {
+    @apply bg-monstera-100 dark:bg-goldfish-800 text-goldfish-500 dark:text-goldfish-400;
+  }
+
 }
 
 .DocSearch-Hit-action-button {
@@ -249,11 +249,11 @@
 }
 
 .DocSearch-Hit-content-wrapper {
-  @apply flex relative;
+  @apply flex relative flex-col-reverse;
 }
 
 .DocSearch-Hit-path {
-  @apply text-sm ml-2 my-auto text-zinc-500;
+  @apply text-sm my-auto text-zinc-500 dark:text-zinc-400;
 }
 
 .DocSearch-ErrorScreen,
@@ -279,19 +279,19 @@
 }
 
 .DocSearch-Prefill {
-  @apply appearance-none border-0 inline-block font-bold text-base p-0 rounded-lg;
+  @apply appearance-none border-0 inline-block font-bold text-base rounded-lg;
 }
 
 .DocSearch-Footer {
-  @apply absolute bottom-0;
+  @apply p-4 border-t flex-row-reverse flex justify-between flex-wrap;
 }
 
 .DocSearch-Commands {
-  @apply flex m-0 p-0 text-zinc-700;
+  @apply flex text-zinc-700;
 }
 
 .DocSearch-Commands li {
-  @apply flex items-center;
+  @apply flex mr-2 items-center;
 }
 
 .DocSearch-Commands-Key {
@@ -325,3 +325,6 @@
   @apply outline-none underline;
 }
 
+.DocSearch-Hit-Select-Icon {
+  @apply hidden;
+}
