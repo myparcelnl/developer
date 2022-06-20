@@ -3,6 +3,7 @@
     v-if="exists"
     class="fixed h-full transition-all w-80 z-30"
     :class="{
+      'ds__ignore': isNavbar,
       '-translate-x-full': !isOpen,
       'xl:translate-x-0': !isOpen && !isNavbar,
       'translate-x-0': isOpen,
