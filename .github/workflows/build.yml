@@ -8,6 +8,11 @@ on:
         required: false
         default: ''
 
+      upload:
+        type: boolean
+        default: false
+        required: false
+
 jobs:
   build:
     name: 'Create build'
@@ -23,6 +28,9 @@ jobs:
         with:
           path: src/.vuepress/dist
           key: ${{ runner.os }}-build-${{ hashFiles('**/*.lock') }}-${{ hashFiles('src/**/*') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ hashFiles('**/*.lock') }}
+            ${{ runner.os }}-build
 
       - uses: myparcelnl/actions/yarn-install@v2
         if: steps.cache-build.outputs.cache-hit != 'true'
@@ -31,6 +39,7 @@ jobs:
         if: steps.cache-build.outputs.cache-hit != 'true'
 
       - uses: actions/upload-artifact@v3
+        if: inputs.upload != 'false'
         with:
           name: build
           path: src/.vuepress/dist

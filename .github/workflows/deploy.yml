@@ -23,6 +23,9 @@ jobs:
   build:
     name: 'Build site'
     uses: myparcelnl/developer/.github/workflows/build.yml@main
+    secrets: inherit
+    with:
+      upload: true
 
   deploy:
     name: 'Deploy to GitHub pages'
@@ -35,9 +38,6 @@ jobs:
         with:
           name: build
           path: developer
-
-      - name: 'show tree'
-        run: npx -q tree-cli -l 5
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
