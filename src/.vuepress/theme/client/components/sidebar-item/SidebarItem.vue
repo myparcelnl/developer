@@ -107,7 +107,7 @@ export default defineComponent({
       classes: computed(() => [
         'py-1 flex transition-all duration-100',
         {
-          'sidebar-item--has-children': item.value.collapsible,
+          'sidebar-item--has-children': item.value.children?.length,
           'text-xl font-bold leading-8 page-parent': depth.value === 0,
           'text-goldfish-500 sidebar-item--active': depth.value > 0 && isActive.value,
           'border-transparent': depth.value === 0 || !isActive.value,
