@@ -1,1 +1,0 @@
-const e={key:"v-18deb30b",path:"/documentation/20.wix/",title:"Inleiding",lang:"en-GB",frontmatter:{title:"Inleiding"},excerpt:"",headers:[],git:{updatedTime:1655716445e3,contributors:[{name:"Edie Lemoine",email:"edie@myparcel.nl",commits:1}]},filePathRelative:"documentation/20.wix/readme.md"};export{e as data};

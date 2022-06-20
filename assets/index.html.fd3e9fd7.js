@@ -1,0 +1,1 @@
+import{f as e,o as r}from"./app.b2ce2522.js";import{_ as n}from"./plugin-vue_export-helper.21dcd24c.js";const t={};function o(_,a){return r(),e("p",null,"This is a new page")}var f=n(t,[["render",o],["__file","index.html.vue"]]);export{f as default};
