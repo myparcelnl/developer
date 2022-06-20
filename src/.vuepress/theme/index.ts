@@ -82,8 +82,9 @@ const theme: Theme<ThemeConfig> = (config, app) => {
       [
         '@vuepress/docsearch',
         {
-          apiKey: 'a54eaf74e6cdcbc9f373bb3c60786b2b',
-          indexName: 'myparcelnl',
+          appId: 'CN8B8S1EFL',
+          apiKey: '4c55bbf8ccfb57cb5c3132c03fc9728b',
+          indexName: 'developer-myparcel',
           locales: {
             '/': {
               placeholder: 'Search',
