@@ -1,0 +1,1 @@
+const t={key:"v-9db00934",path:"/documentation/14.shopify/",title:"Introductie",lang:"en-GB",frontmatter:{title:"Introductie"},excerpt:"",headers:[],git:{updatedTime:1657546604e3,contributors:[{name:"Richard Perdaan",email:"richard@myparcel.nl",commits:1}]},filePathRelative:"documentation/14.shopify/readme.md"};export{t as data};
