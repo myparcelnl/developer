@@ -65,6 +65,7 @@ Plug-ins integrate with your webshop directly.
     <Integration name="fulfilment-software" />
     <Integration name="iPacky" />
     <Integration name="e-tailize" />
+    <Integration name="stockitup" />
 </Stack>
 
 ::: tip Missing your favorite language or platform?

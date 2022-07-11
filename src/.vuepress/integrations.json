@@ -279,5 +279,12 @@
     "type": "other",
     "documentation": "https://help.e-tailize.com/en/articles/186674-connecting-myparcel",
     "image": "e-tailize.png"
+  },
+  {
+    "name": "stockitup",
+    "title": "Stockitup",
+    "type": "other",
+    "image": "stockitup.png",
+    "classes": "bg-[#05386b]"
   }
 ]
