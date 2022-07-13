@@ -3,7 +3,7 @@ home: true
 sidebar: none
 
 title: Go Beyond Delivery with MyParcel.
-subtitle: Connect with our API and get started with shipments, returns and more.
+subtitle: Connect with the MyParcel API and get started with shipments, returns and more.
 
 actions: 
 - title: Get started

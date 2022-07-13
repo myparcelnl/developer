@@ -19,7 +19,8 @@
         :class="imgClass"
         :src="img" />
 
-      <h2
+      <component
+        :is="heading"
         v-if="title"
         class="pb-0"
         v-text="title" />
@@ -111,6 +112,11 @@ export default defineComponent({
     buttonClass: {
       type: String,
       default: null,
+    },
+
+    heading: {
+      type: String,
+      default: 'h3',
     },
   },
 });
