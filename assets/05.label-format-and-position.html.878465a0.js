@@ -1,7 +1,0 @@
-import{r as o,f as t,h as a,z as s,F as n,K as i,e as l,o as c}from"./app.6b7de2d8.js";import{_ as r}from"./plugin-vue_export-helper.21dcd24c.js";const d={},p=i(`<p>Choose to output the label as either A4 or A6 when creating a pdf or download link with the argument <code>$positions</code> of <code>setPdfOfLabels($positions)</code> and <code>setLinkOfLabels($positions)</code>.</p><p>Example values for <code>$positions</code>:</p><div class="language-text ext-text"><pre class="language-text"><code>A4:            A6:
-\u250F\u2501\u2501\u2501\u2501\u2501\u2533\u2501\u2501\u2501\u2501\u2501\u2513  \u250F\u2501\u2501\u2501\u2501\u2501\u2513
-\u2503  1  \u2503  2  \u2503  \u2503  x  \u2503
-\u2523\u2501\u2501\u2501\u2501\u2501\u254B\u2501\u2501\u2501\u2501\u2501\u252B  \u2517\u2501\u2501\u2501\u2501\u2501\u251B
-\u2503  3  \u2503  4  \u2503
-\u2517\u2501\u2501\u2501\u2501\u2501\u253B\u2501\u2501\u2501\u2501\u2501\u251B  
-</code></pre></div><ol><li><code>1</code>: Default value. Outputs A4, starting at top left position.</li><li><code>false</code>: Outputs at A6 format</li><li><code>[1,4]</code>: Defines the position of labels on an A4 sheet. Only applies to the first page, subsequent pages will use the default positioning (1,2,3,4)</li></ol>`,4),f=l("More information: ");function u(_,m){const e=o("ApiLink");return c(),t(n,null,[p,a("p",null,[f,s(e,{to:"6_F"})])],64)}var x=r(d,[["render",u],["__file","05.label-format-and-position.html.vue"]]);export{x as default};

@@ -1,1 +1,0 @@
-const t={key:"v-65b213d9",path:"/documentation/11.prestashop/10.contribute.html",title:"Contribute",lang:"en-GB",frontmatter:{title:"Contribute"},excerpt:"",headers:[],git:{updatedTime:1657546604e3,contributors:[{name:"Richard Perdaan",email:"richard@myparcel.nl",commits:1}]},filePathRelative:"documentation/11.prestashop/10.contribute.md"};export{t as data};
