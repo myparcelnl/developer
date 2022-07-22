@@ -1,20 +1,15 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json",
+  "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
-    "esModuleInterop": true,
     "lib": [
-      "esnext",
+      "es2021",
       "dom"
     ],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ESNext",
     "noEmit": true,
-    "resolveJsonModule": true,
-    "noImplicitReturns": true,
-    "target": "esnext",
     "paths": {
       // Vuepress default theme
       "@theme/*": [
@@ -27,16 +22,28 @@
       "@Public/*": [
         "src/.vuepress/public/*"
       ]
-    }
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "@vuepress/client",
+      "vite/client",
+      "vitest/globals"
+    ]
   },
   "include": [
+    "./*.cjs",
     "./*.js",
+    "./*.mjs",
     "./*.ts",
-    "./node_modules/@vuepress/**/*.d.ts",
+    "./src/**/*",
     "./src/.vuepress/**/*",
-    "./types/**/*.d.ts"
+    "./test/**/*",
+    "./types/**/*"
   ],
   "exclude": [
+    "**/.vuepress/.cache",
+    "**/.vuepress/.temp",
+    "**/.vuepress/dist",
     "**/node_modules"
   ]
 }

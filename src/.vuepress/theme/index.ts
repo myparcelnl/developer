@@ -1,65 +1,50 @@
 /* eslint-disable max-lines-per-function */
 import { DIR_CLIENT, DIR_THEME } from './shared/directories';
-import { Theme } from 'vuepress';
-import { ThemeConfig } from './config.types';
+import { MyParcelThemeOptions } from './config.types';
+import { Theme } from '@vuepress/core';
+import { activeHeaderLinksPlugin } from '@vuepress/plugin-active-header-links';
 import { autoLinkPlugin } from './node/plugins/autoLinkPlugin';
 import { createAliasMap } from './node/config/createAliasMap';
-import { createContainerPluginss } from './node/config/createContainerPlugin';
-import { defaultTheme } from '@vuepress/theme-default';
+import { createContainerPlugins } from './node/config/createContainerPlugin';
+import { docsearchPlugin } from '@vuepress/plugin-docsearch';
+import { externalLinkIconPlugin } from '@vuepress/plugin-external-link-icon';
+import { gitPlugin } from '@vuepress/plugin-git';
+import { incrementHeadingsPlugin } from './node/plugins/incrementHeadingsPlugin';
+import { palettePlugin } from '@vuepress/plugin-palette';
 import { path } from '@vuepress/utils';
-import { registerComponentsPlugin } from './node/plugins/registerComponentsPlugin';
+import { registerCustomComponentsPlugin } from './node/plugins/registerCustomComponentsPlugin';
+import { themeDataPlugin } from '@vuepress/plugin-theme-data';
 
-const components = path.resolve(DIR_CLIENT, 'components');
 const views = path.resolve(DIR_CLIENT, 'views');
 
-// interface MyParcelThemeOptions {
-//   footer2: NavbarConfig;
-//   footer: NavbarConfig;
-//   navbar: NavbarConfig;
-//   sidebar: SidebarConfig;
-//   defaultTheme: DefaultThemeOptions;
-// }
-//
-// // export const myParcelTheme = (options: MyParcelThemeOptions): Theme => {
-// const theme = () => {
-//   const defaultThemeData = defaultTheme(options.defaultTheme);
-//
-
-const theme: Theme<ThemeConfig> = (config, app) => {
-  const defaultThemeData = typeof defaultTheme === 'function' ? defaultTheme(config, app) : null;
-
+export const myParcelTheme = (options: MyParcelThemeOptions): Theme => {
   return {
-    ...defaultThemeData,
-
     name: '@myparcel/developer-portal',
 
+    layouts: {
+      Layout: `${views}/layout/layout/Layout.vue`,
+      // eslint-disable-next-line @typescript-eslint/no-magic-numbers
+      404: `${views}/404Page/404Page.vue`,
+    },
+
     alias: {
-      ...defaultThemeData?.alias,
-
-      '@theme/AutoLink.vue': `${components}/auto-link/AutoLink.vue`,
-      '@theme/Home.vue': `${views}/home/Home.vue`,
-      '@theme/HomeContent.vue': `${views}/home/home-content/HomeContent.vue`,
-      '@theme/HomeFooter.vue': `${views}/home/home-footer/HomeFooter.vue`,
-      '@theme/HomeHero.vue': `${views}/home/home-hero/HomeHero.vue`,
-      '@theme/Navbar.vue': `${views}/layout/header/MPHeader.vue`,
-      '@theme/NavbarBrand.vue': `${views}/layout/navbar-brand/NavbarBrand.vue`,
-      '@theme/NavbarDropdown.vue': `${components}/navbar-dropdown/NavbarDropdown.vue`,
-      '@theme/Page.vue': `${views}/page/Page.vue`,
-      '@theme/PageMeta.vue': `${views}/page/page-meta/PageMeta.vue`,
-      '@theme/PageNav.vue': `${views}/page/page-nav/PageNav.vue`,
-      '@theme/Sidebar.vue': `${views}/layout/sidebar/MPSidebar.vue`,
-      '@theme/SidebarItem.vue': `${components}/sidebar-item/SidebarItem.vue`,
-      '@theme/SidebarItems.vue': `${views}/layout/sidebar-items/SidebarItems.vue`,
-      '@theme/ToggleSidebarButton.vue': `${views}/layout/toggle-sidebar-button/ToggleSidebarButton.vue`,
-
       // Replace docsearch css entirely
       '@docsearch/css': path.resolve(DIR_CLIENT, 'styles', 'docsearch.scss'),
 
       ...createAliasMap(DIR_THEME, '@mptheme'),
     },
 
-    clientAppEnhanceFiles: path.resolve(DIR_CLIENT, 'clientAppEnhance.ts'),
-    clientAppSetupFiles: path.resolve(DIR_CLIENT, 'clientAppSetup.ts'),
+    clientConfigFile: path.resolve(DIR_CLIENT, 'clientConfig.ts'),
+
+    extendsPage: (page) => {
+      // save relative file path into page data to generate edit link
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      page.data.filePathRelative = page.filePathRelative;
+
+      // save title into route meta to generate navbar and sidebar
+      page.routeMeta.title = page.title;
+    },
 
     extendsMarkdown: (md) => {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -74,39 +59,25 @@ const theme: Theme<ThemeConfig> = (config, app) => {
      * @see https://v2.vuepress.vuejs.org/guide/plugin.html#community-plugin
      */
     plugins: [
-      ...defaultThemeData?.plugins ?? [],
-
+      ...createContainerPlugins(),
+      activeHeaderLinksPlugin({
+        headerLinkSelector: 'a.sidebar-item',
+        headerAnchorSelector: '.header-anchor',
+      }),
+      externalLinkIconPlugin({ }),
+      themeDataPlugin({
+        themeData: options,
+      }),
+      palettePlugin({}),
       autoLinkPlugin(),
-      ...createContainerPluginss(),
-
-      [
-        '@vuepress/docsearch',
-        {
-          appId: 'CN8B8S1EFL',
-          apiKey: '4c55bbf8ccfb57cb5c3132c03fc9728b',
-          indexName: 'developer-myparcel',
-          locales: {
-            '/': {
-              placeholder: 'Search',
-            },
-          },
-        },
-      ],
-
-      registerComponentsPlugin(),
-
-      // docsearchPlugin({
-      //   apiKey: 'a54eaf74e6cdcbc9f373bb3c60786b2b',
-      //   appId: '',
-      //   indexName: 'myparcelnl',
-      // }),
-      //
-      // // Register components for use in .md files.
-      // registerComponentsPlugin({
-      //   components: getComponents(),
-      // }),
+      gitPlugin(),
+      incrementHeadingsPlugin(),
+      registerCustomComponentsPlugin(),
+      docsearchPlugin({
+        appId: 'CN8B8S1EFL',
+        apiKey: '4c55bbf8ccfb57cb5c3132c03fc9728b',
+        indexName: 'developer-myparcel',
+      }),
     ],
   };
 };
-
-export default theme;

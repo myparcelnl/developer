@@ -11,7 +11,7 @@ import { computed, defineComponent } from 'vue';
 import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
 import { blockVariant } from '@mptheme/client/services/tailwind/variants/blockVariant';
 import { toArray } from '@mptheme/client/utils/toArray';
-import { useTailwindVariant } from '@mptheme/client/services/composables/useTailwindVariant';
+import { useTailwindVariant } from '@mptheme/client/composables/useTailwindVariant';
 
 const variant = useTailwindVariant(blockVariant);
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span>{{ themeLocale.lastUpdatedText }}:&nbsp;</span>
+    <span>{{ translate('lastUpdatedText') }}&nbsp;</span>
 
     <ClientOnly>
       <span v-text="lastUpdated" />
@@ -9,18 +9,17 @@
 </template>
 
 <script lang="ts">
+import { useLastUpdated, useTranslate } from '@mptheme/client/composables';
 import { ClientOnly } from '@vuepress/client';
 import { defineComponent } from 'vue';
-import { useLastUpdated } from '@mptheme/client/services/composables/useLastUpdated';
-import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
 
 export default defineComponent({
   name: 'PageLastUpdated',
   components: { ClientOnly },
   setup: () => {
     return {
-      themeLocale: useThemeLocaleData(),
       lastUpdated: useLastUpdated(),
+      translate: useTranslate(),
     };
   },
 });

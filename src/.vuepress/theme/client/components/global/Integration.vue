@@ -29,8 +29,9 @@
           class="ml-1 text-xs" />
         <br>
         <Badge
-          v-if="!hideType && type"
-          v-text="type" />
+          v-if="!hideType && type">
+          {{ type }}
+        </Badge>
 
         <div v-if="repository">
           <Icon icon="github" />
@@ -56,7 +57,7 @@ import Badge from '@mptheme/client/components/global/Badge.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import { defineComponent } from 'vue';
-import { useIntegrations } from '@mptheme/client/services/composables/useIntegrations';
+import { useIntegrations } from '@mptheme/client/composables/useIntegrations';
 
 export default defineComponent({
   name: 'Integration',

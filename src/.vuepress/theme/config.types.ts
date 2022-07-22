@@ -1,51 +1,49 @@
 import { Breakpoint, Overwrite } from '@mptheme/index.types';
+import { Config } from 'tailwindcss';
 import { DefaultThemeOptions } from 'vuepress';
-import { TailwindConfig as OriginalTailwindConfig } from 'tailwindcss/tailwind-config';
+import { LocaleConfig } from '@vuepress/shared';
+import { NavbarConfig } from '@vuepress/theme-default/lib/shared/nav';
 
-export interface NavItem {
+export interface MyPaNavItem {
   text: string;
   ariaLabel?: string;
   sub?: boolean;
 }
 
-export interface NavLink extends NavItem {
+export interface MyPaNavLink extends MyPaNavItem {
   link: string;
   rel?: string;
   target?: string;
   activeMatch?: string;
 }
 
-export interface NavGroup<T> extends NavItem {
+export interface MyPaNavGroup<T> extends MyPaNavItem {
   children: T[];
 }
 
-export type NavbarItem = NavLink;
-export type AnyNavbarItem = NavbarGroup | NavbarItem | string;
-export type NavbarGroup = NavGroup<AnyNavbarItem>;
-export type NavbarConfigArray = AnyNavbarItem[];
-export type ResolvedNavbarItem = NavbarItem | NavGroup<ResolvedNavbarItem>;
+export type MyPaNavbarItem = MyPaNavLink;
+export type MyPaAnyNavbarItem = MyPaNavbarGroup | MyPaNavbarItem | string;
+export type MyPaNavbarGroup = MyPaNavGroup<MyPaAnyNavbarItem>;
+export type MyPaNavbarConfigArray = MyPaAnyNavbarItem[];
+export type MyPaResolvedNavbarItem = MyPaNavbarItem | MyPaNavGroup<MyPaResolvedNavbarItem>;
 
-export type SidebarItem = Partial<NavLink>;
-export type SidebarGroup = SidebarItem & NavGroup<SidebarItem | SidebarGroup | string>;
-export type SidebarGroupCollapsible = SidebarGroup & { collapsible?: boolean };
-export type AnySidebarItem = SidebarItem | SidebarGroup | SidebarGroupCollapsible | string;
+export type MyPaSidebarItem = Partial<MyPaNavLink>;
+export type MyPaSidebarGroup = MyPaSidebarItem & MyPaNavGroup<MyPaSidebarItem | MyPaSidebarGroup | string>;
+export type MyPaSidebarGroupCollapsible = MyPaSidebarGroup & { collapsible?: boolean };
+export type MyPaAnySidebarItem = MyPaSidebarItem | MyPaSidebarGroup | MyPaSidebarGroupCollapsible | string;
 
-export type SidebarConfigArray = AnySidebarItem[];
-export type SidebarConfigObject = Record<string, SidebarConfigArray>;
-export type SidebarConfig = SidebarConfigArray | SidebarConfigObject;
-export type ResolvedSidebarItem = SidebarItem & Partial<NavGroup<ResolvedSidebarItem>> & { collapsible?: boolean };
+export type MyPaSidebarConfigArray = MyPaAnySidebarItem[];
+export type MyPaSidebarConfigObject = Record<string, MyPaSidebarConfigArray>;
+export type MyPaSidebarConfig = MyPaSidebarConfigArray | MyPaSidebarConfigObject;
+export type MyPaResolvedSidebarItem =
+  MyPaSidebarItem
+  & Partial<MyPaNavGroup<MyPaResolvedSidebarItem>>
+  & { collapsible?: boolean };
 
-export type TailwindConfig = Overwrite<OriginalTailwindConfig, {
+export type TailwindConfig = Overwrite<Config, {
   theme: {
     screens: Record<Breakpoint, string>;
   };
-}>;
-
-export type ThemeConfig = Extend<DefaultThemeOptions, {
-  navbar: NavbarConfigArray;
-  footer: NavbarConfigArray;
-  footer2: NavLink[];
-  tailwindConfig: TailwindConfig;
 }>;
 
 export interface MyPaHomepageFrontmatter {
@@ -67,4 +65,12 @@ export interface MyPaHomepageFrontmatter {
       }[];
     };
   }[];
+}
+
+export interface MyParcelThemeOptions extends Omit<DefaultThemeOptions, 'sidebar' | 'navbar' | 'locales'> {
+  footer2: NavbarConfig;
+  footer: NavbarConfig;
+  navbar: NavbarConfig;
+  sidebar: MyPaSidebarConfig;
+  locales: LocaleConfig<MyParcelThemeOptions>;
 }

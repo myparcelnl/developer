@@ -1,7 +1,7 @@
-import { NavbarConfigArray } from '@mptheme/config.types';
+import { MyPaNavbarConfigArray } from '@mptheme/config.types';
 import { findNavItem } from '@mptheme/client/utils/find-nav-item/findNavItem';
 
-const array: NavbarConfigArray = [
+const array: MyPaNavbarConfigArray = [
   {
     text: 'api-reference',
     children: [

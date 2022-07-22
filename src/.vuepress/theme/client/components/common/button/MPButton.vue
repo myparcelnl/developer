@@ -4,7 +4,7 @@
     v-test="'button'"
     :type="link ? '' : 'button'"
     role="button"
-    class="no-link-styles rounded-full"
+    class="no-link-styles rounded-full text-nowrap"
     :item="link"
     :class="[
       ...variantClass,
@@ -18,7 +18,7 @@
     ]"
     :aria-disabled="disabled"
     @click="disabled ? null : $emit('click', $event)">
-    <div class="flex font-medium m-auto">
+    <span class="font-medium inline-flex m-auto">
       <slot>
         <template v-if="icon">
           <Icon
@@ -30,16 +30,16 @@
           {{ link.text }}
         </template>
       </slot>
-    </div>
+    </span>
   </component>
 </template>
 
 <script lang="ts">
 import { PropType, defineComponent } from 'vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
-import { NavLink } from '@mptheme/config.types';
+import { MyPaNavLink } from '@mptheme/config.types';
 import { buttonVariant } from '@mptheme/client/services/tailwind/variants/buttonVariant';
-import { useTailwindVariant } from '@mptheme/client/services/composables/useTailwindVariant';
+import { useTailwindVariant } from '@mptheme/client/composables/useTailwindVariant';
 
 const { createVariantProp, getVariantClasses } = useTailwindVariant(buttonVariant);
 
@@ -50,7 +50,7 @@ export default defineComponent({
     variant: createVariantProp(),
 
     link: {
-      type: [String, Object] as PropType<string | NavLink>,
+      type: [String, Object] as PropType<string | MyPaNavLink>,
       default: null,
     },
 

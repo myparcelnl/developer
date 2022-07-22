@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import IndexContent from './IndexContent.vue';
 import { shallowMount } from '@vue/test-utils';
 

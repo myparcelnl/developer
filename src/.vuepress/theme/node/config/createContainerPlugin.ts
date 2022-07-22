@@ -1,9 +1,10 @@
-import { ContainerPluginOptions } from '@vuepress/plugin-container';
-import { PluginOptions } from 'vuepress';
+/* eslint-disable @typescript-eslint/no-magic-numbers */
+import { ContainerPluginOptions, containerPlugin } from '@vuepress/plugin-container';
+import { Plugin } from 'vuepress';
 
 const MESSAGE_TYPES: string[] = ['tip', 'note'];
 
-export const createContainerPluginss = (): PluginOptions[] => {
+export const createContainerPlugins = (): Plugin[] => {
   const containers: ContainerPluginOptions[] = [
     {
       type: 'expand',
@@ -26,8 +27,5 @@ export const createContainerPluginss = (): PluginOptions[] => {
     }),
   ];
 
-  return containers.map((containerOptions) => [
-    '@vuepress/container',
-    containerOptions,
-  ]);
+  return containers.map(containerPlugin);
 };

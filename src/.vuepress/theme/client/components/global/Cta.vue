@@ -22,8 +22,9 @@
       <component
         :is="heading"
         v-if="title"
-        class="pb-0"
-        v-text="title" />
+        class="pb-0">
+        {{ title }}
+      </component>
 
       <p
         v-if="subtitle"
@@ -32,7 +33,6 @@
       <div class="flex mt-auto">
         <MPButton
           v-if="link"
-          ref="button"
           class="inline-flex"
           :variant="buttonVariant"
           :class="buttonClass">
@@ -56,8 +56,8 @@ import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import { buttonVariant } from '@mptheme/client/services/tailwind/variants/buttonVariant';
 import { defineComponent } from 'vue';
-import { merge } from 'lodash-es';
-import { useTailwindVariant } from '@mptheme/client/services/composables/useTailwindVariant';
+import { merge } from 'lodash-unified';
+import { useTailwindVariant } from '@mptheme/client/composables/useTailwindVariant';
 
 const buttonTailwindVariant = useTailwindVariant(buttonVariant);
 

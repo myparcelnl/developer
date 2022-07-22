@@ -8,7 +8,7 @@
 <script lang="ts">
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import { defineComponent } from 'vue';
-import { useEditNavLink } from '@mptheme/client/services/composables/useEditNavLink';
+import { useEditNavLink } from '@mptheme/client/composables/useEditNavLink';
 
 export default defineComponent({
   name: 'PageEditLink',

@@ -28,8 +28,8 @@
 
 <script lang="ts">
 import { PropType, computed, defineComponent } from 'vue';
-import { NavLink } from '@vuepress/theme-default/lib/shared';
-import { useLink } from '@mptheme/client/services/composables/useLink';
+import { MyPaNavLink } from '@mptheme/config.types';
+import { useLink } from '@mptheme/client/composables/useLink';
 import { useRouter } from 'vue-router';
 import { useSiteData } from '@vuepress/client';
 
@@ -38,7 +38,7 @@ export default defineComponent({
 
   props: {
     item: {
-      type: [String, Object] as PropType<string | NavLink>,
+      type: [String, Object] as PropType<string | MyPaNavLink>,
       required: true,
     },
 
@@ -55,15 +55,8 @@ export default defineComponent({
     },
   },
 
-  setup: (props, ctx) => {
-    const {
-      linkItem,
-      linkTarget,
-      isRouterLink,
-      linkAriaLabel,
-      linkRel,
-      isBlankTarget,
-    } = useLink(props.item);
+  setup: (props) => {
+    const { linkItem, linkTarget, isRouterLink, linkAriaLabel, linkRel, isBlankTarget } = useLink(props.item);
     const route = useRouter().currentRoute.value;
     const site = useSiteData();
 
@@ -78,14 +71,9 @@ export default defineComponent({
     });
 
     const isActiveInSubpath = computed(() => {
-      if (!shouldBeActiveInSubpath.value) {
-        return false;
-      }
-
-      return route.path.startsWith(linkItem.value.link);
+      return !shouldBeActiveInSubpath.value || route.path.startsWith(linkItem.value.link);
     });
 
-    // if this link is active
     const isActive = computed(() => {
       if (!isRouterLink.value) {
         return false;
@@ -98,19 +86,7 @@ export default defineComponent({
       return isActiveInSubpath.value;
     });
 
-    // onMounted(() => {
-    //   console.log(ctx.slots?.default?.()?.[0]?.el?.tagName);
-    // });
-
-    return {
-      isActive,
-      isBlankTarget,
-      isRouterLink,
-      linkAriaLabel,
-      linkRel,
-      linkTarget,
-      linkItem,
-    };
+    return { isActive, isBlankTarget, isRouterLink, linkAriaLabel, linkRel, linkTarget, linkItem };
   },
 });
 </script>

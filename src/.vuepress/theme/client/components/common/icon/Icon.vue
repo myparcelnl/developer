@@ -7,7 +7,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { iconVariant } from '@mptheme/client/services/tailwind/variants/iconVariant';
-import { useTailwindVariant } from '@mptheme/client/services/composables/useTailwindVariant';
+import { useTailwindVariant } from '@mptheme/client/composables/useTailwindVariant';
 
 const variant = useTailwindVariant(iconVariant);
 

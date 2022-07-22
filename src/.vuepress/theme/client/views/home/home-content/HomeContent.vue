@@ -4,7 +4,7 @@
       v-for="item in frontmatter.tree"
       :key="item.title"
       class="lg:py-12 md:py-10 py-6">
-      <h1
+      <h2
         v-if="item.title"
         class="text-center"
         v-text="item.title" />

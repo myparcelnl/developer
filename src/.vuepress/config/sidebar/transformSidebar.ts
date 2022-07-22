@@ -1,4 +1,4 @@
-import { SidebarConfigArray, SidebarGroupCollapsible } from '@mptheme/config.types';
+import { MyPaSidebarConfigArray, MyPaSidebarGroupCollapsible } from '@mptheme/config.types';
 
 /**
  * Loop through a v1 sidebar to transform it into a v2 compatible one.
@@ -11,15 +11,15 @@ export function transformSidebar(
   children: SidebarV1ConfigArray,
   baseDir: string,
   depth = 0,
-): SidebarConfigArray {
+): MyPaSidebarConfigArray {
   return children
     .filter(Boolean)
-    .map((child): SidebarGroupCollapsible | string => {
+    .map((child): MyPaSidebarGroupCollapsible | string => {
       if (typeof child === 'string') {
         return `/${baseDir}/${child}`;
       }
 
-      const newChild = child as SidebarGroupCollapsible;
+      const newChild = child as MyPaSidebarGroupCollapsible;
 
       if ('children' in child && child.children) {
         newChild.children = transformSidebar(child.children, baseDir, depth + 1).filter(Boolean);

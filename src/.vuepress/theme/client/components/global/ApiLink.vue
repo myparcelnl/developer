@@ -15,7 +15,7 @@
 <script lang="ts">
 import { ComputedRef, computed, defineComponent } from 'vue';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
-import { NavbarItem } from '@vuepress/theme-default/lib/shared';
+import { MyPaNavbarItem } from '@mptheme/config.types';
 import { useRouter } from 'vue-router';
 
 export default defineComponent({
@@ -35,12 +35,13 @@ export default defineComponent({
       return useRouter()
         .getRoutes()
         .find((route) => {
-          const num = to[0].padStart(2, '0');
-          return route.path.startsWith(`/api-reference/${num}`);
+          const PREFIX_LENGTH = 2;
+          const number = to[0].padStart(PREFIX_LENGTH, '0');
+          return route.path.startsWith(`/api-reference/${number}`);
         });
     };
 
-    const linkItem: ComputedRef<NavbarItem | null> = computed(() => {
+    const linkItem: ComputedRef<MyPaNavbarItem | null> = computed(() => {
       const resolved = resolveRoute();
 
       if (!resolved) {

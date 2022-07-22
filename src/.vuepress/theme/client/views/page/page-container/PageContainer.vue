@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { useSidebar } from '@mptheme/client/services/composables/useSidebar';
+import { useSidebar } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'PageContainer',

@@ -5,32 +5,33 @@
     <Message
       v-for="message in messages"
       :key="message"
-      :type="message.type"
-      v-text="message.message" />
+      :type="message.type">
+      {{ message.message }}
+    </Message>
 
     <FormInput
       id="name"
       v-model.trim="refs.name"
       autocomplete="name"
-      label="Name" />
+      :label="translate('contactForm.name')" />
 
     <FormInput
       id="email"
       v-model.trim="refs.email"
       type="email"
-      label="Email" />
+      :label="translate('contactForm.email')" />
 
     <FormSelect
       id="subject"
       v-model.trim="refs.subject"
       :options="subjects"
       empty-option
-      label="Subject" />
+      :label="translate('contactForm.subject')" />
 
     <FormTextArea
       id="message"
       v-model.trim="refs.message"
-      label="Message" />
+      :label="translate('contactForm.message')" />
 
     <FormField>
       <ReCaptcha
@@ -40,7 +41,7 @@
       <MPButton
         :disabled="loading"
         type="submit">
-        {{ localeData.submit }}
+        {{ translate('submit') }}
       </MPButton>
     </FormField>
   </form>
@@ -56,12 +57,12 @@ import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import Message from '@mptheme/client/components/global/Message.vue';
 import ReCaptcha from '@mptheme/client/components/common/ReCaptcha.vue';
 import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
-import { useSiteLocaleData } from '@mptheme/client/services/composables/useSiteLocaleData';
-import { useTranslate } from '@mptheme/client/services/composables/useTranslate';
+import { useTranslate } from '@mptheme/client/composables/useTranslate';
 
 export default defineComponent({
   name: 'ContactForm',
   components: { Message, ReCaptcha, FormField, FormTextArea, FormSelect, FormInput, MPButton },
+  // eslint-disable-next-line max-lines-per-function
   setup: () => {
     const initialValue = {
       name: '',
@@ -72,7 +73,6 @@ export default defineComponent({
     const refs = ref(initialValue);
     const recaptchaToken = ref<string>();
     const loading = ref(false);
-    const localeData = useSiteLocaleData();
     const messages = ref<{ type: string; message: string }[]>([]);
     const translate = useTranslate();
 
@@ -84,16 +84,14 @@ export default defineComponent({
       messages.value = [];
 
       if (!recaptchaToken.value) {
-        messages.value.push({ type: 'error', message: localeData.value.error_captcha_invalid });
+        messages.value.push({ type: 'error', message: translate('errorCaptchaInvalid') });
         return;
       }
 
       loading.value = true;
 
-      let response;
-
       try {
-        response = await fetch('https://vqthadq4nvo5i2cgvxpu3xw3zm0qxquc.lambda-url.eu-central-1.on.aws', {
+        const response = await fetch('https://vqthadq4nvo5i2cgvxpu3xw3zm0qxquc.lambda-url.eu-central-1.on.aws', {
           method: 'POST',
           headers: {
             Accept: 'application/json',
@@ -115,7 +113,7 @@ export default defineComponent({
 
         messages.value.push({
           type: 'success',
-          message: localeData.value.message_submitted,
+          message: translate('messageSubmitted'),
         });
 
         refs.value = initialValue;
@@ -131,7 +129,7 @@ export default defineComponent({
     return {
       refs,
       loading,
-      localeData,
+      translate,
       messages,
       onSubmit,
       verify: (token: string) => {
@@ -140,31 +138,16 @@ export default defineComponent({
       },
 
       subjects: [
-        {
-          name: 'feature_request',
-          label: 'Feature request',
-        },
-        {
-          name: 'integration_request',
-          label: 'Integration request',
-        },
-        {
-          name: 'bug',
-          label: 'Bug report',
-        },
-        {
-          name: 'partnership',
-          label: 'Partnership',
-        },
-        {
-          name: 'security',
-          label: 'Security issue',
-        },
-        {
-          name: 'other',
-          label: 'Other',
-        },
-      ],
+        'feature_request',
+        'integration_request',
+        'bug',
+        'partnership',
+        'security',
+        'other',
+      ].map((key: string) => ({
+        name: key,
+        label: translate(`contactForm.subject.${key}`),
+      })),
     };
   },
 });

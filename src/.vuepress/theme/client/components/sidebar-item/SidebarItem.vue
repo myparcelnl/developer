@@ -1,7 +1,12 @@
 <template>
   <li>
+    <h1
+      v-if="depth === 0"
+      class="text-3xl"
+      v-text="item.text" />
+
     <AutoLink
-      v-if="item.link"
+      v-else-if="item.link"
       :class="classes"
       :item="item"
       @click="sidebarToggled ? toggleSidebar : null">
@@ -27,42 +32,41 @@
         :toggle="isOpen" />
     </p>
 
-    <DropdownTransition v-if="item.children?.length">
-      <ul
-        v-show="isOpen"
-        :class="{
-          'pl-3 ml-0.5 border-l': depth > 0,
-          'text-sm': depth > 1,
-        }">
-        <SidebarItem
-          v-for="child in item.children"
-          :key="`${depth}${child.text}${child.link}`"
-          :item="child"
-          :depth="depth + 1" />
-      </ul>
-    </DropdownTransition>
+    <ul
+      v-if="item.children?.length"
+      v-show="isOpen"
+      :class="{
+        'pl-3 ml-0.5 border-l': depth > 0,
+        'text-sm': depth > 1,
+      }">
+      <SidebarItem
+        v-for="child in item.children"
+        :key="`${depth}${child.text}${child.link}`"
+        :item="child"
+        :depth="depth + 1" />
+    </ul>
   </li>
 </template>
 
 <script lang="ts">
 import { PropType, computed, defineComponent, ref, toRefs } from 'vue';
-import { ResolvedSidebarItem, isActiveSidebarItem } from '@vuepress/theme-default/lib/client';
 import { useRoute, useRouter } from 'vue-router';
-import DropdownTransition from '@theme/DropdownTransition.vue';
+import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
+import { ResolvedSidebarItem } from 'vuepress';
 import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
-import { useSidebar } from '@mptheme/client/services/composables/useSidebar';
+import { isActiveSidebarItem } from '@vuepress/theme-default/lib/client';
+import { useSidebar } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'SidebarItem',
 
   components: {
     ToggleChevron,
-    DropdownTransition,
   },
 
   props: {
     item: {
-      type: Object as PropType<ResolvedSidebarItem>,
+      type: Object as PropType<MyPaResolvedSidebarItem>,
       required: true,
     },
 
@@ -77,7 +81,7 @@ export default defineComponent({
     const { item, depth } = toRefs(props);
     const route = useRoute();
     const router = useRouter();
-    const isActive = computed(() => isActiveSidebarItem(item.value, route));
+    const isActive = computed(() => isActiveSidebarItem(item.value as ResolvedSidebarItem, route));
     const onClick = ref<() => void>();
 
     const {
@@ -105,10 +109,9 @@ export default defineComponent({
       toggleSidebar,
       sidebarToggled,
       classes: computed(() => [
-        'py-1 flex transition-all duration-100',
+        'py-1 flex transition-all duration-100 sidebar-item',
         {
           'sidebar-item--has-children': item.value.children?.length,
-          'text-xl font-bold leading-8 page-parent': depth.value === 0,
           'text-goldfish-500 sidebar-item--active': depth.value > 0 && isActive.value,
           'border-transparent': depth.value === 0 || !isActive.value,
         },

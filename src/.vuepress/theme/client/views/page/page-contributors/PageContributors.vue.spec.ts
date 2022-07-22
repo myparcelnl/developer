@@ -1,10 +1,9 @@
-import { describe, expect, it } from 'vitest';
 import { DefaultThemeNormalPageFrontmatter, DefaultThemePageData } from '@vuepress/theme-default/lib/shared';
 import PageContributors from '@mptheme/client/views/page/page-contributors/PageContributors.vue';
 import { shallowMount } from '@vue/test-utils';
 
-jest.mock('@vuepress/client', () => ({
-  usePageData: jest.fn((): DefaultThemePageData => ({
+vi.mock('@vuepress/client', () => ({
+  usePageData: vi.fn((): DefaultThemePageData => ({
     git: {
       createdTime: new Date('2022-04-02 10:40:22').getTime(),
       updatedTime: new Date('2022-04-02 10:40:22').getTime(),
@@ -28,7 +27,7 @@ jest.mock('@vuepress/client', () => ({
     },
     filePathRelative: '',
   })),
-  usePageFrontmatter: jest.fn((): DefaultThemeNormalPageFrontmatter => ({})),
+  usePageFrontmatter: vi.fn((): DefaultThemeNormalPageFrontmatter => ({})),
 }));
 
 describe('pageContributors', () => {

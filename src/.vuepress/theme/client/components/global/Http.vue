@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from 'vue';
-import { useHttpCodes } from '@mptheme/client/services/composables/useHttpCodes';
+import { useHttpCodes } from '@mptheme/client/composables/useHttpCodes';
 
 export default defineComponent({
   name: 'Http',
