@@ -1,17 +1,18 @@
 {
   "api_reference": "API Reference",
   "back": "Vorige",
-  "description": "Verbind met onze API en begin met zendingen, retouren en meer.",
+  "contact_form.email": "Email",
+  "contact_form.message": "Bericht",
+  "contact_form.name": "Naam",
+  "contact_form.subject": "Onderwerp",
   "docsearch_placeholder": "Zoeken",
   "docsearch_search": "Zoeken",
   "documentation": "Documentatie",
   "error_captcha_invalid": "Validatie error",
-  "lang": "nl-NL",
   "message_submitted": "Je bericht is verzonden!",
   "next": "Volgende",
+  "recaptcha_failed": "Verificatie mislukt.",
   "select_empty_option": "Kies een optie",
   "submit": "verstuur",
-  "title": "MyParcel Developer Portal",
-  "view_on_github": "Toon op GitHub",
-  "recaptcha_failed": "Verificatie mislukt."
+  "view_on_github_text": "Toon op GitHub"
 }
