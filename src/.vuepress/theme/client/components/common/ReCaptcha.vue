@@ -8,14 +8,14 @@
 <script lang="ts">
 import { computed, defineComponent } from 'vue';
 import { VueRecaptcha } from 'vue-recaptcha';
-import { useDarkMode } from '@vuepress/theme-default/lib/client/composables';
+import { useDark } from '@vueuse/core';
 
 export default defineComponent({
   name: 'ReCaptcha',
   components: { VueRecaptcha },
   emits: ['verify'],
   setup: () => {
-    const dark = useDarkMode();
+    const dark = useDark();
 
     return {
       RECAPTCHA_SITE_KEY: '6Ldfn8cfAAAAAJ-131JCFn9skW7N3k-7B0UKuHBi',

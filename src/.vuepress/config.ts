@@ -1,12 +1,13 @@
+import { defineUserConfig, viteBundler } from 'vuepress';
 import { createBottomFooter } from './config/createBottomFooter';
 import { createFooter } from './config/createFooter';
 import { createNavbar } from './config/createNavbar';
 import { createSidebar } from './config/sidebar/createSidebar';
-import { defineUserConfig } from 'vuepress';
-import { getLocales } from './getLocales';
+import { getSiteLocales } from './config/getSiteLocales';
+import { getThemeLocales } from './config/getThemeLocales';
 import { head } from './config/head';
-import path from 'path';
-import { slugify } from '@vuepress/markdown';
+import { myParcelTheme } from './theme';
+import { slugify } from '@mdit-vue/shared';
 import { viteConfig } from './viteConfig';
 
 const DEV_SERVER_PORT = 8955;
@@ -14,64 +15,23 @@ const DEV_SERVER_PORT = 8955;
 export default defineUserConfig({
   head,
 
-  locales: getLocales(),
+  locales: getSiteLocales(),
 
-  theme: path.resolve(__dirname, 'theme'),
-
-  /**
-   * @see https://v2.vuepress.vuejs.org/reference/default-theme/config.html
-   */
-  themeConfig: {
-    contributors: true,
-    docsBranch: 'main',
-    docsDir: '/src/',
-    editLink: true,
-    logo: 'images/logo.svg',
-    logoDark: 'images/logo_dark.svg',
-    repo: 'https://github.com/myparcelnl/developer',
-
+  theme: myParcelTheme({
     navbar: createNavbar(),
     sidebar: createSidebar(),
     footer: createFooter(),
     footer2: createBottomFooter(),
 
-    themePlugins: {
-      activeHeaderLinks: false,
-      container: {
-        tip: false,
-        danger: false,
-        details: true,
-        warning: false,
-      },
-    },
-  },
+    locales: getThemeLocales(),
 
-  // theme: myParcelTheme({
-  //   navbar: createNavbar(),
-  //   sidebar: createSidebar(),
-  //   footer: createFooter(),
-  //   footer2: createBottomFooter(),
-  //
-  //   defaultTheme: {
-  //     contributors: true,
-  //     docsBranch: 'main',
-  //     docsDir: '/src/',
-  //     editLink: true,
-  //     logo: 'images/logo.svg',
-  //     logoDark: 'images/logo_dark.svg',
-  //     repo: 'https://github.com/myparcelnl/developer',
-  //
-  //     themePlugins: {
-  //       activeHeaderLinks: true,
-  //       container: {
-  //         tip: false,
-  //         danger: false,
-  //         details: true,
-  //         warning: false,
-  //       },
-  //     },
-  //   },
-  // }),
+    contributors: true,
+    docsBranch: 'main',
+    docsDir: '/src/',
+    editLink: true,
+    logo: 'images/logo.svg',
+    repo: 'https://github.com/myparcelnl/developer',
+  }),
 
   markdown: {
     anchor: {
@@ -83,7 +43,7 @@ export default defineUserConfig({
        * @returns {string}
        */
       slugify(str: string): string {
-        const hasHeading = (/^\d+(?:\.[\w\d]+)+/).exec(str);
+        const hasHeading = (/^\d+(?:\.\w+)+/).exec(str);
         return slugify(hasHeading ? hasHeading[0] : str);
       },
     },
@@ -94,10 +54,7 @@ export default defineUserConfig({
 
   port: DEV_SERVER_PORT,
 
-  bundlerConfig: {
+  bundler: viteBundler({
     viteOptions: viteConfig,
-  },
-  // bundler: viteBundler({
-  //   viteOptions: viteConfig,
-  // }),
+  }),
 });

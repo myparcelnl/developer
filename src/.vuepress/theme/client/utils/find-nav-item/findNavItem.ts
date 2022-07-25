@@ -1,19 +1,19 @@
-import { AnySidebarItem, SidebarConfigArray, SidebarGroup, SidebarItem } from '@mptheme/config.types';
+import { MyPaAnySidebarItem, MyPaSidebarConfigArray, MyPaSidebarGroup, MyPaSidebarItem } from '@mptheme/config.types';
 import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
 import { toArray } from '@mptheme/client/utils/toArray';
 
 export const findNavItem = (
-  array: SidebarConfigArray,
+  array: MyPaSidebarConfigArray,
   search: string | string[],
-): AnySidebarItem | null => {
+): MyPaAnySidebarItem | null => {
   const searchKeys = toArray(search);
 
-  let found: AnySidebarItem | undefined;
+  let found: MyPaAnySidebarItem | undefined;
 
   if (searchKeys.length > 0) {
     found = array
       .find((item) => {
-        if (isOfType<SidebarItem>(item, 'text')) {
+        if (isOfType<MyPaSidebarItem>(item, 'text')) {
           return item.text?.toLowerCase() === searchKeys[0].toLowerCase();
         }
 
@@ -24,7 +24,7 @@ export const findNavItem = (
   }
 
   if (found) {
-    if (isOfType<SidebarGroup>(found, 'children')) {
+    if (isOfType<MyPaSidebarGroup>(found, 'children')) {
       return searchKeys.length > 1
         ? findNavItem(found.children, searchKeys.splice(1))
         : found;

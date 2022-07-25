@@ -62,7 +62,7 @@
 </template>
 
 <script lang="ts">
-import { NavbarItem, ResolvedNavbarItem } from '@mptheme/config.types';
+import { MyPaNavbarItem, MyPaResolvedNavbarItem } from '@mptheme/config.types';
 import { PropType, computed, defineComponent, ref, watch } from 'vue';
 import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
 import { useRoute } from 'vue-router';
@@ -72,7 +72,7 @@ export default defineComponent({
   components: { ToggleChevron },
   props: {
     item: {
-      type: Object as PropType<Exclude<ResolvedNavbarItem, NavbarItem>>,
+      type: Object as PropType<Exclude<MyPaResolvedNavbarItem, MyPaNavbarItem>>,
       required: true,
     },
 
@@ -85,16 +85,11 @@ export default defineComponent({
     const open = ref(false);
     const route = useRoute();
 
-    const dropdownAriaLabel = computed(
-      () => props.item.ariaLabel || props.item.text,
-    );
+    const dropdownAriaLabel = computed(() => props.item.ariaLabel ?? props.item.text);
 
-    watch(
-      () => route.path,
-      () => {
-        open.value = false;
-      },
-    );
+    watch(() => route.path, () => {
+      open.value = false;
+    });
 
     /**
      * Open the dropdown when user tab and click from keyboard.

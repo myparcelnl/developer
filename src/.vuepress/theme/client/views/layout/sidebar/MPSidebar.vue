@@ -1,7 +1,8 @@
 <template>
   <aside
     v-if="exists"
-    class="fixed h-full transition-all w-80 z-30"
+    ref="sidebar"
+    class="fixed h-full sidebar transition-all w-80 z-30"
     :class="{
       'ds__ignore': isNavbar,
       '-translate-x-full': !isOpen,
@@ -10,10 +11,8 @@
     }">
     <ContentBlock
       :variant="['border-right', 'dark']"
-      class="h-full inset-0 overflow-y-scroll pb-24 pt-5 px-3 w-full">
-      <slot name="top" />
+      class="h-full inset-0 overflow-y-auto pb-24 pt-5 px-3 w-full">
       <SidebarItems />
-      <slot name="bottom" />
     </ContentBlock>
   </aside>
 
@@ -29,18 +28,54 @@
 </template>
 
 <script lang="ts">
+import { defineComponent, ref, watch } from 'vue';
 import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
-import SidebarItems from '@mptheme/client/views/layout/sidebar-items/SidebarItems.vue';
-import { defineComponent } from 'vue';
-import { useSidebar } from '@mptheme/client/services/composables/useSidebar';
+import SidebarItems from '@mptheme/client/views/layout/sidebar/sidebar-items/SidebarItems.vue';
+import { useRoute } from 'vue-router';
+import { useSidebar } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'MPSidebar',
   components: {
-    ContentBlock,
     SidebarItems,
+    ContentBlock,
   },
 
-  setup: () => useSidebar(),
+  setup: () => {
+    const sidebar = ref<HTMLElement|null>(null);
+    const route = useRoute();
+
+    // Scroll active sidebar item into view if it's outside the screen
+    watch(() => route.hash, () => {
+      if (!sidebar.value) {
+        return;
+      }
+
+      // get the active sidebar item DOM, whose href equals to the current route
+      const activeSidebarItem = document.querySelector(
+        `.sidebar a.sidebar-item[href="${route.path}${route.hash}"]`,
+      );
+
+      if (!activeSidebarItem) {
+        return;
+      }
+
+      const sidebarTop = sidebar.value.getBoundingClientRect().top;
+      const sidebarHeight = sidebar.value.getBoundingClientRect().height;
+      const activeSidebarItemTop = activeSidebarItem.getBoundingClientRect().top;
+      const activeSidebarItemHeight = activeSidebarItem.getBoundingClientRect().height;
+
+      if (activeSidebarItemTop < sidebarTop) {
+        activeSidebarItem.scrollIntoView(true);
+      } else if (activeSidebarItemTop + activeSidebarItemHeight > sidebarTop + sidebarHeight) {
+        activeSidebarItem.scrollIntoView(false);
+      }
+    });
+
+    return {
+      ...useSidebar(),
+      sidebar,
+    };
+  },
 });
 </script>

@@ -146,4 +146,11 @@ export const head: HeadConfig[] = [
       content: `${faviconUrl}/ms-icon-144x144.png`,
     },
   ],
+  [
+    'meta',
+    {
+      name: 'ahrefs-site-verification',
+      content: 'a73e0596cc0f3a8aeaa8c77cd8fda2a5df7776d8522576b39acd9b071d3d77d2',
+    },
+  ],
 ];

@@ -1,7 +1,7 @@
 import { ABOUT, API_REFERENCE, CONTACT, DOCUMENTATION, STATUS } from './routes';
-import { NavbarConfigArray } from '@mptheme/config.types';
+import { MyPaNavbarConfigArray } from '@mptheme/config.types';
 
-export const createFooter = (): NavbarConfigArray => {
+export const createFooter = (): MyPaNavbarConfigArray => {
   return [
     {
       ...DOCUMENTATION,

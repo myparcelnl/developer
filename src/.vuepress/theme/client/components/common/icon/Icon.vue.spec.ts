@@ -1,6 +1,5 @@
-import { describe, expect, it, beforeAll } from 'vitest';
+import { VueWrapper, shallowMount } from '@vue/test-utils';
 import Icon from './Icon.vue';
-import { shallowMount, VueWrapper } from '@vue/test-utils';
 
 let wrapper: VueWrapper;
 

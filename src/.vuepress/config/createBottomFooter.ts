@@ -1,7 +1,7 @@
 /* eslint-disable max-len,vue/max-len */
-import { NavLink } from '@mptheme/config.types';
+import { MyPaNavLink } from '@mptheme/config.types';
 
-export const createBottomFooter = (): NavLink[] => [
+export const createBottomFooter = (): MyPaNavLink[] => [
   {
     text: 'Conditions & Policy',
     link: 'https://backoffice.myparcel.nl/static/myparcel-nederland/documentatie/voorwaarden/myparcel-algemene-voorwaarden-en.pdf?1650554031650',

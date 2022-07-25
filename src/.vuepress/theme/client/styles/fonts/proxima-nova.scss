@@ -1,0 +1,40 @@
+// In a variable to avoid IDEs complaining the path /fonts does not exist.
+// This points to /src/.vuepress/public
+$root: '/';
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova Light'),
+  local('Proxima-Nova-Light'),
+  url($root + 'fonts/proxima-nova/proxima-nova-light.woff2') format('woff2'),
+  url($root + 'fonts/proxima-nova/proxima-nova-light.woff') format('woff'),
+  url($root + 'fonts/proxima-nova/proxima-nova-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova'),
+  local('Proxima-Nova'),
+  url($root + 'fonts/proxima-nova/proxima-nova-regular.woff2') format('woff2'),
+  url($root + 'fonts/proxima-nova/proxima-nova-regular.woff') format('woff'),
+  url($root + 'fonts/proxima-nova/proxima-nova-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova Bold'),
+  local('Proxima-Nova-Bold'),
+  url($root + 'fonts/proxima-nova/proxima-nova-bold.woff2') format('woff2'),
+  url($root + 'fonts/proxima-nova/proxima-nova-bold.woff') format('woff'),
+  url($root + 'fonts/proxima-nova/proxima-nova-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+

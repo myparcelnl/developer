@@ -8,12 +8,13 @@ export const viteConfig: ViteBundlerOptions['viteOptions'] = {
   ],
 
   resolve: {
-    alias: [
-      {
-        find: '@Public',
-        replacement: path.resolve(__dirname, 'public'),
-      },
-    ],
+    alias: {
+      '@Public': path.resolve(__dirname, 'public'),
+    },
+  },
+
+  optimizeDeps: {
+    exclude: ['@vuepress/theme-default', 'fsevents'],
   },
 
   ...process.env.TRAEFIK
@@ -29,7 +30,7 @@ export const viteConfig: ViteBundlerOptions['viteOptions'] = {
   css: {
     postcss: {
       plugins: [
-        require('tailwindcss')(path.resolve(__dirname, 'tailwind.config.js')),
+        require('tailwindcss')(path.resolve(__dirname, 'tailwind.config.cjs')),
         ...process.env.NODE_ENV === 'production'
           ? [
             require('autoprefixer'),

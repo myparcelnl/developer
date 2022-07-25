@@ -1,4 +1,4 @@
-import { SidebarConfig } from '@mptheme/config.types';
+import { MyPaSidebarConfig } from '@mptheme/config.types';
 import { createObjectSidebar } from './createObjectSidebar';
 import path from 'path';
 
@@ -14,7 +14,7 @@ export const HIDDEN: string[] = [
 /**
  * Gets the sidebar and nav config from vuepress-bar and converts it to support VuePress 2.
  */
-export const createSidebar = (baseDir?: string): SidebarConfig => {
+export const createSidebar = (baseDir?: string): MyPaSidebarConfig => {
   baseDir ??= SRC_DIR;
 
   return createObjectSidebar(baseDir);

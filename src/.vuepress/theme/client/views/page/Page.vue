@@ -1,20 +1,22 @@
 <template>
-  <PageContainer class="-mt-16 flex flex-col justify-between">
+  <PageContainer class="flex flex-col justify-between">
     <slot name="top" />
 
     <ContentContainer
       tag="main"
       type="sm"
-      class="page pb-12 pt-24">
-      <h1
-        v-if="frontmatter.title"
-        v-text="frontmatter.title" />
+      class="page pb-12 pt-8">
+      <slot name="content">
+        <h2
+          v-if="frontmatter.title"
+          v-text="frontmatter.title" />
 
-      <component
-        :is="frontmatter.content"
-        v-if="frontmatter.content" />
+        <component
+          :is="frontmatter.content"
+          v-if="frontmatter.content" />
 
-      <Content v-else />
+        <Content v-else />
+      </slot>
     </ContentContainer>
 
     <slot name="bottom" />
@@ -40,10 +42,8 @@ export default defineComponent({
     PageFooter,
   },
 
-  setup: () => {
-    const frontmatter = usePageFrontmatter();
-
-    return { frontmatter };
-  },
+  setup: () => ({
+    frontmatter: usePageFrontmatter(),
+  }),
 });
 </script>

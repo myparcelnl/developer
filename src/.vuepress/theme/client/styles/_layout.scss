@@ -1,4 +1,8 @@
 @layer base {
+  * {
+    @apply scroll-smooth;
+  }
+
   html,
   body {
     @apply p-0 m-0 transition-colors duration-100;

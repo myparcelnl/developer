@@ -18,7 +18,7 @@
 import { ClientOnly, usePageData } from '@vuepress/client';
 import LinkTree from '@mptheme/client/components/common/LinkTree.vue';
 import { defineComponent } from 'vue';
-import { useSidebarItems } from '@vuepress/theme-default/lib/client';
+import { useSidebarItems } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'IndexContent',

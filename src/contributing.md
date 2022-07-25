@@ -256,7 +256,7 @@ This is collapsed content.
 Collapsed content with a custom header.
 
 | One | Two | Three  |
-| --- | --- | ---    |
+|-----|-----|--------|
 | And | a   | table! |
 :::
 
@@ -275,7 +275,7 @@ This is collapsed content.
 Collapsed content with a custom header.
 
 | One | Two | Three  |
-| --- | --- | ---    |
+|-----|-----|--------|
 | And | a   | table! |
 
 :::

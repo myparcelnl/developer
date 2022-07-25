@@ -17,9 +17,29 @@
         }" />
     </div>
 
-    <div class="absolute bg-goldfish-500 bg-opacity-50 duration-150 flex group-hover:opacity-100 inset-0 opacity-0 transition-all">
+    <div
+      :class="[
+        'absolute',
+        'bg-goldfish-500',
+        'bg-opacity-50',
+        'duration-100',
+        'flex',
+        'group-hover:opacity-100',
+        'inset-0',
+        'opacity-0',
+        'transition-all',
+      ]">
       <span
-        class="font-display group-hover:translate-y-0 m-auto text-2xl text-white transform transition-transform translate-y-2"
+        :class="[
+          'font-display',
+          'group-hover:translate-y-0',
+          'm-auto',
+          'text-2xl',
+          'text-white',
+          'transform',
+          'transition-transform',
+          'translate-y-2',
+        ]"
         v-text="name" />
     </div>
   </div>
