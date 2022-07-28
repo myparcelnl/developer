@@ -3,8 +3,10 @@ import { createBottomFooter } from './config/createBottomFooter';
 import { createFooter } from './config/createFooter';
 import { createNavbar } from './config/createNavbar';
 import { createSidebar } from './config/sidebar/createSidebar';
+import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 import { getSiteLocales } from './config/getSiteLocales';
 import { getThemeLocales } from './config/getThemeLocales';
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 import { head } from './config/head';
 import { myParcelTheme } from './theme';
 import { slugify } from '@mdit-vue/shared';
@@ -32,6 +34,18 @@ export default defineUserConfig({
     logo: 'images/logo.svg',
     repo: 'https://github.com/myparcelnl/developer',
   }),
+
+  plugins: [
+    googleAnalyticsPlugin({
+      id: 'G-DJ3X5HF03D',
+    }),
+
+    docsearchPlugin({
+      appId: 'CN8B8S1EFL',
+      apiKey: '4c55bbf8ccfb57cb5c3132c03fc9728b',
+      indexName: 'developer-myparcel',
+    }),
+  ],
 
   markdown: {
     anchor: {

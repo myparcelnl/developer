@@ -73,11 +73,6 @@ export const myParcelTheme = (options: MyParcelThemeOptions): Theme => {
       gitPlugin(),
       incrementHeadingsPlugin(),
       registerCustomComponentsPlugin(),
-      docsearchPlugin({
-        appId: 'CN8B8S1EFL',
-        apiKey: '4c55bbf8ccfb57cb5c3132c03fc9728b',
-        indexName: 'developer-myparcel',
-      }),
     ],
   };
 };
