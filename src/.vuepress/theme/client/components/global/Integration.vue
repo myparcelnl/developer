@@ -28,22 +28,21 @@
           icon="myparcel"
           class="ml-1 text-xs" />
         <br>
-        <Badge
-          v-if="!hideType && type">
+        <Badge v-if="!hideType && type">
           {{ type }}
         </Badge>
 
         <div v-if="repository">
           <Icon icon="github" />
           <AutoLink :item="`https://github.com/${repository}`">
-            View on GitHub
+            {{ translate('viewOnGithub') }}
           </AutoLink>
         </div>
 
         <div v-if="documentation">
           <Icon icon="integrations" />
           <AutoLink :item="documentation">
-            Documentation
+            {{ translate('documentation') }}
           </AutoLink>
         </div>
       </div>
@@ -58,6 +57,7 @@ import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import { defineComponent } from 'vue';
 import { useIntegrations } from '@mptheme/client/composables/useIntegrations';
+import { useTranslate } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'Integration',
@@ -78,9 +78,11 @@ export default defineComponent({
   },
 
   setup: (props) => {
+    const translate = useTranslate();
     const integrations = useIntegrations();
+    const integration = integrations.value.find(({ name }) => name === props.name);
 
-    return integrations.value.find(({ name }) => name === props.name);
+    return { translate, ... integration };
   },
 });
 </script>

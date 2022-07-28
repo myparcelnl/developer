@@ -1,23 +1,22 @@
-import { defineUserConfig, viteBundler } from 'vuepress';
-import { createBottomFooter } from './config/createBottomFooter';
-import { createFooter } from './config/createFooter';
-import { createNavbar } from './config/createNavbar';
-import { createSidebar } from './config/sidebar/createSidebar';
-import { docsearchPlugin } from '@vuepress/plugin-docsearch';
-import { getSiteLocales } from './config/getSiteLocales';
-import { getThemeLocales } from './config/getThemeLocales';
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
-import { head } from './config/head';
-import { myParcelTheme } from './theme';
-import { slugify } from '@mdit-vue/shared';
-import { viteConfig } from './viteConfig';
+import {defineUserConfig, viteBundler} from 'vuepress';
+import {createBottomFooter} from './config/createBottomFooter';
+import {createFooter} from './config/createFooter';
+import {createNavbar} from './config/createNavbar';
+import {createSidebar} from './config/sidebar/createSidebar';
+import {docsearchPlugin} from '@vuepress/plugin-docsearch';
+import {googleAnalyticsPlugin} from '@vuepress/plugin-google-analytics';
+import {head} from './config/head';
+import {myParcelTheme} from './theme';
+import {slugify} from '@mdit-vue/shared';
+import {viteConfig} from './viteConfig';
+import {importTranslationsPlugin} from './importTranslations';
 
 const DEV_SERVER_PORT = 8955;
 
 export default defineUserConfig({
   head,
 
-  locales: getSiteLocales(),
+  // locales: getSiteLocales(),
 
   theme: myParcelTheme({
     navbar: createNavbar(),
@@ -25,7 +24,7 @@ export default defineUserConfig({
     footer: createFooter(),
     footer2: createBottomFooter(),
 
-    locales: getThemeLocales(),
+    locales: {},
 
     contributors: true,
     docsBranch: 'main',
@@ -36,6 +35,8 @@ export default defineUserConfig({
   }),
 
   plugins: [
+    importTranslationsPlugin(),
+
     googleAnalyticsPlugin({
       id: 'G-DJ3X5HF03D',
     }),

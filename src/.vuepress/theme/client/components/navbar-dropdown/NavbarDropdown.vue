@@ -84,7 +84,6 @@ export default defineComponent({
   setup: (props) => {
     const open = ref(false);
     const route = useRoute();
-
     const dropdownAriaLabel = computed(() => props.item.ariaLabel ?? props.item.text);
 
     watch(() => route.path, () => {

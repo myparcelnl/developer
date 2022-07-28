@@ -16,9 +16,7 @@
     </ContentBlock>
   </aside>
 
-  <Transition
-    name="fade"
-    appear>
+  <Transition name="fade">
     <div
       v-if="exists"
       v-show="toggled"

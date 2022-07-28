@@ -15,6 +15,10 @@
           :is="frontmatter.content"
           v-if="frontmatter.content" />
 
+        <RedirectContent
+          v-if="frontmatter.redirect"
+          :to="frontmatter.redirect" />
+
         <Content v-else />
       </slot>
     </ContentContainer>
@@ -30,12 +34,14 @@ import ContentContainer from '@mptheme/client/views/layout/content-container/Con
 import IndexContent from '@mptheme/client/components/index-content/IndexContent.vue';
 import PageContainer from '@mptheme/client/views/page/page-container/PageContainer.vue';
 import PageFooter from '@mptheme/client/views/page/page-footer/PageFooter.vue';
+import RedirectContent from '@mptheme/client/components/redirect-content/RedirectContent.vue';
 import { defineComponent } from 'vue';
 import { usePageFrontmatter } from '@vuepress/client';
 
 export default defineComponent({
   name: 'Page',
   components: {
+    RedirectContent,
     IndexContent,
     ContentContainer,
     PageContainer,

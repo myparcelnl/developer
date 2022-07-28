@@ -1,3 +1,7 @@
+:root {
+  @apply scroll-smooth;
+}
+
 ::-webkit-scrollbar {
   @apply w-3 h-3;
 }

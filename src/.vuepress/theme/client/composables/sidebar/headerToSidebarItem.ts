@@ -1,6 +1,6 @@
 import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
 import { PageHeader } from 'vuepress';
-import { headersToSidebarItemChildren } from '@mptheme/client/composables';
+import { headersToSidebarItemChildren } from './headersToSidebarItemChildren';
 
 /**
  * Util to transform page header to sidebar item.

@@ -4,6 +4,8 @@ import svgLoader from 'vite-svg-loader';
 
 export const viteConfig: ViteBundlerOptions['viteOptions'] = {
   plugins: [
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     svgLoader(),
   ],
 

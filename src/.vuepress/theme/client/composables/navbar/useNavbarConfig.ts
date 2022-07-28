@@ -1,10 +1,10 @@
 import { ComputedRef, computed } from 'vue';
 import { MyPaResolvedNavbarItem } from '@mptheme/config.types';
 import { resolveNavbarItem } from '@mptheme/client/composables/navbar/resolveNavbarItem';
-import { useThemeLocaleData } from '@mptheme/client/composables/useThemeLocaleData';
+import { useSiteLocaleData } from '@mptheme/client/composables';
 
 export const useNavbarConfig = (): ComputedRef<MyPaResolvedNavbarItem[]> => {
-  const themeLocale = useThemeLocaleData();
+  const themeLocale = useSiteLocaleData();
 
   return computed(() => {
     const navbarItems = (themeLocale.value.navbar || []).map(resolveNavbarItem);

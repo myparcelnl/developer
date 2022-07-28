@@ -1,6 +1,5 @@
-import { DefaultThemeData } from 'vuepress';
+import { MyPaResolvedSidebarItem, MyParcelThemeOptions } from '@mptheme/config.types';
 import { DefaultThemeNormalPageFrontmatter } from '@vuepress/theme-default/lib/shared';
-import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
 import { isArray } from 'lodash-unified';
 import { isPlainObject } from '@vuepress/shared';
 import { resolveArraySidebarItems } from './resolveArraySidebarItems';
@@ -16,7 +15,7 @@ const DEFAULT_SIDEBAR_DEPTH = 2;
  */
 export const resolveSidebarItems = (
   frontmatter: DefaultThemeNormalPageFrontmatter,
-  themeLocale: DefaultThemeData,
+  themeLocale: MyParcelThemeOptions,
 ): MyPaResolvedSidebarItem[] => {
   // get sidebar config from frontmatter > theme data
   const sidebarConfig = frontmatter.sidebar ?? themeLocale.sidebar ?? 'auto';

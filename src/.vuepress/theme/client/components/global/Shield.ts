@@ -14,7 +14,7 @@ const Shield: FunctionalComponent<Props> = (props) => {
   const image = h(MPImg, {
     src: `${BASE_URL}${props.path}&style=for-the-badge&labelColor=27272A&logoColor=FFFFFF`,
     alt: props.alt,
-    class: 'rounded',
+    class: 'rounded h-8',
   });
 
   if (props.href) {

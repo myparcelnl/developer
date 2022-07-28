@@ -15,6 +15,8 @@ export interface MyPaNavLink extends MyPaNavItem {
   rel?: string;
   target?: string;
   activeMatch?: string;
+  multilanguage?: boolean;
+  image?: string;
 }
 
 export interface MyPaNavGroup<T> extends MyPaNavItem {

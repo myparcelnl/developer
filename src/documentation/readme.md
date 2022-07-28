@@ -2,21 +2,20 @@
 title: Documentation
 ---
 
-## Jump in
+## Plug-ins
 
-Here you can find our documentation for various plugins and our own SDKs.
+Our plugin installation and configuration guides are currently only available
+in <RouterLink to="/nl/documentation">Dutch</RouterLink>.
 
-### Plug-ins
-
-<Stack class="md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-    <Integration name="woocommerce" />
-    <Integration name="prestashop" />
-    <Integration name="magento-2" />
-</Stack>
-
-### SDKs
+## SDKs
 
 <Stack class="md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <Integration name="php-sdk" />
     <Integration name="js-sdk" />
+</Stack>
+
+## Other integrations
+
+<Stack class="md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+    <Integration name="delivery-options" />
 </Stack>

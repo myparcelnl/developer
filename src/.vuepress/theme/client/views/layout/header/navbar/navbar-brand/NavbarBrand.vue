@@ -15,7 +15,7 @@ import { PropType, computed, defineComponent } from 'vue';
 import { useRouteLocale, useSiteLocaleData } from '@vuepress/client';
 import { Breakpoint } from '@mptheme/index.types';
 import MPLogo from '@mptheme/client/components/logo/MPLogo.vue';
-import { useThemeLocaleData } from '@mptheme/client/composables';
+import { useSiteLocaleData } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'NavbarBrand',
@@ -38,7 +38,7 @@ export default defineComponent({
   setup: () => {
     const routeLocale = useRouteLocale();
     const siteLocale = useSiteLocaleData();
-    const themeLocale = useThemeLocaleData();
+    const themeLocale = useSiteLocaleData();
 
     const navbarBrandLink = computed(
       () => themeLocale.value.home || routeLocale.value,

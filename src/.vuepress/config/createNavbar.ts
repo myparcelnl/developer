@@ -1,7 +1,7 @@
 import { ABOUT, API_REFERENCE, CONTACT, DOCUMENTATION, INTEGRATIONS, STATUS } from './routes';
-import { MyPaNavbarConfigArray } from '@mptheme/config.types';
+import { MyPaNavLink, MyPaNavbarConfigArray } from '@mptheme/config.types';
 
-export const createNavbar = (): MyPaNavbarConfigArray => [
+const pages: MyPaNavLink[] = [
   API_REFERENCE,
   DOCUMENTATION,
   INTEGRATIONS,
@@ -9,3 +9,20 @@ export const createNavbar = (): MyPaNavbarConfigArray => [
   CONTACT,
   STATUS,
 ];
+
+export const createNavbar = (prefix?: string): MyPaNavbarConfigArray => {
+  if (!prefix) {
+    return pages;
+  }
+
+  return pages.map((element) => {
+    if (element?.multilanguage === true) {
+      return {
+        ...element,
+        link: prefix + element.link,
+      };
+    }
+
+    return element;
+  });
+};

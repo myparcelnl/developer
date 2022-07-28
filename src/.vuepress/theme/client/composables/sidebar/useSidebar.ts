@@ -1,7 +1,6 @@
 import { ComputedRef, Ref, computed, ref, watch } from 'vue';
+import { useBreakpoints, useNavbarConfig } from '@mptheme/client/composables';
 import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
-import { useBreakpoints } from '@mptheme/client/composables/useBreakpoints';
-import { useNavbarConfig } from '@mptheme/client/composables/navbar/useNavbarConfig';
 import { useRoute } from 'vue-router';
 import { useSidebarItems } from './useSidebarItems';
 

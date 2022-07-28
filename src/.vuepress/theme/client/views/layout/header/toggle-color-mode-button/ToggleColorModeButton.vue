@@ -52,14 +52,14 @@
 <script  lang="ts">
 import { defineComponent } from 'vue';
 import { useDark } from '@vueuse/core';
-import { useThemeLocaleData } from '@mptheme/client/composables';
+import { useSiteLocaleData } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'ToggleColorModeButton',
 
   setup: () => {
     const dark = useDark();
-    const themeLocale = useThemeLocaleData();
+    const themeLocale = useSiteLocaleData();
 
     const toggleColorMode = (): void => {
       dark.value = !dark.value;
