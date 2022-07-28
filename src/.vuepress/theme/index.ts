@@ -6,12 +6,12 @@ import { activeHeaderLinksPlugin } from '@vuepress/plugin-active-header-links';
 import { autoLinkPlugin } from './node/plugins/autoLinkPlugin';
 import { createAliasMap } from './node/config/createAliasMap';
 import { createContainerPlugins } from './node/config/createContainerPlugin';
-import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 import { externalLinkIconPlugin } from '@vuepress/plugin-external-link-icon';
 import { gitPlugin } from '@vuepress/plugin-git';
 import { incrementHeadingsPlugin } from './node/plugins/incrementHeadingsPlugin';
 import { palettePlugin } from '@vuepress/plugin-palette';
 import { path } from '@vuepress/utils';
+import { prismjsPlugin } from '@vuepress/plugin-prismjs';
 import { registerCustomComponentsPlugin } from './node/plugins/registerCustomComponentsPlugin';
 import { themeDataPlugin } from '@vuepress/plugin-theme-data';
 
@@ -68,6 +68,7 @@ export const myParcelTheme = (options: MyParcelThemeOptions): Theme => {
       themeDataPlugin({
         themeData: options,
       }),
+      prismjsPlugin(),
       palettePlugin({}),
       autoLinkPlugin(),
       gitPlugin(),
