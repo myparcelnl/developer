@@ -8,65 +8,31 @@ contributors: false
 
 ## Plug-ins
 
-Plug-ins integrate with your webshop directly.
+Plug-ins integrate with your CMS or webshop directly and provide the best
+integration with MyParcel. Most of them require little to no technical knowledge
+to install and configure.
 
-<Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
-    <Integration name="woocommerce" />
-    <Integration name="prestashop" />
-    <Integration name="magento-1" />
-    <Integration name="magento-2" />
-    <Integration name="shopify" />
-    <Integration name="shopware" />
-    <Integration name="lightspeed" />
-    <Integration name="cs-cart" />
-    <Integration name="opencart-2-2-x – 2-3-x" />
-    <Integration name="opencart-3" />
-    <Integration name="shoppagina" />
-    <Integration name="virtuemart-2" />
-    <Integration name="virtuemart-3" />
-    <Integration name="ccv" />
-    <Integration name="mijnwebwinkel" />
-    <Integration name="os-commerce" />
-    <Integration name="bigcommerce" />
-    <Integration name="gratis-webshop-beginnen" />
-    <Integration name="logi-vert" />
-    <Integration name="my-shop" />
-    <Integration name="sherpaan" />
-    <Integration name="shoptrader" />
-</Stack>
+<Integrations type="plugin" />
 
 ## SDKs
 
-### By MyParcel
+An SDK can be used to quickly integrate with our API and skip a lot of the work that comes with manually developing an API integration. 
 
-<Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
-    <Integration name="php-sdk" />
-    <Integration name="js-sdk" />
-</Stack>
+<Integrations type="sdk" />
 
-### By the community
+## API integrations
 
-<Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
-    <Integration name="c-sharp-sdk" />
-    <Integration name="ruby-sdk" />
-</Stack>
+These integrations can be installed and configured in our Backoffice and
+add the ability to import shipments from your platform(s) into ours.
 
-## Other integrations
+<Integrations type="api" />
 
-<Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
-    <Integration name="amazon" />
-    <Integration name="wix" />
-    <Integration name="bol-com" />
-    <Integration name="google-chrome-extension" />
-    <Integration name="exact-online" />
-    <Integration name="picqer" />
-    <Integration name="channel-dock" />
-    <Integration name="goedgepickt" />
-    <Integration name="fulfilment-software" />
-    <Integration name="iPacky" />
-    <Integration name="e-tailize" />
-    <Integration name="stockitup" />
-</Stack>
+## Utilities
+
+The following items are utilities you can use together with other
+integrations. The Chrome Extension provides a way to quickly create shipments from any website and can be useful regardless of whether you use any other integrations. Our Delivery Options module is already integrated in many of our plug-ins. 
+
+<Integrations type="utility" />
 
 ::: tip Missing your favorite language or platform?
 Build your own integration and share it with us!

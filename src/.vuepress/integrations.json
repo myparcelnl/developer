@@ -1,5 +1,23 @@
 [
   {
+    "name": "google-chrome-extension",
+    "title": "Google Chrome Extension",
+    "type": "utility",
+    "internal": true,
+    "documentation": "https://www.myparcel.nl/en/integrations/google-chrome-extensie/",
+    "image": "chrome.svg"
+  },
+  {
+    "name": "delivery-options",
+    "title": "Delivery Options",
+    "type": "utility",
+    "internal": true,
+    "repository": "myparcelnl/delivery-options",
+    "documentation": "/documentation/60.delivery-options/",
+    "classes": "bg-goldfish-500",
+    "image": "delivery-options.svg"
+  },
+  {
     "name": "woocommerce",
     "title": "WooCommerce",
     "type": "plugin",
@@ -199,91 +217,88 @@
     "name": "ruby-sdk",
     "title": "Ruby",
     "type": "sdk",
-    "repository": "paypronl/,myparcel",
+    "repository": "paypronl/myparcel",
     "image": "ruby.svg",
     "classes": "bg-[#F44336]"
   },
   {
     "name": "amazon",
     "title": "Amazon",
-    "type": "other",
+    "type": "api",
+    "internal": true,
     "documentation": "https://myparcelnl.github.io/amazon",
     "image": "amazon.svg"
   },
   {
     "name": "wix",
     "title": "Wix",
-    "type": "other",
+    "type": "api",
+    "internal": true,
     "documentation": "/documentation/20.wix/",
-    "image": "wix.png"
+    "image": "wix.svg"
   },
   {
     "name": "bol-com",
     "title": "bol.com",
-    "type": "other",
+    "type": "api",
+    "internal": true,
     "documentation": "https://myparcelnl.github.io/bol.com",
     "image": "bol-com.svg"
   },
   {
-    "name": "google-chrome-extension",
-    "title": "Google Chrome Extension",
-    "type": "other",
-    "documentation": "https://www.myparcel.nl/en/integrations/google-chrome-extensie/",
-    "image": "chrome.svg"
-  },
-  {
     "name": "exact-online",
     "title": "Exact Online",
-    "type": "other",
+    "type": "api",
+    "internal": true,
     "documentation": "https://myparcelnl.github.io/exact-online",
     "image": "exact-online.svg"
   },
   {
     "name": "picqer",
     "title": "Picqer",
-    "type": "other",
+    "type": "api",
     "documentation": "https://picqer.com/nl/help/artikelen/myparcel-koppelen",
     "image": "picqer.svg"
   },
   {
     "name": "channel-dock",
     "title": "ChannelDock",
-    "type": "other",
+    "type": "api",
     "documentation": "https://intercom.help/channeldock/nl/articles/6043422-myparcel-koppelen-aan-channeldock",
     "image": "channel-dock.svg"
   },
   {
     "name": "goedgepickt",
     "title": "Goedgepickt",
-    "type": "other",
+    "type": "api",
     "documentation": "https://help.goedgepickt.nl/article/srujx2j0ln-my-parcel",
     "image": "goedgepickt.svg"
   },
   {
     "name": "fulfilment-software",
     "title": "Fulfilment software",
-    "type": "other",
+    "type": "api",
     "documentation": "https://fulfilment-software.com/",
     "image": "fulfilment.svg"
   },
   {
     "name": "iPacky",
     "title": "iPacky",
-    "type": "other",
+    "type": "api",
     "documentation": "https://ipacky.com/shipping-connectors-overview/",
     "image": "iPacky.png"
   },
   {
     "name": "e-tailize",
     "title": "e-tailize",
-    "type": "other",
+    "type": "api",
     "documentation": "https://help.e-tailize.com/en/articles/186674-connecting-myparcel",
     "image": "e-tailize.png"
   },
   {
     "name": "stockitup",
     "title": "Stockitup",
-    "type": "other",
+    "type": "api",
     "image": "stockitup.png",
     "classes": "bg-[#05386b]"
   }

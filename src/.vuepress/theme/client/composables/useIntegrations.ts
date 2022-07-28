@@ -3,7 +3,7 @@ import data from '../../../integrations.json';
 
 type UseIntegrations = () => Ref<Integration[]>;
 
-interface Integration {
+export interface Integration {
   name: string;
   title: string;
   type: 'plugin' | 'other' | 'sdk';
