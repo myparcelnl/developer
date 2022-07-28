@@ -1,1 +1,0 @@
-import t from"./Shield.6f28bda6.js";import{a6 as o}from"./app.e0bc0234.js";import"./AutoLink.60105737.js";import"./plugin-vue_export-helper.21dcd24c.js";import"./MPImg.26e7658c.js";const e=a=>o(t,{alt:a.alt,href:`https://packagist.org/packages/${a.package}`,path:`packagist/v/${a.package}?color=f28d1a&logo=packagist`});export{e as default};
