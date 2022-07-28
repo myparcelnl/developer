@@ -1,0 +1,1 @@
+import t from"./Shield.5e069488.js";import{a6 as m}from"./app.02e2e447.js";import"./AutoLink.1346e65c.js";import"./plugin-vue_export-helper.21dcd24c.js";import"./MPImg.190d7842.js";const i=a=>m(t,{alt:a.alt,href:`https://npmjs.com/package/${a.package}`,path:`npm/v/${a.package}?color=CC3534&logo=npm`});export{i as default};

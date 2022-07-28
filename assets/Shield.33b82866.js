@@ -1,1 +1,0 @@
-import e from"./AutoLink.bee41a7c.js";import i from"./MPImg.de30774e.js";import{a6 as r}from"./app.033e6678.js";import"./plugin-vue_export-helper.21dcd24c.js";const l="https://img.shields.io/",h=t=>{const o=r(i,{src:`${l}${t.path}&style=for-the-badge&labelColor=27272A&logoColor=FFFFFF`,alt:t.alt,class:"rounded"});return t.href?r(e,{item:t.href},()=>o):o};export{h as default};
