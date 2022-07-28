@@ -1,0 +1,17 @@
+name: 'Reindex search results 🔍'
+
+on:
+  page_build:
+
+jobs:
+  trigger:
+    name: 'Trigger crawl'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: algolia/algoliasearch-crawler-github-actions@v1.0.10
+        with:
+          algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
+          algolia-app-id: ${{ secrets.ALGOLIA_APP_ID }}
+          crawler-api-key: ${{ secrets.CRAWLER_API_KEY }}
+          crawler-user-id: ${{ secrets.CRAWLER_USER_ID }}
+          site-url: 'https://developer.myparcel.nl'
