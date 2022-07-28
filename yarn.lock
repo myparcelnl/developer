@@ -5036,13 +5036,6 @@ v8flags@^4.0.0:
   resolved "https://registry.yarnpkg.com/v8flags/-/v8flags-4.0.0.tgz#dcacd1e0b20a7919cc48022b1bf2d95adb175e83"
   integrity sha512-83N0OkTbn6gOjJ2awNuzuK4czeGxwEwBoTqlhBZhnp8o0IJ72mXRQKphj/azwRf3acbDJZYZhbOPEJHd884ELg==
 
-vite-plugin-fonts@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-fonts/-/vite-plugin-fonts-0.5.0.tgz#9b01294bc167a58ad901159c137dbfba20b60376"
-  integrity sha512-TIzI748vvNN6aW1+BkDs60ry1QH3VkjTM5f0vB+dMczuCFogtCu9jbUVyCAZnk2z9veFgBQs8SLh3+qBfrJvvw==
-  dependencies:
-    fast-glob "^3.2.11"
-
 vite-svg-loader@3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/vite-svg-loader/-/vite-svg-loader-3.4.0.tgz#4638827fe86b85ecfcea1ad61dd972c351d5befd"

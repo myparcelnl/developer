@@ -1,5 +1,5 @@
 import { MyPaNavLink } from '@mptheme/config.types';
-import { useResolveRouteWithRedirect } from '@vuepress/theme-default/lib/client';
+import { useResolveRouteWithRedirect } from '@mptheme/client/composables';
 
 /**
  * Resolve NavLink props from string.

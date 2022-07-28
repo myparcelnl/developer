@@ -1,9 +1,8 @@
 import { ComputedRef, Ref, computed, ref, watch } from 'vue';
-import { ResolvedSidebarItem, useSidebarItems } from '@vuepress/theme-default/lib/client';
-import { ADDITIONAL_LOCALES } from '../../../shared/locales/localeData';
-import { useNavbarConfig } from '@mptheme/client/services/composables/useNavbarConfig';
+import { useBreakpoints, useNavbarConfig } from '@mptheme/client/composables';
+import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
 import { useRoute } from 'vue-router';
-import { useBreakpoints } from '@mptheme/client/composables';
+import { useSidebarItems } from './useSidebarItems';
 
 let isOpen: ComputedRef<boolean>;
 
@@ -13,51 +12,43 @@ type UseSidebar = () => {
   exists: ComputedRef<boolean>;
   isNavbar: ComputedRef<boolean>;
   isOpen: Ref<boolean>;
-  items: ComputedRef<ResolvedSidebarItem[]>;
-  toggle: () => void;
+  items: ComputedRef<MyPaResolvedSidebarItem[]>;
+  toggle: (bool?: boolean) => void;
   toggled: Ref<boolean>;
 };
 
 export const useSidebar: UseSidebar = () => {
   const route = useRoute();
-  const sidebar = useSidebarItems();
+  const items = useSidebarItems();
   const navbar = useNavbarConfig();
-  const isNavbar = computed(() => !sidebar.value.length);
-
-  const sidebarItems = computed(() => {
-    if (sidebar.value?.[0]?.text && ADDITIONAL_LOCALES.includes(sidebar.value[0].text)) {
-      // console.log(JSON.stringify(sidebar.value[0]?.children, null, 2));
-      return sidebar.value[0]?.children?.[0]?.children ?? [];
-    }
-
-    // console.log(JSON.stringify(sidebar.value, null, 2));
-
-    return isNavbar.value ? navbar.value : sidebar.value;
-  });
-
-  const exists = computed(() => {
-    return sidebarItems.value.length > 0;
-  });
   const { lg } = useBreakpoints();
+  const isNavbar = computed(() => !items.value.length);
 
   toggled ??= ref(false);
+
   isOpen ??= computed(() => {
     const renderByView = lg.value && !isNavbar.value;
 
     return exists.value && (renderByView || toggled.value);
   });
 
-  const toggle = (): void => {
-    toggled.value = !toggled.value;
+  const sidebarItems = computed(() => {
+    return items.value.length
+      ? items.value
+      : navbar.value;
+  });
+
+  const exists = computed(() => {
+    return sidebarItems.value.length > 0;
+  });
+
+  const toggle = (bool?: boolean): void => {
+    toggled.value = bool ?? !toggled.value;
   };
 
   watch(
     () => route.path,
-    () => {
-      if (toggled.value) {
-        toggle();
-      }
-    },
+    () => toggle(false),
   );
 
   return {

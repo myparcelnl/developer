@@ -2,15 +2,13 @@ import { ComputedRef, computed } from 'vue';
 import { ResolvedNavbarItem } from '@vuepress/theme-default/lib/shared';
 import { useLanguage } from '@mptheme/client/composables/useLanguage';
 import { useLocaleLink } from '@mptheme/client/composables/useLocaleLink';
-import { useSiteLocaleData } from '@vuepress/client';
-import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
+import { useSiteLocaleData } from '@mptheme/client/composables';
 
 /**
  * Get navbar config of select language dropdown.
  */
 export const useNavbarSelectLanguage = (): ComputedRef<ResolvedNavbarItem | undefined> => {
   const siteLocale = useSiteLocaleData();
-  const themeLocale = useThemeLocaleData();
   const language = useLanguage();
 
   return computed<ResolvedNavbarItem | undefined>(() => {
@@ -22,8 +20,8 @@ export const useNavbarSelectLanguage = (): ComputedRef<ResolvedNavbarItem | unde
     }
 
     const languageDropdown: ResolvedNavbarItem = {
-      text: themeLocale.value.selectLanguageText ?? 'unknown language',
-      ariaLabel: themeLocale.value.selectLanguageAriaLabel ?? 'unknown language',
+      text: siteLocale.value.selectLanguageText ?? 'unknown language',
+      ariaLabel: siteLocale.value.selectLanguageAriaLabel ?? 'unknown language',
       children: localePaths
         // Filter out the current language
         .filter((locale) => language.config.value?.locale !== locale)

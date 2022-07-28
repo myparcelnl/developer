@@ -38,14 +38,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useSidebar } from '@mptheme/client/composables';
-import { useThemeLocaleData } from '@mptheme/client/composables/useThemeLocaleData';
+import { useSiteLocaleData } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'ToggleSidebarButton',
   emits: ['toggle'],
   setup: (props, ctx) => {
     const sidebar = useSidebar();
-    const themeLocale = useThemeLocaleData();
+    const themeLocale = useSiteLocaleData();
 
     return {
       themeLocale,

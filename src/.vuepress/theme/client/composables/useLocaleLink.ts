@@ -2,7 +2,7 @@ import { useRouteLocale, useSiteLocaleData } from '@vuepress/client';
 import { NavLink } from '@vuepress/theme-default/lib/shared';
 import { localeConfig } from '../../shared/locales/localeData';
 import { useRouter } from 'vue-router';
-import { useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
+import { useSiteLocaleData } from '@mptheme/client/composables';
 
 type LocaleNavLink = NavLink & { localeConfig: (typeof localeConfig[number]) | undefined };
 
@@ -10,7 +10,7 @@ export const useLocaleLink = (targetLocalePath: string): LocaleNavLink => {
   const router = useRouter();
   const routeLocale = useRouteLocale();
   const siteLocale = useSiteLocaleData();
-  const themeLocale = useThemeLocaleData();
+  const themeLocale = useSiteLocaleData();
   const targetThemeLocale = themeLocale.value.locales?.[targetLocalePath] ?? {};
   const targetSiteLocale = siteLocale.value.locales?.[targetLocalePath] ?? {};
   const targetLang = `${targetSiteLocale.lang}`;

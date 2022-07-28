@@ -32,7 +32,7 @@
         :toggle="isOpen" />
     </p>
 
-    <DropdownTransition v-if="item.children?.length">
+    <Transition v-if="item.children?.length">
       <ul
         v-if="item.children?.length"
         v-show="isOpen"
@@ -46,7 +46,7 @@
           :item="child"
           :depth="depth + 1" />
       </ul>
-    </DropdownTransition>
+    </Transition>
   </li>
 </template>
 
@@ -58,7 +58,7 @@ import { ResolvedSidebarItem } from 'vuepress';
 import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
 import { isActiveSidebarItem } from '@vuepress/theme-default/lib/client';
 import { usePageFrontmatter } from '@vuepress/client';
-import { useSidebar } from '@mptheme/client/composables';
+import { useSidebar } from '@mptheme/client/composables/sidebar';
 
 export default defineComponent({
   name: 'SidebarItem',

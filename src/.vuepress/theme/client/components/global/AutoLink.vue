@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { PropType, computed, defineComponent } from 'vue';
+import { PropType, computed, defineComponent, toRefs } from 'vue';
 import { MyPaNavLink } from '@mptheme/config.types';
 import { useLink } from '@mptheme/client/composables/useLink';
 import { useRouter } from 'vue-router';

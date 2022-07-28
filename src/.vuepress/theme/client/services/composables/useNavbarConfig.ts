@@ -1,17 +1,18 @@
 import { ComputedRef, computed } from 'vue';
-import { NavbarGroup, NavbarItem, ResolvedNavbarItem } from '@mptheme/config.types';
-import { useNavLink, useThemeLocaleData } from '@vuepress/theme-default/lib/client/composables';
+import { MyPaNavbarGroup, MyPaNavbarItem, MyPaResolvedNavbarItem } from '@mptheme/config.types';
 import { isOfType } from '../../../shared/utils/type-guard/isOfType';
 import { isString } from '@vuepress/shared';
+import { useNavLink } from '@mptheme/client/composables/useNavLink';
+import { useSiteLocaleData } from '@mptheme/client/composables';
 
 const resolveNavbarItem = (
-  item: NavbarItem | NavbarGroup | string,
-): ResolvedNavbarItem => {
+  item: MyPaNavbarItem | MyPaNavbarGroup | string,
+): MyPaResolvedNavbarItem => {
   if (isString(item)) {
     return useNavLink(item);
   }
 
-  if (isOfType<NavbarGroup>(item, 'children')) {
+  if (isOfType<MyPaNavbarGroup>(item, 'children')) {
     return {
       ...item,
       children: item.children.map(resolveNavbarItem),
@@ -21,8 +22,8 @@ const resolveNavbarItem = (
   return item;
 };
 
-export const useNavbarConfig = (): ComputedRef<ResolvedNavbarItem[]> => {
-  const themeLocale = useThemeLocaleData();
+export const useNavbarConfig = (): ComputedRef<MyPaResolvedNavbarItem[]> => {
+  const themeLocale = useSiteLocaleData();
 
   return computed(() => {
     // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing

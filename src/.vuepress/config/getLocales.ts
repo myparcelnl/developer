@@ -1,59 +1,31 @@
 import { LocaleConfig } from '@vuepress/shared';
-import path from 'path';
-import { localeConfig } from '@mptheme/shared/locales/localeData';
 import fs from 'node:fs';
-
-const DEFAULT_LANGUAGE = 'en';
+import path from 'path';
+import { memoize } from 'lodash-unified';
 
 type LocaleType = 'theme' | 'site';
 type LocaleConfigs = Record<LocaleType, LocaleConfig>;
 
-const LOCALE_TYPES: LocaleType[] = ['theme', 'site'];
+const memoizedGetSiteLocale = memoize(() => {
+  return fs.readFileSync(path.resolve(__dirname, '../.temp/internal/siteLocale.json'));
+});
 
-let localeData: LocaleConfigs;
+const memoizedGetThemeLocale = memoize(() => {
+  return fs.readFileSync(path.resolve(__dirname, '../.temp/internal/themeLocale.json'));
+});
+
+export const getSiteLocale = () => {
+  return memoizedGetSiteLocale();
+};
+export const getThemeLocale = () => {
+  return memoizedGetThemeLocale();
+};
 
 export const getLocales = (): LocaleConfigs => {
-  const themeLocale = fs.readFileSync(path.resolve(__dirname, '../.temp/internal/themeLocale.json'));
-  const siteLocale = fs.readFileSync(path.resolve(__dirname, '../.temp/internal/siteLocale.json'));
-
-  // const locales = (await Promise
-  //   .all(Object.entries(files)
-  //     .map(async([key, func]) => {
-  //       return {
-  //         language: path.basename(key, '.json'),
-  //         data: (await func()).default,
-  //       };
-  //     }))) as {data: Record<string, string>; language: string}[];
-  //
-  // const siteLocale: LocaleConfig = {};
-  // const themeLocale: LocaleConfig = {};
-  //
-  // locales.forEach((locale) => {
-  //   const root = locale.language === DEFAULT_LANGUAGE ? '/' : `/${locale.language}/`;
-  //
-  //   siteLocale[root] ??= {};
-  //   themeLocale[root] ??= {};
-  //
-  //   Object.entries(locale.data).forEach(([key, value]) => {
-  //     switch (value.split('.')[0]) {
-  //       case 'theme':
-  //         themeLocale[root][key] = value;
-  //         break;
-  //       case 'site':
-  //         siteLocale[root][key] = value;
-  //         break;
-  //     }
-  //   });
-  // });
-  //
-
-  const newVar = {
-    site: siteLocale.toString('utf-8'),
-    theme: themeLocale.toString('utf-8'),
+  return {
+    site: getSiteLocale(),
+    theme: getThemeLocale(),
   };
-
-  console.log(newVar);
-  return newVar;
 };
 
 //   const locales = await Promise

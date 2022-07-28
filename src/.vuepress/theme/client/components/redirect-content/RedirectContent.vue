@@ -6,9 +6,8 @@
 
 <script lang="ts">
 import { computed, defineComponent, toRefs } from 'vue';
-import { useLocaleLink } from '@mptheme/client/services/composables/useLocaleLink';
+import { useLocaleLink, useTranslate } from '@mptheme/client/composables';
 import { useRouter } from 'vue-router';
-import { useTranslate } from '@mptheme/client/services/composables/useTranslate';
 
 export default defineComponent({
   name: 'RedirectContent',

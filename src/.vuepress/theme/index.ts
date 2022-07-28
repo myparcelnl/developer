@@ -6,7 +6,6 @@ import { activeHeaderLinksPlugin } from '@vuepress/plugin-active-header-links';
 import { autoLinkPlugin } from './node/plugins/autoLinkPlugin';
 import { createAliasMap } from './node/config/createAliasMap';
 import { createContainerPlugins } from './node/config/createContainerPlugin';
-import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 import { externalLinkIconPlugin } from '@vuepress/plugin-external-link-icon';
 import { gitPlugin } from '@vuepress/plugin-git';
 import { incrementHeadingsPlugin } from './node/plugins/incrementHeadingsPlugin';

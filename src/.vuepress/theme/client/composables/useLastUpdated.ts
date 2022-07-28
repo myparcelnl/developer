@@ -1,15 +1,15 @@
 import { ComputedRef, computed } from 'vue';
 import { DefaultThemeNormalPageFrontmatter, DefaultThemePageData } from '@vuepress/theme-default/lib/shared';
 import { usePageData, usePageFrontmatter } from '@vuepress/client';
-import { useThemeLocaleData } from '@mptheme/client/composables/useThemeLocaleData';
+import { useSiteLocaleData } from '@mptheme/client/composables';
 
 export const useLastUpdated = (): ComputedRef<null | string> => {
   const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>();
   const page = usePageData<DefaultThemePageData>();
-  const themeLocale = useThemeLocaleData();
+  const siteLocale = useSiteLocaleData();
 
   return computed(() => {
-    const showLastUpdated = frontmatter.value.lastUpdated ?? themeLocale.value.lastUpdated ?? true;
+    const showLastUpdated = frontmatter.value.lastUpdated ?? siteLocale.value.lastUpdated ?? true;
 
     if (!showLastUpdated) {
       return null;

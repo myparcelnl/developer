@@ -47,8 +47,13 @@ let translationsDir = `${__dirname}/../src/.vuepress/public/translations`;
       });
   });
 
-  fs.writeFileSync('src/.vuepress/.temp/internal/siteLocale.json', JSON.stringify(siteLocale));
-  console.log('Wrote site locale config to src/.vuepress/.temp/internal/themeLocale.json');
-  fs.writeFileSync('src/.vuepress/.temp/internal/themeLocale.json', JSON.stringify(themeLocale));
-  console.log('Wrote theme locale config to src/.vuepress/.temp/internal/themeLocale.json');
+  const localeData = {
+    site: siteLocale,
+    theme: themeLocale,
+  };
+
+  fs.writeFileSync('src/.vuepress/.temp/localeConfig.js', `
+  module.exports = ${JSON.stringify(localeData)};
+  `);
+  console.log('Wrote locale config to src/.vuepress/.temp/localeConfig.js');
 })();

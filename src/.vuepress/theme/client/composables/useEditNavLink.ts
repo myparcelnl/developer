@@ -3,10 +3,10 @@ import { DefaultThemeNormalPageFrontmatter, DefaultThemePageData } from '@vuepre
 import { usePageData, usePageFrontmatter } from '@vuepress/client';
 import { MyPaNavLink } from '@mptheme/config.types';
 import { resolveEditLink } from '@vuepress/theme-default/lib/client/utils';
-import { useThemeLocaleData } from '@mptheme/client/composables';
+import { useSiteLocaleData } from '@mptheme/client/composables';
 
 export const useEditNavLink = (): ComputedRef<MyPaNavLink | null> => {
-  const themeLocale = useThemeLocaleData();
+  const themeLocale = useSiteLocaleData();
   const page = usePageData<DefaultThemePageData>();
   const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>();
 
