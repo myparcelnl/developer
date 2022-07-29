@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{o as t,c as o,a as n}from"./app.db0a1a4d.js";const s={},_=n("p",null,"This is a new page",-1),a=[_];function c(r,i){return t(),o("div",null,a)}var f=e(s,[["render",c],["__file","index.html.vue"]]);export{f as default};
