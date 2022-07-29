@@ -10,3 +10,5 @@ declare interface SidebarItemV1 {
 }
 
 declare type SidebarV1ConfigArray = (SidebarItemV1 | string)[];
+
+declare const __VUEPRESS_DEV__: boolean;

@@ -4,7 +4,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
 
 @layer base {
   div[class*="language-"] {
-    @apply text-left leading-6 rounded-lg font-mono overflow-auto relative z-0 mb-3 mt-1;
+    @apply text-left leading-6 rounded-lg font-mono overflow-auto relative z-0 mb-3;
 
     // Render language name in top right of code block.
     &:before {
@@ -15,6 +15,12 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
       &.ext-#{$extension}:before {
         content: '#{$extension}';
       }
+    }
+  }
+
+  .code-group {
+    div[class*="language-"] {
+      @apply rounded-tl-none;
     }
   }
 
@@ -69,7 +75,6 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
         // Can't use @apply italic because that will create a circular dependency...
         font-style: italic;
       }
-
 
       &.doctag,
       &.formula,
