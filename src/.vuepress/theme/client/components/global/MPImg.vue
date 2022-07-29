@@ -1,10 +1,8 @@
 <template>
   <div class="flex relative">
-    <Transition name="fade">
-      <div
-        v-if="loading"
-        class="animate-pulse bg-black bg-opacity-5 dark:bg-white h-full rounded w-full" />
-    </Transition>
+    <div
+      v-if="loading"
+      class="animate-pulse bg-black bg-opacity-5 dark:bg-white h-full rounded w-full" />
 
     <img
       :src="src"
@@ -47,17 +45,14 @@ export default defineComponent({
       loading,
 
       onLoadStart() {
-        console.log('onLoadStart');
         loading.value = true;
       },
 
       onLoad() {
-        console.log('onLoad');
         loading.value = false;
       },
 
       onError() {
-        console.log('onError');
         loading.value = false;
       },
     };
