@@ -3,9 +3,9 @@ title: Introduction
 ---
 
 <Stack class="grid-flow-col auto-cols-max gap-1">
-    <GitHubBadge repo="myparcelnl/prestashop" />
-    <GitHubBadge repo="myparcelnl/prestashop" link="issues" />
-    <GitHubBadge repo="myparcelnl/prestashop" link="pulls" />
+    <GitHubShield repo="myparcelnl/prestashop" />
+    <GitHubShield repo="myparcelnl/prestashop" link="issues" />
+    <GitHubShield repo="myparcelnl/prestashop" link="pulls" />
 </Stack>
 
 ## Main features

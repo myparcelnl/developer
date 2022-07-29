@@ -28,7 +28,8 @@
           class="grow h-24"
           :src="`/integrations/${data.image}`"
           role="none"
-          :alt="`${data.title} image`" />
+          image-class="m-auto"
+          :alt="`${data.title} logo`" />
         <Icon
           v-if="data.internal"
           title="Maintained by MyParcel"

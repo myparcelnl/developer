@@ -23,12 +23,14 @@ first read the following guides if you're not familiar with VuePress or Vue:
 
 ### Frontmatter
 
-At the start of each `.md` file, you can add frontmatter. Below is described what you can write there and how it affects the page.
+At the start of each `.md` file, you can add frontmatter. Below is described
+what you can write there and how it affects the page.
 
 Example:
+
 ```markdown
 ---
-title: My Page 
+title: My Page
 ---
 
 ## My page content
@@ -46,16 +48,19 @@ Here is an overview of the most relevant values:
 | `lastUpdated`  | `boolean`         | Controls whether the "Last updated" text on the bottom is shown.                                            | `true`  |
 | `contributors` | `boolean`         | Controls whether the "Contributors" section on the bottom is shown.                                         | `true`  |
 
-See [Frontmatter](https://v2.vuepress.vuejs.org/reference/frontmatter.html#frontmatter) for all options.
+See [Frontmatter](https://v2.vuepress.vuejs.org/reference/frontmatter.html#frontmatter)
+for all options.
 
 ::: tip
-When `editLink`, `lastUpdated` and `contributors` are all false, the bar on top of the footer will not be shown at all.
+When `editLink`, `lastUpdated` and `contributors` are all false, the bar on top
+of the footer will not be shown at all.
 :::
-
 
 ::: note
-When using the frontmatter title, don't forget this renders a `h1` on your page. You should only have `h2` and smaller headings on the rest of the page.
+When using the frontmatter title, don't forget this renders a `h1` on your page.
+You should only have `h2` and smaller headings on the rest of the page.
 :::
+
 ## Markdown
 
 ### Code
@@ -100,7 +105,7 @@ usages are explained below.
 
 #### Usage
 
-```vue 
+```html 
 <Http code="204" />
 ```
 
@@ -129,8 +134,7 @@ a link to its source and more information. It supports the following types:
 
 #### Usage
 
-```vue
-
+```html
 <DataType
   type="shipment_status"
   id="3" />
@@ -146,14 +150,11 @@ a link to its source and more information. It supports the following types:
 
 #### Result
 
-<DataType type="shipment_status"
-id="3" />
+<DataType type="shipment_status" id="3" />
 
-<DataType type="carrier"
-name="dpd" />
+<DataType type="carrier" name="dpd" />
 
-<DataType type="package_type"
-id="4" />
+<DataType type="package_type" id="4" />
 
 ### DataTypeDefinition
 
@@ -161,8 +162,7 @@ id="4" />
 
 #### Usage
 
-```vue
-
+```html
 <DataTypeDefinition
   pattern="/\d{2}:\d{2}:\d{2}/"
   example="08:00:00" />
@@ -183,8 +183,7 @@ id="4" />
 
 #### Usage
 
-```vue
-
+```html
 <MPImg
   src="/integrations/chrome.svg"
   class="max-w-xs" />
@@ -193,6 +192,37 @@ id="4" />
 #### Result
 
 <MPImg src="/integrations/chrome.svg" class="max-w-xs" />
+
+### Shield
+
+Renders a shield from [shields.io](https://shields.io).
+
+
+<Shield path="codacy/coverage/c0f99d91962d448287b438b8162fff51" logo="codacy" color="ff8c00" labelColor="maroon" text="codacy" />
+
+#### NpmShield
+
+```html
+<NpmShield package="@myparcel/sdk" />
+```
+
+<NpmShield package="@myparcel/sdk"/>
+
+#### GitHubShield
+
+```html
+<GitHubShield repo="myparcelnl/sdk" />
+```
+
+<GitHubShield repo="myparcelnl/sdk" />
+
+#### PackagistShield
+
+```html
+<PackagistShield package="myparcelnl/sdk" />
+```
+
+<PackagistShield package="myparcelnl/sdk"/>
 
 ## Containers
 
@@ -258,6 +288,7 @@ Collapsed content with a custom header.
 | One | Two | Three  |
 |-----|-----|--------|
 | And | a   | table! |
+
 :::
 
 ::: expand h6: With a custom tag header
@@ -294,25 +325,23 @@ more information on how this works on Vue components.
 
 ### Example
 
-```vue
+```html
 <!-- Padding: 5, width: 12, background-color: monstera 500 -->
 <MPImg
+  alt="Shopware"
   src="/integrations/shopware.svg"
   class="p-3 w-12 bg-monstera-500" />
 
 <!-- Padding: 1, width: 18, margin-left: 3, background-color: goldfish 500 -->
 <MPImg
+  alt="C#"
   src="/integrations/c-sharp.svg"
   class="p-1 w-18 ml-3 bg-goldfish-500" />
 ```
 
-<MPImg
-src="/integrations/shopware.svg"
-class="p-3 w-12 bg-monstera-500" />
+<MPImg alt="Shopware" src="/integrations/shopware.svg" class="p-3 w-12 bg-monstera-500" />
 
-<MPImg
-src="/integrations/c-sharp.svg"
-class="p-1 w-16 ml-3 bg-goldfish-500" />
+<MPImg alt="C#" src="/integrations/c-sharp.svg" class="p-1 w-16 ml-3 bg-goldfish-500" />
 
 ## Theme
 
@@ -364,18 +393,21 @@ etc.
 The [`maxHeight`], [`maxWidth`], [`minHeight`] and [`minWidth`] utilities have
 been extended to include all spacing values from [`width`] and [`height`].
 
-
 ## Editing non-markdown content
 
 ### Integrations
 
-Integrations data is located in [integrations.json](https://github.com/myparcelnl/developer/blob/main/src/.vuepress/integrations.json). Edit it there to see the changes reflected on all places where the `Integration` component is used. Just reference the `name`, and all other data will be retrieved from that `.json` file.
+Integrations data is located
+in [integrations.json](https://github.com/myparcelnl/developer/blob/main/src/.vuepress/integrations.json)
+. Edit it there to see the changes reflected on all places where
+the `Integration` component is used. Just reference the `name`, and all other
+data will be retrieved from that `.json` file.
 
-```vue
+```html
 <Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
-    <Integration name="php-sdk" />
-    <Integration name="woocommerce" />
-    <Integration name="google-chrome-extension" />
+  <Integration name="php-sdk" />
+  <Integration name="woocommerce" />
+  <Integration name="google-chrome-extension" />
 </Stack>
 ```
 
@@ -386,9 +418,15 @@ Integrations data is located in [integrations.json](https://github.com/myparceln
 </Stack>
 
 [Tailwind CSS 3]: https://tailwindcss.com/
+
 [`maxHeight`]: https://tailwindcss.com/docs/max-height
+
 [`maxWidth`]: https://tailwindcss.com/docs/max-width
+
 [`minHeight`]: https://tailwindcss.com/docs/min-height
+
 [`minWidth`]: https://tailwindcss.com/docs/min-width
+
 [`width`]: https://tailwindcss.com/docs/width
+
 [`height`]: https://tailwindcss.com/docs/height

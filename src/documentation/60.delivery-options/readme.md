@@ -3,9 +3,10 @@ title: Introduction
 ---
 
 <Stack class="grid-flow-col auto-cols-max gap-1">
-    <NpmBadge package="@myparcel/delivery-options" />
-    <GitHubBadge repo="myparcelnl/delivery-options" link="issues" />
-    <GitHubBadge repo="myparcelnl/delivery-options" link="pulls" />
+    <NpmShield package="@myparcel/delivery-options" />
+    <Shield path="npm/dependency-version/@myparcel/delivery-options/vue" />
+    <GitHubShield repo="myparcelnl/delivery-options" link="issues" />
+    <GitHubShield repo="myparcelnl/delivery-options" link="pulls" />
 </Stack>
 
 This is the MyParcel delivery options module for use in any e-commerce
@@ -22,7 +23,7 @@ integrate with the design of your webshop easily.
 
 ## Browser support
 
-This app is written in [Vue.js](https://vuejs.org/), it supports IE9 and up.
+This app runs on [Vue.js](https://vuejs.org/) 2.6.14, it supports IE9 and up.
 
 ## Sandbox
 

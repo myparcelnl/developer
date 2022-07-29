@@ -28,7 +28,7 @@ const types = [
   },
 ];
 
-const GitHubBadge: FunctionalComponent<Props> = (props) => {
+const GitHubShield: FunctionalComponent<Props> = (props) => {
   const links = toArray(props.link ?? 'releases');
 
   return links.map((link) => {
@@ -39,11 +39,12 @@ const GitHubBadge: FunctionalComponent<Props> = (props) => {
     }
 
     return h(Shield, {
-      alt: props.repo + ' ' + type.alt + ' on GitHub',
+      alt: `${props.repo} ${type.alt} on GitHub`,
       href: `https://github.com/${props.repo}/${type.link}`,
-      path: `github/${type.name}/${props.repo}?color=4183C4&logo=github`,
+      path: `github/${type.name}/${props.repo}`,
+      logo: 'github',
     });
   });
 };
 
-export default GitHubBadge;
+export default GitHubShield;

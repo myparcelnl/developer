@@ -1,14 +1,15 @@
 <template>
   <div class="flex relative">
-    <div
-      v-if="loading"
-      class="animate-pulse bg-black bg-opacity-5 dark:bg-white h-full rounded w-full" />
+    <Transition name="fade">
+      <div
+        v-if="loading"
+        class="animate-pulse bg-black bg-opacity-5 dark:bg-white h-full rounded w-full" />
+    </Transition>
 
     <img
-      v-show="!loading"
-      loading="lazy"
       :src="src"
-      class="m-auto max-h-full"
+      class="max-h-full"
+      :class="imageClass"
       :alt="alt"
       @dragstart.prevent="null"
       @loadstart="onLoadStart"
@@ -18,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { PropType, defineComponent, ref } from 'vue';
 
 export default defineComponent({
   name: 'MPImg',
@@ -32,23 +33,31 @@ export default defineComponent({
       type: String,
       required: true,
     },
+
+    imageClass: {
+      type: [String, Array, Object] as PropType<string[] | string | Record<string, string>>,
+      default: null,
+    },
   },
 
   setup: () => {
-    const loading = ref(false);
+    const loading = ref(true);
 
     return {
       loading,
 
       onLoadStart() {
+        console.log('onLoadStart');
         loading.value = true;
       },
 
       onLoad() {
+        console.log('onLoad');
         loading.value = false;
       },
 
       onError() {
+        console.log('onError');
         loading.value = false;
       },
     };

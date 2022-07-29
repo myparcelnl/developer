@@ -2,14 +2,14 @@
   <div class="before:content before:pb-[100%] bg-zinc-400 flex group overflow-hidden relative rounded-xl">
     <div>
       <MPImg
-        v-if="normal"
+        v-show="normal"
         alt="normal image"
         :src="normalSrc"
         :class="{
           'block group-hover:hidden': normal && funny,
         }" />
       <MPImg
-        v-if="funny"
+        v-show="funny"
         alt="funny image"
         :src="funnySrc"
         :class="{
