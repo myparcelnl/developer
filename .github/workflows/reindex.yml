@@ -3,6 +3,8 @@ name: 'Reindex search results 🔍'
 on:
   page_build:
 
+  workflow_dispatch:
+
 jobs:
   trigger:
     name: 'Trigger crawl'
