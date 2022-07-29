@@ -22,7 +22,7 @@ export function registerCustomComponentsPlugin(): Plugin {
 
       return {
         ...acc,
-        [componentName]: DIR_COMPONENTS + '/' + item,
+        [componentName]: `${DIR_COMPONENTS}/${item}`,
       };
     }, {});
 
