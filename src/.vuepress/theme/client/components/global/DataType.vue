@@ -54,7 +54,7 @@ export default defineComponent({
     });
 
     const linkItem: MyPaNavbarItem = {
-      link: `/api-reference/04.data-types#${dataType.value?.name}`,
+      link: `/api-reference/04.data-types.html#${dataType.value?.name}`,
       text: text.value,
     };
 

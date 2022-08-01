@@ -19,12 +19,8 @@ export const incrementHeadingsPlugin = (): Plugin => {
 
         let increment = 0;
 
-        if (headings.some((token) => token.tag === 'h2')) {
-          increment = 1;
-        }
-
         if (headings.some((token) => token.tag === 'h1')) {
-          increment = 2;
+          increment = 1;
         }
 
         if (!increment) {

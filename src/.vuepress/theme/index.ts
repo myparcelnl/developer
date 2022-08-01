@@ -13,6 +13,7 @@ import { palettePlugin } from '@vuepress/plugin-palette';
 import { path } from '@vuepress/utils';
 import { prismjsPlugin } from '@vuepress/plugin-prismjs';
 import { registerCustomComponentsPlugin } from './node/plugins/registerCustomComponentsPlugin';
+import { seoPlugin } from './seoPlugin';
 import { themeDataPlugin } from '@vuepress/plugin-theme-data';
 
 const views = path.resolve(DIR_CLIENT, 'views');
@@ -74,6 +75,8 @@ export const myParcelTheme = (options: MyParcelThemeOptions): Theme => {
       gitPlugin(),
       incrementHeadingsPlugin(),
       registerCustomComponentsPlugin(),
+
+      seoPlugin(),
     ],
   };
 };

@@ -55,7 +55,7 @@ in our [contact form], or ask our developers directly on [Slack].
 
 [`Shop Settings -> General`]: https://backoffice.myparcel.nl/settings
 
-[authentication instructions]: /api-reference/05.authentication.html
+[authentication instructions]: /api-reference/05.authentication/
 
 [contact form]: /contact/
 

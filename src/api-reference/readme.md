@@ -40,4 +40,4 @@ This does not apply to <DataType type="package_type" id="4" />, these shipments
 will always be invoiced immediately.
 :::
 
-[contact]: /contact
+[contact]: /contact/

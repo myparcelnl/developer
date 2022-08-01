@@ -14,7 +14,7 @@ to install and configure.
 
 <Integrations type="plugin" />
 
-## SDKs
+## SDKs (Software Development Kits)
 
 An SDK can be used to quickly integrate with our API and skip a lot of the work that comes with manually developing an API integration. 
 

@@ -7,10 +7,10 @@ subtitle: Connect with the MyParcel API and get started with shipments, returns 
 
 actions: 
 - title: Get started
-  link: /getting-started
+  link: /getting-started/
 - title: Contact us
   variant: outlineLight
-  link: /contact
+  link: /contact/
 
 tree:
 - title: Explore.
@@ -24,21 +24,21 @@ tree:
           title: API reference.
           icon: api-reference
           subtitle: Here you will find everything you need to successfully communicate with our API.
-          link: /api-reference
+          link: /api-reference/
       - component: HomeLink
         attributes: 
           class: 'bg-monstera-500' 
           title: Documentation.
           icon: documentation
           subtitle: In-depth guides on all our plugins, SDKs and more.
-          link: /documentation
+          link: /documentation/
       - component: HomeLink
         attributes: 
           class: 'bg-goldfish-500' 
           title: Integrations.
           icon: integrations
           subtitle: This is where you can find our integrations with various external services and platforms.
-          link: /integrations
+          link: /integrations/
 
 - title: Get the most out of our service.
   subtitle: These customers are using a custom implementation for managing their MyParcel shipments.
