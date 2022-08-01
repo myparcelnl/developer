@@ -23,6 +23,8 @@ export const autoLinkPlugin = (): Plugin => {
         self,
         // eslint-disable-next-line max-params
       ) => {
+        tokens[idx].attrPush(['tabindex', '-1']);
+
         const result = originalLinkOpen?.(tokens, idx, options, env, self);
         const href = tokens[idx].attrGet('href');
 

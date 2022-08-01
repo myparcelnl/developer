@@ -9,7 +9,8 @@
     @click="toggle">
     <div
       class="flex flex-col h-6 items-center justify-around w-6"
-      aria-hidden="true">
+      aria-hidden="true"
+      tabindex="-1">
       <span
         :class="[
           burgerClasses,
