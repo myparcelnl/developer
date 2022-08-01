@@ -1,8 +1,10 @@
 <template>
   <div class="flex flex-grow h-12">
-    <RouterLink
-      :to="navbarBrandLink"
-      class="flex flex-grow">
+    <RouterLink :to="navbarBrandLink">
+      <span class="sr-only">
+        To homepage
+      </span>
+
       <MPLogo
         :show-from="logoShowFrom"
         :full-from="logoFullFrom" />
