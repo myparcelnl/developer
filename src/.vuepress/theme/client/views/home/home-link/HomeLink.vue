@@ -6,6 +6,7 @@
     :subtitle="subtitle"
     :icon="icon"
     :link="link"
+    aria-label="open"
     link-full
     button-class="flex group-hover:translate-x-2 ml-auto transform transition-all">
     <template #before>

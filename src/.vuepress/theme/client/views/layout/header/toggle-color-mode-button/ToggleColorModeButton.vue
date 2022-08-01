@@ -2,6 +2,7 @@
   <button
     type="button"
     :title="themeLocale.toggleColorMode"
+    aria-label="toggle color mode"
     @click="toggleColorMode">
     <svg
       v-show="!dark"

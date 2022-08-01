@@ -35,7 +35,7 @@
 </template>
 
 <script lang="ts">
-import { PropType, defineComponent } from 'vue';
+import { PropType, computed, defineComponent } from 'vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import { MyPaNavLink } from '@mptheme/config.types';
 import { buttonVariant } from '@mptheme/client/services/tailwind/variants/buttonVariant';
@@ -65,12 +65,21 @@ export default defineComponent({
     disabled: {
       type: Boolean,
     },
+
+    ariaLabel: {
+      type: String,
+      default: null,
+    },
   },
 
   emits: ['click'],
 
   setup: (props) => {
     return {
+      computedAriaLabel: computed(() => {
+        return props.ariaLabel ?? (typeof props.link === 'string' ? props.link : props.link.text);
+      }),
+
       variantClass: getVariantClasses(props.variant),
     };
   },

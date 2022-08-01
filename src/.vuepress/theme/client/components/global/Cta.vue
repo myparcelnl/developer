@@ -34,6 +34,7 @@
         <MPButton
           v-if="link"
           class="inline-flex"
+          :aria-label="ariaLabel"
           :variant="buttonVariant"
           :class="buttonClass">
           <template v-if="linkText">
@@ -89,6 +90,11 @@ export default defineComponent({
     link: {
       type: String,
       default: null,
+    },
+
+    ariaLabel: {
+      type: String,
+      required: true,
     },
 
     buttonVariant: merge(

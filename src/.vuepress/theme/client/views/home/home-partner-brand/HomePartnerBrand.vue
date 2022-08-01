@@ -2,7 +2,8 @@
   <Cta
     :link="link"
     :style="`background-color: ${color}`"
-    class="before:content before:pb-[100%]">
+    class="before:content before:pb-[100%]"
+    aria-label="visit">
     <div class="absolute bg-black group-hover:opacity-30 inset-0 opacity-0 transition-opacity" />
 
     <div class="absolute flex inset-5">
@@ -14,6 +15,7 @@
 
     <MPButton
       variant="none"
+      aria-label="visit"
       class="absolute bottom-2 group-hover:opacity-100 group-hover:translate-x-2 opacity-60 right-0 text-white transform transition-[transform,opacity]">
       Visit
 

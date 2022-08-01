@@ -39,6 +39,7 @@
         @verify="verify" />
 
       <MPButton
+        :aria-label="translate('submit')"
         :disabled="loading"
         type="submit">
         {{ translate('submit') }}
