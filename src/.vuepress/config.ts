@@ -6,7 +6,7 @@ import { createSidebar } from './config/sidebar/createSidebar';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 import { getSiteLocales } from './config/getSiteLocales';
 import { getThemeLocales } from './config/getThemeLocales';
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
+import { googleTagManagerPlugin } from './gtmPlugin/src/node';
 import { head } from './config/head';
 import { myParcelTheme } from './theme';
 import { slugify } from '@mdit-vue/shared';
@@ -36,8 +36,8 @@ export default defineUserConfig({
   }),
 
   plugins: [
-    googleAnalyticsPlugin({
-      id: 'G-DJ3X5HF03D',
+    googleTagManagerPlugin({
+      id: 'GTM-P3ZWX56',
     }),
 
     docsearchPlugin({

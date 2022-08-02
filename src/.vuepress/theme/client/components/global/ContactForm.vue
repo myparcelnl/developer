@@ -56,9 +56,10 @@ import FormSelect from '@mptheme/client/components/global/FormSelect.vue';
 import FormTextArea from '@mptheme/client/components/global/FormTextArea.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import Message from '@mptheme/client/components/global/Message.vue';
+import { MessageItem } from '@mptheme/client/services/tailwind/variants/messageTextVariant';
 import ReCaptcha from '@mptheme/client/components/common/ReCaptcha.vue';
-import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
-import { useTranslate } from '@mptheme/client/composables/useTranslate';
+import { useContactForm } from '@mptheme/client/composables/useContactForm';
+import { useTranslate } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'ContactForm',
@@ -71,72 +72,20 @@ export default defineComponent({
       subject: '',
       message: '',
     };
+
     const refs = ref(initialValue);
-    const recaptchaToken = ref<string>();
-    const loading = ref(false);
-    const messages = ref<{ type: string; message: string }[]>([]);
+    const messages = ref<MessageItem[]>([]);
     const translate = useTranslate();
 
-    const onSubmit = async() => {
-      if (loading.value) {
-        return;
-      }
-
-      messages.value = [];
-
-      if (!recaptchaToken.value) {
-        messages.value.push({ type: 'error', message: translate('errorCaptchaInvalid') });
-        return;
-      }
-
-      loading.value = true;
-
-      try {
-        const response = await fetch('https://vqthadq4nvo5i2cgvxpu3xw3zm0qxquc.lambda-url.eu-central-1.on.aws', {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            ...refs.value,
-            recaptchaToken: recaptchaToken.value,
-          }),
-        });
-
-        if (!response.ok) {
-          const json = await response.json();
-          json.data.errors.messages.forEach((message: string) => {
-            messages.value.push({ type: 'error', message: translate(message) });
-          });
-          return;
-        }
-
-        messages.value.push({
-          type: 'success',
-          message: translate('messageSubmitted'),
-        });
-
-        refs.value = initialValue;
-      } catch (e) {
-        if (isOfType<Error>(e, 'message')) {
-          messages.value.push({ type: 'error', message: translate(e.message) });
-        }
-      }
-
-      loading.value = false;
-    };
+    const { loading, onSubmit, verify } = useContactForm(refs, messages, initialValue);
 
     return {
-      refs,
       loading,
-      translate,
       messages,
       onSubmit,
-      verify: (token: string) => {
-        messages.value = [];
-        recaptchaToken.value = token;
-      },
+      refs,
+      translate,
+      verify,
 
       subjects: [
         'feature_request',

@@ -6,3 +6,8 @@ export const messageTextVariant = defineVariant('messageText', {
   error: 'text-rose-500',
   success: 'text-green-500',
 });
+
+export interface MessageItem {
+  type: 'tip' | 'note' | 'error' | 'success';
+  message: string;
+}
