@@ -16,6 +16,7 @@
         v-if="img"
         alt=""
         class="h-32 w-full"
+        image-class="m-auto"
         :class="imgClass"
         :src="img" />
 
