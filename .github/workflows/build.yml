@@ -23,6 +23,9 @@ jobs:
           ref: ${{ inputs.ref }}
 
       - run: yarn translations:import
+        env:
+          GOOGLE_DOCUMENT_ID: ${{ secrets.GOOGLE_DOCUMENT_ID }}
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
 
       - name: 'Handle build cache'
         id: cache-build
