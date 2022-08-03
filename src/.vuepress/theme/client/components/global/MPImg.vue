@@ -39,7 +39,7 @@ export default defineComponent({
   },
 
   setup: () => {
-    const loading = ref(true);
+    const loading = ref(false);
 
     return {
       loading,
