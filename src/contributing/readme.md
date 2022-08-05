@@ -522,6 +522,20 @@ data will be retrieved from that `.json` file.
     <Integration name="google-chrome-extension" />
 </Stack>
 
+### Code
+
+To run the project, check out the repository and run the following commands:
+
+```shell
+yarn install
+yarn translations:import
+yarn dev
+```
+
+This installs dependencies, downloads translations and then starts the dev
+server.
+
+
 [Tailwind CSS 3]: https://tailwindcss.com/
 
 [`maxHeight`]: https://tailwindcss.com/docs/max-height

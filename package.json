@@ -23,8 +23,7 @@
   "scripts": {
     "build": "yarn optimize:svg -q && vuepress build src",
     "dev": "vuepress dev src",
-    "translations:import": "npx -q @edielemoine/google-docs-importer -o src/.vuepress/public/translations",
-    "preinstall": "npx -q only-allow yarn",
+    "translations:import": "npx -q @edielemoine/google-docs-importer -d 1q_las2AW8vZqhyiymXnPtrCsNQsye9W0Aqi3aWymjuU -o src/.vuepress/public/translations",
     "optimize:svg": "svgo -r --multipass --final-newline --folder src/.vuepress/public",
     "prepare": "husky install",
     "preview": "npx http-server src/.vuepress/dist",
