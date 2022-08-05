@@ -1,0 +1,1 @@
+const e=Object.freeze({id:{type:String,default:""},label:{type:String,default:""},modelValue:{type:[String,Number],default:""},optional:{type:Boolean}}),a=["bg-white","border","dark:bg-zinc-800","disabled:bg-slate-50","disabled:border-slate-200","disabled:shadow-none","disabled:text-slate-500","leading-normal","px-4","py-3","w-full"];export{a,e as d};
