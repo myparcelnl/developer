@@ -1,6 +1,6 @@
 @layer base {
   table {
-    @apply rounded-lg overflow-x-scroll w-full mt-2 mb-3;
+    @apply rounded-lg overflow-x-scroll w-full mt-2 mb-3 gutter-stable;
   }
 
   table, td, th {

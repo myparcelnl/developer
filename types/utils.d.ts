@@ -14,3 +14,5 @@ type Extends<T, U extends T> = U;
  * name in B.
  */
 type Extend<A, B> = Omit<A, keyof B> & B;
+
+type ArrayOneOrMore<T> = { 0: T } & T[];

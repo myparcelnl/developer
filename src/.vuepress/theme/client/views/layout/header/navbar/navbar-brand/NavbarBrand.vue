@@ -14,10 +14,10 @@
 
 <script lang="ts">
 import { PropType, computed, defineComponent } from 'vue';
-import { useRouteLocale, useSiteLocaleData } from '@vuepress/client';
+import { useSiteLocaleData, useThemeLocaleData } from '@mptheme/client/composables';
 import { Breakpoint } from '@mptheme/index.types';
 import MPLogo from '@mptheme/client/components/logo/MPLogo.vue';
-import { useThemeLocaleData } from '@mptheme/client/composables';
+import { useRouteLocale } from '@vuepress/client';
 
 export default defineComponent({
   name: 'NavbarBrand',
@@ -42,9 +42,7 @@ export default defineComponent({
     const siteLocale = useSiteLocaleData();
     const themeLocale = useThemeLocaleData();
 
-    const navbarBrandLink = computed(
-      () => themeLocale.value.home || routeLocale.value,
-    );
+    const navbarBrandLink = computed(() => themeLocale.value.home ?? routeLocale.value);
     const navbarBrandTitle = computed(() => siteLocale.value.title);
 
     return {

@@ -1,9 +1,34 @@
-export const STATUS = { text: 'Status', link: 'https://status.myparcel.nl/' };
-export const API_REFERENCE = { text: 'API Reference', link: '/api-reference/' };
-export const DOCUMENTATION = { text: 'Documentation', link: '/documentation/' };
-export const INTEGRATIONS = { text: 'Integrations', link: '/integrations/' };
-export const ABOUT = { text: 'About', link: '/about/' };
-export const CONTACT = { text: 'Contact', link: '/contact/' };
+import { MyPaNavLink } from '@mptheme/config.types';
+
+export const STATUS: MyPaNavLink = {
+  text: 'Status',
+  link: 'https://status.myparcel.nl/',
+};
+
+export const API_REFERENCE: MyPaNavLink = {
+  text: 'API Reference',
+  link: '/api-reference/',
+};
+
+export const DOCUMENTATION: MyPaNavLink = {
+  text: 'Documentation',
+  link: '/documentation/',
+};
+
+export const INTEGRATIONS: MyPaNavLink = {
+  text: 'Integrations',
+  link: '/integrations/',
+};
+
+export const ABOUT: MyPaNavLink = {
+  text: 'About',
+  link: '/about/',
+};
+
+export const CONTACT: MyPaNavLink = {
+  text: 'Contact',
+  link: '/contact/',
+};
 
 export const ROUTES = [
   ABOUT,

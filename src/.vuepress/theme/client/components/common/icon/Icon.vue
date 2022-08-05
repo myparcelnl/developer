@@ -1,26 +1,21 @@
 <template>
   <i
-    :class="classes"
-    class="inline-flex" />
+    role="none"
+    :class="`icon-${icon}`"
+    class="inline-flex leading-none" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { iconVariant } from '@mptheme/client/services/tailwind/variants/iconVariant';
-import { useTailwindVariant } from '@mptheme/client/composables/useTailwindVariant';
 
-const variant = useTailwindVariant(iconVariant);
-
+// Icon classes are safelisted in tailwind config.
 export default defineComponent({
   name: 'Icon',
   props: {
-    icon: variant.createVariantProp(),
-  },
-
-  setup: (props) => {
-    return {
-      classes: variant.getVariantClasses(props.icon),
-    };
+    icon: {
+      type: String,
+      default: null,
+    },
   },
 });
 </script>

@@ -1,7 +1,7 @@
 import { Ref, ref } from 'vue';
 import { MessageItem } from '@mptheme/client/services/tailwind/variants/messageTextVariant';
-import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
-import { useGoogleTagManager } from '../../../gtmPlugin/src/client/composables/useGoogleTagManager';
+import { isOfType } from '@mptheme/shared/utils';
+import { useGoogleTagManager } from '../../../plugins/gtm/client/composables/useGoogleTagManager';
 import { useTranslate } from '@mptheme/client/composables/useTranslate';
 
 type UseContactForm = (

@@ -3,7 +3,7 @@ import { GitPluginFrontmatter, GitPluginPageData } from '@vuepress/plugin-git';
 import { Page, Plugin } from 'vuepress';
 import dayjs from 'dayjs';
 import { frontmatterPlugin } from '@mdit-vue/plugin-frontmatter';
-import { isOfType } from './client/utils/type-guard/isOfType';
+import { isOfType } from './shared/utils';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 

@@ -1,32 +1,20 @@
 import { defineUserConfig, viteBundler } from 'vuepress';
-import { createBottomFooter } from './config/createBottomFooter';
-import { createFooter } from './config/createFooter';
-import { createNavbar } from './config/createNavbar';
-import { createSidebar } from './config/sidebar/createSidebar';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
-import { getSiteLocales } from './config/getSiteLocales';
-import { getThemeLocales } from './config/getThemeLocales';
-import { googleTagManagerPlugin } from './gtmPlugin/src/node';
+import { googleTagManagerPlugin } from './plugins/gtm/node';
 import { head } from './config/head';
 import { myParcelTheme } from './theme';
+import { parseTranslationsPlugin } from './plugins/parseTranslations';
 import { slugify } from '@mdit-vue/shared';
 import { viteConfig } from './viteConfig';
+import path from 'path';
+import { DIR_CONFIG, DIR_VUEPRESS } from './dirs';
 
 const DEV_SERVER_PORT = 8955;
 
 export default defineUserConfig({
   head,
 
-  locales: getSiteLocales(),
-
   theme: myParcelTheme({
-    navbar: createNavbar(),
-    sidebar: createSidebar(),
-    footer: createFooter(),
-    footer2: createBottomFooter(),
-
-    locales: getThemeLocales(),
-
     contributors: true,
     docsBranch: 'main',
     docsDir: '/src/',
@@ -36,6 +24,12 @@ export default defineUserConfig({
   }),
 
   plugins: [
+    parseTranslationsPlugin({
+      defaultLocale: 'en-GB',
+      configDir: path.resolve(DIR_CONFIG, 'navigation'),
+      dest: path.resolve(DIR_VUEPRESS, 'public', 'translations'),
+    }),
+
     googleTagManagerPlugin({
       id: 'GTM-P3ZWX56',
     }),

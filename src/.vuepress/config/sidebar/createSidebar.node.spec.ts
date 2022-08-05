@@ -62,22 +62,36 @@ describe('auto sidebar', () => {
                 "text": "Folder1 2",
               },
             ],
+            "link": undefined,
             "text": "folder1",
           },
         ],
         "/folder2": [
           {
             "children": [],
+            "link": undefined,
             "text": "folder2",
           },
         ],
         "/folder3": [
           {
             "children": [],
+            "link": undefined,
             "text": "folder3",
           },
         ],
       }
     `);
   });
+
+  // it('renders correct base level items', () => {
+  //   expect(Object.keys(sidebar)).toEqual([...SIDEBAR_ITEMS, '/nl']);
+  // });
+  //
+  // it('gives each top level item its own link', () => {
+  //   expect.assertions(SIDEBAR_ITEMS.length);
+  //   SIDEBAR_ITEMS.forEach((item) => {
+  //     expect(sidebar?.[item][0].link).toEqual(item);
+  //   });
+  // });
 });

@@ -16,7 +16,7 @@ on:
 jobs:
   build:
     name: 'Build site'
-    uses: myparcelnl/developer/.github/workflows/build.yml@main
+    uses: ./.github/workflows/build.yml
     secrets: inherit
     with:
       upload: true

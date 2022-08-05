@@ -11,19 +11,17 @@
     }">
     <ContentBlock
       :variant="['border-right', 'dark']"
-      class="h-full inset-0 overflow-y-auto pb-24 pt-5 px-3 w-full">
+      class="gutter-stable h-full inset-0 overflow-y-auto pb-24 pt-5 px-3 w-full">
       <SidebarItems />
     </ContentBlock>
   </aside>
 
-  <Transition
-    name="fade"
-    appear>
+  <Transition name="fade">
     <div
       v-if="exists"
       v-show="toggled"
       class="bg-black bg-opacity-50 fixed inset-0 z-20"
-      @click="toggle" />
+      @click="() => toggle(false)" />
   </Transition>
 </template>
 

@@ -15,7 +15,9 @@
         :style="linksWrapperStyle">
         <NavbarItems class="hidden lg:flex" />
 
-        <ToggleColorModeButton class="ml-0 p-3 w-12" />
+        <ToggleColorModeButton />
+
+        <LanguageDropdown />
 
         <NavbarSearch />
       </div>
@@ -27,6 +29,7 @@
 import { computed, defineComponent, ref } from 'vue';
 import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
+import LanguageDropdown from '@mptheme/client/components/language-dropdown/LanguageDropdown.vue';
 import NavbarBrand from '@mptheme/client/views/layout/header/navbar/navbar-brand/NavbarBrand.vue';
 import NavbarItems from '@mptheme/client/views/layout/header/navbar/navbar-items/NavbarItems.vue';
 import ToggleColorModeButton
@@ -37,11 +40,12 @@ export default defineComponent({
   name: 'MPHeader',
 
   components: {
-    ToggleColorModeButton,
     ContentBlock,
+    ContentContainer,
+    LanguageDropdown,
     NavbarBrand,
     NavbarItems,
-    ContentContainer,
+    ToggleColorModeButton,
     ToggleSidebarButton,
   },
 

@@ -1,2 +1,2 @@
 export * from './useNavbarConfig';
-export * from './useNavbarSelectLanguage';
+export * from './useSwitchLanguage';

@@ -1,10 +1,16 @@
 $fontFamily: 'icons';
 
 $icons: (
-  api-reference: '\e900',
-  chevron-right: '\e901',
-  documentation: '\e902',
-  integrations: '\e903',
+  chevron-right: "\e901",
+  code: "\e900",
+  git: "\e904",
+  github: "\e905",
+  globe: "🌐",
+  link: "🔗",
+  moon: "🌙",
+  myparcel: "\e906",
+  sun: "🌞",
+  support: "\e902",
 );
 
 @font-face {
@@ -18,22 +24,21 @@ $icons: (
 }
 
 i {
-  @apply not-italic font-normal normal-case leading-none antialiased relative;
+  @apply not-italic font-normal normal-case leading-none antialiased relative select-none;
   font-family: '#{$fontFamily}' !important;
   speak: never;
 
-  &.icon-api-reference:before {content: '\e900'}
-  &.icon-documentation:before {content: '\e902'}
-  &.icon-integrations:before {content: '\e903'}
-  &.icon-git:before {content: '\e904'}
-  &.icon-github:before {content: '\e905'}
-  &.icon-myparcel:before {content: '\e906'}
+  @each $icon, $content in $icons {
+    &.icon-#{$icon}:before {
+      @apply m-auto;
+      content: $content;
+    }
+  }
 
   &.icon-chevron-up:before,
-  &.icon-chevron-right:before,
   &.icon-chevron-down:before,
   &.icon-chevron-left:before {
-    content: '\e901';
+    content: map-get($icons, 'chevron-right');
   }
 
   &.icon-chevron-up {
@@ -46,5 +51,9 @@ i {
 
   &.icon-chevron-left {
     @apply transform rotate-180;
+  }
+
+  &.icon-myparcel {
+    @apply text-monstera-500;
   }
 }

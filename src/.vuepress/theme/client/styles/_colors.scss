@@ -16,4 +16,15 @@
   * {
     @apply border-zinc-200 dark:border-zinc-800;
   }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    &:focus,
+    &:focus-visible {
+      @apply outline outline-2 outline-goldfish-500 outline-offset-2;
+    }
+  }
 }

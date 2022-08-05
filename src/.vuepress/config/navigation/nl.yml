@@ -1,0 +1,90 @@
+navbar:
+  - text: API Reference
+    link: /nl/api-reference/
+  - text: Documentatie
+    link: /nl/documentatie/
+  - text: Integraties
+    link: /nl/integraties/
+  - text: Over ons
+    link: /nl/about/
+  - text: Contact
+    link: /nl/contact/
+  - text: Status
+    link: 'https://status.myparcel.nl/'
+
+footer:
+  - text: Documentatie
+    link: /documentatie/
+    children:
+      - text: Aan de slag
+        link: /nl/aan de slag/
+      - text: WooCommerce
+        link: /nl/10.woocommerce/
+      - text: Prestashop
+        link: /nl/11.prestashop/
+      - text: Magento2
+        link: /nl/13.magento2/
+      - text: Shopify
+        link: /nl/14.shopify/
+      - text: Shopware
+        link: /nl/15.shopware/
+      - text: Wix
+        link: /nl/20.wix/
+      - text: PHP SDK
+        link: /nl/50.php-sdk/
+      - text: JS SDK
+        link: /nl/51.js-sdk/
+      - text: Delivery Options
+        link: /nl/60.delivery-options/
+
+  - text: API Reference (EN)
+    children:
+      - text: Intro
+        link: /api-reference/
+      - text: Data Types
+        link: /api-reference/04.data-types.html
+      - text: Authentication
+        link: /api-reference/05.authentication.html
+      - text: Shipments
+        link: /api-reference/06.shipments.html
+      - text: Delivery options
+        link: /api-reference/08.delivery-options.html
+      - text: Webhooks
+        link: /api-reference/10.webhooks.html
+
+  - text: Contact
+    children:
+      - text: Neem contact met ons op
+        link: /contact
+      - text: Chat met ons op Slack
+        link: https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI/
+      - text: Word partner
+        link: 'https://www.myparcel.nl/partner-worden/'
+
+  - text: ''
+    children:
+      - text: Status
+        link: 'https://status.myparcel.nl/'
+      - text: Over ons
+        link: /nl/over-ons/
+      - text: Vacatures
+        link: 'https://www.myparcel.nl/vacature/development/'
+      - text: GitHub
+        link: 'https://github.com/myparcelnl/'
+      - text: MyParcel
+        link: 'https://www.myparcel.nl/'
+      - text: SendMyParcel
+        link: 'https://www.sendmyparcel.be/'
+      - text: Flespakket
+        link: 'https://www.flespakket.nl/'
+
+footer2:
+  - text: Voorwaarden & beleid
+    link: >-
+      https://backoffice.myparcel.nl/static/myparcel-nederland/documentatie/voorwaarden/myparcel-algemene-voorwaarden.pdf
+  - text: Cookiestatement
+    link: >-
+      https://backoffice.myparcel.nl/static/myparcel-nederland/documentatie/voorwaarden/myparcel-cookie-statement.pdf
+  - text: Privacyverklaring
+    link: >-
+      https://backoffice.myparcel.nl/static/myparcel-nederland/documentatie/voorwaarden/myparcel-privacy-statement.pdf

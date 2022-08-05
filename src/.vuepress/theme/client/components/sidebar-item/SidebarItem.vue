@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li v-if="sidebarDepth >= depth">
     <h1
       v-if="depth === 0"
       class="text-3xl"
@@ -32,19 +32,21 @@
         :toggle="isOpen" />
     </p>
 
-    <ul
-      v-if="item.children?.length"
-      v-show="isOpen"
-      :class="{
-        'pl-3 ml-0.5 border-l': depth > 0,
-        'text-sm': depth > 1,
-      }">
-      <SidebarItem
-        v-for="child in item.children"
-        :key="`${depth}${child.text}${child.link}`"
-        :item="child"
-        :depth="depth + 1" />
-    </ul>
+    <Transition v-if="item.children?.length">
+      <ul
+        v-if="item.children?.length"
+        v-show="isOpen"
+        :class="{
+          'pl-3 ml-0.5 border-l': depth > 0,
+          'text-sm': depth > 1,
+        }">
+        <SidebarItem
+          v-for="child in item.children"
+          :key="`${depth}${child.text}${child.link}`"
+          :item="child"
+          :depth="depth + 1" />
+      </ul>
+    </Transition>
   </li>
 </template>
 
@@ -55,7 +57,8 @@ import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
 import { ResolvedSidebarItem } from 'vuepress';
 import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
 import { isActiveSidebarItem } from '@vuepress/theme-default/lib/client';
-import { useSidebar } from '@mptheme/client/composables';
+import { usePageFrontmatter } from '@vuepress/client';
+import { useSidebar } from '@mptheme/client/composables/sidebar';
 
 export default defineComponent({
   name: 'SidebarItem',
@@ -84,6 +87,12 @@ export default defineComponent({
     const isActive = computed(() => isActiveSidebarItem(item.value as ResolvedSidebarItem, route));
     const onClick = ref<() => void>();
 
+    const frontmatter = usePageFrontmatter();
+
+    const sidebarDepth = computed<number>(() => {
+      return Number(frontmatter.value.sidebarDepth ?? Infinity);
+    });
+
     const {
       toggle: toggleSidebar,
       toggled: sidebarToggled,
@@ -103,11 +112,12 @@ export default defineComponent({
     }
 
     return {
-      isOpen,
       isActive,
+      isOpen,
       onClick,
-      toggleSidebar,
+      sidebarDepth,
       sidebarToggled,
+      toggleSidebar,
       classes: computed(() => [
         'py-1 flex transition-all duration-100 sidebar-item',
         {

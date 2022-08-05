@@ -301,5 +301,13 @@
     "type": "api",
     "image": "stockitup.png",
     "classes": "bg-[#05386b]"
+  },
+  {
+    "name": "delivery-options",
+    "title": "Delivery Options",
+    "type": "other",
+    "internal": true,
+    "repository": "myparcelnl/delivery-options",
+    "documentation": "/documentation/60.delivery-options/"
   }
 ]

@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { PropType, computed, defineComponent } from 'vue';
+import { PropType, computed, defineComponent, toRefs } from 'vue';
 import { MyPaNavLink } from '@mptheme/config.types';
 import { useLink } from '@mptheme/client/composables/useLink';
 import { useRouter } from 'vue-router';
@@ -56,7 +56,16 @@ export default defineComponent({
   },
 
   setup: (props) => {
-    const { linkItem, linkTarget, isRouterLink, linkAriaLabel, linkRel, isBlankTarget } = useLink(props.item);
+    const propRefs = toRefs(props);
+
+    const {
+      linkItem,
+      linkTarget,
+      isRouterLink,
+      linkAriaLabel,
+      linkRel,
+      isBlankTarget,
+    } = useLink(propRefs.item);
     const route = useRouter().currentRoute.value;
     const site = useSiteData();
 

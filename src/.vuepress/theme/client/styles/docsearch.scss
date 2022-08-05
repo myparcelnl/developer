@@ -16,7 +16,7 @@
 
 .DocSearch-Button {
   @extend %space;
-  @apply flex items-center py-2 px-3 select-none rounded-full border;
+  @apply flex items-center py-2 px-3 select-none rounded-full border-2;
 }
 
 .DocSearch-Button-Keys {
@@ -59,7 +59,7 @@
 }
 
 .DocSearch-Form {
-  @apply rounded-full flex items-center p-4 relative shadow-none w-full border;
+  @apply rounded-full flex items-center p-4 relative shadow-none w-full border-2;
 }
 
 .DocSearch-Input {
@@ -104,7 +104,7 @@
 }
 
 .DocSearch-Cancel {
-  @apply appearance-none border-0  inline-block flex-none font-medium text-base ml-4 overflow-hidden p-0 select-none whitespace-nowrap;
+  @apply appearance-none border-0 inline-block flex-none font-medium text-base ml-4 overflow-hidden p-0 select-none whitespace-nowrap;
   background-image: none;
   outline: none;
 }
@@ -152,15 +152,6 @@
   @apply mb-3;
 }
 
-.DocSearch-HitsFooter {
-  //@apply flex justify-center text-sm mb-4 p-4 text-zinc-500;
-  //color: rgba(150, 159, 175, 1);
-
-  //a {
-    //@apply border-solid border-b;
-  //}
-}
-
 .DocSearch-Hit {
   @apply flex relative transition transition-colors duration-100;
 
@@ -187,7 +178,7 @@
 }
 
 .DocSearch-Hit-source {
-  @apply font-semibold leading-8 px-4 py-2 border-b;
+  @apply font-semibold leading-8 px-4 py-2 border-b-2;
 }
 
 .DocSearch-Hit-Tree {
@@ -283,7 +274,7 @@
 }
 
 .DocSearch-Footer {
-  @apply p-4 border-t flex-row-reverse flex justify-between flex-wrap;
+  @apply p-4 border-t-2 flex-row-reverse flex justify-between flex-wrap;
 }
 
 .DocSearch-Commands {
@@ -298,7 +289,7 @@
   @apply
   bg-white
   dark:bg-zinc-800
-  border
+  border-2
   flex
   h-4
   items-center

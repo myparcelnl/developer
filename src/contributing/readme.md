@@ -23,8 +23,9 @@ first read the following guides if you're not familiar with VuePress or Vue:
 
 ### Frontmatter
 
-At the start of each `.md` file, you can add frontmatter. Below is described
-what you can write there and how it affects the page.
+At the start of each `.md` file, you can add frontmatter. Frontmatter should be
+valid YAML. Below is described what properties you can use and how it affects
+the page.
 
 Example:
 
@@ -40,16 +41,18 @@ Hello!
 
 Here is an overview of the most relevant values:
 
-| Key            | Type              | Description                                                                                                 | Default |
-|----------------|-------------------|-------------------------------------------------------------------------------------------------------------|---------|
-| `title`        | `string`          | Defines the page name and renders a h1 on the page. Use either this or a manual `# <title>` in the content. | –       |
-| `sidebar`      | `boolean/string`  | Modify the sidebar for a single page. `none` to turn it off.                                                | `auto`  |
-| `editLink`     | `boolean`         | Controls whether the "Edit this page" button on the bottom is shown.                                        | `true`  |
-| `lastUpdated`  | `boolean`         | Controls whether the "Last updated" text on the bottom is shown.                                            | `true`  |
-| `contributors` | `boolean`         | Controls whether the "Contributors" section on the bottom is shown.                                         | `true`  |
+| Key            | Type                  | Description                                                                                                 | Default |
+|----------------|-----------------------|-------------------------------------------------------------------------------------------------------------|---------|
+| `title`        | `string`              | Defines the page name and renders a h1 on the page. Use either this or a manual `# <title>` in the content. | –       |
+| `sidebar`      | `boolean/string`      | Modify the sidebar for a single page. `none` to turn it off.                                                | `auto`  |
+| `editLink`     | `boolean`             | Controls whether the "Edit this page" button on the bottom is shown.                                        | `true`  |
+| `lastUpdated`  | `boolean`             | Controls whether the "Last updated" text on the bottom is shown.                                            | `true`  |
+| `contributors` | `boolean`             | Controls whether the "Contributors" section on the bottom is shown.                                         | `true`  |
+| `redirect`     | `boolean`             | Automatically show redirects on page. See [redirecting](#redirecting)                                       | `false` |
+| `languages`    | `string/array/object` | Used to manually define languages to redirect to. See [redirecting](#redirecting)                           | `false` |
 
 See [Frontmatter](https://v2.vuepress.vuejs.org/reference/frontmatter.html#frontmatter)
-for all options.
+for all default options.
 
 ::: tip
 When `editLink`, `lastUpdated` and `contributors` are all false, the bar on top
@@ -60,6 +63,101 @@ of the footer will not be shown at all.
 When using the frontmatter title, don't forget this renders a `h1` on your page.
 You should only have `h2` and smaller headings on the rest of the page.
 :::
+
+### Heading levels
+
+A page title should be `h2`, and content headers start at `h3`, but we've made
+it easier by correcting `h1` and `h2` tags automatically. So you can write
+your page in any of the following ways:
+
+```markdown
+# Title
+
+## Subject 1
+
+## Subject 2
+```
+
+```markdown
+## Title
+
+### Subject 1
+
+### Subject 2
+```
+
+```markdown
+### Title
+
+#### Subject 1
+
+#### Subject 2
+```
+
+They will all be rendered the same way:
+
+```html
+<h2>Title</h2>
+
+<h3>Subject 1</h3>
+
+<h3>Subject 2</h3>
+```
+
+### Redirecting
+
+Sometimes a page is not available in all languages, but you do want to show a
+redirect link to it because people might miss out on useful information
+otherwise.
+
+Let's assume the following:
+
+- There are multiple languages defined: `nl` and `en`
+- The default language is `en`
+- We have the following directory structure:
+  ```
+  src
+  ├── nl
+  │   └── subject
+  │       └── my-page.md
+  └── subject
+      └── my-page.md
+  ```
+
+Now, if `src/subject/my-page.md` contains the following content:
+
+```yaml
+---
+title: My Page
+redirect: true
+---
+```
+
+This will show something along the lines of the following on the page:
+
+```markdown
+This page is available in the following languages:
+
+- 🇳🇱 (Nederlands)[/nl/subject/my-page.md]
+```
+
+But if the Dutch variant was named `mijn-pagina.md` instead of `my-page.md`,
+this will not work. The automatic resolution checks if the resolved route is
+present in the array of registered routes, which  `/nl/subject/my-page.md` will
+not be, if it's actually called `/nl/subject/mijn-pagina.md`.
+
+In this case, you can manually define which page it should link to
+in `subject/my-page.md`:
+
+```yaml
+---
+title: My Page
+languages:
+  nl: subject/mijn-pagina/
+---
+```
+
+Now this page will show a redirect link to `/nl/subject/mijn-pagina.md`.
 
 ## Markdown
 
@@ -135,6 +233,7 @@ a link to its source and more information. It supports the following types:
 #### Usage
 
 ```html
+
 <DataType
   type="shipment_status"
   id="3" />
@@ -163,6 +262,7 @@ a link to its source and more information. It supports the following types:
 #### Usage
 
 ```html
+
 <DataTypeDefinition
   pattern="/\d{2}:\d{2}:\d{2}/"
   example="08:00:00" />
@@ -184,6 +284,7 @@ a link to its source and more information. It supports the following types:
 #### Usage
 
 ```html
+
 <MPImg
   src="/integrations/chrome.svg"
   class="max-w-xs" />
@@ -203,6 +304,7 @@ Renders a shield from [shields.io](https://shields.io).
 #### NpmShield
 
 ```html
+
 <NpmShield package="@myparcel/sdk" />
 ```
 
@@ -211,6 +313,7 @@ Renders a shield from [shields.io](https://shields.io).
 #### GitHubShield
 
 ```html
+
 <GitHubShield repo="myparcelnl/sdk" />
 ```
 
@@ -219,6 +322,7 @@ Renders a shield from [shields.io](https://shields.io).
 #### PackagistShield
 
 ```html
+
 <PackagistShield package="myparcelnl/sdk" />
 ```
 
@@ -404,6 +508,7 @@ the `Integration` component is used. Just reference the `name`, and all other
 data will be retrieved from that `.json` file.
 
 ```html
+
 <Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
   <Integration name="php-sdk" />
   <Integration name="woocommerce" />
@@ -416,6 +521,20 @@ data will be retrieved from that `.json` file.
     <Integration name="woocommerce" />
     <Integration name="google-chrome-extension" />
 </Stack>
+
+### Code
+
+To run the project, check out the repository and run the following commands:
+
+```shell
+yarn install
+yarn translations:import
+yarn dev
+```
+
+This installs dependencies, downloads translations and then starts the dev
+server.
+
 
 [Tailwind CSS 3]: https://tailwindcss.com/
 

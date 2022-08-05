@@ -46,7 +46,7 @@ export default defineComponent({
 
       if (!resolved) {
         // eslint-disable-next-line no-console
-        console.warn(`ApiLink to ${props.to} could not be resolved.`);
+        console.warn(`⚠️ ApiLink to ${props.to} could not be resolved.`);
         return null;
       }
 

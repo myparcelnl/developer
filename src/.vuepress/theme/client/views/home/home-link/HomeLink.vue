@@ -1,16 +1,19 @@
 <template>
   <Cta
     class="hover:text-white text-white"
-    :button-variant="['outlineLight', 'icon']"
     :title="title"
     :subtitle="subtitle"
     :icon="icon"
     :link="link"
     aria-label="open"
     link-full
-    button-class="flex group-hover:translate-x-2 ml-auto transform transition-all">
+    :button-attributes="{
+      variant: ['outlineLight', 'icon'],
+      class: 'flex group-hover:translate-x-2 group-focus:translate-x-2 ml-auto transform transition-all select-none',
+      tabindex: -1,
+    }">
     <template #before>
-      <div class="absolute bg-black group-hover:opacity-30 inset-0 opacity-0 transition-opacity" />
+      <div class="absolute bg-black group-focus:opacity-30 group-hover:opacity-30 inset-0 opacity-0 transition-opacity" />
 
       <div class="-inset-36 absolute flex left-0 mix-blend-soft-light overflow-hidden top-0">
         <FloepjeLeft class="fill-white opacity-30 pt-4" />

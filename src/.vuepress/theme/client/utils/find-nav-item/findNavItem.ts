@@ -1,5 +1,5 @@
 import { MyPaAnySidebarItem, MyPaSidebarConfigArray, MyPaSidebarGroup, MyPaSidebarItem } from '@mptheme/config.types';
-import { isOfType } from '@mptheme/client/utils/type-guard/isOfType';
+import { isOfType } from '@mptheme/shared/utils';
 import { toArray } from '@mptheme/client/utils/toArray';
 
 export const findNavItem = (
