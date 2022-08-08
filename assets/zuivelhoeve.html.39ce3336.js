@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{o,c as t,b as s}from"./app.da703e03.js";const _={},c=s("p",null,"This is a new page",-1),r=[c];function a(n,l){return o(),t("div",null,r)}var h=e(_,[["render",a],["__file","zuivelhoeve.html.vue"]]);export{h as default};
