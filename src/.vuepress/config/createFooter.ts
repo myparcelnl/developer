@@ -14,7 +14,7 @@ export const createFooter = (): MyPaNavbarConfigArray => {
         { text: 'Shopware', link: '/15.shopware/' },
         { text: 'Wix', link: '/20.wix/' },
         { text: 'PHP SDK', link: '/50.php-sdk/' },
-        { text: 'JS SDK', link: '/51.js-sdk/' },
+        { text: 'JavaScript SDK', link: '/51.javascript-sdk/' },
         { text: 'Delivery Options', link: '/60.delivery-options/' },
       ],
     },

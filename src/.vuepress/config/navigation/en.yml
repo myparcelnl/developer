@@ -32,7 +32,7 @@ footer:
       - text: PHP SDK
         link: /50.php-sdk/
       - text: JS SDK
-        link: /51.js-sdk/
+        link: /51.javascript-sdk/
       - text: Delivery Options
         link: /60.delivery-options/
 

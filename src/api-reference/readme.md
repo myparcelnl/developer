@@ -20,7 +20,7 @@ to help you build your integration.
 
 <Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2 mt-3">
     <Integration name="php-sdk" hide-type />
-    <Integration name="js-sdk" hide-type />
+    <Integration name="javascript-sdk" hide-type />
     <Integration name="c-sharp-sdk" hide-type />
     <Integration name="ruby-sdk" hide-type />
 </Stack>

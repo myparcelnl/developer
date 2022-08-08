@@ -197,12 +197,12 @@
     "classes": "bg-[#787CB5]"
   },
   {
-    "name": "js-sdk",
+    "name": "javascript-sdk",
     "internal": true,
     "title": "JavaScript/Node.js",
     "type": "sdk",
     "repository": "myparcelnl/js-sdk",
-    "documentation": "/documentation/51.js-sdk",
+    "documentation": "/documentation/51.javascript-sdk",
     "image": "js.svg",
     "classes": "bg-[#F7DF1E]"
   },
