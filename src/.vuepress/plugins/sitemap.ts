@@ -3,6 +3,7 @@ import { Plugin } from 'vuepress';
 import dayjs from 'dayjs';
 import fs from 'fs';
 import { isOfType } from '../theme/shared/utils';
+import { logger } from '@vuepress/utils';
 import path from 'path';
 
 interface SitemapPluginConfig {
@@ -18,23 +19,25 @@ export const sitemapPlugin = (config: SitemapPluginConfig): Plugin => ({
     app.pages
       .filter((page) => page.htmlFilePathRelative.endsWith('.html'))
       .forEach((page) => {
-        let timestamp: string | number = page.date;
+        const pageDate = page.date === '0000-00-00' ? undefined : page.date;
+        let timestamp: string | number | undefined = pageDate;
 
         if (isOfType<GitPluginPageData>(page.data, 'git')) {
-          timestamp = page.data.git.updatedTime ?? page.date;
+          timestamp = page.data.git.updatedTime ?? pageDate;
         }
 
-        const date = dayjs(timestamp).format('YYYY-MM-DDTHH:mm:ssZ');
-
-        sitemap += `
-  <url>
-    <loc>${config.baseUrl}${page.htmlFilePathRelative}</loc>
-    <lastmod>${date}</lastmod>
-  </url>`;
+        sitemap += '\n  <url>';
+        sitemap += `\n    <loc>${config.baseUrl}${page.htmlFilePathRelative}</loc`;
+        if (timestamp) {
+          const date = dayjs(timestamp).format('YYYY-MM-DDTHH:mm:ssZ');
+          sitemap += `\n    <lastmod>${date}</lastmod>`;
+        }
+        sitemap += '\n</url>';
       });
 
     sitemap += '\n</urlset>';
 
+    logger.success('Generated sitemap.xml!');
     fs.writeFileSync(path.resolve(app.dir.dest(), 'sitemap.xml'), sitemap);
   },
 });
