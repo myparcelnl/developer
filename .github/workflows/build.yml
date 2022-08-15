@@ -34,7 +34,7 @@ jobs:
             ${{ runner.os }}-build-${{ hashFiles('**/*.lock') }}
             ${{ runner.os }}-build
 
-      - uses: myparcelnl/actions/yarn-install@v2
+      - uses: myparcelnl/actions/yarn2-install@v2
         if: steps.cache-build.outputs.cache-hit != 'true'
 
       - run: yarn build
