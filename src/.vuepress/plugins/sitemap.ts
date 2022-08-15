@@ -27,12 +27,12 @@ export const sitemapPlugin = (config: SitemapPluginConfig): Plugin => ({
         }
 
         sitemap += '\n  <url>';
-        sitemap += `\n    <loc>${config.baseUrl}${page.htmlFilePathRelative}</loc`;
+        sitemap += `\n    <loc>${config.baseUrl}${page.htmlFilePathRelative}</loc>`;
         if (timestamp) {
           const date = dayjs(timestamp).format('YYYY-MM-DDTHH:mm:ssZ');
           sitemap += `\n    <lastmod>${date}</lastmod>`;
         }
-        sitemap += '\n</url>';
+        sitemap += '\n  </url>';
       });
 
     sitemap += '\n</urlset>';
