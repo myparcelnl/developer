@@ -14,11 +14,11 @@ runs:
           ${{ runner.os }}-build-all
 
     - shell: bash
-      if: steps.cache-build.outputs.cache-all != 'true'
+      if: steps.cache-all.outputs.cache-hit != 'true'
       run: npm run translations:import
 
     - name: 'Handle build cache'
-      if: steps.cache-build.outputs.cache-all != 'true'
+      if: steps.cache-all.outputs.cache-hit != 'true'
       id: cache-build
       uses: actions/cache@v3
       with:
@@ -29,8 +29,8 @@ runs:
           ${{ runner.os }}-build
 
     - uses: myparcelnl/actions/yarn2-install@v2
-      if: steps.cache-build.outputs.cache-all != 'true' && steps.cache-build.outputs.cache-hit != 'true'
+      if: steps.cache-all.outputs.cache-hit != 'true' && steps.cache-build.outputs.cache-hit != 'true'
 
     - shell: bash
       run: yarn build
-      if: steps.cache-build.outputs.cache-all != 'true' && steps.cache-build.outputs.cache-hit != 'true'
+      if: steps.cache-all.outputs.cache-hit != 'true' && steps.cache-build.outputs.cache-hit != 'true'
