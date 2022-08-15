@@ -5,6 +5,10 @@ on: pull_request
 jobs:
   build:
     name: 'Test site build'
-    uses: ./.github/workflows/build.yml
-    with:
-      ref: ${{ github.event.client_payload.pull_request.head.ref }}
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.client_payload.pull_request.head.ref }}
+
+      - uses: ./.github/workflows/build

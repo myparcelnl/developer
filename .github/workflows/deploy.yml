@@ -14,54 +14,31 @@ on:
       - yarn.lock
 
 jobs:
-  build:
-    name: 'Build site'
-    uses: ./.github/workflows/build.yml
-    secrets: inherit
-    with:
-      upload: true
-
   deploy-ghp:
     name: 'Deploy to GitHub pages'
     runs-on: ubuntu-22.04
-    needs: build
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: 'gh-pages'
+          ref: ${{ github.event.client_payload.pull_request.head.ref }}
 
-      - uses: actions/download-artifact@v3
-        with:
-          name: build
-          path: developer
+      - uses: ./.github/workflows/build
 
       - uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
-          folder: developer
+          folder: src/.vuepress/dist
           token: ${{ secrets.GH_REPO_TOKEN }}
-
-      - uses: reggionick/s3-deploy@v3
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        with:
-          bucket-region: ${{ secrets.AWS_DEFAULT_REGION }}
-          bucket: ${{ secrets.S3_BUCKET }}
-          delete-removed: true
-          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          folder: developer
-          private: true
 
   deploy-s3:
     name: 'Deploy to S3'
     runs-on: ubuntu-22.04
-    needs: build
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/checkout@v3
         with:
-          name: build
-          path: developer
+          ref: ${{ github.event.client_payload.pull_request.head.ref }}
+
+      - uses: ./.github/workflows/build
 
       - uses: reggionick/s3-deploy@v3
         env:
@@ -72,5 +49,5 @@ jobs:
           bucket: ${{ secrets.S3_BUCKET }}
           delete-removed: true
           dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          folder: developer
+          folder: src/.vuepress/dist
           private: true
