@@ -49,3 +49,4 @@ jobs:
           delete-removed: true
           dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
           folder: developer
+          private: true
