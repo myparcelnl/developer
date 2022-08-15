@@ -24,7 +24,7 @@ export const sitemapPlugin = (config: SitemapPluginConfig): Plugin => ({
           timestamp = page.data.git.updatedTime ?? page.date;
         }
 
-        const date = dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss');
+        const date = dayjs(timestamp).format('YYYY-MM-DDTHH:mm:ssZ');
 
         sitemap += `
   <url>
