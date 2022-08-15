@@ -1,13 +1,14 @@
+import { DIR_CONFIG, DIR_VUEPRESS } from './dirs';
 import { defineUserConfig, viteBundler } from 'vuepress';
 import { docsearchPlugin } from '@vuepress/plugin-docsearch';
 import { googleTagManagerPlugin } from './plugins/gtm/node';
 import { head } from './config/head';
 import { myParcelTheme } from './theme';
 import { parseTranslationsPlugin } from './plugins/parseTranslations';
+import path from 'path';
+import { sitemapPlugin } from './plugins/sitemap';
 import { slugify } from '@mdit-vue/shared';
 import { viteConfig } from './viteConfig';
-import path from 'path';
-import { DIR_CONFIG, DIR_VUEPRESS } from './dirs';
 
 const DEV_SERVER_PORT = 8955;
 
@@ -38,6 +39,10 @@ export default defineUserConfig({
       appId: 'CN8B8S1EFL',
       apiKey: '4c55bbf8ccfb57cb5c3132c03fc9728b',
       indexName: 'developer-myparcel',
+    }),
+
+    sitemapPlugin({
+      baseUrl: 'https://developer.myparcel.nl/',
     }),
   ],
 
