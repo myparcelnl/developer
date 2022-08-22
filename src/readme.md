@@ -7,10 +7,10 @@ subtitle: Connect with the MyParcel API and get started with shipments, returns 
 
 actions: 
 - title: Get started
-  link: /getting-started/
+  link: /getting-started.html
 - title: Contact us
   variant: outlineLight
-  link: /contact/
+  link: /contact.html
 
 tree:
 - title: Explore.
@@ -38,7 +38,7 @@ tree:
           title: Integrations.
           icon: integrations
           subtitle: This is where you can find our integrations with various external services and platforms.
-          link: /integrations/
+          link: /integrations.html
 
 - title: Get the most out of our service.
   subtitle: These customers are using a custom implementation for managing their MyParcel shipments.

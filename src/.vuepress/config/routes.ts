@@ -17,17 +17,17 @@ export const DOCUMENTATION: MyPaNavLink = {
 
 export const INTEGRATIONS: MyPaNavLink = {
   text: 'Integrations',
-  link: '/integrations/',
+  link: '/integrations.html',
 };
 
 export const ABOUT: MyPaNavLink = {
   text: 'About',
-  link: '/about/',
+  link: '/about.html',
 };
 
 export const CONTACT: MyPaNavLink = {
   text: 'Contact',
-  link: '/contact/',
+  link: '/contact.html',
 };
 
 export const ROUTES = [

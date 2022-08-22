@@ -13,7 +13,7 @@
     "type": "utility",
     "internal": true,
     "repository": "myparcelnl/delivery-options",
-    "documentation": "/documentation/60.delivery-options/",
+    "documentation": "/documentation/60.delivery-options.html",
     "classes": "bg-goldfish-500",
     "image": "delivery-options.svg"
   },
@@ -23,7 +23,7 @@
     "type": "plugin",
     "internal": true,
     "repository": "myparcelnl/woocommerce",
-    "documentation": "/documentation/10.woocommerce/",
+    "documentation": "/documentation/10.woocommerce.html",
     "image": "woocommerce.svg"
   },
   {
@@ -32,7 +32,7 @@
     "type": "plugin",
     "internal": true,
     "repository": "myparcelnl/prestashop",
-    "documentation": "/documentation/11.prestashop/",
+    "documentation": "/documentation/11.prestashop.html",
     "image": "prestashop.svg"
   },
   {
@@ -51,21 +51,21 @@
     "type": "plugin",
     "internal": true,
     "repository": "myparcelnl/magento",
-    "documentation": "/documentation/13.magento2/",
+    "documentation": "/documentation/13.magento2.html",
     "image": "magento.svg"
   },
   {
     "name": "shopify",
     "title": "Shopify",
     "type": "plugin",
-    "documentation": "/documentation/14.shopify/",
+    "documentation": "/documentation/14.shopify.html",
     "image": "shopify.svg"
   },
   {
     "name": "shopware",
     "title": "Shopware",
     "type": "plugin",
-    "documentation": "/documentation/15.shopware/",
+    "documentation": "/documentation/15.shopware.html",
     "image": "shopware-light.svg",
     "classes": "bg-[#189EFF]"
   },
@@ -234,7 +234,7 @@
     "title": "Wix",
     "type": "api",
     "internal": true,
-    "documentation": "/documentation/20.wix/",
+    "documentation": "/documentation/20.wix.html",
     "image": "wix.svg"
   },
   {
@@ -308,6 +308,6 @@
     "type": "other",
     "internal": true,
     "repository": "myparcelnl/delivery-options",
-    "documentation": "/documentation/60.delivery-options/"
+    "documentation": "/documentation/60.delivery-options.html"
   }
 ]

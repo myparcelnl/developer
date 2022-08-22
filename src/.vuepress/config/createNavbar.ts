@@ -11,15 +11,15 @@ const pages: MyPaNavLink[] = [
   },
   {
     text: 'Integrations',
-    link: '/integrations/',
+    link: '/integrations.html',
   },
   {
     text: 'About',
-    link: '/about/',
+    link: '/about.html',
   },
   {
     text: 'Contact',
-    link: '/contact/',
+    link: '/contact.html',
   },
   {
     text: 'Status',

@@ -4,7 +4,7 @@ navbar:
   - text: Documentation
     link: /documentation/
   - text: Integrations
-    link: /integrations/
+    link: /integrations.html
   - text: About
     link: /about.html
   - text: Contact
@@ -16,7 +16,7 @@ footer:
   - text: Documentation
     children:
       - text: Getting started
-        link: /getting-started/
+        link: /getting-started.html
       - text: WooCommerce
         link: /10.woocommerce.html
       - text: Prestashop
@@ -30,11 +30,11 @@ footer:
       - text: Wix
         link: /20.wix.html
       - text: PHP SDK
-        link: /50.php-sdk/
+        link: /50.php-sdk.html
       - text: JS SDK
-        link: /51.javascript-sdk/
+        link: /51.javascript-sdk.html
       - text: Delivery Options
-        link: /60.delivery-options/
+        link: /60.delivery-options.html
 
   - text: API Reference
     children:
@@ -54,7 +54,7 @@ footer:
   - text: Contact
     children:
       - text: Contact us
-        link: /contact
+        link: /contact.html
       - text: Join our Slack workspace
         link: >-
           https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI/
@@ -66,7 +66,7 @@ footer:
       - text: Status
         link: 'https://status.myparcel.nl/'
       - text: About
-        link: /about/
+        link: /about.html
       - text: Jobs
         link: 'https://www.myparcel.nl/vacature/development/'
       - text: GitHub

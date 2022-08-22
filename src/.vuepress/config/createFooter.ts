@@ -6,16 +6,16 @@ export const createFooter = (): MyPaNavbarConfigArray => {
       text: 'Documentation',
       link: '/documentation/',
       children: [
-        { text: 'Getting started', link: '/getting-started/' },
-        { text: 'WooCommerce', link: '/10.woocommerce/' },
-        { text: 'Prestashop', link: '/11.prestashop/' },
-        { text: 'Magento2', link: '/13.magento2/' },
-        { text: 'Shopify', link: '/14.shopify/' },
-        { text: 'Shopware', link: '/15.shopware/' },
-        { text: 'Wix', link: '/20.wix/' },
-        { text: 'PHP SDK', link: '/50.php-sdk/' },
-        { text: 'JavaScript SDK', link: '/51.javascript-sdk/' },
-        { text: 'Delivery Options', link: '/60.delivery-options/' },
+        { text: 'Getting started', link: '/getting-started.html' },
+        { text: 'WooCommerce', link: '/10.woocommerce.html' },
+        { text: 'Prestashop', link: '/11.prestashop.html' },
+        { text: 'Magento2', link: '/13.magento2.html' },
+        { text: 'Shopify', link: '/14.shopify.html' },
+        { text: 'Shopware', link: '/15.shopware.html' },
+        { text: 'Wix', link: '/20.wix.html' },
+        { text: 'PHP SDK', link: '/50.php-sdk.html' },
+        { text: 'JavaScript SDK', link: '/51.javascript-sdk.html' },
+        { text: 'Delivery Options', link: '/60.delivery-options.html' },
       ],
     },
     {
@@ -31,7 +31,7 @@ export const createFooter = (): MyPaNavbarConfigArray => {
     },
     {
       text: 'Contact',
-      link: '/contact/',
+      link: '/contact.html',
       children: [
         // eslint-disable-next-line max-len,vue/max-len
         {
@@ -50,7 +50,7 @@ export const createFooter = (): MyPaNavbarConfigArray => {
         },
         {
           text: 'About',
-          link: '/about/',
+          link: '/about.html',
         },
         { text: 'Jobs', link: 'https://www.myparcel.nl/vacature/development/' },
         { text: 'GitHub', link: 'https://github.com/myparcelnl/' },

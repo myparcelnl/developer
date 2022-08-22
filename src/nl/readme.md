@@ -7,10 +7,10 @@ subtitle: Connect with our API and get started with shipments, returns and more.
 
 actions: 
 - title: Aan de slag
-  link: /nl/aan-de-slag
+  link: /nl/aan-de-slag.html
 - title: Contact
   variant: outlineLight
-  link: /contact
+  link: /contact.html
 
 tree:
 - title: Explore.
@@ -24,21 +24,21 @@ tree:
           title: API reference.
           icon: api-reference
           subtitle: Hier vind je alles wat je nodig hebt om aan de slag te kunnen met onze API.
-          link: /api-reference
+          link: /api-reference.html
       - component: HomeLink
         attributes: 
           class: 'bg-monstera-600' 
           title: Documentatie.
           icon: documentation
           subtitle: Handleidingen voor onze plugins en integraties.
-          link: /nl/documentatie
+          link: /nl/documentatie/
       - component: HomeLink
         attributes: 
           class: 'bg-goldfish-600' 
           title: Integraties.
           icon: integrations
           subtitle: Hier vind je onze integraties met allerlei platformen en tools.
-          link: /nl/integraties
+          link: /nl/integraties.html
 
 - title: Haal het meeste uit onze service.
   subtitle: Deze klanten gebruiken een custom implementatie om hun MyParcel zendingen te beheren.

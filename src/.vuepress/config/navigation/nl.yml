@@ -4,7 +4,7 @@ navbar:
   - text: Documentatie
     link: /nl/documentatie/
   - text: Integraties
-    link: /nl/integraties/
+    link: /nl/integraties.html
   - text: Over ons
     link: /nl/about.html
   - text: Contact
@@ -17,25 +17,25 @@ footer:
     link: /documentatie/
     children:
       - text: Aan de slag
-        link: /nl/aan de slag/
+        link: /nl/aan-de-slag.html
       - text: WooCommerce
-        link: /nl/10.woocommerce/
+        link: /nl/10.woocommerce.html
       - text: Prestashop
-        link: /nl/11.prestashop/
+        link: /nl/11.prestashop.html
       - text: Magento2
-        link: /nl/13.magento2/
+        link: /nl/13.magento2.html
       - text: Shopify
-        link: /nl/14.shopify/
+        link: /nl/14.shopify.html
       - text: Shopware
-        link: /nl/15.shopware/
+        link: /nl/15.shopware.html
       - text: Wix
-        link: /nl/20.wix/
+        link: /nl/20.wix.html
       - text: PHP SDK
-        link: /nl/50.php-sdk/
+        link: /nl/50.php-sdk.html
       - text: JS SDK
         link: /nl/51.javascript-sdk/
       - text: Delivery Options
-        link: /nl/60.delivery-options/
+        link: /nl/60.delivery-options.html
 
   - text: API Reference (EN)
     children:
@@ -55,7 +55,7 @@ footer:
   - text: Contact
     children:
       - text: Neem contact met ons op
-        link: /contact
+        link: /contact.html
       - text: Chat met ons op Slack
         link: https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI/
       - text: Word partner
@@ -66,7 +66,7 @@ footer:
       - text: Status
         link: 'https://status.myparcel.nl/'
       - text: Over ons
-        link: /nl/over-ons/
+        link: /nl/over-ons.html
       - text: Vacatures
         link: 'https://www.myparcel.nl/vacature/development/'
       - text: GitHub

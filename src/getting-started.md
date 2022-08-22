@@ -2,7 +2,9 @@
 title: Get started with MyParcel
 sidebar: none
 languages:
+
 - nl: aan-de-slag
+
 ---
 
 You've come to the right place to create a connection with MyParcel. No matter
@@ -48,7 +50,7 @@ in our [contact form], or ask our developers directly on [Slack].
 
 [API reference]: /api-reference/
 
-[Integrations]: /integrations/
+[Integrations]: /integrations.html
 
 [MyParcel backoffice]: https://www.myparcel.nl/
 
@@ -58,6 +60,6 @@ in our [contact form], or ask our developers directly on [Slack].
 
 [authentication instructions]: /api-reference/05.authentication/
 
-[contact form]: /contact/
+[contact form]: /contact.html
 
 [support@myparcel.nl]: mailto:support@myparcel.nl
