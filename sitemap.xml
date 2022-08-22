@@ -2,379 +2,179 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://developer.myparcel.nl/about.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/contact.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/contributing.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/getting-started.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/integrations.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/01.requests.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/02.responses.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/03.character-encoding.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/04.data-types.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/05.authentication.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/06.shipments.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/07.shipment-related-object-definitions.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/08.delivery-options.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/09.delivery-options-object-definitions.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/10.webhooks.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/11.webhook-object-definitions.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/12.drop-off-points.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/api-reference/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/brands/zuivelhoeve.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/contributing/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/documentation/10.woocommerce.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/documentation/11.prestashop.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/documentation/13.magento2.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/documentation/14.shopify.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/documentation/15.shopware.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/documentation/20.wix.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/documentation/50.php-sdk.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/documentation/51.javascript-sdk.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/documentation/60.delivery-options.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/documentation/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/getting-started/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/integrations/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/nl/aan-de-slag.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/nl/about.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/nl/api-reference.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/nl/contact.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/nl/integraties.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/nl/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/nl/documentatie/10.woocommerce.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/nl/documentatie/13.magento2.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/nl/documentatie/14.shopify.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://developer.myparcel.nl/nl/documentatie/20.wix.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/nl/documentatie/50.php-sdk.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/51.js-sdk.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <loc>https://developer.myparcel.nl/nl/documentatie/51.javascript-sdk.html</loc>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/nl/documentatie/60.delivery-options.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/nl/documentatie/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/integraties/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/10.woocommerce/02.installatie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/10.woocommerce/04.plugin-gebruik.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/10.woocommerce/10.contribute.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/10.woocommerce/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/02.installatie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/10.contribute.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/13.magento2/02.installatie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/13.magento2/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/14.shopify/02.installatie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/14.shopify/04.plugin-gebruik.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/14.shopify/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/02.installatie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/04.plugin-gebruik.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/20.wix/02.installatie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/20.wix/04.plugin-gebruik.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/20.wix/</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/10.woocommerce/03.configuratie/01.algemeen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/10.woocommerce/03.configuratie/02.standaard-exportinstellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/10.woocommerce/03.configuratie/03.checkout-instellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/10.woocommerce/03.configuratie/04.postnl.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/10.woocommerce/03.configuratie/05.veelgestelde-vragen-over-de-configuratie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/03.configuratie/01.api-instellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/03.configuratie/02.algemene-instellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/03.configuratie/03.label-instellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/03.configuratie/04.order-opties.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/03.configuratie/05.customs-instellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/03.configuratie/06.vervoerders-opties.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/03.configuratie/07.gebruik-van-de-plugin.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/11.prestashop/03.configuratie/08.faq.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/13.magento2/03.configuratie/01.configuratie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/13.magento2/03.configuratie/02.algemene-instellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/13.magento2/03.configuratie/03.standaard-verzendinstellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/13.magento2/03.configuratie/04.backend-functionaliteiten.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/13.magento2/03.configuratie/05.checkout-instellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/13.magento2/03.configuratie/06.veelgestelde-vragen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/14.shopify/03.configuratie/01.account.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/14.shopify/03.configuratie/02.algemene-instellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/14.shopify/03.configuratie/03.standaard-exportinstellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/14.shopify/03.configuratie/04.herinneringsmail-afhaallocatie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/14.shopify/03.configuratie/05.wereldzendingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/14.shopify/03.configuratie/06.veelgestelde-vragen-over-de-configuratie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/01.api-instellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/02.toon-pickup-punten-bij-afrekenen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/03.standaard-afleveringsperiode.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/04.standaard-handtekening-bij-bezorging.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/05.standaard-aflevering-bij-buren.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/06.retour-bij-geen-gehoor.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/07.leeftijdscontrole.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/08.standaard-verpakkingssoort.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/09.toon-ochtend-levering.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/10.toon-avond-levering.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/11.standaard-verzendwijze.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/15.shopware/03.configuratie/12.label-instellingen.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/20.wix/03.configuratie/01.pakketvoorkeuren.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://developer.myparcel.nl/nl/documentatie/20.wix/03.configuratie/02.veelgestelde-vragen-over-de-configuratie.html</loc>
-    <lastmod>2022-08-18T10:48:58+00:00</lastmod>
+    <lastmod>2022-08-22T08:58:29+00:00</lastmod>
   </url>
   <url>
     <loc>https://developer.myparcel.nl/404.html</loc>
