@@ -9,7 +9,7 @@ const routeExistsMemoized = memoize((path: string) => {
   const variants: string[] = [path];
 
   if (path.endsWith('/')) {
-    const plain: string = path.substring(0, path.length);
+    const plain = path.substring(0, path.length - 1);
     variants.unshift(plain);
     variants.unshift(plain + '/index.html');
   }
