@@ -66,7 +66,7 @@ footer:
       - text: Status
         link: 'https://status.myparcel.nl/'
       - text: Over ons
-        link: /over-ons.html
+        link: /about.html
       - text: Vacatures
         link: 'https://www.myparcel.nl/vacature/development/'
       - text: GitHub
