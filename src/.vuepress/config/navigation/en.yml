@@ -6,9 +6,9 @@ navbar:
   - text: Integrations
     link: /integrations/
   - text: About
-    link: /about/
+    link: /about.html
   - text: Contact
-    link: /contact/
+    link: /contact.html
   - text: Status
     link: 'https://status.myparcel.nl/'
 
@@ -18,17 +18,17 @@ footer:
       - text: Getting started
         link: /getting-started/
       - text: WooCommerce
-        link: /10.woocommerce/
+        link: /10.woocommerce.html
       - text: Prestashop
-        link: /11.prestashop/
+        link: /11.prestashop.html
       - text: Magento2
-        link: /13.magento2/
+        link: /13.magento2.html
       - text: Shopify
-        link: /14.shopify/
+        link: /14.shopify.html
       - text: Shopware
-        link: /15.shopware/
+        link: /15.shopware.html
       - text: Wix
-        link: /20.wix/
+        link: /20.wix.html
       - text: PHP SDK
         link: /50.php-sdk/
       - text: JS SDK

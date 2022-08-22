@@ -6,9 +6,9 @@ navbar:
   - text: Integraties
     link: /nl/integraties/
   - text: Over ons
-    link: /nl/about/
+    link: /nl/about.html
   - text: Contact
-    link: /nl/contact/
+    link: /nl/contact.html
   - text: Status
     link: 'https://status.myparcel.nl/'
 
