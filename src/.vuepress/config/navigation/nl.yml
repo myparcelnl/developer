@@ -6,9 +6,9 @@ navbar:
   - text: Integraties
     link: /nl/integraties.html
   - text: Over ons
-    link: /nl/about.html
+    link: /about.html
   - text: Contact
-    link: /nl/contact.html
+    link: /contact.html
   - text: Status
     link: 'https://status.myparcel.nl/'
 
@@ -17,25 +17,25 @@ footer:
     link: /documentatie/
     children:
       - text: Aan de slag
-        link: /nl/aan-de-slag.html
+        link: /getting-started.html
       - text: WooCommerce
-        link: /nl/10.woocommerce.html
+        link: /nl/documentatie/10.woocommerce.html
       - text: Prestashop
-        link: /nl/11.prestashop.html
+        link: /nl/documentatie/11.prestashop.html
       - text: Magento2
-        link: /nl/13.magento2.html
+        link: /nl/documentatie/13.magento2.html
       - text: Shopify
-        link: /nl/14.shopify.html
+        link: /nl/documentatie/14.shopify.html
       - text: Shopware
-        link: /nl/15.shopware.html
+        link: /nl/documentatie/15.shopware.html
       - text: Wix
-        link: /nl/20.wix.html
+        link: /nl/documentatie/20.wix.html
       - text: PHP SDK
-        link: /nl/50.php-sdk.html
+        link: /documentation/50.php-sdk.html
       - text: JS SDK
-        link: /nl/51.javascript-sdk/
+        link: /documentation/51.javascript-sdk/
       - text: Delivery Options
-        link: /nl/60.delivery-options.html
+        link: /documentation/60.delivery-options.html
 
   - text: API Reference (EN)
     children:
@@ -66,7 +66,7 @@ footer:
       - text: Status
         link: 'https://status.myparcel.nl/'
       - text: Over ons
-        link: /nl/over-ons.html
+        link: /over-ons.html
       - text: Vacatures
         link: 'https://www.myparcel.nl/vacature/development/'
       - text: GitHub

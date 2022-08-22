@@ -18,23 +18,23 @@ footer:
       - text: Getting started
         link: /getting-started.html
       - text: WooCommerce
-        link: /10.woocommerce.html
+        link: /documentation/10.woocommerce.html
       - text: Prestashop
-        link: /11.prestashop.html
+        link: /documentation/11.prestashop.html
       - text: Magento2
-        link: /13.magento2.html
+        link: /documentation/13.magento2.html
       - text: Shopify
-        link: /14.shopify.html
+        link: /documentation/14.shopify.html
       - text: Shopware
-        link: /15.shopware.html
+        link: /documentation/15.shopware.html
       - text: Wix
-        link: /20.wix.html
+        link: /documentation/20.wix.html
       - text: PHP SDK
-        link: /50.php-sdk.html
+        link: /documentation/50.php-sdk.html
       - text: JS SDK
-        link: /51.javascript-sdk.html
+        link: /documentation/51.javascript-sdk.html
       - text: Delivery Options
-        link: /60.delivery-options.html
+        link: /documentation/60.delivery-options.html
 
   - text: API Reference
     children:
