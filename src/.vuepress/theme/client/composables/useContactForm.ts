@@ -37,7 +37,7 @@ export const useContactForm: UseContactForm = (refs, messages, initialValue) => 
     loading.value = true;
 
     try {
-      const response = await fetch('aaa', {
+      const response = await fetch('https://vqthadq4nvo5i2cgvxpu3xw3zm0qxquc.lambda-url.eu-central-1.on.aws', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
