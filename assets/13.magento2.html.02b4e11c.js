@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{o as t,c as o}from"./app.40cadce8.js";const r={};function _(c,a){return t(),o("div")}var f=e(r,[["render",_],["__file","13.magento2.html.vue"]]);export{f as default};
