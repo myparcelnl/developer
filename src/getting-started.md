@@ -30,7 +30,7 @@ through [support@myparcel.nl].
 
 ## Connecting with the MyParcel API
 
-First, you should check [Integrations](/integrations/#sdks) to see if we have an
+First, you should check [SDKs] to see if we have an
 SDK for the programming language you want to use. In case we do, it can help you
 get a head start on integrating with MyParcel, as most of the hard work is
 already done.
@@ -54,11 +54,13 @@ in our [contact form], or ask our developers directly on [Slack].
 
 [MyParcel backoffice]: https://www.myparcel.nl/
 
+[SDKs]: /integrations.html#sdks-software-development-kits
+
 [Slack]: https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI
 
 [`Shop Settings -> General`]: https://backoffice.myparcel.nl/settings
 
-[authentication instructions]: /api-reference/05.authentication/
+[authentication instructions]: /api-reference/05.authentication.html
 
 [contact form]: /contact.html
 

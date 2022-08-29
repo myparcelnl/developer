@@ -1,6 +1,6 @@
 navbar:
   - text: API Reference
-    link: /nl/api-reference/
+    link: /api-reference/
   - text: Documentatie
     link: /nl/documentatie/
   - text: Integraties
@@ -14,7 +14,7 @@ navbar:
 
 footer:
   - text: Documentatie
-    link: /documentatie/
+    link: /nl/documentatie/
     children:
       - text: Aan de slag
         link: /getting-started.html
@@ -33,7 +33,7 @@ footer:
       - text: PHP SDK
         link: /documentation/50.php-sdk.html
       - text: JS SDK
-        link: /documentation/51.javascript-sdk/
+        link: /documentation/51.javascript-sdk.html
       - text: Delivery Options
         link: /documentation/60.delivery-options.html
 

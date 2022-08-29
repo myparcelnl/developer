@@ -36,7 +36,7 @@ We currently do **not** have a test environment. However, you can create an
 account and print labels freely. They will only be invoiced when you actually ship them.
 
 ::: note
-This does not apply to <DataType type="package_type" id="4" />, these shipments
+This does not apply to <DataType type="package-type" id="4" />, these shipments
 will always be invoiced immediately.
 :::
 

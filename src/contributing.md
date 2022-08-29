@@ -217,10 +217,10 @@ With `DataType`, you can provide a consistent way of displaying a data type and
 a link to its source and more information. It supports the following types:
 
 - `carrier`
-- `delivery_type`
-- `package_type`
+- `delivery-type`
+- `package-type`
 - `platform`
-- `shipment_status`
+- `shipment-status`
 
 #### Props
 
@@ -235,7 +235,7 @@ a link to its source and more information. It supports the following types:
 ```html
 
 <DataType
-  type="shipment_status"
+  type="shipment-status"
   id="3" />
 
 <DataType
@@ -249,11 +249,11 @@ a link to its source and more information. It supports the following types:
 
 #### Result
 
-<DataType type="shipment_status" id="3" />
+<DataType type="shipment-status" id="3" />
 
 <DataType type="carrier" name="dpd" />
 
-<DataType type="package_type" id="4" />
+<DataType type="package-type" id="4" />
 
 ### DataTypeDefinition
 

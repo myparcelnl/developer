@@ -3,7 +3,7 @@ home: true
 sidebar: none
 
 title: Ga Beyond Delivery met MyParcel.
-subtitle: Connect with our API and get started with shipments, returns and more.
+subtitle: Verbind met onze API en ga aan de slag met zendingen, retouren en meer.
 
 actions: 
 - title: Aan de slag
@@ -24,7 +24,7 @@ tree:
           title: API reference.
           icon: api-reference
           subtitle: Hier vind je alles wat je nodig hebt om aan de slag te kunnen met onze API.
-          link: /api-reference.html
+          link: /api-reference/
       - component: HomeLink
         attributes: 
           class: 'bg-monstera-600' 

@@ -12,7 +12,7 @@ export interface DataType {
 
 export const useDataTypes = (): DataType[] => [
   {
-    name: 'shipment_status',
+    name: 'shipment-status',
     children: [
       { ID: 1, HUMAN: 'pending - concept' },
       { ID: 2, HUMAN: 'pending - registered' },
@@ -40,11 +40,11 @@ export const useDataTypes = (): DataType[] => [
     ],
   },
   {
-    name: 'package_type',
+    name: 'package-type',
     children: PACKAGE_TYPES.ALL,
   },
   {
-    name: 'delivery_type',
+    name: 'delivery-type',
     children: DELIVERY_TYPES.ALL,
   },
   {

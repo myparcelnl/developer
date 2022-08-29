@@ -95,7 +95,7 @@
     "name": "opencart-3",
     "title": "Opencart 3",
     "type": "plugin",
-    "documentation": "https://mypar,celnl.github.io/opencart3",
+    "documentation": "https://myparcelnl.github.io/opencart3",
     "image": "opencart.svg",
     "classes": "bg-sky-50"
   },
@@ -192,7 +192,7 @@
     "title": "PHP",
     "type": "sdk",
     "repository": "myparcelnl/sdk",
-    "documentation": "/documentation/50.php-sdk",
+    "documentation": "/documentation/50.php-sdk.html",
     "image": "php.svg",
     "classes": "bg-[#787CB5]"
   },
@@ -202,7 +202,7 @@
     "title": "JavaScript/Node.js",
     "type": "sdk",
     "repository": "myparcelnl/js-sdk",
-    "documentation": "/documentation/51.javascript-sdk",
+    "documentation": "/documentation/51.javascript-sdk.html",
     "image": "js.svg",
     "classes": "bg-[#F7DF1E]"
   },
@@ -301,13 +301,5 @@
     "type": "api",
     "image": "stockitup.png",
     "classes": "bg-[#05386b]"
-  },
-  {
-    "name": "delivery-options",
-    "title": "Delivery Options",
-    "type": "other",
-    "internal": true,
-    "repository": "myparcelnl/delivery-options",
-    "documentation": "/documentation/60.delivery-options.html"
   }
 ]
