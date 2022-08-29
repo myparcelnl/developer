@@ -4,8 +4,10 @@ description: 'Download translations and build the site'
 runs:
   using: composite
   steps:
+    - uses: myparcelnl/actions/yarn2-install@v2
+
     - shell: bash
-      run: npm run translations:import
+      run: yarn translations:import
 
     - name: 'Handle build cache'
       id: cache-build
@@ -16,9 +18,6 @@ runs:
         restore-keys: |
           ${{ runner.os }}-build-${{ hashFiles('**/*.lock') }}
           ${{ runner.os }}-build
-
-    - uses: myparcelnl/actions/yarn2-install@v2
-      if: steps.cache-build.outputs.cache-hit != 'true'
 
     - shell: bash
       run: yarn build
