@@ -4,22 +4,10 @@ description: 'Download translations and build the site'
 runs:
   using: composite
   steps:
-    - name: 'Handle cache'
-      id: cache-all
-      uses: actions/cache@v3
-      with:
-        path: src/.vuepress/dist
-        key: ${{ runner.os }}-build-all-${{ github.run_id }}-${{ github.run_attempt }}
-        restore-keys: |
-          ${{ runner.os }}-build-all-${{ github.run_id }}
-          ${{ runner.os }}-build-all
-
     - shell: bash
-      if: steps.cache-all.outputs.cache-hit != 'true'
       run: npm run translations:import
 
     - name: 'Handle build cache'
-      if: steps.cache-all.outputs.cache-hit != 'true'
       id: cache-build
       uses: actions/cache@v3
       with:
@@ -30,8 +18,8 @@ runs:
           ${{ runner.os }}-build
 
     - uses: myparcelnl/actions/yarn2-install@v2
-      if: steps.cache-all.outputs.cache-hit != 'true' && steps.cache-build.outputs.cache-hit != 'true'
+      if: steps.cache-build.outputs.cache-hit != 'true'
 
     - shell: bash
       run: yarn build
-      if: steps.cache-all.outputs.cache-hit != 'true' && steps.cache-build.outputs.cache-hit != 'true'
+      if: steps.cache-build.outputs.cache-hit != 'true'
