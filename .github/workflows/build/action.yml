@@ -9,8 +9,9 @@ runs:
       uses: actions/cache@v3
       with:
         path: src/.vuepress/dist
-        key: ${{ runner.os }}-build-all-${{ github.run_id }}
+        key: ${{ runner.os }}-build-all-${{ github.run_id }}-${{ github.run_attempt }}
         restore-keys: |
+          ${{ runner.os }}-build-all-${{ github.run_id }}
           ${{ runner.os }}-build-all
 
     - shell: bash
