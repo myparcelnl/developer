@@ -1,0 +1,13 @@
+name: '♻️Rebase pull requests'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  rebase-prs:
+    name: 'Rebase open pull requests'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: peter-evans/rebase@v2
