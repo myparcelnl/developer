@@ -1,4 +1,4 @@
-name: '♻️Rebase pull requests'
+name: '♻️ Rebase pull requests'
 
 on:
   push:
@@ -10,4 +10,8 @@ jobs:
     name: 'Rebase open pull requests'
     runs-on: ubuntu-22.04
     steps:
+      - uses: myparcelnl/actions/setup-git-credentials@main
+        with:
+          token: ${{ inputs.token }}
+
       - uses: peter-evans/rebase@v2
