@@ -18,6 +18,13 @@
     "image": "delivery-options.svg"
   },
   {
+    "name": "Plug&Pay",
+    "title": "Plug&Pay",
+    "type": "utility",
+    "documentation": "https://help.imu.nl/nl/articles/6498451-plug-pay-koppeling-plug-pay-en-myparcel-via-google-chrome-plugin",
+    "image": "plug-and-pay.svg"
+  },
+  {
     "name": "woocommerce",
     "title": "WooCommerce",
     "type": "plugin",
