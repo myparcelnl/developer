@@ -14,8 +14,8 @@ on:
       - yarn.lock
 
 jobs:
-  deploy-ghp:
-    name: 'Deploy to GitHub pages'
+  deploy:
+    name: 'Deploy to GHP and AWS'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
