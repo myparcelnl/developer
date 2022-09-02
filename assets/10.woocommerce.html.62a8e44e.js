@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{o,c}from"./app.91508df4.js";const r={};function _(t,m){return o(),c("div")}var f=e(r,[["render",_],["__file","10.woocommerce.html.vue"]]);export{f as default};
