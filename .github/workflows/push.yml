@@ -10,8 +10,12 @@ jobs:
     name: 'Rebase open pull requests'
     runs-on: ubuntu-22.04
     steps:
+      - uses: actions/checkout@v3
+
       - uses: myparcelnl/actions/setup-git-credentials@main
         with:
-          token: ${{ inputs.token }}
+          token: ${{ secrets.GH_REPO_TOKEN }}
 
       - uses: peter-evans/rebase@v2
+        with:
+          token: ${{ secrets.GH_REPO_TOKEN }}
