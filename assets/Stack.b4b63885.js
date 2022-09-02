@@ -1,1 +1,0 @@
-import{_ as t}from"./plugin-vue_export-helper.21dcd24c.js";import{f as o,o as a,c as s,G as r}from"./app.c326186e.js";const c=o({name:"Stack"}),n={class:"gap-4 grid pb-4"};function p(e,_,f,d,i,l){return a(),s("div",n,[r(e.$slots,"default")])}var k=t(c,[["render",p],["__file","Stack.vue"]]);export{k as default};
