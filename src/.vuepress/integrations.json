@@ -314,6 +314,6 @@
     "title": "DeliveryMatch",
     "type": "api",
     "documentation": "https://www.deliverymatch.nl/engine/live/deliverymatch/register",
-    "image": "deliverymatch.png"
+    "image": "deliverymatch.svg"
   }
 ]
