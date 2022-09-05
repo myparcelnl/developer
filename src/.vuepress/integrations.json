@@ -308,5 +308,12 @@
     "type": "api",
     "image": "stockitup.png",
     "classes": "bg-[#05386b]"
+  },
+  {
+    "name": "DeliveryMatch",
+    "title": "DeliveryMatch",
+    "type": "api",
+    "documentation": "https://www.deliverymatch.nl/engine/live/deliverymatch/register",
+    "image": "deliverymatch.png"
   }
 ]
