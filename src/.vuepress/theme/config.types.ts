@@ -1,6 +1,7 @@
 import { Breakpoint, Overwrite } from '@mptheme/index.types';
-import { DefaultThemeOptions, PageData, PageFrontmatter, SiteData } from 'vuepress';
+import { DefaultThemeOptions, PageData, SiteData } from 'vuepress';
 import { Config } from 'tailwindcss';
+import { DefaultThemeNormalPageFrontmatter } from '@vuepress/theme-default/lib/shared';
 import { Language } from '../plugins/parseTranslations/shared';
 import { NavbarConfig } from '@vuepress/theme-default/lib/shared/nav';
 
@@ -15,15 +16,13 @@ export interface MyPaNavLink extends MyPaNavItem {
   rel?: string;
   target?: string;
   activeMatch?: string;
-  multilanguage?: boolean;
-  image?: string;
 }
 
 export interface MyPaNavGroup<T> extends MyPaNavItem {
   children: T[];
 }
 
-export type MyPaNavbarItem = MyPaNavLink;
+export type MyPaNavbarItem = MyPaNavItem | MyPaNavLink;
 export type MyPaAnyNavbarItem = MyPaNavbarGroup | MyPaNavbarItem | string;
 export type MyPaNavbarGroup = MyPaNavGroup<MyPaAnyNavbarItem>;
 export type MyPaNavbarConfigArray = MyPaAnyNavbarItem[];
@@ -35,8 +34,8 @@ export type MyPaSidebarGroupCollapsible = MyPaSidebarGroup & { collapsible?: boo
 export type MyPaAnySidebarItem = MyPaSidebarItem | MyPaSidebarGroup | MyPaSidebarGroupCollapsible | string;
 
 export type MyPaSidebarConfigArray = MyPaAnySidebarItem[];
-export type MyPaSidebarConfigObject = Record<string, MyPaSidebarConfigArray>;
-export type MyPaSidebarConfig = MyPaSidebarConfigArray | MyPaSidebarConfigObject;
+export type MyPaSidebarConfigObject = Record<string, Record<string, MyPaSidebarConfigArray>>;
+export type MyPaSidebarConfig = MyPaSidebarConfigObject;
 export type MyPaResolvedSidebarItem =
   MyPaSidebarItem
   & Partial<MyPaNavGroup<MyPaResolvedSidebarItem>>
@@ -69,7 +68,7 @@ export interface MyPaHomepageFrontmatter {
   }[];
 }
 
-export interface MyPaPageFrontmatter extends PageFrontmatter {
+export interface MyPaPageFrontmatter extends DefaultThemeNormalPageFrontmatter {
 
   /**
    * Set to true if you want the page to automatically show redirect links to languages the same page is available in.
@@ -90,6 +89,8 @@ export interface MyPaPageFrontmatter extends PageFrontmatter {
    *   - [Nederlands](/handleiding.md)
    */
   languages?: Record<string, null | string> | OneOrMore<string> | Record<string, string>[];
+
+  sidebar?: 'auto' | false;
 }
 
 export interface MyPaThemeData extends Omit<DefaultThemeOptions, 'sidebar' | 'navbar' | 'locales'> {

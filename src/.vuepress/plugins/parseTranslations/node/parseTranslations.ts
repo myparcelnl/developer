@@ -25,7 +25,7 @@ export const parseTranslationsPlugin = (options: ParseTranslationsPluginOptions)
 
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      app.siteData.sidebar = createSidebar();
+      app.siteData.sidebar = createSidebar(app);
 
       merge(
         app.siteData.locales,

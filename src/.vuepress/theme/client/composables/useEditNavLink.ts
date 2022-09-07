@@ -1,12 +1,12 @@
 import { ComputedRef, computed } from 'vue';
-import { DefaultThemeNormalPageFrontmatter, DefaultThemePageData } from '@vuepress/theme-default/lib/shared';
+import { MyPaNavLink, MyPaPageFrontmatter } from '@mptheme/config.types';
 import { usePageData, usePageFrontmatter } from '@vuepress/client';
 import { useThemeLocaleData, useTranslate } from '@mptheme/client/composables';
-import { MyPaNavLink } from '@mptheme/config.types';
+import { DefaultThemePageData } from '@vuepress/theme-default/lib/shared';
 import { resolveEditLink } from '@vuepress/theme-default/lib/client/utils';
 
 export const useEditNavLink = (): ComputedRef<MyPaNavLink | null> => {
-  const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>();
+  const frontmatter = usePageFrontmatter<MyPaPageFrontmatter>();
   const page = usePageData<DefaultThemePageData>();
   const themeLocale = useThemeLocaleData();
 

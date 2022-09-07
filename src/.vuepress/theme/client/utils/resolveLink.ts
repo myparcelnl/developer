@@ -8,7 +8,10 @@ const resolveLinkMemoized = memoize((navLink: MyPaNavLink) => {
   routes ??= useRouter().getRoutes().filter((route) => !route.path.endsWith('.md') && !route.path.endsWith('.html'));
   const { link } = navLink;
 
-  const variants: string[] = [link.replace('.html', '').replace(/\/$/, '')];
+  const searchLink = link.replace('.html', '')
+    .replace(/\/$/, '');
+
+  const variants: string[] = [searchLink, `${searchLink}/`];
 
   const matchingRoute = routes.find((route) => variants.includes(route.path));
 
