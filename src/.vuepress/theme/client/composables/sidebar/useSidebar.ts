@@ -3,7 +3,6 @@ import { useBreakpoints, useNavbarConfig } from '@mptheme/client/composables';
 import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
 import { useRoute } from 'vue-router';
 import { useSidebarItems } from './useSidebarItems';
-import { useRouteLocale } from '@vuepress/client';
 
 let isOpen: ComputedRef<boolean>;
 

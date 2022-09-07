@@ -1,5 +1,4 @@
-import { MyPaResolvedSidebarItem, MyPaSiteData, MyPaThemeData } from '@mptheme/config.types';
-import { DefaultThemeNormalPageFrontmatter } from '@vuepress/theme-default/lib/shared';
+import { MyPaPageFrontmatter, MyPaResolvedSidebarItem, MyPaSiteData, MyPaThemeData } from '@mptheme/config.types';
 import { isArray } from 'lodash-unified';
 import { isPlainObject } from '@vuepress/shared';
 import { resolveArraySidebarItems } from './resolveArraySidebarItems';
@@ -14,11 +13,12 @@ const DEFAULT_SIDEBAR_DEPTH = 2;
  * It should only be resolved and provided once.
  */
 export const resolveSidebarItems = (
-  frontmatter: DefaultThemeNormalPageFrontmatter,
+  frontmatter: MyPaPageFrontmatter,
   siteData: MyPaSiteData,
   themeData: MyPaThemeData,
 ): MyPaResolvedSidebarItem[] => {
   const sidebarConfig = frontmatter.sidebar ?? siteData.sidebar ?? 'auto';
+
   const sidebarDepth = frontmatter.sidebarDepth ?? themeData.sidebarDepth ?? DEFAULT_SIDEBAR_DEPTH;
 
   if (frontmatter.home || sidebarConfig === false) {
@@ -34,7 +34,7 @@ export const resolveSidebarItems = (
   }
 
   if (isPlainObject(sidebarConfig)) {
-    return resolveMultiSidebarItems(sidebarConfig, sidebarDepth);
+    return resolveMultiSidebarItems(siteData, sidebarConfig, sidebarDepth);
   }
 
   return [];

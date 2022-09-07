@@ -30,10 +30,10 @@
 import { computed, defineComponent, onMounted, onUnmounted } from 'vue';
 import { usePageData, usePageFrontmatter } from '@vuepress/client';
 import { useScrollPromise, useSidebar } from '@mptheme/client/composables';
-import { DefaultThemePageFrontmatter } from 'vuepress';
 import Home from '@mptheme/client/views/home/Home.vue';
 import MPHeader from '@mptheme/client/views/layout/header/MPHeader.vue';
 import MPSidebar from '@mptheme/client/views/layout/sidebar/MPSidebar.vue';
+import { MyPaPageFrontmatter } from '@mptheme/config.types';
 import Page from '@mptheme/client/views/page/Page.vue';
 import { useRouter } from 'vue-router';
 
@@ -43,7 +43,7 @@ export default defineComponent({
 
   setup: () => {
     const page = usePageData();
-    const frontmatter = usePageFrontmatter<DefaultThemePageFrontmatter>();
+    const frontmatter = usePageFrontmatter<MyPaPageFrontmatter>();
     const sidebar = useSidebar();
 
     let unregisterRouterHook: () => void;

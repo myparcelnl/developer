@@ -1,10 +1,11 @@
 import { ComputedRef, computed } from 'vue';
-import { DefaultThemeNormalPageFrontmatter, DefaultThemePageData } from '@vuepress/theme-default/lib/shared';
 import { usePageData, usePageFrontmatter } from '@vuepress/client';
+import { DefaultThemePageData } from '@vuepress/theme-default/lib/shared';
+import { MyPaPageFrontmatter } from '@mptheme/config.types';
 import { useThemeLocaleData } from '@mptheme/client/composables';
 
 export const useLastUpdated = (): ComputedRef<null | string> => {
-  const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>();
+  const frontmatter = usePageFrontmatter<MyPaPageFrontmatter>();
   const page = usePageData<DefaultThemePageData>();
   const themeLocale = useThemeLocaleData();
 

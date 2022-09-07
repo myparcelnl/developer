@@ -1,12 +1,7 @@
 <template>
   <li v-if="sidebarDepth >= depth">
-    <h1
-      v-if="depth === 0"
-      class="text-3xl"
-      v-text="item.text" />
-
     <AutoLink
-      v-else-if="item.link"
+      v-if="item.link"
       :class="classes"
       :item="item"
       @click="sidebarToggled ? toggleSidebar : null">

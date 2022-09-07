@@ -1,7 +1,7 @@
 import { ComputedRef, computed } from 'vue';
-import { DefaultThemeNormalPageFrontmatter, NavLink } from '@vuepress/theme-default/lib/shared';
+import { MyPaPageFrontmatter, MyPaResolvedSidebarItem } from '@mptheme/config.types';
 import { isPlainObject, isString } from '@vuepress/shared';
-import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
+import { NavLink } from '@vuepress/theme-default/lib/shared';
 import { useNavLink } from '@mptheme/client/composables/useNavLink';
 import { usePageFrontmatter } from '@vuepress/client';
 import { useRoute } from 'vue-router';
@@ -74,7 +74,7 @@ export const usePrevNextNavLinks = (): {
   nextNavLink: ComputedRef<null | NavLink>;
 
 } => {
-  const frontmatter = usePageFrontmatter<DefaultThemeNormalPageFrontmatter>();
+  const frontmatter = usePageFrontmatter<MyPaPageFrontmatter>();
   const sidebarItems = useSidebarItems();
   const route = useRoute();
 

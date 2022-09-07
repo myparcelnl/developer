@@ -1,97 +1,93 @@
-import { createSidebar } from './createSidebar';
-import mockFs from 'mock-fs';
+import { describe, expect } from 'vitest';
+import { createPageData } from './createPageData';
+import { Page } from 'vuepress';
 
-describe('auto sidebar', () => {
-  beforeEach(() => {
-    mockFs({
-      src: {
-        folder1: {
-          folder1_1: {
-            folder1_1_2: {
-              'readme.md': 'Vuepress content file',
-            },
-            '01.md': 'one',
-            '02.md': 'two',
-          },
-          folder1_2: {
-            'readme.md': 'Vuepress content file',
-          },
-          'readme.md': 'Vuepress content file',
+const languages = [
+  {
+    alpha2: 'gb',
+    localeShort: 'en',
+    locale: 'en-GB',
+    human: 'English',
+    path: '/',
+  },
+  {
+    alpha2: 'nl',
+    localeShort: 'nl',
+    locale: 'nl-NL',
+    human: 'Nederlands',
+    path: '/nl/',
+  },
+];
+
+const pages = [
+  { path: '/', title: 'Go Beyond Delivery with MyParcel.' },
+  { path: '/api-reference/01.requests.html', title: '1. Requests' },
+  { path: '/api-reference/02.responses.html', title: '2. Responses' },
+  { path: '/api-reference/', title: 'API Reference' },
+  { path: '/nl/about.html', title: 'Over ons' },
+  { path: '/nl/', title: 'Ga Beyond Delivery met MyParcel.' },
+  { path: '/nl/documentatie/', title: 'Documentatie' },
+  { path: '/nl/documentatie/10.woocommerce.html', title: 'WooCommerce' },
+  { path: '/nl/documentatie/11.prestashop.html', title: 'PrestaShop' },
+] as Page[];
+
+describe('createSidebar', () => {
+  it('should create sidebar', () => {
+    const sidebar = {};
+
+    pages
+      .sort((pageA, pageB) => pageA.path.localeCompare(pageB.path))
+      .forEach((page) => {
+        createPageData(page, languages, languages[0], sidebar);
+      });
+
+    expect(sidebar).toStrictEqual({
+      '/': {
+        '/': {
+          text: 'Go Beyond Delivery with MyParcel.',
+          link: '/',
         },
-        folder2: {},
-        folder3: {},
+
+        '/api-reference': {
+          text: 'API Reference',
+          link: '/api-reference/',
+          children: [
+            {
+              text: '1. Requests',
+              link: '/api-reference/01.requests.html',
+            },
+            {
+              text: '2. Responses',
+              link: '/api-reference/02.responses.html',
+            },
+          ],
+        },
       },
 
-      // Mock node_modules paths necessary for the test
-      'node_modules/vuepress-bar': mockFs.load('node_modules/vuepress-bar'),
-      'node_modules/uc.micro': mockFs.load('node_modules/uc.micro'),
+      '/nl': {
+        '/': {
+          text: 'Ga Beyond Delivery met MyParcel.',
+          link: '/nl/',
+        },
+        '/about': {
+          text: 'Over ons',
+          link: '/nl/about.html',
+        },
+        '/documentatie': {
+          text: 'Documentatie',
+          link: '/nl/documentatie/',
+          children: [
+            {
+              text: 'WooCommerce',
+              link: '/nl/documentatie/10.woocommerce.html',
+            },
+            {
+              text: 'PrestaShop',
+              link: '/nl/documentatie/11.prestashop.html',
+            },
+          ],
+        },
+      },
     });
   });
-
-  afterEach(() => {
-    mockFs.restore();
-  });
-
-  it('works', () => {
-    const sidebar = createSidebar();
-
-    expect(sidebar).toMatchInlineSnapshot(`
-      {
-        "/folder1": [
-          {
-            "children": [
-              {
-                "children": [
-                  "/folder1/folder1_1/01",
-                  "/folder1/folder1_1/02",
-                  {
-                    "children": [
-                      "/folder1/folder1_1/folder1_1_2/",
-                    ],
-                    "text": "Folder1 1 2",
-                  },
-                ],
-                "collapsible": true,
-                "text": "Folder1 1",
-              },
-              {
-                "children": [
-                  "/folder1/folder1_2/",
-                ],
-                "collapsible": true,
-                "text": "Folder1 2",
-              },
-            ],
-            "link": undefined,
-            "text": "folder1",
-          },
-        ],
-        "/folder2": [
-          {
-            "children": [],
-            "link": undefined,
-            "text": "folder2",
-          },
-        ],
-        "/folder3": [
-          {
-            "children": [],
-            "link": undefined,
-            "text": "folder3",
-          },
-        ],
-      }
-    `);
-  });
-
-  // it('renders correct base level items', () => {
-  //   expect(Object.keys(sidebar)).toEqual([...SIDEBAR_ITEMS, '/nl']);
-  // });
-  //
-  // it('gives each top level item its own link', () => {
-  //   expect.assertions(SIDEBAR_ITEMS.length);
-  //   SIDEBAR_ITEMS.forEach((item) => {
-  //     expect(sidebar?.[item][0].link).toEqual(item);
-  //   });
-  // });
 });
