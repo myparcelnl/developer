@@ -5,6 +5,8 @@ navbar:
     link: /documentation/
   - text: Integrations
     link: /integrations.html
+  - text: Release notes
+    link: /release-notes/api.html
   - text: About
     link: /about.html
   - text: Contact

@@ -5,6 +5,8 @@ navbar:
     link: /nl/documentatie/
   - text: Integraties
     link: /nl/integraties.html
+  - text: Release notes
+    link: /release-notes/api.html
   - text: Over ons
     link: /about.html
   - text: Contact
