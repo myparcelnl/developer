@@ -20,7 +20,7 @@ export const INTEGRATIONS: MyPaNavLink = {
   link: '/integrations.html',
 };
 
-export const RELEASE_NOTE: MyPaNavLink = {
+export const RELEASE_NOTES: MyPaNavLink = {
   text: 'Release notes',
   link: '/release-notes/api.html',
 };
@@ -42,5 +42,5 @@ export const ROUTES = [
   DOCUMENTATION,
   INTEGRATIONS,
   STATUS,
-  RELEASE_NOTE,
+  RELEASE_NOTES,
 ];
