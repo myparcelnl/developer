@@ -14,6 +14,10 @@ const pages: MyPaNavLink[] = [
     link: '/integrations.html',
   },
   {
+    text: 'Release notes',
+    link: '/release-notes/api.html',
+  },
+  {
     text: 'About',
     link: '/about.html',
   },
