@@ -25,7 +25,7 @@
     "dev": "vuepress dev src",
     "optimize:svg": "svgo -r --multipass --final-newline --folder src/.vuepress/public",
     "prepare": "husky install",
-    "preview": "http-server src/.vuepress/dist --port 9599",
+    "preview": "http-server src/.vuepress/dist -s --port 9599",
     "test": "concurrently yarn:test:node yarn:test:vue yarn:test:links",
     "test:dev:node": "vitest --config vitest-node.config.ts",
     "test:dev:vue": "vitest --config vitest-vue.config.ts",
