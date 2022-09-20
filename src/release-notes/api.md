@@ -4,7 +4,7 @@ sidebar: auto
 contributors: false
 editLink: false
 ---
-Hieronder kan je de release notes vinden van de MyParcel API. Iedere week zijn er twee releases voor de API. Relevante dingen zullen hieronder benoemd worden. Als er vragen over een release zijn, neem dan contact op via ons [slack kanaal](https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI/).
+Hieronder kan je de release notes vinden van de MyParcel API. Iedere week zijn er twee releases voor de API. Relevante dingen zullen hieronder benoemd worden. Als er vragen over een release zijn, neem dan contact op via [MyParcel dev support Slack](https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI/).
 
 ## Release notes 3.300.0
 _07-09-2022_
