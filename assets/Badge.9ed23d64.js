@@ -1,0 +1,1 @@
+import{_ as o}from"./plugin-vue_export-helper.21dcd24c.js";import{f as s,o as a,c as t,G as r}from"./app.76724ba9.js";const n=s({name:"Badge"}),d={class:"bg-goldfish-200 dark:bg-goldfish-800 px-2 py-0.5 rounded-full text-xs"};function f(e,c,l,p,_,i){return a(),t("span",d,[r(e.$slots,"default")])}var g=o(n,[["render",f],["__file","Badge.vue"]]);export{g as default};
