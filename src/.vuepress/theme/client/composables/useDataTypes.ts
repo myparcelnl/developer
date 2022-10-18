@@ -1,13 +1,21 @@
 /* eslint-disable no-magic-numbers,@typescript-eslint/no-magic-numbers */
 import { CARRIERS, DELIVERY_TYPES, PACKAGE_TYPES, PLATFORMS } from '@myparcel/sdk';
 
+interface BaseDataType {
+  HUMAN?: string;
+}
+
+export interface DataTypeWithId extends BaseDataType {
+  ID: number;
+}
+
+export interface DataTypeWithName extends BaseDataType {
+  NAME: string;
+}
+
 export interface DataType {
   name: string;
-  children: {
-    ID: number;
-    HUMAN?: string;
-    NAME?: string;
-  }[];
+  children: (DataTypeWithId | DataTypeWithName)[];
 }
 
 export const useDataTypes = (): DataType[] => [
@@ -54,5 +62,14 @@ export const useDataTypes = (): DataType[] => [
   {
     name: 'platform',
     children: PLATFORMS.ALL,
+  },
+  {
+    name: 'order-status',
+    children: [
+      { NAME: 'open', HUMAN: 'Open' },
+      { NAME: 'partially_processed', HUMAN: 'Partially processed' },
+      { NAME: 'processed', HUMAN: 'Processed' },
+      { NAME: 'canceled', HUMAN: 'Canceled' },
+    ],
   },
 ];
