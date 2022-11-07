@@ -1,1 +1,0 @@
-import m from"./Shield.f3e5eb23.js";import{a7 as o}from"./app.a4b8cb79.js";import"./AutoLink.59330b9a.js";import"./plugin-vue_export-helper.21dcd24c.js";import"./MPImg.e97a7148.js";const c=t=>{var a;return o(m,{alt:t.alt,href:`https://npmjs.com/package/${t.package}`,path:`npm/${(a=t.type)!=null?a:"v"}/${t.package}`,color:"CC3534",logo:"npm"})};export{c as default};
