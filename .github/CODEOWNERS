@@ -13,5 +13,7 @@ src/.vuepress  @myparcelnl/integration @myparcelnl/frontend
 *.mdx                 @myparcelnl/integration @myparcelnl/qa @myparcelnl/it-support
 src/.vuepress/public  @myparcelnl/integration @myparcelnl/qa @myparcelnl/it-support
 
-# --- API Reference: Integration, API, QA and IT support ---
-src/api-reference  @myparcelnl/integration @myparcelnl/api @myparcelnl/qa @myparcelnl/it-support
+# --- API Reference and release notes: Integration, API, QA and IT support ---
+src/api-reference     @myparcelnl/integration @myparcelnl/api @myparcelnl/qa @myparcelnl/it-support
+src/nl/release-notes  @myparcelnl/integration @myparcelnl/api @myparcelnl/qa @myparcelnl/it-support
+src/release-notes     @myparcelnl/integration @myparcelnl/api @myparcelnl/qa @myparcelnl/it-support
