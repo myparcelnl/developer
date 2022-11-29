@@ -289,6 +289,13 @@
     "image": "fulfilment.svg"
   },
   {
+    "name": "Stockpilot",
+    "title": "Stockpilot",
+    "type": "api",
+    "documentation": "https://help.stockpilot.com/article/me71o2kd4i-integrate-my-parcel-to-stockpilot",
+    "image": "stockpilot.svg"
+  },
+  {
     "name": "iPacky",
     "title": "iPacky",
     "type": "api",
