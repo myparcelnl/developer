@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { DataType, DataTypeWithId, useDataTypes } from '@mptheme/client/composables/useDataTypes';
+import { DataType, DataTypeWithId, DataTypeWithName, useDataTypes } from '@mptheme/client/composables/useDataTypes';
 import { computed, defineComponent, ref } from 'vue';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import { MyPaNavbarItem } from '@mptheme/config.types';
@@ -45,7 +45,16 @@ export default defineComponent({
 
     const childType = computed<DataType['children'][number] | null>(() => {
       return dataType.value?.children.find((child) => {
-        return isOfType<DataTypeWithId>(child, 'ID') ? child.ID === props.id : child.NAME === props.name;
+        if (props.id && isOfType<DataTypeWithId>(child, 'ID')) {
+          return child.ID === Number(props.id);
+        } else if (props.name && isOfType<DataTypeWithName>(child, 'NAME')) {
+          return child.NAME === props.name;
+        }
+
+        // eslint-disable-next-line no-console
+        console.warn(`Data type for id: ${props.id} and/or name ${props.name} could not be found.`);
+
+        return false;
       }) ?? null;
     });
 
