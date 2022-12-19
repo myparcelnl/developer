@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{o,c as r}from"./app.988a8f80.js";const _={};function t(c,f){return o(),r("div")}var n=e(_,[["render",t],["__file","14.shopify.html.vue"]]);export{n as default};
