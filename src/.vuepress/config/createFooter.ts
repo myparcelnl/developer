@@ -13,6 +13,7 @@ export const createFooter = (): MyPaNavbarConfigArray => {
         { text: 'Shopify', link: '/nl/documentatie/14.shopify.html' },
         { text: 'Shopware', link: '/nl/documentatie/15.shopware.html' },
         { text: 'Wix', link: '/nl/documentatie/20.wix.html' },
+        { text: 'Amazon', link: '/nl/documentatie/25.amazon.html' },
         { text: 'PHP SDK', link: '/50.php-sdk.html' },
         { text: 'JavaScript SDK', link: '/51.javascript-sdk.html' },
         { text: 'Delivery Options', link: '/60.delivery-options.html' },

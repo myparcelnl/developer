@@ -233,7 +233,7 @@
     "title": "Amazon",
     "type": "api",
     "internal": true,
-    "documentation": "https://myparcelnl.github.io/amazon",
+    "documentation": "/documentation/25.amazon.html",
     "image": "amazon.svg"
   },
   {
