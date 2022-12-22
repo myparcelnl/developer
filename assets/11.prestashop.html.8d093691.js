@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{o as r,c as t}from"./app.5cad2966.js";const o={};function _(c,s){return r(),t("div")}var p=e(o,[["render",_],["__file","11.prestashop.html.vue"]]);export{p as default};
