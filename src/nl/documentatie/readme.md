@@ -15,6 +15,7 @@ Hier vind je de handleidingen voor onze plugins en API-integraties.
     <Integration name="shopify" />
     <Integration name="shopware" />
     <Integration name="wix" />
+    <Integration name="amazon" />
 </Stack>
 
 ### SDK's

@@ -32,6 +32,8 @@ footer:
         link: /nl/documentatie/15.shopware.html
       - text: Wix
         link: /nl/documentatie/20.wix.html
+      - text: Amazon
+        link: /nl/documentatie/25.amazon.html
       - text: PHP SDK
         link: /documentation/50.php-sdk.html
       - text: JS SDK

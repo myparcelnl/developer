@@ -17,6 +17,7 @@ Here you can find our documentation for various plugins and our own SDKs.
     <Integration name="shopify" />
     <Integration name="shopware" />
     <Integration name="wix" />
+    <Integration name="amazon" />
 </Stack>
 
 ## SDKs (Software Development Kits)
