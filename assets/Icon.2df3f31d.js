@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{f as o,o as r,c as a,H as c}from"./app.16329672.js";const s=o({name:"Icon",props:{icon:{type:String,default:null}}});function i(n,l,t,p,f,_){return r(),a("i",{role:"none",class:c([`icon-${n.icon}`,"inline-flex leading-none"])},null,2)}var d=e(s,[["render",i],["__file","Icon.vue"]]);export{d as I};
