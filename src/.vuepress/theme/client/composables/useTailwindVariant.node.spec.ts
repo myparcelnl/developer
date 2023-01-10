@@ -1,5 +1,5 @@
-import { defineVariant } from '@mptheme/client/services/tailwind/defineVariant';
-import { useTailwindVariant } from '@mptheme/client/composables/useTailwindVariant';
+import {defineVariant} from '@mptheme/client/services/tailwind/defineVariant';
+import {useTailwindVariant} from '@mptheme/client/composables/useTailwindVariant';
 
 const variantDefinition = defineVariant(
   'one',

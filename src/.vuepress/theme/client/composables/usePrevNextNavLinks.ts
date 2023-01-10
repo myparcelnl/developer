@@ -1,11 +1,11 @@
-import { ComputedRef, computed } from 'vue';
-import { MyPaPageFrontmatter, MyPaResolvedSidebarItem } from '@mptheme/config.types';
-import { isPlainObject, isString } from '@vuepress/shared';
-import { NavLink } from '@vuepress/theme-default/lib/shared';
-import { useNavLink } from '@mptheme/client/composables/useNavLink';
-import { usePageFrontmatter } from '@vuepress/client';
-import { useRoute } from 'vue-router';
-import { useSidebarItems } from '@mptheme/client/composables/sidebar';
+import {ComputedRef, computed} from 'vue';
+import {MyPaPageFrontmatter, MyPaResolvedSidebarItem} from '@mptheme/config.types';
+import {isPlainObject, isString} from '@vuepress/shared';
+import {NavLink} from '@vuepress/theme-default/lib/shared';
+import {useNavLink} from '@mptheme/client/composables/useNavLink';
+import {usePageFrontmatter} from '@vuepress/client';
+import {useRoute} from 'vue-router';
+import {useSidebarItems} from '@mptheme/client/composables/sidebar';
 
 /**
  * Resolve `prev` or `next` config from frontmatter.
@@ -54,11 +54,7 @@ const resolveFromSidebarItems = (
 
   for (const item of sidebarItems) {
     if (item.children) {
-      const childResult = resolveFromSidebarItems(
-        item.children,
-        currentPath,
-        offset,
-      );
+      const childResult = resolveFromSidebarItems(item.children, currentPath, offset);
 
       if (childResult) {
         return childResult;
@@ -72,7 +68,6 @@ const resolveFromSidebarItems = (
 export const usePrevNextNavLinks = (): {
   prevNavLink: ComputedRef<null | NavLink>;
   nextNavLink: ComputedRef<null | NavLink>;
-
 } => {
   const frontmatter = usePageFrontmatter<MyPaPageFrontmatter>();
   const sidebarItems = useSidebarItems();

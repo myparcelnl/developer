@@ -1,6 +1,6 @@
-import { FunctionalComponent, h } from 'vue';
+import {FunctionalComponent, h} from 'vue';
 import Shield from '@mptheme/client/components/global/Shield';
-import { toArray } from '@mptheme/client/utils/toArray';
+import {toArray} from '@mptheme/client/utils/toArray';
 
 type Link = 'pulls' | 'issues' | 'releases';
 

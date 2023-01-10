@@ -1,6 +1,6 @@
-import { describe, expect } from 'vitest';
-import { createPageData } from './createPageData';
-import { Page } from 'vuepress';
+import {describe, expect} from 'vitest';
+import {createPageData} from './createPageData';
+import {Page} from 'vuepress';
 
 const languages = [
   {
@@ -20,15 +20,15 @@ const languages = [
 ];
 
 const pages = [
-  { path: '/', title: 'Go Beyond Delivery with MyParcel.' },
-  { path: '/api-reference/01.requests.html', title: '1. Requests' },
-  { path: '/api-reference/02.responses.html', title: '2. Responses' },
-  { path: '/api-reference/', title: 'API Reference' },
-  { path: '/nl/about.html', title: 'Over ons' },
-  { path: '/nl/', title: 'Ga Beyond Delivery met MyParcel.' },
-  { path: '/nl/documentatie/', title: 'Documentatie' },
-  { path: '/nl/documentatie/10.woocommerce.html', title: 'WooCommerce' },
-  { path: '/nl/documentatie/11.prestashop.html', title: 'PrestaShop' },
+  {path: '/', title: 'Go Beyond Delivery with MyParcel.'},
+  {path: '/api-reference/01.requests.html', title: '1. Requests'},
+  {path: '/api-reference/02.responses.html', title: '2. Responses'},
+  {path: '/api-reference/', title: 'API Reference'},
+  {path: '/nl/about.html', title: 'Over ons'},
+  {path: '/nl/', title: 'Ga Beyond Delivery met MyParcel.'},
+  {path: '/nl/documentatie/', title: 'Documentatie'},
+  {path: '/nl/documentatie/10.woocommerce.html', title: 'WooCommerce'},
+  {path: '/nl/documentatie/11.prestashop.html', title: 'PrestaShop'},
 ] as Page[];
 
 describe('createSidebar', () => {

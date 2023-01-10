@@ -1,9 +1,9 @@
-import { Breakpoint, Overwrite } from '@mptheme/index.types';
-import { DefaultThemeOptions, PageData, SiteData } from 'vuepress';
-import { Config } from 'tailwindcss';
-import { DefaultThemeNormalPageFrontmatter } from '@vuepress/theme-default/lib/shared';
-import { Language } from '../plugins/parseTranslations/shared';
-import { NavbarConfig } from '@vuepress/theme-default/lib/shared/nav';
+import {Breakpoint, Overwrite} from '@mptheme/index.types';
+import {DefaultThemeOptions, PageData, SiteData} from 'vuepress';
+import {Config} from 'tailwindcss';
+import {DefaultThemeNormalPageFrontmatter} from '@vuepress/theme-default/lib/shared';
+import {Language} from '../plugins/parseTranslations/shared';
+import {NavbarConfig} from '@vuepress/theme-default/lib/shared/nav';
 
 export interface MyPaNavItem {
   text: string;
@@ -23,29 +23,40 @@ export interface MyPaNavGroup<T> extends MyPaNavItem {
 }
 
 export type MyPaNavbarItem = MyPaNavItem | MyPaNavLink;
+
 export type MyPaAnyNavbarItem = MyPaNavbarGroup | MyPaNavbarItem | string;
+
 export type MyPaNavbarGroup = MyPaNavGroup<MyPaAnyNavbarItem>;
+
 export type MyPaNavbarConfigArray = MyPaAnyNavbarItem[];
+
 export type MyPaResolvedNavbarItem = MyPaNavbarItem | MyPaNavGroup<MyPaResolvedNavbarItem>;
 
 export type MyPaSidebarItem = Partial<MyPaNavLink>;
+
 export type MyPaSidebarGroup = MyPaSidebarItem & MyPaNavGroup<MyPaSidebarItem | MyPaSidebarGroup | string>;
-export type MyPaSidebarGroupCollapsible = MyPaSidebarGroup & { collapsible?: boolean };
+
+export type MyPaSidebarGroupCollapsible = MyPaSidebarGroup & {collapsible?: boolean};
+
 export type MyPaAnySidebarItem = MyPaSidebarItem | MyPaSidebarGroup | MyPaSidebarGroupCollapsible | string;
 
 export type MyPaSidebarConfigArray = MyPaAnySidebarItem[];
-export type MyPaSidebarConfigObject = Record<string, Record<string, MyPaSidebarConfigArray>>;
-export type MyPaSidebarConfig = MyPaSidebarConfigObject;
-export type MyPaResolvedSidebarItem =
-  MyPaSidebarItem
-  & Partial<MyPaNavGroup<MyPaResolvedSidebarItem>>
-  & { collapsible?: boolean };
 
-export type TailwindConfig = Overwrite<Config, {
-  theme: {
-    screens: Record<Breakpoint, string>;
-  };
-}>;
+export type MyPaSidebarConfigObject = Record<string, Record<string, MyPaSidebarConfigArray>>;
+
+export type MyPaSidebarConfig = MyPaSidebarConfigObject;
+
+export type MyPaResolvedSidebarItem = MyPaSidebarItem &
+  Partial<MyPaNavGroup<MyPaResolvedSidebarItem>> & {collapsible?: boolean};
+
+export type TailwindConfig = Overwrite<
+  Config,
+  {
+    theme: {
+      screens: Record<Breakpoint, string>;
+    };
+  }
+>;
 
 export interface MyPaHomepageFrontmatter {
   title?: string;
@@ -69,7 +80,6 @@ export interface MyPaHomepageFrontmatter {
 }
 
 export interface MyPaPageFrontmatter extends DefaultThemeNormalPageFrontmatter {
-
   /**
    * Set to true if you want the page to automatically show redirect links to languages the same page is available in.
    */

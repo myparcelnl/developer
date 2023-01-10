@@ -1,4 +1,4 @@
-import { Directive } from 'vue';
+import {Directive} from 'vue';
 
 export const vTest: Directive<HTMLElement> = (el, binding) => {
   if (process.env.NODE_ENV !== 'test' && !localStorage.getItem('showTestLabels')) {

@@ -1,11 +1,9 @@
-import { MyPaNavbarGroup, MyPaNavbarItem, MyPaResolvedNavbarItem } from '@mptheme/config.types';
-import { isOfType } from '@mptheme/shared/utils';
-import { isString } from '@vuepress/shared';
-import { useNavLink } from '@mptheme/client/composables/useNavLink';
+import {MyPaNavbarGroup, MyPaNavbarItem, MyPaResolvedNavbarItem} from '@mptheme/config.types';
+import {isOfType} from '@mptheme/shared/utils';
+import {isString} from '@vuepress/shared';
+import {useNavLink} from '@mptheme/client/composables/useNavLink';
 
-export const resolveNavbarItem = (
-  item: MyPaNavbarItem | MyPaNavbarGroup | string,
-): MyPaResolvedNavbarItem => {
+export const resolveNavbarItem = (item: MyPaNavbarItem | MyPaNavbarGroup | string): MyPaResolvedNavbarItem => {
   if (isString(item)) {
     return useNavLink(item);
   }

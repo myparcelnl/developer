@@ -1,4 +1,4 @@
-import { localeToShort } from './localeToShort';
+import {localeToShort} from './localeToShort';
 
 export interface Locale {
   localeShort: string;
@@ -6,7 +6,5 @@ export interface Locale {
 }
 
 export const getLocalePathPrefix = (locale: Locale, defaultLocale: string): string => {
-  return locale.localeShort === localeToShort(defaultLocale)
-    ? '/'
-    : `/${locale.localeShort}/`;
+  return locale.localeShort === localeToShort(defaultLocale) ? '/' : `/${locale.localeShort}/`;
 };

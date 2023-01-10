@@ -1,21 +1,21 @@
 /* eslint-disable max-lines-per-function */
-import { DIR_CLIENT, DIR_THEME } from './shared/directories';
-import { MyPaPageFrontmatter, MyPaThemeData } from './config.types';
-import { Theme } from '@vuepress/core';
-import { activeHeaderLinksPlugin } from '@vuepress/plugin-active-header-links';
-import { autoLinkPlugin } from './node/plugins/autoLinkPlugin';
-import { createAliasMap } from './node/config/createAliasMap';
-import { createContainerPlugins } from './node/config/createContainerPlugin';
-import { externalLinkIconPlugin } from '@vuepress/plugin-external-link-icon';
-import { gitPlugin } from '@vuepress/plugin-git';
-import { incrementHeadingsPlugin } from './node/plugins/incrementHeadingsPlugin';
-import { palettePlugin } from '@vuepress/plugin-palette';
-import { path } from '@vuepress/utils';
-import { prismjsPlugin } from '@vuepress/plugin-prismjs';
-import { registerCustomComponentsPlugin } from './node/plugins/registerCustomComponentsPlugin';
-import { seoPlugin } from './seoPlugin';
-import { themeDataPlugin } from '@vuepress/plugin-theme-data';
-import { Page } from 'vuepress';
+import {DIR_CLIENT, DIR_THEME} from './shared/directories';
+import {MyPaPageFrontmatter, MyPaThemeData} from './config.types';
+import {Page} from 'vuepress';
+import {Theme} from '@vuepress/core';
+import {activeHeaderLinksPlugin} from '@vuepress/plugin-active-header-links';
+import {autoLinkPlugin} from './node/plugins/autoLinkPlugin';
+import {createAliasMap} from './node/config/createAliasMap';
+import {createContainerPlugins} from './node/config/createContainerPlugin';
+import {externalLinkIconPlugin} from '@vuepress/plugin-external-link-icon';
+import {gitPlugin} from '@vuepress/plugin-git';
+import {incrementHeadingsPlugin} from './node/plugins/incrementHeadingsPlugin';
+import {palettePlugin} from '@vuepress/plugin-palette';
+import {path} from '@vuepress/utils';
+import {prismjsPlugin} from '@vuepress/plugin-prismjs';
+import {registerCustomComponentsPlugin} from './node/plugins/registerCustomComponentsPlugin';
+import {seoPlugin} from './seoPlugin';
+import {themeDataPlugin} from '@vuepress/plugin-theme-data';
 
 const views = path.resolve(DIR_CLIENT, 'views');
 
@@ -67,7 +67,7 @@ export const myParcelTheme = (options: MyPaThemeData): Theme => {
         headerLinkSelector: 'a.sidebar-item',
         headerAnchorSelector: '.header-anchor',
       }),
-      externalLinkIconPlugin({ }),
+      externalLinkIconPlugin({}),
       themeDataPlugin({
         themeData: options,
       }),

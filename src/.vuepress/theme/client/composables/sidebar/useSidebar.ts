@@ -1,8 +1,8 @@
-import { ComputedRef, Ref, computed, ref, watch } from 'vue';
-import { useBreakpoints, useNavbarConfig } from '@mptheme/client/composables';
-import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
-import { useRoute } from 'vue-router';
-import { useSidebarItems } from './useSidebarItems';
+import {ComputedRef, Ref, computed, ref, watch} from 'vue';
+import {useBreakpoints, useNavbarConfig} from '@mptheme/client/composables';
+import {MyPaResolvedSidebarItem} from '@mptheme/config.types';
+import {useRoute} from 'vue-router';
+import {useSidebarItems} from './useSidebarItems';
 
 let isOpen: ComputedRef<boolean>;
 
@@ -21,7 +21,7 @@ export const useSidebar: UseSidebar = () => {
   const route = useRoute();
   const items = useSidebarItems();
   const navbar = useNavbarConfig();
-  const { lg } = useBreakpoints();
+  const {lg} = useBreakpoints();
   const isNavbar = computed(() => !items.value.length);
 
   toggled ??= ref(false);

@@ -1,1 +1,1 @@
-export { parseTranslationsPlugin } from './node';
+export {parseTranslationsPlugin} from './node';

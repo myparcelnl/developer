@@ -1,7 +1,7 @@
-import { App } from 'vuepress';
-import { Language } from '../../plugins/parseTranslations/shared';
-import { MyPaSidebarConfig } from '@mptheme/config.types';
-import { createPageData } from './createPageData';
+import {App} from 'vuepress';
+import {Language} from '../../plugins/parseTranslations/shared';
+import {MyPaSidebarConfig} from '@mptheme/config.types';
+import {createPageData} from './createPageData';
 
 /**
  * Gets the sidebar and nav config from vuepress-bar and converts it to support VuePress 2.

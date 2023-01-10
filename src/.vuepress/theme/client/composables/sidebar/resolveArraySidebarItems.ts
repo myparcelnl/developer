@@ -1,9 +1,9 @@
-import { MyPaResolvedSidebarItem, MyPaSidebarConfigArray, MyPaSidebarItem } from '@mptheme/config.types';
-import { headersToSidebarItemChildren } from './headersToSidebarItemChildren';
-import { isString } from '@vuepress/shared';
-import { useNavLink } from '@mptheme/client/composables/useNavLink';
-import { usePageData } from '@vuepress/client';
-import { useRoute } from 'vue-router';
+import {MyPaResolvedSidebarItem, MyPaSidebarConfigArray, MyPaSidebarItem} from '@mptheme/config.types';
+import {headersToSidebarItemChildren} from './headersToSidebarItemChildren';
+import {isString} from '@vuepress/shared';
+import {useNavLink} from '@mptheme/client/composables/useNavLink';
+import {usePageData} from '@vuepress/client';
+import {useRoute} from 'vue-router';
 
 /**
  * Resolve sidebar items if the config is an array.
@@ -15,9 +15,7 @@ export const resolveArraySidebarItems = (
   const route = useRoute();
   const page = usePageData();
 
-  const handleChildItem = (
-    item: MyPaResolvedSidebarItem | MyPaSidebarItem | string,
-  ): MyPaResolvedSidebarItem => {
+  const handleChildItem = (item: MyPaResolvedSidebarItem | MyPaSidebarItem | string): MyPaResolvedSidebarItem => {
     let childItem: MyPaResolvedSidebarItem;
 
     if (isString(item)) {
@@ -37,9 +35,7 @@ export const resolveArraySidebarItems = (
     // use headers of current page as children
     if (childItem.link === route.path) {
       // skip h1 header
-      const headers = page.value.headers[0]?.level === 1
-        ? page.value.headers[0].children
-        : page.value.headers;
+      const headers = page.value.headers[0]?.level === 1 ? page.value.headers[0].children : page.value.headers;
 
       return {
         ...childItem,

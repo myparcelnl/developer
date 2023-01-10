@@ -1,9 +1,6 @@
-import { defineVariant } from '../defineVariant';
+import {defineVariant} from '../defineVariant';
 
-const outlineBase = [
-  'border',
-  'border-2',
-];
+const outlineBase = ['border', 'border-2'];
 
 const outlineLight = [
   ...outlineBase,
@@ -18,12 +15,7 @@ const outlineLight = [
   'active:text-black',
 ];
 
-const outlineGray = [
-  ...outlineBase,
-  'hover:bg-goldfish-500',
-  'hover:border-goldfish-500',
-  'hover:text-white',
-];
+const outlineGray = [...outlineBase, 'hover:bg-goldfish-500', 'hover:border-goldfish-500', 'hover:text-white'];
 
 const outline = [
   ...outlineBase,
@@ -73,16 +65,9 @@ const primary = [
   'text-white',
 ];
 
-const icon = [
-  'w-12',
-  'h-12',
-  'text-4xl',
-];
+const icon = ['w-12', 'h-12', 'text-4xl'];
 
-const iconSm = [
-  'w-10',
-  'h-10',
-];
+const iconSm = ['w-10', 'h-10'];
 
 export const buttonVariant = defineVariant(
   'buttonVariant',

@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { path } from '@vuepress/utils';
+import {path} from '@vuepress/utils';
 
 /**
  * Creates an object mapping all files/folders in <from> to "<to>/<from>".
@@ -7,15 +7,12 @@ import { path } from '@vuepress/utils';
  * @param {string} from
  * @param {string} to
  */
-export const createAliasMap = (from: fs.PathLike, to: string): Record<string, fs.PathLike> => Object.fromEntries(
-  fs.readdirSync(from)
-    .map((file) => {
+export const createAliasMap = (from: fs.PathLike, to: string): Record<string, fs.PathLike> =>
+  Object.fromEntries(
+    fs.readdirSync(from).map((file) => {
       // Chop .ts extension off aliases.
       const fileName = file.replace('.ts', '');
 
-      return [
-        `${to}/${fileName}`,
-        path.resolve(from, file),
-      ];
+      return [`${to}/${fileName}`, path.resolve(from, file)];
     }),
-);
+  );

@@ -1,9 +1,9 @@
-import { computed, provide } from 'vue';
-import { useSiteLocaleData, useThemeLocaleData } from '@mptheme/client/composables';
-import { MyPaPageFrontmatter } from '@mptheme/config.types';
-import { resolveSidebarItems } from './resolveSidebarItems';
-import { sidebarItemsSymbol } from './sidebarItemsSymbol';
-import { usePageFrontmatter } from '@vuepress/client';
+import {computed, provide} from 'vue';
+import {useSiteLocaleData, useThemeLocaleData} from '@mptheme/client/composables';
+import {MyPaPageFrontmatter} from '@mptheme/config.types';
+import {resolveSidebarItems} from './resolveSidebarItems';
+import {sidebarItemsSymbol} from './sidebarItemsSymbol';
+import {usePageFrontmatter} from '@vuepress/client';
 
 /**
  * Create sidebar items ref and provide as global computed in setup.

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
-import { Language, ParseTranslationsPluginOptions } from '../shared';
-import { Locale, getLocalePathPrefix } from './getLocalePathPrefix';
+import {Language, ParseTranslationsPluginOptions} from '../shared';
+import {Locale, getLocalePathPrefix} from './getLocalePathPrefix';
 
 export const getAvailableLanguages = (translations: Locale[], options: ParseTranslationsPluginOptions): Language[] => {
   return translations.map((translation) => ({

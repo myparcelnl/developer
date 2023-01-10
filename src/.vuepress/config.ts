@@ -1,14 +1,14 @@
-import { DIR_CONFIG, DIR_VUEPRESS } from './dirs';
-import { defineUserConfig, viteBundler } from 'vuepress';
-import { docsearchPlugin } from '@vuepress/plugin-docsearch';
-import { googleTagManagerPlugin } from './plugins/gtm/node';
-import { head } from './config/head';
-import { myParcelTheme } from './theme';
-import { parseTranslationsPlugin } from './plugins/parseTranslations';
+import {DIR_CONFIG, DIR_VUEPRESS} from './dirs';
+import {defineUserConfig, viteBundler} from 'vuepress';
+import {docsearchPlugin} from '@vuepress/plugin-docsearch';
+import {googleTagManagerPlugin} from './plugins/gtm/node';
+import {head} from './config/head';
+import {myParcelTheme} from './theme';
+import {parseTranslationsPlugin} from './plugins/parseTranslations';
 import path from 'path';
-import { sitemapPlugin } from './plugins/sitemap';
-import { slugify } from '@mdit-vue/shared';
-import { viteConfig } from './viteConfig';
+import {sitemapPlugin} from './plugins/sitemap';
+import {slugify} from '@mdit-vue/shared';
+import {viteConfig} from './viteConfig';
 
 const DEV_SERVER_PORT = 8955;
 
@@ -56,7 +56,7 @@ export default defineUserConfig({
        * @returns {string}
        */
       slugify(str: string): string {
-        const hasHeading = (/^\d+(?:\.\w+)+/).exec(str);
+        const hasHeading = /^\d+(?:\.\w+)+/.exec(str);
         return slugify(hasHeading ? hasHeading[0] : str);
       },
     },

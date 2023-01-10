@@ -1,6 +1,7 @@
-import { defineVariant } from '../defineVariant';
+import {defineVariant} from '../defineVariant';
 
-export const iconVariant = defineVariant('icon',
+export const iconVariant = defineVariant(
+  'icon',
   {
     'api-reference': 'icon-api-reference',
     'chevron-up': 'icon-chevron-up',
@@ -15,4 +16,5 @@ export const iconVariant = defineVariant('icon',
   },
   {
     required: true,
-  });
+  },
+);

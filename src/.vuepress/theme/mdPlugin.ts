@@ -22,23 +22,19 @@ export const mdPlugin: MarkdownIt.PluginWithOptions<Options> = (md, options) => 
     return false;
   }
 
-  md.core.ruler.after(
-    'inline',
-    'replace-link',
-    (state) => {
-      state.tokens
-        .filter((token) => token.type === 'inline' && token.children)
-        .forEach((token) => {
-          token.children?.forEach((token) => {
-            const { type } = token;
+  md.core.ruler.after('inline', 'replace-link', (state) => {
+    state.tokens
+      .filter((token) => token.type === 'inline' && token.children)
+      .forEach((token) => {
+        token.children?.forEach((token) => {
+          const {type} = token;
 
-            if (type === 'link_open') {
-              replaceAttr(token, 'href', options.replace, state.env);
-            } else if (type === 'image') {
-              replaceAttr(token, 'src', options.replace, state.env);
-            }
-          });
+          if (type === 'link_open') {
+            replaceAttr(token, 'href', options.replace, state.env);
+          } else if (type === 'image') {
+            replaceAttr(token, 'src', options.replace, state.env);
+          }
         });
-    },
-  );
+      });
+  });
 };

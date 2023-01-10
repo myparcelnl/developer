@@ -1,4 +1,4 @@
-import type { GoogleTagManagerPluginOptions } from '../../shared';
+import type {GoogleTagManagerPluginOptions} from '../../shared';
 
 export const useSetupGoogleTagManager = (options: GoogleTagManagerPluginOptions): void => {
   // avoid duplicated import

@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitest/config';
-import { path } from '@vuepress/utils';
+import {defineConfig} from 'vitest/config';
+import {path} from '@vuepress/utils';
 
 export default defineConfig({
   test: {

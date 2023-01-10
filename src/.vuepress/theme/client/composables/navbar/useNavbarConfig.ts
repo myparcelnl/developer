@@ -1,13 +1,11 @@
-import { ComputedRef, computed } from 'vue';
-import { MyPaNavbarGroup, MyPaNavbarItem, MyPaResolvedNavbarItem } from '@mptheme/config.types';
-import { isOfType } from '@mptheme/shared/utils';
-import { isString } from '@vuepress/shared';
-import { useNavLink } from '@mptheme/client/composables/useNavLink';
-import { useSiteLocaleData } from '@mptheme/client/composables';
+import {ComputedRef, computed} from 'vue';
+import {MyPaNavbarGroup, MyPaNavbarItem, MyPaResolvedNavbarItem} from '@mptheme/config.types';
+import {isOfType} from '@mptheme/shared/utils';
+import {isString} from '@vuepress/shared';
+import {useNavLink} from '@mptheme/client/composables/useNavLink';
+import {useSiteLocaleData} from '@mptheme/client/composables';
 
-const resolveNavbarItem = (
-  item: MyPaNavbarItem | MyPaNavbarGroup | string,
-): MyPaResolvedNavbarItem => {
+const resolveNavbarItem = (item: MyPaNavbarItem | MyPaNavbarGroup | string): MyPaResolvedNavbarItem => {
   if (isString(item)) {
     return useNavLink(item);
   }

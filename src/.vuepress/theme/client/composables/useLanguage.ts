@@ -1,8 +1,8 @@
-import { ComputedRef, computed } from 'vue';
-import { Language } from '../../../plugins/parseTranslations/shared';
-import { memoize } from 'lodash-unified';
-import { useRouteLocale } from '@vuepress/client';
-import { useSiteLocaleData } from '@mptheme/client/composables/useSiteLocaleData';
+import {ComputedRef, computed} from 'vue';
+import {Language} from '../../../plugins/parseTranslations/shared';
+import {memoize} from 'lodash-unified';
+import {useRouteLocale} from '@vuepress/client';
+import {useSiteLocaleData} from '@mptheme/client/composables/useSiteLocaleData';
 
 const LENGTH_ALPHA2_OR_LOCALE_SHORT = 2;
 
@@ -35,8 +35,9 @@ export const useLanguage: UsePageLanguage = () => {
 
   return {
     current: computed(() => {
-      const match: Language | undefined = siteLocale.value.availableLanguages
-        .find((config) => config.path === routeLocale.value);
+      const match: Language | undefined = siteLocale.value.availableLanguages.find(
+        (config) => config.path === routeLocale.value,
+      );
 
       return match ?? siteLocale.value.availableLanguages[0];
     }),

@@ -1,4 +1,4 @@
-import { FunctionalComponent, h } from 'vue';
+import {FunctionalComponent, h} from 'vue';
 import Shield from '@mptheme/client/components/global/Shield';
 
 export interface Props {

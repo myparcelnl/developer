@@ -1,5 +1,5 @@
-import { LocaleConfig } from '@vuepress/shared';
-import { useSiteLocaleData } from '@mptheme/client/composables';
+import {LocaleConfig} from '@vuepress/shared';
+import {useSiteLocaleData} from '@mptheme/client/composables';
 
 const missingCache: string[] = [];
 
@@ -13,7 +13,7 @@ export const useTranslate = (): ((input: string) => string) => {
 
     if (import.meta.env.DEV && !missingCache.includes(key)) {
       // eslint-disable-next-line no-console
-      console.warn('Missing translation: ' + key);
+      console.warn(`Missing translation: ${key}`);
       missingCache.push(key);
     }
 

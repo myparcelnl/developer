@@ -1,5 +1,5 @@
 import SidebarItems from './SidebarItems.vue';
-import { shallowMount } from '@vue/test-utils';
+import {shallowMount} from '@vue/test-utils';
 
 describe('sidebarItems', () => {
   it('renders properly', () => {

@@ -1,4 +1,4 @@
-import { defineVariant } from '@mptheme/client/services/tailwind/defineVariant';
+import {defineVariant} from '@mptheme/client/services/tailwind/defineVariant';
 
 export const blockVariant = defineVariant('block', {
   'border-right': 'border-r',

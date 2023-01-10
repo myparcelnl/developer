@@ -1,4 +1,4 @@
-import { Ref, ref } from 'vue';
+import {Ref, ref} from 'vue';
 import data from '../../../integrations.json';
 
 type UseIntegrations = () => Ref<Integration[]>;
@@ -27,11 +27,10 @@ const DEFAULTS: Partial<Integration> = {
 let integrations: Ref<Integration[]>;
 
 const getIntegrationData = () => {
-  return (data as unknown as Integration[])
-    .map((item) => ({
-      ...DEFAULTS,
-      ...item,
-    }));
+  return (data as unknown as Integration[]).map((item) => ({
+    ...DEFAULTS,
+    ...item,
+  }));
 };
 
 export const useIntegrations: UseIntegrations = () => {

@@ -1,9 +1,9 @@
-import { MyPaPageFrontmatter, MyPaResolvedSidebarItem, MyPaSiteData, MyPaThemeData } from '@mptheme/config.types';
-import { isArray } from 'lodash-unified';
-import { isPlainObject } from '@vuepress/shared';
-import { resolveArraySidebarItems } from './resolveArraySidebarItems';
-import { resolveAutoSidebarItems } from './resolveAutoSidebarItems';
-import { resolveMultiSidebarItems } from './resolveMultiSidebarItems';
+import {MyPaPageFrontmatter, MyPaResolvedSidebarItem, MyPaSiteData, MyPaThemeData} from '@mptheme/config.types';
+import {isArray} from 'lodash-unified';
+import {isPlainObject} from '@vuepress/shared';
+import {resolveArraySidebarItems} from './resolveArraySidebarItems';
+import {resolveAutoSidebarItems} from './resolveAutoSidebarItems';
+import {resolveMultiSidebarItems} from './resolveMultiSidebarItems';
 
 const DEFAULT_SIDEBAR_DEPTH = 2;
 

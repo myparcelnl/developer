@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
-import { ContainerPluginOptions, containerPlugin } from '@vuepress/plugin-container';
-import { Plugin } from 'vuepress';
+import {ContainerPluginOptions, containerPlugin} from '@vuepress/plugin-container';
+import {Plugin} from 'vuepress';
 
 const MESSAGE_TYPES: string[] = ['tip', 'note'];
 
@@ -9,7 +9,7 @@ export const createContainerPlugins = (): Plugin[] => {
     {
       type: 'expand',
       before: (args) => {
-        const split = (/^(?:(h\d): )?(.+)/).exec(args);
+        const split = /^(?:(h\d): )?(.+)/.exec(args);
         const tag = split?.[1] ?? null;
         const title = split?.[2] ?? null;
 

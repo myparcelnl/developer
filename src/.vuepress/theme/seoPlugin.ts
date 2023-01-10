@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
-import { GitPluginFrontmatter, GitPluginPageData } from '@vuepress/plugin-git';
-import { Page, Plugin } from 'vuepress';
+import {GitPluginFrontmatter, GitPluginPageData} from '@vuepress/plugin-git';
+import {Page, Plugin} from 'vuepress';
 import dayjs from 'dayjs';
-import { frontmatterPlugin } from '@mdit-vue/plugin-frontmatter';
-import { isOfType } from './shared/utils';
+import {frontmatterPlugin} from '@mdit-vue/plugin-frontmatter';
+import {isOfType} from './shared/utils';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 
@@ -30,9 +30,10 @@ export const seoPlugin = (): Plugin => {
       page.frontmatter.head = page.frontmatter.head.filter((meta) => meta[1].name !== 'description');
 
       page.frontmatter.head?.push([
-        'meta', {
+        'meta',
+        {
           name: 'description',
-          content: page.title + ' – ' + page.excerpt.substring(0, 150),
+          content: `${page.title} – ${page.excerpt.substring(0, 150)}`,
         },
       ]);
 
@@ -41,7 +42,8 @@ export const seoPlugin = (): Plugin => {
         if (page.data.git.createdTime) {
           page.date = dayjs(page.data.git.createdTime).format('YYYY-MM-D');
           page.frontmatter.head.push([
-            'meta', {
+            'meta',
+            {
               name: 'article:published_time',
               content: dayjs(page.data.git.createdTime).toISOString(),
             },
@@ -49,23 +51,23 @@ export const seoPlugin = (): Plugin => {
         }
 
         if (page.data.git.updatedTime) {
-          page.frontmatter.head.push(
-            [
-              'meta', {
-                name: 'article:modified_time',
-                content: dayjs(page.data.git.updatedTime).toISOString(),
-              },
-            ],
-
-          );
+          page.frontmatter.head.push([
+            'meta',
+            {
+              name: 'article:modified_time',
+              content: dayjs(page.data.git.updatedTime).toISOString(),
+            },
+          ]);
         }
 
         page.frontmatter.head.push([
-          'meta', {
+          'meta',
+          {
             name: 'article:author',
-            content: page.data.git.contributors
-              ?.map((contributor) => `${contributor.name} <${contributor.email}>`)
-              .join(', ') ?? '',
+            content:
+              page.data.git.contributors
+                ?.map((contributor) => `${contributor.name} <${contributor.email}>`)
+                .join(', ') ?? '',
           },
         ]);
       }

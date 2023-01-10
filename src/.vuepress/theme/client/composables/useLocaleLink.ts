@@ -1,11 +1,12 @@
-import { LanguageConfig, useSiteLocaleData } from '@mptheme/client/composables';
-import { Language } from '../../../plugins/parseTranslations/shared';
-import { NavLink } from '@vuepress/theme-default/lib/shared';
-import { SiteLocaleConfig } from 'vuepress';
-import { useRouteLocale } from '@vuepress/client';
-import { useRouter } from 'vue-router';
+import {LanguageConfig, useSiteLocaleData} from '@mptheme/client/composables';
+import {Language} from '../../../plugins/parseTranslations/shared';
+import {NavLink} from '@vuepress/theme-default/lib/shared';
+import {SiteLocaleConfig} from 'vuepress';
+import {useRouteLocale} from '@vuepress/client';
+import {useRouter} from 'vue-router';
 
-type LocaleNavLink = NavLink & { language: LanguageConfig };
+type LocaleNavLink = NavLink & {language: LanguageConfig};
+
 type LocaleConfig = SiteLocaleConfig & {
   language: string;
   languageName: string;
@@ -32,9 +33,7 @@ export const useLocaleLink = (targetLanguage: Language, path?: string): LocaleNa
   }
 
   if (!link.endsWith('/')) {
-    link = `${link}/`
-      .replace('.html', '/')
-      .replace(/\/+/g, '/');
+    link = `${link}/`.replace('.html', '/').replace(/\/+/g, '/');
   }
 
   return {

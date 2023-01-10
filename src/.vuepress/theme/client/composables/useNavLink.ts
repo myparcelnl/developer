@@ -1,5 +1,5 @@
-import { MyPaNavLink } from '@mptheme/config.types';
-import { useResolveRouteWithRedirect } from '@mptheme/client/composables';
+import {MyPaNavLink} from '@mptheme/config.types';
+import {useResolveRouteWithRedirect} from '@mptheme/client/composables';
 
 /**
  * Resolve NavLink props from string.

@@ -1,5 +1,5 @@
 /* eslint-disable max-len,vue/max-len */
-import { MyPaNavLink } from '@mptheme/config.types';
+import {MyPaNavLink} from '@mptheme/config.types';
 
 export const createBottomFooter = (): MyPaNavLink[] => [
   {

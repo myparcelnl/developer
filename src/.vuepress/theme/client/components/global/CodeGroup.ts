@@ -1,11 +1,11 @@
-import { VNode, defineComponent, h, onBeforeUpdate, ref } from 'vue';
+import {VNode, defineComponent, h, onBeforeUpdate, ref} from 'vue';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 const CodeGroup = defineComponent({
   name: 'CodeGroup',
 
   // eslint-disable-next-line max-lines-per-function
-  setup(props, { slots }) {
+  setup(props, {slots}) {
     // index of current active item
     const activeIndex = ref(-1);
 
@@ -38,6 +38,7 @@ const CodeGroup = defineComponent({
       } else {
         activeIndex.value = tabRefs.value.length - 1;
       }
+
       tabRefs.value[activeIndex.value].focus();
     };
 
@@ -57,23 +58,20 @@ const CodeGroup = defineComponent({
 
     // eslint-disable-next-line max-lines-per-function
     return () => {
-      const items = (slots.default?.() ?? [])
-        .map((vnode) => {
-          if (vnode.props === null) {
-            vnode.props = {};
-          }
+      const items = (slots.default?.() ?? []).map((vnode) => {
+        if (vnode.props === null) {
+          vnode.props = {};
+        }
 
-          return vnode as VNode & { props: Exclude<VNode['props'], null> };
-        });
+        return vnode as VNode & {props: Exclude<VNode['props'], null>};
+      });
 
       if (items.length === 0) {
         return null;
       }
 
       if (activeIndex.value < 0 || activeIndex.value > items.length - 1) {
-        activeIndex.value = items.findIndex(
-          (vnode) => vnode.props.active === '' || vnode.props.active === true,
-        );
+        activeIndex.value = items.findIndex((vnode) => vnode.props.active === '' || vnode.props.active === true);
 
         if (activeIndex.value === -1) {
           activeIndex.value = 0;

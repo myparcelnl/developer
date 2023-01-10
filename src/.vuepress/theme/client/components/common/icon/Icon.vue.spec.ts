@@ -1,11 +1,11 @@
-import { VueWrapper, shallowMount } from '@vue/test-utils';
+import {VueWrapper, shallowMount} from '@vue/test-utils';
 import Icon from './Icon.vue';
 
 let wrapper: VueWrapper;
 
 describe('icon', () => {
   beforeAll(() => {
-    wrapper = shallowMount(Icon, { props: { icon: 'chevron-right' } });
+    wrapper = shallowMount(Icon, {props: {icon: 'chevron-right'}});
   });
 
   it('renders as an <i> tag', () => {

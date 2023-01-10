@@ -1,4 +1,4 @@
-import { FunctionalComponent, h } from 'vue';
+import {FunctionalComponent, h} from 'vue';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
 
@@ -26,7 +26,7 @@ const defaults: ShieldParameters = Object.freeze({
 });
 
 const Shield: FunctionalComponent<Props> = (props) => {
-  const parameters: ShieldParameters = { ...defaults };
+  const parameters: ShieldParameters = {...defaults};
 
   Object.entries(props).forEach(([k, v]) => {
     if (['href', 'alt', 'path'].includes(k) || !v) {
@@ -45,7 +45,7 @@ const Shield: FunctionalComponent<Props> = (props) => {
   });
 
   if (props.href) {
-    return h(AutoLink, { item: props.href }, () => image);
+    return h(AutoLink, {item: props.href}, () => image);
   }
 
   return image;

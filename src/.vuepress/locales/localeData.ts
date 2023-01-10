@@ -1,9 +1,13 @@
 export const LOCALE_EN = 'en';
+
 export const LOCALE_NL = 'nl';
+
 export const LOCALE_DEFAULT = LOCALE_EN;
 
 export const LANG_EN = 'en-GB';
+
 export const LANG_NL = 'nl-NL';
+
 export const LANG_DEFAULT = LANG_EN;
 
 export interface LocaleItem {

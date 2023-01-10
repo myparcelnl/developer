@@ -1,5 +1,5 @@
 import PageNav from './PageFooterNav.vue';
-import { shallowMount } from '@vue/test-utils';
+import {shallowMount} from '@vue/test-utils';
 
 describe('pageNav', () => {
   it('renders properly', () => {

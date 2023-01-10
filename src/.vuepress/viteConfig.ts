@@ -1,5 +1,5 @@
-import { ViteBundlerOptions } from 'vuepress';
-import { path } from '@vuepress/utils';
+import {ViteBundlerOptions} from 'vuepress';
+import {path} from '@vuepress/utils';
 import svgLoader from 'vite-svg-loader';
 
 export const viteConfig: ViteBundlerOptions['viteOptions'] = {
@@ -19,26 +19,21 @@ export const viteConfig: ViteBundlerOptions['viteOptions'] = {
     exclude: ['@vuepress/theme-default', 'fsevents'],
   },
 
-  ...process.env.TRAEFIK
+  ...(process.env.TRAEFIK
     ? {
-      server: {
-        hmr: {
-          clientPort: 443,
+        server: {
+          hmr: {
+            clientPort: 443,
+          },
         },
-      },
-    }
-    : {},
+      }
+    : {}),
 
   css: {
     postcss: {
       plugins: [
         require('tailwindcss')(path.resolve(__dirname, 'tailwind.config.cjs')),
-        ...process.env.NODE_ENV === 'production'
-          ? [
-            require('autoprefixer'),
-            require('cssnano'),
-          ]
-          : [],
+        ...(process.env.NODE_ENV === 'production' ? [require('autoprefixer'), require('cssnano')] : []),
       ],
     },
   },
