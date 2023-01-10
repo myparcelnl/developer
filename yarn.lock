@@ -555,7 +555,7 @@ __metadata:
   dependencies:
     "@edielemoine/google-docs-importer": ^1.0.2
     "@myparcel/eslint-config": ^3.6.1
-    "@myparcel/sdk": ^2.3.1
+    "@myparcel/sdk": ^2.10.1
     "@tsconfig/node16": ^1.0.3
     "@types/flat": ^5.0.2
     "@types/lodash-es": ^4.17.6
@@ -600,8 +600,8 @@ __metadata:
   linkType: soft
 
 "@myparcel/eslint-config@npm:^3.6.1":
-  version: 3.6.1
-  resolution: "@myparcel/eslint-config@npm:3.6.1"
+  version: 3.6.2
+  resolution: "@myparcel/eslint-config@npm:3.6.2"
   dependencies:
     "@babel/eslint-parser": ^7.17.0
     "@typescript-eslint/eslint-plugin": ^5.25.0
@@ -624,14 +624,23 @@ __metadata:
     eslint-plugin-vue: ^9.0.0
     eslint-plugin-you-dont-need-momentjs: ^1.6.0
     typescript: ^4.6.4
-  checksum: dff1fb117348849f3b32cf1db709701dc342e5398dc13bce523d7a7696a043b43bf5b40615b8a1d343e5e5dbcca5d362587ec12d679b8a7b0b522e41e2cbef7d
+  checksum: 86bca1faeb9e83559354f4613dc77caae9add45df8ac4b1c6974d436e32300ba8933706df6b51b143e5c10f4a9aa24c9d2b4684a8f31c3b28cb2aaa411ab8978
   languageName: node
   linkType: hard
 
-"@myparcel/sdk@npm:^2.3.1":
-  version: 2.4.0
-  resolution: "@myparcel/sdk@npm:2.4.0"
-  checksum: ea1e3f86d4c70a7d90d73460acff911de4bc0acf670a81be81727dede6ee14b77f7dae039147d42ac19a5e28cac5c97c889203006e3718fe28433a59e03c8e50
+"@myparcel/sdk@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@myparcel/sdk@npm:2.10.1"
+  dependencies:
+    "@myparcel/ts-utils": ^1.3.1
+  checksum: f278ed7f0813ca43f09dafc6bf6fb71b43016a558dba32e052e0a1ee68b74d68591ec1361ca9e655823f774be82c50cd73584bebbde6e6a649ef8be5cfdd790e
+  languageName: node
+  linkType: hard
+
+"@myparcel/ts-utils@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "@myparcel/ts-utils@npm:1.3.1"
+  checksum: 9413665677cbc4e342c1b22221237ffc417b40a4b3ad26534be7d0edb179863c904be8514c8bfffe203193ade86aff76d2f0b5d2fd73af70665e682213930695
   languageName: node
   linkType: hard
 
