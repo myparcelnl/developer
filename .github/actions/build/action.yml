@@ -4,9 +4,10 @@ description: 'Download translations and build the site'
 runs:
   using: composite
   steps:
-    - uses: myparcelnl/actions/yarn2-install@v2
+    - uses: myparcelnl/actions/yarn2-install@v3
 
-    - shell: bash
+    - name: 'Import latest translations'
+      shell: bash
       run: yarn translations:import
 
     - name: 'Handle build cache'
@@ -20,5 +21,5 @@ runs:
           ${{ runner.os }}-build
 
     - shell: bash
-      run: yarn build
       if: steps.cache-build.outputs.cache-hit != 'true'
+      run: yarn build
