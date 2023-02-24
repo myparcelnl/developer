@@ -12,14 +12,20 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.client_payload.pull_request.head.ref }}
 
       - uses: ./.github/actions/build
 
       - uses: actions/upload-pages-artifact@v1
         with:
           path: src/.vuepress/dist
+
+  deploy-s3:
+    needs: upload
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: github-pages
 
       - uses: reggionick/s3-deploy@v3
         env:
@@ -30,10 +36,10 @@ jobs:
           bucket: ${{ secrets.S3_BUCKET }}
           delete-removed: true
           dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          folder: src/.vuepress/dist
+          folder: artifact
           private: true
 
-  deploy:
+  deploy-ghp:
     needs: upload
     runs-on: ubuntu-22.04
     permissions:

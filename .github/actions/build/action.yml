@@ -4,7 +4,7 @@ description: 'Download translations and build the site'
 runs:
   using: composite
   steps:
-    - uses: myparcelnl/actions/yarn2-install@v3
+    - uses: myparcelnl/actions/yarn-install@v3
 
     - name: 'Import latest translations'
       shell: bash

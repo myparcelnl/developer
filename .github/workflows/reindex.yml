@@ -1,16 +1,13 @@
 name: '🔍 Reindex search results'
 
-on:
-  page_build:
-
-  workflow_dispatch:
+on: deployment
 
 jobs:
   trigger:
     name: 'Trigger crawl'
     runs-on: ubuntu-22.04
     steps:
-      - uses: algolia/algoliasearch-crawler-github-actions@v1.1.6
+      - uses: algolia/algoliasearch-crawler-github-actions@v1.1.9
         with:
           algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
           algolia-app-id: ${{ secrets.ALGOLIA_APP_ID }}
