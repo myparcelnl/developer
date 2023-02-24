@@ -23,21 +23,28 @@ jobs:
     needs: upload
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: github-pages
 
-      - uses: reggionick/s3-deploy@v3
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: 'Untar artifact'
+        shell: bash
+        run: |
+          mkdir artifact
+          tar -xf artifact.tar -C artifact
+
+      - uses: myparcelnl/actions/aws-setup@v3
         with:
-          bucket-region: ${{ secrets.AWS_DEFAULT_REGION }}
+          region: ${{ secrets.AWS_DEFAULT_REGION }}
+          access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - uses: myparcelnl/actions/aws-s3-sync@v3
+        with:
+          source: artifact
           bucket: ${{ secrets.S3_BUCKET }}
-          delete-removed: true
-          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          folder: artifact
-          private: true
+          distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          delete: true
 
   deploy-ghp:
     needs: upload
