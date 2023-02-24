@@ -8,27 +8,18 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
-    name: 'Deploy to GHP and AWS'
+  upload:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.client_payload.pull_request.head.ref }}
 
-      - uses: myparcelnl/actions/setup-app-credentials@v3
-        id: credentials
-        with:
-          app-id: ${{ secrets.MYPARCEL_APP_ID }}
-          private-key: ${{ secrets.MYPARCEL_APP_PRIVATE_KEY }}
-
       - uses: ./.github/actions/build
 
-      - uses: JamesIves/github-pages-deploy-action@4.1.5
+      - uses: actions/upload-pages-artifact@v1
         with:
-          branch: gh-pages
-          folder: src/.vuepress/dist
-          token: ${{ steps.credentials.outputs.token }}
+          path: src/.vuepress/dist
 
       - uses: reggionick/s3-deploy@v3
         env:
@@ -41,6 +32,19 @@ jobs:
           dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
           folder: src/.vuepress/dist
           private: true
+
+  deploy:
+    needs: upload
+    runs-on: ubuntu-22.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v1
 
   rebase-prs:
     name: 'Rebase open pull requests'
