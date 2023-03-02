@@ -12,7 +12,7 @@ export const createFooter = (): MyPaNavbarConfigArray => {
         { text: 'Magento2', link: '/nl/documentatie/13.magento2.html' },
         { text: 'Shopify', link: '/nl/documentatie/14.shopify.html' },
         { text: 'Shopware', link: '/nl/documentatie/15.shopware.html' },
-        { text: 'Ecwid', link: '/nl/documentatie/16.ecwid.html' },
+        { text: 'Ecwid', link: '/nl/documentatie/17.ecwid.html' },
         { text: 'Wix', link: '/nl/documentatie/20.wix.html' },
         { text: 'Amazon', link: '/nl/documentatie/25.amazon.html' },
         { text: 'PHP SDK', link: '/50.php-sdk.html' },
