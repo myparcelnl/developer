@@ -245,6 +245,14 @@
     "image": "wix.svg"
   },
   {
+    "name": "ecwid",
+    "title": "Ecwid",
+    "type": "plugin",
+    "internal": true,
+    "documentation": "/documentation/16.ecwid.html",
+    "image": "ecwid.svg"
+  },
+  {
     "name": "bol-com",
     "title": "bol.com",
     "type": "api",
@@ -259,14 +267,6 @@
     "internal": true,
     "documentation": "https://myparcelnl.github.io/exact-online",
     "image": "exact-online.svg"
-  },
-  {
-    "name": "Ecwid",
-    "title": "Ecwid",
-    "type": "api",
-    "internal": true,
-    "documentation": "/documentation/17.ecwid.html",
-    "image": "ecwid.png"
   },
   {
     "name": "picqer",
