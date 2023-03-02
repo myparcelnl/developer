@@ -261,6 +261,14 @@
     "image": "exact-online.svg"
   },
   {
+    "name": "Ecwid",
+    "title": "Ecwid",
+    "type": "api",
+    "internal": true,
+    "documentation": "/documentation/17.ecwid.html",
+    "image": "ecwid.png"
+  },
+  {
     "name": "picqer",
     "title": "Picqer",
     "type": "api",
