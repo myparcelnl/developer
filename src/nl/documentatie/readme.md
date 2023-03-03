@@ -14,6 +14,7 @@ Hier vind je de handleidingen voor onze plugins en API-integraties.
     <Integration name="magento-2" />
     <Integration name="shopify" />
     <Integration name="shopware" />
+    <Integration name="ecwid" />
     <Integration name="wix" />
     <Integration name="amazon" />
 </Stack>

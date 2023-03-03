@@ -245,6 +245,14 @@
     "image": "wix.svg"
   },
   {
+    "name": "ecwid",
+    "title": "Ecwid",
+    "type": "plugin",
+    "internal": true,
+    "documentation": "/documentation/17.ecwid.html",
+    "image": "ecwid.svg"
+  },
+  {
     "name": "bol-com",
     "title": "bol.com",
     "type": "api",
