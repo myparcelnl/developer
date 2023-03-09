@@ -23,8 +23,8 @@ export default defineClientConfig({
     // Directives
     app.directive('test', vTest);
 
-    // Router scroll behavior with anchor links
-    router.options.scrollBehavior = async(to, from, savedPosition) => {
+    // Makes clicking anchor links scroll to the correct position, honoring the header height.
+    router.options.scrollBehavior = (to, from, savedPosition) => {
       if (savedPosition) {
         return savedPosition;
       }

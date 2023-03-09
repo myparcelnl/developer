@@ -11,9 +11,7 @@
     <Transition
       v-else
       name="fade-slide-y"
-      mode="out-in"
-      @beforeEnter="onBeforeEnter"
-      @beforeLeave="onBeforeLeave">
+      mode="out-in">
       <slot v-if="frontmatter.bare" />
       <Page
         v-else
@@ -29,13 +27,13 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted, onUnmounted } from 'vue';
 import { usePageData, usePageFrontmatter } from '@vuepress/client';
-import { useScrollPromise, useSidebar } from '@mptheme/client/composables';
 import Home from '@mptheme/client/views/home/Home.vue';
 import MPHeader from '@mptheme/client/views/layout/header/MPHeader.vue';
 import MPSidebar from '@mptheme/client/views/layout/sidebar/MPSidebar.vue';
 import { MyPaPageFrontmatter } from '@mptheme/config.types';
 import Page from '@mptheme/client/views/page/Page.vue';
 import { useRouter } from 'vue-router';
+import { useSidebar } from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'Layout',
@@ -62,14 +60,8 @@ export default defineComponent({
       unregisterRouterHook();
     });
 
-    const scrollPromise = useScrollPromise();
-    const onBeforeEnter = scrollPromise.resolve;
-    const onBeforeLeave = scrollPromise.pending;
-
     return {
       frontmatter,
-      onBeforeEnter,
-      onBeforeLeave,
       page,
       shouldShowNavbar,
       sidebar,

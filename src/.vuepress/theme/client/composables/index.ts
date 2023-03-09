@@ -15,7 +15,6 @@ export * from './useLocaleLink';
 export * from './useNavLink';
 export * from './usePrevNextNavLinks';
 export * from './useResolveRouteWithRedirect';
-export * from './useScrollPromise';
 export * from './useSiteLocaleData';
 export * from './useTailwindVariant';
 export * from './useThemeLocaleData';
