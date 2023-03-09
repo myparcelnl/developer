@@ -2,22 +2,17 @@
   <div
     class="min-h-full"
     :class="{
-      'lg:pl-80': isOpen,
+      'lg:pl-80': sidebar.exists,
+      'transition-all': isMounted,
     }">
     <slot />
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import { useSidebar } from '@mptheme/client/composables';
+<script lang="ts" setup>
+import { useMounted } from '@vueuse/core';
+import { useSidebar } from '../../../composables';
 
-export default defineComponent({
-  name: 'PageContainer',
-  setup: () => {
-    const { isOpen } = useSidebar();
-
-    return { isOpen };
-  },
-});
+const sidebar = useSidebar();
+const isMounted = useMounted();
 </script>

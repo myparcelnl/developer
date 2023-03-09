@@ -2,12 +2,12 @@
   <aside
     v-if="exists"
     ref="sidebar"
-    class="fixed h-full sidebar transition-all w-80 z-30"
+    class="fixed h-full lg:translate-x-0 sidebar w-80 z-30"
     :class="{
+      'transition-all': isMounted,
       'ds__ignore': isNavbar,
-      '-translate-x-full': !isOpen,
-      'xl:translate-x-0': !isOpen && !isNavbar,
-      'translate-x-0': isOpen,
+      'lg:translate-x-0': toggled,
+      '-translate-x-full': !toggled,
     }">
     <ContentBlock
       :variant="['border-right', 'dark']"
@@ -29,6 +29,7 @@
 import { onMounted, ref, watch } from 'vue';
 import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
 import SidebarItems from '@mptheme/client/views/layout/sidebar/sidebar-items/SidebarItems.vue';
+import { useMounted } from '@vueuse/core';
 import { useRoute } from 'vue-router';
 import { useSidebar } from '../../../composables';
 
@@ -65,5 +66,7 @@ onMounted(() => {
   scrollIntoView();
 });
 
-const { toggle, isOpen, exists, toggled, isNavbar } = useSidebar();
+const isMounted = useMounted();
+
+const { toggle, exists, toggled, isNavbar } = useSidebar();
 </script>
