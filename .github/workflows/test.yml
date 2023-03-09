@@ -1,6 +1,13 @@
-name: '🧪 Check pull request'
+name: '🧪 Run tests'
 
-on: pull_request
+on:
+  pull_request:
+
+  merge_group:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
