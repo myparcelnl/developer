@@ -47,7 +47,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold font-display pt-4 scroll-mt-16 relative;
+    @apply font-bold font-display pt-4 scroll-mt-16 relative focus-visible:outline-2 focus-visible:outline-goldfish-500 focus-visible:outline;
 
     a {
       @apply opacity-0 transition-opacity absolute -left-6;

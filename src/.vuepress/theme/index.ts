@@ -1,6 +1,7 @@
 /* eslint-disable max-lines-per-function */
 import { DIR_CLIENT, DIR_THEME } from './shared/directories';
 import { MyPaPageFrontmatter, MyPaThemeData } from './config.types';
+import { Page } from 'vuepress';
 import { Theme } from '@vuepress/core';
 import { activeHeaderLinksPlugin } from '@vuepress/plugin-active-header-links';
 import { autoLinkPlugin } from './node/plugins/autoLinkPlugin';
@@ -15,9 +16,13 @@ import { prismjsPlugin } from '@vuepress/plugin-prismjs';
 import { registerCustomComponentsPlugin } from './node/plugins/registerCustomComponentsPlugin';
 import { seoPlugin } from './seoPlugin';
 import { themeDataPlugin } from '@vuepress/plugin-theme-data';
-import { Page } from 'vuepress';
 
 const views = path.resolve(DIR_CLIENT, 'views');
+
+/**
+ * 1 rem = 16px.
+ */
+const ONE_REM = 16;
 
 export const myParcelTheme = (options: MyPaThemeData): Theme => {
   return {
@@ -66,6 +71,9 @@ export const myParcelTheme = (options: MyPaThemeData): Theme => {
       activeHeaderLinksPlugin({
         headerLinkSelector: 'a.sidebar-item',
         headerAnchorSelector: '.header-anchor',
+        // Header height in pixels. It's 3rem content + (2 * 1.5rem padding) + 1px border
+        // eslint-disable-next-line @typescript-eslint/no-magic-numbers,@typescript-eslint/no-extra-parens
+        offset: (3 * ONE_REM) + (2 * (1.5 * ONE_REM)) + 1,
       }),
       externalLinkIconPlugin({ }),
       themeDataPlugin({

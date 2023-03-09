@@ -25,55 +25,45 @@
   </Transition>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, watch } from 'vue';
+<script setup lang="ts">
+import { onMounted, ref, watch } from 'vue';
 import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
 import SidebarItems from '@mptheme/client/views/layout/sidebar/sidebar-items/SidebarItems.vue';
 import { useRoute } from 'vue-router';
-import { useSidebar } from '@mptheme/client/composables';
+import { useSidebar } from '../../../composables';
 
-export default defineComponent({
-  name: 'MPSidebar',
-  components: {
-    SidebarItems,
-    ContentBlock,
-  },
+const sidebar = ref<HTMLElement|null>(null);
+const route = useRoute();
 
-  setup: () => {
-    const sidebar = ref<HTMLElement|null>(null);
-    const route = useRoute();
+/**
+ * Scroll active sidebar item into view if it's outside the screen.
+ */
+const scrollIntoView = (): void => {
+  if (!sidebar.value) {
+    return;
+  }
 
-    // Scroll active sidebar item into view if it's outside the screen
-    watch(() => route.hash, () => {
-      if (!sidebar.value) {
-        return;
-      }
+  const activeSidebarItem = document.querySelector('.sidebar-item--active');
 
-      // get the active sidebar item DOM, whose href equals to the current route
-      const activeSidebarItem = document.querySelector(
-        `.sidebar a.sidebar-item[href="${route.path}${route.hash}"]`,
-      );
+  if (!activeSidebarItem) {
+    return;
+  }
 
-      if (!activeSidebarItem) {
-        return;
-      }
+  const sidebarBounds = sidebar.value.getBoundingClientRect();
+  const activeSidebarItemBounds = activeSidebarItem.getBoundingClientRect();
 
-      const sidebarTop = sidebar.value.getBoundingClientRect().top;
-      const sidebarHeight = sidebar.value.getBoundingClientRect().height;
-      const activeSidebarItemTop = activeSidebarItem.getBoundingClientRect().top;
-      const activeSidebarItemHeight = activeSidebarItem.getBoundingClientRect().height;
+  if (activeSidebarItemBounds.top < sidebarBounds.top) {
+    activeSidebarItem.scrollIntoView(true);
+  } else if (activeSidebarItemBounds.top + activeSidebarItemBounds.height > sidebarBounds.top + sidebarBounds.height) {
+    activeSidebarItem.scrollIntoView(false);
+  }
+};
 
-      if (activeSidebarItemTop < sidebarTop) {
-        activeSidebarItem.scrollIntoView(true);
-      } else if (activeSidebarItemTop + activeSidebarItemHeight > sidebarTop + sidebarHeight) {
-        activeSidebarItem.scrollIntoView(false);
-      }
-    });
+watch(() => route.hash, scrollIntoView);
 
-    return {
-      ...useSidebar(),
-      sidebar,
-    };
-  },
+onMounted(() => {
+  scrollIntoView();
 });
+
+const { toggle, isOpen, exists, toggled, isNavbar } = useSidebar();
 </script>
