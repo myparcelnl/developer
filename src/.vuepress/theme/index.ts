@@ -28,6 +28,8 @@ export const myParcelTheme = (options: MyPaThemeData): Theme => {
   return {
     name: '@myparcel/developer-portal',
 
+    templateBuild: path.resolve(__dirname, 'templates', 'build.html'),
+
     layouts: {
       Layout: `${views}/layout/layout/Layout.vue`,
       // eslint-disable-next-line @typescript-eslint/no-magic-numbers
