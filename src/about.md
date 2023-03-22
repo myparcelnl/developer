@@ -82,9 +82,9 @@ out ways to improve...
 ### Integrations
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-    <TeamMember name="Edie" normal="https://www.myparcel.nl/app/uploads/edie-lemoine-normal.png" funny="https://www.myparcel.nl/app/uploads/edie-lemoine-fun.png" />
+    <TeamMember name="Edie" normal="/edie-lemoine-normal.png" funny="/edie-lemoine-fun.png" />
     <TeamMember name="Joeri" normal="/joeri-van-veen-normal.jpg" funny="/joeri-van-veen-fun.jpg" />
-    <TeamMember name="Mark" normal="https://www.myparcel.nl/app/uploads/mark-ernst-normal.png" funny="https://www.myparcel.nl/app/uploads/mark-ernst-fun.png" />
+    <TeamMember name="Mark" normal="/mark-ernst-normal.png" funny="/mark-ernst-fun.png" />
     <TeamMember name="Thijmen" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
     <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
 </Stack>
