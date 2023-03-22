@@ -56,13 +56,25 @@ out ways to improve...
     <TeamMember name="Frank" normal="/2019/10/myparcel-development-team-frank-2.jpg" funny="/2019/10/myparcel-development-team-frank-1.jpg" />
 </Stack>
 
+### IT-Support
+
+<Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+    <TeamMember name="Bastiaan" normal="/2020/11/bastiaan-brassem-normal.jpg" funny="/2020/11/bastiaan-brassem-fun.jpg" />
+    <TeamMember name="Barry" normal="/barry-van-weldam-normal.jpeg" funny="/barry-van-weldam-fun.jpeg" />
+    <TeamMember name="Kwame" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
+    <TeamMember name="Jochem" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
+    <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
+</Stack>
+
 ### Frontend
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <TeamMember name="Alex" normal="/2019/10/myparcel-development-team-alex-2.jpg" funny="/2019/10/myparcel-development-team-alex-1.jpg" />
     <TeamMember name="Maarten" normal="/maarten-knijnenberg-normal.jpg" funny="/maarten-knijnenberg-fun.jpg" />
     <TeamMember name="Remco" normal="/remco-horters-normal.jpg" funny="/remco-horters-fun.jpg" />
-    <TeamMember name="Harianto" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
+    <TeamMember name="Fleur" normal="/fleur-normal.png" funny="/fleur-fun.png" />
+    <TeamMember name="Zoey" normal="/zoey-normal.png" funny="/zoey-fun.png" />
+    <TeamMember name="Mathijs" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
     <TeamMember name="Jos" normal="/2019/10/myparcel-development-team-jos-2.jpg" funny="/2019/10/myparcel-development-team-jos-1.jpg" />
     <TeamMember name="Mitchell" normal="/2020/11/mtichell-bokhove-normal.jpg" funny="/2020/11/mtichell-bokhove-fun.jpg" />
 </Stack>
@@ -70,25 +82,11 @@ out ways to improve...
 ### Integrations
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-    <TeamMember 
-        name="Edie" 
-        normal="https://www.myparcel.nl/app/uploads/edie-lemoine-normal.png" 
-        funny="https://www.myparcel.nl/app/uploads/edie-lemoine-fun.png" />
-    <TeamMember 
-        name="Joeri" 
-        normal="/joeri-van-veen-normal.jpg" 
-        funny="/joeri-van-veen-fun.jpg" />
-    <TeamMember
-        name="Mark"
-        normal="https://www.myparcel.nl/app/uploads/mark-ernst-normal.png"
-        funny="https://www.myparcel.nl/app/uploads/mark-ernst-fun.png" />
-    <TeamMember 
-        name="Thijmen" 
-        normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
-    <TeamMember 
-        name="Richard" 
-        normal="/2019/10/myparcel-development-team-richard-2.jpg" 
-        funny="/2019/10/myparcel-development-team-richard-1.jpg" />
+    <TeamMember name="Edie" normal="https://www.myparcel.nl/app/uploads/edie-lemoine-normal.png" funny="https://www.myparcel.nl/app/uploads/edie-lemoine-fun.png" />
+    <TeamMember name="Joeri" normal="/joeri-van-veen-normal.jpg" funny="/joeri-van-veen-fun.jpg" />
+    <TeamMember name="Mark" normal="https://www.myparcel.nl/app/uploads/mark-ernst-normal.png" funny="https://www.myparcel.nl/app/uploads/mark-ernst-fun.png" />
+    <TeamMember name="Thijmen" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
+    <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
 </Stack>
 
 ### API
@@ -97,6 +95,9 @@ out ways to improve...
     <TeamMember name="Lester" normal="/2019/10/myparcel-development-team-lester-2.jpg" funny="/2019/10/myparcel-development-team-lester-1.jpg" />
     <TeamMember name="Jan-Willem" normal="/2019/10/myparcel-development-team-jan-willem-2.jpg" funny="/2019/10/myparcel-development-team-jan-willem-1.jpg" />
     <TeamMember name="Joost" normal="/2020/11/joost-florijn-normal.jpg" funny="/2020/11/joost-florijn-fun.jpg" />
+    <TeamMember name="Sander" normal="/sander-normal.png" funny="/sander-fun.png" />
+    <TeamMember name="Rick Groen" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
+    <TeamMember name="Bert-Jan" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
     <TeamMember name="Nikita" normal="/nikita-verhoeven-normal.jpg" funny="/nikita-verhoeven-fun.jpg" />
     <TeamMember name="Teun" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
     <TeamMember name="Peter" normal="/2019/10/myparcel-development-team-peter-2.jpg" funny="/2019/10/myparcel-development-team-peter-1.jpg" />
@@ -107,7 +108,7 @@ out ways to improve...
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <TeamMember name="Alwin" normal="/2019/10/myparcel-development-team-alwin-2.jpg" funny="/2019/10/myparcel-development-team-alwin-1.jpg" />
     <TeamMember name="Jacob" normal="/2019/10/myparcel-development-team-jacob-2.jpg" funny="/2019/10/myparcel-development-team-jacob-1.jpg" />
-    <TeamMember name="Remco" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
+    <TeamMember name="Remco" normal="/remco-normal.png" funny="/remco-fun.png" />
     <TeamMember name="Frank" normal="/2019/10/myparcel-development-team-frank-2.jpg" funny="/2019/10/myparcel-development-team-frank-1.jpg" />
 </Stack>
 
