@@ -201,6 +201,13 @@
     "image": "easywebshop.svg"
   },
   {
+    "name": "Mijndomein",
+    "title": "Mijndomein",
+    "type": "plugin",
+    "documentation": "https://mijndomein.zendesk.com/hc/nl/sections/13019196364305-MyParcel",
+    "image": "mijndomein.png"
+  },
+  {
     "name": "php-sdk",
     "internal": true,
     "title": "PHP",
