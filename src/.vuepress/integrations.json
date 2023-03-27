@@ -201,6 +201,12 @@
     "image": "easywebshop.svg"
   },
   {
+    "name": "Mijndomein",
+    "title": "Mijndomein",
+    "type": "plugin",
+    "image": "mijndomein.png"
+  },
+  {
     "name": "php-sdk",
     "internal": true,
     "title": "PHP",
