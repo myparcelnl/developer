@@ -96,7 +96,7 @@ out ways to improve...
     <TeamMember name="Jan-Willem" normal="/2019/10/myparcel-development-team-jan-willem-2.jpg" funny="/2019/10/myparcel-development-team-jan-willem-1.jpg" />
     <TeamMember name="Joost" normal="/2020/11/joost-florijn-normal.jpg" funny="/2020/11/joost-florijn-fun.jpg" />
     <TeamMember name="Sander" normal="/sander-normal.png" funny="/sander-fun.png" />
-    <TeamMember name="Rick Groen" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
+    <TeamMember name="Rick" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
     <TeamMember name="Bert-Jan" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
     <TeamMember name="Nikita" normal="/nikita-verhoeven-normal.jpg" funny="/nikita-verhoeven-fun.jpg" />
     <TeamMember name="Teun" normal="https://upload.wikimedia.org/wikipedia/en/7/77/EricCartman.png" />
