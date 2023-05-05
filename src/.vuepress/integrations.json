@@ -311,6 +311,13 @@
     "image": "fulfilment.svg"
   },
   {
+    "name": "Shoplinkr",
+    "title": "Shoplinkr",
+    "type": "api",
+    "documentation": "https://shoplinkr.notion.site/MyParcel-koppelen-58cfe20c650a4c07bd61367e4595060c",
+    "image": "shoplinkr.svg"
+  },
+  {
     "name": "Stockpilot",
     "title": "Stockpilot",
     "type": "api",
