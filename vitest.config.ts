@@ -1,12 +1,15 @@
 import { defineConfig } from 'vitest/config';
 import { path } from '@vuepress/utils';
+import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-  test: {
-    globals: true,
-    dir: 'src/.vuepress',
-    setupFiles: ['test/vitest-setup.ts'],
+  define: {
+    __VUEPRESS_DEV__: true,
   },
+
+  plugins: [
+    vue(),
+  ],
 
   resolve: {
     alias: {
@@ -16,7 +19,10 @@ export default defineConfig({
     },
   },
 
-  define: {
-    __VUEPRESS_DEV__: true,
+  test: {
+    globals: true,
+    dir: 'src/.vuepress',
+    setupFiles: ['test/vitest-setup.ts'],
+    environment: 'happy-dom',
   },
 });
