@@ -3,23 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "description": "MyParcel Developer Portal",
-  "keywords": [
-    "myparcel"
-  ],
   "homepage": "https://developer.myparcel.nl",
   "bugs": {
     "url": "https://github.com/myparcelnl/developer/issues"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/myparcelnl/developer.git"
-  },
+  "repository": "github:myparcelnl/developer",
   "license": "MIT",
   "author": "Edie Lemoine <edie@myparcel.nl>",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "build": "yarn optimize:svg -q && vuepress build src",
     "dev": "vuepress dev src",
@@ -38,11 +28,12 @@
   },
   "lint-staged": {
     "package.json": "npx sort-package-json",
-    "src/**/*.{js,ts,vue}": "eslint --fix",
-    "test/**/*.{js,ts,vue}": "eslint --fix",
+    "src/**/*.{js,cjs,mjs,ts,vue}": "eslint --fix",
+    "test/**/*.{js,cjs,mjs,ts,vue}": "eslint --fix",
     "src/**/*.svg": "svgo --multipass --final-newline",
-    "**/*.{md,mdx,html}": "prettier --write"
+    "**/*.{md,mdx,html,css,scss}": "prettier --write"
   },
+  "prettier": "@myparcel/prettier-config",
   "resolutions": {
     "vite": "^2"
   },
@@ -60,19 +51,23 @@
   },
   "devDependencies": {
     "@edielemoine/google-docs-importer": "^1.0.2",
-    "@myparcel/eslint-config": "^3.6.1",
+    "@myparcel-eslint/eslint-config-esnext": "^1.2.3",
+    "@myparcel-eslint/eslint-config-node": "^1.2.3",
+    "@myparcel-eslint/eslint-config-prettier": "^1.2.3",
+    "@myparcel-eslint/eslint-config-prettier-typescript": "^1.2.4",
+    "@myparcel-eslint/eslint-config-prettier-typescript-vue": "^1.2.6",
     "@myparcel/sdk": "^2.10.1",
     "@tsconfig/node16": "^1.0.3",
     "@types/flat": "^5.0.2",
     "@types/lodash-es": "^4.17.6",
     "@types/mock-fs": "^4.13.1",
     "@vitejs/plugin-vue": "^2.3.3",
-    "@vue/eslint-config-typescript": "^11.0.0",
     "@vue/test-utils": "^2.0.2",
     "autoprefixer": "^10.4.8",
     "concurrently": "^7.3.0",
     "cssnano": "^5.1.12",
     "dayjs": "^1.11.4",
+    "eslint": "^8.40.0",
     "flat": "^5.0.2",
     "gray-matter": ">= 4.0",
     "happy-dom": "^6.0.4",
@@ -86,7 +81,7 @@
     "mock-fs": "^5.1.2",
     "only-allow": "^1.1.1",
     "plop": "^3.1.1",
-    "prettier": "^2.8.4",
+    "prettier": "^2.8.8",
     "rollup-plugin-visualizer": "^5.7.1",
     "start-server-and-test": "^1.14.0",
     "svgo": "^2.8.0",
