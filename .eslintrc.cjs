@@ -10,6 +10,12 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-misused-promises': 'off',
         'vue/no-bare-strings-in-template': 'off',
+        'vue/no-undef-components': [
+          'error',
+          {
+            ignorePatterns: ['NavbarSearch'],
+          },
+        ],
       },
     },
     {
