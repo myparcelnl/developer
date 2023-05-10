@@ -1,14 +1,14 @@
 import { MyPaResolvedSidebarItem, MyPaSidebarConfig } from '@mptheme/config.types';
 import { Language } from '../../plugins/parseTranslations/shared';
 import { Page } from 'vuepress';
+import { calculateSidebarItemSpots } from './calculateSidebarItemSpots';
 import { deepSet } from './deepSet';
-import { get } from 'lodash-unified';
 
-export const createPageData = (
+export const addPageToSidebar = (
   page: Page,
   languages: Language[],
   defaultLanguage: Language,
-  pages: MyPaSidebarConfig,
+  sidebar: MyPaSidebarConfig,
 ): void => {
   const filteredSpots: string[] = page.path
     .replace('.html', '')
@@ -21,29 +21,21 @@ export const createPageData = (
 
   const spots = filteredSpots.filter((spot: string) => spot !== matchedLanguage?.alpha2);
 
-  const finalSpots = [objectLangPath, '/' + (spots[0] ?? '')];
-
-  if (spots.length > 1) {
-    finalSpots.push('children');
-    finalSpots.push(get(pages, finalSpots)?.length?.toString() ?? '0');
-  }
-
-  const navItem: MyPaResolvedSidebarItem = {
-    text: page.title,
-    link: page.path,
-  };
-
-  if (spots.length > (matchedLanguage ? 3 : 2)) {
-    navItem.collapsible = true;
-  }
+  const finalSpots = calculateSidebarItemSpots(objectLangPath, spots, sidebar);
 
   page.lang = matchedLanguage?.locale ?? page.lang;
   page.routeMeta ??= {};
   page.routeMeta.hierarchy = finalSpots.filter((spot) => spot.startsWith('/'));
 
+  const navItem: MyPaResolvedSidebarItem = {
+    text: page.title,
+    link: page.path,
+    collapsible: spots.length > (matchedLanguage ? 3 : 2),
+  };
+
   Object
     .entries(navItem)
     .forEach(([key, value]) => {
-      deepSet(pages, [...finalSpots, key], value);
+      deepSet(sidebar, [...finalSpots, key], value);
     });
 };

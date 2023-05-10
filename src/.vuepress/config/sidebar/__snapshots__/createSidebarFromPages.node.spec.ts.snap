@@ -1,0 +1,113 @@
+// Vitest Snapshot v1
+
+exports[`createSidebarFromPages > should create sidebar from pages 1`] = `
+{
+  "/": {
+    "/about": {
+      "collapsible": false,
+      "link": "/about.html",
+      "text": "About Us",
+    },
+    "/api-reference": {
+      "children": [
+        {
+          "collapsible": false,
+          "link": "/api-reference/01.requests.html",
+          "text": "1. Requests",
+        },
+        {
+          "collapsible": false,
+          "link": "/api-reference/02.responses.html",
+          "text": "2. Responses",
+        },
+      ],
+      "collapsible": false,
+      "link": "/api-reference/",
+      "text": "API Reference",
+    },
+    "/contact": {
+      "collapsible": false,
+      "link": "/contact.html",
+      "text": "Contact",
+    },
+    "/documentation": {
+      "children": [
+        {
+          "collapsible": false,
+          "link": "/documentation/10.woocommerce.html",
+          "text": "WooCommerce",
+        },
+        {
+          "collapsible": false,
+          "link": "/documentation/50.php-sdk.html",
+          "text": "PHP SDK",
+        },
+        {
+          "collapsible": false,
+          "link": "/documentation/51.javascript-sdk.html",
+          "text": "JavaScript SDK",
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "collapsible": true,
+                  "link": "/documentation/52.pdk/01.backend/01.php.html",
+                  "text": "PHP",
+                },
+              ],
+              "collapsible": true,
+              "link": "/documentation/52.pdk/01.backend.html",
+              "text": "PDK backend",
+            },
+            {
+              "collapsible": true,
+              "link": "/documentation/52.pdk/02.frontend.html",
+              "text": "PDK Frontend",
+            },
+          ],
+          "collapsible": false,
+          "link": "/documentation/52.pdk/",
+          "text": "Plugin Development Kit (PDK)",
+        },
+        {
+          "collapsible": false,
+          "link": "/documentation/60.delivery-options.html",
+          "text": "Delivery Options",
+        },
+      ],
+      "collapsible": false,
+      "link": "/documentation/",
+      "text": "Documentation",
+    },
+    "/integrations": {
+      "collapsible": false,
+      "link": "/integrations.html",
+      "text": "Integrations",
+    },
+    "collapsible": false,
+    "link": "/",
+    "text": "Go Beyond Delivery with MyParcel.",
+  },
+  "/nl": {
+    "/documentatie": {
+      "children": [
+        {
+          "collapsible": false,
+          "link": "/nl/documentatie/10.woocommerce.html",
+          "text": "WooCommerce",
+        },
+      ],
+    },
+    "/integraties": {
+      "collapsible": false,
+      "link": "/nl/integraties.html",
+      "text": "Integraties",
+    },
+    "collapsible": false,
+    "link": "/nl/",
+    "text": "Ga Beyond Delivery met MyParcel.",
+  },
+}
+`;
