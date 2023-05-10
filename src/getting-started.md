@@ -2,9 +2,7 @@
 title: Get started with MyParcel
 sidebar: none
 languages:
-
-- nl: aan-de-slag
-
+  - nl: aan-de-slag
 ---
 
 You've come to the right place to create a connection with MyParcel. No matter
@@ -47,21 +45,12 @@ If you have questions about our API, you can email [support@myparcel.nl], fill
 in our [contact form], or ask our developers directly on [Slack].
 :::
 
-
 [API reference]: /api-reference/
-
 [Integrations]: /integrations.html
-
 [MyParcel backoffice]: https://www.myparcel.nl/
-
 [SDKs]: /integrations.html#sdks-software-development-kits
-
 [Slack]: https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI
-
 [`Shop Settings -> General`]: https://backoffice.myparcel.nl/settings
-
 [authentication instructions]: /api-reference/05.authentication.html
-
 [contact form]: /contact.html
-
 [support@myparcel.nl]: mailto:support@myparcel.nl

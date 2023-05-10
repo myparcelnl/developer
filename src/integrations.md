@@ -5,9 +5,7 @@ editLink: false
 lastUpdated: false
 contributors: false
 languages:
-
-- nl: integraties
-
+  - nl: integraties
 ---
 
 ## Plug-ins

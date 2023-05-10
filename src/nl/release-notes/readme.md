@@ -3,7 +3,7 @@ title: Release notes
 contributors: false
 editLink: false
 languages:
-- en: release-notes
+  - en: release-notes
 ---
 
 - [API]

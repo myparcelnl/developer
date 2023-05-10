@@ -1,7 +1,7 @@
 ---
 title: Documentatie
 languages:
-- en: documentation
+  - en: documentation
 ---
 
 ### Plug-ins

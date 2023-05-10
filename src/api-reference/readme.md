@@ -29,7 +29,6 @@ to help you build your integration.
 If you end up making one and are willing to make it open source, please [contact] us!
 :::
 
-
 ## Test environment
 
 We currently do **not** have a test environment. However, you can create an

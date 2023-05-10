@@ -42,7 +42,7 @@ Hello!
 Here is an overview of the most relevant values:
 
 | Key            | Type                  | Description                                                                                                 | Default |
-|----------------|-----------------------|-------------------------------------------------------------------------------------------------------------|---------|
+| -------------- | --------------------- | ----------------------------------------------------------------------------------------------------------- | ------- |
 | `title`        | `string`              | Defines the page name and renders a h1 on the page. Use either this or a manual `# <title>` in the content. | –       |
 | `sidebar`      | `boolean/string`      | Modify the sidebar for a single page. `none` to turn it off.                                                | `auto`  |
 | `editLink`     | `boolean`             | Controls whether the "Edit this page" button on the bottom is shown.                                        | `true`  |
@@ -143,7 +143,7 @@ This page is available in the following languages:
 
 But if the Dutch variant was named `mijn-pagina.md` instead of `my-page.md`,
 this will not work. The automatic resolution checks if the resolved route is
-present in the array of registered routes, which  `/nl/subject/my-page.md` will
+present in the array of registered routes, which `/nl/subject/my-page.md` will
 not be, if it's actually called `/nl/subject/mijn-pagina.md`.
 
 In this case, you can manually define which page it should link to
@@ -198,12 +198,12 @@ usages are explained below.
 #### Props
 
 | name | type     | required |
-|------|----------|----------|
+| ---- | -------- | -------- |
 | code | `String` | ✔️       |
 
 #### Usage
 
-```html 
+```html
 <Http code="204" />
 ```
 
@@ -225,15 +225,14 @@ a link to its source and more information. It supports the following types:
 #### Props
 
 | name | type     | required |
-|------|----------|----------|
+| ---- | -------- | -------- |
 | type | `String` | ✔        |
-| id   | `String` | ❌️       |
-| name | `String` | ❌️       |
+| id   | `String` | ❌️      |
+| name | `String` | ❌️      |
 
 #### Usage
 
 ```html
-
 <DataType
   type="shipment-status"
   id="3" />
@@ -262,7 +261,6 @@ a link to its source and more information. It supports the following types:
 #### Usage
 
 ```html
-
 <DataTypeDefinition
   pattern="/\d{2}:\d{2}:\d{2}/"
   example="08:00:00" />
@@ -277,14 +275,13 @@ a link to its source and more information. It supports the following types:
 #### Props
 
 | name | type     | required |
-|------|----------|----------|
+| ---- | -------- | -------- |
 | src  | `String` | ✔️       |
 | alt  | `String` | ✔️       |
 
 #### Usage
 
 ```html
-
 <MPImg
   src="/integrations/chrome.svg"
   class="max-w-xs" />
@@ -298,13 +295,11 @@ a link to its source and more information. It supports the following types:
 
 Renders a shield from [shields.io](https://shields.io).
 
-
 <Shield path="codacy/coverage/c0f99d91962d448287b438b8162fff51" logo="codacy" color="ff8c00" labelColor="maroon" text="codacy" />
 
 #### NpmShield
 
 ```html
-
 <NpmShield package="@myparcel/sdk" />
 ```
 
@@ -313,7 +308,6 @@ Renders a shield from [shields.io](https://shields.io).
 #### GitHubShield
 
 ```html
-
 <GitHubShield repo="myparcelnl/sdk" />
 ```
 
@@ -322,7 +316,6 @@ Renders a shield from [shields.io](https://shields.io).
 #### PackagistShield
 
 ```html
-
 <PackagistShield package="myparcelnl/sdk" />
 ```
 
@@ -390,7 +383,7 @@ This is collapsed content.
 Collapsed content with a custom header.
 
 | One | Two | Three  |
-|-----|-----|--------|
+| --- | --- | ------ |
 | And | a   | table! |
 
 :::
@@ -410,7 +403,7 @@ This is collapsed content.
 Collapsed content with a custom header.
 
 | One | Two | Three  |
-|-----|-----|--------|
+| --- | --- | ------ |
 | And | a   | table! |
 
 :::
@@ -508,7 +501,6 @@ the `Integration` component is used. Just reference the `name`, and all other
 data will be retrieved from that `.json` file.
 
 ```html
-
 <Stack class="lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
   <Integration name="php-sdk" />
   <Integration name="woocommerce" />
@@ -535,17 +527,10 @@ yarn dev
 This installs dependencies, downloads translations and then starts the dev
 server.
 
-
 [Tailwind CSS 3]: https://tailwindcss.com/
-
 [`maxHeight`]: https://tailwindcss.com/docs/max-height
-
 [`maxWidth`]: https://tailwindcss.com/docs/max-width
-
 [`minHeight`]: https://tailwindcss.com/docs/min-height
-
 [`minWidth`]: https://tailwindcss.com/docs/min-width
-
 [`width`]: https://tailwindcss.com/docs/width
-
 [`height`]: https://tailwindcss.com/docs/height

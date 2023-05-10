@@ -4,8 +4,8 @@ sidebar: auto
 editLink: false
 lastUpdated: false
 contributors: false
-languages: 
-- en: integrations
+languages:
+  - en: integrations
 ---
 
 ## Plug-ins

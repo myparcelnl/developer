@@ -1,5 +1,5 @@
 ---
 title: Aan de slag met MyParcel
 languages:
-- en: getting-started.html
+  - en: getting-started.html
 ---

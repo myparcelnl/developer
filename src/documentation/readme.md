@@ -1,7 +1,7 @@
 ---
 title: Documentation
 languages:
-- nl: documentatie
+  - nl: documentatie
 ---
 
 ## Jump in
