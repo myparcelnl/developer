@@ -16,12 +16,7 @@ jobs:
   lint:
     runs-on: ubuntu-22.04
     steps:
-      - uses: myparcelnl/actions/setup-app-credentials@v3
-        id: credentials
+      - uses: myparcelnl/actions/pr-validate-title-conventional@v3
         with:
           app-id: ${{ secrets.MYPARCEL_APP_ID }}
           private-key: ${{ secrets.MYPARCEL_APP_PRIVATE_KEY }}
-
-      - uses: aslafy-z/conventional-pr-title-action@v3
-        env:
-          GITHUB_TOKEN: ${{ steps.credentials.outputs.token }}
