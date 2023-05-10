@@ -5,10 +5,12 @@
     class="flex h-16 left-0 right-0 sticky top-0 z-40">
     <ContentContainer
       type="fluid"
-      class="fixed flex flex-grow items-center px-2 relative z-20">
+      class="flex flex-grow items-center px-2 relative z-20">
       <ToggleSidebarButton />
 
-      <NavbarBrand logo-full-from="sm" />
+      <NavbarBrand
+        logo-full-from="sm"
+        class="mr-2" />
 
       <div
         class="gap-2 grid grid-flow-col items-center ml-auto whitespace-nowrap"
