@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { FunctionalComponent, h } from 'vue';
-import Shield from '@mptheme/client/components/global/Shield';
+import Shield, { ShieldParameters } from '@mptheme/client/components/global/Shield';
 import { toArray } from '@mptheme/client/utils/toArray';
 
 type Link = 'pulls' | 'issues' | 'releases';
 
-interface Props {
+interface Props extends ShieldParameters {
   alt: string;
   repo: string;
   link: OneOrMore<Link>;
@@ -12,7 +13,7 @@ interface Props {
 
 const types = [
   {
-    alt: 'pull requets',
+    alt: 'pull requests',
     link: 'pulls',
     name: 'issues-pr',
   },
@@ -39,10 +40,13 @@ const GitHubShield: FunctionalComponent<Props> = (props) => {
     }
 
     return h(Shield, {
-      alt: `${props.repo} ${type.alt} on GitHub`,
       href: `https://github.com/${props.repo}/${type.link}`,
       path: `github/${type.name}/${props.repo}`,
-      logo: 'github',
+      alt: `${props.repo} ${type.alt} on GitHub`,
+      color: props.color ?? 'F28D1A',
+      logo: props.logo ?? 'github',
+      label: props.label ?? 'Packagist',
+      logoColor: props.logoColor ?? 'FFFFFF',
     });
   });
 };

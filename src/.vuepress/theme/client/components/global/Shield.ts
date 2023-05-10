@@ -4,7 +4,7 @@ import MPImg from '@mptheme/client/components/global/MPImg.vue';
 
 const BASE_URL = 'https://img.shields.io/';
 
-interface ShieldParameters {
+export interface ShieldParameters {
   color?: string;
   label?: string;
   labelColor?: string;
@@ -25,6 +25,7 @@ const defaults: ShieldParameters = Object.freeze({
   style: 'for-the-badge',
 });
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
 const Shield: FunctionalComponent<Props> = (props) => {
   const parameters: ShieldParameters = { ...defaults };
 
