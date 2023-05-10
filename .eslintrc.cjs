@@ -1,3 +1,6 @@
+/**
+ * @type {import('@myparcel/eslint-config').ESLintConfig}
+ */
 module.exports = {
   root: true,
   overrides: [
@@ -6,14 +9,7 @@ module.exports = {
       extends: '@myparcel-eslint/eslint-config-prettier-typescript-vue',
       rules: {
         '@typescript-eslint/no-misused-promises': 'off',
-        'vue/html-self-closing': 'off',
         'vue/no-bare-strings-in-template': 'off',
-        'vue/no-undef-components': [
-          'error',
-          {
-            ignorePatterns: ['^Pdk(?:\\w)+$'],
-          },
-        ],
       },
     },
     {
@@ -26,13 +22,10 @@ module.exports = {
       },
     },
     {
-      files: ['./**/*.js', './**/*.mjs'],
+      files: ['./**/*.js', './**/*.cjs', './**/*.mjs'],
       parserOptions: {
         sourceType: 'module',
       },
-    },
-    {
-      files: ['./**/*.js', './**/*.cjs', './**/*.mjs'],
       extends: [
         '@myparcel-eslint/eslint-config-node',
         '@myparcel-eslint/eslint-config-esnext',
@@ -50,4 +43,3 @@ module.exports = {
     },
   ],
 };
-
