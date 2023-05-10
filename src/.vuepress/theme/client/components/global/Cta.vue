@@ -33,7 +33,7 @@
 
       <div class="flex mt-auto">
         <MPButton
-          v-if="link"
+          v-if="link && linkText"
           class="inline-flex"
           :aria-label="ariaLabel"
           v-bind="buttonAttributes">
@@ -43,6 +43,15 @@
           <Icon
             v-else
             icon="chevron-right" />
+        </MPButton>
+
+        <MPButton
+          v-else-if="link"
+          :variant="['icon', 'outlineGray']"
+          class="inline-flex"
+          :aria-label="ariaLabel"
+          v-bind="buttonAttributes">
+          <Icon icon="chevron-right" />
         </MPButton>
       </div>
     </template>
