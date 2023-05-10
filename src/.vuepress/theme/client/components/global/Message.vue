@@ -29,10 +29,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { messageBackgroundVariant } from '@mptheme/client/services/tailwind/variants/messageBackgroundVariant';
-import { messageTextVariant } from '@mptheme/client/services/tailwind/variants/messageTextVariant';
-import { useTailwindVariant } from '@mptheme/client/composables/useTailwindVariant';
+import {defineComponent} from 'vue';
+import {messageBackgroundVariant} from '@mptheme/client/services/tailwind/variants/messageBackgroundVariant';
+import {messageTextVariant} from '@mptheme/client/services/tailwind/variants/messageTextVariant';
+import {useTailwindVariant} from '@mptheme/client/composables/useTailwindVariant';
 
 const background = useTailwindVariant(messageBackgroundVariant);
 const text = useTailwindVariant(messageTextVariant);

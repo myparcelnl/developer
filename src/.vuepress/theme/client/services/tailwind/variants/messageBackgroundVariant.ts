@@ -1,4 +1,4 @@
-import { defineVariant } from '@mptheme/client/services/tailwind/defineVariant';
+import {defineVariant} from '@mptheme/client/services/tailwind/defineVariant';
 
 export const messageBackgroundVariant = defineVariant('message', {
   tip: ['before:bg-sky-500', 'bg-sky-50', 'dark:bg-sky-900'],

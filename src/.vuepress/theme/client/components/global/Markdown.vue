@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import {computed, defineComponent} from 'vue';
 import MarkdownIt from 'markdown-it';
 
 export default defineComponent({
@@ -17,7 +17,7 @@ export default defineComponent({
   },
 
   setup(props) {
-    const md = new MarkdownIt({ html: true });
+    const md = new MarkdownIt({html: true});
 
     const renderedMarkdown = computed<string>(() => {
       return md.render(props.content);

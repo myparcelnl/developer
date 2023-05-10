@@ -1,7 +1,7 @@
 // @vitest-environment node
 
-import { MyPaNavbarConfigArray } from '@mptheme/config.types';
-import { findNavItem } from '@mptheme/client/utils/find-nav-item/findNavItem';
+import {MyPaNavbarConfigArray} from '@mptheme/config.types';
+import {findNavItem} from '@mptheme/client/utils/find-nav-item/findNavItem';
 
 const array: MyPaNavbarConfigArray = [
   {
@@ -9,11 +9,11 @@ const array: MyPaNavbarConfigArray = [
     children: [
       {
         text: 'shipments',
-        children: [{ text: 'create', link: '/' }],
+        children: [{text: 'create', link: '/'}],
       },
       {
         text: 'webhooks',
-        children: [{ text: 'create', link: '/' }],
+        children: [{text: 'create', link: '/'}],
       },
     ],
   },
@@ -23,8 +23,8 @@ const array: MyPaNavbarConfigArray = [
       {
         text: 'sdk',
         children: [
-          { text: 'installation', link: '/' },
-          { text: 'getting-started', link: '/' },
+          {text: 'installation', link: '/'},
+          {text: 'getting-started', link: '/'},
         ],
       },
     ],
@@ -36,8 +36,8 @@ describe('findRecursive', () => {
     expect(findNavItem(array, ['documentation', 'sdk'])).toStrictEqual({
       text: 'sdk',
       children: [
-        { text: 'installation', link: '/' },
-        { text: 'getting-started', link: '/' },
+        {text: 'installation', link: '/'},
+        {text: 'getting-started', link: '/'},
       ],
     });
   });

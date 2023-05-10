@@ -5,7 +5,7 @@ interface UseGoogleTagManager {
 export const useGoogleTagManager = (): UseGoogleTagManager => {
   return {
     sendEvent: (event, data) => {
-      window.dataLayer?.push({ event, ...data });
+      window.dataLayer?.push({event, ...data});
     },
   };
 };

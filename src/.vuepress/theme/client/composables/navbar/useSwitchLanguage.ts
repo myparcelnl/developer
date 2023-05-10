@@ -1,12 +1,12 @@
-import { ComputedRef, computed } from 'vue';
-import { MyPaNavLink, MyPaResolvedNavbarItem } from '@mptheme/config.types';
-import { useSiteLocaleData, useTranslate } from '@mptheme/client/composables';
-import { isDefined } from '@mptheme/shared/utils';
-import { resolveLinks } from '@mptheme/client/utils/resolveLinks';
-import { useFrontmatterLanguages } from '@mptheme/client/composables/useFrontmatterLanguages';
-import { useLanguage } from '@mptheme/client/composables/useLanguage';
-import { useLocaleLink } from '@mptheme/client/composables/useLocaleLink';
-import { useRouteLocale } from '@vuepress/client';
+import {ComputedRef, computed} from 'vue';
+import {MyPaNavLink, MyPaResolvedNavbarItem} from '@mptheme/config.types';
+import {useSiteLocaleData, useTranslate} from '@mptheme/client/composables';
+import {isDefined} from '@mptheme/shared/utils';
+import {resolveLinks} from '@mptheme/client/utils/resolveLinks';
+import {useFrontmatterLanguages} from '@mptheme/client/composables/useFrontmatterLanguages';
+import {useLanguage} from '@mptheme/client/composables/useLanguage';
+import {useLocaleLink} from '@mptheme/client/composables/useLocaleLink';
+import {useRouteLocale} from '@vuepress/client';
 
 type UseSwitchLanguage = () => {
   dropdown: ComputedRef<MyPaResolvedNavbarItem | undefined>;
@@ -21,10 +21,12 @@ export const useSwitchLanguage: UseSwitchLanguage = () => {
   const translate = useTranslate();
   const language = useLanguage();
 
-  const allLinks = computed(() => siteLocale.value.availableLanguages
-    // Filter out current language
-    .filter((lang) => language.current?.value.locale !== lang.locale)
-    .map((language) => useLocaleLink(language)));
+  const allLinks = computed(() =>
+    siteLocale.value.availableLanguages
+      // Filter out current language
+      .filter((lang) => language.current?.value.locale !== lang.locale)
+      .map((language) => useLocaleLink(language)),
+  );
 
   const dropdown = computed(() => {
     const frontmatterLanguages = useFrontmatterLanguages();

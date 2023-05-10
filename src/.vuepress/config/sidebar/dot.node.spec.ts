@@ -1,22 +1,21 @@
-import { describe } from 'vitest';
-import { dot } from './dot';
+import {describe} from 'vitest';
+import {dot} from './dot';
 
 describe('dot', () => {
   it('converts a path to dot notation', () => {
-    expect(dot({
-      test: {
-        one: 1,
-        two: [
-          2,
-          3,
-        ],
-        three: [
-          {
-            four: 'five',
-          },
-        ],
-      },
-    })).toEqual({
+    expect(
+      dot({
+        test: {
+          one: 1,
+          two: [2, 3],
+          three: [
+            {
+              four: 'five',
+            },
+          ],
+        },
+      }),
+    ).toEqual({
       'test.one': 1,
       'test.two.0': 2,
       'test.two.1': 3,

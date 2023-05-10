@@ -46,14 +46,14 @@
 </template>
 
 <script lang="ts">
-import { PropType, computed, defineComponent, ref, toRefs } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
-import { ResolvedSidebarItem } from 'vuepress';
+import {PropType, computed, defineComponent, ref, toRefs} from 'vue';
+import {useRoute, useRouter} from 'vue-router';
+import {MyPaResolvedSidebarItem} from '@mptheme/config.types';
+import {ResolvedSidebarItem} from 'vuepress';
 import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
-import { isActiveSidebarItem } from '@vuepress/theme-default/lib/client';
-import { usePageFrontmatter } from '@vuepress/client';
-import { useSidebar } from '@mptheme/client/composables/sidebar';
+import {isActiveSidebarItem} from '@vuepress/theme-default/lib/client';
+import {usePageFrontmatter} from '@vuepress/client';
+import {useSidebar} from '@mptheme/client/composables/sidebar';
 
 export default defineComponent({
   name: 'SidebarItem',
@@ -76,7 +76,7 @@ export default defineComponent({
   },
 
   setup: (props) => {
-    const { item, depth } = toRefs(props);
+    const {item, depth} = toRefs(props);
     const route = useRoute();
     const router = useRouter();
     const isActive = computed(() => isActiveSidebarItem(item.value as ResolvedSidebarItem, route));
@@ -88,10 +88,7 @@ export default defineComponent({
       return Number(frontmatter.value.sidebarDepth ?? Infinity);
     });
 
-    const {
-      toggle: toggleSidebar,
-      toggled: sidebarToggled,
-    } = useSidebar();
+    const {toggle: toggleSidebar, toggled: sidebarToggled} = useSidebar();
     const isOpen = ref(true);
 
     if (item.value.collapsible) {

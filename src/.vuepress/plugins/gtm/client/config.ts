@@ -1,6 +1,6 @@
-import { GoogleTagManagerPluginOptions } from '../shared';
-import { defineClientConfig } from '@vuepress/client';
-import { useSetupGoogleTagManager } from './composables';
+import {GoogleTagManagerPluginOptions} from '../shared';
+import {defineClientConfig} from '@vuepress/client';
+import {useSetupGoogleTagManager} from './composables';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention,no-underscore-dangle
 declare const __GTM_OPTIONS__: GoogleTagManagerPluginOptions;

@@ -10,8 +10,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useMounted } from '@vueuse/core';
-import { useSidebar } from '../../../composables';
+import {useMounted} from '@vueuse/core';
+import {useSidebar} from '../../../composables';
 
 const sidebar = useSidebar();
 const isMounted = useMounted();

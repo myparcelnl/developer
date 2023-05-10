@@ -33,10 +33,10 @@
 </template>
 
 <script lang="ts">
-import { PropType, computed, defineComponent, reactive } from 'vue';
-import { breakpointsTailwind, useBreakpoints } from '@vueuse/core';
-import { Breakpoint } from '@mptheme/index.types';
-import { ClientOnly } from '@vuepress/client';
+import {PropType, computed, defineComponent, reactive} from 'vue';
+import {breakpointsTailwind, useBreakpoints} from '@vueuse/core';
+import {Breakpoint} from '@mptheme/index.types';
+import {ClientOnly} from '@vuepress/client';
 
 const VIEW_BOX_ICON_LOGO = '0 0 135.7 203.6';
 const VIEW_BOX_FULL_LOGO = '0 0 931.2 203.6';

@@ -30,15 +30,15 @@
 </template>
 
 <script lang="ts">
-import { MyPaPageData, MyPaPageFrontmatter } from '@mptheme/config.types';
-import { usePageData, usePageFrontmatter } from '@vuepress/client';
+import {MyPaPageData, MyPaPageFrontmatter} from '@mptheme/config.types';
+import {usePageData, usePageFrontmatter} from '@vuepress/client';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import PageContainer from '@mptheme/client/views/page/page-container/PageContainer.vue';
 import PageFooter from '@mptheme/client/views/page/page-footer/PageFooter.vue';
 import RedirectContent from '@mptheme/client/components/redirect-content/RedirectContent.vue';
 import RouteBreadcrumbs from '@mptheme/client/views/page/RouteBreadcrumbs.vue';
-import { defineComponent } from 'vue';
-import { useSidebar } from '@mptheme/client/composables';
+import {defineComponent} from 'vue';
+import {useSidebar} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'Page',

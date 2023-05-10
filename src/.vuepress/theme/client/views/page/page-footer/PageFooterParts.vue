@@ -19,10 +19,10 @@ import PageContributors from '@mptheme/client/views/page/page-contributors/PageC
 import PageEditLink from '@mptheme/client/views/page/page-edit-link/PageEditLink.vue';
 import PageFooterNav from '@mptheme/client/views/page/page-footer-nav/PageFooterNav.vue';
 import PageLastUpdated from '@mptheme/client/views/page/page-last-updated/PageLastUpdated.vue';
-import { defineComponent } from 'vue';
-import { useContributors } from '@mptheme/client/composables/useContributors';
-import { useEditNavLink } from '@mptheme/client/composables/useEditNavLink';
-import { useLastUpdated } from '@mptheme/client/composables/useLastUpdated';
+import {defineComponent} from 'vue';
+import {useContributors} from '@mptheme/client/composables/useContributors';
+import {useEditNavLink} from '@mptheme/client/composables/useEditNavLink';
+import {useLastUpdated} from '@mptheme/client/composables/useLastUpdated';
 
 export default defineComponent({
   name: 'PageFooterParts',

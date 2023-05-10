@@ -1,4 +1,4 @@
-import { defineVariant } from '@mptheme/client/services/tailwind/defineVariant';
+import {defineVariant} from '@mptheme/client/services/tailwind/defineVariant';
 
 export const messageTextVariant = defineVariant('messageText', {
   tip: 'text-sky-500',

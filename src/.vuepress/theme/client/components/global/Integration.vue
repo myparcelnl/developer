@@ -41,7 +41,7 @@
         <span
           class="font-bold"
           v-text="data.title" />
-        <br>
+        <br />
 
         <div v-if="data.repository">
           <Icon
@@ -70,12 +70,12 @@
 </template>
 
 <script lang="ts">
-import { ComputedRef, PropType, computed, defineComponent } from 'vue';
-import { Integration, useIntegrations } from '@mptheme/client/composables/useIntegrations';
+import {ComputedRef, PropType, computed, defineComponent} from 'vue';
+import {Integration, useIntegrations} from '@mptheme/client/composables/useIntegrations';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
-import { useTranslate } from '@mptheme/client/composables';
+import {useTranslate} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'Integration',
@@ -106,10 +106,10 @@ export default defineComponent({
     const integrations = useIntegrations();
 
     const data: ComputedRef<Integration> = computed(() => {
-      return props.integration ?? integrations.value.find(({ name }) => name === props.name);
+      return props.integration ?? integrations.value.find(({name}) => name === props.name);
     });
 
-    return { translate, data };
+    return {translate, data};
   },
 });
 </script>

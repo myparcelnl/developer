@@ -9,20 +9,20 @@
       :required="optional ? null : 'required'"
       :type="type"
       :class="classes"
-      class="rounded-full">
+      class="rounded-full" />
   </FormField>
 </template>
 
 <script lang="ts">
 import FormField from '@mptheme/client/components/global/FormField.vue';
-import { defaultFormProps } from '@mptheme/client/defaultFormProps';
-import { defaultInputClasses } from '@mptheme/client/defaultInputClasses';
-import { defineComponent } from 'vue';
-import { useVModel } from '@vueuse/core';
+import {defaultFormProps} from '@mptheme/client/defaultFormProps';
+import {defaultInputClasses} from '@mptheme/client/defaultInputClasses';
+import {defineComponent} from 'vue';
+import {useVModel} from '@vueuse/core';
 
 export default defineComponent({
   name: 'FormInput',
-  components: { FormField },
+  components: {FormField},
 
   props: {
     ...defaultFormProps,

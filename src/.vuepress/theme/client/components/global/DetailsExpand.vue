@@ -21,13 +21,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import {defineComponent, ref} from 'vue';
 import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
 import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
 
 export default defineComponent({
   name: 'DetailsExpand',
-  components: { ContentBlock, ToggleChevron },
+  components: {ContentBlock, ToggleChevron},
 
   props: {
     tag: {

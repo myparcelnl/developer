@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import {computed, defineComponent} from 'vue';
 import Cta from '@mptheme/client/components/global/Cta.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';

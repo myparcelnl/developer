@@ -6,17 +6,17 @@
       variant: ['iconSm', 'outlineGray'],
       icon: 'globe',
     }">
-    <template #child="{ item }">
+    <template #child="{item}">
       <LanguageOption :language="item.language" />
     </template>
   </NavbarDropdown>
 </template>
 
 <script lang="ts">
-import { useLanguage, useSwitchLanguage } from '@mptheme/client/composables';
+import {useLanguage, useSwitchLanguage} from '@mptheme/client/composables';
 import LanguageOption from '@mptheme/client/components/language-dropdown/LanguageOption.vue';
 import NavbarDropdown from '@mptheme/client/components/navbar-dropdown/NavbarDropdown.vue';
-import { defineComponent } from 'vue';
+import {defineComponent} from 'vue';
 
 export default defineComponent({
   name: 'LanguageDropdown',
@@ -27,7 +27,7 @@ export default defineComponent({
 
   setup: () => {
     const language = useLanguage();
-    const { dropdown } = useSwitchLanguage();
+    const {dropdown} = useSwitchLanguage();
 
     return {
       currentLanguage: language.current,

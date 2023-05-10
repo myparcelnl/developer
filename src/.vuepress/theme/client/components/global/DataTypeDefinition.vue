@@ -14,8 +14,7 @@
             :rowspan="valuesArray.length">
             Allowed values
           </th>
-          <td
-            class="w-4/5">
+          <td class="w-4/5">
             <code v-text="value" />
           </td>
         </tr>
@@ -37,8 +36,7 @@
             :rowspan="examplesArray.length">
             Examples
           </th>
-          <td
-            class="w-4/5">
+          <td class="w-4/5">
             <code v-text="item" />
           </td>
         </tr>
@@ -48,15 +46,16 @@
 </template>
 
 <script lang="ts">
-import { PropType, computed, defineComponent } from 'vue';
+import {PropType, computed, defineComponent} from 'vue';
 
-const createComputedArray = (value: string | string[]) => computed<string[]>(() => {
-  if (typeof value === 'string') {
-    return value.split(',');
-  }
+const createComputedArray = (value: string | string[]) =>
+  computed<string[]>(() => {
+    if (typeof value === 'string') {
+      return value.split(',');
+    }
 
-  return value;
-});
+    return value;
+  });
 
 export default defineComponent({
   name: 'DataTypeDefinition',

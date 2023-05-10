@@ -5,7 +5,7 @@
     class="fixed h-full lg:translate-x-0 sidebar w-80 z-30"
     :class="{
       'transition-all': isMounted,
-      'ds__ignore': isNavbar,
+      ds__ignore: isNavbar,
       'lg:translate-x-0': toggled,
       '-translate-x-full': !toggled,
     }">
@@ -26,14 +26,14 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue';
+import {onMounted, ref, watch} from 'vue';
 import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
 import SidebarItems from '@mptheme/client/views/layout/sidebar/sidebar-items/SidebarItems.vue';
-import { useMounted } from '@vueuse/core';
-import { useRoute } from 'vue-router';
-import { useSidebar } from '../../../composables';
+import {useMounted} from '@vueuse/core';
+import {useRoute} from 'vue-router';
+import {useSidebar} from '../../../composables';
 
-const sidebar = ref<HTMLElement|null>(null);
+const sidebar = ref<HTMLElement | null>(null);
 const route = useRoute();
 
 /**
@@ -68,5 +68,5 @@ onMounted(() => {
 
 const isMounted = useMounted();
 
-const { toggle, exists, toggled, isNavbar } = useSidebar();
+const {toggle, exists, toggled, isNavbar} = useSidebar();
 </script>

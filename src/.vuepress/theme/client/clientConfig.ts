@@ -1,14 +1,14 @@
 import './styles/fonts/icons.scss';
 import './styles/fonts/proxima-nova.scss';
 import './styles/index.scss';
-import { defineClientConfig } from '@vuepress/client';
-import { h } from 'vue';
-import { setupSidebarItems } from '@mptheme/client/composables';
-import { vTest } from '@mptheme/client/services/directives/vTest';
+import {defineClientConfig} from '@vuepress/client';
+import {h} from 'vue';
+import {setupSidebarItems} from '@mptheme/client/composables';
+import {vTest} from '@mptheme/client/services/directives/vTest';
 
 export default defineClientConfig({
   enhance(context) {
-    const { app, router } = context;
+    const {app, router} = context;
 
     app.component('NavbarSearch', () => {
       const searchComponent = app.component('Docsearch') ?? app.component('SearchBox');
@@ -33,7 +33,7 @@ export default defineClientConfig({
         return document.getElementById(to.hash.substring(1))?.scrollIntoView();
       }
 
-      return window.scrollTo({ top: 0 });
+      return window.scrollTo({top: 0});
     };
   },
 

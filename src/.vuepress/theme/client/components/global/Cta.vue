@@ -55,11 +55,11 @@
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
-import { defineComponent } from 'vue';
+import {defineComponent} from 'vue';
 
 export default defineComponent({
   name: 'Cta',
-  components: { MPImg, Icon, MPButton },
+  components: {MPImg, Icon, MPButton},
 
   props: {
     img: {

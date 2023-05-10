@@ -1,5 +1,5 @@
-import { defineConfig } from 'vitest/config';
-import { path } from '@vuepress/utils';
+import {defineConfig} from 'vitest/config';
+import {path} from '@vuepress/utils';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
@@ -7,9 +7,7 @@ export default defineConfig({
     __VUEPRESS_DEV__: true,
   },
 
-  plugins: [
-    vue(),
-  ],
+  plugins: [vue()],
 
   resolve: {
     alias: {

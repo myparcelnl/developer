@@ -16,9 +16,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import { useContributors } from '@mptheme/client/composables/useContributors';
-import { useTranslate } from '@mptheme/client/composables';
+import {defineComponent} from 'vue';
+import {useContributors} from '@mptheme/client/composables/useContributors';
+import {useTranslate} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'PageContributors',

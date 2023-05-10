@@ -1,2 +1,3 @@
-export { Language } from './types';
-export { ParseTranslationsPluginOptions } from './types';
+export {Language} from './types';
+
+export {ParseTranslationsPluginOptions} from './types';

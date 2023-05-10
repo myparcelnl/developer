@@ -12,12 +12,12 @@
       @dragstart.prevent="null"
       @loadstart="onLoadStart"
       @load="onLoad"
-      @error="onError">
+      @error="onError" />
   </div>
 </template>
 
 <script lang="ts">
-import { PropType, defineComponent, ref } from 'vue';
+import {PropType, defineComponent, ref} from 'vue';
 
 export default defineComponent({
   name: 'MPImg',

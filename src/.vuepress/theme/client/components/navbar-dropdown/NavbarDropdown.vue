@@ -30,11 +30,7 @@
               <AutoLink
                 v-if="child.link"
                 :item="child"
-                @focusout="
-                  isLastItemOfArray(child, item.children)
-                    && child.children.length === 0
-                    && (open = false)
-                ">
+                @focusout="isLastItemOfArray(child, item.children) && child.children.length === 0 && (open = false)">
                 <slot
                   name="child"
                   :item="child" />
@@ -50,9 +46,9 @@
                 <AutoLink
                   :item="grandchild"
                   @focusout="
-                    isLastItemOfArray(grandchild, child.children)
-                      && isLastItemOfArray(child, item.children)
-                      && (open = false)
+                    isLastItemOfArray(grandchild, child.children) &&
+                      isLastItemOfArray(child, item.children) &&
+                      (open = false)
                   ">
                   <slot
                     name="child"
@@ -78,15 +74,15 @@
 </template>
 
 <script lang="ts">
-import { MyPaNavbarItem, MyPaResolvedNavbarItem } from '@mptheme/config.types';
-import { PropType, computed, defineComponent, ref, watch } from 'vue';
+import {MyPaNavbarItem, MyPaResolvedNavbarItem} from '@mptheme/config.types';
+import {PropType, computed, defineComponent, ref, watch} from 'vue';
 import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
-import { useRoute } from 'vue-router';
+import {useRoute} from 'vue-router';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 
 export default defineComponent({
   name: 'NavbarDropdown',
-  components: { MPButton, ToggleChevron },
+  components: {MPButton, ToggleChevron},
   props: {
     item: {
       type: Object as PropType<Exclude<MyPaResolvedNavbarItem, MyPaNavbarItem>>,
@@ -104,9 +100,12 @@ export default defineComponent({
     const route = useRoute();
     const dropdownAriaLabel = computed(() => props.item.ariaLabel ?? props.item.text);
 
-    watch(() => route.path, () => {
-      open.value = false;
-    });
+    watch(
+      () => route.path,
+      () => {
+        open.value = false;
+      },
+    );
 
     /**
      * Open the dropdown when user tab and click from keyboard.

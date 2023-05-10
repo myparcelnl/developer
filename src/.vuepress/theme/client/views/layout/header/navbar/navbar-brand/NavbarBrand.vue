@@ -1,9 +1,7 @@
 <template>
   <div class="flex flex-grow h-12">
     <RouterLink :to="navbarBrandLink">
-      <span class="sr-only">
-        To homepage
-      </span>
+      <span class="sr-only"> To homepage </span>
 
       <MPLogo
         :show-from="logoShowFrom"
@@ -13,11 +11,11 @@
 </template>
 
 <script lang="ts">
-import { PropType, computed, defineComponent } from 'vue';
-import { useSiteLocaleData, useThemeLocaleData } from '@mptheme/client/composables';
-import { Breakpoint } from '@mptheme/index.types';
+import {PropType, computed, defineComponent} from 'vue';
+import {useSiteLocaleData, useThemeLocaleData} from '@mptheme/client/composables';
+import {Breakpoint} from '@mptheme/index.types';
 import MPLogo from '@mptheme/client/components/logo/MPLogo.vue';
-import { useRouteLocale } from '@vuepress/client';
+import {useRouteLocale} from '@vuepress/client';
 
 export default defineComponent({
   name: 'NavbarBrand',

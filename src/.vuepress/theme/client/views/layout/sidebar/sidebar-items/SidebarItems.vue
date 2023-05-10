@@ -9,8 +9,8 @@
 
 <script lang="ts">
 import SidebarItem from '@mptheme/client/components/sidebar-item/SidebarItem.vue';
-import { defineComponent } from 'vue';
-import { useSidebar } from '@mptheme/client/composables';
+import {defineComponent} from 'vue';
+import {useSidebar} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'SidebarItems',
@@ -19,9 +19,9 @@ export default defineComponent({
   },
 
   setup: () => {
-    const { items } = useSidebar();
+    const {items} = useSidebar();
 
-    return { items };
+    return {items};
   },
 });
 </script>

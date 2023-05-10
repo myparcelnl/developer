@@ -1,6 +1,7 @@
-import { defineVariant } from '../defineVariant';
+import {defineVariant} from '../defineVariant';
 
-export const containerVariant = defineVariant('container',
+export const containerVariant = defineVariant(
+  'container',
   {
     fluid: '',
     sm: 'max-w-screen-lg',
@@ -8,4 +9,5 @@ export const containerVariant = defineVariant('container',
   },
   {
     default: 'md',
-  });
+  },
+);

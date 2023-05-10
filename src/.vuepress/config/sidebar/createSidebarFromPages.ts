@@ -1,7 +1,7 @@
-import { Language } from '../../plugins/parseTranslations/shared';
-import { MyPaSidebarConfig } from '@mptheme/config.types';
-import { Page } from 'vuepress';
-import { addPageToSidebar } from './addPageToSidebar';
+import {Language} from '../../plugins/parseTranslations/shared';
+import {MyPaSidebarConfig} from '@mptheme/config.types';
+import {Page} from 'vuepress';
+import {addPageToSidebar} from './addPageToSidebar';
 
 export const createSidebarFromPages = (
   pages: Page[],

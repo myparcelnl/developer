@@ -11,15 +11,15 @@
 </template>
 
 <script lang="ts">
-import { PropType, computed, defineComponent } from 'vue';
-import { Language } from '../../../../plugins/parseTranslations/shared';
+import {PropType, computed, defineComponent} from 'vue';
+import {Language} from '../../../../plugins/parseTranslations/shared';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
 
 const FLAG_URL = 'https://assets.myparcel.nl/skin/general-images/flags/:locale.png';
 
 export default defineComponent({
   name: 'LanguageOption',
-  components: { MPImg },
+  components: {MPImg},
   props: {
     language: {
       type: Object as PropType<Language>,
@@ -28,11 +28,9 @@ export default defineComponent({
   },
 
   setup: (props) => ({
-
     flag: computed(() => {
       return FLAG_URL.replace(':locale', props.language.alpha2);
     }),
-
   }),
 });
 </script>

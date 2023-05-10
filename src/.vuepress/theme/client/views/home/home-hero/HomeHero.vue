@@ -41,10 +41,10 @@ import ContentContainer from '@mptheme/client/views/layout/content-container/Con
 import FloepjeBgLeft from '@Public/images/floepje_bg_left.svg';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import MPButtonGroup from '@mptheme/client/components/common/MPButtonGroup.vue';
-import { MyPaHomepageFrontmatter } from '@mptheme/config.types';
-import { defineComponent } from 'vue';
-import { useNavLink } from '@mptheme/client/composables/useNavLink';
-import { usePageFrontmatter } from '@vuepress/client';
+import {MyPaHomepageFrontmatter} from '@mptheme/config.types';
+import {defineComponent} from 'vue';
+import {useNavLink} from '@mptheme/client/composables/useNavLink';
+import {usePageFrontmatter} from '@vuepress/client';
 
 export default defineComponent({
   name: 'HomeHero',
@@ -63,6 +63,5 @@ export default defineComponent({
       frontmatter,
     };
   },
-
 });
 </script>

@@ -1,6 +1,7 @@
-import { googleTagManagerPlugin } from './googleTagManagerPlugin';
+import {googleTagManagerPlugin} from './googleTagManagerPlugin';
 
 export * from './googleTagManagerPlugin';
 
 export default googleTagManagerPlugin;
-export { GoogleTagManagerPluginOptions } from '../shared/types';
+
+export {GoogleTagManagerPluginOptions} from '../shared/types';

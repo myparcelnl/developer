@@ -1,8 +1,8 @@
-import { MyPaResolvedSidebarItem, MyPaSidebarConfig } from '@mptheme/config.types';
-import { Language } from '../../plugins/parseTranslations/shared';
-import { Page } from 'vuepress';
-import { calculateSidebarItemSpots } from './calculateSidebarItemSpots';
-import { deepSet } from './deepSet';
+import {MyPaResolvedSidebarItem, MyPaSidebarConfig} from '@mptheme/config.types';
+import {Language} from '../../plugins/parseTranslations/shared';
+import {Page} from 'vuepress';
+import {calculateSidebarItemSpots} from './calculateSidebarItemSpots';
+import {deepSet} from './deepSet';
 
 export const addPageToSidebar = (
   page: Page,
@@ -10,10 +10,7 @@ export const addPageToSidebar = (
   defaultLanguage: Language,
   sidebar: MyPaSidebarConfig,
 ): void => {
-  const filteredSpots: string[] = page.path
-    .replace('.html', '')
-    .split('/')
-    .filter(Boolean);
+  const filteredSpots: string[] = page.path.replace('.html', '').split('/').filter(Boolean);
 
   const matchedLanguage = languages.find((language) => language.alpha2 === filteredSpots[0]);
   const langPath = matchedLanguage?.path ?? defaultLanguage?.path;
@@ -30,12 +27,11 @@ export const addPageToSidebar = (
   const navItem: MyPaResolvedSidebarItem = {
     text: page.title,
     link: page.path,
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers
     collapsible: spots.length > (matchedLanguage ? 3 : 2),
   };
 
-  Object
-    .entries(navItem)
-    .forEach(([key, value]) => {
-      deepSet(sidebar, [...finalSpots, key], value);
-    });
+  Object.entries(navItem).forEach(([key, value]) => {
+    deepSet(sidebar, [...finalSpots, key], value);
+  });
 };

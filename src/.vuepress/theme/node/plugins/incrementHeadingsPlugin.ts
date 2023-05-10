@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
-import { Plugin } from 'vuepress';
+import {Plugin} from 'vuepress';
 
 const MAX_HEADING_LEVEL = 6;
 

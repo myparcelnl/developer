@@ -1,6 +1,6 @@
 import MPButton from './MPButton.vue';
-import { shallowMount } from '@vue/test-utils';
-import { vTest } from '@mptheme/client/services/directives/vTest';
+import {shallowMount} from '@vue/test-utils';
+import {vTest} from '@mptheme/client/services/directives/vTest';
 
 const config = {
   global: {

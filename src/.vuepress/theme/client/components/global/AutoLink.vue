@@ -27,11 +27,11 @@
 </template>
 
 <script lang="ts">
-import { PropType, computed, defineComponent, toRefs } from 'vue';
-import { MyPaNavLink } from '@mptheme/config.types';
-import { useLink } from '@mptheme/client/composables/useLink';
-import { useRouter } from 'vue-router';
-import { useSiteData } from '@vuepress/client';
+import {PropType, computed, defineComponent, toRefs} from 'vue';
+import {MyPaNavLink} from '@mptheme/config.types';
+import {useLink} from '@mptheme/client/composables/useLink';
+import {useRouter} from 'vue-router';
+import {useSiteData} from '@vuepress/client';
 
 export default defineComponent({
   name: 'AutoLink',
@@ -58,14 +58,7 @@ export default defineComponent({
   setup: (props) => {
     const propRefs = toRefs(props);
 
-    const {
-      linkItem,
-      linkTarget,
-      isRouterLink,
-      linkAriaLabel,
-      linkRel,
-      isBlankTarget,
-    } = useLink(propRefs.item);
+    const {linkItem, linkTarget, isRouterLink, linkAriaLabel, linkRel, isBlankTarget} = useLink(propRefs.item);
     const route = useRouter().currentRoute.value;
     const site = useSiteData();
 
@@ -95,7 +88,7 @@ export default defineComponent({
       return isActiveInSubpath.value;
     });
 
-    return { isActive, isBlankTarget, isRouterLink, linkAriaLabel, linkRel, linkTarget, linkItem };
+    return {isActive, isBlankTarget, isRouterLink, linkAriaLabel, linkRel, linkTarget, linkItem};
   },
 });
 </script>

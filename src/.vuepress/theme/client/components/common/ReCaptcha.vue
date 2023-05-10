@@ -6,13 +6,13 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
-import { VueRecaptcha } from 'vue-recaptcha';
-import { useDark } from '@vueuse/core';
+import {computed, defineComponent} from 'vue';
+import {VueRecaptcha} from 'vue-recaptcha';
+import {useDark} from '@vueuse/core';
 
 export default defineComponent({
   name: 'ReCaptcha',
-  components: { VueRecaptcha },
+  components: {VueRecaptcha},
   emits: ['verify'],
   setup: () => {
     const dark = useDark();

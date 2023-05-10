@@ -1,4 +1,4 @@
-import { Prop } from 'vue';
+import {Prop} from 'vue';
 
 export interface TailwindVariant<
   N = string,
@@ -19,5 +19,5 @@ export const defineVariant = <
   options: O,
   propOptions?: P,
 ): TailwindVariant<N, O, P> => {
-  return { name, options, propOptions };
+  return {name, options, propOptions};
 };

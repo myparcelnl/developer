@@ -6,10 +6,9 @@
       v-for="item in navbarLinks"
       :key="item.text"
       class="flex grow"
-      :class="
-        {
-          'border-b-2 border-b-goldfish-500 text-goldfish-500': isActive(item),
-        }">
+      :class="{
+        'border-b-2 border-b-goldfish-500 text-goldfish-500': isActive(item),
+      }">
       <NavbarDropdown
         v-if="item.children"
         :item="item" />
@@ -27,12 +26,12 @@
 </template>
 
 <script lang="ts">
-import { ComputedRef, computed, defineComponent } from 'vue';
-import { MyPaNavbarItem, MyPaResolvedNavbarItem } from '@mptheme/config.types';
+import {ComputedRef, computed, defineComponent} from 'vue';
+import {MyPaNavbarItem, MyPaResolvedNavbarItem} from '@mptheme/config.types';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import NavbarDropdown from '@mptheme/client/components/navbar-dropdown/NavbarDropdown.vue';
-import { useRoute } from 'vue-router';
-import { useNavbarConfig } from '@mptheme/client/composables';
+import {useRoute} from 'vue-router';
+import {useNavbarConfig} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'NavbarItems',

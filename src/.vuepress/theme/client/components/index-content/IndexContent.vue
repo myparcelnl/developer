@@ -15,19 +15,19 @@
 </template>
 
 <script lang="ts">
-import { ClientOnly, usePageData } from '@vuepress/client';
+import {ClientOnly, usePageData} from '@vuepress/client';
 import LinkTree from '@mptheme/client/components/common/LinkTree.vue';
-import { defineComponent } from 'vue';
-import { useSidebarItems } from '@mptheme/client/composables';
+import {defineComponent} from 'vue';
+import {useSidebarItems} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'IndexContent',
-  components: { LinkTree, ClientOnly },
+  components: {LinkTree, ClientOnly},
   setup: () => {
     const sidebarItems = useSidebarItems();
     const page = usePageData();
 
-    return { sidebarItems, page };
+    return {sidebarItems, page};
   },
 });
 </script>

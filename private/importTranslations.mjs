@@ -1,22 +1,26 @@
-import path from 'node:path';
+import {fileURLToPath} from 'url';
 import fs from 'node:fs';
-import { fileURLToPath } from 'url';
+import path from 'node:path';
 
+// eslint-disable-next-line no-underscore-dangle
 const __dirname = fileURLToPath(path.dirname(import.meta.url));
 
-let translationsDir = `${__dirname}/../src/.vuepress/public/translations`;
+const translationsDir = `${__dirname}/../src/.vuepress/public/translations`;
 
-(async() => {
-  const locales = (await Promise.all((fs.readdirSync(translationsDir))
-    .filter((file) => file.endsWith('.json'))
-    .map(async(filename) => {
-      const file = await fs.promises.readFile(`${translationsDir}/${filename}`);
+(async () => {
+  const locales = await Promise.all(
+    fs
+      .readdirSync(translationsDir)
+      .filter((file) => file.endsWith('.json'))
+      .map(async (filename) => {
+        const file = await fs.promises.readFile(`${translationsDir}/${filename}`);
 
-      return {
-        language: path.basename(filename, '.json'),
-        data: JSON.parse(file.toString('utf-8')),
-      };
-    })));
+        return {
+          language: path.basename(filename, '.json'),
+          data: JSON.parse(file.toString('utf-8')),
+        };
+      }),
+  );
 
   const siteLocale = {};
   const themeLocale = {};
@@ -27,24 +31,22 @@ let translationsDir = `${__dirname}/../src/.vuepress/public/translations`;
     siteLocale[root] ??= {};
     themeLocale[root] ??= {};
 
-    Object
-      .entries(locale.data)
-      .forEach(([key, value]) => {
-        let split = key.split('.');
-        let [type, ...keyParts] = split;
-        const newKey = keyParts.join('.');
+    Object.entries(locale.data).forEach(([key, value]) => {
+      const split = key.split('.');
+      const [type, ...keyParts] = split;
+      const newKey = keyParts.join('.');
 
-        switch (type) {
-          case 'theme':
-            // @ts-ignore
-            themeLocale[root][newKey] = value;
-            break;
-          case 'site':
-            // @ts-ignore
-            siteLocale[root][newKey] = value;
-            break;
-        }
-      });
+      switch (type) {
+        case 'theme':
+          // @ts-ignore
+          themeLocale[root][newKey] = value;
+          break;
+        case 'site':
+          // @ts-ignore
+          siteLocale[root][newKey] = value;
+          break;
+      }
+    });
   });
 
   const localeData = {
@@ -52,8 +54,12 @@ let translationsDir = `${__dirname}/../src/.vuepress/public/translations`;
     theme: themeLocale,
   };
 
-  fs.writeFileSync('src/.vuepress/.temp/localeConfig.js', `
+  fs.writeFileSync(
+    'src/.vuepress/.temp/localeConfig.js',
+    `
   module.exports = ${JSON.stringify(localeData)};
-  `);
+  `,
+  );
+  // eslint-disable-next-line no-console
   console.log('Wrote locale config to src/.vuepress/.temp/localeConfig.js');
 })();

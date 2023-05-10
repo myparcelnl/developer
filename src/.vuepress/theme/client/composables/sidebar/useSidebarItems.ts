@@ -1,6 +1,6 @@
-import { ComputedRef, inject } from 'vue';
-import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
-import { sidebarItemsSymbol } from './sidebarItemsSymbol';
+import {ComputedRef, inject} from 'vue';
+import {MyPaResolvedSidebarItem} from '@mptheme/config.types';
+import {sidebarItemsSymbol} from './sidebarItemsSymbol';
 
 export type SidebarItemsRef = ComputedRef<MyPaResolvedSidebarItem[]>;
 

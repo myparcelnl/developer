@@ -21,20 +21,19 @@
 
     <LinkTree
       v-if="item.children"
-      v-bind="
-        $attrs"
+      v-bind="$attrs"
       :items="item.children" />
   </template>
 </template>
 
 <script lang="ts">
-import { PropType, defineComponent } from 'vue';
+import {PropType, defineComponent} from 'vue';
 import AutoLink from '../global/AutoLink.vue';
-import { MyPaNavbarConfigArray } from '@mptheme/config.types';
+import {MyPaNavbarConfigArray} from '@mptheme/config.types';
 
 export default defineComponent({
   name: 'LinkTree',
-  components: { AutoLink },
+  components: {AutoLink},
   props: {
     items: {
       type: Array as PropType<MyPaNavbarConfigArray>,

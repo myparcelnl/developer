@@ -1,5 +1,5 @@
-import { MarkdownEnv } from '@vuepress/markdown';
-import { Plugin } from 'vuepress';
+import {MarkdownEnv} from '@vuepress/markdown';
+import {Plugin} from 'vuepress';
 
 /**
  * Wraps all links with <AutoLink />.

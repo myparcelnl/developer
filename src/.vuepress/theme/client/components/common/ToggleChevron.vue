@@ -10,11 +10,11 @@
 
 <script lang="ts">
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
-import { defineComponent } from 'vue';
+import {defineComponent} from 'vue';
 
 export default defineComponent({
   name: 'ToggleChevron',
-  components: { Icon },
+  components: {Icon},
   props: {
     toggle: {
       type: Boolean,

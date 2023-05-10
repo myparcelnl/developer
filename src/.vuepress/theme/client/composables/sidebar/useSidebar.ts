@@ -1,9 +1,9 @@
-import { ComputedRef, Ref, computed, ref, watch } from 'vue';
-import { useBreakpoints, useNavbarConfig } from '@mptheme/client/composables';
-import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
-import { createGlobalState } from '@vueuse/core';
-import { useRoute } from 'vue-router';
-import { useSidebarItems } from './useSidebarItems';
+import {ComputedRef, Ref, computed, ref, watch} from 'vue';
+import {useBreakpoints, useNavbarConfig} from '@mptheme/client/composables';
+import {MyPaResolvedSidebarItem} from '@mptheme/config.types';
+import {createGlobalState} from '@vueuse/core';
+import {useRoute} from 'vue-router';
+import {useSidebarItems} from './useSidebarItems';
 
 type UseSidebar = () => {
   exists: ComputedRef<boolean>;
@@ -20,7 +20,7 @@ export const useSidebar: UseSidebar = () => {
   const route = useRoute();
   const items = useSidebarItems();
   const navbar = useNavbarConfig();
-  const { lg } = useBreakpoints();
+  const {lg} = useBreakpoints();
 
   const isNavbar = computed(() => !items.value.length);
 
@@ -33,10 +33,7 @@ export const useSidebar: UseSidebar = () => {
     toggled.value = bool ?? !toggled.value;
   };
 
-  watch(
-    [() => route.path, lg],
-    () => toggle(false),
-  );
+  watch([() => route.path, lg], () => toggle(false));
 
   return {
     exists,

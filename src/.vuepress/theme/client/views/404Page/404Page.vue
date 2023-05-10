@@ -17,16 +17,16 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import {computed, defineComponent} from 'vue';
 import Layout from '@mptheme/client/views/layout/layout/Layout.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
-import { useNavLink } from '@mptheme/client/composables/useNavLink';
-import { useRouteLocale } from '@vuepress/client';
-import { useTranslate } from '@mptheme/client/composables';
+import {useNavLink} from '@mptheme/client/composables/useNavLink';
+import {useRouteLocale} from '@vuepress/client';
+import {useTranslate} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: '404Page',
-  components: { MPButton, Layout },
+  components: {MPButton, Layout},
   setup: () => {
     const routeLocale = useRouteLocale();
     const translate: (input: string) => string = useTranslate();

@@ -1,13 +1,11 @@
-import { MyPaResolvedSidebarItem } from '@mptheme/config.types';
-import { headersToSidebarItemChildren } from './headersToSidebarItemChildren';
-import { usePageData } from '@vuepress/client';
+import {MyPaResolvedSidebarItem} from '@mptheme/config.types';
+import {headersToSidebarItemChildren} from './headersToSidebarItemChildren';
+import {usePageData} from '@vuepress/client';
 
 /**
  * Resolve sidebar items if the config is `auto`.
  */
-export const resolveAutoSidebarItems = (
-  sidebarDepth: number,
-): MyPaResolvedSidebarItem[] => {
+export const resolveAutoSidebarItems = (sidebarDepth: number): MyPaResolvedSidebarItem[] => {
   const page = usePageData();
 
   return [

@@ -32,9 +32,9 @@
 
 <script lang="ts">
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
-import { MyPaHomepageFrontmatter } from '@mptheme/config.types';
-import { defineComponent } from 'vue';
-import { usePageFrontmatter } from '@vuepress/client';
+import {MyPaHomepageFrontmatter} from '@mptheme/config.types';
+import {defineComponent} from 'vue';
+import {usePageFrontmatter} from '@vuepress/client';
 
 export default defineComponent({
   name: 'HomeContent',

@@ -1,5 +1,5 @@
 import PageFooter from './PageFooter.vue';
-import { shallowMount } from '@vue/test-utils';
+import {shallowMount} from '@vue/test-utils';
 
 describe('pageFooter', () => {
   it('renders properly', () => {

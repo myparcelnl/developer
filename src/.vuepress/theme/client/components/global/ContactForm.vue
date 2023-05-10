@@ -49,21 +49,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import {defineComponent, ref} from 'vue';
 import FormField from '@mptheme/client/components/global/FormField.vue';
 import FormInput from '@mptheme/client/components/global/FormInput.vue';
 import FormSelect from '@mptheme/client/components/global/FormSelect.vue';
 import FormTextArea from '@mptheme/client/components/global/FormTextArea.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import Message from '@mptheme/client/components/global/Message.vue';
-import { MessageItem } from '@mptheme/client/services/tailwind/variants/messageTextVariant';
+import {MessageItem} from '@mptheme/client/services/tailwind/variants/messageTextVariant';
 import ReCaptcha from '@mptheme/client/components/common/ReCaptcha.vue';
-import { useContactForm } from '@mptheme/client/composables/useContactForm';
-import { useTranslate } from '@mptheme/client/composables';
+import {useContactForm} from '@mptheme/client/composables/useContactForm';
+import {useTranslate} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'ContactForm',
-  components: { Message, ReCaptcha, FormField, FormTextArea, FormSelect, FormInput, MPButton },
+  components: {Message, ReCaptcha, FormField, FormTextArea, FormSelect, FormInput, MPButton},
   // eslint-disable-next-line max-lines-per-function
   setup: () => {
     const initialValue = {
@@ -77,7 +77,7 @@ export default defineComponent({
     const messages = ref<MessageItem[]>([]);
     const translate = useTranslate();
 
-    const { loading, onSubmit, verify } = useContactForm(refs, messages, initialValue);
+    const {loading, onSubmit, verify} = useContactForm(refs, messages, initialValue);
 
     return {
       loading,
@@ -87,17 +87,12 @@ export default defineComponent({
       translate,
       verify,
 
-      subjects: [
-        'feature_request',
-        'integration_request',
-        'bug',
-        'partnership',
-        'security',
-        'other',
-      ].map((key: string) => ({
-        name: key,
-        label: translate(`contactForm.subject.${key}`),
-      })),
+      subjects: ['feature_request', 'integration_request', 'bug', 'partnership', 'security', 'other'].map(
+        (key: string) => ({
+          name: key,
+          label: translate(`contactForm.subject.${key}`),
+        }),
+      ),
     };
   },
 });

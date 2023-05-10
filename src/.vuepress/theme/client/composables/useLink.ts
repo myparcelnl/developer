@@ -1,11 +1,10 @@
-import { ComputedRef, Ref, computed, ref } from 'vue';
-import { isLinkHttp, isLinkMailto, isLinkTel } from '@vuepress/shared';
-import { LOCALE_DEFAULT } from '../../../locales/localeData';
-import { MaybeRef } from '@vueuse/core';
-import { MyPaNavLink } from '@mptheme/config.types';
-import { isOfType } from '@mptheme/shared/utils';
-import { memoize } from 'lodash-unified';
-import { useNavLink } from '@mptheme/client/composables/useNavLink';
+import {ComputedRef, Ref, computed, ref} from 'vue';
+import {isLinkHttp, isLinkMailto, isLinkTel} from '@vuepress/shared';
+import {MaybeRef} from '@vueuse/core';
+import {MyPaNavLink} from '@mptheme/config.types';
+import {isOfType} from '@mptheme/shared/utils';
+import {memoize} from 'lodash-unified';
+import {useNavLink} from '@mptheme/client/composables/useNavLink';
 
 interface UseLink {
   linkItem: ComputedRef<MyPaNavLink>;
@@ -39,9 +38,7 @@ const useMemoized = memoize((link: Ref<string | MyPaNavLink>): UseLink => {
     };
   });
 
-  const hasNonHttpProtocol = computed(
-    () => isLinkMailto(linkItem.value.link) || isLinkTel(linkItem.value.link),
-  );
+  const hasNonHttpProtocol = computed(() => isLinkMailto(linkItem.value.link) || isLinkTel(linkItem.value.link));
   const hasHttpProtocol = computed(() => isLinkHttp(linkItem.value.link));
 
   const linkTarget = computed(() => {

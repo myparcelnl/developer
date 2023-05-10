@@ -37,12 +37,12 @@ import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
-import { defineComponent } from 'vue';
-import { useBreadcrumbs } from '@mptheme/client/composables/useBreadcrumbs';
+import {defineComponent} from 'vue';
+import {useBreadcrumbs} from '@mptheme/client/composables/useBreadcrumbs';
 
 export default defineComponent({
   name: 'RouteBreadcrumbs',
-  components: { ContentContainer, ContentBlock, AutoLink, Icon },
+  components: {ContentContainer, ContentBlock, AutoLink, Icon},
 
   setup: () => ({
     breadcrumbs: useBreadcrumbs(),

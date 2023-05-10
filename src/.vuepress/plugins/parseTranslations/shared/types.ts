@@ -1,5 +1,4 @@
 export interface Language {
-
   /**
    * Alpha 2 code. Example: be.
    */

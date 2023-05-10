@@ -9,15 +9,15 @@
 </template>
 
 <script lang="ts">
-import { DataType, DataTypeWithId, DataTypeWithName, useDataTypes } from '@mptheme/client/composables/useDataTypes';
-import { computed, defineComponent, ref } from 'vue';
+import {DataType, DataTypeWithId, DataTypeWithName, useDataTypes} from '@mptheme/client/composables/useDataTypes';
+import {computed, defineComponent, ref} from 'vue';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
-import { MyPaNavbarItem } from '@mptheme/config.types';
-import { isOfType } from '@mptheme/shared/utils';
+import {MyPaNavbarItem} from '@mptheme/config.types';
+import {isOfType} from '@mptheme/shared/utils';
 
 export default defineComponent({
   name: 'DataType',
-  components: { AutoLink },
+  components: {AutoLink},
   props: {
     type: {
       type: String,
@@ -44,18 +44,20 @@ export default defineComponent({
     });
 
     const childType = computed<DataType['children'][number] | null>(() => {
-      return dataType.value?.children.find((child) => {
-        if (props.id && isOfType<DataTypeWithId>(child, 'ID')) {
-          return child.ID === Number(props.id);
-        } else if (props.name && isOfType<DataTypeWithName>(child, 'NAME')) {
-          return child.NAME === props.name;
-        }
+      return (
+        dataType.value?.children.find((child) => {
+          if (props.id && isOfType<DataTypeWithId>(child, 'ID')) {
+            return child.ID === Number(props.id);
+          } else if (props.name && isOfType<DataTypeWithName>(child, 'NAME')) {
+            return child.NAME === props.name;
+          }
 
-        // eslint-disable-next-line no-console
-        console.warn(`Data type for id: ${props.id} and/or name ${props.name} could not be found.`);
+          // eslint-disable-next-line no-console
+          console.warn(`Data type for id: ${props.id} and/or name ${props.name} could not be found.`);
 
-        return false;
-      }) ?? null;
+          return false;
+        }) ?? null
+      );
     });
 
     const text = computed<string>(() => {

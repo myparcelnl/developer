@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue';
-import { useHttpCodes } from '@mptheme/client/composables/useHttpCodes';
+import {computed, defineComponent, ref} from 'vue';
+import {useHttpCodes} from '@mptheme/client/composables/useHttpCodes';
 
 export default defineComponent({
   name: 'Http',
@@ -18,7 +18,7 @@ export default defineComponent({
   },
 
   setup: (props) => {
-    const { findByCode } = useHttpCodes();
+    const {findByCode} = useHttpCodes();
     const classes = ref<string[]>([]);
 
     const text = computed<string>(() => {

@@ -9,13 +9,13 @@
 
 <script lang="ts">
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
-import { defineComponent } from 'vue';
-import { useDark } from '@vueuse/core';
-import { useTranslate } from '@mptheme/client/composables';
+import {defineComponent} from 'vue';
+import {useDark} from '@vueuse/core';
+import {useTranslate} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'ToggleColorModeButton',
-  components: { MPButton },
+  components: {MPButton},
   setup: () => {
     const dark = useDark();
     const translate = useTranslate();

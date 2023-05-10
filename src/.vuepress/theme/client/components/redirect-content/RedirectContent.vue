@@ -21,20 +21,20 @@
 </template>
 
 <script lang="ts">
-import { useSwitchLanguage, useTranslate } from '@mptheme/client/composables';
+import {useSwitchLanguage, useTranslate} from '@mptheme/client/composables';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import LanguageOption from '@mptheme/client/components/language-dropdown/LanguageOption.vue';
-import { defineComponent } from 'vue';
+import {defineComponent} from 'vue';
 
 export default defineComponent({
   name: 'RedirectContent',
-  components: { LanguageOption, AutoLink },
+  components: {LanguageOption, AutoLink},
 
   setup: () => {
     const translate = useTranslate();
-    const { dropdown } = useSwitchLanguage();
+    const {dropdown} = useSwitchLanguage();
 
-    return { dropdown, translate };
+    return {dropdown, translate};
   },
 });
 </script>

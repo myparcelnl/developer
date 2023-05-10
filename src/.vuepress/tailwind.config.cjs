@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
+/* eslint-disable @typescript-eslint/no-magic-numbers,no-magic-numbers */
 const defaultTheme = require('tailwindcss/defaultTheme');
-const { path } = require('@vuepress/utils');
+const {path} = require('@vuepress/utils');
 
 const colors = {
   monstera: {
@@ -57,16 +57,15 @@ module.exports = {
     extend: {
       colors,
       boxShadow: {
-        DEFAULT:
-          '0 4px 6px 0 rgba(0, 0, 0, 0.1), 0 4px 6px 0 rgba(0, 0, 0, 0.06)',
+        DEFAULT: '0 4px 6px 0 rgba(0, 0, 0, 0.1), 0 4px 6px 0 rgba(0, 0, 0, 0.06)',
       },
       fontFamily: {
         display: ['Proxima Nova', ...defaultTheme.fontFamily.sans],
       },
-      maxHeight: ({ theme }) => defaultTheme.height(theme),
-      maxWidth: ({ theme }) => defaultTheme.width(theme),
-      minHeight: ({ theme }) => defaultTheme.height(theme),
-      minWidth: ({ theme }) => defaultTheme.width(theme),
+      maxHeight: ({theme}) => defaultTheme.height(theme),
+      maxWidth: ({theme}) => defaultTheme.width(theme),
+      minHeight: ({theme}) => defaultTheme.height(theme),
+      minWidth: ({theme}) => defaultTheme.width(theme),
     },
   },
 };

@@ -1,13 +1,13 @@
-import { Ref, ref } from 'vue';
-import { MessageItem } from '@mptheme/client/services/tailwind/variants/messageTextVariant';
-import { isOfType } from '@mptheme/shared/utils';
-import { useGoogleTagManager } from '../../../plugins/gtm/client/composables/useGoogleTagManager';
-import { useTranslate } from '@mptheme/client/composables/useTranslate';
+import {Ref, ref} from 'vue';
+import {MessageItem} from '@mptheme/client/services/tailwind/variants/messageTextVariant';
+import {isOfType} from '@mptheme/shared/utils';
+import {useGoogleTagManager} from '../../../plugins/gtm/client/composables/useGoogleTagManager';
+import {useTranslate} from '@mptheme/client/composables/useTranslate';
 
 type UseContactForm = (
   refs: Ref<Record<string, string>>,
   messages: Ref<MessageItem[]>,
-  initialValue: Record<string, string>
+  initialValue: Record<string, string>,
 ) => {
   loading: Ref<boolean>;
   onSubmit: () => Promise<void>;
@@ -22,7 +22,7 @@ export const useContactForm: UseContactForm = (refs, messages, initialValue) => 
 
   const gtm = useGoogleTagManager();
 
-  const onSubmit = async() => {
+  const onSubmit = async () => {
     if (loading.value) {
       return;
     }
@@ -30,7 +30,7 @@ export const useContactForm: UseContactForm = (refs, messages, initialValue) => 
     messages.value = [];
 
     if (!recaptchaToken.value) {
-      messages.value.push({ type: 'error', message: translate('errorCaptchaInvalid') });
+      messages.value.push({type: 'error', message: translate('errorCaptchaInvalid')});
       return;
     }
 
@@ -52,7 +52,7 @@ export const useContactForm: UseContactForm = (refs, messages, initialValue) => 
       if (!response.ok) {
         const json = await response.json();
         json.data.errors.messages.forEach((message: string) => {
-          messages.value.push({ type: 'error', message: translate(message) });
+          messages.value.push({type: 'error', message: translate(message)});
         });
         return;
       }
@@ -63,10 +63,10 @@ export const useContactForm: UseContactForm = (refs, messages, initialValue) => 
       });
 
       refs.value = initialValue;
-      gtm.sendEvent('submit', { data: refs.value });
+      gtm.sendEvent('submit', {data: refs.value});
     } catch (e) {
       if (isOfType<Error>(e, 'message')) {
-        messages.value.push({ type: 'error', message: translate(e.message) });
+        messages.value.push({type: 'error', message: translate(e.message)});
       }
     }
 
@@ -78,5 +78,5 @@ export const useContactForm: UseContactForm = (refs, messages, initialValue) => 
     recaptchaToken.value = token;
   };
 
-  return { loading, onSubmit, verify };
+  return {loading, onSubmit, verify};
 };

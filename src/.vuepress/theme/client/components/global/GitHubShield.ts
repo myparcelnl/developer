@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { FunctionalComponent, h } from 'vue';
-import Shield, { ShieldParameters } from '@mptheme/client/components/global/Shield';
-import { toArray } from '@mptheme/client/utils/toArray';
+import {FunctionalComponent, h} from 'vue';
+import Shield, {ShieldParameters} from '@mptheme/client/components/global/Shield';
+import {toArray} from '@mptheme/client/utils/toArray';
 
 type Link = 'pulls' | 'issues' | 'releases';
 

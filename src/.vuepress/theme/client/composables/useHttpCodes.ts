@@ -171,8 +171,7 @@ const httpCodes: HttpCode[] = [
   },
   {
     code: 418,
-    text: 'I\'m a Teapot',
-
+    text: "I'm a Teapot",
   },
   {
     code: 421,

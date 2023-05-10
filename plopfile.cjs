@@ -1,7 +1,10 @@
 /* eslint-disable no-template-curly-in-string,max-lines-per-function */
-const { path } = require('@vuepress/utils');
+const {path} = require('@vuepress/utils');
 const fs = require('fs');
-const defaultThemeComponents = fs.readdirSync(path.dirname(require.resolve('@vuepress/theme-default')) + '/../client/components');
+
+const defaultThemeComponents = fs.readdirSync(
+  `${path.dirname(require.resolve('@vuepress/theme-default'))}/../client/components`,
+);
 
 module.exports = (plop) => {
   plop.setGenerator('component', {
@@ -67,7 +70,8 @@ module.exports = (plop) => {
         path: 'src/.vuepress/theme/index.ts',
         type: 'modify',
         pattern: /(alias:\s*\{)/,
-        template: '$1\n    \'@theme/{{pascalCase name}}.vue\': `${components}/{{kebabCase name}}/{{pascalCase name}}.vue`,',
+        template:
+          "$1\n    '@theme/{{pascalCase name}}.vue': `${components}/{{kebabCase name}}/{{pascalCase name}}.vue`,",
       },
       {
         type: 'add',

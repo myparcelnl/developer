@@ -26,14 +26,13 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue';
+import {computed, defineComponent, ref} from 'vue';
 import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import LanguageDropdown from '@mptheme/client/components/language-dropdown/LanguageDropdown.vue';
 import NavbarBrand from '@mptheme/client/views/layout/header/navbar/navbar-brand/NavbarBrand.vue';
 import NavbarItems from '@mptheme/client/views/layout/header/navbar/navbar-items/NavbarItems.vue';
-import ToggleColorModeButton
-  from '@mptheme/client/views/layout/header/toggle-color-mode-button/ToggleColorModeButton.vue';
+import ToggleColorModeButton from '@mptheme/client/views/layout/header/toggle-color-mode-button/ToggleColorModeButton.vue';
 import ToggleSidebarButton from '@mptheme/client/views/layout/header/toggle-sidebar-button/ToggleSidebarButton.vue';
 
 export default defineComponent({
@@ -58,7 +57,7 @@ export default defineComponent({
       }
 
       return {
-        maxWidth: linksWrapperMaxWidth.value + 'px',
+        maxWidth: `${linksWrapperMaxWidth.value}px`,
       };
     });
 

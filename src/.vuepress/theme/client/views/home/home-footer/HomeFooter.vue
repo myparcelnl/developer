@@ -31,8 +31,8 @@ import ContentContainer from '@mptheme/client/views/layout/content-container/Con
 import FooterSection from '@mptheme/client/views/layout/footer-section/FooterSection.vue';
 import LinkTree from '@mptheme/client/components/common/LinkTree.vue';
 import NavbarBrand from '@mptheme/client/views/layout/header/navbar/navbar-brand/NavbarBrand.vue';
-import { defineComponent } from 'vue';
-import { useSiteLocaleData } from '@mptheme/client/composables';
+import {defineComponent} from 'vue';
+import {useSiteLocaleData} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'HomeFooter',
@@ -55,7 +55,7 @@ export default defineComponent({
   setup: () => {
     const siteLocale = useSiteLocaleData();
 
-    return { siteLocale };
+    return {siteLocale};
   },
 });
 </script>
