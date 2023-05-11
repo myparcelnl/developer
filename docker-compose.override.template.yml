@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  web:
+    volumes:
+      -
+      # Example: Link your yarn cache to the container's cache to speed up installs.
+      # (You can get the path by running `yarn cache dir`.)
+      # - /Users/your-name/.yarn/berry/cache:/tmp/.cache/yarn

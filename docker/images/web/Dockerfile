@@ -1,17 +1,15 @@
+ARG NODE_VERSION=18
+
 ##########
 # BASE
 ##########
-FROM node:16-slim AS base
+FROM node:${NODE_VERSION}-alpine AS base
 
 WORKDIR /app
 
-ARG DEBIAN_NONINTERACTIVE=1
-
-RUN apt-get --yes update && \
-    apt-get --yes install \
-      # Needed for npm dependency vue-template-compiler on ARM \
-      build-essential python3 && \
-    apt-get --yes clean
+RUN yarn config set --home enableTelemetry 0 && \
+    yarn config set enableGlobalCache true && \
+    yarn config set globalFolder /tmp/.cache/yarn
 
 
 ##########
@@ -26,23 +24,17 @@ RUN yarn install && \
 
 
 ##########
-# PROD
-##########
-FROM nginx:1.21.6-alpine AS prod
-
-COPY --from=builder /app/dist .
-
-
-##########
 # DEV
 ##########
 FROM base AS dev
 
 ARG DEBIAN_NONINTERACTIVE=1
 
-RUN apt-get --yes update && \
-    apt-get --yes install vim zsh tree && \
-    apt-get --yes clean
+RUN apk update && \
+    apk add --no-cache \
+      vim  \
+      zsh  \
+      tree
 
 COPY docker-entrypoint.sh /
 
