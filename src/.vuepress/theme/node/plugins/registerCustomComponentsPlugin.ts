@@ -12,7 +12,7 @@ const additionalComponents = {
 /**
  * Register components for use in .md files.
  */
-export function registerCustomComponentsPlugin(): Plugin {
+export const registerCustomComponentsPlugin = (): Plugin => {
   const DIR_COMPONENTS = path.resolve(DIR_CLIENT, 'components', 'global');
 
   const globalComponents = fs.readdirSync(DIR_COMPONENTS).reduce((acc, item) => {
@@ -25,9 +25,10 @@ export function registerCustomComponentsPlugin(): Plugin {
   }, {});
 
   return registerComponentsPlugin({
+    componentsDir: DIR_COMPONENTS,
     components: {
       ...globalComponents,
       ...additionalComponents,
     },
   });
-}
+};
