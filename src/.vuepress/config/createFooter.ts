@@ -16,6 +16,7 @@ export const createFooter = (): MyPaNavbarConfigArray => {
         {text: 'Ecwid', link: '/nl/documentatie/17.ecwid.html'},
         {text: 'Wix', link: '/nl/documentatie/20.wix.html'},
         {text: 'Amazon', link: '/nl/documentatie/25.amazon.html'},
+        {text: 'Etsy', link: '/nl/documentatie/30.etsy.html'},
         {text: 'PHP SDK', link: '/50.php-sdk.html'},
         {text: 'JavaScript SDK', link: '/51.javascript-sdk.html'},
         {text: 'Delivery Options', link: '/60.delivery-options.html'},

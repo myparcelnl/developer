@@ -18,6 +18,7 @@ Here you can find our documentation for various plugins and our own SDKs.
     <Integration name="shopware" />
     <Integration name="wix" />
     <Integration name="amazon" />
+    <Integration name="etsy" />
     <Integration name="ecwid" />
 </Stack>
 
