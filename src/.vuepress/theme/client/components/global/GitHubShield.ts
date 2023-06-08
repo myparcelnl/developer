@@ -3,28 +3,38 @@ import {FunctionalComponent, h} from 'vue';
 import Shield, {ShieldParameters} from '@mptheme/client/components/global/Shield';
 import {toArray} from '@mptheme/client/utils/toArray';
 
-type Link = 'pulls' | 'issues' | 'releases';
+export enum GitHubLinkType {
+  Pulls = 'pulls',
+  Issues = 'issues',
+  Releases = 'releases',
+}
 
 interface Props extends ShieldParameters {
   alt: string;
   repo: string;
-  link: OneOrMore<Link>;
+  link: OneOrMore<GitHubLinkType>;
 }
 
-const types = [
+interface GitHubShieldType {
+  label: string;
+  link: GitHubLinkType;
+  name: string;
+}
+
+const types: GitHubShieldType[] = [
   {
-    alt: 'pull requests',
-    link: 'pulls',
+    label: 'pull requests',
+    link: GitHubLinkType.Pulls,
     name: 'issues-pr',
   },
   {
-    alt: 'issues',
-    link: 'issues',
+    label: 'issues',
+    link: GitHubLinkType.Issues,
     name: 'issues',
   },
   {
-    alt: 'releases',
-    link: 'releases',
+    label: 'releases',
+    link: GitHubLinkType.Releases,
     name: 'v/release',
   },
 ];
@@ -42,10 +52,9 @@ const GitHubShield: FunctionalComponent<Props> = (props) => {
     return h(Shield, {
       href: `https://github.com/${props.repo}/${type.link}`,
       path: `github/${type.name}/${props.repo}`,
-      alt: `${props.repo} ${type.alt} on GitHub`,
-      color: props.color ?? 'F28D1A',
+      alt: `${props.repo} ${type.label} on GitHub`,
       logo: props.logo ?? 'github',
-      label: props.label ?? 'Packagist',
+      label: props.label ?? type.label,
       logoColor: props.logoColor ?? 'FFFFFF',
     });
   });
