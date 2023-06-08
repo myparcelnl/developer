@@ -1,9 +1,10 @@
 // @see https://v2.vuepress.vuejs.org/guide/markdown.html#code-blocks
 
-$extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, less, makefile, md, php, py, rb, rs, sass, scss, sh, styl, ts, toml, vue, yml;
+$extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt,
+  less, makefile, md, php, py, rb, rs, sass, scss, sh, styl, ts, toml, vue, yml;
 
 @layer base {
-  div[class*="language-"] {
+  div[class*='language-'] {
     @apply text-left leading-6 rounded-lg font-mono overflow-auto relative z-0 mb-3;
 
     // Render language name in top right of code block.
@@ -19,34 +20,22 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
   }
 
   .code-group {
-    div[class*="language-"] {
+    div[class*='language-'] {
       @apply rounded-tl-none;
     }
   }
 
-  div[class*="language-"],
-  .highlight-lines {
-    @apply whitespace-pre py-4;
+  div[class*='language-'],
+  :not(pre) code {
+    @apply bg-zinc-50 dark:bg-zinc-800 font-mono border border-zinc-100 dark:border-transparent text-sm leading-6;
   }
 
-  .highlight-lines {
-    @apply absolute inset-0 pointer-events-none;
-
-    .highlight-line {
-      @apply bg-goldfish-500 bg-opacity-20 border-l-4 border-goldfish-500;
-    }
-  }
-
-  div[class*="language-"], code {
-    @apply bg-zinc-100 dark:bg-zinc-800 font-mono;
-  }
-
-  code {
-    @apply rounded-sm py-1 px-2 text-[.95em] text-rose-600;
+  :not(pre) code {
+    @apply rounded-sm py-1 px-2 text-rose-500;
   }
 
   pre {
-    @apply px-6;
+    @apply px-4 py-3;
 
     code {
       @apply dark:bg-transparent dark:text-inherit bg-transparent text-inherit border-0 p-0;
@@ -80,7 +69,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
       &.formula,
       &.keyword,
       &.regex-delimiter {
-        color: #A626A4
+        color: #a626a4;
       }
 
       &.deletion,
@@ -89,11 +78,11 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
       &.selector-tag,
       &.tag,
       &.subst {
-        color: #E45649
+        color: #e45649;
       }
 
       &.literal {
-        color: #0184BB
+        color: #0184bb;
       }
 
       &.addition,
@@ -101,7 +90,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
       &.attr-name,
       &.meta &.string,
       &.string {
-        color: #50A14F
+        color: #50a14f;
       }
 
       &.attr,
@@ -113,7 +102,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
       &.template-variable,
       &.type,
       &.variable {
-        color: #986801
+        color: #986801;
       }
 
       &.bullet,
@@ -122,7 +111,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
       &.selector-id,
       &.symbol,
       &.function {
-        color: #4078F2
+        color: #4078f2;
       }
 
       &.builtin,
@@ -130,7 +119,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
       &.class,
       &.regex-source,
       &.property {
-        color: #C18401
+        color: #c18401;
       }
 
       @at-root .dark & {
@@ -138,37 +127,37 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
         &.operator,
         &.pattern-match,
         &.regex-delimiter {
-          color: #F92672
+          color: #f92672;
         }
 
         &.function,
         &.pattern-match &.constructor {
-          color: #61AEEE
+          color: #61aeee;
         }
 
         &.function &.params {
-          color: #A6E22E
+          color: #a6e22e;
         }
 
         &.function &.params &.typing {
-          color: #FD971F
+          color: #fd971f;
         }
 
         &.module-access &.module {
-          color: #7E57C2
+          color: #7e57c2;
         }
 
         &.constructor {
-          color: #E2B93D
+          color: #e2b93d;
         }
 
         &.constructor &.string {
-          color: #9CCC65
+          color: #9ccc65;
         }
 
         &.doctag,
         &.formula {
-          color: #C678DD
+          color: #c678dd;
         }
 
         &.deletion,
@@ -176,11 +165,11 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
         &.section,
         &.selector-tag,
         &.subst {
-          color: #E06C75
+          color: #e06c75;
         }
 
         &.literal {
-          color: #56B6C2
+          color: #56b6c2;
         }
 
         &.addition,
@@ -188,13 +177,13 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
         &.meta &.string,
         &.regexp,
         &.string {
-          color: #98C379
+          color: #98c379;
         }
 
         &.built_in,
         &.class &.title,
         &.title.class_ {
-          color: #E6C07B
+          color: #e6c07b;
         }
 
         &.attr,
@@ -205,7 +194,7 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
         &.template-variable,
         &.type,
         &.variable {
-          color: #D19A66
+          color: #d19a66;
         }
 
         &.bullet,
@@ -214,10 +203,9 @@ $extensions: c, cpp, cs, css, dart, docker, fs, go, html, java, js, json, kt, le
         &.selector-id,
         &.symbol,
         &.title {
-          color: #61AEEE
+          color: #61aeee;
         }
       }
     }
   }
 }
-

@@ -61,6 +61,7 @@ module.exports = {
       },
       fontFamily: {
         display: ['Proxima Nova', ...defaultTheme.fontFamily.sans],
+        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
       },
       maxHeight: ({theme}) => defaultTheme.height(theme),
       maxWidth: ({theme}) => defaultTheme.width(theme),

@@ -1,5 +1,3 @@
-import './styles/fonts/icons.scss';
-import './styles/fonts/proxima-nova.scss';
 import './styles/index.scss';
 import {defineClientConfig} from '@vuepress/client';
 import {h} from 'vue';
