@@ -13,8 +13,8 @@
   "scripts": {
     "build": "yarn optimize:svg -q && vuepress build src",
     "dev": "vuepress dev src",
+    "postinstall": "yarn translations:init && (is-ci || husky install)",
     "optimize:svg": "svgo -r --multipass --final-newline --folder src/.vuepress/public",
-    "prepare": "is-ci || husky install",
     "preview": "http-server src/.vuepress/dist -s --port 9599",
     "test": "concurrently yarn:test:node yarn:test:vue yarn:test:links",
     "test:dev:node": "vitest --config vitest-node.config.ts",
@@ -23,7 +23,8 @@
     "test:links:run": "hyperlink -ir --root src/.vuepress/dist http://127.0.0.1:9599",
     "test:node": "vitest run --config vitest-node.config.ts",
     "test:vue": "vitest run --config vitest-vue.config.ts",
-    "translations:import": "google-docs-importer -d 1q_las2AW8vZqhyiymXnPtrCsNQsye9W0Aqi3aWymjuU -o src/.vuepress/public/translations",
+    "translations:import": "echo 'Importing translations...' && google-docs-importer -d 1q_las2AW8vZqhyiymXnPtrCsNQsye9W0Aqi3aWymjuU -o src/.vuepress/public/translations && echo 'Done!'",
+    "translations:init": "test -f src/.vuepress/public/translations/en.json || yarn translations:import",
     "watch": "nodemon --ext ts,vue,md --watch src --exec 'vuepress build src --debug'"
   },
   "lint-staged": {
