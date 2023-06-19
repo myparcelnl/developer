@@ -23,6 +23,12 @@ that comes with manually developing an API integration.
 
 <Integrations type="sdk" />
 
+### Plug-in Development Kit (PDK)
+
+The [MyParcel PDK](/documentation/52.pdk/) is how we develop our own plug-ins. The PDK provides a lot of the boilerplate code needed to create a plug-in and allows us to focus on the integration itself.
+
+<Integrations type="pdk" />
+
 ## API integrations
 
 These integrations can be installed and configured in our Backoffice and
