@@ -1,9 +1,7 @@
 <template>
-  <pre :class="`language-${language}`">
-    <code>
-      {{ code }}
-    </code>
-  </pre>
+  <div :class="`language-${language}`">
+    <pre :class="`language-${language}`"><code v-text="code"/></pre>
+  </div>
 </template>
 
 <script lang="ts">

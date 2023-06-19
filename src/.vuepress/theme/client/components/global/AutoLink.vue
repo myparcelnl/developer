@@ -27,8 +27,10 @@
 </template>
 
 <script lang="ts">
+import {MyPaNavLink, MyPaSidebarItem} from '@mptheme/config.types';
 import {PropType, computed, defineComponent, toRefs} from 'vue';
-import {MyPaNavLink} from '@mptheme/config.types';
+import {NavLink} from '@vuepress/theme-default/lib/shared/nav';
+import {isOfType} from '../../../shared/utils';
 import {useLink} from '@mptheme/client/composables/useLink';
 import {useRouter} from 'vue-router';
 import {useSiteData} from '@vuepress/client';
@@ -38,7 +40,7 @@ export default defineComponent({
 
   props: {
     item: {
-      type: [String, Object] as PropType<string | MyPaNavLink>,
+      type: [String, Object] as PropType<string | MyPaNavLink | MyPaSidebarItem>,
       required: true,
     },
 
@@ -73,7 +75,7 @@ export default defineComponent({
     });
 
     const isActiveInSubpath = computed(() => {
-      return !shouldBeActiveInSubpath.value || route.path.startsWith(linkItem.value.link);
+      return !shouldBeActiveInSubpath.value || (linkItem.value.link && route.path.startsWith(linkItem.value.link));
     });
 
     const isActive = computed(() => {
@@ -81,7 +83,7 @@ export default defineComponent({
         return false;
       }
 
-      if (linkItem.value.activeMatch) {
+      if (isOfType<NavLink>(linkItem.value, 'activeMatch') && linkItem.value.activeMatch) {
         return new RegExp(linkItem.value.activeMatch).test(route.path);
       }
 

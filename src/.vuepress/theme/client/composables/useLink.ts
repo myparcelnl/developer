@@ -1,13 +1,13 @@
 import {ComputedRef, Ref, computed, ref} from 'vue';
 import {isLinkHttp, isLinkMailto, isLinkTel} from '@vuepress/shared';
 import {MaybeRef} from '@vueuse/core';
-import {MyPaNavLink} from '@mptheme/config.types';
+import {MyPaAnySidebarItem, MyPaNavLink} from '@mptheme/config.types';
 import {isOfType} from '@mptheme/shared/utils';
 import {memoize} from 'lodash-unified';
 import {useNavLink} from '@mptheme/client/composables/useNavLink';
 
 interface UseLink {
-  linkItem: ComputedRef<MyPaNavLink>;
+  linkItem: ComputedRef<MyPaNavLink | MyPaAnySidebarItem>;
   hasHttpProtocol: ComputedRef<boolean>;
   hasNonHttpProtocol: ComputedRef<boolean>;
   isBlankTarget: ComputedRef<boolean>;
@@ -18,7 +18,7 @@ interface UseLink {
 }
 
 // eslint-disable-next-line max-lines-per-function
-const useMemoized = memoize((link: Ref<string | MyPaNavLink>): UseLink => {
+const useMemoized = memoize((link: Ref<string | MyPaNavLink | MyPaAnySidebarItem>): UseLink => {
   const linkItem = computed(() => {
     if (typeof link.value === 'string') {
       const item = useNavLink(link.value.replace(/\/$/, ''));
@@ -88,4 +88,4 @@ const useMemoized = memoize((link: Ref<string | MyPaNavLink>): UseLink => {
   };
 });
 
-export const useLink = (link: MaybeRef<MyPaNavLink | string>): UseLink => useMemoized(ref(link));
+export const useLink = (link: MaybeRef<MyPaNavLink | MyPaAnySidebarItem | string>): UseLink => useMemoized(ref(link));

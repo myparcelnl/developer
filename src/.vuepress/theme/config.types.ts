@@ -34,7 +34,7 @@ export type MyPaResolvedNavbarItem = MyPaNavbarItem | MyPaNavGroup<MyPaResolvedN
 
 export type MyPaSidebarItem = Partial<MyPaNavLink>;
 
-export type MyPaSidebarGroup = MyPaSidebarItem & MyPaNavGroup<MyPaSidebarItem | MyPaSidebarGroup | string>;
+export type MyPaSidebarGroup = MyPaNavLink & MyPaNavGroup<MyPaNavLink>;
 
 export type MyPaSidebarGroupCollapsible = MyPaSidebarGroup & {collapsible?: boolean};
 
