@@ -35,6 +35,8 @@ footer:
         link: /documentation/20.wix.html
       - text: Amzon
         link: /documentation/25.amazon.html
+      - text: Etsy
+        link: /documentation/30.etsy.html
       - text: PHP SDK
         link: /documentation/50.php-sdk.html
       - text: JS SDK

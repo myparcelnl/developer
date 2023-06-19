@@ -17,6 +17,7 @@ Hier vind je de handleidingen voor onze plugins en API-integraties.
     <Integration name="ecwid" />
     <Integration name="wix" />
     <Integration name="amazon" />
+    <Integration name="etsy" />
 </Stack>
 
 ### SDK's
