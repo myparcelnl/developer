@@ -1,13 +1,11 @@
 ---
 title: Plugin Development Kit (PDK)
-sidebar:
+description: The MyParcel Plugin Development Kit (PDK) is a set of tools to quickly build a MyParcel plugin for your e-commerce platform.
 ---
-
-## Introduction
 
 The MyParcel Plugin Development Kit (PDK) is a set of tools to quickly build a MyParcel plugin for your e-commerce platform. The backend is written in PHP and the frontend is written in JavaScript.
 
-### Features
+## Features
 
 - Easy to use API
 - Feature equality between all implementations
@@ -29,20 +27,20 @@ The following terms are used throughout the documentation:
 
 ## Getting started
 
-To get started with the PDK, continue reading below:
+To get started with the PDK, you need to set up the backend and (optionally) the frontend. The backend is required for all other PDK functionality. The frontend is only required if you want to use custom checkout functionality.
 
 <Stack class="grid-flow-col gap-4">
-  <Cta title="Backend" aria-label="To the backend documentation" link="./10.backend/" class="items-center" icon="myparcel" />
-  <Cta title="Frontend" aria-label="To the frontend documentation" link="./20.frontend/" class="items-center" icon="myparcel" />
+  <Cta
+    title="Backend"
+    subtitle="The backend contains all logic to communicate with the MyParcel API. The backend is required for all other PDK functionality."
+    aria-label="To the MyParcel PDK backend documentation"
+    link="./10.backend.html" />
+  <Cta
+    title="Frontend"
+    subtitle="The frontend contains the logic to render the MyParcel components that communicate with the PDK backend in your admin panel and checkout."
+    aria-label="To the MyParcel PDK frontend documentation"
+    link="./20.frontend/" />
 </Stack>
-
-## FAQ
-
-::: expand h3: Why not use an SDK?
-The PDK is a central codebase that contains all logic to scaffold a MyParcel plug-in. It uses our SDKs under the hood, but contains a lot of additional logic to make it easier to build a plugin.
-
-The PDK is not a replacement for our SDKs. It is a tool to make it easier to build a plugin.
-:::
 
 ## Examples
 
@@ -51,13 +49,21 @@ The PDK is used in the following plugins:
 - [MyParcel WooCommerce](https://github.com/myparcelnl/woocommerce/tree/alpha) (currently in alpha)
 - [MyParcel PrestaShop](https://github.com/myparcelnl/prestashop/tree/alpha) (currently in pre-alpha)
 
+## FAQ
+
+::: expand h3: Why use the PDK over an SDK?
+The PDK is a central codebase that contains all logic to scaffold a MyParcel plug-in. It uses our SDKs under the hood, but contains a lot of additional logic to make it easier to build a plugin.
+
+The PDK is not a replacement for our SDKs. It is a tool to make it easier to build a plugin.
+:::
+
 ## Contributing
 
 We welcome contributions to the PDK. Please read our [developer guide](https://github.com/myparcelnl/developer/blob/main/DEVELOPERS.md) to get started.
 
 ## License
 
-The PDK is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The MyParcel PDK is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Security
 

@@ -47,27 +47,31 @@ With this being the root `package.json`:
 }
 ```
 
-### Backend
+### Admin
 
-The backend is the main component of the JS PDK. It contains all the logic to communicate with the PDK backend and to render the admin components.
+The admin is the main component of the JS PDK. It contains all the logic to communicate with the PDK backend and to render components in your app's backend.
 
 It uses the following libraries:
 
 - vue^3
-- typescript^4.5
-- vite
 - pinia
 - @vueuse/core
 - @tanstack/vue-query
 
-::: tip
-[Continue reading on how to set up the admin backend.](./10.admin.md)
-:::
+<Cta
+  title="Set up the admin"
+  subtitle="Continue reading on how to set up the admin"
+  aria-label="Continue reading on how to set up the admin"
+  link="./10.admin.md" 
+  class="max-w-96" />
 
-### Frontend
+### Checkout
 
-The frontend of the PDK is split up into multiple packages. This allows you to only use the parts you need.
+The checkout part of the JS PDK is split up into multiple packages. This allows you to only use the parts you need and minimize bundle size. Only the delivery options component uses external libraries. The other components are written in pure JavaScript (TypeScript).
 
-::: tip
-[Continue reading on how to set up the frontend.](./20.frontend.md)
-:::
+<Cta 
+  title="Set up the checkout" 
+  subtitle="Continue reading on how to set up the checkout"
+  aria-label="Continue reading on how to set up the checkout"
+  link="./20.frontend.md" 
+  class="max-w-96" />
