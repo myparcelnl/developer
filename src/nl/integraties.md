@@ -23,6 +23,12 @@ te slaan dat komt kijken bij het handmatig ontwikkelen van een API-integratie.
 
 <Integrations type="sdk" />
 
+### Plug-in Development Kit (PDK)
+
+De [MyParcel PDK](/documentation/52.pdk/) is hoe we onze eigen plug-ins ontwikkelen. De PDK biedt veel van de boilerplate code die nodig is om een plug-in te maken en stelt ons in staat om ons te concentreren op de integratie zelf.
+
+<Integrations type="pdk" />
+
 ## API integrations
 
 Deze integraties kunnen in onze Backoffice worden geïnstalleerd en

@@ -208,9 +208,29 @@
     "image": "mijndomein.png"
   },
   {
+    "name": "php-pdk",
+    "title": "PHP PDK",
+    "internal": true,
+    "type": "pdk",
+    "repository": "myparcelnl/php-pdk",
+    "image": "php.svg",
+    "classes": "bg-goldfish-500 dark:bg-goldfish-700",
+    "documentation": "/documentation/52.pdk/"
+  },
+  {
+    "name": "js-pdk",
+    "title": "JS PDK",
+    "internal": true,
+    "type": "pdk",
+    "repository": "myparcelnl/js-pdk",
+    "image": "js.svg",
+    "classes": "bg-goldfish-500 dark:bg-goldfish-700",
+    "documentation": "/documentation/52.pdk/"
+  },
+  {
     "name": "php-sdk",
     "internal": true,
-    "title": "PHP",
+    "title": "PHP SDK",
     "type": "sdk",
     "repository": "myparcelnl/sdk",
     "documentation": "/documentation/50.php-sdk.html",
@@ -220,7 +240,7 @@
   {
     "name": "javascript-sdk",
     "internal": true,
-    "title": "JavaScript/Node.js",
+    "title": "JavaScript/Node.js SDK",
     "type": "sdk",
     "repository": "myparcelnl/js-sdk",
     "documentation": "/documentation/51.javascript-sdk.html",
@@ -229,14 +249,14 @@
   },
   {
     "name": "c-sharp-sdk",
-    "title": "C#/.net",
+    "title": "C#/.net SDK",
     "type": "sdk",
     "repository": "janssenr/MyParcelApi.Net",
     "image": "c-sharp.svg"
   },
   {
     "name": "ruby-sdk",
-    "title": "Ruby",
+    "title": "Ruby SDK",
     "type": "sdk",
     "repository": "paypronl/myparcel",
     "image": "ruby.svg",
