@@ -67,4 +67,4 @@ The MyParcel PDK is open-sourced software licensed under the [MIT license](https
 
 ## Security
 
-If you discover a security vulnerability within the PDK, please let us know via our [contact form](/contact/).
+If you discover a security vulnerability within the PDK, please let us know via our [contact form](/contact.md).
