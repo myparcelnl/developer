@@ -1,6 +1,7 @@
 <template>
   <span class="flex">
     <MPImg
+      no-style
       role="none"
       class="my-auto pr-2 w-6"
       :alt="`Switch to ${language.human}`"

@@ -14,6 +14,7 @@
 
       <MPImg
         v-if="img"
+        no-style
         alt=""
         class="h-32 w-full"
         image-class="m-auto"

@@ -8,6 +8,7 @@
 
     <div class="absolute flex inset-5">
       <MPImg
+        no-style
         class="m-auto"
         :src="brandLogo"
         :alt="`${name} logo`" />

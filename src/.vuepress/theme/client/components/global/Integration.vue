@@ -25,6 +25,7 @@
           },
         ]">
         <MPImg
+          no-style
           class="grow h-24"
           :src="`/integrations/${data.image}`"
           role="none"

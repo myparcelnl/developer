@@ -3,6 +3,7 @@
     <div>
       <MPImg
         v-if="normal"
+        no-style
         :alt="`photo of ${name}`"
         :src="normalSrc"
         :class="{
@@ -11,6 +12,7 @@
 
       <MPImg
         v-if="funny"
+        no-style
         :alt="`funny photo of ${name}`"
         :src="funnySrc"
         :class="{

@@ -47,8 +47,7 @@
       @apply text-zinc-500;
     }
 
-    // Images directly inserted into a page via <MpImg /> and not in a component like <Integration />
-    & > * > .mp-img img {
+    img:not(.no-style) {
       @apply mx-auto my-4 rounded shadow overflow-hidden border;
     }
   }
