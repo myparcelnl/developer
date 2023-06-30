@@ -1,5 +1,5 @@
 <template>
-  <div class="flex relative">
+  <div class="flex mp-img relative">
     <div
       v-if="loading"
       class="animate-pulse bg-black bg-opacity-5 dark:bg-white h-full rounded w-full" />

@@ -25,7 +25,9 @@
       @apply hover:text-goldfish-400 text-goldfish-500 underline underline-offset-1 decoration-2 decoration-goldfish-100 dark:decoration-goldfish-800 dark:hover:decoration-goldfish-500 hover:decoration-goldfish-200;
     }
 
-    ul, ol, dd {
+    ul,
+    ol,
+    dd {
       @apply pl-6 pt-2 pb-3;
     }
 
@@ -44,9 +46,19 @@
     hr {
       @apply text-zinc-500;
     }
+
+    // Images directly inserted into a page via <MpImg /> and not in a component like <Integration />
+    & > * > .mp-img img {
+      @apply mx-auto my-4 rounded shadow overflow-hidden border;
+    }
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold font-display pt-4 scroll-mt-16 relative focus-visible:outline-2 focus-visible:outline-goldfish-500 focus-visible:outline;
 
     a {
