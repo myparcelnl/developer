@@ -379,5 +379,11 @@
     "type": "api",
     "documentation": "https://www.deliverymatch.nl/engine/live/deliverymatch/register",
     "image": "deliverymatch.svg"
+  },
+  {
+    "name": "ProductFlow",
+    "title": "ProductFlow",
+    "type": "api",
+    "image": "ProductFlow.png"
   }
 ]
