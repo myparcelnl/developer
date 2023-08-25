@@ -384,6 +384,7 @@
     "name": "ProductFlow",
     "title": "ProductFlow",
     "type": "api",
+    "documentation": "https://www.productflow.com/",
     "image": "ProductFlow.png"
   }
 ]
