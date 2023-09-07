@@ -339,6 +339,13 @@
     "image": "fulfilment.svg"
   },
   {
+    "name": "Afosto",
+    "title": "Afosto",
+    "type": "api",
+    "documentation": "https://afosto.com/nl/docs/apps/myparcel/",
+    "image": "afosto.svg"
+  },
+  {
     "name": "ShopLinkr",
     "title": "ShopLinkr",
     "type": "api",
