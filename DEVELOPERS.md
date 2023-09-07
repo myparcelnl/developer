@@ -89,12 +89,12 @@ graph TD
 
   QProdCode{{"Does this change production code?\n(e.g. code in the `src` directory)"}}
   QFunctionalChange{{"Does this change functionality for the end user?"}}
-  QIsFix{{"Is this something that has worked before?"}}
+  QIsFix{{"Has or should this have worked before?"}}
   QIsBuild{{"Is this change related to the build process?"}}
   QIsPerf{{"Does this improve performance?"}}
   QIsRefactor{{"Is code refactored?\n(e.g. renaming or moving variables, etc.)"}}
-  QIsDoc{{"Is this a documentation change?"}}
-  QIsTest{{"Is this a change in test code?"}}
+  QIsDoc{{"Does this change documentation?"}}
+  QIsTest{{"Does this change test code?"}}
 
   Start .->  QProdCode
 
@@ -106,13 +106,13 @@ graph TD
 
   QFunctionalChange --> |Yes| QIsFix
   QFunctionalChange --> |No| QIsPerf
-  
+
   QIsFix --> |Yes| Fix
   QIsFix --> |No| Feat
   
   QIsBuild --> |Yes| Build
   QIsBuild --> |No| QIsDoc
-  
+
   QIsDoc --> |Yes| Docs
   QIsDoc --> |No| Chore
   
