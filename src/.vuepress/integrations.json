@@ -5,8 +5,7 @@
     "type": "utility",
     "internal": true,
     "documentation": "https://www.myparcel.nl/en/integrations/google-chrome-extensie/",
-    "image": "chrome.svg",
-    "url": ""
+    "image": "chrome.svg"
   },
   {
     "name": "delivery-options",
@@ -96,7 +95,7 @@
     "title": "CS-Cart",
     "type": "plugin",
     "documentation": "https://myparcelnl.github.io/cs-cart",
-    "image": "cart.png",
+    "image": "cart.png"
   },
   {
     "name": "opencart-2-2-x – 2-3-x",
@@ -131,7 +130,7 @@
     "documentation": "https://myparcelnl.github.io/virtuemart",
     "image": "virtuemart.svg",
     "classes": "bg-zinc-100",
-    "url": ""
+    "url": "https://myparcelnl.github.io/virtuemart"
   },
   {
     "name": "virtuemart-3",
@@ -139,7 +138,7 @@
     "type": "plugin",
     "documentation": "https://myparcelnl.github.io/virtuemart3",
     "image": "virtuemart.svg",
-    "url": ""
+    "url": "https://myparcelnl.github.io/virtuemart3"
   },
   {
     "name": "ccv",
@@ -199,14 +198,16 @@
     "type": "plugin",
     "documentation": "https://sherpaan.nl/project/myparcel/",
     "image": "sherpaan-light.svg",
-    "classes": "bg-[#001452]"
+    "classes": "bg-[#001452]",
+    "url": "https://sherpaan.nl/project/myparcel/"
   },
   {
     "name": "shoptrader",
     "title": "Shoptrader",
     "type": "plugin",
     "documentation": "https://support.shoptrader.com/support/home",
-    "image": "shoptrader.png"
+    "image": "shoptrader.png",
+    "url": "https://www.shoptrader.nl/addons/myparcel-checkout.html"
   },
   {
     "name": "easywebshop",
