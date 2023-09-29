@@ -24,7 +24,9 @@
             'bg-white': !data.classes,
           },
         ]">
-        <AutoLink :item="`${data.url}`">
+        <AutoLink
+          :is="`${data.url}`"
+          :item="`${data.url}`">
           <MPImg
             no-style
             class="grow h-24"
