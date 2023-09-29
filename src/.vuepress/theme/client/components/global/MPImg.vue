@@ -4,20 +4,25 @@
       v-if="loading"
       class="animate-pulse bg-black bg-opacity-5 dark:bg-white h-full rounded w-full" />
 
-    <img
-      :src="src"
-      class="max-h-full"
-      :class="[
-        imageClass,
-        {
-          'no-style': noStyle,
-        },
-      ]"
-      :alt="alt"
-      @dragstart.prevent="null"
-      @loadstart="onLoadStart"
-      @load="onLoad"
-      @error="onError" />
+    <component
+      :is="url ? 'a' : 'span'"
+      :href="url || ''"
+      class="flex flex-grow">
+      <img
+        :src="src"
+        class="max-h-full"
+        :class="[
+          imageClass,
+          {
+            'no-style': noStyle,
+          },
+        ]"
+        :alt="alt"
+        @dragstart.prevent="null"
+        @loadstart="onLoadStart"
+        @load="onLoad"
+        @error="onError" />
+    </component>
   </div>
 </template>
 
@@ -39,6 +44,11 @@ export default defineComponent({
 
     imageClass: {
       type: [String, Array, Object] as PropType<string[] | string | Record<string, string>>,
+      default: null,
+    },
+
+    url: {
+      type: String,
       default: null,
     },
 

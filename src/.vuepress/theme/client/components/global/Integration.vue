@@ -24,17 +24,14 @@
             'bg-white': !data.classes,
           },
         ]">
-        <AutoLink
-          :is="`${data.url}`"
-          :item="`${data.url}`">
-          <MPImg
-            no-style
-            class="grow h-24"
-            :src="`/integrations/${data.image}`"
-            role="none"
-            image-class="m-auto"
-            :alt="`${data.title} logo`" />
-        </AutoLink>
+        <MPImg
+          no-style
+          class="grow h-24"
+          :src="`/integrations/${data.image}`"
+          role="none"
+          image-class="m-auto"
+          :url="data.url"
+          :alt="`${data.title} logo`" />
         <Icon
           v-if="data.internal"
           title="Maintained by MyParcel"
