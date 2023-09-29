@@ -24,18 +24,20 @@
             'bg-white': !data.classes,
           },
         ]">
-        <MPImg
-          no-style
-          class="grow h-24"
-          :src="`/integrations/${data.image}`"
-          role="none"
-          image-class="m-auto"
-          :alt="`${data.title} logo`" />
-        <Icon
-          v-if="data.internal"
-          title="Maintained by MyParcel"
-          icon="myparcel"
-          class="absolute right-2 text-xl top-1" />
+        <AutoLink :item="`${data.url}`">
+          <MPImg
+            no-style
+            class="grow h-24"
+            :src="`/integrations/${data.image}`"
+            role="none"
+            image-class="m-auto"
+            :alt="`${data.title} logo`" />
+          <Icon
+            v-if="data.internal"
+            title="Maintained by MyParcel"
+            icon="myparcel"
+            class="absolute right-2 text-xl top-1" />
+        </AutoLink>
       </div>
 
       <div class="border-t dark:bg-zinc-800 p-3">

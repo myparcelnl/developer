@@ -9,6 +9,7 @@ export interface IntegrationDefinition {
   type: 'plugin' | 'other' | 'sdk';
   image: string;
   internal: boolean;
+  url?: string;
   repository?: string;
   documentation?: string;
   classes?: string;
@@ -20,6 +21,7 @@ const DEFAULTS: Partial<IntegrationDefinition> = {
   image: undefined,
   internal: false,
   repository: undefined,
+  url: undefined,
   title: '',
   type: 'other',
 };
