@@ -34,12 +34,12 @@
             role="none"
             image-class="m-auto"
             :alt="`${data.title} logo`" />
-          <Icon
-            v-if="data.internal"
-            title="Maintained by MyParcel"
-            icon="myparcel"
-            class="absolute right-2 text-xl top-1" />
         </AutoLink>
+        <Icon
+          v-if="data.internal"
+          title="Maintained by MyParcel"
+          icon="myparcel"
+          class="absolute right-2 text-xl top-1" />
       </div>
 
       <div class="border-t dark:bg-zinc-800 p-3">
