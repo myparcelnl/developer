@@ -23,7 +23,7 @@
     "type": "utility",
     "documentation": "https://help.imu.nl/nl/articles/6498451-plug-pay-koppeling-plug-pay-en-myparcel-via-google-chrome-plugin",
     "image": "plug-and-pay.svg",
-    "url": "https://www.myparcel.nl/koppelingen/plugpay-verzenden/"
+    "url": "https://plugandpay.nl/"
   },
   {
     "name": "woocommerce",
@@ -123,7 +123,7 @@
     "type": "plugin",
     "documentation": "https://myparcelnl.github.io/shoppagina",
     "image": "shoppagina.svg",
-    "url": "https://www.shoppagina.nl/support/artikel/myparcel-instellen.html"
+    "url": "https://www.shoppagina.nl"
   },
   {
     "name": "virtuemart-2",
@@ -148,7 +148,7 @@
     "type": "plugin",
     "documentation": "https://myparcelnl.github.io/ccv-shop",
     "image": "ccv.png",
-    "url": "https://ccvshop.zendesk.com/hc/nl/articles/115004200049-MyParcel"
+    "url": "https://www.ccvshop.nl/"
   },
   {
     "name": "mijnwebwinkel",
@@ -156,7 +156,7 @@
     "type": "plugin",
     "documentation": "https://www.mijnwebwinkel.nl/support-resources/vraag-antwoord/hoe-gebruik-ik-myparcel-mijnwebwinkel",
     "image": "mijnwebwinkel.svg",
-    "url": "https://www.mijnwebwinkel.nl/myparcel"
+    "url": "https://www.mijnwebwinkel.nl"
   },
   {
     "name": "os-commerce",
@@ -181,7 +181,7 @@
     "type": "plugin",
     "documentation": "https://www.gratiswebshopbeginnen.nl/help/webshop-apps/hoe-werkt-de-myparcel-koppeling/",
     "image": "gratis-webshop-beginnen.png",
-    "url": "https://www.gratiswebshopbeginnen.nl/help/webshop-apps/hoe-werkt-de-myparcel-koppeling/"
+    "url": "https://www.gratiswebshopbeginnen.nl"
   },
   {
     "name": "logi-vert",
@@ -189,7 +189,7 @@
     "type": "plugin",
     "documentation": "https://www.logivert.com/nl/",
     "image": "logivert.svg",
-    "url": "https://www.myparcel.nl/en/integrations/logivert/"
+    "url": "https://www.logivert.com/"
   },
   {
     "name": "my-shop",
@@ -197,7 +197,7 @@
     "type": "plugin",
     "documentation": "https://myparcelnl.github.io/myshop/",
     "image": "myshop.svg",
-    "url": "https://www.myparcel.nl/en/integrations/myshop-com/"
+    "url": "https://www.myshop.com/"
   },
   {
     "name": "sherpaan",
@@ -206,7 +206,7 @@
     "documentation": "https://sherpaan.nl/project/myparcel/",
     "image": "sherpaan-light.svg",
     "classes": "bg-[#001452]",
-    "url": "https://sherpaan.nl/project/myparcel/"
+    "url": "https://sherpaan.nl"
   },
   {
     "name": "shoptrader",
@@ -214,7 +214,7 @@
     "type": "plugin",
     "documentation": "https://support.shoptrader.com/support/home",
     "image": "shoptrader.png",
-    "url": "https://www.shoptrader.nl/addons/myparcel-checkout.html"
+    "url": "https://www.shoptrader.nl"
   },
   {
     "name": "easywebshop",
@@ -222,7 +222,7 @@
     "type": "plugin",
     "documentation": "https://ews.wiki/pakketdiensten/myparcel",
     "image": "easywebshop.svg",
-    "url": "https://ews.wiki/delivery-services/myparcel"
+    "url": "https://easywebshop.com/"
   },
   {
     "name": "Mijndomein",
@@ -230,7 +230,7 @@
     "type": "plugin",
     "documentation": "https://mijndomein.zendesk.com/hc/nl/sections/13019196364305-MyParcel",
     "image": "mijndomein.png",
-    "url": "https://mijndomein.zendesk.com/hc/nl/sections/13019196364305-MyParcel"
+    "url": "https://www.mijndomein.nl/"
   },
   {
     "name": "php-pdk",
@@ -330,7 +330,7 @@
     "internal": true,
     "documentation": "https://myparcelnl.github.io/exact-online",
     "image": "exact-online.svg",
-    "url": "https://www.myparcel.nl/koppelingen/exact-online-verzenden/"
+    "url": "https://www.exact.com/nl"
   },
   {
     "name": "etsy",
@@ -347,7 +347,7 @@
     "type": "api",
     "documentation": "https://picqer.com/nl/help/artikelen/myparcel-koppelen",
     "image": "picqer.svg",
-    "url": "https://picqer.com/nl/integraties/myparcel"
+    "url": "https://picqer.com/nl/"
   },
   {
     "name": "channel-dock",
@@ -355,7 +355,7 @@
     "type": "api",
     "documentation": "https://help.channeldock.com/books/nederlands-nl/page/myparcel-koppelen-aan-channeldock",
     "image": "channel-dock.svg",
-    "url": "https://help.channeldock.com/books/nederlands-nl/page/myparcel-koppelen-aan-channeldock"
+    "url": "https://channeldock.com/nl"
   },
   {
     "name": "goedgepickt",
@@ -363,7 +363,7 @@
     "type": "api",
     "documentation": "https://help.goedgepickt.nl/article/srujx2j0ln-my-parcel",
     "image": "goedgepickt.svg",
-    "url": "https://www.goedgepickt.nl/koppeling/myparcel/"
+    "url": "https://www.goedgepickt.nl/"
   },
   {
     "name": "fulfilment-software",
@@ -371,7 +371,7 @@
     "type": "api",
     "documentation": "https://fulfilment-software.com/",
     "image": "fulfilment.svg",
-    "url": "https://www.myparcel.nl/koppelingen/fulfilment-software-verzenden/"
+    "url": "https://fulfilment-software.com/"
   },
   {
     "name": "Afosto",
@@ -379,7 +379,7 @@
     "type": "api",
     "documentation": "https://afosto.com/nl/docs/apps/myparcel/",
     "image": "afosto.svg",
-    "url": "https://afosto.com/nl/docs/apps/myparcel/"
+    "url": "https://afosto.com/nl/"
   },
   {
     "name": "ShopLinkr",
@@ -387,7 +387,7 @@
     "type": "api",
     "documentation": "https://shoplinkr.notion.site/MyParcel-koppelen-58cfe20c650a4c07bd61367e4595060c",
     "image": "shoplinkr.svg",
-    "url": "https://shoplinkr.com/blogs/myparcel-koppelen-aan-shoplinkr"
+    "url": "https://shoplinkr.com/"
   },
   {
     "name": "Stockpilot",
@@ -395,7 +395,7 @@
     "type": "api",
     "documentation": "https://help.stockpilot.com/article/me71o2kd4i-integrate-my-parcel-to-stockpilot",
     "image": "stockpilot.svg",
-    "url": "https://stockpilot.com/nl/integraties/myparcel/"
+    "url": "https://stockpilot.com/nl/"
   },
   {
     "name": "iPacky",
@@ -403,7 +403,7 @@
     "type": "api",
     "documentation": "https://ipacky.com/shipping-connectors-overview/",
     "image": "iPacky.png",
-    "url": "https://ipacky.com/dashboard-myparcel/"
+    "url": "https://ipacky.com/"
   },
   {
     "name": "e-tailize",
@@ -411,7 +411,7 @@
     "type": "api",
     "documentation": "https://help.e-tailize.com/en/articles/186674-connecting-myparcel",
     "image": "e-tailize.png",
-    "url": "https://e-tailize.com/nl/integraties/koppelen-met-myparcel/"
+    "url": "https://e-tailize.com/nl/"
   },
   {
     "name": "stockitup",
@@ -419,7 +419,7 @@
     "type": "api",
     "image": "stockitup.png",
     "classes": "bg-[#05386b]",
-    "url": "https://www.myparcel.nl/koppelingen/stockitup-verzenden/"
+    "url": "https://stockitup.nl/"
   },
   {
     "name": "DeliveryMatch",
@@ -427,7 +427,7 @@
     "type": "api",
     "documentation": "https://www.deliverymatch.nl/engine/live/deliverymatch/register",
     "image": "deliverymatch.svg",
-    "url": "https://myparcel.nl/koppelingen/deliverymatch-verzenden/"
+    "url": "https://www.deliverymatch.nl/"
   },
   {
     "name": "ProductFlow",
@@ -435,6 +435,6 @@
     "type": "api",
     "documentation": "https://www.productflow.com/",
     "image": "ProductFlow.png",
-    "url": "https://www.myparcel.nl/koppelingen/productflow/"
+    "url": "https://www.productflow.com/"
   }
 ]
