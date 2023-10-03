@@ -47,13 +47,18 @@ out ways to improve...
 
 ## Team
 
+### Manager
+
+<Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+    <TeamMember name="Frank" normal="/frank-normal.png" funny="/frank-fun.png" />
+</Stack>
+
 ### Product owners
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
     <TeamMember name="Mitchell" normal="/2020/11/mtichell-bokhove-normal.jpg" funny="/2020/11/mtichell-bokhove-fun.jpg" />
     <TeamMember name="Peter" normal="/2019/10/myparcel-development-team-peter-2.jpg" funny="/2019/10/myparcel-development-team-peter-1.jpg" />
-    <TeamMember name="Frank" normal="/frank-normal.png" funny="/frank-fun.png" />
     <TeamMember name="Christiaan" normal="/christiaan-normal.png" funny="/christiaan-fun.png" />
 </Stack>
 
@@ -87,6 +92,7 @@ out ways to improve...
     <TeamMember name="Joeri" normal="/joeri-van-veen-normal.jpg" funny="/joeri-van-veen-fun.jpg" />
     <TeamMember name="Mark" normal="/mark-ernst-normal.png" funny="/mark-ernst-fun.png" />
     <TeamMember name="Thijmen" normal="/man-versie-3-normaal.png" funny="/man-versie-3-hover-versie-1.png" />
+    <TeamMember name="Cher" normal="/vrouw-versie-2-normaal.png" funny="/vrouw-versie-2-hover-versie-1.png" />
     <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
 </Stack>
 
