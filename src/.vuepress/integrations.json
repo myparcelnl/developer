@@ -339,6 +339,13 @@
     "image": "fulfilment.svg"
   },
   {
+    "name": "Afosto",
+    "title": "Afosto",
+    "type": "api",
+    "documentation": "https://afosto.com/nl/docs/apps/myparcel/",
+    "image": "afosto.svg"
+  },
+  {
     "name": "ShopLinkr",
     "title": "ShopLinkr",
     "type": "api",
@@ -379,5 +386,12 @@
     "type": "api",
     "documentation": "https://www.deliverymatch.nl/engine/live/deliverymatch/register",
     "image": "deliverymatch.svg"
+  },
+  {
+    "name": "ProductFlow",
+    "title": "ProductFlow",
+    "type": "api",
+    "documentation": "https://www.productflow.com/",
+    "image": "ProductFlow.png"
   }
 ]
