@@ -1,6 +1,6 @@
-import {ViteBundlerOptions} from 'vuepress';
-import {path} from '@vuepress/utils';
+import {type ViteBundlerOptions} from 'vuepress';
 import svgLoader from 'vite-svg-loader';
+import {path} from '@vuepress/utils';
 
 export const viteConfig: ViteBundlerOptions['viteOptions'] = {
   plugins: [
@@ -29,14 +29,4 @@ export const viteConfig: ViteBundlerOptions['viteOptions'] = {
         },
       }
     : {}),
-
-  css: {
-    postcss: {
-      plugins: [
-        // eslint-disable-next-line @typescript-eslint/no-var-requires
-        require('tailwindcss')(path.resolve(__dirname, 'tailwind.config.cjs')),
-        ...(process.env.NODE_ENV === 'production' ? [require('autoprefixer'), require('cssnano')] : []),
-      ],
-    },
-  },
 };

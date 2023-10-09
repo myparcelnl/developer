@@ -1,10 +1,8 @@
-import {GitPluginPageData} from '@vuepress/plugin-git';
-import {Plugin} from 'vuepress';
+import {type Plugin} from 'vuepress';
 import dayjs from 'dayjs';
-import fs from 'fs';
+import {fs, logger, path} from '@vuepress/utils';
+import {type GitPluginPageData} from '@vuepress/plugin-git';
 import {isOfType} from '../theme/shared/utils';
-import {logger} from '@vuepress/utils';
-import path from 'path';
 
 interface SitemapPluginConfig {
   baseUrl: string;

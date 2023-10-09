@@ -1,6 +1,5 @@
 import {fileURLToPath} from 'url';
-import fs from 'node:fs';
-import path from 'node:path';
+import {fs, path} from '@vuepress/utils';
 
 // eslint-disable-next-line no-underscore-dangle
 const __dirname = fileURLToPath(path.dirname(import.meta.url));

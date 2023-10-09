@@ -71,7 +71,9 @@ it easier by correcting `h1` and `h2` tags automatically. So you can write
 your page in any of the following ways:
 
 ```markdown
-# Title
+---
+title: Title
+---
 
 ## Subject 1
 

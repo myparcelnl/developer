@@ -1,23 +1,22 @@
 /* eslint-disable max-lines-per-function */
-import {DIR_CLIENT, DIR_THEME} from './shared/directories';
-import {MyPaPageFrontmatter, MyPaThemeData} from './config.types';
-import {Page} from 'vuepress';
-import {Theme} from '@vuepress/core';
-import {activeHeaderLinksPlugin} from '@vuepress/plugin-active-header-links';
-import {autoLinkPlugin} from './node/plugins/autoLinkPlugin';
-import {createAliasMap} from './node/config/createAliasMap';
-import {createContainerPlugins} from './node/config/createContainerPlugin';
-import {externalLinkIconPlugin} from '@vuepress/plugin-external-link-icon';
-import {gitPlugin} from '@vuepress/plugin-git';
-import {incrementHeadingsPlugin} from './node/plugins/incrementHeadingsPlugin';
-import {palettePlugin} from '@vuepress/plugin-palette';
+import {type Page} from 'vuepress';
+import markdownItMultimdTable from 'markdown-it-multimd-table';
 import {path} from '@vuepress/utils';
-import {prismjsPlugin} from '@vuepress/plugin-prismjs';
-import {registerCustomComponentsPlugin} from './node/plugins/registerCustomComponentsPlugin';
-import {seoPlugin} from './seoPlugin';
 import {themeDataPlugin} from '@vuepress/plugin-theme-data';
-
-const views = path.resolve(DIR_CLIENT, 'views');
+import {prismjsPlugin} from '@vuepress/plugin-prismjs';
+import {palettePlugin} from '@vuepress/plugin-palette';
+import {gitPlugin} from '@vuepress/plugin-git';
+import {externalLinkIconPlugin} from '@vuepress/plugin-external-link-icon';
+import {activeHeaderLinksPlugin} from '@vuepress/plugin-active-header-links';
+import {type Theme} from '@vuepress/core';
+import {DIR_CLIENT, DIR_THEME} from './shared/directories';
+import {seoPlugin} from './seoPlugin';
+import {registerCustomComponentsPlugin} from './node/plugins/registerCustomComponentsPlugin';
+import {incrementHeadingsPlugin} from './node/plugins/incrementHeadingsPlugin';
+import {autoLinkPlugin} from './node/plugins/autoLinkPlugin';
+import {createContainerPlugins} from './node/config/createContainerPlugin';
+import {createAliasMap} from './node/config/createAliasMap';
+import {type MyPaPageFrontmatter, type MyPaThemeData} from './config.types';
 
 /**
  * 1 rem = 16px.
@@ -30,12 +29,6 @@ export const myParcelTheme = (options: MyPaThemeData): Theme => {
 
     templateBuild: path.resolve(__dirname, 'templates', 'build.html'),
 
-    layouts: {
-      Layout: `${views}/layout/layout/Layout.vue`,
-      // eslint-disable-next-line @typescript-eslint/no-magic-numbers
-      404: `${views}/404Page/404Page.vue`,
-    },
-
     alias: {
       // Replace docsearch css entirely
       '@docsearch/css': path.resolve(DIR_CLIENT, 'styles', 'docsearch.scss'),
@@ -45,7 +38,7 @@ export const myParcelTheme = (options: MyPaThemeData): Theme => {
 
     clientConfigFile: path.resolve(DIR_CLIENT, 'clientConfig.ts'),
 
-    extendsPage: (page: Page<MyPaPageFrontmatter>) => {
+    extendsPage(page: Page<MyPaPageFrontmatter>) {
       // save relative file path into page data to generate edit link
       page.data.filePathRelative = page.filePathRelative;
 
@@ -58,7 +51,7 @@ export const myParcelTheme = (options: MyPaThemeData): Theme => {
 
     extendsMarkdown: (md) => {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-      md.use(require('markdown-it-multimd-table'), {
+      md.use(markdownItMultimdTable, {
         multiline: true,
         rowspan: true,
         headerless: true,

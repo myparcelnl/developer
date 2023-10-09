@@ -1,14 +1,14 @@
-import {DIR_CONFIG, DIR_VUEPRESS} from './dirs';
 import {defineUserConfig, viteBundler} from 'vuepress';
+import {path} from '@vuepress/utils';
 import {docsearchPlugin} from '@vuepress/plugin-docsearch';
-import {googleTagManagerPlugin} from './plugins/gtm/node';
-import {head} from './config/head';
-import {myParcelTheme} from './theme';
-import {parseTranslationsPlugin} from './plugins/parseTranslations';
-import path from 'path';
-import {sitemapPlugin} from './plugins/sitemap';
 import {slugify} from '@mdit-vue/shared';
 import {viteConfig} from './viteConfig';
+import {myParcelTheme} from './theme';
+import {sitemapPlugin} from './plugins/sitemap';
+import {parseTranslationsPlugin} from './plugins/parseTranslations';
+import {googleTagManagerPlugin} from './plugins/gtm/node';
+import {DIR_CONFIG, DIR_VUEPRESS} from './dirs';
+import {head} from './config/head';
 
 const DEV_SERVER_PORT = 8955;
 

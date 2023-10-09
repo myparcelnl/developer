@@ -1,5 +1,4 @@
-import fs from 'fs';
-import {path} from '@vuepress/utils';
+import {fs, path} from '@vuepress/utils';
 
 /**
  * Creates an object mapping all files/folders in <from> to "<to>/<from>".

@@ -9,11 +9,16 @@
 </template>
 
 <script lang="ts">
-import {DataType, DataTypeWithId, DataTypeWithName, useDataTypes} from '@mptheme/client/composables/useDataTypes';
 import {computed, defineComponent, ref} from 'vue';
-import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
-import {MyPaNavbarItem} from '@mptheme/config.types';
 import {isOfType} from '@mptheme/shared/utils';
+import {type MyPaNavbarItem} from '@mptheme/config.types';
+import {
+  type DataTypeGroup,
+  type DataTypeWithId,
+  type DataTypeWithName,
+  useDataTypes,
+} from '@mptheme/client/composables/useDataTypes';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 
 export default defineComponent({
   name: 'DataType',
@@ -39,11 +44,11 @@ export default defineComponent({
     const dataTypes = useDataTypes();
     const classes = ref<string[]>([]);
 
-    const dataType = computed<DataType | null>(() => {
+    const dataType = computed<DataTypeGroup | null>(() => {
       return dataTypes.find((type) => type.name === props.type) ?? null;
     });
 
-    const childType = computed<DataType['children'][number] | null>(() => {
+    const childType = computed<DataTypeGroup['children'][number] | null>(() => {
       return (
         dataType.value?.children.find((child) => {
           if (props.id && isOfType<DataTypeWithId>(child, 'ID')) {
