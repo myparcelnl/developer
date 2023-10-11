@@ -1,9 +1,9 @@
-import {Ref, ref} from 'vue';
+import {type Ref, ref} from 'vue';
 import data from '../../../integrations.json';
 
-type UseIntegrations = () => Ref<Integration[]>;
+type UseIntegrations = () => Ref<IntegrationDefinition[]>;
 
-export interface Integration {
+export interface IntegrationDefinition {
   name: string;
   title: string;
   type: 'plugin' | 'other' | 'sdk';
@@ -14,7 +14,7 @@ export interface Integration {
   classes?: string;
 }
 
-const DEFAULTS: Partial<Integration> = {
+const DEFAULTS: Partial<IntegrationDefinition> = {
   classes: undefined,
   documentation: undefined,
   image: undefined,
@@ -24,10 +24,10 @@ const DEFAULTS: Partial<Integration> = {
   type: 'other',
 };
 
-let integrations: Ref<Integration[]>;
+let integrations: Ref<IntegrationDefinition[]>;
 
 const getIntegrationData = () => {
-  return (data as unknown as Integration[]).map((item) => ({
+  return (data as unknown as IntegrationDefinition[]).map((item) => ({
     ...DEFAULTS,
     ...item,
   }));

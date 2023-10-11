@@ -1,10 +1,17 @@
 import './styles/index.scss';
-import {defineClientConfig} from '@vuepress/client';
 import {h} from 'vue';
-import {setupSidebarItems} from '@mptheme/client/composables';
+import {defineClientConfig} from '@vuepress/client';
 import {vTest} from '@mptheme/client/services/directives/vTest';
+import {setupSidebarItems} from '@mptheme/client/composables';
+import NotFound from './views/not-found/NotFoundPage.vue';
+import Layout from './views/layout/layout/Layout.vue';
 
 export default defineClientConfig({
+  layouts: {
+    Layout,
+    NotFound,
+  },
+
   enhance(context) {
     const {app, router} = context;
 

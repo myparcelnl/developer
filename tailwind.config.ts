@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers,no-magic-numbers */
-const defaultTheme = require('tailwindcss/defaultTheme');
-const {path} = require('@vuepress/utils');
+import path from 'upath';
+import defaultTheme from 'tailwindcss/defaultTheme';
+import {type Config} from 'tailwindcss';
 
 const colors = {
   monstera: {
@@ -27,16 +28,13 @@ const colors = {
   },
 };
 
-/**
- * @name {import('tailwindcss/tailwind-config').TailwindConfig}
- */
-module.exports = {
+const config: Config = {
   content: [
     `!${path.resolve(__dirname, '.cache')}`,
     `!${path.resolve(__dirname, '.temp')}`,
     `!${path.resolve(__dirname, 'dist')}`,
-    path.resolve(__dirname, '**/*.{ts,vue,json}'),
-    path.resolve(__dirname, '..', '**/*.md'),
+    path.resolve(__dirname, 'src/.vuepress/**/*.{ts,vue,json}'),
+    path.resolve(__dirname, 'src/**/*.md'),
   ],
   safelist: [
     // prevent code styles in base layer from getting purged.
@@ -70,3 +68,5 @@ module.exports = {
     },
   },
 };
+
+export default config;

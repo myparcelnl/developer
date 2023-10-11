@@ -1,6 +1,6 @@
 // noinspection UnnecessaryLocalVariableJS
 
-import path from 'path';
+import {path} from '@vuepress/utils';
 
 export const DIR_VUEPRESS = __dirname;
 

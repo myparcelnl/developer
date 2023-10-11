@@ -1,8 +1,8 @@
-import {DIR_CLIENT} from '../../shared/directories';
-import {Plugin} from 'vuepress';
 import fs from 'fs';
-import path from 'path';
+import {type Plugin} from 'vuepress';
+import {path} from '@vuepress/utils';
 import {registerComponentsPlugin} from '@vuepress/plugin-register-components';
+import {DIR_CLIENT} from '../../shared/directories';
 
 const additionalComponents = {
   HomeLink: '@mptheme/client/views/home/home-link/HomeLink.vue',

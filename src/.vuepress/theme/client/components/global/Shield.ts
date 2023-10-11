@@ -1,6 +1,6 @@
-import {FunctionalComponent, h} from 'vue';
-import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
+import {type FunctionalComponent, h} from 'vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 
 const BASE_URL = 'https://img.shields.io/';
 
@@ -42,7 +42,7 @@ const Shield: FunctionalComponent<Props> = (props) => {
   const image = h(MPImg, {
     src: `${BASE_URL}${props.path}?${params}`,
     alt: props.alt ?? '',
-    class: 'rounded-sm overflow-hidden h-7',
+    class: 'rounded-sm overflow-hidden',
   });
 
   if (props.href) {

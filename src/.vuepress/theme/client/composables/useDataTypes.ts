@@ -13,13 +13,13 @@ export interface DataTypeWithName extends BaseDataType {
   NAME: string;
 }
 
-export interface DataType {
+export interface DataTypeGroup {
   name: string;
   children: (DataTypeWithId | DataTypeWithName)[];
 }
 
 // eslint-disable-next-line max-lines-per-function
-export const useDataTypes = (): DataType[] => [
+export const useDataTypes = (): DataTypeGroup[] => [
   {
     name: 'shipment-status',
     children: [

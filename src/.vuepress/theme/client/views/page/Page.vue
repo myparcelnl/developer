@@ -10,10 +10,6 @@
       class="page pb-12 pt-4">
       <slot name="content">
         <h1
-          v-if="sidebar.items[0]?.text"
-          v-text="sidebar.items[0]?.text" />
-
-        <h2
           v-if="frontmatter.title"
           v-text="frontmatter.title" />
 
@@ -30,15 +26,15 @@
 </template>
 
 <script lang="ts">
-import {MyPaPageData, MyPaPageFrontmatter} from '@mptheme/config.types';
-import {usePageData, usePageFrontmatter} from '@vuepress/client';
-import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
-import PageContainer from '@mptheme/client/views/page/page-container/PageContainer.vue';
-import PageFooter from '@mptheme/client/views/page/page-footer/PageFooter.vue';
-import RedirectContent from '@mptheme/client/components/redirect-content/RedirectContent.vue';
-import RouteBreadcrumbs from '@mptheme/client/views/page/RouteBreadcrumbs.vue';
 import {defineComponent} from 'vue';
-import {useSidebar} from '@mptheme/client/composables';
+import {usePageData, usePageFrontmatter} from '@vuepress/client';
+import {type MyPaPageData, type MyPaPageFrontmatter} from '@mptheme/config.types';
+import PageFooter from '@mptheme/client/views/page/page-footer/PageFooter.vue';
+import PageContainer from '@mptheme/client/views/page/page-container/PageContainer.vue';
+import RouteBreadcrumbs from '@mptheme/client/views/page/RouteBreadcrumbs.vue';
+import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
+import RedirectContent from '@mptheme/client/components/redirect-content/RedirectContent.vue';
+import {useSidebar} from '@mptheme/client';
 
 export default defineComponent({
   name: 'Page',

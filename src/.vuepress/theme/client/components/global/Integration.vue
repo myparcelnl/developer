@@ -71,12 +71,12 @@
 </template>
 
 <script lang="ts">
-import {ComputedRef, PropType, computed, defineComponent} from 'vue';
-import {Integration, useIntegrations} from '@mptheme/client/composables/useIntegrations';
+import {computed, type ComputedRef, defineComponent, type PropType} from 'vue';
+import {type IntegrationDefinition, useIntegrations} from '@mptheme/client/composables/useIntegrations';
+import {useTranslate} from '@mptheme/client/composables';
+import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
-import MPImg from '@mptheme/client/components/global/MPImg.vue';
-import {useTranslate} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'Integration',
@@ -93,7 +93,7 @@ export default defineComponent({
     },
 
     integration: {
-      type: Object as PropType<Integration>,
+      type: Object as PropType<IntegrationDefinition>,
       default: null,
     },
   },
@@ -106,7 +106,7 @@ export default defineComponent({
     const translate = useTranslate();
     const integrations = useIntegrations();
 
-    const data: ComputedRef<Integration> = computed(() => {
+    const data: ComputedRef<IntegrationDefinition> = computed(() => {
       return props.integration ?? integrations.value.find(({name}) => name === props.name);
     });
 

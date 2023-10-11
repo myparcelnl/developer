@@ -1,9 +1,9 @@
-import {Breakpoint, Overwrite} from '@mptheme/index.types';
-import {DefaultThemeOptions, PageData, SiteData} from 'vuepress';
-import {Config} from 'tailwindcss';
-import {DefaultThemeNormalPageFrontmatter} from '@vuepress/theme-default/lib/shared';
-import {Language} from '../plugins/parseTranslations/shared';
-import {NavbarConfig} from '@vuepress/theme-default/lib/shared/nav';
+import {type DefaultThemeOptions, type PageData, type SiteData} from 'vuepress';
+import {type Config} from 'tailwindcss';
+import {type NavbarConfig} from '@vuepress/theme-default/lib/shared/nav';
+import {type DefaultThemeNormalPageFrontmatter} from '@vuepress/theme-default/lib/shared';
+import {type Breakpoint, type Overwrite} from '@mptheme/index.types';
+import {type Language} from '../plugins/parseTranslations/shared';
 
 export interface MyPaNavItem {
   text: string;
@@ -101,6 +101,9 @@ export interface MyPaPageFrontmatter extends DefaultThemeNormalPageFrontmatter {
   languages?: Record<string, null | string> | OneOrMore<string> | Record<string, string>[];
 
   sidebar?: 'auto' | false;
+
+  filePathRelative?: string | null;
+  hasContent?: boolean;
 }
 
 export interface MyPaThemeData extends Omit<DefaultThemeOptions, 'sidebar' | 'navbar' | 'locales'> {

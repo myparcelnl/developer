@@ -46,14 +46,14 @@
 </template>
 
 <script lang="ts">
-import {PropType, computed, defineComponent, ref, toRefs} from 'vue';
+import {type ResolvedSidebarItem} from 'vuepress';
 import {useRoute, useRouter} from 'vue-router';
-import {MyPaResolvedSidebarItem} from '@mptheme/config.types';
-import {ResolvedSidebarItem} from 'vuepress';
-import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
-import {isActiveSidebarItem} from '@vuepress/theme-default/lib/client';
+import {computed, defineComponent, type PropType, ref, toRefs} from 'vue';
 import {usePageFrontmatter} from '@vuepress/client';
+import {type MyPaResolvedSidebarItem} from '@mptheme/config.types';
 import {useSidebar} from '@mptheme/client/composables/sidebar';
+import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
+import {isActiveSidebarItem} from '../../composables';
 
 export default defineComponent({
   name: 'SidebarItem',

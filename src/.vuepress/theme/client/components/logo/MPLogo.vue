@@ -32,52 +32,39 @@
   </ClientOnly>
 </template>
 
-<script lang="ts">
-import {PropType, computed, defineComponent, reactive} from 'vue';
+<script lang="ts" setup>
+import {computed, type PropType, reactive} from 'vue';
 import {breakpointsTailwind, useBreakpoints} from '@vueuse/core';
-import {Breakpoint} from '@mptheme/index.types';
 import {ClientOnly} from '@vuepress/client';
+import {type Breakpoint} from '@mptheme/index.types';
 
 const VIEW_BOX_ICON_LOGO = '0 0 135.7 203.6';
+
 const VIEW_BOX_FULL_LOGO = '0 0 931.2 203.6';
 
-export default defineComponent({
-  name: 'MPLogo',
-  components: {
-    ClientOnly,
+const props = defineProps({
+  showFrom: {
+    type: String as PropType<Breakpoint>,
+    default: null,
   },
 
-  props: {
-    showFrom: {
-      type: String as PropType<Breakpoint>,
-      default: null,
-    },
-
-    fullFrom: {
-      type: String as PropType<Breakpoint>,
-      default: null,
-    },
+  fullFrom: {
+    type: String as PropType<Breakpoint>,
+    default: null,
   },
+});
 
-  setup: (props) => {
-    const breakpoints = reactive(useBreakpoints(breakpointsTailwind));
+const breakpoints = reactive(useBreakpoints(breakpointsTailwind));
 
-    const show = computed(() => {
-      return !props.showFrom || breakpoints[props.showFrom];
-    });
+const show = computed(() => {
+  return !props.showFrom || breakpoints[props.showFrom];
+});
 
-    const showFull = computed(() => {
-      return !props.fullFrom || breakpoints[props.fullFrom];
-    });
+const showFull = computed(() => {
+  return !props.fullFrom || breakpoints[props.fullFrom];
+});
 
-    return {
-      viewBox: computed(() => {
-        return showFull.value ? VIEW_BOX_FULL_LOGO : VIEW_BOX_ICON_LOGO;
-      }),
-
-      show,
-      showFull,
-    };
-  },
+const viewBox = computed(() => {
+  return showFull.value ? VIEW_BOX_FULL_LOGO : VIEW_BOX_ICON_LOGO;
 });
 </script>

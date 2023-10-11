@@ -25,6 +25,8 @@ export const seoPlugin = (): Plugin => {
     },
 
     extendsPage: (page) => {
+      const excerpt = page.excerpt?.substring(0, 150);
+
       page.frontmatter.head ??= [];
 
       page.frontmatter.head = page.frontmatter.head.filter((meta) => meta[1].name !== 'description');
@@ -33,7 +35,7 @@ export const seoPlugin = (): Plugin => {
         'meta',
         {
           name: 'description',
-          content: `${page.title} – ${page.excerpt.substring(0, 150)}`,
+          content: `${page.title}${excerpt ? ` – ${excerpt}` : ''}`,
         },
       ]);
 

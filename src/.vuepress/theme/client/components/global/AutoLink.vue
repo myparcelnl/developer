@@ -27,13 +27,14 @@
 </template>
 
 <script lang="ts">
-import {MyPaNavLink, MyPaSidebarItem} from '@mptheme/config.types';
-import {PropType, computed, defineComponent, toRefs} from 'vue';
-import {NavLink} from '@vuepress/theme-default/lib/shared/nav';
-import {isOfType} from '../../../shared/utils';
-import {useLink} from '@mptheme/client/composables/useLink';
 import {useRouter} from 'vue-router';
+import {computed, defineComponent, type PropType, toRefs} from 'vue';
+import {get} from '@vueuse/core';
+import {type NavLink} from '@vuepress/theme-default/lib/shared/nav';
 import {useSiteData} from '@vuepress/client';
+import {type MyPaNavLink, type MyPaSidebarItem} from '@mptheme/config.types';
+import {useLink} from '@mptheme/client/composables/useLink';
+import {isOfType} from '../../../shared/utils';
 
 export default defineComponent({
   name: 'AutoLink',
@@ -75,7 +76,13 @@ export default defineComponent({
     });
 
     const isActiveInSubpath = computed(() => {
-      return !shouldBeActiveInSubpath.value || (linkItem.value.link && route.path.startsWith(linkItem.value.link));
+      const {link} = get(linkItem);
+
+      const resolvedLink: undefined | string = typeof link === 'function' ? link(route.path) : link;
+
+      return (
+        !shouldBeActiveInSubpath.value || (linkItem.value.link && resolvedLink && route.path.startsWith(resolvedLink))
+      );
     });
 
     const isActive = computed(() => {
