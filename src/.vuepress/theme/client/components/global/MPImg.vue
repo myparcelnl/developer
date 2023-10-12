@@ -4,10 +4,32 @@
       v-if="loading"
       class="animate-pulse bg-black bg-opacity-5 dark:bg-white h-full rounded w-full" />
 
-    <component
-      :is="url ? 'a' : 'span'"
-      :href="url || ''"
-      class="flex flex-grow">
+    <Fragment :component="url ? 'AutoLink' : null">
+      <Suspense>
+        <AutoLink
+          :href="url || ''"
+          :item="{
+            text: alt,
+            link: url,
+          }"
+          class="flex flex-grow">
+          <img
+            :src="src"
+            class="max-h-full"
+            :class="[
+              imageClass,
+              {
+                'no-style': noStyle,
+              },
+            ]"
+            :alt="alt"
+            @dragstart.prevent="null"
+            @loadstart="onLoadStart"
+            @load="onLoad"
+            @error="onError" />
+        </AutoLink>
+      </Suspense>
+
       <img
         :src="src"
         class="max-h-full"
@@ -22,15 +44,22 @@
         @loadstart="onLoadStart"
         @load="onLoad"
         @error="onError" />
-    </component>
+    </Fragment>
   </div>
 </template>
 
 <script lang="ts">
 import {PropType, defineComponent, ref} from 'vue';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
+import Fragment from '@mptheme/client/components/Fragment.vue';
 
 export default defineComponent({
   name: 'MPImg',
+  components: {
+    AutoLink,
+    Fragment,
+  },
+
   props: {
     src: {
       type: String,
