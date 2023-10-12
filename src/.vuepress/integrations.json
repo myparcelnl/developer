@@ -42,8 +42,7 @@
     "internal": true,
     "repository": "myparcelnl/prestashop",
     "documentation": "/documentation/11.prestashop.html",
-    "image": "prestashop.svg",
-    "url": "https://github.com/myparcelnl/prestashop"
+    "image": "prestashop.svg"
   },
   {
     "name": "magento-1",
@@ -53,8 +52,7 @@
     "repository": "myparcelnl/magento1",
     "documentation": "https://myparcelnl.github.io/magento1",
     "image": "magento.svg",
-    "classes": "bg-zinc-100",
-    "url": "https://github.com/myparcelnl/magento1"
+    "classes": "bg-zinc-100"
   },
   {
     "name": "magento-2",
@@ -63,8 +61,7 @@
     "internal": true,
     "repository": "myparcelnl/magento",
     "documentation": "/documentation/13.magento2.html",
-    "image": "magento.svg",
-    "url": "https://github.com/myparcelnl/magento"
+    "image": "magento.svg"
   },
   {
     "name": "shopify",
@@ -96,8 +93,7 @@
     "title": "CS-Cart",
     "type": "plugin",
     "documentation": "https://myparcelnl.github.io/cs-cart",
-    "image": "cart.png",
-    "url": "https://github.com/myparcelnl/cs-cart"
+    "image": "cart.png"
   },
   {
     "name": "opencart-2-2-x – 2-3-x",
@@ -105,8 +101,7 @@
     "type": "plugin",
     "documentation": "https://myparcelnl.github.io/opencart2_3",
     "image": "opencart.svg",
-    "classes": "bg-sky-100",
-    "url": "https://github.com/myparcelnl/opencart2_3"
+    "classes": "bg-sky-100"
   },
   {
     "name": "opencart-3",
@@ -114,8 +109,7 @@
     "type": "plugin",
     "documentation": "https://myparcelnl.github.io/opencart3",
     "image": "opencart.svg",
-    "classes": "bg-sky-50",
-    "url": "https://github.com/myparcelnl/opencart3"
+    "classes": "bg-sky-50"
   },
   {
     "name": "shoppagina",
@@ -131,16 +125,14 @@
     "type": "plugin",
     "documentation": "https://myparcelnl.github.io/virtuemart",
     "image": "virtuemart.svg",
-    "classes": "bg-zinc-100",
-    "url": "https://myparcelnl.github.io/virtuemart"
+    "classes": "bg-zinc-100"
   },
   {
     "name": "virtuemart-3",
     "title": "Virtuemart 3",
     "type": "plugin",
     "documentation": "https://myparcelnl.github.io/virtuemart3",
-    "image": "virtuemart.svg",
-    "url": "https://myparcelnl.github.io/virtuemart3"
+    "image": "virtuemart.svg"
   },
   {
     "name": "ccv",
