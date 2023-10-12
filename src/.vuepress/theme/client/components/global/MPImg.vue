@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import {PropType, defineComponent, ref} from 'vue';
+import {type PropType, defineComponent, ref} from 'vue';
 
 export default defineComponent({
   name: 'MPImg',
