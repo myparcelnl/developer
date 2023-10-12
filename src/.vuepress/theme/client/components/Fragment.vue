@@ -1,23 +1,16 @@
 <template>
-  <component
+  <Component
     :is="component"
     v-if="component">
     <slot />
-  </component>
+  </Component>
   <slot v-else />
 </template>
 
-<script lang="ts">
-import {type PropType, defineComponent} from 'vue';
-import {type ComponentOrHtmlElement} from '../../../../../types/types';
+<script lang="ts" setup>
+import {type Component} from 'vue';
 
-export default defineComponent({
-  name: 'Fragment',
-  props: {
-    component: {
-      type: [String, Object] as PropType<ComponentOrHtmlElement>,
-      default: null,
-    },
-  },
-});
+defineProps<{
+  component?: string | Component;
+}>();
 </script>
