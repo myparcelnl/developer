@@ -4,62 +4,28 @@
       v-if="loading"
       class="animate-pulse bg-black bg-opacity-5 dark:bg-white h-full rounded w-full" />
 
-    <Fragment :component="url ? 'AutoLink' : null">
-      <Suspense>
-        <AutoLink
-          :href="url || ''"
-          :item="{
-            text: alt,
-            link: url,
-          }"
-          class="flex flex-grow">
-          <img
-            :src="src"
-            class="max-h-full"
-            :class="[
-              imageClass,
-              {
-                'no-style': noStyle,
-              },
-            ]"
-            :alt="alt"
-            @dragstart.prevent="null"
-            @loadstart="onLoadStart"
-            @load="onLoad"
-            @error="onError" />
-        </AutoLink>
-      </Suspense>
-
-      <img
-        :src="src"
-        class="max-h-full"
-        :class="[
-          imageClass,
-          {
-            'no-style': noStyle,
-          },
-        ]"
-        :alt="alt"
-        @dragstart.prevent="null"
-        @loadstart="onLoadStart"
-        @load="onLoad"
-        @error="onError" />
-    </Fragment>
+    <img
+      :src="src"
+      class="max-h-full"
+      :class="[
+        imageClass,
+        {
+          'no-style': noStyle,
+        },
+      ]"
+      :alt="alt"
+      @dragstart.prevent="null"
+      @loadstart="onLoadStart"
+      @load="onLoad"
+      @error="onError" />
   </div>
 </template>
 
 <script lang="ts">
-import {PropType, defineComponent, ref} from 'vue';
-import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
-import Fragment from '@mptheme/client/components/Fragment.vue';
+import {type PropType, defineComponent, ref} from 'vue';
 
 export default defineComponent({
   name: 'MPImg',
-  components: {
-    AutoLink,
-    Fragment,
-  },
-
   props: {
     src: {
       type: String,
@@ -73,11 +39,6 @@ export default defineComponent({
 
     imageClass: {
       type: [String, Array, Object] as PropType<string[] | string | Record<string, string>>,
-      default: null,
-    },
-
-    url: {
-      type: String,
       default: null,
     },
 

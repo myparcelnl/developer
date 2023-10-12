@@ -15,8 +15,10 @@
         'rounded-lg',
         'transition-all',
       ]">
-      <div
+      <Fragment
         v-if="data.image"
+        :component="data.url ? AutoLink : 'div'"
+        :item="data.url"
         class="flex grow px-3 py-5 relative"
         :class="[
           data.classes,
@@ -30,14 +32,13 @@
           :src="`/integrations/${data.image}`"
           role="none"
           image-class="m-auto"
-          :url="data.url"
           :alt="`${data.title} logo`" />
         <Icon
           v-if="data.internal"
           title="Maintained by MyParcel"
           icon="myparcel"
           class="absolute right-2 text-xl top-1" />
-      </div>
+      </Fragment>
 
       <div class="border-t dark:bg-zinc-800 p-3">
         <span
@@ -71,47 +72,28 @@
   </div>
 </template>
 
-<script lang="ts">
-import {computed, type ComputedRef, defineComponent, type PropType} from 'vue';
+<script lang="ts" setup>
+import {computed, type ComputedRef} from 'vue';
 import {type IntegrationDefinition, useIntegrations} from '@mptheme/client/composables/useIntegrations';
 import {useTranslate} from '@mptheme/client/composables';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
-import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
+import Fragment from '../Fragment.vue';
+import AutoLink from './AutoLink.vue';
 
-export default defineComponent({
-  name: 'Integration',
-  components: {
-    AutoLink,
-    Icon,
-    MPImg,
-  },
+const props = defineProps<{
+  name?: string;
+  integration?: IntegrationDefinition;
+}>();
 
-  props: {
-    name: {
-      type: String,
-      default: null,
-    },
+if (!props.name && !props.integration) {
+  throw new Error('Either a name or integration prop must be provided to use <Integration />.');
+}
 
-    integration: {
-      type: Object as PropType<IntegrationDefinition>,
-      default: null,
-    },
-  },
+const translate = useTranslate();
+const integrations = useIntegrations();
 
-  setup: (props) => {
-    if (!props.name && !props.integration) {
-      throw new Error('Either a name or integration prop must be provided to use <Integration />.');
-    }
-
-    const translate = useTranslate();
-    const integrations = useIntegrations();
-
-    const data: ComputedRef<IntegrationDefinition> = computed(() => {
-      return props.integration ?? integrations.value.find(({name}) => name === props.name);
-    });
-
-    return {translate, data};
-  },
+const data: ComputedRef<IntegrationDefinition> = computed(() => {
+  return props.integration ?? integrations.value.find(({name}) => name === props.name)!;
 });
 </script>
