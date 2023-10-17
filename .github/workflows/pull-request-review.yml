@@ -1,20 +1,19 @@
-name: 'Lint pull request title'
+name: 'Label pull request'
 
 on:
-  pull_request:
-    types:
-      - opened
-      - edited
+  pull_request_review:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
 
 jobs:
-  lint:
+  label:
     runs-on: ubuntu-22.04
     steps:
-      - uses: myparcelnl/actions/pr-validate-title-conventional@v3
+      - uses: myparcelnl/actions/pr-label-by-review@v3
         with:
           app-id: ${{ secrets.MYPARCEL_APP_ID }}
           private-key: ${{ secrets.MYPARCEL_APP_PRIVATE_KEY }}
+          label-approved: 'approved'
+          label-changes-requested: 'changes requested'
+          protection-type: 'rulesets'

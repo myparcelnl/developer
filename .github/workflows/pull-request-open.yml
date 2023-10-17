@@ -1,20 +1,19 @@
-name: 'Lint pull request title'
+name: 'Assign pull request author'
 
 on:
   pull_request:
     types:
       - opened
-      - edited
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
-  lint:
+  assign-author:
     runs-on: ubuntu-22.04
     steps:
-      - uses: myparcelnl/actions/pr-validate-title-conventional@v3
+      - uses: myparcelnl/actions/pr-assign-author@v3
         with:
           app-id: ${{ secrets.MYPARCEL_APP_ID }}
           private-key: ${{ secrets.MYPARCEL_APP_PRIVATE_KEY }}
