@@ -9,6 +9,27 @@ Hieronder kan je de release notes vinden van de MyParcel backoffice. Elke maand 
 
 ## 2023
 
+### Release notes week 48
+
+_29-11-2023_ en _01-12-2023_
+
+#### Nieuwe features
+
+- Je kunt vanaf nu in je orderbeheer ook VVB (Verzenden Via Bol) orders importeren en verwerken.
+- De integratiepagina heeft een nieuwe lik verf gekregen.
+
+### Release notes week 47
+
+_21-11-2023_
+
+#### Nieuwe features
+
+- Het is nu voor Sendmyparcel klanten mogelijk om PostNL retouren aan te maken.
+
+#### Bugfixes
+
+- Bestanden worden weer onder de correcte bestandsnaam gedownload.
+
 ### Release notes week 44 
 
 _02-11-2023_
@@ -23,11 +44,11 @@ _02-11-2023_
 
 _20-10-2023_
 
-### Nieuwe features
+#### Nieuwe features
 
 - Vanaf nu kunnen sendmyparcel klanten ook gebruik maken van bpost brievenbuspakketten.
 
-### Bugfixes
+#### Bugfixes
 
 - De Google Chrome Extensie hield geen rekening met verzendregels, dat doet hij nu wel.
 
