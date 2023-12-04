@@ -28,7 +28,7 @@ _21-11-2023_
 
 #### Bugfixes
 
-- Bestanden worden weer onder de orrecte bestandsnaam gedownload.
+- Bestanden worden weer onder de correcte bestandsnaam gedownload.
 
 ### Release notes week 44 
 
