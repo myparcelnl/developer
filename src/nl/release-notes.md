@@ -9,6 +9,21 @@ Hieronder kan je de release notes vinden van de MyParcel backoffice. Elke maand 
 
 ## 2023
 
+### Release notes week 50
+
+_12-12-2023_
+
+#### Nieuwe features
+
+- Je kunt nu en het Track & Trace portaal ook linken naar je Youtube en TikTok accounts
+- Klanten met een MyOrders Start abonnement kunnen nu kiezen of de orders van nieuw naar oud of andersom gesorteerd worden.
+- Bij het opvoeren of aanpassen van je DPD contract kun je nu ook je depotcode meegeven
+
+#### Bugfixes
+
+- Shipping rules werden niet altijd in acht genomen bij het uploaden van CSV-bestanden.
+- Bij het aanpassen van orders werd onterecht een leeg factuuradres meegestuurd, waardoor het aanpassen niet wilde lukken. 
+
 ### Release notes week 48
 
 _29-11-2023_ en _01-12-2023_
