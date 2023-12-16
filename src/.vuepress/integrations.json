@@ -50,7 +50,6 @@
     "type": "plugin",
     "internal": true,
     "repository": "myparcelnl/magento1",
-    "documentation": "https://myparcelnl.github.io/magento1",
     "image": "magento.svg",
     "classes": "bg-zinc-100"
   },
