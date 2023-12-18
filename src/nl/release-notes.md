@@ -15,7 +15,7 @@ _12-12-2023_
 
 #### Nieuwe features
 
-- Je kunt nu en het Track & Trace portaal ook linken naar je Youtube en TikTok accounts
+- Je kunt nu in het Track & Trace portaal ook linken naar je Youtube en TikTok accounts
 - Klanten met een MyOrders Start abonnement kunnen nu kiezen of de orders van nieuw naar oud of andersom gesorteerd worden.
 - Bij het opvoeren of aanpassen van je DPD contract kun je nu ook je depotcode meegeven
 
