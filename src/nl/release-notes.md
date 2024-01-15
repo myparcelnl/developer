@@ -7,7 +7,25 @@ editLink: false
 
 Hieronder kan je de release notes vinden van de MyParcel backoffice. Elke maand doen we twee releases voor de backoffice. Relevante dingen zullen hieronder benoemd worden. Als je vragen hebt over een release, neem dan [contact] met ons op.
 
+## 2024
+
+### Release notes week 2
+
+_10-01-2023_
+
+#### Nieuwe features
+
+- Deze keer hebben we geen spannende nieuwe features gebouwd.
+
 ## 2023
+
+### Release notes week 52
+
+_27-12-2023_
+
+#### Nieuwe features
+
+- Je kunt nu met een Start pakket vanuit het adresboek in bulk zendingen aanmaken.
 
 ### Release notes week 50
 
