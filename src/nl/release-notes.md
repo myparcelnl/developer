@@ -9,9 +9,48 @@ Hieronder kan je de release notes vinden van de MyParcel backoffice. Elke maand 
 
 ## 2024
 
+### Release notes week 10
+
+_07-03-2024_
+
+#### Nieuwe features
+
+- Deze keer hebben we geen spannende nieuwe features gebouwd.
+
+### Release notes week 8
+
+_21-02-2024_
+
+#### Nieuwe features
+
+- Deze keer hebben we geen spannende nieuwe features gebouwd.
+
+### Release notes week 6
+
+_09-02-2024_
+
+#### Nieuwe features
+
+- Deze keer hebben we geen spannende nieuwe features gebowud.
+
+#### Bugfixes
+
+- Als je in het uitgebreid zoeken het zoekfilter leegt, werden je oude criteria niet verwijderd uit de zoekopdracht.
+- Het sorteren van orders werkte niet goed.
+
+### Release notes week 4
+
+_23-01-2024_
+
+#### Nieuwe features
+
+- Klanten met een Start MyOrders abonnement kunnen vanaf nu hun orders LIFO of FIFO sorteren.
+- Het is nu mogelijk om pakbonnen van Verzenden Via Bol orders te downloaden.
+- Je kan nu in bulk zendingen aanmaken op basis van adressen in het adresboek.
+
 ### Release notes week 2
 
-_10-01-2023_
+_10-01-2024_
 
 #### Nieuwe features
 
