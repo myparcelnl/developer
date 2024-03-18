@@ -10,21 +10,18 @@ Hieronder kan je de release notes vinden van de MyParcel backoffice. Elke maand 
 ## 2024
 
 ### Release notes week 10
-_07-03-2024_
 
 #### Nieuwe features
 
 - Deze keer hebben we geen spannende nieuwe features gebouwd.
 
 ### Release notes week 8
-_21-02-2024_
 
 #### Nieuwe features
 
 - Deze keer hebben we geen spannende nieuwe features gebouwd.
 
 ### Release notes week 6
-_09-02-2024_
 
 #### Nieuwe features
 
@@ -36,7 +33,6 @@ _09-02-2024_
 - Het sorteren van orders werkte niet goed.
 
 ### Release notes week 4
-_23-01-2024_
 
 #### Nieuwe features
 
@@ -45,7 +41,6 @@ _23-01-2024_
 - Je kan nu in bulk zendingen aanmaken op basis van adressen in het adresboek.
 
 ### Release notes week 2
-_10-01-2024_
 
 #### Nieuwe features
 
@@ -54,14 +49,12 @@ _10-01-2024_
 ## 2023
 
 ### Release notes week 52
-_27-12-2023_
 
 #### Nieuwe features
 
 - Je kunt nu met een Start pakket vanuit het adresboek in bulk zendingen aanmaken.
 
 ### Release notes week 50
-_12-12-2023_
 
 #### Nieuwe features
 
@@ -75,7 +68,6 @@ _12-12-2023_
 - Bij het aanpassen van orders werd onterecht een leeg factuuradres meegestuurd, waardoor het aanpassen niet wilde lukken. 
 
 ### Release notes week 48
-_29-11-2023_ en _01-12-2023_
 
 #### Nieuwe features
 
@@ -83,7 +75,6 @@ _29-11-2023_ en _01-12-2023_
 - De integratiepagina heeft een nieuwe lik verf gekregen.
 
 ### Release notes week 47
-_21-11-2023_
 
 #### Nieuwe features
 
@@ -94,7 +85,6 @@ _21-11-2023_
 - Bestanden worden weer onder de correcte bestandsnaam gedownload.
 
 ### Release notes week 44
-_02-11-2023_
 
 #### Nieuwe features
 
@@ -103,7 +93,6 @@ _02-11-2023_
 - Je kunt nu kiezen of je tussen je shops het adresboek wil delen of niet.
 
 ### Release notes week 42
-_20-10-2023_
 
 #### Nieuwe features
 
@@ -114,49 +103,42 @@ _20-10-2023_
 - De Google Chrome Extensie hield geen rekening met verzendregels, dat doet hij nu wel.
 
 ### Release notes week 40
-_04-10-2023_
 
 #### Nieuwe features
 
 - Deze keer hebben we geen spannende nieuwe features gebouwd.
 
 ### Release notes week 38
-_20-09-2023_
 
 #### Nieuwe features
 
 - Klanten kunnen nu DHL For You brievenbuspakjes versturen via MyParcel.
 
 ### Release notes week 28
-_13-07-2023_
 
 #### Nieuwe features
 
 - De pagina voor zendinginstellingen is opgedeeld in 2 tabjes: Verzendlabel en Vervoerders. Binnenkort komt daar een derde tabje bij, voor iets nieuws...
 
 ### Release notes week 26
-_26-06-2023_
 
 #### Nieuwe features
 
 - Deze keer hebben we geen spannende nieuwe features gebouwd.
 
 ### Release notes week 25
-_10-06-2023_
 
 #### Nieuwe features
 
 - We zijn live met Abonnementen! Je kan nu abonnementen afsluiten om bijvoorbeeld onder je eigen contract verzendlabels te creëren (MyContracts), of om belangrijke data over je zendingen in te zien (MyAnalytics). Meer mogelijkheden volgen binnenkort.
 
 ### Release notes week 24
-_14-06-2023_
 
 #### Nieuwe features
 
 - Deze keer hebben we geen spannende nieuwe features gebouwd.
 
 ### Release notes week 22
-_01-06-2023_
 
 #### Nieuwe features
 
@@ -167,7 +149,6 @@ _01-06-2023_
 - PostNL contract klanten liepen tegen een bug aan waarbij als je van land wisselde in het nieuwe zendingformulier e.e.a. mis ging. Dat is nu opgelost.
 
 ### Release notes week 20
-_19-05-2023_
 
 #### Nieuwe features
 
@@ -176,7 +157,6 @@ _19-05-2023_
 - Je kan nu het side menu in- en uitklappen voor meer ruimte op je scherm.
 
 ### Release notes week 19
-_08-05-2023_
 
 #### Nieuwe features
 
@@ -186,7 +166,6 @@ _08-05-2023_
 - We hebben de tarievenpagina vernieuwd.
 
 ### Release notes week 16
-_21-04-2023_
 
 #### Nieuwe features
 
@@ -197,14 +176,12 @@ _21-04-2023_
 :::
 
 ### Release notes week 14
-_06-04-2023_
 
 #### Nieuwe features
 
 - Deze keer hebben we geen spannende nieuwe features gebouwd.
 
 ### Release notes week 12
-_22-03-2023_
 
 #### Nieuwe features
 
@@ -212,7 +189,6 @@ _22-03-2023_
 - Het is nu mogelijk om direct vanuit het adresboek van een adres een retourzending te maken.
 
 ### Release notes week 10
-_08-03-2023_
 
 #### Nieuwe features
 
@@ -220,7 +196,6 @@ _08-03-2023_
 - Je kan nu vanuit het adresboek direct een retour maken vanaf een (Europees) adres.
 
 ### Release notes week 6
-_09-02-2023_
 
 #### Nieuwe features
 
@@ -228,7 +203,6 @@ _09-02-2023_
 - Vanaf nu kan je zendingen al zelf op afgelverd zetten als ze nog in het sorteerproces zitten.
 
 ### Release notes week 4
-_26-01-2023_
 
 #### Nieuwe features
 
@@ -238,7 +212,6 @@ _26-01-2023_
 - Klanten hebben aangegeven dat de feedback-knop rechtsonder soms in de weg zat: we hebben hem daarom verplaatst naar rechtsbovenin naast de nieuwe zendingknop.
 
 ### Release notes week 2
-_12-01-2023_
 
 #### Nieuwe features
 
@@ -251,14 +224,12 @@ _12-01-2023_
 ## 2022
 
 ### Release notes week 52
-_30-12-2022_
 
 #### Nieuwe features
 
 - Deze keer hebben we geen spannende nieuwe features gebouwd. We wensen je een fijne jaarwisseling!
 
 ### Release notes week 50
-_14-12-2022_
 
 #### Nieuwe features
 
@@ -270,7 +241,6 @@ _14-12-2022_
   - Vanaf nu wordt niet alleen de datum, maar ook de tijd van berichten over een case getoond.
 
 ### Release notes week 47
-_24-11-2022_
 
 #### Nieuwe features
 
@@ -278,7 +248,6 @@ _24-11-2022_
   - Op ons Belgisch platform kan je nu zendingen doen op je eigen contract met bpost of DPD.
 
 ### Release notes week 46
-_17-11-2022_
 
 #### Nieuwe features
 
@@ -288,7 +257,6 @@ _17-11-2022_
   - Ook op ons Belgische platform kan je nu je orders uploaden en beheren.
 
 ### Release notes week 44
-_03-11-2022_
 
 #### Nieuwe features
 
@@ -302,7 +270,6 @@ _03-11-2022_
   - Als je een zending met een bezorgmoment had aangemaakt, kon je dat bezorgmoment niet meer aanpassen. Dat kan nu wel weer.
 
 ### Release notes week 42
-_21-10-2022_
 
 #### Nieuwe features
 
@@ -315,7 +282,6 @@ _21-10-2022_
   - Als je meerdere labels in één keer wilde printen, werd niet automatisch de status van die zendingen geüpdatet. Nu gebeurt dat wel weer.
 
 ### Release notes week 40
-_06-10-2022_
 
 #### Nieuwe features
 
@@ -329,7 +295,6 @@ _06-10-2022_
   - Het zendingoverzicht in de MyParcel Google Chrome Extensie was stuk: die hebben we gerepareerd.
 
 ### Release notes week 38
-_21-09-2022_
 
 #### Nieuwe features
 
@@ -343,14 +308,12 @@ _21-09-2022_
   - De link, waarmee je vanuit de Track & Trace informatie van een zending een case kon aanmaken, was verdwenen. Nu is hij er weer.
 
 ### Release notes week 37
-_15-09-2022_
 
 #### Nieuwe features
 
 - Deze keer hebben we geen spannende nieuwe features gebouwd.
 
 ### Release notes week 34
-_25-08-2022_
 
 #### Nieuwe features
 
