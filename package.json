@@ -7,10 +7,10 @@
   "bugs": {
     "url": "https://github.com/myparcelnl/developer/issues"
   },
-  "type": "module",
   "repository": "github:myparcelnl/developer",
   "license": "MIT",
   "author": "Edie Lemoine <edie@myparcel.nl>",
+  "type": "module",
   "scripts": {
     "build": "yarn optimize:svg -q && vuepress build src",
     "dev": "vuepress dev src",
@@ -18,10 +18,10 @@
     "optimize:svg": "svgo -r --multipass --final-newline --folder src/.vuepress/public",
     "preview": "http-server src/.vuepress/dist -s --port 9599",
     "test": "concurrently test:vitest:run yarn:test:links",
-    "test:vitest": "vitest",
-    "test:vitest:run": "vitest run",
     "test:links": "WAIT_ON_TIMEOUT=30000 start-server-and-test preview http://127.0.0.1:9599 test:links:run",
     "test:links:run": "hyperlink -ir --root src/.vuepress/dist http://127.0.0.1:9599",
+    "test:vitest": "vitest",
+    "test:vitest:run": "vitest run",
     "translations:import": "echo 'Importing translations...' && google-docs-importer -d 1q_las2AW8vZqhyiymXnPtrCsNQsye9W0Aqi3aWymjuU -o src/.vuepress/public/translations && echo 'Done!'",
     "translations:init": "test -f src/.vuepress/public/translations/en.json || yarn translations:import",
     "watch": "nodemon --ext ts,vue,md --watch src --exec 'vuepress build src --debug'"
@@ -57,7 +57,7 @@
     "@myparcel-eslint/eslint-config-prettier": "^1.2.3",
     "@myparcel-eslint/eslint-config-prettier-typescript": "^1.2.4",
     "@myparcel-eslint/eslint-config-prettier-typescript-vue": "^1.2.6",
-    "@myparcel/sdk": "^2.10.1",
+    "@myparcel/constants": "^2.0.0",
     "@tsconfig/node18": "^18.2.2",
     "@types/flat": "^5.0.2",
     "@types/lodash-es": "^4.17.6",

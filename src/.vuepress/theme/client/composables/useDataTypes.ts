@@ -1,5 +1,10 @@
 /* eslint-disable no-magic-numbers,@typescript-eslint/no-magic-numbers */
-import {CARRIERS, DELIVERY_TYPES, PACKAGE_TYPES, PLATFORMS} from '@myparcel/sdk';
+import {
+  CARRIER_IDS_TO_NAMES,
+  DELIVERY_TYPE_IDS_TO_NAMES,
+  PACKAGE_TYPE_IDS_TO_NAMES,
+  PLATFORM_IDS_TO_NAMES,
+} from '@myparcel/constants';
 
 interface BaseDataType {
   HUMAN?: string;
@@ -17,6 +22,16 @@ export interface DataTypeGroup {
   name: string;
   children: (DataTypeWithId | DataTypeWithName)[];
 }
+
+const objectToArray = (obj: Record<string, string>): DataTypeWithName[] => {
+  return Object.entries(obj).map(([id, name]) => {
+    return {
+      ID: Number(id),
+      NAME: name,
+      HUMAN: name,
+    };
+  });
+};
 
 // eslint-disable-next-line max-lines-per-function
 export const useDataTypes = (): DataTypeGroup[] => [
@@ -50,19 +65,19 @@ export const useDataTypes = (): DataTypeGroup[] => [
   },
   {
     name: 'package-type',
-    children: PACKAGE_TYPES.ALL,
+    children: objectToArray(PACKAGE_TYPE_IDS_TO_NAMES),
   },
   {
     name: 'delivery-type',
-    children: DELIVERY_TYPES.ALL,
+    children: objectToArray(DELIVERY_TYPE_IDS_TO_NAMES),
   },
   {
     name: 'carrier',
-    children: CARRIERS.ALL,
+    children: objectToArray(CARRIER_IDS_TO_NAMES),
   },
   {
     name: 'platform',
-    children: PLATFORMS.ALL,
+    children: objectToArray(PLATFORM_IDS_TO_NAMES),
   },
   {
     name: 'order-status',

@@ -951,6 +951,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@myparcel/constants@npm:^1.0.0":
+  version: 1.2.0
+  resolution: "@myparcel/constants@npm:1.2.0"
+  dependencies:
+    "@myparcel/ts-utils": ^1.7.0
+  checksum: 808b2bb62f8f9b92637736b2bee3eabfe857ba4ce9aeb0a945a5950d06077c6d4629e4b06def40c6b83bb1f9e2d9c0c0f81784dcb1a4eb133aebba09d4542879
+  languageName: node
+  linkType: hard
+
+"@myparcel/constants@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@myparcel/constants@npm:2.0.0"
+  dependencies:
+    "@myparcel/ts-utils": ^1.7.0
+  checksum: 7a70ae1749ebf6eaa6bb63d9afd7e2b314686bbec664f91bd921d38f72ab0635644acd2b41c1f5867111c2a912a83ddfbfb9a1c73a7885f6289eb6300c61d384
+  languageName: node
+  linkType: hard
+
 "@myparcel/developer-portal@workspace:.":
   version: 0.0.0-use.local
   resolution: "@myparcel/developer-portal@workspace:."
@@ -962,7 +980,8 @@ __metadata:
     "@myparcel-eslint/eslint-config-prettier": ^1.2.3
     "@myparcel-eslint/eslint-config-prettier-typescript": ^1.2.4
     "@myparcel-eslint/eslint-config-prettier-typescript-vue": ^1.2.6
-    "@myparcel/sdk": ^2.10.1
+    "@myparcel/constants": ^2.0.0
+    "@myparcel/sdk": ^3.8.1
     "@tsconfig/node18": ^18.2.2
     "@types/flat": ^5.0.2
     "@types/lodash-es": ^4.17.6
@@ -1016,12 +1035,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@myparcel/sdk@npm:^2.10.1":
-  version: 2.11.0
-  resolution: "@myparcel/sdk@npm:2.11.0"
+"@myparcel/sdk@npm:^3.8.1":
+  version: 3.8.1
+  resolution: "@myparcel/sdk@npm:3.8.1"
   dependencies:
+    "@myparcel/constants": ^1.0.0
     "@myparcel/ts-utils": ^1.6.0
-  checksum: cb5786cd9a03bd35aa27ba57375b096ed87d5fb3aa4733f8f614b721ce7affe3b9d155b425e1515b9ef5ae0ca0c459a679ebf988e2387ecd6d9f5b31940d47f4
+  checksum: 7f8166cd401ef0c2d21ff61b1997fa4919790e295f222d3b325db276c1c9b7948fa880aeacaa696f995e2b077d7621cae9e0935a42d358675d274cbd29c63c8a
   languageName: node
   linkType: hard
 
@@ -1029,6 +1049,13 @@ __metadata:
   version: 1.12.0
   resolution: "@myparcel/ts-utils@npm:1.12.0"
   checksum: 8627a0946e97f8ece44c3a9e1a762ce3ccdf6f0b68f39f225e02e451a5aa9c520dad018b51efd3e9e58b6bd0a654911f226fc59bef1e6d9e5e9fd287a7df4e7d
+  languageName: node
+  linkType: hard
+
+"@myparcel/ts-utils@npm:^1.7.0":
+  version: 1.14.0
+  resolution: "@myparcel/ts-utils@npm:1.14.0"
+  checksum: 3fa2be8b8514bada03f55910dca89435a99ab79345e658f9f9241e36687e671afaf3b17c0787d4887fd330197565a04ab51cd16310dc14915f7c7e43415e2c52
   languageName: node
   linkType: hard
 
