@@ -951,15 +951,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@myparcel/constants@npm:^1.0.0":
-  version: 1.2.0
-  resolution: "@myparcel/constants@npm:1.2.0"
-  dependencies:
-    "@myparcel/ts-utils": ^1.7.0
-  checksum: 808b2bb62f8f9b92637736b2bee3eabfe857ba4ce9aeb0a945a5950d06077c6d4629e4b06def40c6b83bb1f9e2d9c0c0f81784dcb1a4eb133aebba09d4542879
-  languageName: node
-  linkType: hard
-
 "@myparcel/constants@npm:^2.0.0":
   version: 2.0.0
   resolution: "@myparcel/constants@npm:2.0.0"
@@ -981,7 +972,6 @@ __metadata:
     "@myparcel-eslint/eslint-config-prettier-typescript": ^1.2.4
     "@myparcel-eslint/eslint-config-prettier-typescript-vue": ^1.2.6
     "@myparcel/constants": ^2.0.0
-    "@myparcel/sdk": ^3.8.1
     "@tsconfig/node18": ^18.2.2
     "@types/flat": ^5.0.2
     "@types/lodash-es": ^4.17.6
@@ -1032,23 +1022,6 @@ __metadata:
   version: 1.1.0
   resolution: "@myparcel/prettier-config@npm:1.1.0"
   checksum: c10890fdd77cd630500b65301dd43fe32ea82a383fdf51d64300744325210e9c4e4b80b6f274c761f7beabb21e128f54ea52955132de8fbe5c5d92aaa3baa3c1
-  languageName: node
-  linkType: hard
-
-"@myparcel/sdk@npm:^3.8.1":
-  version: 3.8.1
-  resolution: "@myparcel/sdk@npm:3.8.1"
-  dependencies:
-    "@myparcel/constants": ^1.0.0
-    "@myparcel/ts-utils": ^1.6.0
-  checksum: 7f8166cd401ef0c2d21ff61b1997fa4919790e295f222d3b325db276c1c9b7948fa880aeacaa696f995e2b077d7621cae9e0935a42d358675d274cbd29c63c8a
-  languageName: node
-  linkType: hard
-
-"@myparcel/ts-utils@npm:^1.6.0":
-  version: 1.12.0
-  resolution: "@myparcel/ts-utils@npm:1.12.0"
-  checksum: 8627a0946e97f8ece44c3a9e1a762ce3ccdf6f0b68f39f225e02e451a5aa9c520dad018b51efd3e9e58b6bd0a654911f226fc59bef1e6d9e5e9fd287a7df4e7d
   languageName: node
   linkType: hard
 
