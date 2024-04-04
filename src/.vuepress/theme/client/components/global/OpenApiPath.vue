@@ -1,16 +1,20 @@
 <template>
   <article class="open-api-path">
-    <h2>{{ title }}</h2>
     <div
       v-for="(operation, method) in path"
       :key="method">
-      <!-- <OpenApiOperation :path="operation" :title="method" /> -->
-      <Badge type="success">{{ method }}</Badge>
       <template v-if="typeof operation === 'object'">
         <h3 v-if="'operationId' in operation">
           {{ operation.operationId }}
         </h3>
+
         <p v-if="'summary' in operation">{{ operation.summary }}</p>
+
+        <OpenApiOperation
+          :method="method"
+          :endpoint="title"
+          :authentication="'security' in operation ? operation.security : null" />
+
         <p v-if="'description' in operation">{{ operation.description }}</p>
 
         <!-- TODO: Parameters table -->
@@ -26,7 +30,7 @@
 <script setup lang="ts">
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
 import OpenApiResponses from './OpenApiResponses.vue';
-import Badge from './Badge.vue';
+import OpenApiOperation from './OpenApiOperation.vue';
 
 defineProps<{
   title: string;
