@@ -62,3 +62,5 @@ export {default as Shield} from './Shield';
 export {default as Stack} from './Stack.vue';
 
 export {default as TeamMember} from './TeamMember.vue';
+
+export {default as OpenApi} from './OpenApi.vue';
