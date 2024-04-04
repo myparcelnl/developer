@@ -5,20 +5,13 @@
       <li
         v-for="(response, code) in responseObjects"
         :key="code">
-        <h5>Status Code: {{ code }}</h5>
+        <Http :code="code" />
         <p v-if="response.description">{{ response.description }}</p>
-        <div
-          v-for="(item, responseType) in response.content"
-          :key="responseType">
-          <h6>{{ responseType }}</h6>
-          <pre v-if="item.example">{{ item.example }}</pre>
-          <pre
-            v-for="(example, index) in item.examples"
-            v-else-if="item.examples"
-            :key="index"
-            >{{ example }}</pre
-          >
-        </div>
+
+        <CodeGroup
+          v-if="response.content"
+          :items="mapToCodegroup(response.content)">
+        </CodeGroup>
       </li>
     </ul>
   </div>
@@ -27,6 +20,8 @@
 <script setup lang="ts">
 import {computed, type ComputedRef} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import Http from './Http.vue';
+import CodeGroup from './CodeGroup.vue';
 
 const props = defineProps<{
   responses: OpenApiType.ResponsesObject;
@@ -47,4 +42,16 @@ const responseObjects: ComputedRef<Record<string, OpenApiType.ResponseObject>> =
     });
   return objects;
 });
+
+// Maps the response content to a CodeGroupItem array.
+const mapToCodegroup = (content: Record<string, OpenApiType.MediaTypeObject>) => {
+  return Object.entries(content).map(([responseType, item]) => {
+    // @TODO support component references here, too
+    return {
+      title: responseType,
+      code: item.examples ?? item.examples ?? item.example,
+      language: responseType,
+    };
+  });
+};
 </script>
