@@ -46,10 +46,19 @@ const responseObjects: ComputedRef<Record<string, OpenApiType.ResponseObject>> =
 // Maps the response content to a CodeGroupItem array.
 const mapToCodegroup = (content: Record<string, OpenApiType.MediaTypeObject>) => {
   return Object.entries(content).map(([responseType, item]) => {
-    // @TODO support component references here, too
+    let code = {};
+
+    if (item.schema) {
+      code = item.schema;
+    } else if (item.example) {
+      code = item.example;
+    } else if (item.examples) {
+      code = item.examples;
+    }
+
     return {
       title: responseType,
-      code: item.examples ?? item.examples ?? item.example,
+      code,
       language: responseType,
     };
   });
