@@ -1,12 +1,12 @@
 <template>
-  <header class="bg-gray-100 mb-4 mt-4 open-api-operation p-3">
+  <header class="bg-gray-100 dark:bg-gray-800 mb-4 mt-4 open-api-operation p-3">
     <strong>Endpoint:</strong>
     <pre
-      class="inline-block leading-none m-0 ml-3 p-1 rounded-sm text-sm"
+      class="dark:text-black inline-block leading-none m-0 ml-3 p-1 rounded-sm text-sm"
       :class="methodClass"
       >{{ method.toUpperCase() }}</pre
     >
-    <pre class="inline m-0 ml-2 p-0 text-gray-700 text-sm">{{ endpoint }}</pre>
+    <pre class="dark:text-gray-100 inline m-0 ml-2 p-0 text-gray-700 text-sm">{{ endpoint }}</pre>
     <br />
     <template v-if="authentication">
       <strong>Authentication:</strong>&nbsp;
