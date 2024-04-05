@@ -8,10 +8,34 @@
         <Http :code="code" />
         <p v-if="response.description">{{ response.description }}</p>
 
-        <CodeGroup
-          v-if="response.content"
-          :items="mapToCodegroup(response.content)">
-        </CodeGroup>
+        <template v-for="(item, type) in response.content">
+          <OpenApiSchema
+            v-if="'schema' in item"
+            :key="`schema${type}`"
+            :schema="item.schema" />
+          <CodeGroup
+            v-else-if="'example' in item && item.example"
+            :key="`example${type}`"
+            :items="[
+              {
+                title: type,
+                code: JSON.stringify(item.example),
+                language: 'json',
+              },
+            ]">
+          </CodeGroup>
+          <CodeGroup
+            v-else-if="'examples' in item && Object.entries(item.examples)?.length"
+            :key="`examples${type}`"
+            :items="
+              Object.entries(item.examples).map(([key, value]) => ({
+                title: key,
+                code: JSON.stringify(value),
+                language: 'json',
+              }))
+            ">
+          </CodeGroup>
+        </template>
       </li>
     </ul>
   </div>
@@ -20,6 +44,7 @@
 <script setup lang="ts">
 import {computed, type ComputedRef} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import OpenApiSchema from './OpenApiSchema.vue';
 import Http from './Http.vue';
 import CodeGroup from './CodeGroup.vue';
 
@@ -42,25 +67,4 @@ const responseObjects: ComputedRef<Record<string, OpenApiType.ResponseObject>> =
     });
   return objects;
 });
-
-// Maps the response content to a CodeGroupItem array.
-const mapToCodegroup = (content: Record<string, OpenApiType.MediaTypeObject>) => {
-  return Object.entries(content).map(([responseType, item]) => {
-    let code = {};
-
-    if (item.schema) {
-      code = item.schema;
-    } else if (item.example) {
-      code = item.example;
-    } else if (item.examples) {
-      code = item.examples;
-    }
-
-    return {
-      title: responseType,
-      code,
-      language: responseType,
-    };
-  });
-};
 </script>
