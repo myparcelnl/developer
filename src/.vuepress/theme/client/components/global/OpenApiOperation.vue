@@ -8,7 +8,7 @@
     >
     <pre class="dark:text-gray-100 inline m-0 ml-2 p-0 text-gray-700 text-sm">{{ endpoint }}</pre>
     <br />
-    <template v-if="authentication">
+    <template v-if="authentication?.length">
       <strong>Authentication:</strong>&nbsp;
       <pre>{{ authentication }}</pre>
     </template>
