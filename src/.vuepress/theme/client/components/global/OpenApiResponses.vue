@@ -9,32 +9,45 @@
         <p v-if="response.description">{{ response.description }}</p>
 
         <template v-for="(item, type) in response.content">
-          <OpenApiSchema
-            v-if="'schema' in item"
-            :key="`schema${type}`"
-            :schema="item.schema" />
-          <CodeGroup
-            v-else-if="'example' in item && item.example"
-            :key="`example${type}`"
-            :items="[
-              {
-                title: type,
-                code: JSON.stringify(item.example),
-                language: 'json',
-              },
-            ]">
-          </CodeGroup>
-          <CodeGroup
-            v-else-if="'examples' in item && Object.entries(item.examples)?.length"
-            :key="`examples${type}`"
-            :items="
-              Object.entries(item.examples).map(([key, value]) => ({
-                title: key,
-                code: JSON.stringify(value),
-                language: 'json',
-              }))
-            ">
-          </CodeGroup>
+          <section
+            v-if="'schema' in item && !!item.schema"
+            :key="`schema${type}`">
+            <h5>Schema</h5>
+            <OpenApiSchema
+              :title="type.toString()"
+              :schema="item.schema" />
+          </section>
+
+          <section
+            v-if="'example' in item && item.example"
+            :key="`example${type}`">
+            <h5>Example</h5>
+            <CodeGroup
+              :items="[
+                {
+                  title: type.toString(),
+                  code: JSON.stringify(item.example),
+                  language: 'json',
+                },
+              ]">
+            </CodeGroup>
+          </section>
+
+          <section
+            v-if="'examples' in item && item.examples"
+            :key="`examples${type}`">
+            <h5>Examples</h5>
+            <CodeGroup
+              v-if="'examples' in item && Object.entries(item.examples)?.length"
+              :items="
+                Object.entries(item.examples).map(([key, value]) => ({
+                  title: key,
+                  code: JSON.stringify(value),
+                  language: 'json',
+                }))
+              ">
+            </CodeGroup>
+          </section>
         </template>
       </li>
     </ul>
