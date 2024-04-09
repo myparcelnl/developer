@@ -1,7 +1,5 @@
 <template>
-  <div
-    v-if="schema"
-    class="mb-4">
+  <div v-if="schema">
     <OpenApiSchemaInfo
       :schema="schema"
       :title="title" />

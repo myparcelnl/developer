@@ -17,7 +17,26 @@
 
         <p v-if="'description' in operation">{{ operation.description }}</p>
 
-        <!-- TODO: Parameters table -->
+        <template v-if="'parameters' in operation">
+          <h4>Request parameters</h4>
+          <table>
+            <thead>
+              <th>Parameter</th>
+              <th>Info</th>
+            </thead>
+            <tr
+              v-for="(parameter, index) in operation.parameters"
+              :key="index">
+              <OpenApiRequestParam
+                v-if="isParameterType(parameter)"
+                :parameter="parameter" />
+            </tr>
+          </table>
+        </template>
+        <template v-if="'requestBody' in operation">
+          <h4>Request body</h4>
+          {{ operation.requestBody }}</template
+        >
 
         <OpenApiResponses
           v-if="'responses' in operation"
@@ -30,10 +49,17 @@
 <script setup lang="ts">
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
 import OpenApiResponses from './OpenApiResponses.vue';
+import OpenApiRequestParam from './OpenApiRequestParam.vue';
 import OpenApiOperation from './OpenApiOperation.vue';
 
 defineProps<{
   title: string;
   path: OpenApiType.PathItemObject;
 }>();
+
+function isParameterType(
+  parameter: OpenApiType.ParameterObject | OpenApiType.ReferenceObject,
+): parameter is OpenApiType.ParameterObject {
+  return 'in' in parameter && 'schema' in parameter;
+}
 </script>

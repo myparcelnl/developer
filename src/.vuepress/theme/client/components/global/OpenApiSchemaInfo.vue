@@ -34,17 +34,17 @@
 
     <template v-if="schema && schema.default">
       <strong class="inline-block text-sm">Default:</strong>&nbsp;
-      <pre class="inline-block m-0 p-0 text-sm">{{ schema.default }}</pre>
+      <code class="inline-block m-0 p-1 text-sm">{{ schema.default }}</code>
     </template>
 
     <template v-if="schema && schema.pattern">
       <strong class="inline-block text-sm">Pattern:</strong>&nbsp;
-      <pre class="inline-block m-0 p-0 text-sm">{{ schema.pattern }}</pre>
+      <code class="inline-block m-0 p-1 text-sm">{{ schema.pattern }}</code>
     </template>
 
     <template v-if="schema.example">
       <strong class="inline-block text-sm">Example:</strong>&nbsp;
-      <pre class="inline-block m-0 p-0 text-sm">{{ schema.example }}</pre>
+      <code class="inline-block m-0 p-1 text-sm">{{ schema.example }}</code>
     </template>
   </header>
 </template>
