@@ -34,10 +34,24 @@
             </tr>
           </table>
         </template>
-        <template v-if="'requestBody' in operation">
+        <template v-if="'requestBody' in operation && operation.requestBody">
           <h4>Request body</h4>
-          {{ operation.requestBody }}</template
-        >
+
+          <template v-if="operation.requestBody?.description">
+            <Markdown :content="operation.requestBody?.description"></Markdown>
+          </template>
+          <DetailsExpand
+            v-if="'content' in operation.requestBody && operation.requestBody.content"
+            tag="h5"
+            title="Schema">
+            <div
+              v-for="(content, key) in operation.requestBody.content"
+              :key="key">
+              <strong>{{ key }}</strong>
+              <OpenApiSchema :schema="content?.schema" />
+            </div>
+          </DetailsExpand>
+        </template>
 
         <OpenApiResponses
           v-if="'responses' in operation"
@@ -49,9 +63,12 @@
 
 <script setup lang="ts">
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import OpenApiSchema from './OpenApiSchema.vue';
 import OpenApiResponses from './OpenApiResponses.vue';
 import OpenApiRequestParam from './OpenApiRequestParam.vue';
 import OpenApiOperation from './OpenApiOperation.vue';
+import Markdown from './Markdown.vue';
+import DetailsExpand from './DetailsExpand.vue';
 
 defineProps<{
   title: string;
