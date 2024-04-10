@@ -65,6 +65,7 @@
 <script setup lang="ts">
 import {computed, type ComputedRef} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import {isReponseObject} from '@mptheme/client/utils/openApiGuards';
 import OpenApiSchema from './OpenApiSchema.vue';
 import Http from './Http.vue';
 import DetailsExpand from './DetailsExpand.vue';
@@ -73,11 +74,6 @@ import CodeGroup from './CodeGroup.vue';
 const props = defineProps<{
   responses: OpenApiType.ResponsesObject;
 }>();
-
-// Guard to check if the response is an OpenApiType.ResponseObject.
-const isReponseObject = (response: object): response is OpenApiType.ResponseObject => {
-  return typeof response === 'object';
-};
 
 // Adds a computed to get only the OpenApiType.ResponseObject types from the responses prop.
 const responseObjects: ComputedRef<Record<string, OpenApiType.ResponseObject>> = computed(() => {

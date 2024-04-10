@@ -131,6 +131,7 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import {isArraySchemaObject, isSchemaObject} from '@mptheme/client/utils/openApiGuards';
 import OpenApiSchemaInfo from './OpenApiSchemaInfo.vue';
 
 defineProps<{
@@ -140,16 +141,6 @@ defineProps<{
 }>();
 
 const showNested = ref(false);
-
-// Guard to check if the schema is an OpenApiType.SchemaObject.
-const isSchemaObject = (schema: object): schema is OpenApiType.SchemaObject => {
-  return typeof schema === 'object';
-};
-
-// Guard to check if the schema is an OpenApiType.ArraySchemaObject.
-const isArraySchemaObject = (schema: object): schema is OpenApiType.ArraySchemaObject => {
-  return typeof schema === 'object' && 'items' in schema;
-};
 
 function anyPropertyHasNesting(properties: OpenApiType.SchemaObject['properties']) {
   return properties

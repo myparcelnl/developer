@@ -48,7 +48,9 @@
               v-for="(content, key) in operation.requestBody.content"
               :key="key">
               <strong>{{ key }}</strong>
-              <OpenApiSchema :schema="content?.schema" />
+              <OpenApiSchema
+                v-if="content.schema && (isSchemaObject(content.schema) || isArraySchemaObject(content.schema))"
+                :schema="content.schema" />
             </div>
           </DetailsExpand>
         </template>
@@ -63,6 +65,7 @@
 
 <script setup lang="ts">
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import {isParameterType, isArraySchemaObject, isSchemaObject} from '@mptheme/client/utils/openApiGuards';
 import OpenApiSchema from './OpenApiSchema.vue';
 import OpenApiResponses from './OpenApiResponses.vue';
 import OpenApiRequestParam from './OpenApiRequestParam.vue';
@@ -74,10 +77,4 @@ defineProps<{
   title: string;
   path: OpenApiType.PathItemObject;
 }>();
-
-function isParameterType(
-  parameter: OpenApiType.ParameterObject | OpenApiType.ReferenceObject,
-): parameter is OpenApiType.ParameterObject {
-  return 'in' in parameter && 'schema' in parameter;
-}
 </script>

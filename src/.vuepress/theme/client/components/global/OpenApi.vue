@@ -27,22 +27,34 @@ const props = defineProps<{
 const resolvedDocument = computed(() => resolveRefs(props.document));
 
 // Recursively loop through the entire document and replace any $ref keys with their corresponding values
+type RecursiveType = {
+  [key: string]: unknown | RecursiveType | RecursiveType[];
+};
+
 function resolveRefs(document: OpenApiType.Document): OpenApiType.Document {
   const resolvedDocument = {...document};
 
-  function resolveRefsRecursive(obj: object | (string | number | object)[]) {
-    for (const key in obj) {
-      if (key === '$ref') {
-        const lookup = (obj as {$ref: string})[key];
-        // Lookup is a string that defines the path to the referenced object like '#/components/schemas/Example'
-        const path = lookup.split('/').slice(1);
-        // Find the referenced object in the document using lodash's get function
-        const referencedObject = get(resolvedDocument, path);
-        // Remove the $ref: '...' key from the object and replace it with the referenced object itself
-        obj = Object.assign(obj, referencedObject);
-      } else if (typeof obj[key] === 'object' || Array.isArray(obj[key])) {
-        // If the value is an object or an array, recursively call this function
-        resolveRefsRecursive(obj[key]);
+  function resolveRefsRecursive(obj: RecursiveType) {
+    if (Array.isArray(obj)) {
+      for (const item of obj) {
+        resolveRefsRecursive(item);
+      }
+    } else if (typeof obj === 'object') {
+      for (const key in obj) {
+        if (key === '$ref') {
+          const lookup = obj[key] as string;
+          // Lookup is a string that defines the path to the referenced object like '#/components/schemas/Example'
+          const path = lookup.split('/').slice(1);
+          // Find the referenced object in the document using lodash's get function
+          const referencedObject = get(resolvedDocument, path);
+
+          // Remove the $ref: '...' key from the object and replace it with the referenced object itself
+          obj = Object.assign(obj, referencedObject);
+        } else if (typeof obj[key] === 'object' || Array.isArray(obj[key])) {
+          const guarded = obj[key] as RecursiveType;
+          // If the value is an object or an array, recursively call this function
+          resolveRefsRecursive(guarded);
+        }
       }
     }
   }
