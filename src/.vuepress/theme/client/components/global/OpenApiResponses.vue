@@ -1,27 +1,34 @@
 <template>
   <div v-if="Object.entries(responseObjects)?.length">
     <h4>Responses</h4>
-    <ul>
+    <ul class="m-0 p-0">
       <li
         v-for="(response, code) in responseObjects"
-        :key="code">
+        :key="code"
+        class="m-0 p-0">
         <Http :code="code" />
-        <p v-if="response.description">{{ response.description }}</p>
+        <p
+          v-if="response.description"
+          class="text-gray-500 text-sm">
+          {{ response.description }}
+        </p>
 
         <template v-for="(item, type) in response.content">
-          <section
+          <DetailsExpand
             v-if="'schema' in item && !!item.schema"
-            :key="`schema${type}`">
-            <h5>Schema</h5>
+            :key="`schema${type}`"
+            title="Schema"
+            tag="strong">
             <OpenApiSchema
               :title="type.toString()"
               :schema="item.schema" />
-          </section>
+          </DetailsExpand>
 
-          <section
+          <DetailsExpand
             v-if="'example' in item && item.example"
-            :key="`example${type}`">
-            <h5>Example</h5>
+            :key="`example${type}`"
+            title="Example response"
+            tag="strong">
             <CodeGroup
               :items="[
                 {
@@ -31,12 +38,13 @@
                 },
               ]">
             </CodeGroup>
-          </section>
+          </DetailsExpand>
 
-          <section
+          <DetailsExpand
             v-if="'examples' in item && item.examples"
-            :key="`examples${type}`">
-            <h5>Examples</h5>
+            :key="`examples${type}`"
+            title="Example responses"
+            tag="strong">
             <CodeGroup
               v-if="'examples' in item && Object.entries(item.examples)?.length"
               :items="
@@ -47,7 +55,7 @@
                 }))
               ">
             </CodeGroup>
-          </section>
+          </DetailsExpand>
         </template>
       </li>
     </ul>
@@ -59,6 +67,7 @@ import {computed, type ComputedRef} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
 import OpenApiSchema from './OpenApiSchema.vue';
 import Http from './Http.vue';
+import DetailsExpand from './DetailsExpand.vue';
 import CodeGroup from './CodeGroup.vue';
 
 const props = defineProps<{
