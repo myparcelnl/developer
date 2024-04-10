@@ -12,8 +12,8 @@
 
     <table
       v-if="isSchemaObject(schema) && schema.properties"
-      class="bg-gray-50 border-collapse border-spacing-0 table-auto">
-      <thead class="bg-gray-200">
+      class="border-collapse border-spacing-0 table-auto">
+      <thead class="bg-gray-200 dark:bg-opacity-10">
         <th>Name</th>
         <th v-if="anyPropertyHasNesting(schema.properties)">Content</th>
       </thead>
