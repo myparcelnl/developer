@@ -26,54 +26,31 @@
       "
       class="text-gray-500 text-sm"
       v-html="parameter.description" />
+
+    <!-- TODO use / create examples component! -->
+    <OpenApiExample
+      v-if="parameter.example"
+      :example="parameter.example" />
+    <div v-if="parameter.examples">
+      <strong>Examples:</strong>
+      <OpenApiExample
+        v-for="(example, exampleName) in parameter.examples"
+        :key="exampleName"
+        :title="exampleName.toString()"
+        :example="example">
+      </OpenApiExample>
+    </div>
+  </td>
+
+  <td>
+    <code>{{ parameter.in }}</code>
   </td>
 
   <td>
     <div
-      v-if="parameter.in"
-      class="oapi-res-param__param">
-      In: <code>{{ parameter.in }}</code>
-    </div>
-
-    <div
       v-if="parameter.style"
       class="oapi-res-param__param">
       Style: <code>{{ parameter.style }}</code>
-    </div>
-
-    <!-- TODO use / create examples component! -->
-
-    <div
-      v-if="parameter.example"
-      class="oapi-res-param__param">
-      Example: <br v-if="exampleString.includes('\n')" /><code v-html="exampleString" />
-    </div>
-    <div
-      v-if="parameter.examples"
-      class="oapi-res-param__examples">
-      <div class="oapi-res-param__muted">Examples:</div>
-      <div
-        v-for="(example, exampleName) in parameter.examples"
-        :key="exampleName"
-        class="oapi-res-param-example">
-        <div class="oapi-res-param-example__name">
-          {{ exampleName }}
-        </div>
-        <div
-          v-if="example.summary"
-          class="oapi-res-param-example__summary">
-          {{ example.summary }}
-        </div>
-        <div
-          v-if="example.description"
-          class="oapi-res-param-example__description"
-          v-html="example.description" />
-        <div
-          v-if="example.value"
-          class="oapi-res-param-example__value">
-          <pre v-html="JSON.stringify(example.value, null, 2)" />
-        </div>
-      </div>
     </div>
 
     <div
@@ -96,6 +73,7 @@ import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
 import OpenApiSchema from './OpenApiSchema.vue';
 // import OpenApiObjectModel from './OpenApiObjectModel.vue';
 // import OpenApiMediaTypes from './OpenApiMediaTypes.vue';
+import OpenApiExample from './OpenApiExample.vue';
 
 const props = defineProps<{
   parameter: OpenApiType.ParameterObject;
@@ -117,15 +95,5 @@ const flags = computed(() => {
   }
 
   return arr;
-});
-
-const exampleString = computed(() => {
-  const spacing = 2;
-
-  if (!props.parameter.example) return '';
-
-  if (typeof props.parameter.example === 'object') return JSON.stringify(props.parameter.example, null, spacing);
-
-  return props.parameter.example.toString();
 });
 </script>

@@ -22,7 +22,8 @@
           <table>
             <thead>
               <th>Parameter</th>
-              <th>Info</th>
+              <th>Location</th>
+              <th>Information</th>
             </thead>
             <tr
               v-for="(parameter, index) in operation.parameters"

@@ -43,14 +43,14 @@
     </template>
 
     <template v-if="schema.example">
-      <strong class="inline-block text-sm">Example:</strong>&nbsp;
-      <code class="inline-block m-0 p-1 text-sm">{{ schema.example }}</code>
+      <OpenApiExample :example="schema.example" />
     </template>
   </header>
 </template>
 
 <script setup lang="ts">
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import OpenApiExample from './OpenApiExample.vue';
 
 defineProps<{
   title?: string;
