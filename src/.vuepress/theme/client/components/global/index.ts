@@ -64,3 +64,15 @@ export {default as Stack} from './Stack.vue';
 export {default as TeamMember} from './TeamMember.vue';
 
 export {default as OpenApi} from './OpenApi.vue';
+
+export {default as OpenApiExample} from './OpenApiExample.vue';
+
+export {default as OpenApiPath} from './OpenApiPath.vue';
+
+export {default as OpenApiRequestParam} from './OpenApiRequestParam.vue';
+
+export {default as OpenApiResponses} from './OpenApiResponses.vue';
+
+export {default as OpenApiSchema} from './OpenApiSchema.vue';
+
+export {default as OpenApiSchemaInfo} from './OpenApiSchemaInfo.vue';
