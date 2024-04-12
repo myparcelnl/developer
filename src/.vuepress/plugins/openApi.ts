@@ -31,7 +31,13 @@ Version ${spec.info.version}
 
 ${spec.info.description ?? ''}
 
-${renderChapters(spec)}
+## Authorization
+<OpenApiSecurityRequirements
+:security='${JSON.stringify(spec.security ?? [])}'
+:security-schemes='${JSON.stringify(spec.components?.securitySchemes ?? [])}' />
+
+## Endpoints
+${renderPaths(spec)}
                   `,
           }),
         );
@@ -40,7 +46,7 @@ ${renderChapters(spec)}
   },
 });
 
-function renderChapters(document: OpenApiType.Document): string {
+function renderPaths(document: OpenApiType.Document): string {
   const resolvedDocument = resolveRefs(document);
 
   let chapters = '';
@@ -48,7 +54,7 @@ function renderChapters(document: OpenApiType.Document): string {
   if (resolvedDocument.paths) {
     for (const [path, pathObj] of Object.entries(resolvedDocument.paths)) {
       chapters += `
-## ${path}
+### ${path}
 \n
 <OpenApiPath :path='${JSON.stringify(pathObj)}' title='${path}' />
     `;

@@ -80,3 +80,7 @@ export {default as OpenApiResponses} from './OpenApiResponses.vue';
 export {default as OpenApiSchema} from './OpenApiSchema.vue';
 
 export {default as OpenApiSchemaInfo} from './OpenApiSchemaInfo.vue';
+
+export {default as OpenApiSecurityRequirements} from './OpenApiSecurityRequirements.vue';
+
+export {default as OpenApiSecurityScheme} from './OpenApiSecurityScheme.vue';
