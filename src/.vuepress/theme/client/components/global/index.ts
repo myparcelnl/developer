@@ -67,6 +67,10 @@ export {default as OpenApi} from './OpenApi.vue';
 
 export {default as OpenApiExample} from './OpenApiExample.vue';
 
+export {default as OpenApiInfo} from './OpenApiInfo.vue';
+
+export {default as OpenApiOperation} from './OpenApiOperation.vue';
+
 export {default as OpenApiPath} from './OpenApiPath.vue';
 
 export {default as OpenApiRequestParam} from './OpenApiRequestParam.vue';
