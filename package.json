@@ -91,7 +91,8 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2",
     "vite-svg-loader": "^4.0.0",
-    "vitest": "^0.34.6"
+    "vitest": "^0.34.6",
+    "yaml": "^2.4.1"
   },
   "packageManager": "yarn@3.2.2",
   "volta": {
