@@ -17,6 +17,7 @@
         <th>Name</th>
         <th v-if="anyPropertyHasNesting(schema.properties)">Content</th>
       </thead>
+
       <tbody>
         <tr
           v-for="(property, key) in schema.properties"
@@ -101,26 +102,32 @@
           title="Additonal properties" />
       </div>
 
+      <div v-if="schema.not">
+        <OpenApiSchema
+          :schema="schema.not"
+          title="Not" />
+      </div>
+
       <div v-if="schema.allOf">
-        <strong>All of:</strong>
+        <em>All of:</em>
         <div
-          v-for="(oneOf, index) in schema.allOf"
+          v-for="(item, index) in schema.allOf"
           :key="index"
           class="ml-3">
           <OpenApiSchema
-            :schema="oneOf"
+            :schema="item"
             :collapsible="false" />
         </div>
       </div>
 
       <div v-if="schema.oneOf">
-        <strong>One of:</strong>
+        <em>One of:</em>
         <div
-          v-for="(oneOf, index) in schema.oneOf"
+          v-for="(item, index) in schema.oneOf"
           :key="index"
           class="ml-3">
           <OpenApiSchema
-            :schema="oneOf"
+            :schema="item"
             :collapsible="false" />
         </div>
       </div>

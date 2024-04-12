@@ -27,7 +27,6 @@
       class="text-gray-500 text-sm"
       v-html="parameter.description" />
 
-    <!-- TODO use / create examples component! -->
     <OpenApiExample
       v-if="parameter.example"
       :example="parameter.example" />
@@ -42,27 +41,13 @@
     </div>
   </td>
 
-  <td>
-    <code>{{ parameter.in }}</code>
+  <td class="align-top">
+    <code v-if="parameter.in">{{ parameter.in }}</code>
   </td>
 
-  <td>
-    <div
-      v-if="parameter.style"
-      class="oapi-res-param__param">
+  <td class="align-top">
+    <div v-if="parameter.style">
       Style: <code>{{ parameter.style }}</code>
-    </div>
-
-    <div
-      v-if="parameter.content"
-      class="oapi-res-param__content">
-      <div class="oapi-res-param__muted">Content:</div>
-      TODO : MEDIA TYPES
-      <!--
-        <OpenApiMediaTypes
-        :current-locale="currentLocale"
-        :data="parameter.content" />
-      -->
     </div>
   </td>
 </template>
