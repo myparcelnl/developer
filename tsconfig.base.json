@@ -33,15 +33,15 @@
     ]
   },
   "include": [
-    "./*.cjs",
-    "./*.js",
-    "./*.mjs",
-    "./*.ts",
-    "./private/**/*",
-    "./src/**/*",
-    "./src/.vuepress/**/*",
-    "./test/**/*",
-    "./types/**/*"
+    "*.cjs",
+    "*.js",
+    "*.mjs",
+    "*.ts",
+    "private/**/*",
+    "src/**/*",
+    "src/.vuepress/**/*",
+    "test/**/*",
+    "types/**/*"
   ],
   "exclude": [
     "**/.vuepress/.cache",
