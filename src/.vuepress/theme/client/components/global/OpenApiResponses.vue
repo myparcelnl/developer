@@ -29,15 +29,7 @@
             :key="`example${type}`"
             title="Example response"
             tag="strong">
-            <CodeGroup
-              :items="[
-                {
-                  title: type.toString(),
-                  code: JSON.stringify(item.example),
-                  language: 'json',
-                },
-              ]">
-            </CodeGroup>
+            <OpenApiExample :example="item.example" />
           </DetailsExpand>
 
           <DetailsExpand
@@ -45,16 +37,10 @@
             :key="`examples${type}`"
             title="Example responses"
             tag="strong">
-            <CodeGroup
-              v-if="'examples' in item && Object.entries(item.examples)?.length"
-              :items="
-                Object.entries(item.examples).map(([key, value]) => ({
-                  title: key,
-                  code: JSON.stringify(value),
-                  language: 'json',
-                }))
-              ">
-            </CodeGroup>
+            <OpenApiExample
+              v-for="(example, index) in item.examples"
+              :key="index"
+              :example="example" />
           </DetailsExpand>
         </template>
       </li>
@@ -67,6 +53,7 @@ import {computed, type ComputedRef} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
 import {isReponseObject} from '@mptheme/client/utils/openApiGuards';
 import OpenApiSchema from './OpenApiSchema.vue';
+import OpenApiExample from './OpenApiExample.vue';
 import Http from './Http.vue';
 import DetailsExpand from './DetailsExpand.vue';
 import CodeGroup from './CodeGroup.vue';

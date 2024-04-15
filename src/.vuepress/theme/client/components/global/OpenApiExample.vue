@@ -1,34 +1,28 @@
 <template>
   <template v-if="example">
     <strong class="inline-block text-sm">{{ title || 'Example' }}:</strong>&nbsp;
-    <p
+    <Markdown
       v-if="isExampleObject(example) && example.summary"
-      class="text-sm">
-      {{ example.summary }}
-    </p>
+      class="text-sm"
+      :content="example.summary" />
 
-    <div
+    <Markdown
       v-if="isExampleObject(example) && example.description"
       class="text-sm"
-      v-html="example.description" />
+      :content="example.description" />
 
-    <template v-if="formattedExample">
-      <CodeBlock
-        v-if="isMultilineString"
-        :code="formattedExample"
-        language="json" />
-      <code
-        v-else
-        class="inline-block m-0 p-1 text-sm"
-        >{{ formattedExample }}</code
-      >
-    </template>
+    <CodeBlock
+      v-if="formattedExample && isMultilineString"
+      :code="formattedExample" />
+
+    <code v-else>{{ formattedExample }}</code>
   </template>
 </template>
 
 <script setup lang="ts">
 import {computed} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import Markdown from '@mptheme/client/components/global/Markdown.vue';
 import CodeBlock from './CodeBlock.vue';
 
 const props = defineProps<{
@@ -57,8 +51,6 @@ function formatExample(example: unknown): string {
 
 // Guard to check if example is an Example object
 const isExampleObject = (example: unknown): example is OpenApiType.ExampleObject => {
-  return (
-    !!example && typeof example === 'object' && 'summary' in example && 'description' in example && 'value' in example
-  );
+  return !!example && typeof example === 'object' && 'value' in example;
 };
 </script>
