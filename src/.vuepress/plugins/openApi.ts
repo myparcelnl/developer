@@ -31,7 +31,7 @@ Version ${spec.info.version}
 
 ${spec.info.description ?? ''}
 
-## Authorization
+${spec.security ? '## Authorization' : ''}
 <OpenApiSecurityRequirements
 :security='${JSON.stringify(spec.security ?? [])}'
 :security-schemes='${JSON.stringify(spec.components?.securitySchemes ?? [])}' />
