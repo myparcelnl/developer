@@ -4,7 +4,7 @@
       <OpenApiSecurityScheme
         v-for="(securityItem, index) in resolvedSchemes"
         :key="index"
-        :scheme="resolveRequirementToScheme(securityItem)" />
+        :scheme="securityItem" />
     </ul>
   </div>
 </template>
@@ -20,13 +20,13 @@ const props = defineProps<{
 }>();
 
 const resolvedSchemes = computed(() => {
-  const resolved: OpenApiType.SecurityRequirementObject[] = [];
+  const resolved: OpenApiType.SecuritySchemeObject[] = [];
 
   for (const requirement of props.security) {
     const scheme = resolveRequirementToScheme(requirement);
 
     if (scheme) {
-      resolved.push(requirement);
+      resolved.push(scheme);
     }
   }
 

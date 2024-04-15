@@ -13,7 +13,8 @@
         <OpenApiOperation
           :method="method"
           :endpoint="title"
-          :authentication="'security' in operation ? operation.security : null" />
+          :security-schemes="components?.securitySchemes as Record<string, OpenApiType.SecuritySchemeObject>"
+          :security-requirements="'security' in operation ? operation.security : undefined" />
 
         <p v-if="'description' in operation">{{ operation.description }}</p>
 
@@ -76,5 +77,6 @@ import DetailsExpand from './DetailsExpand.vue';
 defineProps<{
   title: string;
   path: OpenApiType.PathItemObject;
+  components?: OpenApiType.ComponentsObject;
 }>();
 </script>

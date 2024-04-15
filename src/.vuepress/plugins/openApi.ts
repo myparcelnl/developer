@@ -56,7 +56,7 @@ function renderPaths(document: OpenApiType.Document): string {
       chapters += `
 ### ${path}
 \n
-<OpenApiPath :path='${JSON.stringify(pathObj)}' title='${path}' />
+<OpenApiPath :path='${JSON.stringify(pathObj)}' :components='${JSON.stringify(document.components)}' title='${path}' />
     `;
     }
   }

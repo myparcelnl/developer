@@ -8,6 +8,7 @@
       <OpenApiPath
         v-if="item"
         :path="item"
+        :components="document.components"
         :title="path" />
     </article>
   </section>

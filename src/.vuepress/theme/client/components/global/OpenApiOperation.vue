@@ -8,9 +8,13 @@
     >
     <pre class="dark:text-gray-100 inline m-0 ml-2 p-0 text-gray-700 text-sm">{{ endpoint }}</pre>
     <br />
-    <template v-if="authentication?.length">
+
+    <template v-if="securityRequirements?.length && securitySchemes">
       <strong>Authentication:</strong>&nbsp;
-      <pre>{{ authentication }}</pre>
+      <OpenApiSecurityRequirements
+        class="text-sm"
+        :security="securityRequirements"
+        :security-schemes="securitySchemes" />
     </template>
   </header>
 </template>
@@ -18,11 +22,13 @@
 <script setup lang="ts">
 import {computed} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import OpenApiSecurityRequirements from '@mptheme/client/components/global/OpenApiSecurityRequirements.vue';
 
 const props = defineProps<{
   method: string;
   endpoint: string;
-  authentication?: OpenApiType.SecurityRequirementObject[] | null;
+  securityRequirements?: OpenApiType.SecurityRequirementObject[];
+  securitySchemes?: Record<string, OpenApiType.SecuritySchemeObject>;
 }>();
 
 const methodClass = computed(() => {
