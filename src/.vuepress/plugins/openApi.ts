@@ -42,6 +42,9 @@ ${document.security ? '## Authorization' : ''}
 :security='${JSON.stringify(document.security ?? [])}'
 :security-schemes='${JSON.stringify(document.components?.securitySchemes ?? [])}' />
 
+${document.servers?.length ? '## Servers' : ''}
+<OpenApiServers :servers='${JSON.stringify(document.servers ?? [])}' />
+
 ${renderPaths(document, document.paths, 'Endpoints')}
 
 ${renderPaths(document, document.webhooks, 'Webhooks')}
