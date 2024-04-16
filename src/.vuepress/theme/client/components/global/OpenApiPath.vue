@@ -16,7 +16,9 @@
           :security-schemes="components?.securitySchemes as Record<string, OpenApiType.SecuritySchemeObject>"
           :security-requirements="'security' in operation ? operation.security : undefined" />
 
-        <p v-if="'description' in operation">{{ operation.description }}</p>
+        <Markdown
+          v-if="'description' in operation && operation.description?.length"
+          :content="operation.description" />
 
         <template v-if="'parameters' in operation">
           <h4>Request parameters</h4>

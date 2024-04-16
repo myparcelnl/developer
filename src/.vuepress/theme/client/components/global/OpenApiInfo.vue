@@ -3,13 +3,16 @@
     <hgroup>
       <h2>{{ info.title }}</h2>
       <p>(v{{ info.version }})</p>
-      <p v-if="info.description">{{ info.description }}</p>
+      <Markdown
+        v-if="info.description"
+        :content="info.description" />
     </hgroup>
   </section>
 </template>
 
 <script setup lang="ts">
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import Markdown from './Markdown.vue';
 
 defineProps<{
   info: OpenApiType.Document['info'];

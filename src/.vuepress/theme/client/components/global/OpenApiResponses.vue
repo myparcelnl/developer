@@ -7,11 +7,11 @@
         :key="code"
         class="m-0 p-0">
         <Http :code="code" />
-        <p
+
+        <Markdown
           v-if="response.description"
-          class="text-gray-500 text-sm">
-          {{ response.description }}
-        </p>
+          class="text-gray-500 text-sm"
+          :content="response.description" />
 
         <template v-for="(item, type) in response.content">
           <DetailsExpand
@@ -54,9 +54,9 @@ import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
 import {isReponseObject} from '@mptheme/client/utils/openApiGuards';
 import OpenApiSchema from './OpenApiSchema.vue';
 import OpenApiExample from './OpenApiExample.vue';
+import Markdown from './Markdown.vue';
 import Http from './Http.vue';
 import DetailsExpand from './DetailsExpand.vue';
-import CodeGroup from './CodeGroup.vue';
 
 const props = defineProps<{
   responses: OpenApiType.ResponsesObject;

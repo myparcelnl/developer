@@ -19,13 +19,13 @@
       v-if="parameter.schema"
       :schema="parameter.schema" />
 
-    <div
+    <Markdown
       v-if="
         parameter.description &&
         !(parameter.schema && 'description' in parameter.schema && parameter.schema.description?.length)
       "
       class="text-gray-500 text-sm"
-      v-html="parameter.description" />
+      :content="parameter.description" />
 
     <OpenApiExample
       v-if="parameter.example"
@@ -56,9 +56,8 @@
 import {computed, defineProps} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
 import OpenApiSchema from './OpenApiSchema.vue';
-// import OpenApiObjectModel from './OpenApiObjectModel.vue';
-// import OpenApiMediaTypes from './OpenApiMediaTypes.vue';
 import OpenApiExample from './OpenApiExample.vue';
+import Markdown from './Markdown.vue';
 
 const props = defineProps<{
   parameter: OpenApiType.ParameterObject;
