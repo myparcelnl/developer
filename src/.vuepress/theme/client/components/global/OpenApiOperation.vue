@@ -3,9 +3,9 @@
     <strong>Endpoint:</strong>
     <pre
       class="dark:text-black inline-block leading-none m-0 ml-3 p-1 rounded-sm text-sm"
-      :class="methodClass"
-      >{{ method.toUpperCase() }}</pre
-    >
+      :class="methodClass">
+      {{ method.toUpperCase() }}
+    </pre>
     <pre class="dark:text-gray-100 inline m-0 ml-2 p-0 text-gray-700 text-sm">{{ endpoint }}</pre>
     <br />
 
