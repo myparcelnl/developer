@@ -66,41 +66,48 @@
     </div>
 
     <div v-if="schema.multipleOf !== undefined">
-      <strong class="inline-block text-sm">Multiple of:</strong> <code>{{ schema.multipleOf }}</code>
+      <strong class="inline-block text-sm">Multiple of:</strong>
+      <code>{{ schema.multipleOf }}</code>
     </div>
 
     <div v-if="schema.maximum !== undefined">
-      <strong class="inline-block text-sm">Max:</strong
-      ><code>{{ schema.exclusiveMaximum ? '<' : '<=' }} {{ schema.maximum }}</code>
+      <strong class="inline-block text-sm">Max:</strong>
+      <code>{{ schema.exclusiveMaximum ? '<' : '<=' }} {{ schema.maximum }}</code>
     </div>
 
     <div v-if="schema.minimum !== undefined">
-      <strong class="inline-block text-sm">Min:</strong
-      ><code>{{ schema.exclusiveMinimum ? '>' : '>=' }} {{ schema.minimum }}</code>
+      <strong class="inline-block text-sm">Min:</strong>
+      <code>{{ schema.exclusiveMinimum ? '>' : '>=' }} {{ schema.minimum }}</code>
     </div>
 
     <div v-if="schema.maxLength !== undefined">
-      <strong class="inline-block text-sm">Max length:</strong> <code>{{ schema.maxLength }}</code>
+      <strong class="inline-block text-sm">Max length:</strong>
+      <code>{{ schema.maxLength }}</code>
     </div>
 
     <div v-if="schema.minLength !== undefined">
-      <strong class="inline-block text-sm">Min length:</strong> <code>{{ schema.minLength }}</code>
+      <strong class="inline-block text-sm">Min length:</strong>
+      <code>{{ schema.minLength }}</code>
     </div>
 
     <div v-if="schema.maxItems !== undefined">
-      <strong class="inline-block text-sm">Max items:</strong> <code>{{ schema.maxItems }}</code>
+      <strong class="inline-block text-sm">Max items:</strong>
+      <code>{{ schema.maxItems }}</code>
     </div>
 
     <div v-if="schema.minItems !== undefined">
-      <strong class="inline-block text-sm">Min items:</strong> <code>{{ schema.minItems }}</code>
+      <strong class="inline-block text-sm">Min items:</strong>
+      <code>{{ schema.minItems }}</code>
     </div>
 
     <div v-if="schema.maxProperties !== undefined">
-      <strong class="inline-block text-sm">Max properties:</strong> <code>{{ schema.maxProperties }}</code>
+      <strong class="inline-block text-sm">Max properties:</strong>
+      <code>{{ schema.maxProperties }}</code>
     </div>
 
     <div v-if="schema.minProperties !== undefined">
-      <strong class="inline-block text-sm">Min properties:</strong> <code>{{ schema.minProperties }}</code>
+      <strong class="inline-block text-sm">Min properties:</strong>
+      <code>{{ schema.minProperties }}</code>
     </div>
 
     <div v-if="schema.additionalProperties !== undefined && typeof schema.additionalProperties === 'boolean'">

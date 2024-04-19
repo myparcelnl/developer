@@ -3,8 +3,8 @@
     v-if="servers?.length"
     class="open-api-servers">
     <li
-      v-for="(server, index) in servers"
-      :key="index">
+      v-for="server in servers"
+      :key="server.url">
       <code>{{ server.url }}</code>
       <Markdown
         v-if="server.description"

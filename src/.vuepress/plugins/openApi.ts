@@ -28,7 +28,12 @@ export const openApiPlugin = (config: OpenApiPluginConfig): Plugin => ({
 function generateOpenApiPage(document: OpenApiType.Document) {
   return {
     path: `/api-reference/${kebabCase(document.info.title)}`,
-    content: `\
+    content: renderMarkdown(document),
+  };
+}
+
+function renderMarkdown(document: OpenApiType.Document): string {
+  return `\
 ---
 title: ${document.info.title}
 description: ${document.info.description}
@@ -48,8 +53,7 @@ ${document.servers?.length ? '## Servers' : ''}
 ${renderPaths(document, document.paths, 'Endpoints')}
 
 ${renderPaths(document, document.webhooks, 'Webhooks')}
-                  `,
-  };
+`;
 }
 
 function renderPaths(

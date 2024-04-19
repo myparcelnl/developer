@@ -1,5 +1,5 @@
 <template>
-  <div v-if="Object.entries(responseObjects)?.length">
+  <div v-if="hasItems">
     <h4>Responses</h4>
     <ul class="m-0 p-0">
       <li
@@ -62,8 +62,10 @@ const props = defineProps<{
   responses: OpenApiType.ResponsesObject;
 }>();
 
-// Adds a computed to get only the OpenApiType.ResponseObject types from the responses prop.
-const responseObjects: ComputedRef<Record<string, OpenApiType.ResponseObject>> = computed(() => {
+const hasItems = computed<boolean>(() => Object.entries(props.responses).length > 0);
+
+  // Adds a computed to get only the OpenApiType.ResponseObject types from the responses prop.
+const responseObjects = computed<Record<string, OpenApiType.ResponseObject>>(() => {
   const objects: Record<string, OpenApiType.ResponseObject> = {};
   Object.entries(props.responses)
     .filter((response): response is [string, OpenApiType.ResponseObject] => isReponseObject(response))

@@ -6,6 +6,15 @@ type RecursiveType = {
 };
 
 /**
+ * Formats an example object, array or primitive to a string
+ */
+export function formatExample(example: unknown): string {
+  const spacing = 2;
+
+  return JSON.stringify(example, null, spacing);
+}
+
+/**
  * Resolves all $ref keys in the document with their corresponding values
  */
 export function resolveRefs(document: OpenApiType.Document): OpenApiType.Document {

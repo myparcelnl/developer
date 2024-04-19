@@ -10,9 +10,9 @@
       </span>
       <span
         v-for="flag in flags"
-        :key="flag"
-        >{{ flag }}</span
-      >
+        :key="flag">
+        {{ flag }}
+      </span>
     </template>
 
     <OpenApiSchema
@@ -20,10 +20,7 @@
       :schema="parameter.schema" />
 
     <Markdown
-      v-if="
-        parameter.description &&
-        !(parameter.schema && 'description' in parameter.schema && parameter.schema.description?.length)
-      "
+      v-if="parameter.description && !schemaHasDescription(parameter.schema)"
       class="text-gray-500 text-sm"
       :content="parameter.description" />
 
@@ -62,6 +59,10 @@ import Markdown from './Markdown.vue';
 const props = defineProps<{
   parameter: OpenApiType.ParameterObject;
 }>();
+
+function schemaHasDescription(schema: OpenApiType.SchemaObject | undefined): boolean {
+  return !!(schema && 'description' in schema && schema.description?.length);
+}
 
 const flags = computed(() => {
   const arr: string[] = [];
