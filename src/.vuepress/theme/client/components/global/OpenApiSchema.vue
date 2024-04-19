@@ -68,8 +68,8 @@
               class="px-2 py-2">
               <strong>All of:</strong>
               <div
-                v-for="(allOf, index) in property.allOf"
-                :key="index">
+                v-for="allOf in property.allOf"
+                :key="isSchemaObject(allOf) ? allOf.title : allOf.$ref">
                 <OpenApiSchema
                   v-show="!collapsible || (collapsible && showNested)"
                   :schema="allOf"
@@ -82,8 +82,8 @@
               class="px-2 py-2">
               <strong>One of:</strong>
               <div
-                v-for="(oneOf, index) in property.oneOf"
-                :key="index">
+                v-for="oneOf in property.oneOf"
+                :key="isSchemaObject(oneOf) ? oneOf.title : oneOf.$ref">
                 <OpenApiSchema
                   v-show="!collapsible || (collapsible && showNested)"
                   :schema="oneOf"
@@ -111,11 +111,11 @@
       <div v-if="schema.allOf">
         <em>All of:</em>
         <div
-          v-for="(item, index) in schema.allOf"
-          :key="index"
+          v-for="allOf in schema.allOf"
+          :key="isSchemaObject(allOf) ? allOf.title : allOf.$ref"
           class="ml-3">
           <OpenApiSchema
-            :schema="item"
+            :schema="allOf"
             :collapsible="false" />
         </div>
       </div>
@@ -123,11 +123,11 @@
       <div v-if="schema.oneOf">
         <em>One of:</em>
         <div
-          v-for="(item, index) in schema.oneOf"
-          :key="index"
+          v-for="oneOf in schema.oneOf"
+          :key="isSchemaObject(oneOf) ? oneOf.title : oneOf.$ref">
           class="ml-3">
           <OpenApiSchema
-            :schema="item"
+            :schema="oneOf"
             :collapsible="false" />
         </div>
       </div>

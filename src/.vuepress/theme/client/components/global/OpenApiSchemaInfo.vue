@@ -26,8 +26,8 @@
         v-if="schema.enum.length < 10"
         class="columns-2 list-disc">
         <li
-          v-for="(value, index) in schema.enum"
-          :key="index">
+          v-for="value in schema.enum"
+          :key="value">
           <code>{{ value }}</code>
         </li>
       </ul>
@@ -35,8 +35,8 @@
         <summary>View all</summary>
         <ul class="columns-2 list-disc">
           <li
-            v-for="(value, index) in schema.enum"
-            :key="index">
+            v-for="value in schema.enum"
+            :key="value">
             <code>{{ value }}</code>
           </li>
         </ul>
@@ -114,8 +114,8 @@
 
     <template v-if="schema.examples">
       <OpenApiExample
-        v-for="(example, index) in schema.examples"
-        :key="index"
+        v-for="example in schema.examples"
+        :key="example"
         :example="example" />
     </template>
   </header>

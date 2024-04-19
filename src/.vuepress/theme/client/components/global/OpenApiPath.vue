@@ -29,8 +29,8 @@
               <th>Information</th>
             </thead>
             <tr
-              v-for="(parameter, index) in operation.parameters"
-              :key="index">
+              v-for="parameter in operation.parameters"
+              :key="isParameterType(parameter) ? parameter.name : parameter.$ref">
               <OpenApiRequestParam
                 v-if="isParameterType(parameter)"
                 :parameter="parameter" />
