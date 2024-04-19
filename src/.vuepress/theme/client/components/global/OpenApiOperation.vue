@@ -25,7 +25,7 @@ import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
 import OpenApiSecurityRequirements from '@mptheme/client/components/global/OpenApiSecurityRequirements.vue';
 
 const props = defineProps<{
-  method: string;
+  method: OpenApiType.HttpMethods;
   endpoint: string;
   securityRequirements?: OpenApiType.SecurityRequirementObject[];
   securitySchemes?: Record<string, OpenApiType.SecuritySchemeObject>;
