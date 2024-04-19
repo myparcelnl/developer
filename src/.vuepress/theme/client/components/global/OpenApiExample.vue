@@ -1,5 +1,5 @@
 <template>
-  <template v-if="example">
+  <div v-if="example">
     <strong class="inline-block text-sm">{{ title || 'Example' }}:</strong>&nbsp;
     <Markdown
       v-if="isExampleObject(example) && example.summary"
@@ -15,16 +15,20 @@
       v-if="formattedExample && isMultilineString"
       :code="formattedExample" />
 
-    <code v-else>{{ formattedExample }}</code>
-  </template>
+    <code
+      v-else
+      class="p-1">
+      {{ formattedExample }}
+    </code>
+  </div>
 </template>
 
 <script setup lang="ts">
 import {computed} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import {formatExample} from '@mptheme/client/utils/openApiHelpers';
 import Markdown from '@mptheme/client/components/global/Markdown.vue';
 import CodeBlock from './CodeBlock.vue';
-import { formatExample } from '@mptheme/client/utils/openApiHelpers';
 
 const props = defineProps<{
   title?: string;
