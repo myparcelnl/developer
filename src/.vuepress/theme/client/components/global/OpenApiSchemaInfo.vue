@@ -66,8 +66,6 @@
       label="Pattern"
       :value="schema.pattern"
     />
-
-
     <OpenApiSchemaInfoRestriction
       v-if="schema.multipleOf !== undefined"
       label="Multiple of"
