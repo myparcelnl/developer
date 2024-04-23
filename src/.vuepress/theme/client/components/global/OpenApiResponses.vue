@@ -38,8 +38,8 @@
             title="Example responses"
             tag="strong">
             <OpenApiExample
-              v-for="(example, index) in item.examples"
-              :key="index"
+              v-for="example in item.examples"
+              :key="isExampleObject(example) ? example.value : example.$ref"
               :example="example" />
           </DetailsExpand>
         </template>
@@ -49,9 +49,9 @@
 </template>
 
 <script setup lang="ts">
-import {computed, type ComputedRef} from 'vue';
+import {computed} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
-import {isReponseObject} from '@mptheme/client/utils/openApiGuards';
+import {isReponseObject, isExampleObject} from '@mptheme/client/utils/openApiGuards';
 import OpenApiSchema from './OpenApiSchema.vue';
 import OpenApiExample from './OpenApiExample.vue';
 import Markdown from './Markdown.vue';
@@ -64,7 +64,7 @@ const props = defineProps<{
 
 const hasItems = computed<boolean>(() => Object.entries(props.responses).length > 0);
 
-  // Adds a computed to get only the OpenApiType.ResponseObject types from the responses prop.
+// Adds a computed to get only the OpenApiType.ResponseObject types from the responses prop.
 const responseObjects = computed<Record<string, OpenApiType.ResponseObject>>(() => {
   const objects: Record<string, OpenApiType.ResponseObject> = {};
   Object.entries(props.responses)

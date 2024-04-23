@@ -20,3 +20,8 @@ export const isArraySchemaObject = (schema: object): schema is OpenApiType.Array
 export const isReponseObject = (response: object): response is OpenApiType.ResponseObject => {
   return typeof response === 'object';
 };
+
+// Guard to check if example is an Example object
+export const isExampleObject = (example: unknown): example is OpenApiType.ExampleObject => {
+  return !!example && typeof example === 'object' && 'value' in example;
+};

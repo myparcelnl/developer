@@ -27,6 +27,7 @@
 import {computed} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
 import {formatExample} from '@mptheme/client/utils/openApiHelpers';
+import {isExampleObject} from '@mptheme/client/utils/openApiGuards';
 import Markdown from '@mptheme/client/components/global/Markdown.vue';
 import CodeBlock from './CodeBlock.vue';
 
@@ -47,9 +48,4 @@ const formattedExample = computed(() => {
 
 // Check the formattedExample for linebreaks, if it has those, it's a multiline string
 const isMultilineString = computed(() => formattedExample.value?.includes('\n'));
-
-// Guard to check if example is an Example object
-const isExampleObject = (example: unknown): example is OpenApiType.ExampleObject => {
-  return !!example && typeof example === 'object' && 'value' in example;
-};
 </script>

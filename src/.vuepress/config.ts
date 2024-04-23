@@ -27,7 +27,7 @@ export default defineUserConfig({
 
   plugins: [
     openApiPlugin({
-      yamlUrls: [],
+      yamlUrls: ['https://address.api.myparcel.nl/openapi.yaml'],
     }),
 
     parseTranslationsPlugin({
