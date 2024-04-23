@@ -1,5 +1,5 @@
 <template>
-  <div v-if="resolvedSchemes?.length">
+  <div v-if="Object.keys(resolvedSchemes)?.length">
     <ul>
       <OpenApiSecurityScheme
         v-for="(securityItem, name) in resolvedSchemes"
