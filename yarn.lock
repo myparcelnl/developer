@@ -1002,6 +1002,7 @@ __metadata:
     markdown-it-multimd-table: ^4.1.3
     mock-fs: ^5.1.2
     only-allow: ^1.1.1
+    openapi-types: ^12.1.3
     plop: ^4.0.0
     postcss-import: ^15.1.0
     prettier: ^2.8.8
@@ -1015,6 +1016,7 @@ __metadata:
     vitest: ^0.34.6
     vue-recaptcha: ^2.0.2
     vuepress: 2.0.0-beta.67
+    yaml: ^2.4.1
   languageName: unknown
   linkType: soft
 
@@ -7480,6 +7482,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"openapi-types@npm:^12.1.3":
+  version: 12.1.3
+  resolution: "openapi-types@npm:12.1.3"
+  checksum: 7fa5547f87a58d2aa0eba6e91d396f42d7d31bc3ae140e61b5d60b47d2fd068b48776f42407d5a8da7280cf31195aa128c2fc285e8bb871d1105edee5647a0bb
+  languageName: node
+  linkType: hard
+
 "opener@npm:^1.5.1":
   version: 1.5.2
   resolution: "opener@npm:1.5.2"
@@ -11264,6 +11273,15 @@ __metadata:
   version: 2.3.2
   resolution: "yaml@npm:2.3.2"
   checksum: acd80cc24df12c808c6dec8a0176d404ef9e6f08ad8786f746ecc9d8974968c53c6e8a67fdfabcc5f99f3dc59b6bb0994b95646ff03d18e9b1dcd59eccc02146
+  languageName: node
+  linkType: hard
+
+"yaml@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "yaml@npm:2.4.1"
+  bin:
+    yaml: bin.mjs
+  checksum: 4c391d07a5d5e935e058babb71026c9cdc9a6fd889e35dd91b53cfb0a12691b67c6c5c740858e71345fef18cd9c13c554a6dda9196f59820d769d94041badb0b
   languageName: node
   linkType: hard
 

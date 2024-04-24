@@ -1,0 +1,34 @@
+name: 'Nightly rebuild 🌙'
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  upload:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ./.github/actions/build
+
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: src/.vuepress/dist
+
+  deploy-ghp:
+    needs: upload
+    runs-on: ubuntu-22.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v1

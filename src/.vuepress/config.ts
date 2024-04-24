@@ -6,6 +6,7 @@ import {viteConfig} from './viteConfig';
 import {myParcelTheme} from './theme';
 import {sitemapPlugin} from './plugins/sitemap';
 import {parseTranslationsPlugin} from './plugins/parseTranslations';
+import {openApiPlugin} from './plugins/openApi';
 import {googleTagManagerPlugin} from './plugins/gtm/node';
 import {DIR_CONFIG, DIR_VUEPRESS} from './dirs';
 import {head} from './config/head';
@@ -25,6 +26,10 @@ export default defineUserConfig({
   }),
 
   plugins: [
+    openApiPlugin({
+      yamlUrls: [],
+    }),
+
     parseTranslationsPlugin({
       defaultLocale: 'en-GB',
       configDir: path.resolve(DIR_CONFIG, 'navigation'),
