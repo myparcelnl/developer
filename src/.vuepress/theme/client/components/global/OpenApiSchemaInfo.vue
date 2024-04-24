@@ -1,7 +1,7 @@
 <template>
   <header>
     <strong v-if="title">{{ title }}</strong>
-    <strong v-else-if="schema && schema.title">{{ schema.title }}</strong>
+    <strong v-else-if="schema.title">{{ schema.title }}</strong>
     <span
       v-if="isRequired"
       title="Required"
@@ -9,18 +9,18 @@
       >*</span
     >
     <pre
-      v-if="schema && schema.type"
+      v-if="schema.type"
       class="m-0 p-0 text-sm whitespace-nowrap">
           {{ schema.type }}
           <template v-if="schema.format">({{ schema.format }})</template>
       </pre>
 
     <Markdown
-      v-if="schema && schema.description"
+      v-if="schema.description"
       :content="schema.description"
       class="m-0 p-0 text-gray-500 text-sm" />
 
-    <div v-if="schema && schema.enum?.length">
+    <div v-if="schema.enum?.length">
       <strong class="text-sm">Possible values:</strong>
       <ul
         v-if="schema.enum.length < 10"
