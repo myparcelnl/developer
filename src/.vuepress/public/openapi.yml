@@ -1,0 +1,469 @@
+openapi: 3.1.0
+info:
+  title: 'MyParcel Core-API'
+  contact:
+    name: 'IT Support'
+    url: ':support@myparcel.nl'
+  version: 4.0.0
+servers:
+  -
+    url: 'https://api.myparcel.nl'
+    description: 'MyParcel Production Server'
+paths:
+  /pickup_locations:
+    get:
+      tags:
+        - 'Pickup Locations'
+      summary: 'Get pickup locations'
+      description: 'Get pickup locations'
+      operationId: getPickupLocations
+      parameters:
+        -
+          $ref: '#/components/parameters/user_agent_header'
+        -
+          $ref: '#/components/parameters/cc'
+        -
+          $ref: '#/components/parameters/postal_code'
+        -
+          $ref: '#/components/parameters/number'
+      responses:
+        '200':
+          description: 'Response with array of pickup locations'
+          content:
+            'application/json; charset: utf-8':
+              schema:
+                $ref: '#/components/schemas/pickup_location_response'
+  /webhook_subscriptions:
+    get:
+      tags:
+        - 'Webhook Subscriptions'
+      description: 'Show list of webhook subscriptions'
+      operationId: getSubscriptions
+      parameters:
+        -
+          $ref: '#/components/parameters/user_agent_header'
+        -
+          $ref: '#/components/parameters/account_id'
+        -
+          $ref: '#/components/parameters/shop_id'
+        -
+          name: hook
+          in: query
+          description: 'The event from which you want to receive notifications'
+          required: false
+          schema:
+            description: 'The event from which you want to receive notifications'
+            type: string
+            example: shipment_status_change
+      responses:
+        '200':
+          description: OK
+          content:
+            'application/json; charset: utf-8':
+              schema:
+                $ref: '#/components/schemas/webhook_subscriptions_response'
+        '400':
+          description: 'Validation error'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: 'Internal Server Error'
+      security: []
+    post:
+      tags:
+        - 'Webhook Subscriptions'
+      description: 'Add new webhook subscription.'
+      operationId: postSubscriptions
+      parameters:
+        -
+          $ref: '#/components/parameters/user_agent_header'
+      requestBody:
+        description: 'Webhook subscription object'
+        required: true
+        content:
+          'application/json; charset: utf-8':
+            schema:
+              $ref: '#/components/schemas/webhook_subscription_request'
+      responses:
+        '201':
+          description: 'Response with array of webhook ids'
+          content:
+            'application/json; charset: utf-8':
+              example:
+                data:
+                  webhook_subscriptions: [{ id: 1 }]
+        '400':
+          description: 'Validation error'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: 'Internal Server Error'
+      security: []
+  '/webhook_subscriptions/{webhook_subscriptions_id}':
+    delete:
+      tags:
+        - 'Webhook Subscriptions'
+      summary: 'Delete webhook subscriptions.'
+      description: 'Delete a webhook subscription'
+      operationId: deleteSubscriptions
+      parameters:
+        -
+          $ref: '#/components/parameters/user_agent_header'
+        -
+          $ref: '#/components/parameters/webhook_subscriptions_id_in_path'
+      responses:
+        '204':
+          description: 'No content'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '500':
+          description: 'Internal Server Error'
+      security: []
+components:
+  schemas:
+    pickup_location_response:
+      required:
+        - data
+      properties:
+        data:
+          required:
+            - pickup_locations
+          properties:
+            pickup_locations:
+              type: array
+              items:
+                $ref: '#/components/schemas/pickup_locations'
+          type: object
+      type: object
+    pickup_locations:
+      description: 'Pickup location'
+      required:
+        - address
+        - possibilities
+        - location
+      properties:
+        address:
+          $ref: '#/components/schemas/address'
+        possibilities:
+          $ref: '#/components/schemas/possibilities'
+        location:
+          $ref: '#/components/schemas/location'
+      type: object
+    possibilities:
+      description: 'Pickup location possibilities'
+      type: array
+      items:
+        properties:
+          delivery_type_id:
+            description: 'Delivery type id'
+            type: string
+          delivery_type_name:
+            description: 'Delivery type name'
+            type: string
+          moment:
+            required:
+              - start
+            properties:
+              start:
+                $ref: '#/components/schemas/startEndObject'
+            type: object
+          price:
+            description: Price
+            type: number
+            format: float
+        type: object
+    location:
+      description: Location
+      properties:
+        location_name:
+          description: 'Location name'
+          type: string
+        retail_network_id:
+          description: 'Retail network id'
+          type: string
+        distance:
+          description: Distance
+          type: string
+        latitude:
+          description: Latitude
+          type: string
+        longitude:
+          description: Longitude
+          type: string
+        location_code:
+          description: 'Location code'
+          type: string
+        phone_number:
+          description: 'Phone number'
+          type: string
+        opening_hours:
+          $ref: '#/components/schemas/openingHours'
+          description: 'Opening hours'
+      type: object
+    openingHours:
+      description: 'Opening hours'
+      required:
+        - monday
+        - tuesday
+        - wednesday
+        - thursday
+        - friday
+        - saturday
+        - sunday
+      properties:
+        monday:
+          type: array
+          items:
+            $ref: '#/components/schemas/opening_hours_per_day'
+        tuesday:
+          type: array
+          items:
+            $ref: '#/components/schemas/opening_hours_per_day'
+        wednesday:
+          type: array
+          items:
+            $ref: '#/components/schemas/opening_hours_per_day'
+        thursday:
+          type: array
+          items:
+            $ref: '#/components/schemas/opening_hours_per_day'
+        friday:
+          type: array
+          items:
+            $ref: '#/components/schemas/opening_hours_per_day'
+        saturday:
+          type: array
+          items:
+            $ref: '#/components/schemas/opening_hours_per_day'
+        sunday:
+          type: array
+          items:
+            $ref: '#/components/schemas/opening_hours_per_day'
+      type: object
+    opening_hours_per_day:
+      $ref: '#/components/schemas/startEndContainer'
+      description: 'Opening hours per day'
+    startEndContainer:
+      description: 'Start and end container'
+      required:
+        - start
+        - end
+      properties:
+        start:
+          $ref: '#/components/schemas/startEndObject'
+          description: Start
+        end:
+          $ref: '#/components/schemas/startEndObject'
+          description: End
+      type: object
+    startEndObject:
+      description: 'Start and end object'
+      required:
+        - date
+        - timezone_type
+        - timezone
+      properties:
+        date:
+          description: Date
+          type: string
+          example: '2024-02-05 09:00:00.000000'
+        timezone_type:
+          description: 'Timezone type'
+          type: integer
+          example: 3
+        timezone:
+          description: Timezone
+          type: string
+          example: Europe/Amsterdam
+      type: object
+    address:
+      title: Address
+      required:
+        - cc
+        - city
+        - street
+        - postal_code
+        - number
+      properties:
+        cc:
+          description: 'Country code'
+          type: string
+          example: NL
+        city:
+          description: City
+          type: string
+          example: Amsterdam
+        street:
+          description: Street
+          type: string
+          example: Keizersgracht
+        postal_code:
+          description: 'Postal code'
+          type: string
+          example: '1015 CJ'
+        number:
+          description: 'House number'
+          type: string
+          example: '518'
+        number_suffix:
+          description: 'House number extension'
+          type: string
+          example: A
+      type: object
+    OpeningHoursInterface:
+      title: 'Opening Hours'
+      type: object
+    webhook_subscriptions_response:
+      required:
+        - data
+      properties:
+        data:
+          required:
+            - webhook_subscriptions
+          properties:
+            webhook_subscriptions:
+              type: array
+              items:
+                $ref: '#/components/schemas/webhook_subscription'
+          type: object
+      type: object
+    webhook_subscription:
+      description: 'Webhook subscription'
+      required:
+        - id
+        - account_id
+        - shop_id
+        - hook
+        - url
+      properties:
+        id:
+          description: 'ID of webhook subscriptions'
+          type: integer
+          format: int32
+          example: 56123456
+        account_id:
+          description: 'Account ID'
+          type: integer
+          format: int32
+          example: 125678
+        shop_id:
+          description: 'Shop ID'
+          type: integer
+          format: int32
+          example: 1234
+        hook:
+          description: 'The event from which you want to receive notifications'
+          type: string
+          example: shipment_status_changed
+        url:
+          description: 'The callback URL on which to receive notifications'
+          type: string
+          format: uri
+          example: 'https://example.com/webhook'
+      type: object
+    webhook_subscription_request:
+      description: 'Webhook subscription request'
+      required:
+        - data
+      properties:
+        data:
+          required:
+            - webhook_subscription
+          properties:
+            webhook_subscription:
+              required:
+                - hook
+                - url
+              properties:
+                hook:
+                  description: 'The event from which you want to receive notifications'
+                  type: string
+                  example: shipment_status_changed
+                url:
+                  description: 'The callback URL on which to receive notifications'
+                  type: string
+                  format: uri
+                  example: 'https://example.com/webhook'
+              type: object
+          type: object
+      type: object
+  parameters:
+    account_id:
+      name: account_id
+      in: query
+      description: 'The ID of the account.'
+      required: false
+      schema:
+        type: integer
+        format: int32
+      example: '123456'
+    shop_id:
+      name: shop_id
+      in: query
+      description: 'The ID of the shop.'
+      required: false
+      schema:
+        type: integer
+        format: int32
+      example: '5678'
+    postal_code:
+      name: postal_code
+      in: query
+      description: 'The postal code of the address.'
+      required: true
+      schema:
+        type: string
+      example: 2132JE
+    number:
+      name: number
+      in: query
+      description: 'The house number of the address.'
+      required: true
+      schema:
+        type: string
+      example: '31'
+    cc:
+      name: cc
+      in: query
+      description: 'The country code.'
+      required: true
+      schema:
+        type: string
+      example: NL
+    user_agent_header:
+      name: User-Agent
+      in: header
+      description: 'The User-Agent header'
+      required: true
+      schema:
+        type: string
+      example: 'NameOfMyApp/1.0.0 PHP/8.1.0'
+    webhook_subscriptions_id_in_path:
+      name: webhook_subscriptions_id
+      in: path
+      description: 'The ID of the webhook subscription'
+      required: true
+      schema:
+        type: integer
+        format: int32
+      example: '123456789'
+  securitySchemes:
+    bearerAuth:
+      type: http
+      description: 'BASE64 encoded '
+      name: Authorization
+      in: header
+      scheme: bearer
+tags:
+  -
+    name: 'Pickup Locations'
+    description: 'All about Pickup Locations'
+  -
+    name: 'Webhook Subscriptions'
+    description: 'All about Webhooks'
