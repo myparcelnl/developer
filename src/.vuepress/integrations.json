@@ -422,6 +422,14 @@
     "url": "https://www.deliverymatch.nl/"
   },
   {
+    "name": "PackCloud",
+    "title": "PackCloud",
+    "type": "api",
+    "documentation": "https://pack.cloud/docs/integraties/myparcel/koppelen/",
+    "image": "PackCloud.svg",
+    "url": "https://pack.cloud/"
+  },
+  {
     "name": "ProductFlow",
     "title": "ProductFlow",
     "type": "api",
