@@ -69,7 +69,8 @@ out ways to improve...
     <TeamMember name="Barry" normal="/barry-van-weldam-normal.jpeg" funny="/barry-van-weldam-fun.jpeg" />
     <TeamMember name="Kwame" normal="/man-versie-1-normaal.png" funny="/man-met-hoed.png" />
     <TeamMember name="Jochem" normal="/man-versie-2-normaal.png" funny="/man-versie-2-hover-versie-1.png" />
-    <TeamMember name="Yoran" normal="/man-versie-3-normaal.png" funny="/man-versie-3-hover-versie-1.png" />
+    <TeamMember name="Yoran" normal="/yoran-normal.png" funny="/yoran-fun.png" />
+    <TeamMember name="Tim" normal="/man-versie-3-normaal.png" funny="/man-versie-1-hover-versie-1.png" />
     <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
 </Stack>
 
@@ -81,6 +82,8 @@ out ways to improve...
     <TeamMember name="Remco" normal="/remco-horters-normal.jpg" funny="/remco-horters-fun.jpg" />
     <TeamMember name="Fleur" normal="/fleur-normal.png" funny="/fleur-fun.png" />
     <TeamMember name="Tim" normal="/tim-normal.png" funny="/tim-fun.png" />
+    <TeamMember name="Guido" normal="/guido-normal.png" funny="/guido-fun.png" />
+    <TeamMember name="Vincent" normal="/vincent-normal.png" funny="/vincent-fun.png" />
     <TeamMember name="Jos" normal="/2019/10/myparcel-development-team-jos-2.jpg" funny="/2019/10/myparcel-development-team-jos-1.jpg" />
     <TeamMember name="Mitchell" normal="/2020/11/mtichell-bokhove-normal.jpg" funny="/2020/11/mtichell-bokhove-fun.jpg" />
 </Stack>
@@ -90,22 +93,23 @@ out ways to improve...
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <TeamMember name="Edie" normal="/edie-normal.png" funny="/edie-fun.png" />
     <TeamMember name="Joeri" normal="/joeri-van-veen-normal.jpg" funny="/joeri-van-veen-fun.jpg" />
-    <TeamMember name="Mark" normal="/mark-ernst-normal.png" funny="/mark-ernst-fun.png" />
-    <TeamMember name="Thijmen" normal="/man-versie-3-normaal.png" funny="/man-versie-3-hover-versie-1.png" />
-    <TeamMember name="Cher" normal="/vrouw-versie-2-normaal.png" funny="/vrouw-versie-2-hover-versie-1.png" />
+    <TeamMember name="Cher" normal="/Cher-normal.png" funny="/Cher-fun.png" />
+    <TeamMember name="Freek" normal="/man-versie-2-normaal.png" funny="/man-versie-2-hover-versie-1.png" />
+    <TeamMember name="Florian" normal="/man-versie-1-normaal.png" funny="/man-versie-1-hover-versie-1.png" />
     <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
 </Stack>
 
 ### API
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-    <TeamMember name="Lester" normal="/2019/10/myparcel-development-team-lester-2.jpg" funny="/2019/10/myparcel-development-team-lester-1.jpg" />
+    <TeamMember name="Lester" normal="/Lester-normal.png" funny="/Lester-fun.png" />
     <TeamMember name="Jan-Willem" normal="/2019/10/myparcel-development-team-jan-willem-2.jpg" funny="/2019/10/myparcel-development-team-jan-willem-1.jpg" />
     <TeamMember name="Joost" normal="/2020/11/joost-florijn-normal.jpg" funny="/2020/11/joost-florijn-fun.jpg" />
     <TeamMember name="Rick" normal="/rick-normal.png" funny="/rick-fun.png" />
     <TeamMember name="Bert-Jan" normal="/bertjan-normal.png" funny="/bertjan-fun.png" />
     <TeamMember name="Hergen" normal="/hergen-normal.png" funny="/hergen-fun.png" />
-    <TeamMember name="Nikita" normal="/nikita-verhoeven-normal.jpg" funny="/nikita-verhoeven-fun.jpg" />
+    <TeamMember name="Bas" normal="/bas-normal.png" funny="/bas-fun.png" />
+    <TeamMember name="Leander" normal="/Leander-normal.png" funny="/Leander-fun.png" />
     <TeamMember name="Teun" normal="/man-versie-1-normaal.png" funny="/man-versie-1-hover-versie-2.png" />
     <TeamMember name="Peter" normal="/2019/10/myparcel-development-team-peter-2.jpg" funny="/2019/10/myparcel-development-team-peter-1.jpg" />
 </Stack>
@@ -114,7 +118,6 @@ out ways to improve...
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <TeamMember name="Alwin" normal="/2019/10/myparcel-development-team-alwin-2.jpg" funny="/2019/10/myparcel-development-team-alwin-1.jpg" />
-    <TeamMember name="Jacob" normal="/2019/10/myparcel-development-team-jacob-2.jpg" funny="/2019/10/myparcel-development-team-jacob-1.jpg" />
     <TeamMember name="Remco" normal="/remco-normal.png" funny="/remco-fun.png" />
     <TeamMember name="Christiaan" normal="/christiaan-normal.png" funny="/christiaan-fun.png" />
 </Stack>
