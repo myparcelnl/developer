@@ -66,8 +66,8 @@ tree:
             link: https://vanilia.com/
         - component: HomePartnerBrand
           attributes:
-            name: Wolplein
-            logo: wolplein.svg
-            color: '#E32F82'
-            link: https://www.wolplein.nl/
+            name: Verstegen
+            logo: verstegen.png
+            color: '#007a53'
+            link: https://www.verstegen.nl/
 ---
