@@ -345,7 +345,7 @@
     "name": "channel-dock",
     "title": "ChannelDock",
     "type": "api",
-    "documentation": "https://help.channeldock.com/books/nederlands-nl/page/myparcel-koppelen-aan-channeldock",
+    "documentation": "https://help.channeldock.com/books/english-en/page/connecting-myparcel",
     "image": "channel-dock.svg",
     "url": "https://channeldock.com/nl"
   },
