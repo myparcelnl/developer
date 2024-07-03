@@ -430,6 +430,15 @@
     "url": "https://pack.cloud/"
   },
   {
+    "name": "LyraWMS",
+    "title": "LyraWMS",
+    "type": "api",
+    "documentation": "https://help.lyrawms.nl/nl/articles/9014984-myparcel-als-vervoerder-koppelen",
+    "image": "lyrawms.png",
+    "classes": "bg-[#3b82f6]",
+    "url": "https://help.lyrawms.nl/"
+  },
+  {
     "name": "ProductFlow",
     "title": "ProductFlow",
     "type": "api",
