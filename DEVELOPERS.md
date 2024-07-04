@@ -40,11 +40,11 @@ Most of what is written in the specification is also explained in the following 
 ### Rules
 
 - Use the imperative mood in the subject line. 
-  - For example: "Fix bug" instead of "Fixed bug" or "Fixes bug".
+  - For example: "fix bug" instead of "fixed bug" or "fixes bug".
 - Do not capitalize the subject line.
 - Do not end the subject line with a period.
 - Use the body to explain the "what" and "why" of the commit, not the "how". 
-  - For example: "This commit fixes a bug" instead of "This commit fixes a bug by changing the code in this way".
+  - For example: "this commit fixes a bug" instead of "this commit fixes a bug by changing the code in this way".
 - If the commit fixes an issue, add "Closes #issue-number" to the body.
   - In case there are multiple issues, add "Closes #issue-number, Closes #issue-number, ..." to the body.
 
