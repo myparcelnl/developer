@@ -20,6 +20,7 @@ Here you can find our documentation for various plugins and our own SDKs.
     <Integration name="amazon" />
     <Integration name="etsy" />
     <Integration name="ecwid" />
+    <Integration name="bol." />
 </Stack>
 
 ## SDKs (Software Development Kits)
