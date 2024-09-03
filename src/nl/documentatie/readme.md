@@ -15,6 +15,7 @@ Hier vind je de handleidingen voor onze plugins en API-integraties.
     <Integration name="shopify" />
     <Integration name="shopware" />
     <Integration name="ecwid" />
+    <Integration name="bol." />
     <Integration name="wix" />
     <Integration name="amazon" />
     <Integration name="etsy" />

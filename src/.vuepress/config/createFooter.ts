@@ -1,4 +1,4 @@
-import {MyPaNavbarConfigArray} from '@mptheme/config.types';
+import {type MyPaNavbarConfigArray} from '@mptheme/config.types';
 
 // eslint-disable-next-line max-lines-per-function
 export const createFooter = (): MyPaNavbarConfigArray => {
@@ -14,6 +14,7 @@ export const createFooter = (): MyPaNavbarConfigArray => {
         {text: 'Shopify', link: '/nl/documentatie/14.shopify.html'},
         {text: 'Shopware', link: '/nl/documentatie/15.shopware.html'},
         {text: 'Ecwid', link: '/nl/documentatie/17.ecwid.html'},
+        {text: 'Bol.', link: '/nl/documentatie/18.bol.html'},
         {text: 'Wix', link: '/nl/documentatie/20.wix.html'},
         {text: 'Amazon', link: '/nl/documentatie/25.amazon.html'},
         {text: 'Etsy', link: '/nl/documentatie/30.etsy.html'},

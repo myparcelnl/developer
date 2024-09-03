@@ -307,11 +307,11 @@
     "url": "https://www.ecwid.com/apps/shipping/myparcel"
   },
   {
-    "name": "bol-com",
-    "title": "bol.com",
+    "name": "bol.",
+    "title": "bol.",
     "type": "api",
     "internal": true,
-    "documentation": "https://myparcelnl.github.io/bol.com",
+    "documentation": "/documentatie/18.bol.html",
     "image": "bol-com.svg",
     "url": "https://partnerplatform.bol.com/nl/intermediair/myparcel/"
   },
