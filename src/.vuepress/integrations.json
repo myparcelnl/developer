@@ -229,7 +229,7 @@
     "title": "PHP PDK",
     "internal": true,
     "type": "pdk",
-    "repository": "myparcelnl/php-pdk",
+    "repository": "myparcelnl/pdk",
     "image": "php.svg",
     "classes": "bg-goldfish-500 dark:bg-goldfish-700",
     "documentation": "/documentation/52.pdk/"
