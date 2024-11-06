@@ -990,7 +990,7 @@ __metadata:
     eslint: ^8.40.0
     flat: ^6.0.1
     gray-matter: ">= 4.0"
-    happy-dom: ^12.6.0
+    happy-dom: ^15.10.2
     http-server: ^14.1.1
     husky: ^8.0.3
     hyperlink: ^5.0.4
@@ -3350,13 +3350,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css.escape@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "css.escape@npm:1.5.1"
-  checksum: f6d38088d870a961794a2580b2b2af1027731bb43261cfdce14f19238a88664b351cc8978abc20f06cc6bbde725699dec8deb6fe9816b139fc3f2af28719e774
-  languageName: node
-  linkType: hard
-
 "cssesc@npm:^3.0.0":
   version: 3.0.0
   resolution: "cssesc@npm:3.0.0"
@@ -5272,17 +5265,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:^12.6.0":
-  version: 12.9.1
-  resolution: "happy-dom@npm:12.9.1"
+"happy-dom@npm:^15.10.2":
+  version: 15.10.2
+  resolution: "happy-dom@npm:15.10.2"
   dependencies:
-    css.escape: ^1.5.1
     entities: ^4.5.0
-    iconv-lite: ^0.6.3
     webidl-conversions: ^7.0.0
-    whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: 02e7f73199cda296ede1479559166ff1d2b04a4169679fa12d4b7c3b90caefc571c18ca6664bdeb1054b6d22465b2c10e78b3ddfc5676e87f7bd7b16b9afb00b
+  checksum: 37ef0875565fe94e3fc47c8ddba422268966ffabc4efd84bc79db692d63b28478090e41a58f68b3e66f1b6dc510a9390fc45a1ceb2b64e9cc1a3c66dd088592f
   languageName: node
   linkType: hard
 
@@ -5632,7 +5622,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2, iconv-lite@npm:^0.6.3":
+"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
   dependencies:
