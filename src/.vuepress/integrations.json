@@ -50,7 +50,7 @@
     "type": "plugin",
     "internal": true,
     "repository": "myparcelnl/magento1",
-    "documentation": "https://myparcelnl.github.io/magento1",
+    "documentation": "https://myparcelnl.github.io/magento1-End-of-life/",
     "image": "magento.svg",
     "classes": "bg-zinc-100"
   },
@@ -204,7 +204,7 @@
     "name": "shoptrader",
     "title": "Shoptrader",
     "type": "plugin",
-    "documentation": "https://support.shoptrader.com/support/home",
+    "documentation": "https://www.shoptrader.nl/addons/myparcel-checkout.html",
     "image": "shoptrader.png",
     "url": "https://www.shoptrader.nl/"
   },
