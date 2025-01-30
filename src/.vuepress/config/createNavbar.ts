@@ -1,4 +1,4 @@
-import {MyPaNavLink, MyPaNavbarConfigArray} from '@mptheme/config.types';
+import {type MyPaNavLink, type MyPaNavbarConfigArray} from '@mptheme/config.types';
 
 const pages: MyPaNavLink[] = [
   {
@@ -12,10 +12,6 @@ const pages: MyPaNavLink[] = [
   {
     text: 'Integrations',
     link: '/integrations.html',
-  },
-  {
-    text: 'Release notes',
-    link: '/release-notes/',
   },
   {
     text: 'About',

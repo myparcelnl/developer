@@ -1,4 +1,4 @@
-import {MyPaNavLink} from '@mptheme/config.types';
+import {type MyPaNavLink} from '@mptheme/config.types';
 
 export const STATUS: MyPaNavLink = {
   text: 'Status',
@@ -18,11 +18,6 @@ export const DOCUMENTATION: MyPaNavLink = {
 export const INTEGRATIONS: MyPaNavLink = {
   text: 'Integrations',
   link: '/integrations.html',
-};
-
-export const RELEASE_NOTES: MyPaNavLink = {
-  text: 'Release notes',
-  link: '/release-notes/api.html',
 };
 
 export const ABOUT: MyPaNavLink = {
