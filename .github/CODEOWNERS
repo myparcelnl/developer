@@ -16,7 +16,3 @@ src/.vuepress/public  @myparcelnl/integration @myparcelnl/qa @myparcelnl/it-supp
 # --- API Reference: Integration, API, QA and IT support ---
 **/api-reference     @myparcelnl/integration @myparcelnl/api @myparcelnl/qa
 
-# --- Release notes: QA and the relevant developers ---
-**/release-notes/*           @myparcelnl/qa
-**/release-notes/*frontend*  @myparcelnl/qa @myparcelnl/frontend
-**/release-notes/*api*       @myparcelnl/qa @myparcelnl/api

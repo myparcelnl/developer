@@ -20,11 +20,6 @@ export const INTEGRATIONS: MyPaNavLink = {
   link: '/integrations.html',
 };
 
-export const RELEASE_NOTES: MyPaNavLink = {
-  text: 'Release notes',
-  link: '/release-notes/api.html',
-};
-
 export const ABOUT: MyPaNavLink = {
   text: 'About',
   link: '/about.html',
