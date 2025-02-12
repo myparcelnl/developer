@@ -41,7 +41,7 @@ export const createFooter = (): MyPaNavbarConfigArray => {
         // eslint-disable-next-line max-len,vue/max-len
         {
           text: 'Join our Slack workspace',
-          link: 'https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI/',
+          link: 'https://join.slack.com/t/myparcel-dev/shared_invite/zt-2zvk9gfs1-h6koDUduK6ZM_kZcc247AQ',
         },
         {text: 'Learn more about partnerships', link: 'https://www.myparcel.nl/partner-worden/'},
       ],

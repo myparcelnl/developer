@@ -130,5 +130,5 @@ here. [Vacancies](https://www.myparcel.nl/vacature/development/)
 
 ::: tip
 Using our API or SDK? Got some questions or
-tips? [Reach out to us on Slack!](https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI)
+tips? [Reach out to us on Slack!](https://join.slack.com/t/myparcel-dev/shared_invite/zt-2zvk9gfs1-h6koDUduK6ZM_kZcc247AQ)
 :::
