@@ -19,7 +19,7 @@ jobs:
 
       - uses: ./.github/actions/build
 
-      - uses: actions/upload-pages-artifact@v1
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: src/.vuepress/dist
 
