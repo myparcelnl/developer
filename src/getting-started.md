@@ -49,7 +49,7 @@ in our [contact form], or ask our developers directly on [Slack].
 [Integrations]: /integrations.html
 [MyParcel backoffice]: https://www.myparcel.nl/
 [SDKs]: /integrations.html#sdks-software-development-kits
-[Slack]: https://join.slack.com/t/myparcel-dev/shared_invite/enQtNDkyNTg3NzA1MjM4LWQ5MWE5MTQ3MDg4YjU5NzdjYjk0OTY1ZDJiYjU5YzJjNzk3Yzk3NGY0OWFkZDU4MDYwZDEyZDlhZTgzOWM1MjI
+[Slack]: https://join.slack.com/t/myparcel-dev/shared_invite/zt-2zvk9gfs1-h6koDUduK6ZM_kZcc247AQ
 [`Shop Settings -> Integration`]: https://backoffice.myparcel.nl/settings/integration
 [authentication instructions]: /api-reference/05.authentication.html
 [contact form]: /contact.html
