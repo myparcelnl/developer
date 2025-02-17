@@ -4,7 +4,7 @@ description: 'Download translations and build the site'
 runs:
   using: composite
   steps:
-    - uses: myparcelnl/actions/yarn-install@v3
+    - uses: myparcelnl/actions/yarn-install@v4
 
     - name: 'Import latest translations'
       shell: bash
@@ -12,7 +12,7 @@ runs:
 
     - name: 'Handle build cache'
       id: cache-build
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: src/.vuepress/dist
         key: ${{ runner.os }}-build-${{ hashFiles('**/*.lock') }}-${{ hashFiles('src/**/*') }}

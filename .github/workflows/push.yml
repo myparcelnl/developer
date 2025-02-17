@@ -15,11 +15,11 @@ jobs:
   upload:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: ./.github/actions/build
 
-      - uses: actions/upload-pages-artifact@v1
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: src/.vuepress/dist
 
@@ -27,7 +27,7 @@ jobs:
 #    needs: upload
 #    runs-on: ubuntu-22.04
 #    steps:
-#      - uses: actions/download-artifact@v3
+#      - uses: actions/download-artifact@v4
 #        with:
 #          name: github-pages
 #
@@ -37,13 +37,13 @@ jobs:
 #          mkdir artifact
 #          tar -xf artifact.tar -C artifact
 #
-#      - uses: myparcelnl/actions/aws-setup@v3
+#      - uses: myparcelnl/actions/aws-setup@v4
 #        with:
 #          region: ${{ secrets.AWS_DEFAULT_REGION }}
 #          access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
 #          secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 #
-#      - uses: myparcelnl/actions/aws-s3-sync@v3
+#      - uses: myparcelnl/actions/aws-s3-sync@v4
 #        with:
 #          source: artifact
 #          bucket: ${{ secrets.S3_BUCKET }}
@@ -61,20 +61,20 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
 
   rebase-prs:
     name: 'Rebase open pull requests'
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: myparcelnl/actions/setup-app-credentials@v3
+      - uses: myparcelnl/actions/setup-app-credentials@v4
         id: credentials
         with:
           app-id: ${{ secrets.MYPARCEL_APP_ID }}
           private-key: ${{ secrets.MYPARCEL_APP_PRIVATE_KEY }}
 
-      - uses: peter-evans/rebase@v2
+      - uses: peter-evans/rebase@v3
         with:
           token: ${{ steps.credentials.outputs.token }}
