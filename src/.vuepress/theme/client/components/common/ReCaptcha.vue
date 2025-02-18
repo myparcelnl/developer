@@ -6,8 +6,8 @@
 </template>
 
 <script lang="ts">
-import {computed, defineComponent} from 'vue';
 import {VueRecaptcha} from 'vue-recaptcha';
+import {computed, defineComponent} from 'vue';
 import {useDark} from '@vueuse/core';
 
 export default defineComponent({
@@ -18,7 +18,7 @@ export default defineComponent({
     const dark = useDark();
 
     return {
-      RECAPTCHA_SITE_KEY: '6Ldfn8cfAAAAAJ-131JCFn9skW7N3k-7B0UKuHBi',
+      RECAPTCHA_SITE_KEY: '6Lc--NkqAAAAAE7zbUTUww4HZUSZ5b5ZIvdRKVz9',
       theme: computed((): string => {
         return dark.value ? 'dark' : 'light';
       }),
