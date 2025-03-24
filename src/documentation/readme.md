@@ -41,4 +41,5 @@ Here you can find our documentation for various plugins and our own SDKs.
 
 <Stack class="md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <Integration name="delivery-options" />
+    <Integration name="google-chrome-extension" />
 </Stack>

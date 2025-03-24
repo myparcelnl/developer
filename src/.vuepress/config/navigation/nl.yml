@@ -38,6 +38,8 @@ footer:
         link: /nl/documentatie/25.amazon.html
       - text: Etsy
         link: /nl/documentatie/30.etsy.html
+      - text: Chrome extension
+        link: /nl/documentatie/40.chrome-extension.html
       - text: PHP SDK
         link: /documentation/50.php-sdk.html
       - text: JS SDK

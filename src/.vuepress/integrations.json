@@ -4,7 +4,7 @@
     "title": "Google Chrome Extension",
     "type": "utility",
     "internal": true,
-    "documentation": "https://www.myparcel.nl/en/integrations/google-chrome-extensie/",
+    "documentation": "/documentation/40.chrome-extension.html",
     "image": "chrome.svg"
   },
   {

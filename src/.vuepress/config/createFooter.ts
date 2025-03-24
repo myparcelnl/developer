@@ -18,6 +18,7 @@ export const createFooter = (): MyPaNavbarConfigArray => {
         {text: 'Wix', link: '/nl/documentatie/20.wix.html'},
         {text: 'Amazon', link: '/nl/documentatie/25.amazon.html'},
         {text: 'Etsy', link: '/nl/documentatie/30.etsy.html'},
+        {text: 'Chrome extension', link: '/nl/documentatie/40.chrome-extension.html'},
         {text: 'PHP SDK', link: '/50.php-sdk.html'},
         {text: 'JavaScript SDK', link: '/51.javascript-sdk.html'},
         {text: 'Delivery Options', link: '/60.delivery-options.html'},
