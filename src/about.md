@@ -56,70 +56,93 @@ out ways to improve...
 ### Product owners
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-    <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
+    <TeamMember name="Richard" normal="/richard-normal.png" funny="/richard-fun.png" />
     <TeamMember name="Mitchell" normal="/2020/11/mtichell-bokhove-normal.jpg" funny="/2020/11/mtichell-bokhove-fun.jpg" />
     <TeamMember name="Peter" normal="/2019/10/myparcel-development-team-peter-2.jpg" funny="/2019/10/myparcel-development-team-peter-1.jpg" />
     <TeamMember name="Christiaan" normal="/christiaan-normal.png" funny="/christiaan-fun.png" />
+    <TeamMember name="Rutger" normal="/rutger-normal.png" funny="/rutger-fun.png" />
 </Stack>
 
 ### IT-Support
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-    <TeamMember name="Bastiaan" normal="/bastiaan-normal.png" funny="/bastiaan-fun.png" />
+    <TeamMember name="Richard" normal="/richard-normal.png" funny="/richard-fun.png" />
     <TeamMember name="Barry" normal="/barry-van-weldam-normal.jpeg" funny="/barry-van-weldam-fun.jpeg" />
-    <TeamMember name="Kwame" normal="/man-versie-1-normaal.png" funny="/man-met-hoed.png" />
-    <TeamMember name="Jochem" normal="/man-versie-2-normaal.png" funny="/man-versie-2-hover-versie-1.png" />
     <TeamMember name="Yoran" normal="/yoran-normal.png" funny="/yoran-fun.png" />
     <TeamMember name="Tim" normal="/man-versie-3-normaal.png" funny="/man-versie-1-hover-versie-1.png" />
-    <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
+    <TeamMember name="Maikel" normal="/man-versie-1-normaal.png" funny="/man-versie-1-hover-versie-2.png" />
+    <TeamMember name="Wesley" normal="/man-versie-3-normaal.png" funny="/man-versie-1-hover-versie-1.png" />
 </Stack>
 
-### Frontend
+### SalesForce
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+    <TeamMember name="Bastiaan" normal="/bastiaan-normal.png" funny="/bastiaan-fun.png" />
+    <TeamMember name="Bastiaan" normal="/robin-normal.png" funny="/robin-fun.png" />
+</Stack>
+
+### Customer & New Product
+
+<Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+    <TeamMember name="Mitchell" normal="/2020/11/mtichell-bokhove-normal.jpg" funny="/2020/11/mtichell-bokhove-fun.jpg" />    
     <TeamMember name="Alex" normal="/2019/10/myparcel-development-team-alex-2.jpg" funny="/2019/10/myparcel-development-team-alex-1.jpg" />
-    <TeamMember name="Maarten" normal="/maarten-knijnenberg-normal.jpg" funny="/maarten-knijnenberg-fun.jpg" />
-    <TeamMember name="Remco" normal="/remco-horters-normal.jpg" funny="/remco-horters-fun.jpg" />
-    <TeamMember name="Fleur" normal="/fleur-normal.png" funny="/fleur-fun.png" />
     <TeamMember name="Tim" normal="/tim-normal.png" funny="/tim-fun.png" />
-    <TeamMember name="Guido" normal="/guido-normal.png" funny="/guido-fun.png" />
-    <TeamMember name="Vincent" normal="/vincent-normal.png" funny="/vincent-fun.png" />
-    <TeamMember name="Jos" normal="/2019/10/myparcel-development-team-jos-2.jpg" funny="/2019/10/myparcel-development-team-jos-1.jpg" />
-    <TeamMember name="Mitchell" normal="/2020/11/mtichell-bokhove-normal.jpg" funny="/2020/11/mtichell-bokhove-fun.jpg" />
+    <TeamMember name="Joost" normal="/2020/11/joost-florijn-normal.jpg" funny="/2020/11/joost-florijn-fun.jpg" />
+    <TeamMember name="Lester" normal="/Lester-normal.png" funny="/Lester-fun.png" />
+    <TeamMember name="Henri" normal="/man-versie-1-normaal.png" funny="/man-met-hoed.png" />
 </Stack>
 
-### Integrations
+### External Integrations
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-    <TeamMember name="Edie" normal="/edie-normal.png" funny="/edie-fun.png" />
+    <TeamMember name="Richard" normal="/richard-normal.png" funny="/richard-fun.png" />
     <TeamMember name="Joeri" normal="/joeri-van-veen-normal.jpg" funny="/joeri-van-veen-fun.jpg" />
     <TeamMember name="Cher" normal="/Cher-normal.png" funny="/Cher-fun.png" />
-    <TeamMember name="Freek" normal="/man-versie-2-normaal.png" funny="/man-versie-2-hover-versie-1.png" />
-    <TeamMember name="Florian" normal="/man-versie-1-normaal.png" funny="/man-versie-1-hover-versie-1.png" />
-    <TeamMember name="Richard" normal="/2019/10/myparcel-development-team-richard-2.jpg" funny="/2019/10/myparcel-development-team-richard-1.jpg" />
+    <TeamMember name="Freek" normal="/freek-normal.png" funny="/freek-fun.png" />
+    <TeamMember name="Jochem" normal="/jochem-normal.png" funny="/jochem-fun.png" />
 </Stack>
 
-### API
+### Shipment & Billing
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-    <TeamMember name="Lester" normal="/Lester-normal.png" funny="/Lester-fun.png" />
+    <TeamMember name="Rutger" normal="/rutger-normal.png" funny="/rutger-fun.png" />    
     <TeamMember name="Jan-Willem" normal="/2019/10/myparcel-development-team-jan-willem-2.jpg" funny="/2019/10/myparcel-development-team-jan-willem-1.jpg" />
-    <TeamMember name="Joost" normal="/2020/11/joost-florijn-normal.jpg" funny="/2020/11/joost-florijn-fun.jpg" />
-    <TeamMember name="Rick" normal="/rick-normal.png" funny="/rick-fun.png" />
-    <TeamMember name="Bert-Jan" normal="/bertjan-normal.png" funny="/bertjan-fun.png" />
-    <TeamMember name="Hergen" normal="/hergen-normal.png" funny="/hergen-fun.png" />
     <TeamMember name="Bas" normal="/bas-normal.png" funny="/bas-fun.png" />
-    <TeamMember name="Leander" normal="/Leander-normal.png" funny="/Leander-fun.png" />
-    <TeamMember name="Teun" normal="/man-versie-1-normaal.png" funny="/man-versie-1-hover-versie-2.png" />
-    <TeamMember name="Peter" normal="/2019/10/myparcel-development-team-peter-2.jpg" funny="/2019/10/myparcel-development-team-peter-1.jpg" />
+    <TeamMember name="Fleur" normal="/fleur-normal.png" funny="/fleur-fun.png" />
+    <TeamMember name="Remco" normal="/remco-normal.png" funny="/remco-fun.png" />
+    <TeamMember name="Nick" normal="/man-versie-1-normaal.png" funny="/man-versie-1-hover-versie-2.png" />
+    <TeamMember name="Jeroen" normal="/man-versie-3-normaal.png" funny="/man-versie-1-hover-versie-1.png" />
+    <TeamMember name="Piet-hein" normal="/piethein-normal.png" funny="/piethein-fun.png" />
+    <TeamMember name="Luca" normal="/man-versie-1-normaal.png" funny="/man-met-hoed.png" />
+    <TeamMember name="Danny" normal="/man-versie-2-normaal.png" funny="/man-versie-2-hover-versie-1.png" />
+    <TeamMember name="Marten" normal="/man-versie-1-normaal.png" funny="/man-versie-1-hover-versie-2.png" />
 </Stack>
 
-### DevOps
+### Order & Fulfilment
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+    <TeamMember name="Peter" normal="/2019/10/myparcel-development-team-peter-2.jpg" funny="/2019/10/myparcel-development-team-peter-1.jpg" />
+    <TeamMember name="Bas" normal="/man-versie-3-normaal.png" funny="/man-versie-1-hover-versie-1.png" />
+    <TeamMember name="Brigitta" normal="/vrouw-versie-3-normaal.png" funny="/vrouw-versie-3-hover-versie-2.png" />
+    <TeamMember name="George" normal="/man-versie-2-normaal.png" funny="/man-versie-2-hover-versie-1.png" />
+    <TeamMember name="Guido" normal="/guido-normal.png" funny="/guido-fun.png" />
+    <TeamMember name="Kalle" normal="/man-versie-1-normaal.png" funny="/man-versie-1-hover-versie-2.png" />
+    <TeamMember name="Maarten" normal="/maarten-normaal.png" funny="/maarten-fun.png" />
+    <TeamMember name="Marcel" normal="/man-versie-1-normaal.png" funny="/man-versie-1-hover-versie-2.png" />
+    <TeamMember name="Thijmen" normal="/man-versie-3-normaal.png" funny="/man-versie-1-hover-versie-1.png" />
+    <TeamMember name="Vincent" normal="/vincent-normal.png" funny="/vincent-fun.png" />
+</Stack>
+
+### Cloud engineering
+
+<Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+    <TeamMember name="Christiaan" normal="/christiaan-normal.png" funny="/christiaan-fun.png" />
     <TeamMember name="Alwin" normal="/2019/10/myparcel-development-team-alwin-2.jpg" funny="/2019/10/myparcel-development-team-alwin-1.jpg" />
     <TeamMember name="Remco" normal="/remco-normal.png" funny="/remco-fun.png" />
-    <TeamMember name="Christiaan" normal="/christiaan-normal.png" funny="/christiaan-fun.png" />
+    <TeamMember name="Wouter" normal="/man-versie-2-normaal.png" funny="/man-versie-2-hover-versie-1.png" />
+    <TeamMember name="Jens" normal="/man-versie-1-normaal.png" funny="/man-versie-1-hover-versie-2.png" />
+    <TeamMember name="Thom" normal="/thom-normal.png" funny="/thom-fun.png" />
+    <TeamMember name="Valentijn" normal="/man-versie-3-normaal.png" funny="/man-versie-1-hover-versie-1.png" />
 </Stack>
 
 ## Join us
