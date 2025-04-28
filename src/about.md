@@ -78,7 +78,7 @@ out ways to improve...
 
 <Stack class="lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
     <TeamMember name="Bastiaan" normal="/bastiaan-normal.png" funny="/bastiaan-fun.png" />
-    <TeamMember name="Bastiaan" normal="/robin-normal.png" funny="/robin-fun.png" />
+    <TeamMember name="Robin" normal="/robin-normal.png" funny="/robin-fun.png" />
 </Stack>
 
 ### Customer & New Product
