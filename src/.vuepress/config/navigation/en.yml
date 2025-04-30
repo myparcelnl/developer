@@ -27,6 +27,8 @@ footer:
         link: /documentation/14.shopify.html
       - text: Shopware
         link: /documentation/15.shopware.html
+      - text: Lightspeed
+        link: /documentation/16.lightspeed.html
       - text: Ecwid
         link: /documentation/17.ecwid.html
       - text: Bol.
