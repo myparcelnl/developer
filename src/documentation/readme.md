@@ -15,6 +15,7 @@ Here you can find our documentation for various plugins and our own SDKs.
     <Integration name="prestashop" />
     <Integration name="magento-2" />
     <Integration name="shopify" />
+    <integration name="lightspeed" />
     <Integration name="shopware" />
     <Integration name="wix" />
     <Integration name="amazon" />

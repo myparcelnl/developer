@@ -84,7 +84,7 @@
     "name": "lightspeed",
     "title": "Lightspeed",
     "type": "plugin",
-    "documentation": "https://myparcelnl.github.io/lightspeed",
+    "documentation": "/documentation/16.lightspeed.html",
     "image": "lightspeed.svg",
     "url": "https://www.lightspeedhq.nl/ecommerce/store/apps/myparcel/"
   },
