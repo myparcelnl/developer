@@ -63,7 +63,6 @@ export const createFooter = (): MyPaNavbarConfigArray => {
         {text: 'GitHub', link: 'https://github.com/myparcelnl/'},
         {text: 'MyParcel', link: 'https://www.myparcel.nl/'},
         {text: 'SendMyParcel', link: 'https://www.sendmyparcel.be/'},
-        {text: 'Flespakket', link: 'https://www.flespakket.nl/'},
       ],
     },
   ];

@@ -87,8 +87,6 @@ footer:
         link: 'https://www.myparcel.nl/'
       - text: SendMyParcel
         link: 'https://www.sendmyparcel.be/'
-      - text: Flespakket
-        link: 'https://www.flespakket.nl/'
 
 footer2:
   - text: Voorwaarden & beleid
