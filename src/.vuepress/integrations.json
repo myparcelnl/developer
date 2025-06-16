@@ -445,5 +445,12 @@
     "documentation": "https://www.productflow.com/",
     "image": "ProductFlow.png",
     "url": "https://www.productflow.com/"
+  },
+  {
+    "name": "Microsoft Dynamics 365",
+    "title": "Microsoft Dynamics 365",
+    "type": "api",
+    "image": "Microsoft_Dynamics_365.svg",
+    "url": "https://appsource.microsoft.com/product/dynamics-365-business-central/PUBID.britebluesolutions%7CAID.myparcel365%7CPAPPID.2851c756-71b9-4811-bf1c-4b1a92e47560"
   }
 ]
