@@ -452,5 +452,13 @@
     "type": "api",
     "image": "Microsoft_Dynamics_365.svg",
     "url": "https://appsource.microsoft.com/product/dynamics-365-business-central/PUBID.britebluesolutions%7CAID.myparcel365%7CPAPPID.2851c756-71b9-4811-bf1c-4b1a92e47560"
+  },
+  {
+    "name": "Odoo",
+    "title": "Odoo",
+    "type": "api",
+    "image": "odoo.svg",
+    "classes": "bg-[#714B67]",
+    "url": ""
   }
 ]
