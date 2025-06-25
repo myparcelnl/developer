@@ -1,6 +1,7 @@
 # Developer Guide for contributing to MyParcel repositories
 
-This document is a guide for developers who want to contribute to MyParcel repositories. It contains information about the development process, how to create a pull request and how to write a good commit message.
+This document is a guide for developers who want to contribute to MyParcel repositories. It contains information about
+the development process, how to create a pull request and how to write a good commit message.
 
 ## Pull requests
 
@@ -39,11 +40,11 @@ Most of what is written in the specification is also explained in the following 
 
 ### Rules
 
-- Use the imperative mood in the subject line. 
+- Use the imperative mood in the subject line.
   - For example: "fix bug" instead of "fixed bug" or "fixes bug".
 - Do not capitalize the subject line.
 - Do not end the subject line with a period.
-- Use the body to explain the "what" and "why" of the commit, not the "how". 
+- Use the body to explain the "what" and "why" of the commit, not the "how".
   - For example: "this commit fixes a bug" instead of "this commit fixes a bug by changing the code in this way".
 - If the commit fixes an issue, add "Closes #issue-number" to the body.
   - In case there are multiple issues, add "Closes #issue-number, Closes #issue-number, ..." to the body.
@@ -76,7 +77,7 @@ graph TD
   classDef finish fill:#10622A,stroke:#14923D,stroke-width:3px,color:#fff;
 
   Start{"Start"}:::start
-  
+
   Feat(["feat"]):::finish
   Fix(["fix"]):::finish
   Perf(["perf"]):::finish
@@ -109,16 +110,16 @@ graph TD
 
   QIsFix --> |Yes| Fix
   QIsFix --> |No| Feat
-  
+
   QIsBuild --> |Yes| Build
   QIsBuild --> |No| QIsDoc
 
   QIsDoc --> |Yes| Docs
   QIsDoc --> |No| Chore
-  
+
   QIsPerf --> |Yes| Perf
   QIsPerf --> |No| QIsRefactor
-  
+
   QIsRefactor --> |Yes| Refactor
   QIsRefactor --> |No| Style
 ```
