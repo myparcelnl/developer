@@ -50,7 +50,7 @@
     "vuepress": "2.0.0-beta.67"
   },
   "devDependencies": {
-    "@edielemoine/google-docs-importer": "^1.0.2",
+    "@edielemoine/google-docs-importer": "^2.2.0",
     "@myparcel-eslint/eslint-config-esnext": "^1.2.3",
     "@myparcel-eslint/eslint-config-import": "^1.2.1",
     "@myparcel-eslint/eslint-config-node": "^1.2.3",

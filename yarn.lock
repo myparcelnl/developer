@@ -310,9 +310,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@edielemoine/google-docs-importer@npm:^1.0.2":
-  version: 1.1.2
-  resolution: "@edielemoine/google-docs-importer@npm:1.1.2"
+"@edielemoine/google-docs-importer@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@edielemoine/google-docs-importer@npm:2.2.0"
   dependencies:
     csv-parse: ^5.3.0
     debug: ^4.3.4
@@ -320,7 +320,7 @@ __metadata:
     yargs: ^17.5.1
   bin:
     google-docs-importer: dist/bin.js
-  checksum: 51718fe90724703162f5376ce5c6fcd573b9022f28dbd4360728312a21cc6cafe0a917d99a43a8ba91ce51063d1259aa96a6877d7a14106c06dee9e8a8745713
+  checksum: dbd0ba5e999ab84e902547533e17e9534c85980adb1d9cf69cdb2b322f91749ee6d1c9cad1de50a54de0fd7495ad60d1b2a6b7bc15b6463d99dc6b9bb50ffb30
   languageName: node
   linkType: hard
 
@@ -964,7 +964,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@myparcel/developer-portal@workspace:."
   dependencies:
-    "@edielemoine/google-docs-importer": ^1.0.2
+    "@edielemoine/google-docs-importer": ^2.2.0
     "@myparcel-eslint/eslint-config-esnext": ^1.2.3
     "@myparcel-eslint/eslint-config-import": ^1.2.1
     "@myparcel-eslint/eslint-config-node": ^1.2.3
