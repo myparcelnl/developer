@@ -966,7 +966,7 @@ __metadata:
     "@vue/test-utils": ^2.0.2
     "@vuepress/plugin-docsearch": 2.0.0-beta.67
     "@vuepress/plugin-google-analytics": 2.0.0-beta.67
-    "@vuepress/plugin-register-components": 2.0.0-beta.67
+    "@vuepress/plugin-register-components": 2.0.0-rc.112
     "@vueuse/core": ^10.5.0
     autoprefixer: ^10.4.8
     concurrently: ^8.2.1
@@ -1928,14 +1928,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-register-components@npm:2.0.0-beta.67":
-  version: 2.0.0-beta.67
-  resolution: "@vuepress/plugin-register-components@npm:2.0.0-beta.67"
+"@vuepress/plugin-register-components@npm:2.0.0-rc.112":
+  version: 2.0.0-rc.112
+  resolution: "@vuepress/plugin-register-components@npm:2.0.0-rc.112"
   dependencies:
-    "@vuepress/core": 2.0.0-beta.67
-    "@vuepress/utils": 2.0.0-beta.67
-    chokidar: ^3.5.3
-  checksum: 8bd35457709f791beb3ba8b9c77d0b696565f5a2ff2fab55acbedafc554a67abc87062c092da860d3173debec5cfde96e963a6067a22e43c3b13e35dd33e5f61
+    chokidar: ^4.0.3
+    picomatch: ^4.0.2
+  peerDependencies:
+    vuepress: 2.0.0-rc.24
+  checksum: c314273bb83e3f77c4e24916ae9378eae4f8e07aa82127e964e5fe5672ddbdb084cbad65a2506c9de8dc96cba0b8c354920972bc9cf7d1b24abe4ceda3814c5e
   languageName: node
   linkType: hard
 
@@ -2916,6 +2917,15 @@ __metadata:
     fsevents:
       optional: true
   checksum: b49fcde40176ba007ff361b198a2d35df60d9bb2a5aab228279eb810feae9294a6b4649ab15981304447afe1e6ffbf4788ad5db77235dc770ab777c6e771980c
+  languageName: node
+  linkType: hard
+
+"chokidar@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "chokidar@npm:4.0.3"
+  dependencies:
+    readdirp: ^4.0.1
+  checksum: a8765e452bbafd04f3f2fad79f04222dd65f43161488bb6014a41099e6ca18d166af613d59a90771908c1c823efa3f46ba36b86ac50b701c20c1b9908c5fe36e
   languageName: node
   linkType: hard
 
@@ -7861,6 +7871,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"picomatch@npm:^4.0.2":
+  version: 4.0.3
+  resolution: "picomatch@npm:4.0.3"
+  checksum: 6817fb74eb745a71445debe1029768de55fd59a42b75606f478ee1d0dc1aa6e78b711d041a7c9d5550e042642029b7f373dc1a43b224c4b7f12d23436735dba0
+  languageName: node
+  linkType: hard
+
 "pidtree@npm:0.6.0":
   version: 0.6.0
   resolution: "pidtree@npm:0.6.0"
@@ -8815,6 +8832,13 @@ __metadata:
     string_decoder: ^1.1.1
     util-deprecate: ^1.0.1
   checksum: bdcbe6c22e846b6af075e32cf8f4751c2576238c5043169a1c221c92ee2878458a816a4ea33f4c67623c0b6827c8a400409bfb3cf0bf3381392d0b1dfb52ac8d
+  languageName: node
+  linkType: hard
+
+"readdirp@npm:^4.0.1":
+  version: 4.1.2
+  resolution: "readdirp@npm:4.1.2"
+  checksum: 3242ee125422cb7c0e12d51452e993f507e6ed3d8c490bc8bf3366c5cdd09167562224e429b13e9cb2b98d4b8b2b11dc100d3c73883aa92d657ade5a21ded004
   languageName: node
   linkType: hard
 
