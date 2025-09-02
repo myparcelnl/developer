@@ -310,20 +310,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@edielemoine/google-docs-importer@npm:^1.0.2":
-  version: 1.1.2
-  resolution: "@edielemoine/google-docs-importer@npm:1.1.2"
-  dependencies:
-    csv-parse: ^5.3.0
-    debug: ^4.3.4
-    dotenv: ^16.0.1
-    yargs: ^17.5.1
-  bin:
-    google-docs-importer: dist/bin.js
-  checksum: 51718fe90724703162f5376ce5c6fcd573b9022f28dbd4360728312a21cc6cafe0a917d99a43a8ba91ce51063d1259aa96a6877d7a14106c06dee9e8a8745713
-  languageName: node
-  linkType: hard
-
 "@esbuild/android-arm64@npm:0.18.20":
   version: 0.18.20
   resolution: "@esbuild/android-arm64@npm:0.18.20"
@@ -964,7 +950,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@myparcel/developer-portal@workspace:."
   dependencies:
-    "@edielemoine/google-docs-importer": ^1.0.2
     "@myparcel-eslint/eslint-config-esnext": ^1.2.3
     "@myparcel-eslint/eslint-config-import": ^1.2.1
     "@myparcel-eslint/eslint-config-node": ^1.2.3
@@ -1001,6 +986,7 @@ __metadata:
     lodash-unified: ^1.0.2
     markdown-it-multimd-table: ^4.1.3
     mock-fs: ^5.1.2
+    mypa-google-docs-importer: ^1.0.1
     only-allow: ^1.1.1
     openapi-types: ^12.1.3
     plop: ^4.0.0
@@ -7139,6 +7125,20 @@ __metadata:
   version: 1.0.0
   resolution: "mute-stream@npm:1.0.0"
   checksum: 36fc968b0e9c9c63029d4f9dc63911950a3bdf55c9a87f58d3a266289b67180201cade911e7699f8b2fa596b34c9db43dad37649e3f7fdd13c3bb9edb0017ee7
+  languageName: node
+  linkType: hard
+
+"mypa-google-docs-importer@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "mypa-google-docs-importer@npm:1.0.1"
+  dependencies:
+    csv-parse: ^5.3.0
+    debug: ^4.3.4
+    dotenv: ^16.0.1
+    yargs: ^17.5.1
+  bin:
+    mypa-google-docs-importer: dist/bin.js
+  checksum: e2f0d43d62c9966c8867a8bad8d6dea48e86f00925b544fbc0b32de76de843e3f931d4aaf35e616b5f89ca78c7ad58551f9ef5df2992d81b3f8047276178afcf
   languageName: node
   linkType: hard
 
