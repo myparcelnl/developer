@@ -56,7 +56,7 @@
     "@myparcel-eslint/eslint-config-prettier": "^1.2.3",
     "@myparcel-eslint/eslint-config-prettier-typescript": "^1.2.4",
     "@myparcel-eslint/eslint-config-prettier-typescript-vue": "^1.2.6",
-    "@myparcel/constants": "2.3.0",
+    "@myparcel/constants": "2.5.0",
     "@tsconfig/node18": "^18.2.2",
     "@types/flat": "^5.0.2",
     "@types/lodash-es": "^4.17.6",
