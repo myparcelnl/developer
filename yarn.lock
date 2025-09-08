@@ -937,12 +937,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@myparcel/constants@npm:2.3.0":
-  version: 2.3.0
-  resolution: "@myparcel/constants@npm:2.3.0"
+"@myparcel/constants@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@myparcel/constants@npm:2.5.0"
   dependencies:
     "@myparcel/ts-utils": ^1.7.0
-  checksum: d2faf8c7555f3538dd5458b463b8143e030124d48734a886db7e469f2bf15c4c8d34a870293ac7652099609ecabfc70c06ec306ae8626953a27f7e247c42b625
+  checksum: e642c3694d62aff878a1a6585485efecab5de68e156318da1e15eb1c924381d641347fe2d529479100ce40e7b7833e32f2e541c4c708634f1f71ee9472a56400
   languageName: node
   linkType: hard
 
@@ -956,7 +956,7 @@ __metadata:
     "@myparcel-eslint/eslint-config-prettier": ^1.2.3
     "@myparcel-eslint/eslint-config-prettier-typescript": ^1.2.4
     "@myparcel-eslint/eslint-config-prettier-typescript-vue": ^1.2.6
-    "@myparcel/constants": 2.3.0
+    "@myparcel/constants": 2.5.0
     "@tsconfig/node18": ^18.2.2
     "@types/flat": ^5.0.2
     "@types/lodash-es": ^4.17.6
