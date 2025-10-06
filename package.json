@@ -67,7 +67,7 @@
     "concurrently": "^8.2.1",
     "cssnano": "^6.0.1",
     "dayjs": "^2.0.0-alpha.4",
-    "eslint": "^8.40.0",
+    "eslint": "^9.37.0",
     "flat": "^6.0.1",
     "gray-matter": ">= 4.0",
     "happy-dom": "^12.6.0",
