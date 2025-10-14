@@ -225,6 +225,28 @@
     "url": "https://www.mijndomein.nl/"
   },
   {
+    "name": "Odoo",
+    "title": "Odoo",
+    "type": "plugin",
+    "image": "odoo.svg",
+    "classes": "bg-[#714B67]",
+    "url": ""
+  },
+  {
+    "name": "Acendy",
+    "title": "Acendy",
+    "type": "plugin",
+    "image": "acendy.png",
+    "url": "https://www.acendy.com/"
+  },
+  {
+    "name": "Microsoft Dynamics 365",
+    "title": "Microsoft Dynamics 365",
+    "type": "plugin",
+    "image": "Microsoft_Dynamics_365.svg",
+    "url": "https://appsource.microsoft.com/product/dynamics-365-business-central/PUBID.britebluesolutions%7CAID.myparcel365%7CPAPPID.2851c756-71b9-4811-bf1c-4b1a92e47560"
+  },
+  {
     "name": "php-pdk",
     "title": "PHP PDK",
     "internal": true,
@@ -447,18 +469,10 @@
     "url": "https://www.productflow.com/"
   },
   {
-    "name": "Microsoft Dynamics 365",
-    "title": "Microsoft Dynamics 365",
+    "name": "Brincr",
+    "title": "Brincr",
     "type": "api",
-    "image": "Microsoft_Dynamics_365.svg",
-    "url": "https://appsource.microsoft.com/product/dynamics-365-business-central/PUBID.britebluesolutions%7CAID.myparcel365%7CPAPPID.2851c756-71b9-4811-bf1c-4b1a92e47560"
-  },
-  {
-    "name": "Odoo",
-    "title": "Odoo",
-    "type": "api",
-    "image": "odoo.svg",
-    "classes": "bg-[#714B67]",
-    "url": ""
+    "image": "brincr.png",
+    "url": "https://brincr.com/"
   }
 ]
