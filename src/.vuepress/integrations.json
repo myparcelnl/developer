@@ -474,5 +474,13 @@
     "type": "api",
     "image": "brincr.png",
     "url": "https://brincr.com/"
+  },
+  {
+    "name": "OrderPanda",
+    "title": "OrderPanda",
+    "type": "api",
+    "documentation": "https://orderpanda.nl/integratie-myparcel/",
+    "image": "orderpanda.png",
+    "url": "https://orderpanda.nl/"
   }
 ]
