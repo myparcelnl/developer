@@ -18,7 +18,7 @@ export default defineComponent({
     const dark = useDark();
 
     return {
-      RECAPTCHA_SITE_KEY: '6Lc--NkqAAAAAE7zbUTUww4HZUSZ5b5ZIvdRKVz9',
+      RECAPTCHA_SITE_KEY: '6LcoxR4sAAAAANGn5zTRKW8q701mdA4x0EbUomJ6',
       theme: computed((): string => {
         return dark.value ? 'dark' : 'light';
       }),
