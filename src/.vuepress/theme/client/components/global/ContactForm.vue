@@ -21,6 +21,13 @@
       type="email"
       :label="translate('contactForm.email')" />
 
+    <FormInput
+        id="phone"
+        v-model.trim="refs.phone"
+        type="phone"
+        optional
+        :label="translate('contactForm.phone')" />
+
     <FormSelect
       id="subject"
       v-model.trim="refs.subject"
@@ -69,6 +76,7 @@ export default defineComponent({
     const initialValue = {
       name: '',
       email: '',
+      phone: '',
       subject: '',
       message: '',
     };
