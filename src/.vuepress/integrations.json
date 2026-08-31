@@ -30,8 +30,9 @@
     "title": "Bugalou",
     "type": "utility",
     "documentation": "https://www.myparcel.nl/koppelingen/bugalou/",
-    "image": "bugalou.svg",
-    "url": "https://bugalou.com/"
+    "image": "bugalou.png",
+    "url": "https://bugalou.com/",
+    "classes": "bg-[#000000]"
   },
   {
     "name": "woocommerce",
