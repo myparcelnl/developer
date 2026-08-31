@@ -506,5 +506,13 @@
     "documentation": "https://orderpanda.nl/integratie-myparcel/",
     "image": "orderpanda.png",
     "url": "https://orderpanda.nl/"
+  },
+  {
+    "name": "cm-specialist",
+    "title": "CM Specialist",
+    "type": "api",
+    "documentation": "https://www.myparcel.nl/koppelingen/cm-specialist/",
+    "image": "cm-specialist.svg",
+    "url": "https://www.cmspecialist.nl/"
   }
 ]
