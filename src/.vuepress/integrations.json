@@ -26,6 +26,14 @@
     "url": "https://plugandpay.nl/"
   },
   {
+    "name": "bugalou",
+    "title": "Bugalou",
+    "type": "utility",
+    "documentation": "https://www.myparcel.nl/koppelingen/bugalou/",
+    "image": "bugalou.svg",
+    "url": "https://bugalou.com/"
+  },
+  {
     "name": "woocommerce",
     "title": "WooCommerce",
     "type": "plugin",
