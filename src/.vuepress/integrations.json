@@ -345,6 +345,14 @@
     "url": "https://base.com/"
   },
   {
+    "name": "jeeigenweb",
+    "title": "Jeeigenweb",
+    "type": "plugin",
+    "documentation": "https://www.myparcel.nl/koppelingen/jeeigenweb/",
+    "image": "jeeigenweb.svg",
+    "url": "https://jeeigenweb.nl/"
+  },
+  {
     "name": "bol.",
     "title": "bol.",
     "type": "api",
