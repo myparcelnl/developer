@@ -329,6 +329,13 @@
     "url": "https://www.ecwid.com/apps/shipping/myparcel"
   },
   {
+    "name": "base",
+    "title": "Base",
+    "type": "plugin",
+    "image": "base.svg",
+    "url": "https://base.com/"
+  },
+  {
     "name": "bol.",
     "title": "bol.",
     "type": "api",
