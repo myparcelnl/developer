@@ -46,7 +46,7 @@
 </template>
 
 <script lang="ts">
-import {PropType, computed, defineComponent} from 'vue';
+import {type PropType, computed, defineComponent} from 'vue';
 
 const createComputedArray = (value: string | string[]) =>
   computed<string[]>(() => {

@@ -13,11 +13,11 @@
 </template>
 
 <script lang="ts">
-import FormField from '@mptheme/client/components/global/FormField.vue';
-import {defaultFormProps} from '@mptheme/client/defaultFormProps';
-import {defaultInputClasses} from '@mptheme/client/defaultInputClasses';
 import {defineComponent} from 'vue';
 import {useVModel} from '@vueuse/core';
+import {defaultInputClasses} from '@mptheme/client/defaultInputClasses';
+import {defaultFormProps} from '@mptheme/client/defaultFormProps';
+import FormField from '@mptheme/client/components/global/FormField.vue';
 
 export default defineComponent({
   name: 'FormTextArea',

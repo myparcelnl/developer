@@ -26,11 +26,11 @@
 </template>
 
 <script setup lang="ts">
-import {onMounted, ref, watch} from 'vue';
-import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
-import SidebarItems from '@mptheme/client/views/layout/sidebar/sidebar-items/SidebarItems.vue';
-import {useMounted} from '@vueuse/core';
 import {useRoute} from 'vue-router';
+import {onMounted, ref, watch} from 'vue';
+import {useMounted} from '@vueuse/core';
+import SidebarItems from '@mptheme/client/views/layout/sidebar/sidebar-items/SidebarItems.vue';
+import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
 import {useSidebar} from '../../../composables';
 
 const sidebar = ref<HTMLElement | null>(null);

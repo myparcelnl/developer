@@ -29,10 +29,10 @@
 
 <script lang="ts">
 import {computed, defineComponent} from 'vue';
+import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import Cta from '@mptheme/client/components/global/Cta.vue';
 import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
-import MPImg from '@mptheme/client/components/global/MPImg.vue';
 
 export default defineComponent({
   name: 'HomePartnerBrand',

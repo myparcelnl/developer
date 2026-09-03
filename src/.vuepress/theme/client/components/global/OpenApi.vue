@@ -17,9 +17,9 @@
 <script setup lang="ts">
 import {computed} from 'vue';
 import {type OpenAPIV3_1 as OpenApiType} from 'openapi-types';
+import {resolveRefs} from '@mptheme/client/utils/openApiHelpers';
 import OpenApiPath from './OpenApiPath.vue';
 import OpenApiInfo from './OpenApiInfo.vue';
-import { resolveRefs } from '@mptheme/client/utils/openApiHelpers';
 
 const props = defineProps<{
   document: OpenApiType.Document;

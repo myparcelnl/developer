@@ -30,8 +30,8 @@
 
 <script lang="ts">
 import {defineComponent} from 'vue';
-import {messageBackgroundVariant} from '@mptheme/client/services/tailwind/variants/messageBackgroundVariant';
 import {messageTextVariant} from '@mptheme/client/services/tailwind/variants/messageTextVariant';
+import {messageBackgroundVariant} from '@mptheme/client/services/tailwind/variants/messageBackgroundVariant';
 import {useTailwindVariant} from '@mptheme/client/composables/useTailwindVariant';
 
 const background = useTailwindVariant(messageBackgroundVariant);

@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import AutoLink from './AutoLink.vue';
-import {MyPaNavLink} from '../../../config.types';
 import {computed} from 'vue';
+import {type MyPaNavLink} from '../../../config.types';
+import AutoLink from './AutoLink.vue';
 
 const props = defineProps<{
   to: string;

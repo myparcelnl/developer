@@ -8,9 +8,9 @@
 </template>
 
 <script lang="ts">
-import SidebarItem from '@mptheme/client/components/sidebar-item/SidebarItem.vue';
 import {defineComponent} from 'vue';
 import {useSidebar} from '@mptheme/client/composables';
+import SidebarItem from '@mptheme/client/components/sidebar-item/SidebarItem.vue';
 
 export default defineComponent({
   name: 'SidebarItems',

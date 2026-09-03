@@ -8,10 +8,10 @@
 </template>
 
 <script lang="ts">
-import Integration from '@mptheme/client/components/global/Integration.vue';
-import Stack from '@mptheme/client/components/global/Stack.vue';
 import {defineComponent} from 'vue';
 import {useIntegrations} from '@mptheme/client/composables/useIntegrations';
+import Stack from '@mptheme/client/components/global/Stack.vue';
+import Integration from '@mptheme/client/components/global/Integration.vue';
 
 export default defineComponent({
   name: 'Integrations',

@@ -13,10 +13,10 @@
 </template>
 
 <script lang="ts">
-import {useLanguage, useSwitchLanguage} from '@mptheme/client/composables';
-import LanguageOption from '@mptheme/client/components/language-dropdown/LanguageOption.vue';
-import NavbarDropdown from '@mptheme/client/components/navbar-dropdown/NavbarDropdown.vue';
 import {defineComponent} from 'vue';
+import {useLanguage, useSwitchLanguage} from '@mptheme/client/composables';
+import NavbarDropdown from '@mptheme/client/components/navbar-dropdown/NavbarDropdown.vue';
+import LanguageOption from '@mptheme/client/components/language-dropdown/LanguageOption.vue';
 
 export default defineComponent({
   name: 'LanguageDropdown',
