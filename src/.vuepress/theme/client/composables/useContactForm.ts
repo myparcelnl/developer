@@ -1,8 +1,8 @@
-import {Ref, ref} from 'vue';
-import {MessageItem} from '@mptheme/client/services/tailwind/variants/messageTextVariant';
+import {type Ref, ref} from 'vue';
 import {isOfType} from '@mptheme/shared/utils';
-import {useGoogleTagManager} from '../../../plugins/gtm/client/composables/useGoogleTagManager';
+import {type MessageItem} from '@mptheme/client/services/tailwind/variants/messageTextVariant';
 import {useTranslate} from '@mptheme/client/composables/useTranslate';
+import {useGoogleTagManager} from '../../../plugins/gtm/client/composables/useGoogleTagManager';
 
 type UseContactForm = (
   refs: Ref<Record<string, string>>,

@@ -1,6 +1,6 @@
-import {MyPaResolvedSidebarItem} from '@mptheme/config.types';
-import {headersToSidebarItemChildren} from './headersToSidebarItemChildren';
 import {usePageData} from '@vuepress/client';
+import {type MyPaResolvedSidebarItem} from '@mptheme/config.types';
+import {headersToSidebarItemChildren} from './headersToSidebarItemChildren';
 
 /**
  * Resolve sidebar items if the config is `auto`.

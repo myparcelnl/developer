@@ -1,6 +1,6 @@
-import type {Plugin, PluginObject} from '@vuepress/core';
 import {logger, path} from '@vuepress/utils';
-import type {GoogleTagManagerPluginOptions} from '../shared';
+import {type Plugin, type PluginObject} from '@vuepress/core';
+import {type GoogleTagManagerPluginOptions} from '../shared';
 
 export const googleTagManagerPlugin =
   (options: GoogleTagManagerPluginOptions): Plugin =>

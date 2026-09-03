@@ -1,9 +1,9 @@
-import {MyPaResolvedSidebarItem, MyPaSidebarConfigArray, MyPaSidebarItem} from '@mptheme/config.types';
-import {headersToSidebarItemChildren} from './headersToSidebarItemChildren';
-import {isString} from '@vuepress/shared';
-import {useNavLink} from '@mptheme/client/composables/useNavLink';
-import {usePageData} from '@vuepress/client';
 import {useRoute} from 'vue-router';
+import {isString} from '@vuepress/shared';
+import {usePageData} from '@vuepress/client';
+import {type MyPaResolvedSidebarItem, type MyPaSidebarConfigArray, type MyPaSidebarItem} from '@mptheme/config.types';
+import {useNavLink} from '@mptheme/client/composables/useNavLink';
+import {headersToSidebarItemChildren} from './headersToSidebarItemChildren';
 
 /**
  * Resolve sidebar items if the config is an array.

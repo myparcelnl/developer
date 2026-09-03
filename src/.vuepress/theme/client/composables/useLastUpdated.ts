@@ -1,7 +1,7 @@
-import {ComputedRef, computed} from 'vue';
+import {type ComputedRef, computed} from 'vue';
+import {type DefaultThemePageData} from '@vuepress/theme-default/lib/shared';
 import {usePageData, usePageFrontmatter} from '@vuepress/client';
-import {DefaultThemePageData} from '@vuepress/theme-default/lib/shared';
-import {MyPaPageFrontmatter} from '@mptheme/config.types';
+import {type MyPaPageFrontmatter} from '@mptheme/config.types';
 import {useThemeLocaleData} from '@mptheme/client/composables';
 
 export const useLastUpdated = (): ComputedRef<null | string> => {

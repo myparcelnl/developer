@@ -1,8 +1,8 @@
-import {ComputedRef, Ref, computed, ref, watch} from 'vue';
-import {useBreakpoints, useNavbarConfig} from '@mptheme/client/composables';
-import {MyPaResolvedSidebarItem} from '@mptheme/config.types';
-import {createGlobalState} from '@vueuse/core';
 import {useRoute} from 'vue-router';
+import {type ComputedRef, type Ref, computed, ref, watch} from 'vue';
+import {createGlobalState} from '@vueuse/core';
+import {type MyPaResolvedSidebarItem} from '@mptheme/config.types';
+import {useBreakpoints, useNavbarConfig} from '@mptheme/client/composables';
 import {useSidebarItems} from './useSidebarItems';
 
 type UseSidebar = () => {

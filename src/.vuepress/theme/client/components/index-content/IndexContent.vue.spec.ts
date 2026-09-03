@@ -1,5 +1,5 @@
-import IndexContent from './IndexContent.vue';
 import {shallowMount} from '@vue/test-utils';
+import IndexContent from './IndexContent.vue';
 
 describe('indexContent', () => {
   it('renders properly', () => {

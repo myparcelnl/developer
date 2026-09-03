@@ -1,9 +1,9 @@
-import {ComputedRef, Ref, computed, ref} from 'vue';
-import {isLinkHttp, isLinkMailto, isLinkTel} from '@vuepress/shared';
-import {MaybeRef} from '@vueuse/core';
-import {MyPaAnySidebarItem, MyPaNavLink} from '@mptheme/config.types';
-import {isOfType} from '@mptheme/shared/utils';
+import {type ComputedRef, type Ref, computed, ref} from 'vue';
 import {memoize} from 'lodash-unified';
+import {type MaybeRef} from '@vueuse/core';
+import {isLinkHttp, isLinkMailto, isLinkTel} from '@vuepress/shared';
+import {isOfType} from '@mptheme/shared/utils';
+import {type MyPaAnySidebarItem, type MyPaNavLink} from '@mptheme/config.types';
 import {useNavLink} from '@mptheme/client/composables/useNavLink';
 
 interface UseLink {

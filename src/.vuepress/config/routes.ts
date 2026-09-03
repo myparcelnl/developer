@@ -1,4 +1,4 @@
-import {MyPaNavLink} from '@mptheme/config.types';
+import {type MyPaNavLink} from '@mptheme/config.types';
 
 export const STATUS: MyPaNavLink = {
   text: 'Status',

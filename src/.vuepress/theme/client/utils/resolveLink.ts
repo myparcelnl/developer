@@ -1,6 +1,6 @@
-import {Router, useRouter} from 'vue-router';
-import {MyPaNavLink} from '@mptheme/config.types';
+import {type Router, useRouter} from 'vue-router';
 import {memoize} from 'lodash-unified';
+import {type MyPaNavLink} from '@mptheme/config.types';
 
 let routes: ReturnType<Router['getRoutes']>;
 

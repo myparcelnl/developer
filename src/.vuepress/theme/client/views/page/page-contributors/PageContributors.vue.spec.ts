@@ -1,7 +1,7 @@
-import {DefaultThemeNormalPageFrontmatter, DefaultThemePageData} from '@vuepress/theme-default/lib/shared';
 import {describe, expect, it, vi} from 'vitest';
-import PageContributors from '@mptheme/client/views/page/page-contributors/PageContributors.vue';
+import {type DefaultThemeNormalPageFrontmatter, type DefaultThemePageData} from '@vuepress/theme-default/lib/shared';
 import {shallowMount} from '@vue/test-utils';
+import PageContributors from '@mptheme/client/views/page/page-contributors/PageContributors.vue';
 
 vi.mock('@vuepress/client', () => ({
   usePageData: vi.fn(
