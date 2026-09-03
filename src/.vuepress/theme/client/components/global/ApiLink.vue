@@ -13,10 +13,10 @@
 </template>
 
 <script lang="ts">
-import {ComputedRef, computed, defineComponent} from 'vue';
-import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
-import {MyPaNavbarItem} from '@mptheme/config.types';
 import {useRouter} from 'vue-router';
+import {type ComputedRef, computed, defineComponent} from 'vue';
+import {type MyPaNavbarItem} from '@mptheme/config.types';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 
 export default defineComponent({
   name: 'ApiLink',

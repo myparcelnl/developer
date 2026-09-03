@@ -1,5 +1,5 @@
-import {MyPaSidebarConfig} from '@mptheme/config.types';
 import {get} from 'lodash-unified';
+import {type MyPaSidebarConfig} from '@mptheme/config.types';
 
 const KEY_CHILDREN = 'children';
 

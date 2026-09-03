@@ -8,10 +8,10 @@
 </template>
 
 <script lang="ts">
-import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import {defineComponent} from 'vue';
 import {useDark} from '@vueuse/core';
 import {useTranslate} from '@mptheme/client/composables';
+import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 
 export default defineComponent({
   name: 'ToggleColorModeButton',

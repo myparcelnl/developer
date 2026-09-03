@@ -15,10 +15,10 @@
 </template>
 
 <script lang="ts">
-import {ClientOnly, usePageData} from '@vuepress/client';
-import LinkTree from '@mptheme/client/components/common/LinkTree.vue';
 import {defineComponent} from 'vue';
+import {ClientOnly, usePageData} from '@vuepress/client';
 import {useSidebarItems} from '@mptheme/client/composables';
+import LinkTree from '@mptheme/client/components/common/LinkTree.vue';
 
 export default defineComponent({
   name: 'IndexContent',

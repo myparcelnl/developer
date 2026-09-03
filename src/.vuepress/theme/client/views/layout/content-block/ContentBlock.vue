@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import {PropType, defineComponent} from 'vue';
+import {type PropType, defineComponent} from 'vue';
 import {blockVariant} from '@mptheme/client/services/tailwind/variants/blockVariant';
 import {useTailwindVariant} from '@mptheme/client/composables/useTailwindVariant';
 

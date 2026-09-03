@@ -22,11 +22,11 @@
       :label="translate('contactForm.email')" />
 
     <FormInput
-        id="phone"
-        v-model.trim="refs.phone"
-        type="phone"
-        optional
-        :label="translate('contactForm.phone')" />
+      id="phone"
+      v-model.trim="refs.phone"
+      type="phone"
+      optional
+      :label="translate('contactForm.phone')" />
 
     <FormSelect
       id="subject"
@@ -57,16 +57,16 @@
 
 <script lang="ts">
 import {defineComponent, ref} from 'vue';
-import FormField from '@mptheme/client/components/global/FormField.vue';
-import FormInput from '@mptheme/client/components/global/FormInput.vue';
-import FormSelect from '@mptheme/client/components/global/FormSelect.vue';
-import FormTextArea from '@mptheme/client/components/global/FormTextArea.vue';
-import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
-import Message from '@mptheme/client/components/global/Message.vue';
-import {MessageItem} from '@mptheme/client/services/tailwind/variants/messageTextVariant';
-import ReCaptcha from '@mptheme/client/components/common/ReCaptcha.vue';
+import {type MessageItem} from '@mptheme/client/services/tailwind/variants/messageTextVariant';
 import {useContactForm} from '@mptheme/client/composables/useContactForm';
 import {useTranslate} from '@mptheme/client/composables';
+import Message from '@mptheme/client/components/global/Message.vue';
+import FormTextArea from '@mptheme/client/components/global/FormTextArea.vue';
+import FormSelect from '@mptheme/client/components/global/FormSelect.vue';
+import FormInput from '@mptheme/client/components/global/FormInput.vue';
+import FormField from '@mptheme/client/components/global/FormField.vue';
+import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
+import ReCaptcha from '@mptheme/client/components/common/ReCaptcha.vue';
 
 export default defineComponent({
   name: 'ContactForm',

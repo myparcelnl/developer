@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
-import {GitPluginFrontmatter, GitPluginPageData} from '@vuepress/plugin-git';
-import {Page, Plugin} from 'vuepress';
+import {type Page, type Plugin} from 'vuepress';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 import dayjs from 'dayjs';
+import {type GitPluginFrontmatter, type GitPluginPageData} from '@vuepress/plugin-git';
 import {frontmatterPlugin} from '@mdit-vue/plugin-frontmatter';
 import {isOfType} from './shared/utils';
-import timezone from 'dayjs/plugin/timezone';
-import utc from 'dayjs/plugin/utc';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);

@@ -1,4 +1,4 @@
-import {LocaleConfig} from '@vuepress/shared';
+import {type LocaleConfig} from '@vuepress/shared';
 import {useSiteLocaleData} from '@mptheme/client/composables';
 
 const missingCache: string[] = [];

@@ -1,9 +1,9 @@
-import {ComputedRef, computed} from 'vue';
-import {Language} from '../../../plugins/parseTranslations/shared';
-import {MyPaPageFrontmatter} from '@mptheme/config.types';
+import {type ComputedRef, computed} from 'vue';
+import {usePageFrontmatter} from '@vuepress/client';
+import {type MyPaPageFrontmatter} from '@mptheme/config.types';
 import {toArray} from '@mptheme/client/utils/toArray';
 import {useLanguage} from '@mptheme/client/composables/index';
-import {usePageFrontmatter} from '@vuepress/client';
+import {type Language} from '../../../plugins/parseTranslations/shared';
 
 interface LanguageArrayItem {
   path?: string;

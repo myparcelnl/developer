@@ -1,10 +1,10 @@
-import {ComputedRef, computed} from 'vue';
-import {MyPaPageFrontmatter, MyPaResolvedSidebarItem} from '@mptheme/config.types';
-import {isPlainObject, isString} from '@vuepress/shared';
-import {NavLink} from '@vuepress/theme-default/lib/shared';
-import {useNavLink} from '@mptheme/client/composables/useNavLink';
-import {usePageFrontmatter} from '@vuepress/client';
 import {useRoute} from 'vue-router';
+import {type ComputedRef, computed} from 'vue';
+import {type NavLink} from '@vuepress/theme-default/lib/shared';
+import {isPlainObject, isString} from '@vuepress/shared';
+import {usePageFrontmatter} from '@vuepress/client';
+import {type MyPaPageFrontmatter, type MyPaResolvedSidebarItem} from '@mptheme/config.types';
+import {useNavLink} from '@mptheme/client/composables/useNavLink';
 import {useSidebarItems} from '@mptheme/client/composables/sidebar';
 
 /**

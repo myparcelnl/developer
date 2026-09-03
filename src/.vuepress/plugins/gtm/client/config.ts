@@ -1,5 +1,5 @@
-import {GoogleTagManagerPluginOptions} from '../shared';
 import {defineClientConfig} from '@vuepress/client';
+import {type GoogleTagManagerPluginOptions} from '../shared';
 import {useSetupGoogleTagManager} from './composables';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention,no-underscore-dangle

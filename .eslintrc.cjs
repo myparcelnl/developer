@@ -1,12 +1,10 @@
-/**
- * @type {import('@myparcel/eslint-config').ESLintConfig}
- */
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
   overrides: [
     {
       files: ['./**/*.vue'],
-      extends: ['@myparcel-eslint/eslint-config-prettier-typescript-vue', '@myparcel-eslint/eslint-config-import'],
+      extends: ['@myparcel-dev/eslint-config-prettier-typescript-vue', '@myparcel-dev/eslint-config-import'],
       rules: {
         '@typescript-eslint/no-misused-promises': 'off',
         'vue/no-bare-strings-in-template': 'off',
@@ -20,7 +18,11 @@ module.exports = {
     },
     {
       files: ['./**/*.ts', './**/*.tsx'],
-      extends: ['@myparcel-eslint/eslint-config-prettier-typescript', '@myparcel-eslint/eslint-config-import'],
+      extends: ['@myparcel-dev/eslint-config-prettier-typescript', '@myparcel-dev/eslint-config-import'],
+      // typescript-eslint reuses one program across the run, so .vue has to be known here too
+      parserOptions: {
+        extraFileExtensions: ['.vue'],
+      },
       rules: {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
@@ -33,10 +35,10 @@ module.exports = {
         sourceType: 'module',
       },
       extends: [
-        '@myparcel-eslint/eslint-config-node',
-        '@myparcel-eslint/eslint-config-esnext',
-        '@myparcel-eslint/eslint-config-prettier',
-        '@myparcel-eslint/eslint-config-import',
+        '@myparcel-dev/eslint-config-node',
+        '@myparcel-dev/eslint-config-esnext',
+        '@myparcel-dev/eslint-config-prettier',
+        '@myparcel-dev/eslint-config-import',
       ],
     },
     {

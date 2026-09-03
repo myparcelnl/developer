@@ -1,4 +1,4 @@
-import {Language, ParseTranslationsPluginOptions} from '../shared';
+import {type Language, type ParseTranslationsPluginOptions} from '../shared';
 
 /**
  *

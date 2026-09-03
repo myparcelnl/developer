@@ -9,9 +9,9 @@
 </template>
 
 <script lang="ts">
-import {useLastUpdated, useTranslate} from '@mptheme/client/composables';
-import {ClientOnly} from '@vuepress/client';
 import {defineComponent} from 'vue';
+import {ClientOnly} from '@vuepress/client';
+import {useLastUpdated, useTranslate} from '@mptheme/client/composables';
 
 export default defineComponent({
   name: 'PageLastUpdated',

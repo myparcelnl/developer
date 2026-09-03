@@ -1,6 +1,6 @@
-import {PropOptions} from 'vue';
-import {TailwindVariant} from '../services/tailwind/defineVariant';
+import {type PropOptions} from 'vue';
 import {toArray} from '@mptheme/client/utils/toArray';
+import {type TailwindVariant} from '../services/tailwind/defineVariant';
 
 const createValidator =
   (options: Record<string, OneOrMore<string>>, name: string) =>

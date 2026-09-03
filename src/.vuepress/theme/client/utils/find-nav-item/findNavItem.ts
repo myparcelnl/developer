@@ -1,5 +1,10 @@
-import {MyPaAnySidebarItem, MyPaSidebarConfigArray, MyPaSidebarGroup, MyPaSidebarItem} from '@mptheme/config.types';
 import {isOfType} from '@mptheme/shared/utils';
+import {
+  type MyPaAnySidebarItem,
+  type MyPaSidebarConfigArray,
+  type MyPaSidebarGroup,
+  type MyPaSidebarItem,
+} from '@mptheme/config.types';
 import {toArray} from '@mptheme/client/utils/toArray';
 
 export const findNavItem = (array: MyPaSidebarConfigArray, search: string | string[]): MyPaAnySidebarItem | null => {

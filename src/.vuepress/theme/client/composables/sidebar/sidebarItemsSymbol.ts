@@ -1,4 +1,4 @@
-import {InjectionKey} from 'vue';
-import {SidebarItemsRef} from './useSidebarItems';
+import {type InjectionKey} from 'vue';
+import {type SidebarItemsRef} from './useSidebarItems';
 
 export const sidebarItemsSymbol: InjectionKey<SidebarItemsRef> = Symbol('sidebarItems');

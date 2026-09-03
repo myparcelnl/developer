@@ -58,73 +58,61 @@
     <OpenApiSchemaInfoRestriction
       v-if="schema.default"
       label="Default"
-      :value="schema.default"
-    />
+      :value="schema.default" />
 
     <OpenApiSchemaInfoRestriction
       v-if="schema.pattern"
       label="Pattern"
-      :value="schema.pattern"
-    />
+      :value="schema.pattern" />
     <OpenApiSchemaInfoRestriction
       v-if="schema.multipleOf !== undefined"
       label="Multiple of"
-      :value="schema.multipleOf"
-    />
+      :value="schema.multipleOf" />
 
     <OpenApiSchemaInfoRestriction
       v-if="schema.maximum !== undefined"
       label="Max"
-      :value="schema.exclusiveMaximum ? '<' : '<=' + schema.maximum"
-    />
+      :value="schema.exclusiveMaximum ? '<' : `<=${schema.maximum}`" />
 
     <OpenApiSchemaInfoRestriction
       v-if="schema.minimum !== undefined"
       label="Min"
-      :value="schema.exclusiveMinimum ? '>' : '>=' + schema.minimum"
-    />
+      :value="schema.exclusiveMinimum ? '>' : `>=${schema.minimum}`" />
 
     <OpenApiSchemaInfoRestriction
       v-if="schema.maxLength !== undefined"
       label="Max length"
-      :value="schema.maxLength"
-    />
+      :value="schema.maxLength" />
 
     <OpenApiSchemaInfoRestriction
       v-if="schema.minLength !== undefined"
       label="Min length"
-      :value="schema.minLength"
-    />
+      :value="schema.minLength" />
 
     <OpenApiSchemaInfoRestriction
       v-if="schema.maxItems !== undefined"
       label="Max items"
-      :value="schema.maxItems"
-    />
+      :value="schema.maxItems" />
 
     <OpenApiSchemaInfoRestriction
       v-if="schema.minItems !== undefined"
       label="Min items"
-      :value="schema.minItems"
-    />
+      :value="schema.minItems" />
 
     <OpenApiSchemaInfoRestriction
       v-if="schema.maxProperties !== undefined"
       label="Max properties"
-      :value="schema.maxProperties"
-    />
+      :value="schema.maxProperties" />
 
     <OpenApiSchemaInfoRestriction
       v-if="schema.minProperties !== undefined"
       label="Min properties"
-      :value="schema.minProperties"
-    />
+      :value="schema.minProperties" />
 
     <OpenApiSchemaInfoRestriction
       v-if="schema.additionalProperties !== undefined && typeof schema.additionalProperties === 'boolean'"
       label="Additional properties"
-      :value="!!schema.additionalProperties"
-    />
+      :value="!!schema.additionalProperties" />
 
     <template v-if="schema.example">
       <OpenApiExample :example="schema.example" />

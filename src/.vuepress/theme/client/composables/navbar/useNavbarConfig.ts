@@ -1,7 +1,7 @@
-import {ComputedRef, computed} from 'vue';
-import {MyPaNavbarGroup, MyPaNavbarItem, MyPaResolvedNavbarItem} from '@mptheme/config.types';
-import {isOfType} from '@mptheme/shared/utils';
+import {type ComputedRef, computed} from 'vue';
 import {isString} from '@vuepress/shared';
+import {isOfType} from '@mptheme/shared/utils';
+import {type MyPaNavbarGroup, type MyPaNavbarItem, type MyPaResolvedNavbarItem} from '@mptheme/config.types';
 import {useNavLink} from '@mptheme/client/composables/useNavLink';
 import {useSiteLocaleData} from '@mptheme/client/composables';
 

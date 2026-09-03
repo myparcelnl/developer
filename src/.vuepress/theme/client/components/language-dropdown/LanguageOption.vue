@@ -12,9 +12,9 @@
 </template>
 
 <script lang="ts">
-import {PropType, computed, defineComponent} from 'vue';
-import {Language} from '../../../../plugins/parseTranslations/shared';
+import {type PropType, computed, defineComponent} from 'vue';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
+import {type Language} from '../../../../plugins/parseTranslations/shared';
 
 const FLAG_URL = 'https://assets.myparcel.nl/skin/general-images/flags/:locale.png';
 

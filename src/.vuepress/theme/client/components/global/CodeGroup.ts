@@ -1,4 +1,4 @@
-import {VNode, defineComponent, h, onBeforeUpdate, ref} from 'vue';
+import {type VNode, defineComponent, h, onBeforeUpdate, ref} from 'vue';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 const CodeGroup = defineComponent({

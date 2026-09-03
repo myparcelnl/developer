@@ -9,8 +9,8 @@
 </template>
 
 <script lang="ts">
-import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import {defineComponent} from 'vue';
+import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 
 export default defineComponent({
   name: 'ToggleChevron',

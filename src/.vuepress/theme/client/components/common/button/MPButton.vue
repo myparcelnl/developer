@@ -39,11 +39,11 @@
 </template>
 
 <script lang="ts">
-import {PropType, computed, defineComponent} from 'vue';
-import Icon from '@mptheme/client/components/common/icon/Icon.vue';
-import {MyPaNavLink} from '@mptheme/config.types';
+import {type PropType, computed, defineComponent} from 'vue';
+import {type MyPaNavLink} from '@mptheme/config.types';
 import {buttonVariant} from '@mptheme/client/services/tailwind/variants/buttonVariant';
 import {useTailwindVariant} from '@mptheme/client/composables/useTailwindVariant';
+import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 
 const {createVariantProp, getVariantClasses} = useTailwindVariant(buttonVariant);
 

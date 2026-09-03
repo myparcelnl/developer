@@ -1,5 +1,5 @@
+import {type Page} from 'vuepress';
 import {describe, expect} from 'vitest';
-import {Page} from 'vuepress';
 import {createSidebarFromPages} from './createSidebarFromPages';
 
 const languages = [
