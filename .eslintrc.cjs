@@ -19,6 +19,10 @@ module.exports = {
     {
       files: ['./**/*.ts', './**/*.tsx'],
       extends: ['@myparcel-dev/eslint-config-prettier-typescript', '@myparcel-dev/eslint-config-import'],
+      // typescript-eslint reuses one program across the run, so .vue has to be known here too
+      parserOptions: {
+        extraFileExtensions: ['.vue'],
+      },
       rules: {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-misused-promises': 'off',
