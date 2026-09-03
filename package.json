@@ -33,7 +33,7 @@
     "src/**/*.svg": "svgo --multipass --final-newline",
     "**/*.{md,mdx,html,css,scss}": "prettier --write"
   },
-  "prettier": "@myparcel/prettier-config",
+  "prettier": "@myparcel-dev/prettier-config",
   "resolutions": {
     "axios": "1.15.0",
     "tar": "7.5.11",
@@ -58,8 +58,8 @@
     "@myparcel-dev/eslint-config-prettier": "^1.4.0",
     "@myparcel-dev/eslint-config-prettier-typescript": "^1.4.0",
     "@myparcel-dev/eslint-config-prettier-typescript-vue": "^1.4.0",
+    "@myparcel-dev/prettier-config": "^2.0.1",
     "@myparcel/constants": "2.6.0",
-    "@myparcel/prettier-config": "^1.1.0",
     "@tsconfig/node18": "^18.2.2",
     "@types/flat": "^5.0.2",
     "@types/lodash-es": "^4.17.6",

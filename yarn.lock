@@ -967,6 +967,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@myparcel-dev/prettier-config@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@myparcel-dev/prettier-config@npm:2.0.1"
+  checksum: 91a7070fe688e34f1b6b61140e51221b0d2428f9caa417925a7d261ffa4a3f332bc8fa8323017677c5175e5cc2519a821160be01562d1b95b52e0d1476b9b450
+  languageName: node
+  linkType: hard
+
 "@myparcel-dev/utils@npm:^1.4.0":
   version: 1.4.0
   resolution: "@myparcel-dev/utils@npm:1.4.0"
@@ -995,8 +1002,8 @@ __metadata:
     "@myparcel-dev/eslint-config-prettier": ^1.4.0
     "@myparcel-dev/eslint-config-prettier-typescript": ^1.4.0
     "@myparcel-dev/eslint-config-prettier-typescript-vue": ^1.4.0
+    "@myparcel-dev/prettier-config": ^2.0.1
     "@myparcel/constants": 2.6.0
-    "@myparcel/prettier-config": ^1.1.0
     "@tsconfig/node18": ^18.2.2
     "@types/flat": ^5.0.2
     "@types/lodash-es": ^4.17.6
@@ -1046,7 +1053,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@myparcel/prettier-config@npm:>= 1, @myparcel/prettier-config@npm:^1.1.0":
+"@myparcel/prettier-config@npm:>= 1":
   version: 1.1.0
   resolution: "@myparcel/prettier-config@npm:1.1.0"
   checksum: c10890fdd77cd630500b65301dd43fe32ea82a383fdf51d64300744325210e9c4e4b80b6f274c761f7beabb21e128f54ea52955132de8fbe5c5d92aaa3baa3c1
