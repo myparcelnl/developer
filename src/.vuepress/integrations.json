@@ -101,7 +101,6 @@
     "name": "cs-cart",
     "title": "CS-Cart",
     "type": "plugin",
-    "documentation": "https://myparcelnl.github.io/cs-cart",
     "image": "cart.png"
   },
   {
@@ -132,7 +131,7 @@
     "name": "virtuemart-2",
     "title": "Virtuemart 2",
     "type": "plugin",
-    "documentation": "https://myparcelnl.github.io/virtuemart",
+    "documentation": "https://myparcelnl.github.io/virtuemart2",
     "image": "virtuemart.svg",
     "classes": "bg-zinc-100"
   },
