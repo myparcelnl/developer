@@ -30,9 +30,9 @@
 </template>
 
 <script setup lang="ts">
-import CodeBlock from './CodeBlock.vue';
 import {computed} from 'vue';
 import {useVModel} from '@vueuse/core';
+import CodeBlock from './CodeBlock.vue';
 
 const props = defineProps<{
   items: {

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import {FunctionalComponent, h} from 'vue';
-import Shield, {ShieldParameters} from '@mptheme/client/components/global/Shield';
+import {type FunctionalComponent, h} from 'vue';
 import {toArray} from '@mptheme/client/utils/toArray';
+import Shield, {type ShieldParameters} from '@mptheme/client/components/global/Shield';
 
 export enum GitHubLinkType {
   Pulls = 'pulls',

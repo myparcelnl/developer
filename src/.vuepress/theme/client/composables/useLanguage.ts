@@ -1,8 +1,8 @@
-import {ComputedRef, computed} from 'vue';
-import {Language} from '../../../plugins/parseTranslations/shared';
+import {type ComputedRef, computed} from 'vue';
 import {memoize} from 'lodash-unified';
 import {useRouteLocale} from '@vuepress/client';
 import {useSiteLocaleData} from '@mptheme/client/composables/useSiteLocaleData';
+import {type Language} from '../../../plugins/parseTranslations/shared';
 
 const LENGTH_ALPHA2_OR_LOCALE_SHORT = 2;
 

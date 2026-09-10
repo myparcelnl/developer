@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
-import {ContainerPluginOptions, containerPlugin} from '@vuepress/plugin-container';
-import {Plugin} from 'vuepress';
+import {type Plugin} from 'vuepress';
+import {type ContainerPluginOptions, containerPlugin} from '@vuepress/plugin-container';
 
 const MESSAGE_TYPES: string[] = ['tip', 'note'];
 

@@ -74,11 +74,11 @@
 </template>
 
 <script lang="ts">
-import {MyPaNavbarItem, MyPaResolvedNavbarItem} from '@mptheme/config.types';
-import {PropType, computed, defineComponent, ref, watch} from 'vue';
-import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
 import {useRoute} from 'vue-router';
+import {type PropType, computed, defineComponent, ref, watch} from 'vue';
+import {type MyPaNavbarItem, type MyPaResolvedNavbarItem} from '@mptheme/config.types';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
+import ToggleChevron from '@mptheme/client/components/common/ToggleChevron.vue';
 
 export default defineComponent({
   name: 'NavbarDropdown',

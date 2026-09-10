@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import {FunctionalComponent, h} from 'vue';
-import Shield, {ShieldParameters} from '@mptheme/client/components/global/Shield';
+import {type FunctionalComponent, h} from 'vue';
+import Shield, {type ShieldParameters} from '@mptheme/client/components/global/Shield';
 
 interface Props extends ShieldParameters {
   alt: string;

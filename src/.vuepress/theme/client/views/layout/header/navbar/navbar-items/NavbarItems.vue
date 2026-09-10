@@ -26,12 +26,12 @@
 </template>
 
 <script lang="ts">
-import {ComputedRef, computed, defineComponent} from 'vue';
-import {MyPaNavbarItem, MyPaResolvedNavbarItem} from '@mptheme/config.types';
-import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
-import NavbarDropdown from '@mptheme/client/components/navbar-dropdown/NavbarDropdown.vue';
 import {useRoute} from 'vue-router';
+import {type ComputedRef, computed, defineComponent} from 'vue';
+import {type MyPaNavbarItem, type MyPaResolvedNavbarItem} from '@mptheme/config.types';
 import {useNavbarConfig} from '@mptheme/client/composables';
+import NavbarDropdown from '@mptheme/client/components/navbar-dropdown/NavbarDropdown.vue';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
 
 export default defineComponent({
   name: 'NavbarItems',

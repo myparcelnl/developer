@@ -50,8 +50,8 @@
 
 <script lang="ts">
 import {computed, defineComponent} from 'vue';
-import MPImg from '@mptheme/client/components/global/MPImg.vue';
 import {isLinkHttp} from '@vuepress/shared';
+import MPImg from '@mptheme/client/components/global/MPImg.vue';
 
 const BASE_URL = 'https://www.myparcel.nl/app/uploads';
 

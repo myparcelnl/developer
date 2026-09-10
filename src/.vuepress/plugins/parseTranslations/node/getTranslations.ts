@@ -1,8 +1,8 @@
-import {Locale} from './getLocalePathPrefix';
-import {ParseTranslationsPluginOptions} from '../shared';
+import path from 'node:path';
 import fs from 'node:fs';
 import {logger} from '@vuepress/utils';
-import path from 'node:path';
+import {type ParseTranslationsPluginOptions} from '../shared';
+import {type Locale} from './getLocalePathPrefix';
 
 export const getTranslations = async (options: ParseTranslationsPluginOptions): Promise<Locale[]> => {
   return Promise.all(

@@ -1,5 +1,5 @@
-import MPLogo from './MPLogo.vue';
 import {shallowMount} from '@vue/test-utils';
+import MPLogo from './MPLogo.vue';
 
 describe('myPaLogo', () => {
   it('renders', () => {

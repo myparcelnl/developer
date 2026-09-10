@@ -24,9 +24,9 @@
 </template>
 
 <script lang="ts">
+import {defineComponent} from 'vue';
 import Cta from '@mptheme/client/components/global/Cta.vue';
 import FloepjeLeft from '@Public/images/floepje_left.svg';
-import {defineComponent} from 'vue';
 
 export default defineComponent({
   name: 'HomeLink',

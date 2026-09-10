@@ -1,7 +1,7 @@
-import {ComputedRef, computed} from 'vue';
+import {type ComputedRef, computed} from 'vue';
+import {type DefaultThemePageData} from '@vuepress/theme-default/lib/shared';
 import {usePageData, usePageFrontmatter} from '@vuepress/client';
-import {DefaultThemePageData} from '@vuepress/theme-default/lib/shared';
-import {MyPaPageFrontmatter} from '@mptheme/config.types';
+import {type MyPaPageFrontmatter} from '@mptheme/config.types';
 
 export const useContributors = (): ComputedRef<null | Required<DefaultThemePageData['git']>['contributors']> => {
   const page = usePageData<DefaultThemePageData>();

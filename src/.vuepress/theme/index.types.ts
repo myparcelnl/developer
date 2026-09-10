@@ -1,4 +1,4 @@
-import {breakpointsTailwind} from '@vueuse/core';
+import {type breakpointsTailwind} from '@vueuse/core';
 
 export type Breakpoint = keyof typeof breakpointsTailwind;
 

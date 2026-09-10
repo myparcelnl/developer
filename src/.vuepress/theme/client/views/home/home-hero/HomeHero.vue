@@ -37,14 +37,14 @@
 </template>
 
 <script lang="ts">
+import {defineComponent} from 'vue';
+import {usePageFrontmatter} from '@vuepress/client';
+import {type MyPaHomepageFrontmatter} from '@mptheme/config.types';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
-import FloepjeBgLeft from '@Public/images/floepje_bg_left.svg';
+import {useNavLink} from '@mptheme/client/composables/useNavLink';
 import MPButton from '@mptheme/client/components/common/button/MPButton.vue';
 import MPButtonGroup from '@mptheme/client/components/common/MPButtonGroup.vue';
-import {MyPaHomepageFrontmatter} from '@mptheme/config.types';
-import {defineComponent} from 'vue';
-import {useNavLink} from '@mptheme/client/composables/useNavLink';
-import {usePageFrontmatter} from '@vuepress/client';
+import FloepjeBgLeft from '@Public/images/floepje_bg_left.svg';
 
 export default defineComponent({
   name: 'HomeHero',

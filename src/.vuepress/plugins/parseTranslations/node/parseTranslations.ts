@@ -1,12 +1,12 @@
-import {ParseTranslationsPluginOptions} from '../shared';
-import {Plugin} from '@vuepress/core/lib/types/plugin';
-import {createSidebar} from '../../../config/sidebar/createSidebar';
-import {getAvailableLanguages} from './getAvailableLanguages';
-import {getConfiguration} from './getConfiguration';
-import {getDefaultLanguage} from './getDefaultLanguage';
-import {getLocalePathPrefix} from './getLocalePathPrefix';
-import {getTranslations} from './getTranslations';
 import {merge} from 'lodash-unified';
+import {type Plugin} from '@vuepress/core/lib/types/plugin';
+import {type ParseTranslationsPluginOptions} from '../shared';
+import {createSidebar} from '../../../config/sidebar/createSidebar';
+import {getTranslations} from './getTranslations';
+import {getLocalePathPrefix} from './getLocalePathPrefix';
+import {getDefaultLanguage} from './getDefaultLanguage';
+import {getConfiguration} from './getConfiguration';
+import {getAvailableLanguages} from './getAvailableLanguages';
 
 export const parseTranslationsPlugin = (options: ParseTranslationsPluginOptions): Plugin => {
   return {

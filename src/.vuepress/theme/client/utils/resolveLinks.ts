@@ -1,4 +1,4 @@
-import {MyPaNavLink} from '@mptheme/config.types';
+import {type MyPaNavLink} from '@mptheme/config.types';
 import {resolveLink} from '@mptheme/client/utils/resolveLink';
 
 export const resolveLinks = (links: MyPaNavLink[]): MyPaNavLink[] => {

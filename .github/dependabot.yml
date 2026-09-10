@@ -16,7 +16,6 @@ updates:
       exclude:
         - '@myparcel/*'
         - '@myparcel-dev/*'
-        - '@myparcel-eslint/*'
         - '@myparcel-pdk/*'
     groups:
       minor-js-updates:

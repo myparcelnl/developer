@@ -27,12 +27,12 @@
 </template>
 
 <script lang="ts">
-import {PropType, defineComponent} from 'vue';
-import FormField from '@mptheme/client/components/global/FormField.vue';
-import {defaultFormProps} from '@mptheme/client/defaultFormProps';
-import {defaultInputClasses} from '@mptheme/client/defaultInputClasses';
+import {type PropType, defineComponent} from 'vue';
 import {useVModel} from '@vueuse/core';
+import {defaultInputClasses} from '@mptheme/client/defaultInputClasses';
+import {defaultFormProps} from '@mptheme/client/defaultFormProps';
 import {useTranslate} from '@mptheme/client/composables';
+import FormField from '@mptheme/client/components/global/FormField.vue';
 
 interface SelectOption {
   name: string;

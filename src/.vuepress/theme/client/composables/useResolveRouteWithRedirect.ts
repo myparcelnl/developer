@@ -1,4 +1,4 @@
-import {Router, useRouter} from 'vue-router';
+import {type Router, useRouter} from 'vue-router';
 import {isFunction, isString} from '@vuepress/shared';
 
 /**

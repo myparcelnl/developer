@@ -29,13 +29,13 @@
 
 <script lang="ts">
 import {computed, defineComponent, ref} from 'vue';
-import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
-import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
-import LanguageDropdown from '@mptheme/client/components/language-dropdown/LanguageDropdown.vue';
-import NavbarBrand from '@mptheme/client/views/layout/header/navbar/navbar-brand/NavbarBrand.vue';
-import NavbarItems from '@mptheme/client/views/layout/header/navbar/navbar-items/NavbarItems.vue';
-import ToggleColorModeButton from '@mptheme/client/views/layout/header/toggle-color-mode-button/ToggleColorModeButton.vue';
 import ToggleSidebarButton from '@mptheme/client/views/layout/header/toggle-sidebar-button/ToggleSidebarButton.vue';
+import ToggleColorModeButton from '@mptheme/client/views/layout/header/toggle-color-mode-button/ToggleColorModeButton.vue';
+import NavbarItems from '@mptheme/client/views/layout/header/navbar/navbar-items/NavbarItems.vue';
+import NavbarBrand from '@mptheme/client/views/layout/header/navbar/navbar-brand/NavbarBrand.vue';
+import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
+import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
+import LanguageDropdown from '@mptheme/client/components/language-dropdown/LanguageDropdown.vue';
 
 export default defineComponent({
   name: 'MPHeader',

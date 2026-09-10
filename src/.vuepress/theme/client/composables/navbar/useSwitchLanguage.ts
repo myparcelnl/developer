@@ -1,12 +1,12 @@
-import {ComputedRef, computed} from 'vue';
-import {MyPaNavLink, MyPaResolvedNavbarItem} from '@mptheme/config.types';
-import {useSiteLocaleData, useTranslate} from '@mptheme/client/composables';
-import {isDefined} from '@mptheme/shared/utils';
-import {resolveLinks} from '@mptheme/client/utils/resolveLinks';
-import {useFrontmatterLanguages} from '@mptheme/client/composables/useFrontmatterLanguages';
-import {useLanguage} from '@mptheme/client/composables/useLanguage';
-import {useLocaleLink} from '@mptheme/client/composables/useLocaleLink';
+import {type ComputedRef, computed} from 'vue';
 import {useRouteLocale} from '@vuepress/client';
+import {isDefined} from '@mptheme/shared/utils';
+import {type MyPaNavLink, type MyPaResolvedNavbarItem} from '@mptheme/config.types';
+import {resolveLinks} from '@mptheme/client/utils/resolveLinks';
+import {useLocaleLink} from '@mptheme/client/composables/useLocaleLink';
+import {useLanguage} from '@mptheme/client/composables/useLanguage';
+import {useFrontmatterLanguages} from '@mptheme/client/composables/useFrontmatterLanguages';
+import {useSiteLocaleData, useTranslate} from '@mptheme/client/composables';
 
 type UseSwitchLanguage = () => {
   dropdown: ComputedRef<MyPaResolvedNavbarItem | undefined>;

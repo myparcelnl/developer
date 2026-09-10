@@ -1,8 +1,8 @@
-import {MyPaResolvedSidebarItem, MyPaSidebarConfig} from '@mptheme/config.types';
-import {Language} from '../../plugins/parseTranslations/shared';
-import {Page} from 'vuepress';
-import {calculateSidebarItemSpots} from './calculateSidebarItemSpots';
+import {type Page} from 'vuepress';
+import {type MyPaResolvedSidebarItem, type MyPaSidebarConfig} from '@mptheme/config.types';
+import {type Language} from '../../plugins/parseTranslations/shared';
 import {deepSet} from './deepSet';
+import {calculateSidebarItemSpots} from './calculateSidebarItemSpots';
 
 export const addPageToSidebar = (
   page: Page,

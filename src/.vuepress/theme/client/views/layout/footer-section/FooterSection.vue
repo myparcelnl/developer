@@ -9,8 +9,8 @@
 <script lang="ts">
 import {computed, defineComponent} from 'vue';
 import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
-import {blockVariant} from '@mptheme/client/services/tailwind/variants/blockVariant';
 import {toArray} from '@mptheme/client/utils/toArray';
+import {blockVariant} from '@mptheme/client/services/tailwind/variants/blockVariant';
 import {useTailwindVariant} from '@mptheme/client/composables/useTailwindVariant';
 
 const variant = useTailwindVariant(blockVariant);

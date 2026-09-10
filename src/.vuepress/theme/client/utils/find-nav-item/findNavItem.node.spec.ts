@@ -1,6 +1,6 @@
 // @vitest-environment node
 
-import {MyPaNavbarConfigArray} from '@mptheme/config.types';
+import {type MyPaNavbarConfigArray} from '@mptheme/config.types';
 import {findNavItem} from '@mptheme/client/utils/find-nav-item/findNavItem';
 
 const array: MyPaNavbarConfigArray = [

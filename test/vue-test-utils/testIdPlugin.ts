@@ -1,4 +1,4 @@
-import {DOMWrapper, VueWrapper as RealVueWrapper, createWrapperError} from '@vue/test-utils';
+import {DOMWrapper, type VueWrapper as RealVueWrapper, createWrapperError} from '@vue/test-utils';
 
 export const testIdPlugin = (wrapper: RealVueWrapper) => {
   const findByTestId = (id: string): DOMWrapper<Element> => {

@@ -1,9 +1,9 @@
-import {LanguageConfig, useSiteLocaleData} from '@mptheme/client/composables';
-import {Language} from '../../../plugins/parseTranslations/shared';
-import {NavLink} from '@vuepress/theme-default/lib/shared';
-import {SiteLocaleConfig} from 'vuepress';
-import {useRouteLocale} from '@vuepress/client';
+import {type SiteLocaleConfig} from 'vuepress';
 import {useRouter} from 'vue-router';
+import {type NavLink} from '@vuepress/theme-default/lib/shared';
+import {useRouteLocale} from '@vuepress/client';
+import {type LanguageConfig, useSiteLocaleData} from '@mptheme/client/composables';
+import {type Language} from '../../../plugins/parseTranslations/shared';
 
 type LocaleNavLink = NavLink & {language: LanguageConfig};
 

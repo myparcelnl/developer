@@ -1,5 +1,5 @@
-import MarkdownIt from 'markdown-it';
-import Token from 'markdown-it/lib/token';
+import type Token from 'markdown-it/lib/token';
+import type MarkdownIt from 'markdown-it';
 
 type ReplaceFunction = (link: string, env: unknown, token: Token) => string;
 

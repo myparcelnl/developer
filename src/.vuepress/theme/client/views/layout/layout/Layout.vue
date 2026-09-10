@@ -25,14 +25,14 @@
 </template>
 
 <script lang="ts">
+import {useRouter} from 'vue-router';
 import {computed, defineComponent, onMounted, onUnmounted} from 'vue';
 import {usePageData, usePageFrontmatter} from '@vuepress/client';
-import Home from '@mptheme/client/views/home/Home.vue';
-import MPHeader from '@mptheme/client/views/layout/header/MPHeader.vue';
-import MPSidebar from '@mptheme/client/views/layout/sidebar/MPSidebar.vue';
-import {MyPaPageFrontmatter} from '@mptheme/config.types';
+import {type MyPaPageFrontmatter} from '@mptheme/config.types';
 import Page from '@mptheme/client/views/page/Page.vue';
-import {useRouter} from 'vue-router';
+import MPSidebar from '@mptheme/client/views/layout/sidebar/MPSidebar.vue';
+import MPHeader from '@mptheme/client/views/layout/header/MPHeader.vue';
+import Home from '@mptheme/client/views/home/Home.vue';
 import {useSidebar} from '@mptheme/client/composables';
 
 export default defineComponent({

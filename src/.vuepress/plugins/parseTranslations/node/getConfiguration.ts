@@ -1,8 +1,8 @@
-import {Locale} from './getLocalePathPrefix';
+import path from 'node:path';
 import fs from 'node:fs';
 import grayMatter from 'gray-matter';
 import {logger} from '@vuepress/utils';
-import path from 'node:path';
+import {type Locale} from './getLocalePathPrefix';
 
 export const getConfiguration = async (dir: string): Promise<Locale[]> => {
   return Promise.all(

@@ -1,5 +1,5 @@
 /* eslint-disable max-len,vue/max-len */
-import {HeadConfig} from 'vuepress';
+import {type HeadConfig} from 'vuepress';
 
 const faviconUrl = 'https://assets.myparcel.nl/skin/images/favicon';
 

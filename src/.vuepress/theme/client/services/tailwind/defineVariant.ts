@@ -1,4 +1,4 @@
-import {Prop} from 'vue';
+import {type Prop} from 'vue';
 
 export interface TailwindVariant<
   N = string,

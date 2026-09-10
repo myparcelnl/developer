@@ -37,12 +37,12 @@
 </template>
 
 <script lang="ts">
-import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
-import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
-import FooterSection from '@mptheme/client/views/layout/footer-section/FooterSection.vue';
-import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import {defineComponent} from 'vue';
+import FooterSection from '@mptheme/client/views/layout/footer-section/FooterSection.vue';
+import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 import {usePrevNextNavLinks} from '@mptheme/client/composables/usePrevNextNavLinks';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
+import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 
 export default defineComponent({
   name: 'PageFooterNav',

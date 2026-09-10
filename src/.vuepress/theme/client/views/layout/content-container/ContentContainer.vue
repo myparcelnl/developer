@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import {containerVariant} from '@mptheme/client/services/tailwind/variants/containerVariant';
 import {defineComponent} from 'vue';
+import {containerVariant} from '@mptheme/client/services/tailwind/variants/containerVariant';
 import {useTailwindVariant} from '@mptheme/client/composables/useTailwindVariant';
 
 const variant = useTailwindVariant(containerVariant);

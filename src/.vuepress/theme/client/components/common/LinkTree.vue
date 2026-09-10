@@ -27,9 +27,9 @@
 </template>
 
 <script lang="ts">
-import {PropType, defineComponent} from 'vue';
+import {type PropType, defineComponent} from 'vue';
+import {type MyPaNavbarConfigArray} from '@mptheme/config.types';
 import AutoLink from '../global/AutoLink.vue';
-import {MyPaNavbarConfigArray} from '@mptheme/config.types';
 
 export default defineComponent({
   name: 'LinkTree',

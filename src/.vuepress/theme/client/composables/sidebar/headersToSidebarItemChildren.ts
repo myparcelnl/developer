@@ -1,5 +1,5 @@
-import {MyPaResolvedSidebarItem} from '@mptheme/config.types';
-import {PageHeader} from 'vuepress';
+import {type PageHeader} from 'vuepress';
+import {type MyPaResolvedSidebarItem} from '@mptheme/config.types';
 import {headerToSidebarItem} from './headerToSidebarItem';
 
 export const headersToSidebarItemChildren = (

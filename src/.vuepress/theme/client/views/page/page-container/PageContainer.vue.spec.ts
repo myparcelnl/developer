@@ -1,5 +1,5 @@
-import PageContainer from './PageContainer.vue';
 import {shallowMount} from '@vue/test-utils';
+import PageContainer from './PageContainer.vue';
 
 describe('pageContainer', () => {
   it('renders properly', () => {

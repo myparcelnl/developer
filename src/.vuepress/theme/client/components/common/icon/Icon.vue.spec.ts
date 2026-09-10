@@ -1,4 +1,4 @@
-import {VueWrapper, shallowMount} from '@vue/test-utils';
+import {type VueWrapper, shallowMount} from '@vue/test-utils';
 import Icon from './Icon.vue';
 
 let wrapper: VueWrapper;

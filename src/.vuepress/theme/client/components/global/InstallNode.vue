@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts" setup>
-import CodeGroup from './CodeGroup.vue';
 import {computed} from 'vue';
 import {useGlobalPackageManager} from '../../composables/state/useGlobalPackageManager';
+import CodeGroup from './CodeGroup.vue';
 
 const props = defineProps<{
   package: string;

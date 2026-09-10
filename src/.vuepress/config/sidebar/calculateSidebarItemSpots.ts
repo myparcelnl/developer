@@ -1,4 +1,4 @@
-import {MyPaSidebarConfig} from '@mptheme/config.types';
+import {type MyPaSidebarConfig} from '@mptheme/config.types';
 import {getChildIndices} from './getChildIndices';
 
 export const calculateSidebarItemSpots = (

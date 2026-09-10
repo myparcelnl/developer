@@ -33,12 +33,12 @@
 </template>
 
 <script lang="ts">
-import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
-import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
-import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
-import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 import {defineComponent} from 'vue';
+import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
+import ContentBlock from '@mptheme/client/views/layout/content-block/ContentBlock.vue';
 import {useBreadcrumbs} from '@mptheme/client/composables/useBreadcrumbs';
+import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
+import Icon from '@mptheme/client/components/common/icon/Icon.vue';
 
 export default defineComponent({
   name: 'RouteBreadcrumbs',

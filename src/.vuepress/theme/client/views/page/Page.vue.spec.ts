@@ -1,5 +1,5 @@
-import Page from './Page.vue';
 import {shallowMount} from '@vue/test-utils';
+import Page from './Page.vue';
 
 describe('page', () => {
   it('renders properly', () => {
