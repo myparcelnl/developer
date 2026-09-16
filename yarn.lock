@@ -6364,8 +6364,8 @@ __metadata:
   linkType: hard
 
 "joi@npm:^18.1.2":
-  version: 18.1.2
-  resolution: "joi@npm:18.1.2"
+  version: 18.2.9
+  resolution: "joi@npm:18.2.9"
   dependencies:
     "@hapi/address": ^5.1.1
     "@hapi/formula": ^3.0.2
@@ -6374,7 +6374,7 @@ __metadata:
     "@hapi/tlds": ^1.1.1
     "@hapi/topo": ^6.0.2
     "@standard-schema/spec": ^1.1.0
-  checksum: a6b807a146d0572e8be07ac1e76aafac0b506e674cffb3393fc3ce56b0c7d6ea35902ad0d06d8f3b5b7fb2711f8ba06a17fddb46b993ccb3d1ab979679966dac
+  checksum: 243084f61fd2c6d562ec4e97fd8363842c3e093b0d90fd05becc28758c8cf8de44eebdf81cb91a3c642621675aaa0f7ada4f925b95686c9c011f424b578cda12
   languageName: node
   linkType: hard
 
