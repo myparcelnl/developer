@@ -12,7 +12,7 @@ runs:
 
     - name: 'Handle build cache'
       id: cache-build
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       with:
         path: src/.vuepress/dist
         key: ${{ runner.os }}-build-${{ hashFiles('**/*.lock') }}-${{ hashFiles('src/**/*') }}
