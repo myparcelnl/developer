@@ -44,6 +44,8 @@ Without the skills, follow [Writing](#writing) and [Pull requests](#pull-request
 - Simplified Technical English (ASD-STE100): one idea per sentence, active voice, present tense, "you" for the reader. No em dashes.
 - Use the names the product, the API and the code use. Never invent a term, an identifier or a code example.
 - Use obvious placeholders such as `<api-key>`, never a value that looks real.
+- Name the major version of a MyParcel plugin, SDK or API, such as v11. Name a minor or patch version only as a requirement (the first version with a feature or a bug fix) or in a changelog.
+- Do not copy implementation code or configuration from a repository. Link to the source instead: every copy must be kept in sync. When a reader needs a list of allowed values, show the list and link to its source next to it: the code is always the most true. Code examples show how to use the public API. Translations of a page are not copies.
 - When you change a heading or move a page, update the navigation and every link to it.
 
 ## Pull requests
