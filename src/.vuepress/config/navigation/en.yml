@@ -41,7 +41,7 @@ footer:
         link: /documentation/30.etsy.html
       - text: Chrome extension
         link: /documentation/40.chrome-extension.html
-      - text: PHP SDK
+      - text: PHP SDK v10
         link: /documentation/50.php-sdk.html
       - text: JS SDK
         link: /documentation/51.javascript-sdk.html

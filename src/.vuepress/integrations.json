@@ -277,7 +277,7 @@
   {
     "name": "php-sdk",
     "internal": true,
-    "title": "PHP SDK",
+    "title": "PHP SDK v10",
     "type": "sdk",
     "repository": "myparcelnl/sdk",
     "documentation": "/documentation/50.php-sdk.html",
