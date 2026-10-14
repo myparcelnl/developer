@@ -1,0 +1,11 @@
+{
+  "extraKnownMarketplaces": {
+    "myparcel-claude-code-marketplace": {
+      "source": { "source": "github", "repo": "mypadev/ai-plugins" }
+    }
+  },
+  "enabledPlugins": {
+    "ai-basekit@myparcel-claude-code-marketplace": true,
+    "external-integrations-basekit@myparcel-claude-code-marketplace": true
+  }
+}
