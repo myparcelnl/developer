@@ -64,7 +64,7 @@
     "@types/flat": "^5.0.2",
     "@types/lodash-es": "^4.17.6",
     "@types/mock-fs": "^4.13.1",
-    "@vitejs/plugin-vue": "^4.4.0",
+    "@vitejs/plugin-vue": "^6.0.10",
     "@vue/test-utils": "^2.0.2",
     "autoprefixer": "^10.4.8",
     "concurrently": "^9.2.1",
