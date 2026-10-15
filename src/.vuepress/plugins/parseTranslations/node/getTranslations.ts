@@ -1,6 +1,6 @@
 import path from 'node:path';
 import fs from 'node:fs';
-import {logger} from '@vuepress/utils';
+import {logger} from 'vuepress/utils';
 import {type ParseTranslationsPluginOptions} from '../shared';
 import {type Locale} from './getLocalePathPrefix';
 

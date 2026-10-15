@@ -33,9 +33,9 @@
 </template>
 
 <script lang="ts" setup>
+import {ClientOnly} from 'vuepress/client';
 import {computed, type PropType, reactive} from 'vue';
 import {breakpointsTailwind, useBreakpoints} from '@vueuse/core';
-import {ClientOnly} from '@vuepress/client';
 import {type Breakpoint} from '@mptheme/index.types';
 
 const VIEW_BOX_ICON_LOGO = '0 0 135.7 203.6';

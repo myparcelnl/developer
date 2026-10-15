@@ -1,6 +1,6 @@
+import {usePageData, usePageFrontmatter} from 'vuepress/client';
 import {type ComputedRef, computed} from 'vue';
-import {type DefaultThemePageData} from '@vuepress/theme-default/lib/shared';
-import {usePageData, usePageFrontmatter} from '@vuepress/client';
+import {type DefaultThemePageData} from '@vuepress/theme-default';
 import {type MyPaPageFrontmatter} from '@mptheme/config.types';
 import {useThemeLocaleData} from '@mptheme/client/composables';
 

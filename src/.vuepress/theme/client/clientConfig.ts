@@ -1,6 +1,6 @@
 import './styles/index.scss';
+import {defineClientConfig} from 'vuepress/client';
 import {h} from 'vue';
-import {defineClientConfig} from '@vuepress/client';
 import {vTest} from '@mptheme/client/services/directives/vTest';
 import {setupSidebarItems} from '@mptheme/client/composables';
 import NotFound from './views/not-found/NotFoundPage.vue';
@@ -16,13 +16,8 @@ export default defineClientConfig({
     const {app, router} = context;
 
     app.component('NavbarSearch', () => {
-      const searchComponent = app.component('Docsearch') ?? app.component('SearchBox');
+      const searchComponent = app.component('SearchBox');
       return searchComponent ? h(searchComponent) : null;
-    });
-
-    app.component('AutoLinkExternalIcon', () => {
-      const externalLinkIcon = app.component('ExternalLinkIcon');
-      return externalLinkIcon ? h(externalLinkIcon) : null;
     });
 
     // Directives

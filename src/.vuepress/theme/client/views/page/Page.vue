@@ -7,7 +7,8 @@
     <ContentContainer
       tag="main"
       type="sm"
-      class="page pb-12 pt-4">
+      class="page pb-12 pt-4"
+      vp-content>
       <slot name="content">
         <h1
           v-if="frontmatter.title"
@@ -26,8 +27,8 @@
 </template>
 
 <script lang="ts">
+import {usePageData, usePageFrontmatter} from 'vuepress/client';
 import {defineComponent} from 'vue';
-import {usePageData, usePageFrontmatter} from '@vuepress/client';
 import {type MyPaPageData, type MyPaPageFrontmatter} from '@mptheme/config.types';
 import PageFooter from '@mptheme/client/views/page/page-footer/PageFooter.vue';
 import PageContainer from '@mptheme/client/views/page/page-container/PageContainer.vue';

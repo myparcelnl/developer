@@ -31,8 +31,8 @@
 </template>
 
 <script lang="ts">
+import {usePageFrontmatter} from 'vuepress/client';
 import {defineComponent} from 'vue';
-import {usePageFrontmatter} from '@vuepress/client';
 import {type MyPaHomepageFrontmatter} from '@mptheme/config.types';
 import ContentContainer from '@mptheme/client/views/layout/content-container/ContentContainer.vue';
 

@@ -6,13 +6,6 @@ const faviconUrl = 'https://assets.myparcel.nl/skin/images/favicon';
 export const head: HeadConfig[] = [
   // Meta
   ['meta', {name: 'charset', content: 'utf-8'}],
-  [
-    'meta',
-    {
-      name: 'description',
-      content: 'Find our API reference, documentation and plugin guides on the MyParcel Developer Portal',
-    },
-  ],
   ['meta', {name: 'keywords', content: 'myparcel, developer, portal, api, reference, documentation'}],
 
   // Icons

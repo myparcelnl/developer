@@ -1,6 +1,5 @@
+import {useRouteLocale} from 'vuepress/client';
 import {type ComputedRef, computed} from 'vue';
-import {memoize} from 'lodash-unified';
-import {useRouteLocale} from '@vuepress/client';
 import {useSiteLocaleData} from '@mptheme/client/composables/useSiteLocaleData';
 import {type Language} from '../../../plugins/parseTranslations/shared';
 
@@ -14,18 +13,17 @@ type UsePageLanguage = () => {
   languages: Language[];
 };
 
-const useLanguageMemoized = memoize((input: string) => {
-  const siteLocale = useSiteLocaleData();
+const findLanguage = (availableLanguages: Language[], input: string): Language | undefined => {
   let check: (keyof Language)[] = ['locale'];
 
   if (input.length === LENGTH_ALPHA2_OR_LOCALE_SHORT) {
     check = ['alpha2', 'localeShort'];
   }
 
-  return siteLocale.value.availableLanguages.find((config) => {
+  return availableLanguages.find((config) => {
     return check.some((field) => config[field] === input);
   });
-});
+};
 
 export const useLanguage: UsePageLanguage = () => {
   const siteLocale = useSiteLocaleData();
@@ -41,7 +39,7 @@ export const useLanguage: UsePageLanguage = () => {
 
       return match ?? siteLocale.value.availableLanguages[0];
     }),
-    get: (lang) => useLanguageMemoized(lang),
+    get: (lang) => findLanguage(siteLocale.value.availableLanguages, lang),
     languages,
   };
 };

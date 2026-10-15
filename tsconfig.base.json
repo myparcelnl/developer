@@ -10,13 +10,9 @@
       "ESNext"
     ],
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "noEmit": true,
     "paths": {
-      // Vuepress default theme
-      "@theme/*": [
-        "node_modules/@vuepress/theme-default/lib/client/components/*"
-      ],
       // Our custom theme
       "@mptheme/*": [
         "src/.vuepress/theme/*"
@@ -27,7 +23,7 @@
     },
     "resolveJsonModule": true,
     "types": [
-      "@vuepress/client",
+      "vuepress/client-types",
       "vite/client",
       "vitest/globals"
     ]

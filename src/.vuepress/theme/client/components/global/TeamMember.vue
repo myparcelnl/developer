@@ -49,8 +49,8 @@
 </template>
 
 <script lang="ts">
+import {isLinkHttp} from 'vuepress/shared';
 import {computed, defineComponent} from 'vue';
-import {isLinkHttp} from '@vuepress/shared';
 import MPImg from '@mptheme/client/components/global/MPImg.vue';
 
 const BASE_URL = 'https://www.myparcel.nl/app/uploads';

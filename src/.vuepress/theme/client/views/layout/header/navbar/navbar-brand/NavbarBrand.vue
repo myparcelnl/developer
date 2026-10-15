@@ -11,8 +11,8 @@
 </template>
 
 <script lang="ts">
+import {useRouteLocale} from 'vuepress/client';
 import {type PropType, computed, defineComponent} from 'vue';
-import {useRouteLocale} from '@vuepress/client';
 import {type Breakpoint} from '@mptheme/index.types';
 import {useSiteLocaleData, useThemeLocaleData} from '@mptheme/client/composables';
 import MPLogo from '@mptheme/client/components/logo/MPLogo.vue';
