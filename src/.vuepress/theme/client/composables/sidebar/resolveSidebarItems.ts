@@ -1,5 +1,5 @@
+import {isPlainObject} from 'vuepress/shared';
 import {isArray} from 'lodash-unified';
-import {isPlainObject} from '@vuepress/shared';
 import {
   type MyPaPageFrontmatter,
   type MyPaResolvedSidebarItem,

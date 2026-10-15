@@ -1,6 +1,6 @@
+import {usePageData} from 'vuepress/client';
 import {useRoute} from 'vue-router';
 import {type ComputedRef, computed} from 'vue';
-import {usePageData} from '@vuepress/client';
 import {type MyPaAnyNavbarItem} from '@mptheme/config.types';
 import {useTranslate} from '@mptheme/client/composables/useTranslate';
 import {useNavLink} from '@mptheme/client/composables/useNavLink';

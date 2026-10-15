@@ -1,16 +1,14 @@
 /* eslint-disable max-lines-per-function */
+import {path} from 'vuepress/utils';
+import {type Theme} from 'vuepress/core';
 import {type Page} from 'vuepress';
 import markdownItMultimdTable from 'markdown-it-multimd-table';
-import {path} from '@vuepress/utils';
 import {themeDataPlugin} from '@vuepress/plugin-theme-data';
 import {prismjsPlugin} from '@vuepress/plugin-prismjs';
-import {palettePlugin} from '@vuepress/plugin-palette';
 import {gitPlugin} from '@vuepress/plugin-git';
 import {externalLinkIconPlugin} from '@vuepress/plugin-external-link-icon';
 import {activeHeaderLinksPlugin} from '@vuepress/plugin-active-header-links';
-import {type Theme} from '@vuepress/core';
 import {DIR_CLIENT, DIR_THEME} from './shared/directories';
-import {seoPlugin} from './seoPlugin';
 import {registerCustomComponentsPlugin} from './node/plugins/registerCustomComponentsPlugin';
 import {incrementHeadingsPlugin} from './node/plugins/incrementHeadingsPlugin';
 import {autoLinkPlugin} from './node/plugins/autoLinkPlugin';
@@ -30,9 +28,6 @@ export const myParcelTheme = (options: MyPaThemeData): Theme => {
     templateBuild: path.resolve(__dirname, 'templates', 'build.html'),
 
     alias: {
-      // Replace docsearch css entirely
-      '@docsearch/css': path.resolve(DIR_CLIENT, 'styles', 'docsearch.scss'),
-
       ...createAliasMap(DIR_THEME, '@mptheme'),
     },
 
@@ -47,6 +42,9 @@ export const myParcelTheme = (options: MyPaThemeData): Theme => {
 
       // Save whether there is content on the page to a boolean.
       page.data.hasContent = Boolean(page.contentRendered);
+
+      // save headers into page data to generate the sidebar
+      page.data.headers = page.headers;
     },
 
     extendsMarkdown: (md) => {
@@ -74,13 +72,11 @@ export const myParcelTheme = (options: MyPaThemeData): Theme => {
       themeDataPlugin({
         themeData: options,
       }),
-      prismjsPlugin(),
-      palettePlugin({}),
+      prismjsPlugin({lineNumbers: false}),
       autoLinkPlugin(),
       gitPlugin(),
       incrementHeadingsPlugin(),
       registerCustomComponentsPlugin(),
-      seoPlugin(),
     ],
   };
 };

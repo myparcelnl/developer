@@ -1,19 +1,25 @@
-import {defineUserConfig, viteBundler} from 'vuepress';
-import {path} from '@vuepress/utils';
+import {path} from 'vuepress/utils';
+import {defineUserConfig} from 'vuepress';
+import {sitemapPlugin} from '@vuepress/plugin-sitemap';
+import {seoPlugin} from '@vuepress/plugin-seo';
+import {googleTagManagerPlugin} from '@vuepress/plugin-google-tag-manager';
 import {docsearchPlugin} from '@vuepress/plugin-docsearch';
+import {viteBundler} from '@vuepress/bundler-vite';
 import {slugify} from '@mdit-vue/shared';
 import {viteConfig} from './viteConfig';
 import {myParcelTheme} from './theme';
-import {sitemapPlugin} from './plugins/sitemap';
 import {parseTranslationsPlugin} from './plugins/parseTranslations';
 import {openApiPlugin} from './plugins/openApi';
-import {googleTagManagerPlugin} from './plugins/gtm/node';
 import {DIR_CONFIG, DIR_VUEPRESS} from './dirs';
 import {head} from './config/head';
 
 const DEV_SERVER_PORT = 8955;
 
+const HOSTNAME = 'https://developer.myparcel.nl';
+
 export default defineUserConfig({
+  description: 'Find our API reference, documentation and plugin guides on the MyParcel Developer Portal',
+
   head,
 
   theme: myParcelTheme({
@@ -43,11 +49,16 @@ export default defineUserConfig({
     docsearchPlugin({
       appId: 'CN8B8S1EFL',
       apiKey: '4c55bbf8ccfb57cb5c3132c03fc9728b',
-      indexName: 'developer-myparcel',
+      indices: ['developer-myparcel'],
+      injectStyles: false,
+    }),
+
+    seoPlugin({
+      hostname: HOSTNAME,
     }),
 
     sitemapPlugin({
-      baseUrl: 'https://developer.myparcel.nl/',
+      hostname: HOSTNAME,
     }),
   ],
 
@@ -64,9 +75,6 @@ export default defineUserConfig({
         const hasHeading = /^\d+(?:\.\w+)+/.exec(str);
         return slugify(hasHeading ? hasHeading[0] : str);
       },
-    },
-    code: {
-      lineNumbers: false,
     },
   },
 

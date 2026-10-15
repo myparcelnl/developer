@@ -17,8 +17,8 @@
 </template>
 
 <script lang="ts" setup>
+import {useRouteLocale} from 'vuepress/client';
 import {computed} from 'vue';
-import {useRouteLocale} from '@vuepress/client';
 import {useNavLink, useTranslate} from '@mptheme/client';
 import Layout from '../layout/layout/Layout.vue';
 import MPButton from '../../components/common/button/MPButton.vue';

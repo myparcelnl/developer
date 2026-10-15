@@ -1,6 +1,6 @@
+import {useRouteLocale} from 'vuepress/client';
 import {type ComputedRef, computed} from 'vue';
 import {memoize} from 'lodash-unified';
-import {useRouteLocale} from '@vuepress/client';
 import {useSiteLocaleData} from '@mptheme/client/composables/useSiteLocaleData';
 import {type Language} from '../../../plugins/parseTranslations/shared';
 

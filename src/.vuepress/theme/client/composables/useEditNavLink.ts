@@ -1,6 +1,6 @@
+import {usePageData, usePageFrontmatter} from 'vuepress/client';
 import {computed, type ComputedRef} from 'vue';
 import {type DefaultThemePageData} from '@vuepress/theme-default';
-import {usePageData, usePageFrontmatter} from '@vuepress/client';
 import {type MyPaNavLink, type MyPaPageFrontmatter} from '@mptheme/config.types';
 import {useThemeLocaleData, useTranslate} from '@mptheme/client/composables';
 

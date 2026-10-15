@@ -1,5 +1,5 @@
+import {useRouteLocale} from 'vuepress/client';
 import {type ComputedRef, computed} from 'vue';
-import {useRouteLocale} from '@vuepress/client';
 import {isDefined} from '@mptheme/shared/utils';
 import {type MyPaNavLink, type MyPaResolvedNavbarItem} from '@mptheme/config.types';
 import {resolveLinks} from '@mptheme/client/utils/resolveLinks';

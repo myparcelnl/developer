@@ -1,13 +1,9 @@
-import {type ViteBundlerOptions} from 'vuepress';
+import {path} from 'vuepress/utils';
 import svgLoader from 'vite-svg-loader';
-import {path} from '@vuepress/utils';
+import {type ViteBundlerOptions} from '@vuepress/bundler-vite';
 
 export const viteConfig: ViteBundlerOptions['viteOptions'] = {
-  plugins: [
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    svgLoader(),
-  ],
+  plugins: [svgLoader()],
 
   resolve: {
     alias: {
@@ -15,8 +11,9 @@ export const viteConfig: ViteBundlerOptions['viteOptions'] = {
     },
   },
 
-  optimizeDeps: {
-    exclude: ['@vuepress/theme-default', 'fsevents'],
+  // @vuepress/helper imports vuepress/client, which only resolves inside the bundle
+  ssr: {
+    noExternal: ['@vuepress/helper'],
   },
 
   ...(process.env.TRAEFIK

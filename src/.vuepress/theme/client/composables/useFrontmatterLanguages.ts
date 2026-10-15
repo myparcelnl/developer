@@ -1,5 +1,5 @@
+import {usePageFrontmatter} from 'vuepress/client';
 import {type ComputedRef, computed} from 'vue';
-import {usePageFrontmatter} from '@vuepress/client';
 import {type MyPaPageFrontmatter} from '@mptheme/config.types';
 import {toArray} from '@mptheme/client/utils/toArray';
 import {useLanguage} from '@mptheme/client/composables/index';

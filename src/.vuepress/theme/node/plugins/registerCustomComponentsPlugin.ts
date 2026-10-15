@@ -1,6 +1,6 @@
 import fs from 'fs';
+import {path} from 'vuepress/utils';
 import {type Plugin} from 'vuepress';
-import {path} from '@vuepress/utils';
 import {registerComponentsPlugin} from '@vuepress/plugin-register-components';
 import {DIR_CLIENT} from '../../shared/directories';
 

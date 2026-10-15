@@ -1,5 +1,5 @@
+import {usePageFrontmatter} from 'vuepress/client';
 import {computed, provide} from 'vue';
-import {usePageFrontmatter} from '@vuepress/client';
 import {type MyPaPageFrontmatter} from '@mptheme/config.types';
 import {useSiteLocaleData, useThemeLocaleData} from '@mptheme/client/composables';
 import {sidebarItemsSymbol} from './sidebarItemsSymbol';

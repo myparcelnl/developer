@@ -1,5 +1,5 @@
+import {resolveLocalePath} from 'vuepress/shared';
 import {useRoute} from 'vue-router';
-import {resolveLocalePath} from '@vuepress/shared';
 import {type MyPaResolvedSidebarItem, type MyPaSidebarConfigObject, type MyPaSiteData} from '@mptheme/config.types';
 import {resolveArraySidebarItems} from './resolveArraySidebarItems';
 

@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import {useRouter} from 'vue-router';
+import {useRoutes} from 'vuepress/client';
 import {type ComputedRef, computed, defineComponent} from 'vue';
 import {type MyPaNavbarItem} from '@mptheme/config.types';
 import AutoLink from '@mptheme/client/components/global/AutoLink.vue';
@@ -29,19 +29,18 @@ export default defineComponent({
   },
 
   setup: (props) => {
-    const to = props.to.split('_');
+    const routes = useRoutes();
 
     const resolveRoute = () => {
-      return useRouter()
-        .getRoutes()
-        .find((route) => {
-          const PREFIX_LENGTH = 2;
-          const number = to[0].padStart(PREFIX_LENGTH, '0');
-          return route.path.startsWith(`/api-reference/${number}`);
-        });
+      const to = props.to.split('_');
+      const PREFIX_LENGTH = 2;
+      const number = to[0].padStart(PREFIX_LENGTH, '0');
+
+      return Object.keys(routes.value).find((path) => path.startsWith(`/api-reference/${number}`));
     };
 
     const linkItem: ComputedRef<MyPaNavbarItem | null> = computed(() => {
+      const to = props.to.split('_');
       const resolved = resolveRoute();
 
       if (!resolved) {
@@ -51,7 +50,7 @@ export default defineComponent({
       }
 
       return {
-        link: `${resolved.path}#_${to.map((str) => str.toLowerCase()).join('-')}`,
+        link: `${resolved}#_${to.map((str) => str.toLowerCase()).join('-')}`,
         text: props.to,
       };
     });

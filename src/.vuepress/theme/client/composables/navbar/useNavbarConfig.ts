@@ -1,5 +1,5 @@
+import {isString} from 'vuepress/shared';
 import {type ComputedRef, computed} from 'vue';
-import {isString} from '@vuepress/shared';
 import {isOfType} from '@mptheme/shared/utils';
 import {type MyPaNavbarGroup, type MyPaNavbarItem, type MyPaResolvedNavbarItem} from '@mptheme/config.types';
 import {useNavLink} from '@mptheme/client/composables/useNavLink';
@@ -24,6 +24,6 @@ export const useNavbarConfig = (): ComputedRef<MyPaResolvedNavbarItem[]> => {
   const siteLocale = useSiteLocaleData();
 
   return computed(() => {
-    return (siteLocale.value.navbar ?? []).map(resolveNavbarItem);
+    return (siteLocale.value.navbar || []).map(resolveNavbarItem);
   });
 };

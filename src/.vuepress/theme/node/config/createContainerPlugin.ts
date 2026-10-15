@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers */
 import {type Plugin} from 'vuepress';
-import {type ContainerPluginOptions, containerPlugin} from '@vuepress/plugin-container';
+import {type MarkdownContainerPluginOptions, markdownContainerPlugin} from '@vuepress/plugin-markdown-container';
 
 const MESSAGE_TYPES: string[] = ['tip', 'note'];
 
 export const createContainerPlugins = (): Plugin[] => {
-  const containers: ContainerPluginOptions[] = [
+  const containers: MarkdownContainerPluginOptions[] = [
     {
       type: 'expand',
       before: (args) => {
@@ -18,7 +18,7 @@ export const createContainerPlugins = (): Plugin[] => {
       after: () => '</DetailsExpand>',
     },
 
-    ...MESSAGE_TYPES.map((type): ContainerPluginOptions => {
+    ...MESSAGE_TYPES.map((type): MarkdownContainerPluginOptions => {
       return {
         type,
         before: (title) => `<Message title="${title}" type="${type}">`,
@@ -27,5 +27,5 @@ export const createContainerPlugins = (): Plugin[] => {
     }),
   ];
 
-  return containers.map(containerPlugin);
+  return containers.map(markdownContainerPlugin);
 };
