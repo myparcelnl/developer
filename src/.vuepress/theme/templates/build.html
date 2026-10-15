@@ -15,6 +15,8 @@
         window.matchMedia('(prefers-color-scheme: dark)').matches;
       if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
         document.documentElement.classList.toggle('dark', true);
+        // the vuepress ecosystem (docsearch, @vuepress/helper) reads dark mode from data-theme
+        document.documentElement.dataset.theme = 'dark';
       }
     </script>
     <!--vuepress-ssr-head-->
