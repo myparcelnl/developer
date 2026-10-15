@@ -1,4 +1,4 @@
-import {fs, path} from '@vuepress/utils';
+import {fs, path} from 'vuepress/utils';
 
 /**
  * Creates an object mapping all files/folders in <from> to "<to>/<from>".
@@ -6,7 +6,7 @@ import {fs, path} from '@vuepress/utils';
  * @param {string} from
  * @param {string} to
  */
-export const createAliasMap = (from: fs.PathLike, to: string): Record<string, fs.PathLike> =>
+export const createAliasMap = (from: string, to: string): Record<string, string> =>
   Object.fromEntries(
     fs.readdirSync(from).map((file) => {
       // Chop .ts extension off aliases.

@@ -25,9 +25,9 @@
 </template>
 
 <script lang="ts">
+import {usePageData, usePageFrontmatter} from 'vuepress/client';
 import {useRouter} from 'vue-router';
 import {computed, defineComponent, onMounted, onUnmounted} from 'vue';
-import {usePageData, usePageFrontmatter} from '@vuepress/client';
 import {type MyPaPageFrontmatter} from '@mptheme/config.types';
 import Page from '@mptheme/client/views/page/Page.vue';
 import MPSidebar from '@mptheme/client/views/layout/sidebar/MPSidebar.vue';

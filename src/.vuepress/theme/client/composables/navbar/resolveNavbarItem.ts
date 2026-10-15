@@ -1,4 +1,4 @@
-import {isString} from '@vuepress/shared';
+import {isString} from 'vuepress/shared';
 import {isOfType} from '@mptheme/shared/utils';
 import {type MyPaNavbarGroup, type MyPaNavbarItem, type MyPaResolvedNavbarItem} from '@mptheme/config.types';
 import {useNavLink} from '@mptheme/client/composables/useNavLink';

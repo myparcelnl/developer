@@ -1,11 +1,11 @@
+import {useRouteLocale, useSiteData} from 'vuepress/client';
 import {type SiteLocaleConfig} from 'vuepress';
 import {useRouter} from 'vue-router';
-import {type NavLink} from '@vuepress/theme-default/lib/shared';
-import {useRouteLocale} from '@vuepress/client';
+import {type AutoLinkOptions} from '@vuepress/theme-default';
 import {type LanguageConfig, useSiteLocaleData} from '@mptheme/client/composables';
 import {type Language} from '../../../plugins/parseTranslations/shared';
 
-type LocaleNavLink = NavLink & {language: LanguageConfig};
+type LocaleNavLink = AutoLinkOptions & {language: LanguageConfig};
 
 type LocaleConfig = SiteLocaleConfig & {
   language: string;
@@ -15,8 +15,9 @@ type LocaleConfig = SiteLocaleConfig & {
 export const useLocaleLink = (targetLanguage: Language, path?: string): LocaleNavLink => {
   const router = useRouter();
   const routeLocale = useRouteLocale();
+  const site = useSiteData();
   const siteLocale = useSiteLocaleData();
-  const targetSiteLocale = (siteLocale.value.locales[targetLanguage.path] ?? {}) as LocaleConfig;
+  const targetSiteLocale = (site.value.locales[targetLanguage.path] ?? {}) as LocaleConfig;
   const targetLang = `${targetSiteLocale.lang}`;
 
   let link;

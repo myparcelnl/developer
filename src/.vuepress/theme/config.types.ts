@@ -1,7 +1,10 @@
-import {type DefaultThemeOptions, type PageData, type SiteData} from 'vuepress';
+import {type PageData, type PageHeader, type SiteData} from 'vuepress';
 import {type Config} from 'tailwindcss';
-import {type NavbarConfig} from '@vuepress/theme-default/lib/shared/nav';
-import {type DefaultThemeNormalPageFrontmatter} from '@vuepress/theme-default/lib/shared';
+import {
+  type DefaultThemeNormalPageFrontmatter,
+  type DefaultThemeOptions,
+  type NavbarOptions,
+} from '@vuepress/theme-default';
 import {type Breakpoint, type Overwrite} from '@mptheme/index.types';
 import {type Language} from '../plugins/parseTranslations/shared';
 
@@ -79,7 +82,7 @@ export interface MyPaHomepageFrontmatter {
   }[];
 }
 
-export interface MyPaPageFrontmatter extends DefaultThemeNormalPageFrontmatter {
+export interface MyPaPageFrontmatter extends Omit<DefaultThemeNormalPageFrontmatter, 'sidebar'> {
   /**
    * Set to true if you want the page to automatically show redirect links to languages the same page is available in.
    */
@@ -102,6 +105,8 @@ export interface MyPaPageFrontmatter extends DefaultThemeNormalPageFrontmatter {
 
   sidebar?: 'auto' | false;
 
+  sidebarDepth?: number;
+
   filePathRelative?: string | null;
   hasContent?: boolean;
 }
@@ -111,13 +116,14 @@ export interface MyPaThemeData extends Omit<DefaultThemeOptions, 'sidebar' | 'na
 }
 
 export interface MyPaSiteData extends SiteData {
-  footer2: NavbarConfig;
-  footer: NavbarConfig;
-  navbar: NavbarConfig;
+  footer2: NavbarOptions;
+  footer: NavbarOptions;
+  navbar: NavbarOptions;
   sidebar: MyPaSidebarConfig;
   availableLanguages: ArrayOneOrMore<Language>;
 }
 
 export interface MyPaPageData extends PageData {
   hasContent: boolean;
+  headers: PageHeader[];
 }

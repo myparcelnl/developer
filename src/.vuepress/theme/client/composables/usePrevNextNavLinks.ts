@@ -1,8 +1,8 @@
+import {isPlainObject, isString} from 'vuepress/shared';
+import {usePageFrontmatter} from 'vuepress/client';
 import {useRoute} from 'vue-router';
 import {type ComputedRef, computed} from 'vue';
-import {type NavLink} from '@vuepress/theme-default/lib/shared';
-import {isPlainObject, isString} from '@vuepress/shared';
-import {usePageFrontmatter} from '@vuepress/client';
+import {type AutoLinkOptions} from '@vuepress/theme-default';
 import {type MyPaPageFrontmatter, type MyPaResolvedSidebarItem} from '@mptheme/config.types';
 import {useNavLink} from '@mptheme/client/composables/useNavLink';
 import {useSidebarItems} from '@mptheme/client/composables/sidebar';
@@ -12,7 +12,7 @@ import {useSidebarItems} from '@mptheme/client/composables/sidebar';
  *
  * @param conf
  */
-const resolveFromFrontmatterConfig = (conf: unknown): null | false | NavLink => {
+const resolveFromFrontmatterConfig = (conf: unknown): null | false | AutoLinkOptions => {
   if (conf === false) {
     return null;
   }
@@ -21,7 +21,7 @@ const resolveFromFrontmatterConfig = (conf: unknown): null | false | NavLink => 
     return useNavLink(conf);
   }
 
-  if (isPlainObject<NavLink>(conf)) {
+  if (isPlainObject<AutoLinkOptions>(conf)) {
     return conf;
   }
 
@@ -39,7 +39,7 @@ const resolveFromSidebarItems = (
   sidebarItems: MyPaResolvedSidebarItem[],
   currentPath: string,
   offset: number,
-): null | NavLink => {
+): null | AutoLinkOptions => {
   const index = sidebarItems.findIndex((item) => item.link === currentPath);
 
   if (index !== -1) {
@@ -49,7 +49,7 @@ const resolveFromSidebarItems = (
       return null;
     }
 
-    return targetItem as NavLink;
+    return targetItem as AutoLinkOptions;
   }
 
   for (const item of sidebarItems) {
@@ -66,8 +66,8 @@ const resolveFromSidebarItems = (
 };
 
 export const usePrevNextNavLinks = (): {
-  prevNavLink: ComputedRef<null | NavLink>;
-  nextNavLink: ComputedRef<null | NavLink>;
+  prevNavLink: ComputedRef<null | AutoLinkOptions>;
+  nextNavLink: ComputedRef<null | AutoLinkOptions>;
 } => {
   const frontmatter = usePageFrontmatter<MyPaPageFrontmatter>();
   const sidebarItems = useSidebarItems();

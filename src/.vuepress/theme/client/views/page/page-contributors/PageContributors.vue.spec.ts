@@ -1,9 +1,9 @@
 import {describe, expect, it, vi} from 'vitest';
-import {type DefaultThemeNormalPageFrontmatter, type DefaultThemePageData} from '@vuepress/theme-default/lib/shared';
+import {type DefaultThemeNormalPageFrontmatter, type DefaultThemePageData} from '@vuepress/theme-default';
 import {shallowMount} from '@vue/test-utils';
 import PageContributors from '@mptheme/client/views/page/page-contributors/PageContributors.vue';
 
-vi.mock('@vuepress/client', () => ({
+vi.mock('vuepress/client', () => ({
   usePageData: vi.fn(
     (): DefaultThemePageData => ({
       git: {
@@ -12,16 +12,19 @@ vi.mock('@vuepress/client', () => ({
         contributors: [
           {
             name: 'Edie Lemoine',
+            username: 'Edie Lemoine',
             email: 'edie@myparcel.nl',
             commits: 59,
           },
           {
             name: 'Joeri van Veen',
+            username: 'Joeri van Veen',
             email: 'joeri@myparcel.nl',
             commits: 32,
           },
           {
             name: 'Mark Ernst',
+            username: 'Mark Ernst',
             email: 'mark@myparcel.nl',
             commits: 15,
           },

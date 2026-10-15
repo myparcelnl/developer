@@ -1,5 +1,5 @@
+import {type Plugin} from 'vuepress';
 import {merge} from 'lodash-unified';
-import {type Plugin} from '@vuepress/core/lib/types/plugin';
 import {type ParseTranslationsPluginOptions} from '../shared';
 import {createSidebar} from '../../../config/sidebar/createSidebar';
 import {getTranslations} from './getTranslations';

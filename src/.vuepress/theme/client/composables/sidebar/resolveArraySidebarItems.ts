@@ -1,7 +1,12 @@
+import {isString} from 'vuepress/shared';
+import {usePageData} from 'vuepress/client';
 import {useRoute} from 'vue-router';
-import {isString} from '@vuepress/shared';
-import {usePageData} from '@vuepress/client';
-import {type MyPaResolvedSidebarItem, type MyPaSidebarConfigArray, type MyPaSidebarItem} from '@mptheme/config.types';
+import {
+  type MyPaPageData,
+  type MyPaResolvedSidebarItem,
+  type MyPaSidebarConfigArray,
+  type MyPaSidebarItem,
+} from '@mptheme/config.types';
 import {useNavLink} from '@mptheme/client/composables/useNavLink';
 import {headersToSidebarItemChildren} from './headersToSidebarItemChildren';
 
@@ -13,7 +18,7 @@ export const resolveArraySidebarItems = (
   sidebarDepth: number,
 ): MyPaResolvedSidebarItem[] => {
   const route = useRoute();
-  const page = usePageData();
+  const page = usePageData<MyPaPageData>();
 
   const handleChildItem = (item: MyPaResolvedSidebarItem | MyPaSidebarItem | string): MyPaResolvedSidebarItem => {
     let childItem: MyPaResolvedSidebarItem;
