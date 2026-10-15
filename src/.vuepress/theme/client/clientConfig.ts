@@ -1,7 +1,3 @@
-// Replaces @docsearch/css, which the docsearch plugin does not inject (injectStyles: false)
-import './styles/docsearch.scss';
-import '@vuepress/plugin-docsearch/styles/docsearch.css';
-import '@vuepress/plugin-docsearch/styles/vars.css';
 import './styles/index.scss';
 import {defineClientConfig} from 'vuepress/client';
 import {h} from 'vue';
