@@ -42,9 +42,6 @@ export const myParcelTheme = (options: MyPaThemeData): Theme => {
 
       // Save whether there is content on the page to a boolean.
       page.data.hasContent = Boolean(page.contentRendered);
-
-      // save headers into page data to generate the sidebar
-      page.data.headers = page.headers;
     },
 
     extendsMarkdown: (md) => {

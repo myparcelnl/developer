@@ -11,14 +11,15 @@ import {useSidebarItems} from '@mptheme/client/composables/sidebar';
  * Resolve `prev` or `next` config from frontmatter.
  *
  * @param conf
+ * @param currentPath
  */
-const resolveFromFrontmatterConfig = (conf: unknown): null | false | AutoLinkOptions => {
+const resolveFromFrontmatterConfig = (conf: unknown, currentPath: string): null | false | AutoLinkOptions => {
   if (conf === false) {
     return null;
   }
 
   if (isString(conf)) {
-    return useNavLink(conf);
+    return useNavLink(conf, currentPath);
   }
 
   if (isPlainObject<AutoLinkOptions>(conf)) {
@@ -75,7 +76,7 @@ export const usePrevNextNavLinks = (): {
 
   return {
     prevNavLink: computed(() => {
-      const prevConfig = resolveFromFrontmatterConfig(frontmatter.value.prev);
+      const prevConfig = resolveFromFrontmatterConfig(frontmatter.value.prev, route.path);
 
       if (prevConfig !== false) {
         return prevConfig;
@@ -85,7 +86,7 @@ export const usePrevNextNavLinks = (): {
     }),
 
     nextNavLink: computed(() => {
-      const nextConfig = resolveFromFrontmatterConfig(frontmatter.value.next);
+      const nextConfig = resolveFromFrontmatterConfig(frontmatter.value.next, route.path);
 
       if (nextConfig !== false) {
         return nextConfig;

@@ -1,6 +1,10 @@
 import {resolveLocalePath} from 'vuepress/shared';
-import {useRoute} from 'vue-router';
-import {type MyPaResolvedSidebarItem, type MyPaSidebarConfigObject, type MyPaSiteData} from '@mptheme/config.types';
+import {
+  type MyPaResolvedSidebarItem,
+  type MyPaSidebarConfigObject,
+  type MyPaSiteData,
+  type SidebarPage,
+} from '@mptheme/config.types';
 import {resolveArraySidebarItems} from './resolveArraySidebarItems';
 
 /**
@@ -10,6 +14,7 @@ export const resolveMultiSidebarItems = (
   siteData: MyPaSiteData,
   sidebarConfig: MyPaSidebarConfigObject,
   sidebarDepth: number,
+  page: SidebarPage,
 ): MyPaResolvedSidebarItem[] => {
   const currentLangPath =
     siteData.availableLanguages.find((lang) => lang.localeShort === siteData.lang)?.path?.replace(/(\/\w+)\/$/, '$1') ??
@@ -17,8 +22,7 @@ export const resolveMultiSidebarItems = (
 
   const languageSidebar = sidebarConfig?.[currentLangPath] ?? {};
 
-  const route = useRoute();
-  const routePath = currentLangPath.length > 1 ? route.path.replace(currentLangPath, '') : route.path;
+  const routePath = currentLangPath.length > 1 ? page.routePath.replace(currentLangPath, '') : page.routePath;
 
   const sidebarPath = resolveLocalePath(languageSidebar, routePath);
   const matched = (languageSidebar[sidebarPath] ?? {}) as MyPaResolvedSidebarItem;
@@ -32,5 +36,6 @@ export const resolveMultiSidebarItems = (
       },
     ],
     sidebarDepth,
+    page,
   );
 };

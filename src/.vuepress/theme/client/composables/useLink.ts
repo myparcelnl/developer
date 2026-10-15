@@ -1,4 +1,5 @@
 import {isLinkHttp} from 'vuepress/shared';
+import {useRoutePath} from 'vuepress/client';
 import {type ComputedRef, type Ref, computed, ref} from 'vue';
 import {memoize} from 'lodash-unified';
 import {type MaybeRef} from '@vueuse/core';
@@ -19,9 +20,11 @@ interface UseLink {
 
 // eslint-disable-next-line max-lines-per-function
 const useMemoized = memoize((link: Ref<string | MyPaNavLink | MyPaAnySidebarItem>): UseLink => {
+  const routePath = useRoutePath();
+
   const linkItem = computed(() => {
     if (typeof link.value === 'string') {
-      const item = useNavLink(link.value);
+      const item = useNavLink(link.value, routePath.value);
 
       if (
         !['.html', '/'].some((end) => item.link.endsWith(end)) &&

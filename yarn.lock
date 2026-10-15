@@ -744,6 +744,7 @@ __metadata:
     "@vue/runtime-core": ^3.2.37
     "@vue/test-utils": ^2.0.2
     "@vuepress/bundler-vite": ^2.0.0-rc.31
+    "@vuepress/helper": ^2.0.0-rc.135
     "@vuepress/plugin-active-header-links": ^2.0.0-rc.135
     "@vuepress/plugin-docsearch": ^2.0.0-rc.137
     "@vuepress/plugin-external-link-icon": ^2.0.0-rc.28
@@ -1849,7 +1850,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/helper@npm:2.0.0-rc.135":
+"@vuepress/helper@npm:2.0.0-rc.135, @vuepress/helper@npm:^2.0.0-rc.135":
   version: 2.0.0-rc.135
   resolution: "@vuepress/helper@npm:2.0.0-rc.135"
   dependencies:
