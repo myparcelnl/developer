@@ -8,6 +8,7 @@ export const useEditNavLink = (): ComputedRef<MyPaNavLink | null> => {
   const frontmatter = usePageFrontmatter<MyPaPageFrontmatter>();
   const page = usePageData<DefaultThemePageData>();
   const themeLocale = useThemeLocaleData();
+  const translate = useTranslate();
 
   return computed(() => {
     const showEditLink = frontmatter.value.editLink ?? themeLocale.value.editLink ?? true;
@@ -22,7 +23,6 @@ export const useEditNavLink = (): ComputedRef<MyPaNavLink | null> => {
       return null;
     }
 
-    const translate = useTranslate();
     const {filePathRelative} = page.value;
 
     if (!filePathRelative) {

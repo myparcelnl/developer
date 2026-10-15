@@ -20,17 +20,17 @@ export const useSwitchLanguage: UseSwitchLanguage = () => {
   const siteLocale = useSiteLocaleData();
   const translate = useTranslate();
   const language = useLanguage();
+  const localeLink = useLocaleLink();
+  const frontmatterLanguages = useFrontmatterLanguages();
 
   const allLinks = computed(() =>
     siteLocale.value.availableLanguages
       // Filter out current language
       .filter((lang) => language.current?.value.locale !== lang.locale)
-      .map((language) => useLocaleLink(language)),
+      .map((language) => localeLink(language)),
   );
 
   const dropdown = computed(() => {
-    const frontmatterLanguages = useFrontmatterLanguages();
-
     let children: MyPaNavLink[];
 
     if (frontmatterLanguages.value?.length) {
@@ -42,7 +42,7 @@ export const useSwitchLanguage: UseSwitchLanguage = () => {
             return undefined;
           }
 
-          return useLocaleLink(item.language, item.path);
+          return localeLink(item.language, item.path);
         })
         .filter(isDefined);
     } else {

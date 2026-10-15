@@ -36,12 +36,6 @@ const config: Config = {
     path.resolve(__dirname, 'src/.vuepress/**/*.{ts,vue,json}'),
     path.resolve(__dirname, 'src/**/*.md'),
   ],
-  safelist: [
-    // prevent code styles in base layer from getting purged.
-    'token',
-    'highlight-lines',
-    'highlight-line',
-  ],
   darkMode: 'class',
   theme: {
     borderRadius: {

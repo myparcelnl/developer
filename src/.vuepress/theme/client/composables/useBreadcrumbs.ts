@@ -27,7 +27,7 @@ export const useBreadcrumbs = (): ComputedRef<MyPaAnyNavbarItem[]> => {
     ];
 
     if (prevPath !== '/' && `${prevPath}/` !== language.current.value.path) {
-      breadcrumbs.push(useNavLink(prevPath));
+      breadcrumbs.push(useNavLink(prevPath, route.path));
     }
 
     breadcrumbs.push({text: page.value.title});

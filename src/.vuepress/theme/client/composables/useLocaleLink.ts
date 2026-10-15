@@ -12,34 +12,40 @@ type LocaleConfig = SiteLocaleConfig & {
   languageName: string;
 };
 
-export const useLocaleLink = (targetLanguage: Language, path?: string): LocaleNavLink => {
+/**
+ * Get a function that resolves the link to the current page, or to the given path, in another language.
+ */
+export const useLocaleLink = (): ((targetLanguage: Language, path?: string) => LocaleNavLink) => {
   const router = useRouter();
   const routeLocale = useRouteLocale();
   const site = useSiteData();
   const siteLocale = useSiteLocaleData();
-  const targetSiteLocale = (site.value.locales[targetLanguage.path] ?? {}) as LocaleConfig;
-  const targetLang = `${targetSiteLocale.lang}`;
 
-  let link;
+  return (targetLanguage, path) => {
+    const targetSiteLocale = (site.value.locales[targetLanguage.path] ?? {}) as LocaleConfig;
+    const targetLang = `${targetSiteLocale.lang}`;
 
-  if (targetLang === siteLocale.value.lang) {
-    // If the target language is current language, stay at current link.
-    link = router.currentRoute.value.fullPath;
-  } else if (path) {
-    link = targetLanguage.path + path;
-  } else {
-    // If the target language is not current language, link to the corresponding page of current page.
-    const currentPath = router.currentRoute.value.path;
-    link = currentPath.replace(routeLocale.value, targetLanguage.path);
-  }
+    let link;
 
-  if (!link.endsWith('/')) {
-    link = `${link}/`.replace('.html', '/').replace(/\/+/g, '/');
-  }
+    if (targetLang === siteLocale.value.lang) {
+      // If the target language is current language, stay at current link.
+      link = router.currentRoute.value.fullPath;
+    } else if (path) {
+      link = targetLanguage.path + path;
+    } else {
+      // If the target language is not current language, link to the corresponding page of current page.
+      const currentPath = router.currentRoute.value.path;
+      link = currentPath.replace(routeLocale.value, targetLanguage.path);
+    }
 
-  return {
-    link,
-    text: targetSiteLocale.languageName ?? targetSiteLocale.language,
-    language: targetLanguage,
+    if (!link.endsWith('/')) {
+      link = `${link}/`.replace('.html', '/').replace(/\/+/g, '/');
+    }
+
+    return {
+      link,
+      text: targetSiteLocale.languageName ?? targetSiteLocale.language,
+      language: targetLanguage,
+    };
   };
 };

@@ -125,5 +125,13 @@ export interface MyPaSiteData extends SiteData {
 
 export interface MyPaPageData extends PageData {
   hasContent: boolean;
+}
+
+/**
+ * The current page, as read in setup, for resolving the sidebar.
+ */
+export interface SidebarPage {
   headers: PageHeader[];
+  routePath: string;
+  title: string;
 }

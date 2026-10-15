@@ -1,17 +1,14 @@
-import {usePageData} from 'vuepress/client';
-import {type MyPaPageData, type MyPaResolvedSidebarItem} from '@mptheme/config.types';
+import {type MyPaResolvedSidebarItem, type SidebarPage} from '@mptheme/config.types';
 import {headersToSidebarItemChildren} from './headersToSidebarItemChildren';
 
 /**
  * Resolve sidebar items if the config is `auto`.
  */
-export const resolveAutoSidebarItems = (sidebarDepth: number): MyPaResolvedSidebarItem[] => {
-  const page = usePageData<MyPaPageData>();
-
+export const resolveAutoSidebarItems = (page: SidebarPage, sidebarDepth: number): MyPaResolvedSidebarItem[] => {
   return [
     {
-      text: page.value.title,
-      children: headersToSidebarItemChildren(page.value.headers, sidebarDepth),
+      text: page.title,
+      children: headersToSidebarItemChildren(page.headers, sidebarDepth),
     },
   ];
 };

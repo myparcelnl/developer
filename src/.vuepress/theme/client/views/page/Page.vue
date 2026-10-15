@@ -7,7 +7,8 @@
     <ContentContainer
       tag="main"
       type="sm"
-      class="page pb-12 pt-4">
+      class="page pb-12 pt-4"
+      vp-content>
       <slot name="content">
         <h1
           v-if="frontmatter.title"

@@ -38,6 +38,7 @@
     "@mdit-vue/shared": "^3.0.2",
     "@vue/runtime-core": "^3.2.37",
     "@vuepress/bundler-vite": "^2.0.0-rc.31",
+    "@vuepress/helper": "^2.0.0-rc.135",
     "@vuepress/plugin-active-header-links": "^2.0.0-rc.135",
     "@vuepress/plugin-docsearch": "^2.0.0-rc.137",
     "@vuepress/plugin-external-link-icon": "^2.0.0-rc.28",

@@ -1,11 +1,9 @@
 import {isString} from 'vuepress/shared';
-import {usePageData} from 'vuepress/client';
-import {useRoute} from 'vue-router';
 import {
-  type MyPaPageData,
   type MyPaResolvedSidebarItem,
   type MyPaSidebarConfigArray,
   type MyPaSidebarItem,
+  type SidebarPage,
 } from '@mptheme/config.types';
 import {useNavLink} from '@mptheme/client/composables/useNavLink';
 import {headersToSidebarItemChildren} from './headersToSidebarItemChildren';
@@ -16,15 +14,13 @@ import {headersToSidebarItemChildren} from './headersToSidebarItemChildren';
 export const resolveArraySidebarItems = (
   sidebarConfig: MyPaSidebarConfigArray,
   sidebarDepth: number,
+  page: SidebarPage,
 ): MyPaResolvedSidebarItem[] => {
-  const route = useRoute();
-  const page = usePageData<MyPaPageData>();
-
   const handleChildItem = (item: MyPaResolvedSidebarItem | MyPaSidebarItem | string): MyPaResolvedSidebarItem => {
     let childItem: MyPaResolvedSidebarItem;
 
     if (isString(item)) {
-      childItem = useNavLink(item);
+      childItem = useNavLink(item, page.routePath);
     } else {
       childItem = item as MyPaResolvedSidebarItem;
     }
@@ -38,13 +34,10 @@ export const resolveArraySidebarItems = (
 
     // if the sidebar item is current page and children is not set
     // use headers of current page as children
-    if (childItem.link === route.path) {
-      // skip h1 header
-      const headers = page.value.headers[0]?.level === 1 ? page.value.headers[0].children : page.value.headers;
-
+    if (childItem.link === page.routePath) {
       return {
         ...childItem,
-        children: headersToSidebarItemChildren(headers, sidebarDepth),
+        children: headersToSidebarItemChildren(page.headers, sidebarDepth),
       };
     }
 

@@ -14,9 +14,9 @@ interface LanguageArrayItem {
 export const useFrontmatterLanguages = (): ComputedRef<LanguageArrayItem[]> => {
   const language = useLanguage();
   const frontmatter = usePageFrontmatter<MyPaPageFrontmatter>();
-  const {languages} = frontmatter.value;
 
   return computed(() => {
+    const {languages} = frontmatter.value;
     let languagesArray: LanguageArrayItem[] = [];
 
     if (typeof languages === 'string' || Array.isArray(languages)) {
