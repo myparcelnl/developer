@@ -1012,7 +1012,7 @@ __metadata:
     "@vue/runtime-core": ^3.2.37
     "@vue/test-utils": ^2.0.2
     "@vuepress/plugin-docsearch": 2.0.0-beta.67
-    "@vuepress/plugin-google-analytics": 2.0.0-beta.67
+    "@vuepress/plugin-google-analytics": 2.0.0-rc.135
     "@vuepress/plugin-register-components": 2.0.0-beta.67
     "@vueuse/core": ^10.5.0
     autoprefixer: ^10.4.8
@@ -1894,14 +1894,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vuepress/plugin-google-analytics@npm:2.0.0-beta.67":
-  version: 2.0.0-beta.67
-  resolution: "@vuepress/plugin-google-analytics@npm:2.0.0-beta.67"
-  dependencies:
-    "@vuepress/client": 2.0.0-beta.67
-    "@vuepress/core": 2.0.0-beta.67
-    "@vuepress/utils": 2.0.0-beta.67
-  checksum: 9fe01d0d53b8b041e15770951b2bf882fe6a7b5c1db9e4f6224f0629103e0d3ab9a524b627fb9e8d495100e6d4606d0ec22fce06dbf8f1bbc182eee4ce074129
+"@vuepress/plugin-google-analytics@npm:2.0.0-rc.135":
+  version: 2.0.0-rc.135
+  resolution: "@vuepress/plugin-google-analytics@npm:2.0.0-rc.135"
+  peerDependencies:
+    vuepress: 2.0.0-rc.31
+  checksum: 771ae6e3e66636ca0d663e0209c1c0deddcc4a185147ddec93365a4baf3402f0d3236487708137a58e0d73961bc7a702537cf2ee567b1c27b75963bb5d7ee483
   languageName: node
   linkType: hard
 
