@@ -788,7 +788,7 @@ __metadata:
     ts-node: ^10.9.1
     typescript: ^5.2.2
     vite: ^8.1.5
-    vite-svg-loader: ^4.0.0
+    vite-svg-loader: ^5.1.3
     vitest: ^5.0.5
     vue-recaptcha: ^2.0.2
     vuepress: ^2.0.0-rc.31
@@ -1631,7 +1631,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-sfc@npm:3.5.44, @vue/compiler-sfc@npm:^3.2.20, @vue/compiler-sfc@npm:^3.5.22":
+"@vue/compiler-sfc@npm:3.5.44, @vue/compiler-sfc@npm:^3.5.22":
   version: 3.5.44
   resolution: "@vue/compiler-sfc@npm:3.5.44"
   dependencies:
@@ -10147,7 +10147,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^3.0.2, svgo@npm:^3.2.0":
+"svgo@npm:^3.0.2, svgo@npm:^3.2.0, svgo@npm:^3.3.5":
   version: 3.3.5
   resolution: "svgo@npm:3.3.5"
   dependencies:
@@ -10967,13 +10967,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-svg-loader@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "vite-svg-loader@npm:4.0.0"
+"vite-svg-loader@npm:^5.1.3":
+  version: 5.1.3
+  resolution: "vite-svg-loader@npm:5.1.3"
   dependencies:
-    "@vue/compiler-sfc": ^3.2.20
-    svgo: ^3.0.2
-  checksum: 2363054b33ee26baf440a43bc9f301dec4c7a89b37f00539546b2cb75ef883ec311cdf990d9d3010870d776974f8c52961ca459cd90fdf3969501840ca631feb
+    debug: ^4.3.4
+    svgo: ^3.3.5
+  peerDependencies:
+    vue: ">=3.2.13"
+  checksum: 4740c487e2ac51b18534aa3050ecb98eed08bc64da37bf495d24adc88955fffd528c9d876643cca289dcb47b0833b86a3e9d6de8cefd9d046eaa4ed9276ab00a
   languageName: node
   linkType: hard
 
