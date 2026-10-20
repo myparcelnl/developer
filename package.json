@@ -76,7 +76,7 @@
     "@vue/test-utils": "^2.0.2",
     "@vuepress/theme-default": "^2.0.0-rc.137",
     "autoprefixer": "^10.4.8",
-    "concurrently": "^9.2.1",
+    "concurrently": "^10.0.6",
     "cssnano": "^6.0.1",
     "eslint": "^8.40.0",
     "flat": "^6.0.1",
