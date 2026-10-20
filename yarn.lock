@@ -737,7 +737,7 @@ __metadata:
     "@myparcel-dev/prettier-config": ^2.0.1
     "@myparcel/constants": 2.6.0
     "@tsconfig/node18": ^18.2.2
-    "@types/flat": ^5.0.2
+    "@types/flat": ^6.0.1
     "@types/lodash-es": ^4.17.6
     "@types/mock-fs": ^4.13.1
     "@vitejs/plugin-vue": ^6.0.10
@@ -1186,10 +1186,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/flat@npm:^5.0.2":
-  version: 5.0.5
-  resolution: "@types/flat@npm:5.0.5"
-  checksum: 4a61064dc7c226292c9917aafe91fa141004f26b56ae6326c3e1795281c2e4353509c0f98be1716ec5561902b71dc76679ef890f097e9b3852a2116ba12ccc09
+"@types/flat@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "@types/flat@npm:6.0.1"
+  dependencies:
+    flat: "*"
+  checksum: 4cb762be368b8d700dba49d6e942822e2323c6596f76493b7e87bf47e89c63a1fa69ee4f118f9abd095dda18a23e697127ba643fecb2e72d06283ad00343bbc9
   languageName: node
   linkType: hard
 
@@ -4901,7 +4903,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flat@npm:^6.0.1":
+"flat@npm:*, flat@npm:^6.0.1":
   version: 6.0.1
   resolution: "flat@npm:6.0.1"
   bin:
