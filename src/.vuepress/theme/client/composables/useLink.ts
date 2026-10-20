@@ -1,7 +1,8 @@
+import {isLinkHttp} from 'vuepress/shared';
+import {useRoutePath} from 'vuepress/client';
 import {type ComputedRef, type Ref, computed, ref} from 'vue';
 import {memoize} from 'lodash-unified';
 import {type MaybeRef} from '@vueuse/core';
-import {isLinkHttp, isLinkMailto, isLinkTel} from '@vuepress/shared';
 import {isOfType} from '@mptheme/shared/utils';
 import {type MyPaAnySidebarItem, type MyPaNavLink} from '@mptheme/config.types';
 import {useNavLink} from '@mptheme/client/composables/useNavLink';
@@ -19,11 +20,16 @@ interface UseLink {
 
 // eslint-disable-next-line max-lines-per-function
 const useMemoized = memoize((link: Ref<string | MyPaNavLink | MyPaAnySidebarItem>): UseLink => {
+  const routePath = useRoutePath();
+
   const linkItem = computed(() => {
     if (typeof link.value === 'string') {
-      const item = useNavLink(link.value.replace(/\/$/, ''));
+      const item = useNavLink(link.value, routePath.value);
 
-      if (!item.link.endsWith('.html') && !['#', '?', '&'].some((i) => item.link.includes(i))) {
+      if (
+        !['.html', '/'].some((end) => item.link.endsWith(end)) &&
+        !['#', '?', '&'].some((i) => item.link.includes(i))
+      ) {
         item.link += '/';
       }
 
@@ -38,7 +44,9 @@ const useMemoized = memoize((link: Ref<string | MyPaNavLink | MyPaAnySidebarItem
     };
   });
 
-  const hasNonHttpProtocol = computed(() => isLinkMailto(linkItem.value.link) || isLinkTel(linkItem.value.link));
+  const hasNonHttpProtocol = computed(() =>
+    ['mailto:', 'tel:'].some((protocol) => linkItem.value.link.startsWith(protocol)),
+  );
   const hasHttpProtocol = computed(() => isLinkHttp(linkItem.value.link));
 
   const linkTarget = computed(() => {

@@ -1,5 +1,5 @@
 import {defineConfig} from 'vitest/config';
-import {path} from '@vuepress/utils';
+import {path} from 'vuepress/utils';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
@@ -11,7 +11,6 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '@theme': path.resolve(__dirname, 'node_modules/@vuepress/theme-default/src/client/components'),
       '@mptheme': path.resolve(__dirname, 'src/.vuepress/theme'),
       '@internal': path.resolve(__dirname, 'src/.vuepress/.temp/internal'),
     },

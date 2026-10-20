@@ -27,11 +27,11 @@
 </template>
 
 <script lang="ts">
+import {useSiteData} from 'vuepress/client';
 import {useRouter} from 'vue-router';
 import {computed, defineComponent, type PropType, toRefs} from 'vue';
 import {get} from '@vueuse/core';
-import {type NavLink} from '@vuepress/theme-default/lib/shared/nav';
-import {useSiteData} from '@vuepress/client';
+import {type AutoLinkOptions} from '@vuepress/theme-default';
 import {type MyPaNavLink, type MyPaSidebarItem} from '@mptheme/config.types';
 import {useLink} from '@mptheme/client/composables/useLink';
 import {isOfType} from '../../../shared/utils';
@@ -90,7 +90,7 @@ export default defineComponent({
         return false;
       }
 
-      if (isOfType<NavLink>(linkItem.value, 'activeMatch') && linkItem.value.activeMatch) {
+      if (isOfType<AutoLinkOptions>(linkItem.value, 'activeMatch') && linkItem.value.activeMatch) {
         return new RegExp(linkItem.value.activeMatch).test(route.path);
       }
 

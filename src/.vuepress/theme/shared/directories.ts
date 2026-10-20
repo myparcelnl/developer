@@ -1,4 +1,4 @@
-import {path} from '@vuepress/utils';
+import {path} from 'vuepress/utils';
 
 export const DIR_THEME = path.resolve(__dirname, '..');
 

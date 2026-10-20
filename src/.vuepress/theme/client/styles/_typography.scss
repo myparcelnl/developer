@@ -21,7 +21,7 @@
 
   // Inside content pages
   .page {
-    a:not(.no-link-styles) {
+    a:not(.no-link-styles, .header-anchor) {
       @apply hover:text-goldfish-400 text-goldfish-500 underline underline-offset-1 decoration-2 decoration-goldfish-100 dark:decoration-goldfish-800 dark:hover:decoration-goldfish-500 hover:decoration-goldfish-200;
     }
 
@@ -59,14 +59,6 @@
   h5,
   h6 {
     @apply font-bold font-display pt-4 scroll-mt-16 relative focus-visible:outline-2 focus-visible:outline-goldfish-500 focus-visible:outline;
-
-    a {
-      @apply opacity-0 transition-opacity absolute -left-6;
-    }
-
-    &:hover a {
-      @apply opacity-100;
-    }
   }
 
   h1 {
