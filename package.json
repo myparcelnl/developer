@@ -68,7 +68,7 @@
     "@myparcel-dev/prettier-config": "^2.0.1",
     "@myparcel/constants": "2.6.0",
     "@tsconfig/node18": "^18.2.2",
-    "@types/flat": "^5.0.2",
+    "@types/flat": "^6.0.1",
     "@types/lodash-es": "^4.17.6",
     "@types/mock-fs": "^4.13.1",
     "@vitejs/plugin-vue": "^6.0.10",
