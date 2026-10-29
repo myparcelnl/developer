@@ -2,6 +2,7 @@ import {path} from 'vuepress/utils';
 import {defineUserConfig} from 'vuepress';
 import {sitemapPlugin} from '@vuepress/plugin-sitemap';
 import {seoPlugin} from '@vuepress/plugin-seo';
+import {linksCheckPlugin} from '@vuepress/plugin-links-check';
 import {googleTagManagerPlugin} from '@vuepress/plugin-google-tag-manager';
 import {docsearchPlugin} from '@vuepress/plugin-docsearch';
 import {viteBundler} from '@vuepress/bundler-vite';
@@ -58,6 +59,10 @@ export default defineUserConfig({
 
     sitemapPlugin({
       hostname: HOSTNAME,
+    }),
+
+    linksCheckPlugin({
+      build: 'error',
     }),
   ],
 
