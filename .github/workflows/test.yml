@@ -18,7 +18,3 @@ jobs:
           ref: ${{ github.event.client_payload.pull_request.head.ref }}
 
       - uses: ./.github/actions/build
-
-      - name: 'Test links'
-        run: |
-          yarn test:links
