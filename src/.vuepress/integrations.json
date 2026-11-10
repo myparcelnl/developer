@@ -513,5 +513,12 @@
     "documentation": "https://www.myparcel.nl/koppelingen/cm-specialist/",
     "image": "cm-specialist.svg",
     "url": "https://www.cmspecialist.nl/"
+  },
+  {
+    "name": "tillox",
+    "title": "Tillox",
+    "type": "api",
+    "image": "tillox.png",
+    "url": "https://tillox.nl/"
   }
 ]
