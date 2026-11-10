@@ -337,10 +337,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdit-vue/shared@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@mdit-vue/shared@npm:4.0.0"
+  dependencies:
+    "@mdit-vue/types": 4.0.0
+    markdown-it: ^15.0.3
+  checksum: a36a1dc345636cb536d6ea3172449c5b098f1ac1e036c26529a576a501ff443fbac20d39af676d03ffea6ec65f9fd22d89a239d2c7fe2c01e98bfccf79ed0ec6
+  languageName: node
+  linkType: hard
+
 "@mdit-vue/types@npm:3.0.2, @mdit-vue/types@npm:^3.0.2":
   version: 3.0.2
   resolution: "@mdit-vue/types@npm:3.0.2"
   checksum: acf827602e616d58e1774e4df7c0578b3956b3e63bc8da528f81f1ebd5406fe43eb4e58ce542f479ce00ff12ff96f2659b222935c87fc8fc9839c82b930687bd
+  languageName: node
+  linkType: hard
+
+"@mdit-vue/types@npm:4.0.0":
+  version: 4.0.0
+  resolution: "@mdit-vue/types@npm:4.0.0"
+  dependencies:
+    markdown-it: ^15.0.3
+  checksum: 9b0a703f4296f25c6596c4202f7a16552a649a4c282654b0467e04c4f8b27dd83fda7bf245f07abf39c77da0de29473ae8235a1b59c4e59219d054de19af92d6
   languageName: node
   linkType: hard
 
@@ -601,7 +620,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@myparcel/developer-portal@workspace:."
   dependencies:
-    "@mdit-vue/shared": ^3.0.2
+    "@mdit-vue/shared": ^4.0.0
     "@myparcel-dev/eslint-config-esnext": ^1.4.0
     "@myparcel-dev/eslint-config-import": ^1.3.0
     "@myparcel-dev/eslint-config-node": ^1.4.0
@@ -2268,6 +2287,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"argparse@npm:^3.0.3":
+  version: 3.0.4
+  resolution: "argparse@npm:3.0.4"
+  checksum: b1c3b9611a251b400483ea97631e4ae27ba32a2cd8fe314cb3110b6694d6d3f551c4a675681aa03bcccadeb228e8f040a04e73cb19ac696dd280ae7a059e3231
+  languageName: node
+  linkType: hard
+
 "array-buffer-byte-length@npm:^1.0.1, array-buffer-byte-length@npm:^1.0.2":
   version: 1.0.2
   resolution: "array-buffer-byte-length@npm:1.0.2"
@@ -3375,6 +3401,13 @@ __metadata:
   version: 7.0.1
   resolution: "entities@npm:7.0.1"
   checksum: 5ee49e52e64eafc63251585f74eae50f259ea2169dbbf5380843dcd97c79bfe430a58e7f34012ab67a8e258f6ef9f92d721d149ffc88c89039e155f1bcf48a53
+  languageName: node
+  linkType: hard
+
+"entities@npm:^8.1.0":
+  version: 8.1.0
+  resolution: "entities@npm:8.1.0"
+  checksum: 1d10a455a8ef76e05082168e6c69b9640fda3a3dd3ea4023f89885d298cf8183f957fd2225eec97729e3f624e9d90229d718e90068a6918f016a72b3fa47ba39
   languageName: node
   linkType: hard
 
@@ -5419,6 +5452,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"linkify-it@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "linkify-it@npm:6.1.0"
+  dependencies:
+    uc.micro: ^3.0.0
+  checksum: 2c8ed6d324b6a3a163eb255fe994455edd2e6733630fd01926bff3304109f3c5e706008134168a6191b2e5913c599cc4785eaebe538b30618deca9d902468c8c
+  languageName: node
+  linkType: hard
+
 "lint-staged@npm:^16.2.6":
   version: 16.4.0
   resolution: "lint-staged@npm:16.4.0"
@@ -5633,6 +5675,22 @@ __metadata:
   bin:
     markdown-it: bin/markdown-it.mjs
   checksum: 50e9de12e1dea0c108a85c51fc049324fbbc434a0f1bad916b701430917a91b68bd2420942797154cad8e27bc79ea38168beab727e70361da80b97013b0d75e0
+  languageName: node
+  linkType: hard
+
+"markdown-it@npm:^15.0.3":
+  version: 15.0.3
+  resolution: "markdown-it@npm:15.0.3"
+  dependencies:
+    argparse: ^3.0.3
+    entities: ^8.1.0
+    linkify-it: ^6.1.0
+    mdurl: ^2.1.0
+    punycode.js: ^2.3.1
+    uc.micro: ^3.0.0
+  bin:
+    markdown-it: bin/markdown-it.mjs
+  checksum: ffba4a2f1c9d9cfc5ff1a6171ff17d67fa04a8c186e1300121a67c702bbf223c41283851f4dd94d4cb5ffefc877386cf60cb97d80fbe7d22c859bce69010b858
   languageName: node
   linkType: hard
 
@@ -8108,6 +8166,13 @@ __metadata:
   version: 2.1.0
   resolution: "uc.micro@npm:2.1.0"
   checksum: 37197358242eb9afe367502d4638ac8c5838b78792ab218eafe48287b0ed28aaca268ec0392cc5729f6c90266744de32c06ae938549aee041fc93b0f9672d6b2
+  languageName: node
+  linkType: hard
+
+"uc.micro@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "uc.micro@npm:3.0.0"
+  checksum: b692954bfe7811f03f73849b92e7beb9a55fafb370645ee40af60ab26b43923e77dbe9b444d2278cb974b0979f4f5239da3dfad4a9baac5ccc4e074c3d838499
   languageName: node
   linkType: hard
 

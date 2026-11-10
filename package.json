@@ -33,7 +33,7 @@
   },
   "prettier": "@myparcel-dev/prettier-config",
   "dependencies": {
-    "@mdit-vue/shared": "^3.0.2",
+    "@mdit-vue/shared": "^4.0.0",
     "@vue/runtime-core": "^3.2.37",
     "@vuepress/bundler-vite": "^2.0.0-rc.31",
     "@vuepress/helper": "^2.0.0-rc.135",
