@@ -49,7 +49,7 @@
     "@vuepress/plugin-seo": "^2.0.0-rc.137",
     "@vuepress/plugin-sitemap": "^2.0.0-rc.137",
     "@vuepress/plugin-theme-data": "^2.0.0-rc.135",
-    "@vueuse/core": "^10.5.0",
+    "@vueuse/core": "^15.0.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "sass": "^1.105.1",
