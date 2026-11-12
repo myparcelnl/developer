@@ -18,3 +18,6 @@ jobs:
           ref: ${{ github.event.client_payload.pull_request.head.ref }}
 
       - uses: ./.github/actions/build
+
+      - name: 'Run tests'
+        run: yarn test:vitest:run
