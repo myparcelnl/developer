@@ -21,5 +21,12 @@ export default defineConfig({
     dir: 'src/.vuepress',
     setupFiles: ['test/vitest-setup.ts'],
     environment: 'happy-dom',
+    server: {
+      deps: {
+        // Process the vuepress packages through vite, so their '@internal/*'
+        // imports resolve through the alias above.
+        inline: ['vuepress', /@vuepress\//],
+      },
+    },
   },
 });

@@ -5,6 +5,10 @@ describe('page', () => {
   it('renders properly', () => {
     const wrapper = shallowMount(Page);
 
-    expect(wrapper.element).toMatchInlineSnapshot();
+    expect(wrapper.element).toMatchInlineSnapshot(`
+      <page-container-stub
+        class="flex flex-col justify-between"
+      />
+    `);
   });
 });
