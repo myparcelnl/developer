@@ -5,6 +5,14 @@ describe('indexContent', () => {
   it('renders properly', () => {
     const wrapper = shallowMount(IndexContent);
 
-    expect(wrapper.element).toMatchInlineSnapshot();
+    expect(wrapper.element).toMatchInlineSnapshot(`
+      <div>
+        
+        
+        
+        <content />
+        
+      </div>
+    `);
   });
 });
