@@ -8,11 +8,11 @@
 *.vue          @myparcelnl/integration @myparcelnl/frontend
 src/.vuepress  @myparcelnl/integration @myparcelnl/frontend
 
-# --- All markdown and assets: Integration, QA and IT support ---
-*.md                  @myparcelnl/integration @myparcelnl/qa @myparcelnl/it-support
-*.mdx                 @myparcelnl/integration @myparcelnl/qa @myparcelnl/it-support
-src/.vuepress/public  @myparcelnl/integration @myparcelnl/qa @myparcelnl/it-support
+# --- All markdown and assets: Integration and IT support ---
+*.md                  @myparcelnl/integration @myparcelnl/it-support
+*.mdx                 @myparcelnl/integration @myparcelnl/it-support
+src/.vuepress/public  @myparcelnl/integration @myparcelnl/it-support
 
-# --- API Reference: Integration, API, QA and IT support ---
-**/api-reference     @myparcelnl/integration @myparcelnl/api @myparcelnl/qa
+# --- API Reference: Integration and API ---
+**/api-reference     @myparcelnl/integration @myparcelnl/api
 
