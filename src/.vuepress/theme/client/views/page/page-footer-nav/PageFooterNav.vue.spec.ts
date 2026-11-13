@@ -5,6 +5,6 @@ describe('pageNav', () => {
   it('renders properly', () => {
     const wrapper = shallowMount(PageNav);
 
-    expect(wrapper.element).toMatchInlineSnapshot();
+    expect(wrapper.element).toMatchInlineSnapshot(`<!--v-if-->`);
   });
 });

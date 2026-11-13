@@ -13,6 +13,6 @@ describe('icon', () => {
   });
 
   it('has the correct classes applied', () => {
-    expect(wrapper.element.className).toBe('icon-chevron-right inline-flex');
+    expect(wrapper.element.className).toBe('icon-chevron-right inline-flex leading-none');
   });
 });
