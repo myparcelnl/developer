@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 echo 'Installing dependencies...'
-yarn install
+pnpm install
 
 echo 'Starting dev server...'
-yarn run dev
+pnpm dev

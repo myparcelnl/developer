@@ -4,6 +4,6 @@ services:
   web:
     volumes:
       -
-      # Example: Link your yarn cache to the container's cache to speed up installs.
-      # (You can get the path by running `yarn cache dir`.)
-      # - /Users/your-name/.yarn/berry/cache:/tmp/.cache/yarn
+      # Example: Link your pnpm store to the container's store to speed up installs.
+      # (You can get the path by running `pnpm store path`.)
+      # - /Users/your-name/Library/pnpm/store:/tmp/.cache/pnpm

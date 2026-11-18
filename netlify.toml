@@ -1,0 +1,3 @@
+# Overrides the build command in the Netlify UI, which still called Yarn.
+[build]
+  command = "(pnpm translations:import || true) && pnpm build"

@@ -518,12 +518,12 @@ data will be retrieved from that `.json` file.
 
 ### Code
 
-To run the project, check out the repository and run the following commands:
+To run the project, you need Node.js 24 (version 24.21 or later) and pnpm 12 (version 12.11 or later). Check out the repository and run the following commands:
 
 ```shell
-yarn install
-yarn translations:import
-yarn dev
+pnpm install
+pnpm translations:import
+pnpm dev
 ```
 
 This installs dependencies, downloads translations and then starts the dev
