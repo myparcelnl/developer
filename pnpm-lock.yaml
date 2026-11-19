@@ -298,8 +298,8 @@ importers:
         specifier: ^2.0.0-rc.137
         version: 2.0.0-rc.137(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.5)(@vue/compiler-sfc@3.5.44)(jiti@1.21.7)(sass@1.105.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.9.1))(markdown-it@14.3.3)(sass@1.105.1)(typescript@5.9.3)(vuepress@2.0.0-rc.31(@vue/compiler-sfc@3.5.44)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.5)(@vue/compiler-sfc@3.5.44)(jiti@1.21.7)(sass@1.105.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.9.1))(rolldown@1.2.14)(supports-color@7.2.0)(typescript@5.9.3)(vite@8.3.4(@types/node@26.6.5)(jiti@1.21.7)(sass@1.105.1)(yaml@2.9.1))(vue@3.5.44(typescript@5.9.3)))
       '@vuepress/utils':
-        specifier: 2.0.0-rc.31
-        version: 2.0.0-rc.31(supports-color@7.2.0)
+        specifier: 2.0.0-rc.32
+        version: 2.0.0-rc.32(supports-color@7.2.0)
       autoprefixer:
         specifier: ^10.4.8
         version: 10.6.1(postcss@8.5.30)
@@ -659,6 +659,7 @@ packages:
 
   '@myparcel-dev/utils@1.4.0':
     resolution: {integrity: sha512-rw2dyMeQsk+Cb99hbP2EsZ6hXKvMrJf9CTjMlMMBUz2w/Nz1XTo6uD3/JmPAlDrfOw7+0vexmGbAqjtehsGXyQ==}
+    deprecated: 'No longer maintained. Removed from myparcelnl/eslint in myparcelnl/eslint#42: the eslint configs do not use it anymore.'
     peerDependencies:
       eslint: 7 - 8
 
@@ -1270,6 +1271,9 @@ packages:
   '@vuepress/shared@2.0.0-rc.31':
     resolution: {integrity: sha512-FCBYbDrRd8rbRdj7osw2liS+gGsx7eyYktEm0efJlZavPh5O9nqC6e1ryUc0Mjzo04ZCgS+8EY3B+NHa5W2t8A==}
 
+  '@vuepress/shared@2.0.0-rc.32':
+    resolution: {integrity: sha512-ayE/W82DBhn0422G9iL3WDcNrFfmEFYBhkOVMzZV1oMqlRuoMMLEBo2IDu73uo+ya1sa4hFddTwXFrhzBufYmg==}
+
   '@vuepress/theme-default@2.0.0-rc.137':
     resolution: {integrity: sha512-bVvMgJdD7wMgI+0w6sI8o8BUdTVZozwP6FzjQDmvSAUqtB7MlV8/VENfAIXTRsiDOWinQd4wRs2cqphNWmDphw==}
     peerDependencies:
@@ -1287,6 +1291,9 @@ packages:
 
   '@vuepress/utils@2.0.0-rc.31':
     resolution: {integrity: sha512-UeJYobsP2JuGjGNqh9Tk/iLhV9O0FQLj1ClFRxjG0gl/KUAASxofOODjOFFEsWv4FnkxNEUwejxO6cNqW1zOWg==}
+
+  '@vuepress/utils@2.0.0-rc.32':
+    resolution: {integrity: sha512-IgtDsgdw3/9wCzKqE1kUY5+xpO2ykfg3yZzZsjMAMyyt71C2vtFVqMpuiMgxXgFRVd+yKfBsjuPxcrBQpyxv/Q==}
 
   '@vueuse/core@15.0.0':
     resolution: {integrity: sha512-Zv67h5mrk7YHDJsRObx+DXaCBz6RKBUpxqLesJ+3xZNPG6yuQs7ja7kg3veFrrouYLWAqydQ7CwGEbLVxB43Ng==}
@@ -1535,6 +1542,10 @@ packages:
   chalk@5.6.2:
     resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+
+  chalk@6.0.1:
+    resolution: {integrity: sha512-/Ce6KNm3vIbWdMlNna6RVIZ/ICQxnJxCicet5LBKK9ZffBkqzDw0xh9EiKSljdRtiIQ1S1z4YgcscUUGzNCWrA==}
+    engines: {node: '>=22'}
 
   change-case@5.4.4:
     resolution: {integrity: sha512-HRQyTk2/YPEkt9TnUPbOpr64Uw3KOicFWPVBb+xiHvd6eBx/qPr9xqfBFDT8P2vWsvvz4jbEkfDe71W3VyNu2w==}
@@ -3094,6 +3105,10 @@ packages:
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
     engines: {node: '>= 0.8.0'}
+
+  ora@10.0.0:
+    resolution: {integrity: sha512-jlxvSlLi1aKgPUnRf8NMjwyor1CM4K+faxuycHYTvygjjtkM596tQBXGEp/PQAVqzftrCBMRJlw6+RAJS5nOtQ==}
+    engines: {node: '>=22'}
 
   ora@5.4.1:
     resolution: {integrity: sha512-5b6Y85tPxZZ7QytO+BQzysW31HJku27cRIlkbAXaNx+BdcVi+LlRFmVXzeF6a7JCwJpyw5c4b+YSVImQIrBpuQ==}
@@ -5297,6 +5312,10 @@ snapshots:
     dependencies:
       '@mdit-vue/types': 3.0.2
 
+  '@vuepress/shared@2.0.0-rc.32':
+    dependencies:
+      '@mdit-vue/types': 4.0.0
+
   '@vuepress/theme-default@2.0.0-rc.137(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.5)(@vue/compiler-sfc@3.5.44)(jiti@1.21.7)(sass@1.105.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.9.1))(markdown-it@14.3.3)(sass@1.105.1)(typescript@5.9.3)(vuepress@2.0.0-rc.31(@vue/compiler-sfc@3.5.44)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.5)(@vue/compiler-sfc@3.5.44)(jiti@1.21.7)(sass@1.105.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.9.1))(rolldown@1.2.14)(supports-color@7.2.0)(typescript@5.9.3)(vite@8.3.4(@types/node@26.6.5)(jiti@1.21.7)(sass@1.105.1)(yaml@2.9.1))(vue@3.5.44(typescript@5.9.3)))':
     dependencies:
       '@vuepress/helper': 2.0.0-rc.135(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.5)(@vue/compiler-sfc@3.5.44)(jiti@1.21.7)(sass@1.105.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.9.1))(typescript@5.9.3)(vuepress@2.0.0-rc.31(@vue/compiler-sfc@3.5.44)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.5)(@vue/compiler-sfc@3.5.44)(jiti@1.21.7)(sass@1.105.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.9.1))(rolldown@1.2.14)(supports-color@7.2.0)(typescript@5.9.3)(vite@8.3.4(@types/node@26.6.5)(jiti@1.21.7)(sass@1.105.1)(yaml@2.9.1))(vue@3.5.44(typescript@5.9.3)))
@@ -5336,6 +5355,24 @@ snapshots:
       fs-extra: 11.4.1
       hash-sum: 2.0.0
       ora: 9.4.1
+      picocolors: 1.1.1
+      picomatch: 4.0.7
+      tinyglobby: 0.2.17
+      upath: 3.0.8
+    transitivePeerDependencies:
+      - supports-color
+
+  '@vuepress/utils@2.0.0-rc.32(supports-color@7.2.0)':
+    dependencies:
+      '@types/debug': 4.1.13
+      '@types/fs-extra': 11.0.4
+      '@types/hash-sum': 1.0.2
+      '@types/picomatch': 4.0.3
+      '@vuepress/shared': 2.0.0-rc.32
+      debug: 4.4.3(supports-color@7.2.0)
+      fs-extra: 11.4.1
+      hash-sum: 2.0.0
+      ora: 10.0.0
       picocolors: 1.1.1
       picomatch: 4.0.7
       tinyglobby: 0.2.17
@@ -5574,6 +5611,8 @@ snapshots:
       supports-color: 7.2.0
 
   chalk@5.6.2: {}
+
+  chalk@6.0.1: {}
 
   change-case@5.4.4: {}
 
@@ -7146,6 +7185,17 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
       word-wrap: 1.2.5
+
+  ora@10.0.0:
+    dependencies:
+      chalk: 6.0.1
+      cli-cursor: 5.0.0
+      cli-spinners: 3.4.0
+      is-interactive: 2.0.0
+      is-unicode-supported: 2.1.0
+      log-symbols: 7.0.1
+      stdin-discarder: 0.3.2
+      string-width: 8.3.0
 
   ora@5.4.1:
     dependencies:
